@@ -13,6 +13,7 @@ log=Log()
 class SettleOrderPage(BasePage):
 
     '''订单结算页面'''
+    return_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/branchreturn?tabType=代结待结算&page=1'
     settleBtn = (By.XPATH,'//*[@id="myModalDetails"]/div/div/div[2]/div/div[2]/div[1]/button[3]')
     SettleMoneyAtt = (By.XPATH,'//label[text()="结算价格："]/../div/div/div[2]/input')
     brandsSettleMoney = (By.XPATH,'//label[text()="结算方式："]/../../div/div/input')

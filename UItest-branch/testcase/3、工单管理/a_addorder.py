@@ -21,8 +21,8 @@ import unittest,ddt
 17、新建订单-直接派单功能校验 18、新建订单-保存并继续添加订单功能校验
 '''
 #获取添加订单信息数据
-Data1 = getdata.get_test_data()["CreateOrder"]["CreateData"]
-Data2 = getdata.get_test_data()["CreateOrder"]["TextRecognition"]
+Data1 = getdata.get_test_data()["CreateOrderPage"]["create_order_fnc"]
+Data2 = getdata.get_test_data()["CreateOrderPage"]["text_recognition_fnc"]
 #默认写入执行结果
 isWrite=True
 @ddt.ddt
@@ -144,7 +144,7 @@ class Add_Order(unittest.TestCase):
     def test_addOrder003(self):
         '''添加工单页面重置功能校验'''
         #获取测试数据
-        Data = getdata.get_test_data()["CreateOrder"]["ResetFunction"]
+        Data = getdata.get_test_data()["CreateOrderPage"]["reset_btn_fnc"]
         #打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
         #刷新页面
@@ -180,7 +180,7 @@ class Add_Order(unittest.TestCase):
     def test_addOrder004(self):
         '''直接派单功能校验'''
         #获取测试数据
-        Data = getdata.get_test_data()["CreateOrder"]["DirectPleaseOrder"]
+        Data = getdata.get_test_data()["CreateOrderPage"]["direct_please_fnc"]
         #打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
         #刷新页面
@@ -221,7 +221,7 @@ class Add_Order(unittest.TestCase):
     def test_addOrder005(self):
         '''添加订单页面添加并继续功能校验'''
         #获取测试数据
-        Data = getdata.get_test_data()["CreateOrder"]["SaveAndAddOrder"]
+        Data = getdata.get_test_data()["CreateOrderPage"]["save_add_btn_fnc"]
         #打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
         #刷新页面
@@ -264,12 +264,12 @@ class Add_Order(unittest.TestCase):
     def test_addOrder006(self):
         '''打印工单页面跳转'''
         #获取测试数据
-        Data = getdata.get_test_data()["CreateOrder"]["PrintOrderInfo"]
+        Data = getdata.get_test_data()["CreateOrderPage"]["print_order_fnc"]
         #打印用例名称
         self.basePage.print_case_name(Data["CaseName"])
         self.basePage.sleep(1)
         #进入全部工单列表
-        self.basePage.open_url(getdata.get_test_data()["PleaseOrder"]["PleaseUrl"])
+        self.pleaseOrder.enter_please_order_page()
         self.basePage.refresh_page()
         #获取工单单号
         order_number = rwconfig.read_config_data('ReturnOrder','id',orderNumPath)

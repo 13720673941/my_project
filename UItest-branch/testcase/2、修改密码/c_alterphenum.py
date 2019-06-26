@@ -18,7 +18,7 @@ import unittest,ddt
 9、修改手机-手机号码格式特殊符号校验 10、修改手机-手机号码格式字母校验 11、修改手机-手机号码格式汉字校验
 """
 #获取测试数据
-testData = get_test_data()["AlterPwdData"]["AlterPhoneNum"]
+testData = get_test_data()["AlterPwdPage"]["alter_pheNum_fnc"]
 ddtData = testData["TestCase006"]
 #默认写入测试结果
 isWrite=True

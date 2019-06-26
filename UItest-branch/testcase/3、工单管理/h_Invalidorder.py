@@ -18,8 +18,8 @@ import unittest,logging,ddt
 1、无效工单类型为空校验 2、设置无效工单校验校验 3、服务商待派不能设置无效校验 4、已结算订单不能设置无效校验
 '''
 #获取无效工单测试数据
-Data = getdata.get_test_data()["InvalidOrder"]
-ddtData = Data["SetInvalid"]
+Data = getdata.get_test_data()["InvalidOrderPage"]
+ddtData = Data["set_invalid_fnc"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt
@@ -87,7 +87,7 @@ class Set_InvalidOrder(unittest.TestCase):
         '''待服务商派单订单不能设置无效工单校验'''
         #获取派单数据
         BranchName = rwconfig.read_config_data('蓝魔科技','branch002')
-        InvalidData = Data["TestCase1"]
+        InvalidData = Data["TestCase001"]
         self.basePage.print_case_name(InvalidData["CaseName"])
         #刷新页面
         self.basePage.refresh_page()
@@ -106,7 +106,7 @@ class Set_InvalidOrder(unittest.TestCase):
     def test_setInvalid003(self):
         '''已结算的订单设置无效工单校验'''
         #获取数据
-        InvalidData = Data["TestCase2"]
+        InvalidData = Data["TestCase002"]
         self.basePage.print_case_name(InvalidData["CaseName"])
         #获取已结算订单单号
         OrderNum = rwconfig.read_config_data('ReturnOrder','id',orderNumPath)

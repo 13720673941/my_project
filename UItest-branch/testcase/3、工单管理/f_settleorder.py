@@ -22,10 +22,10 @@ import unittest,ddt
 11、返单结算-固定金额线下结算成功校验
 '''
 #获取数据
-SettleData = getdata.get_test_data()["SettleOrderData"]
-ReturnOrderData = SettleData["ReturnOrderData"]
+SettleData = getdata.get_test_data()["SettleReturnPage"]
+ReturnOrderData = SettleData["return_settle_fnc"]
 #获取005的测试数据
-Data007 = ReturnOrderData["TestCase005"]
+pay_fnc = ReturnOrderData["pay_fnc"]
 #默认写入测试结果
 isWrite = True
 @ddt.ddt
@@ -61,7 +61,7 @@ class Settle_Order(unittest.TestCase):
     def test_settleOrder001(self):
         '''返单未结算系统提示校验'''
         #获取数据
-        Data001 = SettleData["ReturnNotSettle"]["TestCase001"]
+        Data001 = SettleData["return_not_settle_fnc"]["TestCase001"]
         #用例名称
         self.base.print_case_name(Data001["CaseName"])
         #进入订单详情页
@@ -78,7 +78,7 @@ class Settle_Order(unittest.TestCase):
     def test_settleOrder002(self):
         '''返单未结算只能选择固定金额校验'''
         #获取数据
-        Data002 = SettleData["ReturnNotSettle"]["TestCase002"]
+        Data002 = SettleData["return_not_settle_fnc"]["TestCase002"]
         #用例名称
         self.base.print_case_name(Data002["CaseName"])
         self.base.sleep(1)
@@ -108,7 +108,7 @@ class Settle_Order(unittest.TestCase):
         #退出登录
         self.login.click_logout_button()
         #获取返单网点-- 在最后有修改返单服务商，该网点为最后返单的服务商
-        ReturnBranch = getdata.get_test_data()["ReturnOrder"]["AlterReturn"][-1]["BranchName"]
+        ReturnBranch = getdata.get_test_data()["ReturnOrderPage"]["alter_return_fnc"][-1]["BranchName"]
         #获取返单网点账户
         returnUse = rwconfig.read_config_data(ReturnBranch,"username")
         returnPwd = rwconfig.read_config_data(ReturnBranch,"password")
@@ -184,28 +184,28 @@ class Settle_Order(unittest.TestCase):
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data006["CaseName"])
 
-    @ddt.data(*Data007)
-    def test_settleOrder007(self,Data007):
+    @ddt.data(*pay_fnc)
+    def test_settleOrder007(self,pay_fnc):
         '''钱包余额不足支付校验'''
         #用力名称
-        self.base.print_case_name(Data007["CaseName"])
+        self.base.print_case_name(pay_fnc["CaseName"])
         #进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         #点击返单结算
         self.settleOrder.click_settle_btn()
         self.base.sleep(1)
         #选择按结算规则结算
-        self.settleOrder.select_settle_type(settleType=Data007["SettleType"])
+        self.settleOrder.select_settle_type(settleType=pay_fnc["SettleType"])
         #输入结算价格
-        self.settleOrder.input_settle_money(settleMoney=Data007["SettleMoney"])
+        self.settleOrder.input_settle_money(settleMoney=pay_fnc["SettleMoney"])
         #选择线上支付
-        self.settleOrder.select_pay_type(payType=Data007["PayType"])
+        self.settleOrder.select_pay_type(payType=pay_fnc["PayType"])
         #点击确定
         self.settleOrder.click_confirm_btn()
         #获取结算金额断言
-        isSuccess = self.assert_mode.assert_equal(Data007["expect"],self.base.get_system_msg())
+        isSuccess = self.assert_mode.assert_equal(pay_fnc["expect"],self.base.get_system_msg())
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data007["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',pay_fnc["CaseName"])
 
     def test_settleOrder008(self):
         '''返单结算后经销商提示信息校验'''
@@ -214,7 +214,7 @@ class Settle_Order(unittest.TestCase):
         #登录蓝魔账号
         self.login.login_main(self.Use,self.Pwd)
         ##获取数据
-        Data008 = SettleData["ReturnOrderData"]["TestCase006"]
+        Data008 = SettleData["return_settle_fnc"]["TestCase006"]
         #用例名称
         self.base.print_case_name(Data008["CaseName"])
         #进入订单列表页面
@@ -234,7 +234,7 @@ class Settle_Order(unittest.TestCase):
     def test_settleOrder009(self):
         '''返单结算123结算方式都能选择校验'''
         #获取数据
-        Data009 = SettleData["ReturnOrderData"]["TestCase007"]
+        Data009 = SettleData["return_settle_fnc"]["TestCase007"]
         #用例名称
         self.base.print_case_name(Data009["CaseName"])
         #进入订单详情页
@@ -260,7 +260,7 @@ class Settle_Order(unittest.TestCase):
     def test_settleOrder010(self):
         '''提成规则线下结算成功校验'''
         #获取数据
-        Data010 = SettleData["ReturnOrderData"]["TestCase008"]
+        Data010 = SettleData["return_settle_fnc"]["TestCase008"]
         #用例名称
         self.base.print_case_name(Data010["CaseName"])
         #进入订单详情页

@@ -71,7 +71,7 @@ class LoginPage(BasePage):#所有的操作继承Base基类
 
 
 
-#
+
 # if __name__ == '__main__':
 #
 #     from public.common import driver
@@ -85,13 +85,9 @@ class LoginPage(BasePage):#所有的操作继承Base基类
 #     b = BasePage(d)
 #     a = LoginPage(d)
 #     AA = AlterPwdPage(d)
-#     a.login_main(UserName='13700000004',PassWord='111111')
-#     d.get('http://www.51shouhou.cn/singleBranch/#/changePassword')
+#     a.login_main(UserName='13700000004',PassWord='222222')
+#     d.get('http://www.51shouhou.cn/singleBranch/#/customer/list')
 #     time.sleep(2)
-#     d.find_element_by_xpath('//label[text()="手机号："]/../div/p/a').click()
-#     time.sleep(2)
-#     d.find_element_by_xpath('//span[contains(.,"确定修改")]').click()
-#     time.sleep(2)
-#     a1 = AA.get_login_pwd_msg()
-#     print(a1)
+#     txt = d.find_element_by_xpath('//div/div[2]/table/tbody/tr[1]').text
+#     print(txt)
 

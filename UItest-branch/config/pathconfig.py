@@ -20,6 +20,8 @@ testData = os.path.join(parentPath,'data','testdata.json')
 accountDataPath = os.path.join(parentPath,'data','accountdata.ini')
 #工共等待单号路径
 orderNumPath = os.path.join(parentPath,'data','ordernumber.ini')
+#工单信息保存路径
+orderInfo = os.path.join(parentPath,'data','ordermessage.ini')
 #上传图片保存路径
 picturePath = os.path.join(parentPath,'data','picture') + '\\'
 #日志保存文件夹
@@ -32,3 +34,4 @@ errorImagePath = os.path.join(parentPath,'result','image') + '\\'
 testResultPath = os.path.join(parentPath,'result','testresult.ini')
 #获取测试用例路径
 testCasePath = os.path.join(parentPath,'testcase') + '\\'
+

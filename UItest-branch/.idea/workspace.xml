@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="" />
+    <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="修改json中url获取方式，新增修改密码脚本">
+      <change afterPath="$PROJECT_DIR$/data/ordermessage.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/pathconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/pathconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page/finishorderpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/finishorderpage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page/loginpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/loginpage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page/managebranchpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/managebranchpage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page/settlepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/settlepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/1、注册登录/a_registerbranch.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/1、注册登录/a_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/1、注册登录/b_branchlogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/1、注册登录/b_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +112,8 @@
     <SUITE FILE_PATH="coverage/SingleBranch$createuser.coverage" NAME="createuser Coverage Results" MODIFIED="1560751026827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/SingleBranch$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1559112229493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_g_settlrManageOrder_py.coverage" NAME="Unittests in g_settlrManageOrder.py Coverage Results" MODIFIED="1560737128393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
-    <SUITE FILE_PATH="coverage/UItest_branch$loginpage.coverage" NAME="loginpage Coverage Results" MODIFIED="1561346505512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/page" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_h_Invalidorder_py.coverage" NAME="Unittests in h_Invalidorder.py Coverage Results" MODIFIED="1561425939482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$loginpage.coverage" NAME="loginpage Coverage Results" MODIFIED="1561534768582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/page" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_6_InvalidOrder_py.coverage" NAME="Unittests in 6_InvalidOrder.py Coverage Results" MODIFIED="1559805026642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_b_PleaseOrder_py.coverage" NAME="Unittests in b_PleaseOrder.py Coverage Results" MODIFIED="1560736510316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$rwconfig.coverage" NAME="rwconfig Coverage Results" MODIFIED="1558796945275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Common" />
@@ -118,71 +142,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/testdata.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="211" selection-start-line="211" selection-end-line="211" />
+            <state relative-caret-position="456">
+              <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
               <folding>
+                <element signature="e#48#2417#0" />
+                <element signature="e#2462#3054#0" />
                 <element signature="n#!!block;n#ForgetPassword#0;n#!!top" />
+                <element signature="e#3157#4818#0" />
                 <element signature="n#!!block;n#AlterPwdData#0;n#!!top" />
-                <element signature="n#!!block;n#AlterPhoneNum#0;n#!!block;n#AlterPwdData#0;n#!!top" />
-                <element signature="n#!!block;n#AlterPwd#0;n#!!block;n#AlterPwdData#0;n#!!top" />
                 <element signature="n#!!block;n#CreateOrder#0;n#!!top" />
+                <element signature="e#8329#11373#0" />
+                <element signature="e#11398#11595#0" />
                 <element signature="n#!!block;n#PleaseOrder#0;n#!!top" />
                 <element signature="n#!!block;n#InvalidOrder#0;n#!!top" />
                 <element signature="n#!!block;n#SearchOrder#0;n#!!top" />
+                <element signature="e#14067#15033#0" />
                 <element signature="n#!!block;n#FinishOrder#0;n#!!top" />
                 <element signature="n#!!block;n#VisitOrder#0;n#!!top" />
                 <element signature="n#!!block;n#ReturnOrder#0;n#!!top" />
                 <element signature="n#!!block;n#SettleOrderData#0;n#!!top" />
                 <element signature="n#!!block;n#ReturnNotSettle#0;n#!!block;n#SettleOrderData#0;n#!!top" />
+                <element signature="n#!!block;n#return_settle_fnc#0;n#!!block;n#SettleReturnPage#0;n#!!top" />
                 <element signature="n#!!block;n#ManageOrderData#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result/testresult.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4142">
-              <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
-              <folding>
-                <element signature="e#76#119#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run/run_timing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="e#76#122#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/page/managebranchpage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-              <folding>
-                <element signature="e#75#118#0" expanded="true" />
+                <element signature="n#!!block;n#AddManagePage#0;n#!!top" />
+                <element signature="e#20090#20121#0" />
               </folding>
             </state>
           </provider>
@@ -199,8 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Element</find>
-      <find>ta</find>
       <find>time.time()</find>
       <find>fail</find>
       <find>,time.time()-t1</find>
@@ -229,10 +213,10 @@
       <find>log.info(</find>
       <find>please_to_branch</find>
       <find>log.info</find>
+      <find>CreateOrder</find>
+      <find>CreateData</find>
     </findStrings>
     <replaceStrings>
-      <replace>(By.XPATH</replace>
-      <replace>Element</replace>
       <replace>self</replace>
       <replace>Data007</replace>
       <replace>,</replace>
@@ -261,6 +245,8 @@
       <replace>#log</replace>
       <replace>#log.info(</replace>
       <replace>#log.info</replace>
+      <replace>CreateOrderPage</replace>
+      <replace>create_order_fnc</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -269,19 +255,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/page/__init__.py" />
-        <option value="$PROJECT_DIR$/result/log/2019-06-21.log" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/__init__.py" />
-        <option value="$PROJECT_DIR$/data/ordernumber.ini" />
-        <option value="$PROJECT_DIR$/public/common/rwconfig.py" />
-        <option value="$PROJECT_DIR$/public/page/forgetpwdpage.py" />
         <option value="$PROJECT_DIR$/public/page/invalidpage.py" />
-        <option value="$PROJECT_DIR$/public/page/settlepage.py" />
         <option value="$PROJECT_DIR$/result/log/2019-06-22.log" />
         <option value="$PROJECT_DIR$/public/common/writetestresult.py" />
         <option value="$PROJECT_DIR$/public/common/createuser.py" />
         <option value="$PROJECT_DIR$/public/common/runreport.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py" />
         <option value="$PROJECT_DIR$/public/common/driver.py" />
         <option value="$PROJECT_DIR$/public/common/mytest.py" />
         <option value="$PROJECT_DIR$/result/log/2019-06-24.log" />
@@ -289,37 +267,45 @@
         <option value="$PROJECT_DIR$/public/common/basepage.py" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/result/testresult.ini" />
-        <option value="$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py" />
         <option value="$PROJECT_DIR$/public/page/alterpassword.py" />
-        <option value="$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py" />
-        <option value="$PROJECT_DIR$/public/page/loginpage.py" />
         <option value="$PROJECT_DIR$/testcase/1、注册登录/b_branchlogin.py" />
         <option value="$PROJECT_DIR$/public/page/registerpage.py" />
         <option value="$PROJECT_DIR$/public/page/addorderpage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py" />
         <option value="$PROJECT_DIR$/public/page/pleaseorderpage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py" />
-        <option value="$PROJECT_DIR$/public/page/finishorderpage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py" />
         <option value="$PROJECT_DIR$/public/page/visitpage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py" />
         <option value="$PROJECT_DIR$/public/page/returnpage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py" />
-        <option value="$PROJECT_DIR$/data/testdata.json" />
         <option value="$PROJECT_DIR$/public/page/searchorderpage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py" />
         <option value="$PROJECT_DIR$/testcase/1、注册登录/a_registerbranch.py" />
         <option value="$PROJECT_DIR$/run/run_registerlogin.py" />
         <option value="$PROJECT_DIR$/run/run_alterpassword.py" />
-        <option value="$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py" />
         <option value="$PROJECT_DIR$/run/run_ordermanage.py" />
         <option value="$PROJECT_DIR$/run_timing.py" />
         <option value="$PROJECT_DIR$/public/common/sendemail.py" />
         <option value="$PROJECT_DIR$/run/run_timing.py" />
         <option value="$PROJECT_DIR$/public/page/managebranchPage.py" />
+        <option value="$PROJECT_DIR$/data/picture/ordermessage.py" />
+        <option value="$PROJECT_DIR$/data/ordermessage.py" />
+        <option value="$PROJECT_DIR$/config/pathconfig.py" />
+        <option value="$PROJECT_DIR$/data/ordermessage.ini" />
+        <option value="$PROJECT_DIR$/public/page/loginpage.py" />
         <option value="$PROJECT_DIR$/public/page/managebranchpage.py" />
+        <option value="$PROJECT_DIR$/testcase/1、注册登录/a_register.py" />
+        <option value="$PROJECT_DIR$/testcase/1、注册登录/b_login.py" />
+        <option value="$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py" />
+        <option value="$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py" />
+        <option value="$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py" />
+        <option value="$PROJECT_DIR$/public/page/settlepage.py" />
+        <option value="$PROJECT_DIR$/data/testdata.json" />
+        <option value="$PROJECT_DIR$/public/page/finishorderpage.py" />
       </list>
     </option>
   </component>
@@ -335,12 +321,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
               <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
@@ -364,11 +361,27 @@
               <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
               <item name="run" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
+              <item name="testcase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
+              <item name="testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="2、修改密码" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
+              <item name="testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="3、工单管理" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,21 +389,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MyWork\SingleBranch\Result\Report\4、添加订单" />
-      <recent name="D:\MyWork\SingleBranch\Result\Report\3、忘记密码" />
-      <recent name="D:\MyWork\SingleBranch\Result\Report\2、网点登录" />
-      <recent name="D:\MyWork\SingleBranch\Result\Report\1、网点注册" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyWork\UItest-branch\run" />
       <recent name="D:\MyWork\UItest-branch\testcase\1、注册登录" />
       <recent name="D:\MyWork\UItest-branch\testcase\2、修改密码" />
       <recent name="D:\MyWork\SingleBranch\script\3、工单管理" />
       <recent name="D:\MyWork\SingleBranch\script\2、修改密码" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyWork\SingleBranch\Result\Report\4、添加订单" />
+      <recent name="D:\MyWork\SingleBranch\Result\Report\3、忘记密码" />
+      <recent name="D:\MyWork\SingleBranch\Result\Report\2、网点登录" />
+      <recent name="D:\MyWork\SingleBranch\Result\Report\1、网点注册" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -405,7 +418,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_alterpassword">
+  <component name="RunManager" selected="Python.loginpage">
+    <configuration name="loginpage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UItest-branch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/public/page" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/public/page/loginpage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="run_alterpassword" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -465,21 +500,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in h_Invalidorder.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="UItest-branch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/3、工单管理" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests in i_searchorder.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -497,16 +517,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.loginpage" />
         <item itemvalue="Python.run_alterpassword" />
         <item itemvalue="Python.run_registerlogin" />
         <item itemvalue="Python tests.Unittests in b_alterPwd.py" />
         <item itemvalue="Python tests.Unittests in i_searchorder.py" />
-        <item itemvalue="Python tests.Unittests in h_Invalidorder.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\kk\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -572,6 +592,12 @@
       <workItem from="1561442982030" duration="939000" />
       <workItem from="1561444663730" duration="12282000" />
       <workItem from="1561521155445" duration="620000" />
+      <workItem from="1561523825858" duration="38000" />
+      <workItem from="1561523867295" duration="251000" />
+      <workItem from="1561524517933" duration="2000" />
+      <workItem from="1561524541614" duration="312000" />
+      <workItem from="1561524855416" duration="764000" />
+      <workItem from="1561525684355" duration="12860000" />
     </task>
     <task id="LOCAL-00001" summary="git test">
       <created>1561443687108</created>
@@ -630,7 +656,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="568414000" />
+    <option name="totallyTimeSpent" value="582641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -643,8 +669,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23123324" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25134048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -659,7 +686,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32914925" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32914925" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32914925" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3282123" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32914925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -713,42 +740,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="git test" />
     <MESSAGE value="pycharm up loading script test" />
     <MESSAGE value="修改json中url获取方式，新增修改密码脚本" />
     <option name="LAST_COMMIT_MESSAGE" value="修改json中url获取方式，新增修改密码脚本" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4657">
-          <caret line="410" column="38" selection-start-line="410" selection-start-column="36" selection-end-line="410" selection-end-column="38" />
-          <folding>
-            <element signature="e#788#849#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/forgetpwdpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="44" column="53" lean-forward="true" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/invalidpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#75#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result/log/2019-06-22.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-342">
@@ -761,13 +761,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/HTMLTestRunner.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/pathconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/common/writetestresult.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -832,52 +825,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/loginpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/1、注册登录/b_branchlogin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="e#76#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/page/registerpage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="30" column="27" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="27" />
           <folding>
             <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/addorderpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="e#73#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -892,16 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/finishorderpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding>
-            <element signature="e#75#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/page/visitpage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -912,137 +855,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-317">
-          <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
-          <folding>
-            <element signature="e#76#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/page/returnpage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/settlepage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="74" column="72" lean-forward="true" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/searchorderpage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-          <folding>
-            <element signature="e#75#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-925">
-          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/alterpassword.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="140" column="30" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="30" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
-          <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3875">
-          <caret line="56" column="37" lean-forward="true" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-          <folding>
-            <element signature="e#73#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1672">
-          <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
-          <folding>
-            <element signature="e#75#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3951">
-          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
-          <folding>
-            <element signature="e#76#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2222">
-          <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1633">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="108" column="36" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/1、注册登录/a_registerbranch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding>
-            <element signature="e#76#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1064,16 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="141" column="37" lean-forward="true" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
-          <folding>
-            <element signature="e#76#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run/run_b_alterpassword.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1085,46 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/testdata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="211" selection-start-line="211" selection-end-line="211" />
-          <folding>
-            <element signature="n#!!block;n#ForgetPassword#0;n#!!top" />
-            <element signature="n#!!block;n#AlterPwdData#0;n#!!top" />
-            <element signature="n#!!block;n#AlterPhoneNum#0;n#!!block;n#AlterPwdData#0;n#!!top" />
-            <element signature="n#!!block;n#AlterPwd#0;n#!!block;n#AlterPwdData#0;n#!!top" />
-            <element signature="n#!!block;n#CreateOrder#0;n#!!top" />
-            <element signature="n#!!block;n#PleaseOrder#0;n#!!top" />
-            <element signature="n#!!block;n#InvalidOrder#0;n#!!top" />
-            <element signature="n#!!block;n#SearchOrder#0;n#!!top" />
-            <element signature="n#!!block;n#FinishOrder#0;n#!!top" />
-            <element signature="n#!!block;n#VisitOrder#0;n#!!top" />
-            <element signature="n#!!block;n#ReturnOrder#0;n#!!top" />
-            <element signature="n#!!block;n#SettleOrderData#0;n#!!top" />
-            <element signature="n#!!block;n#ReturnNotSettle#0;n#!!block;n#SettleOrderData#0;n#!!top" />
-            <element signature="n#!!block;n#ManageOrderData#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/testresult.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4142">
-          <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
-          <folding>
-            <element signature="e#76#119#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1148,19 +916,278 @@
     <entry file="file://$PROJECT_DIR$/run/run_timing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="e#76#122#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/picture/ordermessage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/pathconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ordermessage.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5034">
+          <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result/testresult.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/loginpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1103">
+          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/1、注册登录/a_register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#76#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/1、注册登录/b_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <element signature="e#76#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/page/managebranchpage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="457">
+          <caret line="95" column="53" lean-forward="true" selection-start-line="95" selection-start-column="53" selection-end-line="95" selection-end-column="53" />
           <folding>
             <element signature="e#75#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/searchorderpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="e#75#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2735">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5320">
+          <caret line="280" column="44" lean-forward="true" selection-start-line="280" selection-start-column="44" selection-end-line="280" selection-end-column="44" />
+          <folding>
+            <element signature="e#73#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="72" column="70" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="108" column="38" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1444">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="e#75#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding>
+            <element signature="e#76#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="105" column="41" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4693">
+          <caret line="262" column="47" selection-start-line="262" selection-start-column="47" selection-end-line="262" selection-end-column="47" />
+          <folding>
+            <element signature="e#76#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/finishorderpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <element signature="e#75#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1444">
+          <caret line="118" column="30" lean-forward="true" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+          <folding>
+            <element signature="e#76#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/forgetpwdpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/addorderpage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="47" column="30" lean-forward="true" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+          <folding>
+            <element signature="e#73#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/alterpassword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="140" column="30" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="30" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/settlepage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="110" selection-start-line="15" selection-start-column="110" selection-end-line="15" selection-end-column="110" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/testdata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
+          <folding>
+            <element signature="e#48#2417#0" />
+            <element signature="e#2462#3054#0" />
+            <element signature="n#!!block;n#ForgetPassword#0;n#!!top" />
+            <element signature="e#3157#4818#0" />
+            <element signature="n#!!block;n#AlterPwdData#0;n#!!top" />
+            <element signature="n#!!block;n#CreateOrder#0;n#!!top" />
+            <element signature="e#8329#11373#0" />
+            <element signature="e#11398#11595#0" />
+            <element signature="n#!!block;n#PleaseOrder#0;n#!!top" />
+            <element signature="n#!!block;n#InvalidOrder#0;n#!!top" />
+            <element signature="n#!!block;n#SearchOrder#0;n#!!top" />
+            <element signature="e#14067#15033#0" />
+            <element signature="n#!!block;n#FinishOrder#0;n#!!top" />
+            <element signature="n#!!block;n#VisitOrder#0;n#!!top" />
+            <element signature="n#!!block;n#ReturnOrder#0;n#!!top" />
+            <element signature="n#!!block;n#SettleOrderData#0;n#!!top" />
+            <element signature="n#!!block;n#ReturnNotSettle#0;n#!!block;n#SettleOrderData#0;n#!!top" />
+            <element signature="n#!!block;n#return_settle_fnc#0;n#!!block;n#SettleReturnPage#0;n#!!top" />
+            <element signature="n#!!block;n#ManageOrderData#0;n#!!top" />
+            <element signature="n#!!block;n#AddManagePage#0;n#!!top" />
+            <element signature="e#20090#20121#0" />
           </folding>
         </state>
       </provider>

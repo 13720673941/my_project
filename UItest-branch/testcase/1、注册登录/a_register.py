@@ -19,7 +19,7 @@ import unittest,ddt
 11、注册-手机号格式校验 12、注册-密码特殊字符校验 13、注册-密码上点值校验 14、注册-密码离点值校验 15、注册-数据正确成功注册校验
 '''
 #读取注册脚本测试数据
-Data = getdata.get_test_data()["RegisterAccount"]
+Data = getdata.get_test_data()["RegisterPage"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt

@@ -18,7 +18,7 @@ import unittest,ddt
 7、修改密码-原登录密码不正确校验 8、修改密码-新密码和重复密码不同校验 9、修改密码-成功修改密码校验
 """
 #获取测试数据
-testData = get_test_data()["AlterPwdData"]["AlterPwd"]
+testData = get_test_data()["AlterPwdPage"]["alter_pwd_fnc"]
 ddtData = testData["TestCase004"]
 #默认写入测试结果
 isWrite=True

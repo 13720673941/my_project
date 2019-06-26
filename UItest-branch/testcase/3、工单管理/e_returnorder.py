@@ -17,8 +17,8 @@ import unittest,ddt
 3、返单-返单成功校验 4、返单-撤销返单校验 5、添加代结单服务商校验
 '''
 #获取返单测试数据
-ReturnData = getdata.get_test_data()["ReturnOrder"]
-ddtData = ReturnData["AlterReturn"]
+ReturnData = getdata.get_test_data()["ReturnOrderPage"]
+ddtData = ReturnData["alter_return_fnc"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt
@@ -69,7 +69,7 @@ class Return_Order(unittest.TestCase):
     def test_returnOrder002(self):
         '''网点成功返单校验'''
         #获取用例数据
-        Data = ReturnData["ReturnOrderData"]
+        Data = ReturnData["return_order_fnc"]
         #刷新页面
         self.basePage.print_case_name(Data["CaseName"])
         self.basePage.refresh_page()
@@ -86,7 +86,7 @@ class Return_Order(unittest.TestCase):
     def test_returnOrder003(self):
         '''返单页面点击添加代结单服务商校验'''
         #获取用例数据
-        Data = ReturnData["AddBranch"]
+        Data = ReturnData["add_branch_btn_fnc"]
         #刷新页面
         self.basePage.print_case_name(Data["CaseName"])
         self.basePage.refresh_page()
@@ -103,7 +103,7 @@ class Return_Order(unittest.TestCase):
         #进入撤销返单页面
         self.returnOrder.enter_finish_return_page()
         #获取用例数据
-        Data = ReturnData["DelReturnOrder"]
+        Data = ReturnData["del_return_fnc"]
         #刷新页面
         self.basePage.print_case_name(Data["CaseName"])
         self.basePage.refresh_page()

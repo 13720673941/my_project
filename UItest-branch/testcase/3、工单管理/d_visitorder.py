@@ -18,8 +18,8 @@ import unittest
 网点回访工单
 '''
 #获取网点回访订单参数信息
-VisitData = getdata.get_test_data()["VisitOrder"]
-ddtData = VisitData["VisitData"]
+VisitData = getdata.get_test_data()["VisitOrderPage"]
+ddtData = VisitData["visit_order_fnc"]
 #默认写入测试结果
 isWrite=True
 class Visit_Order(unittest.TestCase):

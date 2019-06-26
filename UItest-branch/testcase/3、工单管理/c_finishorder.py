@@ -20,8 +20,8 @@ import unittest,ddt
 '''
 #写入日志
 #获取测试数据信息
-Data = getdata.get_test_data()["FinishOrder"]
-FinishDate = Data["FinishData"]
+Data = getdata.get_test_data()["FinishOrderPage"]
+FinishDate = Data["finish_order_fnc"]
 #写入测试结果
 isWrite=True
 @ddt.ddt

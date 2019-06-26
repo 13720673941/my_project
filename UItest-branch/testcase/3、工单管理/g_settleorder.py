@@ -20,7 +20,7 @@ import unittest,ddt
 7、经销商工单结算-钱包结算余额不足校验 8、经销商工单结算-线下结算成功校验
 '''
 #获取数据
-SettleData = getdata.get_test_data()["ManageOrderData"]
+SettleData = getdata.get_test_data()["SettleManagePage"]
 ddtData1 = SettleData["TestCase004"]
 ddtData2 = SettleData["TestCase006"]
 #默认写入测试结果

@@ -17,7 +17,7 @@ import unittest,ddt
 4、用户名不为空密码为空登录 5、用户名不正确密码正确登录 6、用户名正确密码不正确登录
 '''
 #获取登录数据信息
-loginData = getdata.get_test_data()["LoginAccount"]
+loginData = getdata.get_test_data()["LoginPage"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt

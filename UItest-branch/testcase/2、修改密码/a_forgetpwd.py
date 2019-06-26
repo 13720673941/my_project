@@ -19,9 +19,9 @@ import unittest,ddt
 14、获取验证码-正确发送验证码校验 15、修改成功的密码可以登录 16、旧密码不能成功登陆
 '''
 #获取修改密码测试数据
-Data = getdata.get_test_data()["ForgetPassword"]["ForgetPwd"]
-Data1 = getdata.get_test_data()["ForgetPassword"]["GetCodeFunction"]
-Data3 = getdata.get_test_data()["ForgetPassword"]["LogicTest"]
+Data = getdata.get_test_data()["ForgetPwdPage"]["forget_pwd_fnc"]
+Data1 = getdata.get_test_data()["ForgetPwdPage"]["get_code_fnc"]
+Data3 = getdata.get_test_data()["ForgetPwdPage"]["logic_test"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt
@@ -111,7 +111,7 @@ class Forget_Pwd(unittest.TestCase):
     def test_forgetPwd003(self):
         '''发送成功验证码'''
         #获取测试数据
-        Data2 = getdata.get_test_data()["ForgetPassword"]["SendSuccess"]
+        Data2 = getdata.get_test_data()["ForgetPwdPage"]["send_code_success"]
         #获取测试用例名称
         self.basePage.print_case_name(Data2["CaseName"])
         self.basePage.refresh_page()

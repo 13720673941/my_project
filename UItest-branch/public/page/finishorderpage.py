@@ -30,7 +30,7 @@ class FinishOrder(BasePage):
 
     def enter_finish_order_page(self):
         '''进入完成工单列表页'''
-        self.click_button(self.finish_order_url)
+        self.open_url(self.finish_order_url)
 
     def click_finish_btn(self):
         '''点击完成工单按钮'''

@@ -20,9 +20,9 @@ import unittest,logging,ddt
 13、派单-网点转派师傅校验 14、派单-派单到返单服务商校验
 '''
 #获取ddt模式文件参数信息
-Data1 = getdata.get_test_data()["PleaseOrder"]["SearchPage"]
-Data2 = getdata.get_test_data()["PleaseOrder"]["ToBranch"]
-Data3 = getdata.get_test_data()["PleaseOrder"]["ToMaster"]
+Data1 = getdata.get_test_data()["PleaseOrderPage"]["search_fnc"]
+Data2 = getdata.get_test_data()["PleaseOrderPage"]["to_branch_fnc"]
+Data3 = getdata.get_test_data()["PleaseOrderPage"]["to_master_fnc"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt
@@ -70,7 +70,7 @@ class Please_Order(unittest.TestCase):
     def test_pleaseOrder001(self):
         '''选择订单为空时派单校验'''
         #获取测试数据
-        TestData1 = getdata.get_test_data()["PleaseOrder"]["TestCase1"]
+        TestData1 = getdata.get_test_data()["PleaseOrder"]["TestCase001"]
         #点击派单按钮不选择订单
         self.basePage.print_case_name(TestData1["CaseName"])
         self.basePage.refresh_page()
@@ -151,7 +151,7 @@ class Please_Order(unittest.TestCase):
     def test_pleaseOrder005(self):
         '''师傅不能转派网点校验'''
         #获取数据
-        Data = getdata.get_test_data()["PleaseOrder"]["TestCase2"]
+        Data = getdata.get_test_data()["PleaseOrder"]["TestCase002"]
         #刷新页面
         self.basePage.refresh_page()
         #选择新建订单

@@ -19,10 +19,10 @@ import unittest,ddt
 13、工单搜索-按下单日期搜索工单校验 14、工单搜索-按完成日期搜索工单校验 15、工单搜索-按多条件搜索工单校验
 '''
 #获取测试数据信息
-Data = getdata.get_test_data()["SearchOrder"]
+Data = getdata.get_test_data()["SearchOrderPage"]
 #获取ddt模式数据
-ddtData1 = Data["SearchData"]
-ddtData2 = Data["MoreSearchData"]
+ddtData1 = Data["search_order_fnc"]
+ddtData2 = Data["more_search_fnc"]
 #写入测试结果
 isWrite=True
 @ddt.ddt
