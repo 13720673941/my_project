@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>【正式网点】网点订单流程</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">【正式网点】网点订单流程</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2019-03-26 13:24:14</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:04:51.455593</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 1，通过 1，通过率= 100.00%</p>
+
+<p class='description'>网点全部类型订单流程</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 1 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 1 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>Branch_OrderFlow01.Please_Order</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_PleaseOrder: 【网点订单流程】:PC网点下单->WAP网点接单校验->网点订单状态校验->网点派单师傅->网点订单状态校验->师傅接单校验->师傅订单状态校验->师傅预约(网点订单状态校验)->师傅上门(网点订单状态校验)->师傅完成工单(网点订单状态校验)->师傅订单状态校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align='left'>
+    <pre>
+    
+pt1_1: [PCbranch.py-(line:58)]INFO:&lt;=====&gt;【PC网点登录】&lt;=====&gt;
+[PCbranch.py-(line:63)]INFO:.....正在打开网址...
+[PCbranch.py-(line:70)]INFO:.....切换网点登陆页面
+[PCbranch.py-(line:79)]INFO:.....输入用户名：13700000047
+[PCbranch.py-(line:82)]INFO:.....输入密码：123456
+[PCbranch.py-(line:85)]INFO:.....点击-&gt;【登录】
+[PCbranch.py-(line:105)]ERROR:.....PC网点登录成功！
+[PCbranch.py-(line:129)]INFO:&lt;=====&gt;【PC网点添加订单】&lt;=====&gt;
+[PCbranch.py-(line:132)]INFO:.....正在进入添加订单页面...
+[PCbranch.py-(line:141)]INFO:.....添加网点自营订单
+[PCbranch.py-(line:147)]INFO:.....点击-&gt;【购买渠道】
+[PCbranch.py-(line:153)]INFO:.....选择购买渠道：官网
+[PCbranch.py-(line:169)]INFO:.....联系人：AutoTest2019-03-26
+[PCbranch.py-(line:172)]INFO:.....联系方式：13720673941
+[PCbranch.py-(line:190)]INFO:.....服务地址：陕西省-西安市-未央区,大明宫万达广场
+[PCbranch.py-(line:195)]INFO:.....预约服务类型：安装
+[PCbranch.py-(line:219)]INFO:.....产品信息：海尔,空调,变频分体壁挂式,Haier-KT-05
+[PCbranch.py-(line:225)]INFO:.....机身条码：JSTM20190326132449
+[PCbranch.py-(line:251)]INFO:.....购买时间：2019-03-26
+[PCbranch.py-(line:253)]INFO:.....预约时间：2019-03-26
+[PCbranch.py-(line:263)]INFO:.....选择时间段：下午
+[PCbranch.py-(line:268)]INFO:.....备注：PC网点添加品牌商订单2019-03-26
+[PCbranch.py-(line:273)]INFO:.....点击-&gt;【提交】
+[PCbranch.py-(line:277)]INFO:.....系统提示：订单创建成功
+[PCbranch.py-(line:285)]INFO:===========【查找订单号】===========
+[PCbranch.py-(line:293)]INFO:.....正在进入订单查询页面...
+[PCbranch.py-(line:313)]INFO:.....该订单为新建订单！订单单号：AZ19032600000073
+[WAPbranch.py-(line:33)]INFO:&lt;=====&gt;【WAP网点登陆】&lt;=====&gt;
+[WAPbranch.py-(line:44)]INFO:......点击-&gt;【登陆/注册】
+[WAPbranch.py-(line:57)]INFO:.....输入用户名：13700000047
+[WAPbranch.py-(line:59)]INFO:.....点击-&gt;【发送验证码】
+[GetCode.py-(line:33)]INFO:&lt;=====&gt;【后台获取验证码】&lt;=====&gt;
+[GetCode.py-(line:47)]INFO:.....输入用户名：超级售后:雷李军
+[GetCode.py-(line:50)]INFO:.....输入密码：xxxxxx
+[GetCode.py-(line:52)]INFO:.....点击-&gt;【登陆】
+[GetCode.py-(line:71)]INFO:.....系统后台登陆成功！
+[GetCode.py-(line:89)]INFO:.....输入手机号：13700000047
+[GetCode.py-(line:91)]INFO:.....点击-&gt;【查询】
+[GetCode.py-(line:104)]INFO:.....当前验证码为最新验证码：740956
+[WAPbranch.py-(line:74)]INFO:.....输入验证码：740956
+[WAPbranch.py-(line:76)]INFO:.....点击-&gt;【登陆】
+[WAPbranch.py-(line:95)]INFO:.....WAP网点登陆成功！
+[WAPbranch.py-(line:108)]INFO:&lt;=====&gt;【网点接单校验】&lt;=====&gt;
+[WAPbranch.py-(line:113)]INFO:.....正在进入订单管理页面...
+[WAPbranch.py-(line:128)]INFO:.....输入订单号：AZ19032600000073
+[WAPbranch.py-(line:130)]INFO:.....点击-&gt;【搜索】
+[WAPbranch.py-(line:147)]INFO:.....网点接受订单成功！
+[WAPbranch.py-(line:283)]INFO:&lt;=====&gt;【WAP网点订单状态校验】&lt;=====&gt;
+[WAPbranch.py-(line:286)]INFO:.....正在进入网点订单管理页面...
+[WAPbranch.py-(line:311)]INFO:.....找到订单啦！
+[WAPbranch.py-(line:316)]INFO:.....订单状态校验成功！当前订单状态：待派单
+[WAPbranch.py-(line:172)]INFO:&lt;=====&gt;【网点派单】&lt;=====&gt;
+[WAPbranch.py-(line:175)]INFO:.....正在进入订单管理页面...
+[WAPbranch.py-(line:183)]INFO:.....输入订单号：AZ19032600000073
+[WAPbranch.py-(line:185)]INFO:.....点击-&gt;【搜索】
+[WAPbranch.py-(line:205)]INFO:.....点击-&gt;【派给师傅】
+[WAPbranch.py-(line:234)]INFO:.....选择派单给师傅：张先生
+[WAPbranch.py-(line:236)]INFO:.....点击-&gt;【确定派单】
+[WAPbranch.py-(line:253)]INFO:.....网点派单成功！点击-&gt;【继续预约派单】
+[WAPbranch.py-(line:283)]INFO:&lt;=====&gt;【WAP网点订单状态校验】&lt;=====&gt;
+[WAPbranch.py-(line:286)]INFO:.....正在进入网点订单管理页面...
+[WAPbranch.py-(line:311)]INFO:.....找到订单啦！
+[WAPbranch.py-(line:316)]INFO:.....订单状态校验成功！当前订单状态：待预约
+[WAPmaster.py-(line:23)]INFO:&lt;=====&gt;【WAP师傅登录】&lt;=====&gt;
+[WAPmaster.py-(line:38)]INFO:.....点击-&gt;【登陆/注册】
+[WAPmaster.py-(line:49)]INFO:.....输入用户名：13700000047
+[WAPmaster.py-(line:52)]INFO:.....输入密码：123456
+[WAPmaster.py-(line:54)]INFO:.....点击-&gt;【登陆】
+[WAPmaster.py-(line:77)]INFO:.....师傅登陆成功！
+[WAPmaster.py-(line:632)]INFO:&lt;=====&gt;【师傅端订单状态校验】&lt;=====&gt;
+[WAPmaster.py-(line:654)]INFO:.....正在进入订单状态验证页面...
+[WAPmaster.py-(line:681)]INFO:.....找到订单了！订单单号：AZ19032600000073
+[WAPmaster.py-(line:684)]INFO:.....订单状态验证成功！校验订单状态：等待师傅预约
+[WAPmaster.py-(line:91)]INFO:&lt;=====&gt;【师傅预约订单】&lt;=====&gt;
+[WAPmaster.py-(line:100)]INFO:.....正在进入带预约页面...
+[WAPmaster.py-(line:127)]INFO:.....找到预约订单啦！
+[WAPmaster.py-(line:133)]INFO:.....点击-&gt;【预约上门】
+[WAPmaster.py-(line:150)]INFO:.....预约时间：2019-03-26
+[WAPmaster.py-(line:166)]INFO:.....选择预约时间段：20:00～22:00
+[WAPmaster.py-(line:178)]INFO:.....点击-&gt;【确定】
+[WAPmaster.py-(line:185)]INFO:.....预约订单,系统提示：预约成功
+[WAPbranch.py-(line:283)]INFO:&lt;=====&gt;【WAP网点订单状态校验】&lt;=====&gt;
+[WAPbranch.py-(line:286)]INFO:.....正在进入网点订单管理页面...
+[WAPbranch.py-(line:311)]INFO:.....找到订单啦！
+[WAPbranch.py-(line:316)]INFO:.....订单状态校验成功！当前订单状态：待服务
+[WAPmaster.py-(line:193)]INFO:&lt;=====&gt;【师傅上门打卡】&lt;=====&gt;
+[WAPmaster.py-(line:203)]INFO:.....正在进入确认上门页面...
+[WAPmaster.py-(line:230)]INFO:.....找到待上门订单啦！
+[WAPmaster.py-(line:236)]INFO:.....点击-&gt;【确认上门】
+[WAPmaster.py-(line:250)]INFO:.....点击-&gt;【确认上门打卡】
+[WAPmaster.py-(line:252)]INFO:.....打卡时间：13:27:31
+[WAPmaster.py-(line:263)]INFO:.....预约订单,系统提示：打卡成功，开始处理工单！
+[WAPbranch.py-(line:283)]INFO:&lt;=====&gt;【WAP网点订单状态校验】&lt;=====&gt;
+[WAPbranch.py-(line:286)]INFO:.....正在进入网点订单管理页面...
+[WAPbranch.py-(line:311)]INFO:.....找到订单啦！
+[WAPbranch.py-(line:316)]INFO:.....订单状态校验成功！当前订单状态：服务中
+[WAPmaster.py-(line:276)]INFO:&lt;=====&gt;【师傅填写工单】&lt;=====&gt;
+[WAPmaster.py-(line:282)]INFO:.....打开填写工单地址...
+[WAPmaster.py-(line:282)]INFO:.....打开填写工单地址...
+[WAPmaster.py-(line:314)]INFO:.....找到处理工单订单啦！
+[WAPmaster.py-(line:320)]INFO:.....点击-&gt;【处理工单】
+[WAPmaster.py-(line:330)]INFO:.....开始处理工单...
+[WAPmaster.py-(line:335)]INFO:.....选择规格
+[WAPmaster.py-(line:353)]INFO:.....点击-&gt;【服务措施】
+[WAPmaster.py-(line:369)]INFO:.....选择服务措施：上门安装(按规格结算)
+服务介绍：附件内安装免费，免一个厚度24CM内直径5CM砖墙冲击钻孔，其它加材料打特殊墙体孔三楼以上高空费和远效路费按标准收费
+规格 结算价
+1匹及以下, ￥170
+1.2-1.5匹, ￥170
+2匹, ￥210
+2.5-3匹, ￥250
+[WAPmaster.py-(line:383)]INFO:.....机身条码：JSTM1553578091
+[WAPmaster.py-(line:395)]INFO:.....正在上传图片：D:\MyWork\51_shouhou\Config\Picture\01.png...
+[WAPmaster.py-(line:395)]INFO:.....正在上传图片：D:\MyWork\51_shouhou\Config\Picture\02.png...
+[WAPmaster.py-(line:395)]INFO:.....正在上传图片：D:\MyWork\51_shouhou\Config\Picture\03.png...
+[WAPmaster.py-(line:395)]INFO:.....正在上传图片：D:\MyWork\51_shouhou\Config\Picture\04.png...
+[WAPmaster.py-(line:395)]INFO:.....正在上传图片：D:\MyWork\51_shouhou\Config\Picture\05.png...
+[WAPmaster.py-(line:402)]INFO:.....服务描述：服务描述：2019-03-26
+[WAPmaster.py-(line:407)]INFO:.....点击-&gt;【保存工单】
+[WAPmaster.py-(line:418)]INFO:.....系统提示：保存成功
+[WAPmaster.py-(line:426)]INFO:&lt;=====&gt;【师傅完成服务使用备件】&lt;=====&gt;
+[WAPmaster.py-(line:431)]INFO:.....开始使用备件...
+[WAPmaster.py-(line:439)]INFO:.....不使用备件
+[WAPmaster.py-(line:486)]INFO:.....点击-&gt;【下一步，提交服务报价】
+[WAPmaster.py-(line:497)]INFO:&lt;=====&gt;【师傅提交服务报价】&lt;=====&gt;
+[WAPmaster.py-(line:512)]INFO:.....用户付费：1元
+[WAPmaster.py-(line:523)]INFO:.....备注：2019-03-26
+[WAPmaster.py-(line:529)]INFO:.....点击-&gt;【提交服务报价】
+[WAPmaster.py-(line:547)]INFO:&lt;=====&gt;【师傅现金收款】&lt;=====&gt;
+[WAPmaster.py-(line:552)]INFO:.....打开待收款地址...
+[WAPmaster.py-(line:584)]INFO:.....找到代收款订单啦！
+[WAPmaster.py-(line:590)]INFO:.....点击-&gt;【立即收款】
+[WAPmaster.py-(line:609)]INFO:.....选择现金支付
+[WAPmaster.py-(line:620)]INFO:.....点击-&gt;【确认收款】
+[WAPmaster.py-(line:624)]INFO:.....系统提示：收款成功
+[WAPmaster.py-(line:632)]INFO:&lt;=====&gt;【师傅端订单状态校验】&lt;=====&gt;
+[WAPmaster.py-(line:654)]INFO:.....正在进入订单状态验证页面...
+[WAPmaster.py-(line:681)]INFO:.....找到订单了！订单单号：AZ19032600000073
+[WAPmaster.py-(line:684)]INFO:.....订单状态验证成功！校验订单状态：等待结算
+[WAPbranch.py-(line:283)]INFO:&lt;=====&gt;【WAP网点订单状态校验】&lt;=====&gt;
+[WAPbranch.py-(line:286)]INFO:.....正在进入网点订单管理页面...
+[WAPbranch.py-(line:311)]INFO:.....找到订单啦！
+[WAPbranch.py-(line:318)]ERROR:!!!!!订单状态校验失败！当前订单状态：已完成,校验订单状态：待结算
+测试结果：19-03-26 13:29:05 -&gt;Pass
+保存路径：D:\MyWork\51_shouhou\Config\TestResult.ini
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

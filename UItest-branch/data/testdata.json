@@ -1,0 +1,226 @@
+{
+  "1": "/*【注册功能测试用例】*/",
+  "RegisterAccount": [
+    {"CaseName": "1、注册-用户名为空校验","username": "","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入用户名"},
+    {"CaseName": "2、注册-手机号为空校验","username": "AutoTest","PhoneNum": "","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入正确手机号码"},
+    {"CaseName": "3、注册-验证码为空校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入短信验证码"},
+    {"CaseName": "4、注册-新密码为空校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "","ConfirmPwd": "111111","expect": "请输入6-18位登录密码"},
+    {"CaseName": "5、注册-确认密码为空校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "","expect": "确认登录密码须与密码相同"},
+    {"CaseName": "6、注册-已经注册的用户名校验","username": "branch01","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "branch01已存在"},
+    {"CaseName": "7、注册-已经注册的手机号校验","username": "AutoTest","PhoneNum": "13720673941","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "手机号码已存在"},
+    {"CaseName": "8、注册-错误验证码校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "111111","NewPwd": "111111","ConfirmPwd": "111111","expect": "请重新获取验证码"},
+    {"CaseName": "9、注册-两个密码不同校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "222222","expect": "确认登录密码须与密码相同"},
+    {"CaseName": "10、注册-用户名格式校验","username": "！@#￥%","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入汉字、字母、0-9、下划线"},
+    {"CaseName": "11、注册-手机号格式校验","username": "AutoTest","PhoneNum": "137000000","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入正确手机号码"},
+    {"CaseName": "12、注册-密码特殊字符校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "！@#！@#","ConfirmPwd": "！@#！@#","expect": "密码格式不正确"},
+    {"CaseName": "13、注册-密码上点值校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "11111","ConfirmPwd": "11111","expect": "密码格式不正确"},
+    {"CaseName": "14、注册-密码离点值校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "11111111111111111111","ConfirmPwd": "11111111111111111111","expect": "密码格式不正确"}
+  ],
+  "2": "/*【登录功能测试用例】*/",
+  "LoginAccount": [
+    {"CaseName": "1、登录-用户名密码为空校验","username": "","password": "","expect": "请输入登录手机号"},
+    {"CaseName": "2、登录-用户名为空校验","username": "","password": "111111","expect": "请输入登录手机号"},
+    {"CaseName": "3、登录-密码为空校验","username": "13720673941","password": "","expect": "请输入密码"},
+    {"CaseName": "4、登录-用户名不正确密码正确校验","username": "1372067394","password": "111111","expect": "用户名不存在"},
+    {"CaseName": "5、登录-用户名正确密码不正确校验","username": "13720673941","password": "123123","expect": "用户名或密码错误"},
+    {"CaseName": "6、登录-正确用户名密码校验","username": "13700000004","password": "获取配置文件中修改的新密码","expect": "登录成功"}
+  ],
+  "3": "/*【忘记密码功能测试用例】*/",
+  "ForgetPassword": {
+    "PwdList": ["111111","222222"],
+    "ForgetPwd":[
+      {"CaseName": "1、忘记密码-手机号为空校验","PhoneNum": "","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入正确手机号码"},
+      {"CaseName": "2、忘记密码-验证码为空校验","PhoneNum": "13700000004","CodeNum": "","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入短信验证码"},
+      {"CaseName": "3、忘记密码-新密码为空校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "","ConfirmPwd": "111111","expect": "请输入6-18位登录密码"},
+      {"CaseName": "4、忘记密码-确认密码为空校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "","expect": "确认登录密码须与密码相同"},
+      {"CaseName": "5、忘记密码-未注册手机号校验","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "该账号还未注册"},
+      {"CaseName": "6、忘记密码-验证码不正确校验","PhoneNum": "13700000004","CodeNum": "000000","NewPwd": "111111","ConfirmPwd": "111111","expect": "验证码不符"},
+      {"CaseName": "7、忘记密码-新密码长度上点值校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "11111","ConfirmPwd": "11111","expect": "密码格式不正确"},
+      {"CaseName": "8、忘记密码-新密码长度离点值校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "0000000000000000000","ConfirmPwd": "0000000000000000000","expect": "密码格式不正确"},
+      {"CaseName": "9、忘记密码-新密码特殊字符校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "！@#$a0","ConfirmPwd": "！@#$a0","expect": "密码格式不正确"},
+      {"CaseName": "10、忘记密码-新密码与确认密码不同校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "222222","expect": "确认登录密码须与密码相同"},
+      {"CaseName": "11、忘记密码-修改密码成功校验","PhoneNum": "13700000004","CodeNum": "88888888","NewPwd": "获取生成的密码","ConfirmPwd": "获取生成的密码","expect": "密码修改成功"}
+    ],
+    "GetCodeFunction": [
+    {"CaseName": "12、获取验证码-手机号为空校验","PhoneNum": "","expect": "请输入正确的手机号码"},
+    {"CaseName": "13、获取验证码-手机号未注册校验","PhoneNum": "11111111111","expect": "当前手机号还未注册网点，请重新输入"}
+  ],
+    "SendSuccess": {"CaseName": "14、获取验证码-正确发送验证码校验","PhoneNum": "13720673941","expect": "getCode disabled"},
+    "LogicTest": [
+      {"CaseName": "15、忘记密码-使用旧密码不能登陆校验","username": "13700000004","password": "获取的旧密码","expect": "用户名或密码错误"},
+      {"CaseName": "16、忘记密码-使用新密码可以成功登陆校验","username": "13700000004","password": "获取新密码","expect": "登录成功"}
+    ]
+  },
+  "4": "/*【网点登录后修改密码功能测试用例】*/",
+  "AlterPwdData": {
+    "AlterPhoneNum": {
+      "TestCase001": {"CaseName": "1、修改手机-登录密码为空校验","Pwd": "","PhoneNum": "13572597243","CodeNum": "88888888","expect": "请输入登录密码"},
+      "TestCase002": {"CaseName": "2、修改手机-手机号为空校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "","CodeNum": "88888888","expect": "请输入手机号码"},
+      "TestCase003": {"CaseName": "3、修改手机-验证码为空校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "13572597243","CodeNum": "","expect": "输入验证码"},
+      "TestCase004": {"CaseName": "4、修改手机-错误的登陆密码校验","Pwd": "00000000","PhoneNum": "13720673941","CodeNum": "88888888","expect": "当前密码不正确"},
+      "TestCase005": {"CaseName": "5、修改手机-错误的验证码校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "13720673941","CodeNum": "888888","expect": "验证码不符"},
+      "TestCase006": [
+        {"CaseName": "6、修改手机-已经注册过的手机号校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "13720673941","expect": "该手机号已注册为网点,请重新输入!"},
+        {"CaseName": "7、修改手机-手机号码左边界值校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "1372067394","expect": "请输入正确手机号"},
+        {"CaseName": "8、修改手机-手机号码右边界值校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "137206739411","expect": "请输入正确手机号"},
+        {"CaseName": "9、修改手机-手机号码格式特殊符号校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "137206739！@","expect": "请输入正确手机号"},
+        {"CaseName": "10、修改手机-手机号码格式字母校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "137206739as","expect": "请输入正确手机号"},
+        {"CaseName": "11、修改手机-手机号码格式汉字校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "1372067394我们","expect": "请输入正确手机号"}
+      ],
+      "TestCase007": {"CaseName": "12、修改手机-正确手机号发送验证码校验","Pwd": "获取配置文件中的密码为当前密码","PhoneNum": "13572597243","expect": "true"}
+    },
+    "AlterPwd": {
+      "TestCase001": {"CaseName": "1、修改密码-原登录密码为空校验","OldPwd": "","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入原登录密码"},
+      "TestCase002": {"CaseName": "2、修改密码-新登录密码为空校验","OldPwd": "取配置文件中的密码","NewPwd": "","ConfirmPwd": "111111","expect": "请输入新登录密码"},
+      "TestCase003": {"CaseName": "3、修改密码-确认新登录密码为空校验","OldPwd": "取配置文件中的密码","NewPwd": "111111","ConfirmPwd": "","expect": "请重复输入新登录密码"},
+      "TestCase004": [
+        {"CaseName": "4、修改密码-新登录密码格式左边界值校验","OldPwd": "取配置文件中的密码","NewPwd": "11111","ConfirmPwd": "11111","expect": "密码格式不正确"},
+        {"CaseName": "5、修改密码-新登录密码格式特殊字符校验","OldPwd": "取配置文件中的密码","NewPwd": "！@#！@#","ConfirmPwd": "！@#！@#","expect": "密码格式不正确"},
+        {"CaseName": "6、修改密码-新登录密码格式汉字密码校验","OldPwd": "取配置文件中的密码","NewPwd": "我们都是共产","ConfirmPwd": "我们都是共产","expect": "密码格式不正确"},
+        {"CaseName": "7、修改密码-新密码和重复密码不同校验","OldPwd": "取配置文件中的密码","NewPwd": "111111","ConfirmPwd": "222222","expect": "重复密码与新登录密码不相同"},
+        {"CaseName": "8、修改密码-成功修改密码校验","OldPwd": "取配置文件中的密码","NewPwd": "获取PwdList中的值","ConfirmPwd": "获取PwdList中的值","expect": "修改成功"}
+      ],
+      "TestCase005": {"CaseName": "9、修改密码-原登录密码不正确校验","OldPwd": "123456","NewPwd": "111111","ConfirmPwd": "111111","expect": "当前密码不正确"}
+    }
+  },
+  "5": "/*【添加订单功能测试用例】*/",
+  "CreateOrder": {
+    "CreateData": [
+    {"CaseName":"1、新建订单-联系人为空校验","username": "","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "用户姓名不能为空!"},
+    {"CaseName":"2、新建订单-联系方式为空校验","username": "AutoTest","PhoneNum": "","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "联系方式不能为空!"},
+    {"CaseName":"3、新建订单-服务地址为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "","OrderType": "无需返单","Branch":"XM-服务商","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "详细地址不能为空!"},
+    {"CaseName":"4、新建订单-选择服务商为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "请选择服务商!"},
+    {"CaseName":"5、新建订单-服务类型为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "","Brands": "海尔","Kinds": "空调","expect": "服务类型不能为空!"},
+    {"CaseName":"6、新建订单-家电品牌为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "","Kinds": "","expect": "家电品牌不能为空!"},
+    {"CaseName":"7、新建订单-家电品类为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "","expect": "家电品类不能为空!"},
+    {"CaseName":"8、新建订单-手机号左边界值校验","username": "AutoTest","PhoneNum": "1372067394","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "请正确输入联系方式!"},
+    {"CaseName":"9、新建订单-手机号右边界值校验","username": "AutoTest","PhoneNum": "137206739411","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "请正确输入联系方式!"},
+    {"CaseName":"10、新建订单-手机号格式校验","username": "AutoTest","PhoneNum": "！@#！@#！@#！@@","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "请正确输入联系方式!"},
+    {"CaseName":"11、新建订单-添加无需返单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "创建成功"},
+    {"CaseName":"12、新建订单-添加仅报单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "仅报单","Branch":"branch03","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "创建成功"},
+    {"CaseName":"13、新建订单-添加需返单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"XM-服务商","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "创建成功"}
+    ],
+    "TextRecognition": [
+      {"CaseName": "14、新建订单-智能文本识别为空校验","TextMsg": "","expect": "请输入文本内容!"},
+      {"CaseName": "15、新建订单-智能文本识别功能校验","TextMsg": "邓鹏飞 13720673941 陕西省西安市未央区大明宫万达广场 安装 海尔 空调","expect": "创建成功"}
+    ],
+    "ResetFunction": {"CaseName": "16、新建订单-添加订单重置功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "服务类型不能为空!"},
+    "DirectPleaseOrder": {"CaseName": "17、新建订单-直接派单功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "创建成功"},
+    "SaveAndAddOrder": {"CaseName": "18、新建订单-保存并继续添加订单功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "创建成功"},
+    "PrintOrderInfo": {"CaseName": "19、新建工单-打印工单功能校验","expect": "打印工单"}
+  },
+  "6": "/*【网点派单功能测试用例】*/",
+  "PleaseOrder": {
+    "TestCase1": {"CaseName": "1、派单-选择工单为空点击派单按钮校验","expect": "请选择一个订单进行处理"},
+    "SearchPage": [
+      {"CaseName": "2、派单-按名称搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"},
+      {"CaseName": "3、派单-按手机号搜索校验","MasterName": "13720673941","expect": "邓鹏飞"}
+    ],
+    "ToBranch": [
+      {"CaseName": "4、派单-派单网点为空校验","BranchName": "","expect": "请选择服务商"},
+      {"CaseName": "5、派单-派单到返单服务商校验","BranchName": "XM-服务商","expect": "订单不能派给返单网点"},
+      {"CaseName": "6、派单-成功派单到网点校验","BranchName": "branch03","expect": "派单成功"},
+      {"CaseName": "7、派单-重复派单到网点校验","BranchName": "branch03","expect": "订单已在该服务商下，勿重复派单"},
+      {"CaseName": "8、派单-网点转派网点校验","BranchName": "branch05","expect": "派单成功"}
+    ],
+    "ToMaster": [
+      {"CaseName": "9、派单-派单师傅为空校验","MasterName": "","expect": "请选择师傅"},
+      {"CaseName": "10、派单-成功派单到师傅校验","MasterName": "邓鹏飞","expect": "派工成功"},
+      {"CaseName": "11、派单-重复派单师傅校验","MasterName": "邓鹏飞","expect": "订单已经派给该师傅，勿重复派工！"},
+      {"CaseName": "12、派单-师傅转派师傅校验","MasterName": "XIAOMI师傅","expect":"派工成功"}
+    ],
+    "TestCase2": {"CaseName": "13、派单-师傅转派网点校验","MasterName": "","expect":"true"}
+  },
+  "7": "/*【设置无效工单功能测试用例】*/",
+  "InvalidOrder":{
+    "SetInvalid":[
+      {"CaseName": "1、无效工单-类型为空校验","InvalidType": "","expect": "请选择无效工单类型!"},
+      {"CaseName": "2、无效工单-设置无效工单校验校验","InvalidType": "用户找人修好","expect": "操作成功"}
+    ],
+    "TestCase1": {"CaseName": "3、无效工单-服务商待派不能设置无效校验","expect": "订单在服务商,不能设置无效工单"},
+    "TestCase2": {"CaseName": "4、无效工单-已结算订单不能设置无效校验","expect": "订单已经结算,不能设置无效工单"}
+  },
+  "8": "/*【网点订单搜索功能测试用例】*/",
+  "SearchOrder": {
+    "SearchData": [
+      {"CaseName": "1、工单搜索-按工单编码搜索工单校验","OrderNum": "获取ConfigData.ini中数据","User":"","UserPhone": "","ServerType": "","Status": "","Master": ""},
+      {"CaseName": "2、工单搜索-按用户电话搜索工单校验","OrderNum": "","User":"","UserPhone": "13720673941","ServerType": "","Status": "","Master": ""},
+      {"CaseName": "3、工单搜索-按服务类型搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "维修","Status": "","Master": ""},
+      {"CaseName": "4、工单搜索-按工单状态搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "","Status": "服务完成","Master": ""},
+      {"CaseName": "5、工单搜索-按服务师傅搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "","Status": "","Master": "邓鹏飞"},
+      {"CaseName": "6、工单搜索-按用户姓名搜索工单校验","OrderNum": "","User":"AutoTest","UserPhone": "","ServerType": "","Status": "","Master": ""},
+      {"CaseName": "7、工单搜索-按多条件混合搜索工单校验","OrderNum": "","User":"AutoTest","UserPhone": "13720673941","ServerType": "安装","Status": "等待师傅接单","Master": "邓鹏飞"}
+    ],
+    "MoreSearchData": [
+      {"CaseName": "8、工单搜索-按品牌搜索工单校验","Brand": "海尔","Kind": "","ProductNum": "","InPheNum": "","From": "","BuyPlace": "","CreateDate": "","FinishDate": ""},
+      {"CaseName": "9、工单搜索-按品类搜索工单校验","Brand": "海尔","Kind": "空调","ProductNum": "","InPheNum": "","From": "","BuyPlace": "","CreateDate": "","FinishDate": ""},
+      {"CaseName": "10、工单搜索-按型号搜索工单校验","Brand": "","Kind": "","ProductNum": "XH00000000","InPheNum": "","From": "","BuyPlace": "","CreateDate": "","FinishDate": ""},
+      {"CaseName": "11、工单搜索-按内机码搜索工单校验","Brand": "","Kind": "","ProductNum": "","InPheNum": "NEIJI00000000","From": "","BuyPlace": "","CreateDate": "","FinishDate": ""},
+      {"CaseName": "12、工单搜索-按工单来源搜索工单校验","Brand": "","Kind": "","ProductNum": "","InPheNum": "","From": "自建工单","BuyPlace": "","CreateDate": "","FinishDate": ""},
+      {"CaseName": "13、工单搜索-按购买渠道搜索工单校验","Brand": "","Kind": "","ProductNum": "","InPheNum": "","From": "","BuyPlace": "京东","CreateDate": "","FinishDate": ""},
+      {"CaseName": "14、工单搜索-按下单日期搜索工单校验","Brand": "","Kind": "","ProductNum": "","InPheNum": "","From": "","BuyPlace": "","CreateDate": "2019-06-05","FinishDate": ""},
+      {"CaseName": "15、工单搜索-按完成日期搜索工单校验","Brand": "","Kind": "","ProductNum": "","InPheNum": "","From": "","BuyPlace": "","CreateDate": "","FinishDate": "2019-06-05"},
+      {"CaseName": "16、工单搜索-按多条件搜索工单校验","Brand": "海尔","Kind": "空调","ProductNum": "XH00000000","InPheNum": "NEIJI00000000","From": "自建工单","BuyPlace": "京东","CreateDate": "2019-06-05","FinishDate": "2019-06-05"}
+    ]
+  },
+  "9": "/*【网点完成工单功能测试用例】*/",
+  "FinishOrder": {
+    "FinishData": [
+      {"CaseName": "1、完成工单-师傅预约时间为空校验","OrderTime": "","DoorTime": "当前时间","FinishTime": "当前时间","UpLoading": "True","expect": "师傅预约日期不能为空"},
+      {"CaseName": "2、完成工单-师傅上门时间为空校验","OrderTime": "当前时间","DoorTime": "","FinishTime": "当前时间","UpLoading": "True","expect": "师傅上门时间不能为空"},
+      {"CaseName": "3、完成工单-师傅完工时间为空校验","OrderTime": "当前时间","DoorTime": "当前时间","FinishTime": "","UpLoading": "True","expect": "师傅完成服务不能为空"},
+      {"CaseName": "4、完成工单-师傅上传图片为空校验","OrderTime": "当前时间","DoorTime": "当前时间","FinishTime": "当前时间","UpLoading": "False","expect": "服务图片必须上传完整"},
+      {"CaseName": "5、完成工单-网点完成服务校验","OrderTime": "当前时间","DoorTime": "当前时间","FinishTime": "当前时间","UpLoading": "True","expect": "操作成功"}
+    ]
+  },
+  "10": "/*【网点回访功能测试用例】*/",
+  "VisitOrder": {
+    "VisitData": {"CaseName": "1、网点回访订单功能校验","ServerStatus": "非常满意","SafetyAssess": "按安全规范操作","visitResult": "已完工","expect": "操作成功"}
+  },
+  "11": "/*【网点返单功能测试用例】*/",
+  "ReturnOrder": {
+    "AlterReturn": [
+      {"CaseName": "1、返单-修改返单服务商为空校验","BranchName": "","expect": "请选择服务商"},
+      {"CaseName": "2、返单-修改返单服务商成功校验","BranchName": "branch03","expect": "修改返单成功"}
+    ],
+    "ReturnOrderData": {"CaseName": "3、返单-返单成功校验","expect": "操作成功！"},
+    "AddBranch": {"CaseName": "4、返单-添加代结单服务商校验"},
+    "DelReturnOrder": {"CaseName": "5、返单-撤销返单校验","expect": "操作成功！"}
+  },
+  "12": "/*【网点订单返单结算功能测试用例】*/",
+  "SettleOrderData": {
+    "ReturnNotSettle": {
+      "TestCase001": {"CaseName": "1、返单结算-返单未结算系统提示校验","expect": "服务商尚未结算"},
+      "TestCase002": {"CaseName": "2、返单结算-返单未结算只能选择固定金额校验","expect": "None"}
+    },
+    "ReturnOrderData": {
+      "ReturnOrderUrl": "http://www.51shouhou.cn/singleBranch/#/order/search/branchreturn?tabType=代结待结算&page=1",
+      "TestCase001": {"CaseName": "3、返单结算-厂商结算价格不能编辑校验","expect": "true"},
+      "TestCase002": {"CaseName": "4、返单结算-厂商未结算提示信息校验","expect": "厂商尚未结算"},
+      "TestCase003": {"CaseName": "5、返单结算-按规则结算结算价格不能编辑校验","SettleType":"按提成规则","expect": "true"},
+      "TestCase004": {"CaseName": "6、返单结算-按固定金额结算金可以编辑校验","SettleType":"按固定金额","SettleMoney": "50"},
+      "TestCase005": [
+        {"CaseName": "7、返单结算-钱包余额不足支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"钱包结算","expect": "账户钱包余额不足"},
+        {"CaseName": "8、返单结算-线下成功支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"线下结算","expect": "返单结算完成"}
+      ],
+      "TestCase006": {"CaseName": "9、返单结算-返单结算后系统提示校验"},
+      "TestCase007": {"CaseName": "10、返单结算-返单结算123结算方式都能选择校验"},
+      "TestCase008": {"CaseName": "11、返单结算-固定金额线下结算成功校验","SettleType":"按固定比例","PayType":"线下结算","expect": "结算完成"}
+    }
+  },
+  "13": "/*【网点订单经销商工单结算功能测试用例】*/",
+  "ManageOrderData": {
+    "TestCase001": {"CaseName": "12、经销商工单结算-未结算提示信息校验","expect": "经销商尚未结算"},
+    "TestCase002": {"CaseName": "13、经销商工单结算-1/3结算方式可以选择校验"},
+    "TestCase003": {"CaseName": "14、经销商工单结算-经商端设置结算价格不能修改校验","expect": "true"},
+    "TestCase004": [
+      {"CaseName": "15、经销商工单结算-钱包结算余额不足校验","PayType":"钱包结算","expect": "账户钱包余额不足"},
+      {"CaseName": "16、经销商工单结算-经销商线下结算成功校验","PayType":"线下结算","expect": "结算完成"}
+    ],
+    "TestCase005": {"CaseName": "17、经销商工单结算-结算后提示信息校验"},
+    "TestCase006": [
+      {"CaseName": "18、经销商工单结算-钱包结算余额不足校验","SettleType":"按固定比例","BranchNum":"6","PayType":"钱包结算","expect": "账户钱包余额不足"},
+      {"CaseName": "19、经销商工单结算-服务商线下结算成功校验","SettleType":"按固定比例","BranchNum":"6","PayType":"线下结算","expect": "结算完成"}
+      ]
+  }
+}

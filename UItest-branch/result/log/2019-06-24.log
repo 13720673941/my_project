@@ -1,0 +1,353 @@
+2019-06-24 15:43:16,154 - INFO - SUCCESS  Launch browser with chrome, Spend 4.095728635787964 seconds.
+2019-06-24 15:43:17,482 - INFO - SUCCESS  Set window size max, Spend 1.325861930847168 seconds.
+2019-06-24 15:43:17,489 - INFO - ################################### START ###################################
+2019-06-24 15:43:17,512 - INFO - SUCCESS  Wait page load... , Spend 0.003895282745361328 seconds.
+2019-06-24 15:43:20,167 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/login>, Spend 2.6527011394500732 seconds.
+2019-06-24 15:43:20,244 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.07615375518798828 seconds.
+2019-06-24 15:43:20,370 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="text"]')> input message, Spend 0.2021019458770752 seconds.
+2019-06-24 15:43:20,391 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.02050304412841797 seconds.
+2019-06-24 15:43:20,669 - INFO - SUCCESS  Input message: 13700000004, Spend 0.29778337478637695 seconds
+2019-06-24 15:43:20,707 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.03710603713989258 seconds.
+2019-06-24 15:43:20,774 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="password"]')> input message, Spend 0.10349345207214355 seconds.
+2019-06-24 15:43:20,798 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.02245497703552246 seconds.
+2019-06-24 15:43:20,961 - INFO - SUCCESS  Input message: 111111, Spend 0.18453073501586914 seconds
+2019-06-24 15:43:21,001 - INFO - SUCCESS  Find element <('xpath', '//a[@class="loginBtn"]')>, Spend 0.03807783126831055 seconds.
+2019-06-24 15:43:21,146 - INFO - SUCCESS  Click button -> <('xpath', '//a[@class="loginBtn"]')>, Spend 0.18257498741149902 seconds.
+2019-06-24 15:43:22,151 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-24 15:43:23,468 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')>, Spend 1.310241937637329 seconds.
+2019-06-24 15:43:23,573 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')> is true, Spend 1.414710521697998 seconds.
+2019-06-24 15:43:23,574 - INFO - SUCCESS  *Branch login succss！
+2019-06-24 15:43:23,945 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/changePassword>, Spend 0.36905694007873535 seconds.
+2019-06-24 15:43:26,018 - INFO - SUCCESS  Refresh current page, Spend 2.0688579082489014 seconds.
+2019-06-24 15:43:26,317 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.29582738876342773 seconds.
+2019-06-24 15:43:26,546 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.5252668857574463 seconds.
+2019-06-24 15:43:26,548 - INFO - SUCCESS  Load case name: 1、修改手机-登录密码为空校验
+2019-06-24 15:43:26,615 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.06638932228088379 seconds.
+2019-06-24 15:43:27,256 - INFO - SUCCESS  Input message: 13572597243, Spend 0.7068650722503662 seconds
+2019-06-24 15:43:27,322 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.0644371509552002 seconds.
+2019-06-24 15:43:28,104 - INFO - SUCCESS  Input message: 88888888, Spend 0.8474581241607666 seconds
+2019-06-24 15:43:28,150 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.04296064376831055 seconds.
+2019-06-24 15:43:28,336 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.22943711280822754 seconds.
+2019-06-24 15:43:28,434 - INFO - SUCCESS  Find element <('xpath', '//label[text()="登录密码:"]/../div/div[2]')>, Spend 0.09665656089782715 seconds.
+2019-06-24 15:43:28,512 - INFO - SUCCESS  Get element <('xpath', '//label[text()="登录密码:"]/../div/div[2]')> text, Spend 0.17476820945739746 seconds.
+2019-06-24 15:43:28,513 - INFO - SUCCESS  Expect: 请输入登录密码 equal Faction: 请输入登录密码, test -> PASS.
+2019-06-24 15:43:28,958 - INFO - SUCCESS  Refresh current page, Spend 0.43251705169677734 seconds.
+2019-06-24 15:43:30,333 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.3737051486968994 seconds.
+2019-06-24 15:43:30,746 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.7866935729980469 seconds.
+2019-06-24 15:43:30,747 - INFO - SUCCESS  Load case name: 2、修改手机-手机号为空校验
+2019-06-24 15:43:30,824 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.0751795768737793 seconds.
+2019-06-24 15:43:31,128 - INFO - SUCCESS  Input message: 111111, Spend 0.37882137298583984 seconds
+2019-06-24 15:43:31,162 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.03221440315246582 seconds.
+2019-06-24 15:43:31,602 - INFO - SUCCESS  Input message: 88888888, Spend 0.47156500816345215 seconds
+2019-06-24 15:43:31,627 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.023431777954101562 seconds.
+2019-06-24 15:43:31,771 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.16792988777160645 seconds.
+2019-06-24 15:43:31,849 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号码:"]/../div/div[2]')>, Spend 0.0761423110961914 seconds.
+2019-06-24 15:43:31,911 - INFO - SUCCESS  Get element <('xpath', '//label[text()="手机号码:"]/../div/div[2]')> text, Spend 0.13765382766723633 seconds.
+2019-06-24 15:43:31,913 - INFO - SUCCESS  Expect: 请输入手机号码 equal Faction: 请输入手机号码, test -> PASS.
+2019-06-24 15:43:32,392 - INFO - SUCCESS  Refresh current page, Spend 0.4686398506164551 seconds.
+2019-06-24 15:43:33,848 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.451807975769043 seconds.
+2019-06-24 15:43:34,208 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.8120744228363037 seconds.
+2019-06-24 15:43:34,210 - INFO - SUCCESS  Load case name: 3、修改手机-验证码为空校验
+2019-06-24 15:43:34,260 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.047838687896728516 seconds.
+2019-06-24 15:43:34,578 - INFO - SUCCESS  Input message: 111111, Spend 0.36710286140441895 seconds
+2019-06-24 15:43:34,614 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.0331873893737793 seconds.
+2019-06-24 15:43:35,048 - INFO - SUCCESS  Input message: 13572597243, Spend 0.4676544666290283 seconds
+2019-06-24 15:43:35,071 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.022455930709838867 seconds.
+2019-06-24 15:43:35,218 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.16793346405029297 seconds.
+2019-06-24 15:43:35,261 - INFO - SUCCESS  Find element <('xpath', '//label[text()="验证码"]/../div/div[2]')>, Spend 0.041008949279785156 seconds.
+2019-06-24 15:43:35,347 - INFO - SUCCESS  Get element <('xpath', '//label[text()="验证码"]/../div/div[2]')> text, Spend 0.12692523002624512 seconds.
+2019-06-24 15:43:35,350 - INFO - SUCCESS  Expect: 输入验证码 equal Faction: 输入验证码, test -> PASS.
+2019-06-24 15:43:35,790 - INFO - SUCCESS  Refresh current page, Spend 0.4315378665924072 seconds.
+2019-06-24 15:43:36,886 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.0944709777832031 seconds.
+2019-06-24 15:43:37,254 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.4615731239318848 seconds.
+2019-06-24 15:43:37,255 - INFO - SUCCESS  Load case name: 4、修改手机-错误的登陆密码校验
+2019-06-24 15:43:37,302 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.04491162300109863 seconds.
+2019-06-24 15:43:37,692 - INFO - SUCCESS  Input message: 00000000, Spend 0.43446969985961914 seconds
+2019-06-24 15:43:37,722 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.02831745147705078 seconds.
+2019-06-24 15:43:38,183 - INFO - SUCCESS  Input message: 13720673941, Spend 0.4891538619995117 seconds
+2019-06-24 15:43:38,207 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.022455453872680664 seconds.
+2019-06-24 15:43:38,520 - INFO - SUCCESS  Input message: 88888888, Spend 0.3348832130432129 seconds
+2019-06-24 15:43:38,555 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.03320932388305664 seconds.
+2019-06-24 15:43:38,707 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.18550848960876465 seconds.
+2019-06-24 15:43:39,146 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.4344635009765625 seconds.
+2019-06-24 15:43:39,202 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.49207019805908203 seconds.
+2019-06-24 15:43:39,203 - INFO - SUCCESS  Expect: 当前密码不正确 equal Faction: 当前密码不正确, test -> PASS.
+2019-06-24 15:43:39,930 - INFO - SUCCESS  Refresh current page, Spend 0.7185807228088379 seconds.
+2019-06-24 15:43:40,813 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.8816304206848145 seconds.
+2019-06-24 15:43:41,338 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.4059231281280518 seconds.
+2019-06-24 15:43:41,339 - INFO - SUCCESS  Load case name: 5、修改手机-错误的验证码校验
+2019-06-24 15:43:41,374 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.03221917152404785 seconds.
+2019-06-24 15:43:41,790 - INFO - SUCCESS  Input message: 111111, Spend 0.4491145610809326 seconds
+2019-06-24 15:43:41,874 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.08201241493225098 seconds.
+2019-06-24 15:43:42,375 - INFO - SUCCESS  Input message: 13720673941, Spend 0.5848257541656494 seconds
+2019-06-24 15:43:42,421 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.04491090774536133 seconds.
+2019-06-24 15:43:42,685 - INFO - SUCCESS  Input message: 888888, Spend 0.3085212707519531 seconds
+2019-06-24 15:43:42,715 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.02831244468688965 seconds.
+2019-06-24 15:43:42,870 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.18452692031860352 seconds.
+2019-06-24 15:43:42,953 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.08103489875793457 seconds.
+2019-06-24 15:43:43,168 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.29582881927490234 seconds.
+2019-06-24 15:43:43,169 - INFO - SUCCESS  Expect: 验证码不符 equal Faction: 验证码不符, test -> PASS.
+2019-06-24 15:43:44,890 - INFO - SUCCESS  Refresh current page, Spend 1.7134718894958496 seconds.
+2019-06-24 15:43:45,132 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.23920154571533203 seconds.
+2019-06-24 15:43:45,312 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.41982460021972656 seconds.
+2019-06-24 15:43:45,313 - INFO - SUCCESS  Load case name: 6、修改手机-已经注册过的手机号校验
+2019-06-24 15:43:45,348 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.03125309944152832 seconds.
+2019-06-24 15:43:45,754 - INFO - SUCCESS  Input message: 111111, Spend 0.4373941421508789 seconds
+2019-06-24 15:43:45,780 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.02246546745300293 seconds.
+2019-06-24 15:43:46,237 - INFO - SUCCESS  Input message: 13720673941, Spend 0.4793837070465088 seconds
+2019-06-24 15:44:07,755 - INFO - SUCCESS  Refresh current page, Spend 0.4237093925476074 seconds.
+2019-06-24 15:44:09,697 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.9390010833740234 seconds.
+2019-06-24 15:44:10,128 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 2.3695640563964844 seconds.
+2019-06-24 15:44:10,129 - INFO - SUCCESS  Load case name: 7、修改手机-手机号码左边界值校验
+2019-06-24 15:44:10,173 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.041982412338256836 seconds.
+2019-06-24 15:45:23,290 - INFO - SUCCESS  Launch browser with chrome, Spend 3.8037984371185303 seconds.
+2019-06-24 15:45:24,549 - INFO - SUCCESS  Set window size max, Spend 1.2565274238586426 seconds.
+2019-06-24 15:45:24,552 - INFO - ################################### START ###################################
+2019-06-24 15:45:24,564 - INFO - SUCCESS  Wait page load... , Spend 0.006827831268310547 seconds.
+2019-06-24 15:45:26,982 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/login>, Spend 2.416430950164795 seconds.
+2019-06-24 15:45:27,050 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.0654151439666748 seconds.
+2019-06-24 15:45:27,153 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="text"]')> input message, Spend 0.1659862995147705 seconds.
+2019-06-24 15:45:27,185 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.031243562698364258 seconds.
+2019-06-24 15:45:27,458 - INFO - SUCCESS  Input message: 13700000004, Spend 0.30462002754211426 seconds
+2019-06-24 15:45:27,498 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.03905963897705078 seconds.
+2019-06-24 15:45:27,568 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="password"]')> input message, Spend 0.10837316513061523 seconds.
+2019-06-24 15:45:27,596 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.026363134384155273 seconds.
+2019-06-24 15:45:27,759 - INFO - SUCCESS  Input message: 111111, Spend 0.18843603134155273 seconds
+2019-06-24 15:45:27,797 - INFO - SUCCESS  Find element <('xpath', '//a[@class="loginBtn"]')>, Spend 0.03710055351257324 seconds.
+2019-06-24 15:45:27,936 - INFO - SUCCESS  Click button -> <('xpath', '//a[@class="loginBtn"]')>, Spend 0.17574024200439453 seconds.
+2019-06-24 15:45:28,939 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-24 15:45:29,664 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')>, Spend 0.7234642505645752 seconds.
+2019-06-24 15:45:29,694 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')> is true, Spend 0.7537298202514648 seconds.
+2019-06-24 15:45:29,695 - INFO - SUCCESS  *Branch login succss！
+2019-06-24 15:45:29,778 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/changePassword>, Spend 0.08005428314208984 seconds.
+2019-06-24 15:45:30,784 - INFO - SUCCESS  Refresh current page, Spend 1.001715898513794 seconds.
+2019-06-24 15:45:33,457 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 2.6722280979156494 seconds.
+2019-06-24 15:45:33,816 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 3.0315165519714355 seconds.
+2019-06-24 15:45:33,818 - INFO - SUCCESS  Load case name: 1、修改手机-登录密码为空校验
+2019-06-24 15:45:33,906 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.0859220027923584 seconds.
+2019-06-24 15:45:34,421 - INFO - SUCCESS  Input message: 13572597243, Spend 0.6014225482940674 seconds
+2019-06-24 15:45:34,458 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.03612399101257324 seconds.
+2019-06-24 15:45:34,771 - INFO - SUCCESS  Input message: 88888888, Spend 0.3495326042175293 seconds
+2019-06-24 15:45:34,818 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.04490852355957031 seconds.
+2019-06-24 15:45:34,994 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.22064900398254395 seconds.
+2019-06-24 15:45:35,118 - INFO - SUCCESS  Find element <('xpath', '//label[text()="登录密码:"]/../div/div[2]')>, Spend 0.12106561660766602 seconds.
+2019-06-24 15:45:35,192 - INFO - SUCCESS  Get element <('xpath', '//label[text()="登录密码:"]/../div/div[2]')> text, Spend 0.19527363777160645 seconds.
+2019-06-24 15:45:35,193 - INFO - SUCCESS  Expect: 请输入登录密码 equal Faction: 请输入登录密码, test -> PASS.
+2019-06-24 15:45:35,627 - INFO - SUCCESS  Refresh current page, Spend 0.42470312118530273 seconds.
+2019-06-24 15:45:36,996 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.3483190536499023 seconds.
+2019-06-24 15:45:37,555 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.9253325462341309 seconds.
+2019-06-24 15:45:37,556 - INFO - SUCCESS  Load case name: 2、修改手机-手机号为空校验
+2019-06-24 15:45:37,626 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.06834292411804199 seconds.
+2019-06-24 15:45:38,007 - INFO - SUCCESS  Input message: 111111, Spend 0.4500901699066162 seconds
+2019-06-24 15:45:38,038 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.029291868209838867 seconds.
+2019-06-24 15:45:38,442 - INFO - SUCCESS  Input message: 88888888, Spend 0.43446993827819824 seconds
+2019-06-24 15:45:38,471 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.02733922004699707 seconds.
+2019-06-24 15:45:38,614 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.16988229751586914 seconds.
+2019-06-24 15:45:38,680 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号码:"]/../div/div[2]')>, Spend 0.0654149055480957 seconds.
+2019-06-24 15:45:38,741 - INFO - SUCCESS  Get element <('xpath', '//label[text()="手机号码:"]/../div/div[2]')> text, Spend 0.1259477138519287 seconds.
+2019-06-24 15:45:38,743 - INFO - SUCCESS  Expect: 请输入手机号码 equal Faction: 请输入手机号码, test -> PASS.
+2019-06-24 15:45:40,721 - INFO - SUCCESS  Refresh current page, Spend 1.9682908058166504 seconds.
+2019-06-24 15:45:40,907 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.18550920486450195 seconds.
+2019-06-24 15:45:41,084 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.36222147941589355 seconds.
+2019-06-24 15:45:41,086 - INFO - SUCCESS  Load case name: 3、修改手机-验证码为空校验
+2019-06-24 15:45:41,146 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.057610273361206055 seconds.
+2019-06-24 15:45:41,505 - INFO - SUCCESS  Input message: 111111, Spend 0.41689538955688477 seconds
+2019-06-24 15:45:41,536 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.029293060302734375 seconds.
+2019-06-24 15:45:41,963 - INFO - SUCCESS  Input message: 13572597243, Spend 0.45692992210388184 seconds
+2019-06-24 15:45:41,995 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.03124260902404785 seconds.
+2019-06-24 15:45:42,109 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.14449501037597656 seconds.
+2019-06-24 15:45:42,151 - INFO - SUCCESS  Find element <('xpath', '//label[text()="验证码"]/../div/div[2]')>, Spend 0.041008710861206055 seconds.
+2019-06-24 15:45:42,211 - INFO - SUCCESS  Get element <('xpath', '//label[text()="验证码"]/../div/div[2]')> text, Spend 0.09958910942077637 seconds.
+2019-06-24 15:45:42,213 - INFO - SUCCESS  Expect: 输入验证码 equal Faction: 输入验证码, test -> PASS.
+2019-06-24 15:45:42,619 - INFO - SUCCESS  Refresh current page, Spend 0.3963911533355713 seconds.
+2019-06-24 15:45:44,103 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.4820823669433594 seconds.
+2019-06-24 15:45:44,426 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.8052477836608887 seconds.
+2019-06-24 15:45:44,427 - INFO - SUCCESS  Load case name: 4、修改手机-错误的登陆密码校验
+2019-06-24 15:45:44,471 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.041983604431152344 seconds.
+2019-06-24 15:45:44,943 - INFO - SUCCESS  Input message: 00000000, Spend 0.5145299434661865 seconds
+2019-06-24 15:45:44,967 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.021477699279785156 seconds.
+2019-06-24 15:45:45,390 - INFO - SUCCESS  Input message: 13720673941, Spend 0.4452075958251953 seconds
+2019-06-24 15:45:45,413 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.021478652954101562 seconds.
+2019-06-24 15:45:45,704 - INFO - SUCCESS  Input message: 88888888, Spend 0.31243038177490234 seconds
+2019-06-24 15:45:45,732 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.025378942489624023 seconds.
+2019-06-24 15:45:45,893 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.18647456169128418 seconds.
+2019-06-24 15:45:46,051 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.15523576736450195 seconds.
+2019-06-24 15:45:46,115 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.22064876556396484 seconds.
+2019-06-24 15:45:46,117 - INFO - SUCCESS  Expect: 当前密码不正确 equal Faction: 当前密码不正确, test -> PASS.
+2019-06-24 15:45:46,544 - INFO - SUCCESS  Refresh current page, Spend 0.4188539981842041 seconds.
+2019-06-24 15:45:47,570 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.0212464332580566 seconds.
+2019-06-24 15:45:48,199 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.6500070095062256 seconds.
+2019-06-24 15:45:48,201 - INFO - SUCCESS  Load case name: 5、修改手机-错误的验证码校验
+2019-06-24 15:45:48,233 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.030249595642089844 seconds.
+2019-06-24 15:45:48,606 - INFO - SUCCESS  Input message: 111111, Spend 0.4041867256164551 seconds
+2019-06-24 15:45:48,634 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.026361465454101562 seconds.
+2019-06-24 15:45:49,050 - INFO - SUCCESS  Input message: 13720673941, Spend 0.4422929286956787 seconds
+2019-06-24 15:45:49,079 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入验证码"]')>, Spend 0.027333974838256836 seconds.
+2019-06-24 15:45:49,335 - INFO - SUCCESS  Input message: 888888, Spend 0.28314852714538574 seconds
+2019-06-24 15:45:49,360 - INFO - SUCCESS  Find element <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.023432493209838867 seconds.
+2019-06-24 15:45:49,512 - INFO - SUCCESS  Click button -> <('xpath', '//span[contains(.,"确定修改")]')>, Spend 0.17476344108581543 seconds.
+2019-06-24 15:45:49,622 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.10837364196777344 seconds.
+2019-06-24 15:45:49,669 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.15523982048034668 seconds.
+2019-06-24 15:45:49,672 - INFO - SUCCESS  Expect: 验证码不符 equal Faction: 验证码不符, test -> PASS.
+2019-06-24 15:45:50,115 - INFO - SUCCESS  Refresh current page, Spend 0.43446826934814453 seconds.
+2019-06-24 15:45:51,481 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.3629646301269531 seconds.
+2019-06-24 15:45:52,053 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.9350860118865967 seconds.
+2019-06-24 15:45:52,055 - INFO - SUCCESS  Load case name: 6、修改手机-已经注册过的手机号校验
+2019-06-24 15:45:52,090 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.03319549560546875 seconds.
+2019-06-24 15:45:52,442 - INFO - SUCCESS  Input message: 111111, Spend 0.38467884063720703 seconds
+2019-06-24 15:45:52,470 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.026363849639892578 seconds.
+2019-06-24 15:45:52,885 - INFO - SUCCESS  Input message: 13720673941, Spend 0.44228339195251465 seconds
+2019-06-24 15:45:52,934 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.045888423919677734 seconds.
+2019-06-24 15:45:53,065 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.17769718170166016 seconds.
+2019-06-24 15:45:53,191 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.12301802635192871 seconds.
+2019-06-24 15:45:53,238 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.17085981369018555 seconds.
+2019-06-24 15:45:53,240 - INFO - SUCCESS  Expect: 该手机号已注册为网点,请重新输入! equal Faction: 该手机号已注册为网点,请重新输入!, test -> PASS.
+2019-06-24 15:45:53,633 - INFO - SUCCESS  Refresh current page, Spend 0.380770206451416 seconds.
+2019-06-24 15:45:55,517 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.8823738098144531 seconds.
+2019-06-24 15:45:55,804 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 2.169416666030884 seconds.
+2019-06-24 15:45:55,806 - INFO - SUCCESS  Load case name: 7、修改手机-手机号码左边界值校验
+2019-06-24 15:45:55,838 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.02928781509399414 seconds.
+2019-06-24 15:45:56,290 - INFO - SUCCESS  Input message: 111111, Spend 0.48133015632629395 seconds
+2019-06-24 15:45:56,318 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.0263674259185791 seconds.
+2019-06-24 15:45:56,758 - INFO - SUCCESS  Input message: 1372067394, Spend 0.4666867256164551 seconds
+2019-06-24 15:45:56,782 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.021485328674316406 seconds.
+2019-06-24 15:45:56,951 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.19136333465576172 seconds.
+2019-06-24 15:45:56,986 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.03319406509399414 seconds.
+2019-06-24 15:45:57,056 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.10154080390930176 seconds.
+2019-06-24 15:45:57,058 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -> PASS.
+2019-06-24 15:45:57,491 - INFO - SUCCESS  Refresh current page, Spend 0.421771764755249 seconds.
+2019-06-24 15:45:59,487 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.9926908016204834 seconds.
+2019-06-24 15:46:00,050 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 2.556037187576294 seconds.
+2019-06-24 15:46:00,051 - INFO - SUCCESS  Load case name: 8、修改手机-手机号码右边界值校验
+2019-06-24 15:46:00,087 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.03417539596557617 seconds.
+2019-06-24 15:46:00,470 - INFO - SUCCESS  Input message: 111111, Spend 0.4168965816497803 seconds
+2019-06-24 15:46:00,515 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.043929100036621094 seconds.
+2019-06-24 15:46:00,990 - INFO - SUCCESS  Input message: 137206739411, Spend 0.5174527168273926 seconds
+2019-06-24 15:46:01,010 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.01757359504699707 seconds.
+2019-06-24 15:46:01,144 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.1513347625732422 seconds.
+2019-06-24 15:46:01,178 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.032219648361206055 seconds.
+2019-06-24 15:46:01,229 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.08298921585083008 seconds.
+2019-06-24 15:46:01,231 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -> PASS.
+2019-06-24 15:46:01,663 - INFO - SUCCESS  Refresh current page, Spend 0.42079973220825195 seconds.
+2019-06-24 15:46:07,012 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 5.346412897109985 seconds.
+2019-06-24 15:46:07,412 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 5.746707201004028 seconds.
+2019-06-24 15:46:07,414 - INFO - SUCCESS  Load case name: 9、修改手机-手机号码格式特殊符号校验
+2019-06-24 15:46:07,465 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.048819541931152344 seconds.
+2019-06-24 15:46:07,814 - INFO - SUCCESS  Input message: 111111, Spend 0.3983430862426758 seconds
+2019-06-24 15:46:07,840 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.022454500198364258 seconds.
+2019-06-24 15:46:08,280 - INFO - SUCCESS  Input message: 137206739！@, Spend 0.4627821445465088 seconds
+2019-06-24 15:46:08,323 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.04100489616394043 seconds.
+2019-06-24 15:46:08,456 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.17378640174865723 seconds.
+2019-06-24 15:46:08,495 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.03613567352294922 seconds.
+2019-06-24 15:46:08,565 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.10642051696777344 seconds.
+2019-06-24 15:46:08,567 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -> PASS.
+2019-06-24 15:46:10,873 - INFO - SUCCESS  Refresh current page, Spend 2.2982935905456543 seconds.
+2019-06-24 15:46:10,935 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.05956292152404785 seconds.
+2019-06-24 15:46:11,104 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.23041510581970215 seconds.
+2019-06-24 15:46:11,106 - INFO - SUCCESS  Load case name: 10、修改手机-手机号码格式字母校验
+2019-06-24 15:46:11,144 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.036124229431152344 seconds.
+2019-06-24 15:46:11,621 - INFO - SUCCESS  Input message: 111111, Spend 0.5125739574432373 seconds
+2019-06-24 15:46:11,652 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.028324365615844727 seconds.
+2019-06-24 15:46:12,086 - INFO - SUCCESS  Input message: 137206739as, Spend 0.4627852439880371 seconds
+2019-06-24 15:46:12,111 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.02343130111694336 seconds.
+2019-06-24 15:46:12,266 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.17769289016723633 seconds.
+2019-06-24 15:46:12,292 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.023436546325683594 seconds.
+2019-06-24 15:46:12,343 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.07420969009399414 seconds.
+2019-06-24 15:46:12,345 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -> PASS.
+2019-06-24 15:46:12,786 - INFO - SUCCESS  Refresh current page, Spend 0.42958879470825195 seconds.
+2019-06-24 15:46:14,324 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.5377283096313477 seconds.
+2019-06-24 15:46:14,747 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.9595115184783936 seconds.
+2019-06-24 15:46:14,749 - INFO - SUCCESS  Load case name: 11、修改手机-手机号码格式汉字校验
+2019-06-24 15:46:14,799 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.04686284065246582 seconds.
+2019-06-24 15:46:15,120 - INFO - SUCCESS  Input message: 111111, Spend 0.3680729866027832 seconds
+2019-06-24 15:46:15,145 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.024405956268310547 seconds.
+2019-06-24 15:46:15,638 - INFO - SUCCESS  Input message: 1372067394我们, Spend 0.5155041217803955 seconds
+2019-06-24 15:46:15,658 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.01855158805847168 seconds.
+2019-06-24 15:46:15,789 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.15035629272460938 seconds.
+2019-06-24 15:46:15,823 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.03124094009399414 seconds.
+2019-06-24 15:46:15,877 - INFO - SUCCESS  Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 0.08493614196777344 seconds.
+2019-06-24 15:46:15,880 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -> PASS.
+2019-06-24 15:46:16,297 - INFO - SUCCESS  Refresh current page, Spend 0.4071331024169922 seconds.
+2019-06-24 15:46:17,962 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.6636741161346436 seconds.
+2019-06-24 15:46:18,181 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 1.8823742866516113 seconds.
+2019-06-24 15:46:18,183 - INFO - SUCCESS  Load case name: 12、修改手机-正确手机号发送验证码校验
+2019-06-24 15:46:18,253 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.0683450698852539 seconds.
+2019-06-24 15:46:18,553 - INFO - SUCCESS  Input message: 111111, Spend 0.36807918548583984 seconds
+2019-06-24 15:46:18,582 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.027337074279785156 seconds.
+2019-06-24 15:46:18,994 - INFO - SUCCESS  Input message: 13572597243, Spend 0.43935179710388184 seconds
+2019-06-24 15:46:19,018 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.0205080509185791 seconds.
+2019-06-24 15:46:19,152 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.15523767471313477 seconds.
+2019-06-24 15:46:40,259 - ERROR - FAIL  Unable get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text, Spend 21.102506637573242 seconds.
+2019-06-24 15:46:44,284 - INFO - SUCCESS  Quit browser, Spend 4.008833169937134 seconds.
+2019-06-24 15:46:44,285 - INFO - #################################### END ####################################
+2019-06-24 15:59:36,574 - INFO - SUCCESS  Launch browser with chrome, Spend 3.848714590072632 seconds.
+2019-06-24 15:59:37,913 - INFO - SUCCESS  Set window size max, Spend 1.3385541439056396 seconds.
+2019-06-24 15:59:37,915 - INFO - ################################### START ###################################
+2019-06-24 15:59:37,933 - INFO - SUCCESS  Wait page load... , Spend 0.011727333068847656 seconds.
+2019-06-24 15:59:40,432 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/login>, Spend 2.4984374046325684 seconds.
+2019-06-24 15:59:40,498 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.06345868110656738 seconds.
+2019-06-24 15:59:40,590 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="text"]')> input message, Spend 0.15425729751586914 seconds.
+2019-06-24 15:59:40,618 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.027326345443725586 seconds.
+2019-06-24 15:59:40,890 - INFO - SUCCESS  Input message: 13700000004, Spend 0.2997145652770996 seconds
+2019-06-24 15:59:40,932 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.04003000259399414 seconds.
+2019-06-24 15:59:41,003 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="password"]')> input message, Spend 0.11032533645629883 seconds.
+2019-06-24 15:59:41,025 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.02050018310546875 seconds.
+2019-06-24 15:59:41,218 - INFO - SUCCESS  Input message: 111111, Spend 0.21381449699401855 seconds
+2019-06-24 15:59:41,268 - INFO - SUCCESS  Find element <('xpath', '//a[@class="loginBtn"]')>, Spend 0.04783296585083008 seconds.
+2019-06-24 15:59:41,533 - INFO - SUCCESS  Click button -> <('xpath', '//a[@class="loginBtn"]')>, Spend 0.31241869926452637 seconds.
+2019-06-24 15:59:42,537 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-24 15:59:43,453 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')>, Spend 0.9138486385345459 seconds.
+2019-06-24 15:59:43,501 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')> is true, Spend 0.9626660346984863 seconds.
+2019-06-24 15:59:43,503 - INFO - SUCCESS  *Branch login succss！
+2019-06-24 15:59:43,579 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/changePassword>, Spend 0.0751802921295166 seconds.
+2019-06-24 15:59:44,642 - INFO - SUCCESS  Refresh current page, Spend 1.0612730979919434 seconds.
+2019-06-24 16:00:00,960 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 16.315537214279175 seconds.
+2019-06-24 16:00:01,243 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 16.59769916534424 seconds.
+2019-06-24 16:00:01,246 - INFO - SUCCESS  Load case name: 12、修改手机-正确手机号发送验证码校验
+2019-06-24 16:00:01,313 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.06541109085083008 seconds.
+2019-06-24 16:00:01,748 - INFO - SUCCESS  Input message: 111111, Spend 0.49988317489624023 seconds
+2019-06-24 16:00:01,793 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.04297065734863281 seconds.
+2019-06-24 16:00:02,280 - INFO - SUCCESS  Input message: 13572597243, Spend 0.5311276912689209 seconds
+2019-06-24 16:00:02,328 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.044910430908203125 seconds.
+2019-06-24 16:00:02,583 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.29973459243774414 seconds.
+2019-06-24 16:00:02,866 - INFO - SUCCESS  Find element <('xpath', '//label[text()="验证码"]/../div/div[1]/div[2]/button')>, Spend 0.28118419647216797 seconds.
+2019-06-24 16:00:02,948 - INFO - SUCCESS  Get element <('xpath', '//label[text()="验证码"]/../div/div[1]/div[2]/button')> text, Spend 0.3632025718688965 seconds.
+2019-06-24 16:00:02,950 - ERROR - FAIL  Expect: true not equal Faction: 60s, test -> FAIL.
+2019-06-24 16:00:03,542 - INFO - SUCCESS  Save screen shot to: D:\MyWork\UItest-branch\result\image\20190624160002.png, Spend 0.5897066593170166 seconds.
+2019-06-24 16:00:07,963 - INFO - SUCCESS  Quit browser, Spend 4.411080598831177 seconds.
+2019-06-24 16:00:07,964 - INFO - #################################### END ####################################
+2019-06-24 16:40:43,368 - INFO - SUCCESS  Launch browser with chrome, Spend 4.001021862030029 seconds.
+2019-06-24 16:40:44,701 - INFO - SUCCESS  Set window size max, Spend 1.3317363262176514 seconds.
+2019-06-24 16:40:44,702 - INFO - ################################### START ###################################
+2019-06-24 16:40:44,715 - INFO - SUCCESS  Wait page load... , Spend 0.005858421325683594 seconds.
+2019-06-24 16:40:47,127 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/login>, Spend 2.4095940589904785 seconds.
+2019-06-24 16:40:47,185 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.05662989616394043 seconds.
+2019-06-24 16:40:47,275 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="text"]')> input message, Spend 0.14645075798034668 seconds.
+2019-06-24 16:40:47,317 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.04100537300109863 seconds.
+2019-06-24 16:40:47,634 - INFO - SUCCESS  Input message: 13700000004, Spend 0.35831499099731445 seconds
+2019-06-24 16:40:47,682 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.04588770866394043 seconds.
+2019-06-24 16:40:47,764 - INFO - SUCCESS  Clear element <('xpath', '//input[@type="password"]')> input message, Spend 0.1269235610961914 seconds.
+2019-06-24 16:40:47,790 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.02441883087158203 seconds.
+2019-06-24 16:40:47,970 - INFO - SUCCESS  Input message: 111111, Spend 0.20405149459838867 seconds
+2019-06-24 16:40:48,008 - INFO - SUCCESS  Find element <('xpath', '//a[@class="loginBtn"]')>, Spend 0.03514885902404785 seconds.
+2019-06-24 16:40:48,162 - INFO - SUCCESS  Click button -> <('xpath', '//a[@class="loginBtn"]')>, Spend 0.18452811241149902 seconds.
+2019-06-24 16:40:49,164 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-24 16:40:50,098 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')>, Spend 0.9314203262329102 seconds.
+2019-06-24 16:40:50,229 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')> is true, Spend 1.0632259845733643 seconds.
+2019-06-24 16:40:50,231 - INFO - SUCCESS  *Branch login succss！
+2019-06-24 16:40:50,338 - INFO - SUCCESS  Open url <http://www.51shouhou.cn/singleBranch/#/changePassword>, Spend 0.10446906089782715 seconds.
+2019-06-24 16:40:52,647 - INFO - SUCCESS  Refresh current page, Spend 2.306102991104126 seconds.
+2019-06-24 16:40:53,127 - INFO - SUCCESS  Find element <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.47840309143066406 seconds.
+2019-06-24 16:40:53,289 - INFO - SUCCESS  Click button -> <('xpath', '//label[text()="手机号："]/../div/p/a')>, Spend 0.6414520740509033 seconds.
+2019-06-24 16:40:53,291 - INFO - SUCCESS  Load case name: 12、修改手机-正确手机号发送验证码校验
+2019-06-24 16:40:53,404 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入登录密码"]')>, Spend 0.11227941513061523 seconds.
+2019-06-24 16:40:53,730 - INFO - SUCCESS  Input message: 111111, Spend 0.43739843368530273 seconds
+2019-06-24 16:40:53,771 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="输入手机号码"]')>, Spend 0.04002785682678223 seconds.
+2019-06-24 16:40:54,285 - INFO - SUCCESS  Input message: 13572597243, Spend 0.5526013374328613 seconds
+2019-06-24 16:40:54,323 - INFO - SUCCESS  Find element <('xpath', '//span[text()="获取验证码"]')>, Spend 0.03418087959289551 seconds.
+2019-06-24 16:40:54,455 - INFO - SUCCESS  Click button -> <('xpath', '//span[text()="获取验证码"]')>, Spend 0.16695332527160645 seconds.
+2019-06-24 16:40:54,502 - INFO - SUCCESS  Find element <('xpath', '//label[text()="验证码"]/../div/div[1]/div[2]/button')>, Spend 0.04490971565246582 seconds.
+2019-06-24 16:40:54,516 - INFO - SUCCESS  Get element <('xpath', '//label[text()="验证码"]/../div/div[1]/div[2]/button')> , attribute by disabled, Spend 0.0605316162109375 seconds.
+2019-06-24 16:40:54,518 - INFO - SUCCESS  Expect: true equal Faction: true, test -> PASS.
+2019-06-24 16:40:58,473 - INFO - SUCCESS  Quit browser, Spend 3.942434549331665 seconds.
+2019-06-24 16:40:58,475 - INFO - #################################### END ####################################

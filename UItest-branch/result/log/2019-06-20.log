@@ -1,0 +1,1425 @@
+2019-06-20 10:51:12,743 - INFO - ############################## START ##############################
+2019-06-20 10:51:12,746 - INFO - -=【网点登录】=-
+2019-06-20 10:51:12,748 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:14,111 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 10:51:14,193 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="text"]')
+2019-06-20 10:51:14,313 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 10:51:14,391 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="password"]')
+2019-06-20 10:51:14,490 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 10:51:14,607 - INFO - SUCCESS  点击->登录
+2019-06-20 10:51:15,795 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="退出"]')可见
+2019-06-20 10:51:15,796 - INFO - SUCCESS  网点登录成功！
+2019-06-20 10:51:17,837 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:18,509 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:18,511 - INFO - SUCCESS  用例名称: 1、新建订单-联系人为空校验
+2019-06-20 10:51:20,726 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:20,733 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:20,804 - INFO - SUCCESS  输入联系人：
+2019-06-20 10:51:21,206 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:51:21,335 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:21,519 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:21,667 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:21,668 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:21,818 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:51:22,915 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:51:24,049 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:51:24,051 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:51:24,202 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:24,204 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:24,612 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:51:24,613 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:24,837 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:25,086 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:25,386 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:25,387 - INFO - SUCCESS  用例名称: 10、新建订单-手机号格式校验
+2019-06-20 10:51:26,785 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:26,796 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:27,252 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:51:27,629 - INFO - SUCCESS  输入联系方式：！@#！@#！@#！@@
+2019-06-20 10:51:27,733 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:27,892 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:28,070 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:28,071 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:28,228 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:51:29,302 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:51:30,448 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:51:30,448 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:51:30,549 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:30,549 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:30,909 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:51:30,910 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:31,024 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:31,192 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:31,410 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:31,411 - INFO - SUCCESS  用例名称: 11、新建订单-添加无需返单订单校验
+2019-06-20 10:51:32,859 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:32,867 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:33,259 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:51:33,531 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:51:33,623 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:33,720 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:33,819 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:33,820 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:33,924 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:51:35,071 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 10:51:35,178 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:35,180 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:35,542 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 10:51:35,544 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:35,675 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:35,860 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:36,227 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:36,229 - INFO - SUCCESS  用例名称: 12、新建订单-添加仅报单订单校验
+2019-06-20 10:51:36,463 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:36,466 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:38,577 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:51:38,836 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:51:38,930 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:39,025 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:39,124 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:39,124 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:39,248 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:51:40,317 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:51:41,460 - INFO - SUCCESS  选择select框中的选项: branch03 
+2019-06-20 10:51:41,461 - INFO - SUCCESS  选择服务商：branch03
+2019-06-20 10:51:41,559 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:41,560 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:41,921 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:51:41,922 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:42,037 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:42,206 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:42,406 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:42,407 - INFO - SUCCESS  用例名称: 13、新建订单-添加需返单订单校验
+2019-06-20 10:51:42,705 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:42,708 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:44,200 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:51:44,465 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:51:44,558 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:44,659 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:44,758 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:44,759 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:44,866 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:51:46,004 - INFO - SUCCESS  选择工单类型：需返单
+2019-06-20 10:51:47,205 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:51:47,206 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:51:47,316 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:47,318 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:47,677 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 10:51:47,678 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:47,803 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:48,014 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:48,248 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:48,249 - INFO - SUCCESS  用例名称: 2、新建订单-联系方式为空校验
+2019-06-20 10:51:49,564 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:49,606 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:50,123 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:51:50,175 - INFO - SUCCESS  输入联系方式：
+2019-06-20 10:51:50,282 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:50,387 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:50,483 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:50,484 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:50,593 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:51:51,705 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:51:52,862 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:51:52,863 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:51:52,969 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:52,971 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:53,319 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:51:53,321 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:53,432 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:53,587 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:51:53,801 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:53,803 - INFO - SUCCESS  用例名称: 3、新建订单-服务地址为空校验
+2019-06-20 10:51:54,125 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:51:54,128 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:51:55,723 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:51:56,104 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:51:56,234 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:51:56,364 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:51:56,493 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:51:56,494 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:51:56,578 - INFO - SUCCESS  输入详细地址：
+2019-06-20 10:51:57,714 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:51:58,903 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:51:58,904 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:51:59,012 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:51:59,013 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:51:59,368 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 10:51:59,369 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:51:59,481 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:51:59,637 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:00,087 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:00,089 - INFO - SUCCESS  用例名称: 4、新建订单-选择服务商为空校验
+2019-06-20 10:52:00,269 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:00,273 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:01,830 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:02,096 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:02,195 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:02,294 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:02,410 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:02,412 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:02,520 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:03,649 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:52:03,762 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:03,764 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:04,189 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:52:04,190 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:52:04,311 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:04,478 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:04,681 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:04,683 - INFO - SUCCESS  用例名称: 5、新建订单-服务类型为空校验
+2019-06-20 10:52:04,996 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:04,999 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:06,573 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:06,843 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:06,936 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:07,037 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:07,143 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:07,145 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:07,255 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:08,343 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:52:09,521 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:52:09,523 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:52:09,866 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 10:52:09,867 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:52:09,987 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:10,152 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:10,352 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:10,354 - INFO - SUCCESS  用例名称: 6、新建订单-家电品牌为空校验
+2019-06-20 10:52:10,624 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:10,627 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:12,332 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:12,602 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:12,693 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:12,802 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:12,904 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:12,905 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:13,007 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:14,136 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:52:15,326 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:52:15,328 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:52:15,432 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:15,433 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:15,784 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 10:52:15,786 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:52:15,863 - INFO - SUCCESS  输入产品品牌：
+2019-06-20 10:52:16,002 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:16,454 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:16,455 - INFO - SUCCESS  用例名称: 7、新建订单-家电品类为空校验
+2019-06-20 10:52:16,659 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:16,663 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:18,380 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:18,649 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:18,739 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:18,839 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:18,939 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:18,940 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:19,045 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:20,186 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:52:21,380 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:52:21,382 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:52:21,490 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:21,490 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:21,827 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:52:21,828 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:52:21,938 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:22,036 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:22,244 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:22,245 - INFO - SUCCESS  用例名称: 8、新建订单-手机号左边界值校验
+2019-06-20 10:52:23,683 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:23,700 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:24,472 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:24,736 - INFO - SUCCESS  输入联系方式：1372067394
+2019-06-20 10:52:24,832 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:24,937 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:25,041 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:25,042 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:25,154 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:26,272 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:52:27,442 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:52:27,444 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:52:27,542 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:27,544 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:27,907 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 10:52:27,909 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:52:28,069 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:28,271 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:28,521 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:28,523 - INFO - SUCCESS  用例名称: 9、新建订单-手机号右边界值校验
+2019-06-20 10:52:28,833 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:28,837 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:30,657 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:30,956 - INFO - SUCCESS  输入联系方式：137206739411
+2019-06-20 10:52:31,046 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:31,146 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:31,250 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:31,251 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:31,356 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:32,483 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 10:52:33,622 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 10:52:33,623 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 10:52:33,720 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:33,721 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:34,066 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 10:52:34,067 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 10:52:34,184 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:34,349 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:34,552 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:34,553 - INFO - SUCCESS  用例名称: 14、新建订单-智能文本识别为空校验
+2019-06-20 10:52:36,114 - INFO - SUCCESS  点击->智能文本识别
+2019-06-20 10:52:36,125 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:36,387 - INFO - SUCCESS  输入识别文本：
+2019-06-20 10:52:36,460 - INFO - SUCCESS  点击->提交识别
+2019-06-20 10:52:37,509 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 10:52:37,510 - INFO - SUCCESS  期望值：请输入文本内容!,实际值：请输入文本内容!,测试成功！PASS
+2019-06-20 10:52:37,558 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:37,739 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:37,741 - INFO - SUCCESS  用例名称: 15、新建订单-智能文本识别功能校验
+2019-06-20 10:52:39,240 - INFO - SUCCESS  点击->智能文本识别
+2019-06-20 10:52:39,248 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:40,164 - INFO - SUCCESS  输入识别文本：邓鹏飞 13720673941 陕西省西安市未央区大明宫万达广场 安装 海尔 空调
+2019-06-20 10:52:40,224 - INFO - SUCCESS  点击->提交识别
+2019-06-20 10:52:41,330 - INFO - SUCCESS  点击->保存
+2019-06-20 10:52:41,364 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 10:52:41,366 - ERROR - FAIL  期望值：创建成功,实际值：家电品类不能为空!,测试失败！FAIL
+2019-06-20 10:52:41,838 - INFO - SUCCESS  截图保存位置: D:\MyWork\UItest-branch\result\image\20190620105241.png
+2019-06-20 10:52:41,901 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:41,943 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:41,949 - INFO - SUCCESS  用例名称: 16、新建订单-添加订单重置功能校验
+2019-06-20 10:52:42,114 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:42,117 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:44,304 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:44,623 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:44,721 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:44,823 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:44,930 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:44,931 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:45,044 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:46,225 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 10:52:46,345 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:46,346 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:46,465 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:46,631 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:46,828 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:46,831 - INFO - SUCCESS  用例名称: 17、新建订单-直接派单功能校验
+2019-06-20 10:52:47,685 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:47,687 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:49,854 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:50,117 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:50,210 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:50,313 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:50,413 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:50,414 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:50,554 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:51,742 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 10:52:51,866 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:51,868 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:52,019 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 10:52:52,221 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 10:52:52,422 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:52,427 - INFO - SUCCESS  用例名称: 18、新建订单-保存并继续添加订单功能校验
+2019-06-20 10:52:53,307 - INFO - SUCCESS  刷新页面.
+2019-06-20 10:52:53,311 - INFO - SUCCESS  等待元素加载...
+2019-06-20 10:52:55,394 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 10:52:55,694 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 10:52:55,787 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 10:52:55,903 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 10:52:56,022 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 10:52:56,023 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 10:52:56,159 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 10:52:57,314 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 10:52:57,424 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 10:52:57,425 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 10:52:57,537 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:03:23,029 - INFO - ############################## START ##############################
+2019-06-20 11:03:23,032 - INFO - -=【网点登录】=-
+2019-06-20 11:03:23,035 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:03:24,767 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 11:03:25,039 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="text"]')
+2019-06-20 11:03:25,250 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 11:03:25,320 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="password"]')
+2019-06-20 11:03:25,412 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 11:03:25,495 - INFO - SUCCESS  点击->登录
+2019-06-20 11:03:26,670 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="退出"]')可见
+2019-06-20 11:03:26,671 - INFO - SUCCESS  网点登录成功！
+2019-06-20 11:03:28,718 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:03:30,554 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:03:30,555 - INFO - SUCCESS  用例名称: 1、新建订单-联系人为空校验
+2019-06-20 11:03:30,873 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:03:30,879 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:03:32,053 - INFO - SUCCESS  输入联系人：
+2019-06-20 11:03:32,498 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:03:32,617 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:03:32,755 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:03:32,873 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:03:32,874 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:03:33,050 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:03:34,175 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:03:35,361 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:03:35,363 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:03:35,518 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:03:35,519 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:03:36,212 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 11:03:36,213 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:03:36,461 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:03:36,633 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:03:36,900 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:03:37,363 - INFO - SUCCESS  输入内机条码：NEIJI1560999817
+2019-06-20 11:03:37,751 - INFO - SUCCESS  输入外机条码：WAIJI1560999817
+2019-06-20 11:03:37,901 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:03:38,161 - INFO - SUCCESS  随机选择select框中的选项: 京东
+                                            
+2019-06-20 11:03:38,163 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:03:38,433 - INFO - SUCCESS  随机选择select框中的选项: 商场来电
+                                            
+2019-06-20 11:03:38,434 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:03:38,831 - INFO - SUCCESS  备注：备注2019-06-20 11:03:38
+2019-06-20 11:03:39,894 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:03:39,895 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:40,986 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:03:40,988 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:42,065 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:03:42,067 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:43,146 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:03:43,149 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:44,193 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:03:44,194 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:44,351 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:03:46,469 - INFO - SUCCESS  点击->保存
+2019-06-20 11:03:48,535 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:03:48,536 - INFO - SUCCESS  期望值：用户姓名不能为空!,实际值：用户姓名不能为空!,测试成功！PASS
+2019-06-20 11:03:48,571 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:03:48,871 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:03:48,873 - INFO - SUCCESS  用例名称: 10、新建订单-手机号格式校验
+2019-06-20 11:03:50,239 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:03:50,244 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:03:50,571 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:03:50,867 - INFO - SUCCESS  输入联系方式：！@#！@#！@#！@@
+2019-06-20 11:03:50,959 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:03:51,065 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:03:51,173 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:03:51,173 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:03:51,310 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:03:52,382 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:03:53,512 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:03:53,514 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:03:53,619 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:03:53,619 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:03:54,009 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 11:03:54,011 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:03:54,167 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:03:54,291 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:03:54,483 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:03:54,879 - INFO - SUCCESS  输入内机条码：NEIJI1560999834
+2019-06-20 11:03:55,241 - INFO - SUCCESS  输入外机条码：WAIJI1560999835
+2019-06-20 11:03:55,378 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:03:55,632 - INFO - SUCCESS  随机选择select框中的选项: 苏宁
+                                            
+2019-06-20 11:03:55,634 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:03:55,914 - INFO - SUCCESS  随机选择select框中的选项: 商场来电
+                                            
+2019-06-20 11:03:55,915 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:03:56,349 - INFO - SUCCESS  备注：备注2019-06-20 11:03:56
+2019-06-20 11:03:57,458 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:03:57,459 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:58,541 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:03:58,543 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:03:59,614 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:03:59,616 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:00,651 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:04:00,652 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:01,749 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:04:01,752 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:01,905 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:04:03,955 - INFO - SUCCESS  点击->保存
+2019-06-20 11:04:05,987 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:04:05,988 - INFO - SUCCESS  期望值：请正确输入联系方式!,实际值：请正确输入联系方式!,测试成功！PASS
+2019-06-20 11:04:06,020 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:04:06,365 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:06,370 - INFO - SUCCESS  用例名称: 11、新建订单-添加无需返单订单校验
+2019-06-20 11:04:06,803 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:06,807 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:04:09,131 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:04:09,413 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:04:09,506 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:04:09,617 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:04:09,725 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:04:09,726 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:04:09,838 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:04:10,948 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 11:04:11,062 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:04:11,063 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:04:11,413 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:04:11,415 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:04:11,523 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:04:11,647 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:04:11,849 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:04:12,289 - INFO - SUCCESS  输入内机条码：NEIJI1560999852
+2019-06-20 11:04:12,629 - INFO - SUCCESS  输入外机条码：WAIJI1560999852
+2019-06-20 11:04:12,755 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:04:12,995 - INFO - SUCCESS  随机选择select框中的选项: 京东
+                                            
+2019-06-20 11:04:12,996 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:04:13,230 - INFO - SUCCESS  随机选择select框中的选项: 厂商派单
+                                            
+2019-06-20 11:04:13,232 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:04:13,583 - INFO - SUCCESS  备注：备注2019-06-20 11:04:13
+2019-06-20 11:04:14,656 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:04:14,657 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:15,727 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:04:15,728 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:16,802 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:04:16,804 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:17,843 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:04:17,844 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:18,926 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:04:18,927 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:19,070 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:04:21,151 - INFO - SUCCESS  点击->保存
+2019-06-20 11:04:23,772 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:04:23,773 - INFO - SUCCESS  期望值：创建成功,实际值：创建成功,测试成功！PASS
+2019-06-20 11:04:27,123 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:29,154 - INFO - SUCCESS  获取元素: ('xpath', '//div/div[2]/*/*/tr[1]/td[5]/*/span')文本
+2019-06-20 11:04:29,212 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr/td[3]/*/a')文本
+2019-06-20 11:04:29,214 - INFO - SUCCESS  获取订单单号: 636966254618669904 
+2019-06-20 11:04:29,510 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:04:29,782 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:29,783 - INFO - SUCCESS  用例名称: 12、新建订单-添加仅报单订单校验
+2019-06-20 11:04:30,098 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:30,103 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:04:31,239 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:04:31,521 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:04:31,617 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:04:31,715 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:04:31,828 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:04:31,830 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:04:32,006 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:04:33,158 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:04:34,390 - INFO - SUCCESS  选择select框中的选项: branch03 
+2019-06-20 11:04:34,391 - INFO - SUCCESS  选择服务商：branch03
+2019-06-20 11:04:34,494 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:04:34,495 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:04:34,883 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:04:34,884 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:04:35,020 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:04:35,145 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:04:35,387 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:04:35,774 - INFO - SUCCESS  输入内机条码：NEIJI1560999875
+2019-06-20 11:04:36,227 - INFO - SUCCESS  输入外机条码：WAIJI1560999876
+2019-06-20 11:04:36,356 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:04:36,605 - INFO - SUCCESS  随机选择select框中的选项: 天猫
+                                            
+2019-06-20 11:04:36,606 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:04:36,851 - INFO - SUCCESS  随机选择select框中的选项: 商场来电
+                                            
+2019-06-20 11:04:36,852 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:04:37,218 - INFO - SUCCESS  备注：备注2019-06-20 11:04:37
+2019-06-20 11:04:38,319 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:04:38,320 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:39,371 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:04:39,372 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:40,429 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:04:40,431 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:41,485 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:04:41,486 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:42,544 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:04:42,546 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:04:42,697 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:04:44,811 - INFO - SUCCESS  点击->保存
+2019-06-20 11:04:47,292 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:04:47,293 - INFO - SUCCESS  期望值：创建成功,实际值：创建成功,测试成功！PASS
+2019-06-20 11:04:47,387 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/instead
+2019-06-20 11:04:49,611 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:51,639 - INFO - SUCCESS  获取元素: ('xpath', '//div/div[2]/*/*/tr[1]/td[6]/*/span')文本
+2019-06-20 11:04:51,687 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr/td[3]/*/a')文本
+2019-06-20 11:04:51,688 - INFO - SUCCESS  获取订单单号: 636966254855300351 
+2019-06-20 11:04:51,965 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:04:52,512 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:52,513 - INFO - SUCCESS  用例名称: 13、新建订单-添加需返单订单校验
+2019-06-20 11:04:52,671 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:04:52,675 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:04:53,969 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:04:54,363 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:04:54,482 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:04:54,609 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:04:54,755 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:04:54,756 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:04:54,900 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:04:55,999 - INFO - SUCCESS  选择工单类型：需返单
+2019-06-20 11:04:57,098 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:04:57,100 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:04:57,209 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:04:57,210 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:04:57,547 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:04:57,549 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:04:57,674 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:04:57,781 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:04:57,968 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:04:58,316 - INFO - SUCCESS  输入内机条码：NEIJI1560999898
+2019-06-20 11:04:58,678 - INFO - SUCCESS  输入外机条码：WAIJI1560999898
+2019-06-20 11:04:58,793 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:04:59,045 - INFO - SUCCESS  随机选择select框中的选项: 苏宁
+                                            
+2019-06-20 11:04:59,046 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:04:59,284 - INFO - SUCCESS  随机选择select框中的选项: 微信报单
+                                            
+2019-06-20 11:04:59,286 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:04:59,755 - INFO - SUCCESS  备注：备注2019-06-20 11:04:59
+2019-06-20 11:05:00,871 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:05:00,873 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:01,949 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:05:01,951 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:03,030 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:05:03,032 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:04,072 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:05:04,073 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:05,158 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:05:05,159 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:05,294 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:05:07,385 - INFO - SUCCESS  点击->保存
+2019-06-20 11:05:09,948 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:05:09,949 - INFO - SUCCESS  期望值：创建成功,实际值：创建成功,测试成功！PASS
+2019-06-20 11:05:12,236 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:15,194 - INFO - SUCCESS  获取元素: ('xpath', '//div/div[2]/*/*/tr[1]/td[5]/*/span')文本
+2019-06-20 11:05:15,231 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr/td[3]/*/a')文本
+2019-06-20 11:05:15,232 - INFO - SUCCESS  获取订单单号: 636966255081133106 
+2019-06-20 11:05:15,493 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:05:15,622 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:15,624 - INFO - SUCCESS  用例名称: 2、新建订单-联系方式为空校验
+2019-06-20 11:05:16,178 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:16,184 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:05:17,242 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:05:17,293 - INFO - SUCCESS  输入联系方式：
+2019-06-20 11:05:17,398 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:05:17,500 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:05:17,599 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:05:17,600 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:05:17,783 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:05:18,952 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:05:20,075 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:05:20,076 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:05:20,216 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:05:20,217 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:05:20,632 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:05:20,633 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:05:20,762 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:05:20,895 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:05:21,104 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:05:21,492 - INFO - SUCCESS  输入内机条码：NEIJI1560999921
+2019-06-20 11:05:21,965 - INFO - SUCCESS  输入外机条码：WAIJI1560999921
+2019-06-20 11:05:22,095 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:05:22,382 - INFO - SUCCESS  随机选择select框中的选项: 线下商场
+                                            
+2019-06-20 11:05:22,385 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:05:22,615 - INFO - SUCCESS  随机选择select框中的选项: 用户来电
+                                            
+2019-06-20 11:05:22,618 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:05:22,994 - INFO - SUCCESS  备注：备注2019-06-20 11:05:22
+2019-06-20 11:05:24,052 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:05:24,053 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:25,136 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:05:25,137 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:26,216 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:05:26,217 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:27,282 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:05:27,284 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:28,359 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:05:28,361 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:28,494 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:05:31,041 - INFO - SUCCESS  点击->保存
+2019-06-20 11:05:33,093 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:05:33,094 - INFO - SUCCESS  期望值：联系方式不能为空!,实际值：联系方式不能为空!,测试成功！PASS
+2019-06-20 11:05:33,129 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:05:33,531 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:33,532 - INFO - SUCCESS  用例名称: 3、新建订单-服务地址为空校验
+2019-06-20 11:05:33,960 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:33,963 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:05:36,086 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:05:36,386 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:05:36,490 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:05:36,611 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:05:36,718 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:05:36,719 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:05:36,772 - INFO - SUCCESS  输入详细地址：
+2019-06-20 11:05:37,870 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:05:39,035 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:05:39,036 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:05:39,136 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:05:39,137 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:05:39,476 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 11:05:39,477 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:05:39,628 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:05:39,741 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:05:39,949 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:05:40,343 - INFO - SUCCESS  输入内机条码：NEIJI1560999940
+2019-06-20 11:05:40,764 - INFO - SUCCESS  输入外机条码：WAIJI1560999940
+2019-06-20 11:05:40,875 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:05:41,107 - INFO - SUCCESS  随机选择select框中的选项: 苏宁
+                                            
+2019-06-20 11:05:41,108 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:05:41,341 - INFO - SUCCESS  随机选择select框中的选项: 商场来电
+                                            
+2019-06-20 11:05:41,341 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:05:41,711 - INFO - SUCCESS  备注：备注2019-06-20 11:05:41
+2019-06-20 11:05:42,862 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:05:42,864 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:43,913 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:05:43,914 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:45,016 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:05:45,019 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:46,134 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:05:46,136 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:47,231 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:05:47,234 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:05:47,384 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:05:49,500 - INFO - SUCCESS  点击->保存
+2019-06-20 11:05:51,580 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:05:51,582 - INFO - SUCCESS  期望值：详细地址不能为空!,实际值：详细地址不能为空!,测试成功！PASS
+2019-06-20 11:05:51,623 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:05:51,876 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:51,877 - INFO - SUCCESS  用例名称: 4、新建订单-选择服务商为空校验
+2019-06-20 11:05:53,200 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:05:53,206 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:05:53,639 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:05:53,917 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:05:54,026 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:05:54,131 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:05:54,237 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:05:54,239 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:05:54,381 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:05:55,546 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:05:55,671 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:05:55,671 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:05:56,209 - INFO - SUCCESS  随机选择select框中的选项: 晚上
+2019-06-20 11:05:56,211 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:05:56,356 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:05:56,496 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:05:56,698 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:05:57,095 - INFO - SUCCESS  输入内机条码：NEIJI1560999957
+2019-06-20 11:05:57,459 - INFO - SUCCESS  输入外机条码：WAIJI1560999957
+2019-06-20 11:05:57,597 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:05:57,855 - INFO - SUCCESS  随机选择select框中的选项: 天猫
+                                            
+2019-06-20 11:05:57,856 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:05:58,108 - INFO - SUCCESS  随机选择select框中的选项: 商场来电
+                                            
+2019-06-20 11:05:58,110 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:05:58,479 - INFO - SUCCESS  备注：备注2019-06-20 11:05:58
+2019-06-20 11:05:59,567 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:05:59,568 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:00,650 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:06:00,651 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:01,716 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:06:01,719 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:02,799 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:06:02,802 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:03,864 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:06:03,866 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:04,121 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:06:06,169 - INFO - SUCCESS  点击->保存
+2019-06-20 11:06:08,199 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:06:08,200 - INFO - SUCCESS  期望值：请选择服务商!,实际值：请选择服务商!,测试成功！PASS
+2019-06-20 11:06:08,234 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:06:08,467 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:06:08,468 - INFO - SUCCESS  用例名称: 5、新建订单-服务类型为空校验
+2019-06-20 11:06:08,765 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:06:08,768 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:06:10,062 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:06:10,332 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:06:10,421 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:06:10,525 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:06:10,631 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:06:10,633 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:06:10,734 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:06:11,859 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:06:13,022 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:06:13,024 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:06:13,388 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:06:13,390 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:06:13,508 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:06:13,641 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:06:13,830 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:06:14,213 - INFO - SUCCESS  输入内机条码：NEIJI1560999974
+2019-06-20 11:06:14,563 - INFO - SUCCESS  输入外机条码：WAIJI1560999974
+2019-06-20 11:06:14,692 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:06:14,959 - INFO - SUCCESS  随机选择select框中的选项: 苏宁
+                                            
+2019-06-20 11:06:14,960 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:06:15,208 - INFO - SUCCESS  随机选择select框中的选项: 商场来电
+                                            
+2019-06-20 11:06:15,209 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:06:15,561 - INFO - SUCCESS  备注：备注2019-06-20 11:06:15
+2019-06-20 11:06:16,660 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:06:16,661 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:17,733 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:06:17,735 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:18,778 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:06:18,779 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:19,844 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:06:19,845 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:20,914 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:06:20,916 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:21,059 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:06:23,116 - INFO - SUCCESS  点击->保存
+2019-06-20 11:06:25,243 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:06:25,244 - INFO - SUCCESS  期望值：服务类型不能为空!,实际值：服务类型不能为空!,测试成功！PASS
+2019-06-20 11:06:25,295 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:06:25,562 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:06:25,564 - INFO - SUCCESS  用例名称: 6、新建订单-家电品牌为空校验
+2019-06-20 11:06:27,416 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:06:27,430 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:06:27,845 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:06:28,165 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:06:28,263 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:06:28,362 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:06:28,466 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:06:28,467 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:06:28,573 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:06:29,719 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:06:30,909 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:06:30,910 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:06:31,009 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:06:31,010 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:06:31,433 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:06:31,435 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:06:31,528 - INFO - SUCCESS  输入产品品牌：
+2019-06-20 11:06:31,601 - INFO - SUCCESS  输入产品品类：
+2019-06-20 11:06:31,798 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:06:32,221 - INFO - SUCCESS  输入内机条码：NEIJI1560999992
+2019-06-20 11:06:32,587 - INFO - SUCCESS  输入外机条码：WAIJI1560999992
+2019-06-20 11:06:32,715 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:06:32,979 - INFO - SUCCESS  随机选择select框中的选项: 苏宁
+                                            
+2019-06-20 11:06:32,981 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:06:33,235 - INFO - SUCCESS  随机选择select框中的选项: 用户来电
+                                            
+2019-06-20 11:06:33,236 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:06:33,548 - INFO - SUCCESS  备注：备注2019-06-20 11:06:33
+2019-06-20 11:06:34,642 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:06:34,644 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:35,747 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:06:35,749 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:36,800 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:06:36,802 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:37,880 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:06:37,883 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:38,956 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:06:38,957 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:39,088 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:06:41,182 - INFO - SUCCESS  点击->保存
+2019-06-20 11:06:43,253 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:06:43,254 - INFO - SUCCESS  期望值：家电品牌不能为空!,实际值：家电品牌不能为空!,测试成功！PASS
+2019-06-20 11:06:43,302 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:06:43,560 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:06:43,562 - INFO - SUCCESS  用例名称: 7、新建订单-家电品类为空校验
+2019-06-20 11:06:43,956 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:06:43,960 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:06:45,360 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:06:45,636 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:06:45,726 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:06:45,830 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:06:45,933 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:06:45,934 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:06:46,045 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:06:47,167 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:06:48,263 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:06:48,264 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:06:48,361 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:06:48,362 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:06:48,716 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:06:48,717 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:06:48,834 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:06:48,899 - INFO - SUCCESS  输入产品品类：
+2019-06-20 11:06:49,090 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:06:49,459 - INFO - SUCCESS  输入内机条码：NEIJI1561000009
+2019-06-20 11:06:49,785 - INFO - SUCCESS  输入外机条码：WAIJI1561000009
+2019-06-20 11:06:49,907 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:06:50,173 - INFO - SUCCESS  随机选择select框中的选项: 线下商场
+                                            
+2019-06-20 11:06:50,175 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:06:50,408 - INFO - SUCCESS  随机选择select框中的选项: 用户来电
+                                            
+2019-06-20 11:06:50,410 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:06:50,778 - INFO - SUCCESS  备注：备注2019-06-20 11:06:50
+2019-06-20 11:06:51,853 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:06:51,855 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:52,938 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:06:52,940 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:54,010 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:06:54,011 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:55,091 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:06:55,094 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:56,137 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:06:56,139 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:06:56,299 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:06:58,399 - INFO - SUCCESS  点击->保存
+2019-06-20 11:07:00,471 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:07:00,473 - INFO - SUCCESS  期望值：家电品类不能为空!,实际值：家电品类不能为空!,测试成功！PASS
+2019-06-20 11:07:00,513 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:00,735 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:00,736 - INFO - SUCCESS  用例名称: 8、新建订单-手机号左边界值校验
+2019-06-20 11:07:01,008 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:01,014 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:02,550 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:07:02,815 - INFO - SUCCESS  输入联系方式：1372067394
+2019-06-20 11:07:02,914 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:07:03,024 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:07:03,132 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:07:03,133 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:07:03,243 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:07:04,311 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:07:05,489 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:07:05,491 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:07:05,590 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:07:05,591 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:07:05,933 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:07:05,934 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:07:06,048 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:07:06,168 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:07:06,355 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:07:06,738 - INFO - SUCCESS  输入内机条码：NEIJI1561000026
+2019-06-20 11:07:07,074 - INFO - SUCCESS  输入外机条码：WAIJI1561000027
+2019-06-20 11:07:07,207 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:07:07,458 - INFO - SUCCESS  随机选择select框中的选项: 京东
+                                            
+2019-06-20 11:07:07,460 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:07:07,692 - INFO - SUCCESS  随机选择select框中的选项: 厂商派单
+                                            
+2019-06-20 11:07:07,694 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:07:08,102 - INFO - SUCCESS  备注：备注2019-06-20 11:07:08
+2019-06-20 11:07:09,192 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:07:09,194 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:10,277 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:07:10,280 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:11,348 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:07:11,349 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:12,390 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:07:12,392 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:13,521 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:07:13,522 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:13,734 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:07:15,784 - INFO - SUCCESS  点击->保存
+2019-06-20 11:07:17,867 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:07:17,869 - INFO - SUCCESS  期望值：请正确输入联系方式!,实际值：请正确输入联系方式!,测试成功！PASS
+2019-06-20 11:07:17,919 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:18,189 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:18,191 - INFO - SUCCESS  用例名称: 9、新建订单-手机号右边界值校验
+2019-06-20 11:07:19,644 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:19,668 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:20,564 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:07:20,997 - INFO - SUCCESS  输入联系方式：137206739411
+2019-06-20 11:07:21,131 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:07:21,258 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:07:21,380 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:07:21,382 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:07:21,530 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:07:22,641 - INFO - SUCCESS  选择工单类型：仅报单
+2019-06-20 11:07:23,761 - INFO - SUCCESS  选择select框中的选项: XM-服务商 
+2019-06-20 11:07:23,762 - INFO - SUCCESS  选择服务商：XM-服务商
+2019-06-20 11:07:23,886 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:07:23,887 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:07:24,326 - INFO - SUCCESS  随机选择select框中的选项: 下午
+2019-06-20 11:07:24,327 - INFO - SUCCESS  选择预约时间：2019-06-20,None
+2019-06-20 11:07:24,440 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:07:24,556 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:07:24,788 - INFO - SUCCESS  输入产品型号：XH0000
+2019-06-20 11:07:25,155 - INFO - SUCCESS  输入内机条码：NEIJI1561000045
+2019-06-20 11:07:25,499 - INFO - SUCCESS  输入外机条码：WAIJI1561000045
+2019-06-20 11:07:25,619 - INFO - SUCCESS  选择购买时间：2019-06-20
+2019-06-20 11:07:25,860 - INFO - SUCCESS  随机选择select框中的选项: 苏宁
+                                            
+2019-06-20 11:07:25,863 - INFO - SUCCESS  选择购买渠道：None
+2019-06-20 11:07:26,105 - INFO - SUCCESS  随机选择select框中的选项: 用户来电
+                                            
+2019-06-20 11:07:26,106 - INFO - SUCCESS  选择信息来源：None
+2019-06-20 11:07:26,458 - INFO - SUCCESS  备注：备注2019-06-20 11:07:26
+2019-06-20 11:07:27,566 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 11:07:27,567 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:28,648 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 11:07:28,650 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:29,760 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 11:07:29,763 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:30,854 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture04.jpg
+2019-06-20 11:07:30,856 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:31,899 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture05.jpg
+2019-06-20 11:07:31,901 - INFO - SUCCESS  上传图片 5 张 
+2019-06-20 11:07:32,083 - INFO - SUCCESS  页面元素: ('xpath', '//div[@class="btnMenubox"]/button[1]')可见
+2019-06-20 11:07:34,182 - INFO - SUCCESS  点击->保存
+2019-06-20 11:07:36,217 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:07:36,218 - INFO - SUCCESS  期望值：请正确输入联系方式!,实际值：请正确输入联系方式!,测试成功！PASS
+2019-06-20 11:07:36,256 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:36,486 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:36,488 - INFO - SUCCESS  用例名称: 14、新建订单-智能文本识别为空校验
+2019-06-20 11:07:37,956 - INFO - SUCCESS  点击->智能文本识别
+2019-06-20 11:07:37,961 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:38,026 - INFO - SUCCESS  输入识别文本：
+2019-06-20 11:07:38,105 - INFO - SUCCESS  点击->提交识别
+2019-06-20 11:07:39,188 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:07:39,190 - INFO - SUCCESS  期望值：请输入文本内容!,实际值：请输入文本内容!,测试成功！PASS
+2019-06-20 11:07:39,238 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:40,662 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:40,664 - INFO - SUCCESS  用例名称: 15、新建订单-智能文本识别功能校验
+2019-06-20 11:07:41,039 - INFO - SUCCESS  点击->智能文本识别
+2019-06-20 11:07:41,044 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:41,671 - INFO - SUCCESS  输入识别文本：邓鹏飞 13720673941 陕西省西安市未央区大明宫万达广场 安装 海尔 空调
+2019-06-20 11:07:41,722 - INFO - SUCCESS  点击->提交识别
+2019-06-20 11:07:42,829 - INFO - SUCCESS  点击->保存
+2019-06-20 11:07:42,865 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:07:42,866 - ERROR - FAIL  期望值：创建成功,实际值：家电品类不能为空!,测试失败！FAIL
+2019-06-20 11:07:43,405 - INFO - SUCCESS  截图保存位置: D:\MyWork\UItest-branch\result\image\20190620110742.png
+2019-06-20 11:07:43,441 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:43,738 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:43,741 - INFO - SUCCESS  用例名称: 16、新建订单-添加订单重置功能校验
+2019-06-20 11:07:44,304 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:44,307 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:46,170 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:07:46,486 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:07:46,590 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:07:46,711 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:07:46,829 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:07:46,830 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:07:47,000 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:07:48,078 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 11:07:48,200 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:07:48,201 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:07:48,329 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:07:48,466 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:07:48,569 - INFO - SUCCESS  点击->重置
+2019-06-20 11:07:48,638 - INFO - SUCCESS  点击->保存
+2019-06-20 11:07:49,688 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:07:49,690 - INFO - SUCCESS  期望值：服务类型不能为空!,实际值：服务类型不能为空!,测试成功！PASS
+2019-06-20 11:07:49,737 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:49,937 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:49,942 - INFO - SUCCESS  用例名称: 17、新建订单-直接派单功能校验
+2019-06-20 11:07:50,293 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:50,297 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:52,413 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:07:52,694 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:07:52,787 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:07:52,891 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:07:52,998 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:07:53,000 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:07:53,112 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:07:54,240 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 11:07:54,357 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:07:54,358 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:07:54,483 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:07:54,590 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:07:54,691 - INFO - SUCCESS  点击->直接派单
+2019-06-20 11:07:55,747 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/add
+2019-06-20 11:07:56,098 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:56,104 - INFO - SUCCESS  用例名称: 18、新建订单-保存并继续添加订单功能校验
+2019-06-20 11:07:56,494 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:07:56,497 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:07:58,535 - INFO - SUCCESS  输入联系人：AutoTest
+2019-06-20 11:07:58,828 - INFO - SUCCESS  输入联系方式：13720673941
+2019-06-20 11:07:58,927 - INFO - SUCCESS  选择select框中的选项: 陕西省 
+2019-06-20 11:07:59,028 - INFO - SUCCESS  选择select框中的选项: 西安市 
+2019-06-20 11:07:59,132 - INFO - SUCCESS  选择select框中的选项: 雁塔区 
+2019-06-20 11:07:59,133 - INFO - SUCCESS  选择服务区域：陕西省-西安市-雁塔区
+2019-06-20 11:07:59,253 - INFO - SUCCESS  输入详细地址：沙井村
+2019-06-20 11:08:00,312 - INFO - SUCCESS  选择工单类型：无需返单
+2019-06-20 11:08:00,417 - INFO - SUCCESS  选择select框中的选项: 安装 
+2019-06-20 11:08:00,419 - INFO - SUCCESS  选择服务类型：安装
+2019-06-20 11:08:00,543 - INFO - SUCCESS  输入产品品牌：海尔
+2019-06-20 11:08:00,663 - INFO - SUCCESS  输入产品品类：空调
+2019-06-20 11:08:00,739 - INFO - SUCCESS  点击->保存并继续
+2019-06-20 11:08:01,798 - INFO - SUCCESS  页面元素: ('xpath', '//span[contains(.,"添加工单")]')可见
+2019-06-20 11:08:01,829 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:08:01,831 - INFO - SUCCESS  期望值：创建成功,实际值：创建成功,测试成功！PASS
+2019-06-20 11:08:04,116 - INFO - SUCCESS  退出浏览器.
+2019-06-20 11:08:04,118 - INFO - ############################### END ###############################
+2019-06-20 11:21:22,929 - INFO - ############################## START ##############################
+2019-06-20 11:21:28,811 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 11:21:28,815 - INFO - SUCCESS  用例名称: 1、登录-用户名密码为空校验
+2019-06-20 11:21:28,829 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:21:29,451 - INFO - SUCCESS  输入用户名: 
+2019-06-20 11:21:29,499 - INFO - SUCCESS  输入密码: 
+2019-06-20 11:21:29,580 - INFO - SUCCESS  点击->登录
+2019-06-20 11:21:30,663 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:21:30,664 - INFO - SUCCESS  期望值：请输入登录手机号,实际值：请输入登录手机号,测试成功！PASS
+2019-06-20 11:21:30,670 - INFO - SUCCESS  用例名称: 2、登录-用户名为空校验
+2019-06-20 11:21:31,131 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:21:31,184 - INFO - SUCCESS  输入用户名: 
+2019-06-20 11:21:31,271 - INFO - SUCCESS  输入密码: 111111
+2019-06-20 11:21:31,336 - INFO - SUCCESS  点击->登录
+2019-06-20 11:21:32,414 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:21:32,416 - INFO - SUCCESS  期望值：请输入登录手机号,实际值：请输入登录手机号,测试成功！PASS
+2019-06-20 11:21:32,421 - INFO - SUCCESS  用例名称: 3、登录-密码为空校验
+2019-06-20 11:21:32,888 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:21:33,023 - INFO - SUCCESS  输入用户名: 13720673941
+2019-06-20 11:21:33,067 - INFO - SUCCESS  输入密码: 
+2019-06-20 11:21:33,125 - INFO - SUCCESS  点击->登录
+2019-06-20 11:21:34,193 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:21:34,194 - INFO - SUCCESS  期望值：请输入密码,实际值：请输入密码,测试成功！PASS
+2019-06-20 11:21:34,198 - INFO - SUCCESS  用例名称: 4、登录-用户名不正确密码正确校验
+2019-06-20 11:21:34,641 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:21:34,769 - INFO - SUCCESS  输入用户名: 1372067394
+2019-06-20 11:21:34,856 - INFO - SUCCESS  输入密码: 111111
+2019-06-20 11:21:34,928 - INFO - SUCCESS  点击->登录
+2019-06-20 11:21:35,963 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:21:35,963 - INFO - SUCCESS  期望值：用户名不存在,实际值：用户名不存在,测试成功！PASS
+2019-06-20 11:21:35,969 - INFO - SUCCESS  用例名称: 5、登录-用户名正确密码不正确校验
+2019-06-20 11:21:36,467 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:21:36,631 - INFO - SUCCESS  输入用户名: 13720673941
+2019-06-20 11:21:36,732 - INFO - SUCCESS  输入密码: 123123
+2019-06-20 11:21:36,819 - INFO - SUCCESS  点击->登录
+2019-06-20 11:21:37,847 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:21:37,848 - INFO - SUCCESS  期望值：用户名或密码错误,实际值：用户名或密码错误,测试成功！PASS
+2019-06-20 11:21:37,853 - INFO - SUCCESS  用例名称: 6、登录-正确用户名密码校验
+2019-06-20 11:21:38,297 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:21:38,443 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 11:21:38,562 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 11:21:38,630 - INFO - SUCCESS  点击->登录
+2019-06-20 11:21:39,708 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:21:39,710 - INFO - SUCCESS  期望值：登录成功,实际值：登录成功,测试成功！PASS
+2019-06-20 11:21:43,542 - INFO - SUCCESS  退出浏览器.
+2019-06-20 11:21:43,544 - INFO - ############################### END ###############################
+2019-06-20 11:48:34,373 - INFO - ############################## START ##############################
+2019-06-20 11:48:34,375 - INFO - -=【网点登录】=-
+2019-06-20 11:48:34,377 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:48:35,919 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 11:48:35,990 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="text"]')
+2019-06-20 11:48:36,151 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 11:48:36,208 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="password"]')
+2019-06-20 11:48:36,286 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 11:48:36,372 - INFO - SUCCESS  点击->登录
+2019-06-20 11:48:37,424 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="退出"]')可见
+2019-06-20 11:48:37,425 - INFO - SUCCESS  网点登录成功！
+2019-06-20 11:48:37,486 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单
+2019-06-20 11:48:37,490 - INFO - SUCCESS  用例名称: 1、派单-选择工单为空点击派单按钮校验
+2019-06-20 11:48:37,495 - INFO - SUCCESS  等待元素加载...
+2019-06-20 11:48:39,733 - INFO - SUCCESS  点击->派单
+2019-06-20 11:48:40,194 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:48:40,196 - ERROR - FAIL  期望值：请选择一个订单进行处理,实际值：登录成功,测试失败！FAIL
+2019-06-20 11:48:40,683 - INFO - SUCCESS  截图保存位置: D:\MyWork\UItest-branch\result\image\20190620114840.png
+2019-06-20 11:48:40,708 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:48:40,711 - INFO - SUCCESS  用例名称: 2、派单-按名称搜索校验
+2019-06-20 11:48:45,097 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:48:45,152 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[2]/td[3]/*/a')文本
+2019-06-20 11:48:45,520 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:48:45,947 - INFO - SUCCESS  点击->派单
+2019-06-20 11:48:46,233 - INFO - SUCCESS  输入派单对象：邓鹏飞
+2019-06-20 11:48:46,501 - INFO - SUCCESS  点击->搜索
+2019-06-20 11:48:47,561 - INFO - SUCCESS  获取元素: ('xpath', '//div[3]/table/tbody/tr/td/div/label')文本
+2019-06-20 11:48:47,562 - INFO - SUCCESS  期望值：邓鹏飞,实际值：邓鹏飞,测试成功！PASS
+2019-06-20 11:48:47,958 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:48:47,960 - INFO - SUCCESS  用例名称: 3、派单-按手机号搜索校验
+2019-06-20 11:48:51,563 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:48:51,622 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[2]/td[3]/*/a')文本
+2019-06-20 11:48:51,968 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:48:52,355 - INFO - SUCCESS  点击->派单
+2019-06-20 11:48:52,761 - INFO - SUCCESS  输入派单对象：13720673941
+2019-06-20 11:48:52,925 - INFO - SUCCESS  点击->搜索
+2019-06-20 11:48:53,978 - INFO - SUCCESS  获取元素: ('xpath', '//div[3]/table/tbody/tr/td/div/label')文本
+2019-06-20 11:48:53,979 - INFO - SUCCESS  期望值：邓鹏飞,实际值：邓鹏飞,测试成功！PASS
+2019-06-20 11:48:54,003 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:48:54,004 - INFO - SUCCESS  用例名称: 4、派单-派单网点为空校验
+2019-06-20 11:48:57,365 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:48:57,418 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[2]/td[3]/*/a')文本
+2019-06-20 11:48:57,669 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:48:58,007 - INFO - SUCCESS  点击->派单
+2019-06-20 11:48:58,300 - INFO - SUCCESS  点击->派单到服务商
+2019-06-20 11:48:58,422 - INFO - SUCCESS  点击->确定
+2019-06-20 11:48:59,474 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:48:59,475 - INFO - SUCCESS  期望值：请选择服务商,实际值：请选择服务商,测试成功！PASS
+2019-06-20 11:48:59,497 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:48:59,498 - INFO - SUCCESS  用例名称: 5、派单-派单到返单服务商校验
+2019-06-20 11:49:03,329 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:03,386 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[2]/td[3]/*/a')文本
+2019-06-20 11:49:03,639 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:04,082 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:04,374 - INFO - SUCCESS  点击->派单到服务商
+2019-06-20 11:49:04,669 - INFO - SUCCESS  选择派单对象：XM-服务商
+2019-06-20 11:49:04,796 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:05,853 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:05,854 - INFO - SUCCESS  期望值：订单不能派给返单网点,实际值：订单不能派给返单网点,测试成功！PASS
+2019-06-20 11:49:06,358 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:06,359 - INFO - SUCCESS  用例名称: 6、派单-成功派单到网点校验
+2019-06-20 11:49:08,965 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:09,005 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[2]/td[3]/*/a')文本
+2019-06-20 11:49:09,218 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:09,453 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:09,714 - INFO - SUCCESS  点击->派单到服务商
+2019-06-20 11:49:09,972 - INFO - SUCCESS  选择派单对象：branch03
+2019-06-20 11:49:10,048 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:11,468 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:11,469 - INFO - SUCCESS  期望值：派单成功,实际值：派单成功,测试成功！PASS
+2019-06-20 11:49:11,689 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:11,690 - INFO - SUCCESS  用例名称: 7、派单-重复派单到网点校验
+2019-06-20 11:49:14,432 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:14,643 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:14,888 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:15,117 - INFO - SUCCESS  点击->派单到服务商
+2019-06-20 11:49:15,386 - INFO - SUCCESS  选择派单对象：branch03
+2019-06-20 11:49:15,468 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:16,516 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:16,517 - INFO - SUCCESS  期望值：订单已在该服务商下，勿重复派单,实际值：订单已在该服务商下，勿重复派单,测试成功！PASS
+2019-06-20 11:49:16,763 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:16,765 - INFO - SUCCESS  用例名称: 8、派单-网点转派网点校验
+2019-06-20 11:49:19,567 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:19,767 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:20,089 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:20,366 - INFO - SUCCESS  点击->派单到服务商
+2019-06-20 11:49:20,558 - INFO - SUCCESS  选择派单对象：branch05
+2019-06-20 11:49:20,695 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:22,234 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:22,235 - INFO - SUCCESS  期望值：派单成功,实际值：派单成功,测试成功！PASS
+2019-06-20 11:49:22,258 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:22,259 - INFO - SUCCESS  用例名称: 9、派单-派单师傅为空校验
+2019-06-20 11:49:25,196 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:25,417 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:25,712 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:25,928 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:27,014 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:27,015 - INFO - SUCCESS  期望值：请选择师傅,实际值：请选择师傅,测试成功！PASS
+2019-06-20 11:49:27,040 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:27,041 - INFO - SUCCESS  用例名称: 10、派单-成功派单到师傅校验
+2019-06-20 11:49:32,666 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:32,875 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:33,180 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:33,400 - INFO - SUCCESS  选择派单对象：邓鹏飞
+2019-06-20 11:49:33,485 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:34,952 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:34,953 - INFO - SUCCESS  期望值：派工成功,实际值：派工成功,测试成功！PASS
+2019-06-20 11:49:34,986 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:34,987 - INFO - SUCCESS  用例名称: 11、派单-重复派单师傅校验
+2019-06-20 11:49:38,065 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:38,301 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:38,509 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:38,765 - INFO - SUCCESS  选择派单对象：邓鹏飞
+2019-06-20 11:49:38,861 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:39,901 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:39,902 - INFO - SUCCESS  期望值：订单已经派给该师傅，勿重复派工！,实际值：订单已经派给该师傅，勿重复派工！,测试成功！PASS
+2019-06-20 11:49:39,932 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:39,933 - INFO - SUCCESS  用例名称: 12、派单-师傅转派师傅校验
+2019-06-20 11:49:42,904 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:43,122 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:43,401 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:43,632 - INFO - SUCCESS  选择派单对象：XIAOMI师傅
+2019-06-20 11:49:43,726 - INFO - SUCCESS  点击->确定
+2019-06-20 11:49:45,144 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:49:45,146 - INFO - SUCCESS  期望值：派工成功,实际值：派工成功,测试成功！PASS
+2019-06-20 11:49:45,172 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:49:48,200 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 11:49:48,405 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 11:49:48,650 - INFO - SUCCESS  点击->派单
+2019-06-20 11:49:50,699 - INFO - SUCCESS  获取 disabled 属性
+2019-06-20 11:49:50,700 - INFO - SUCCESS  期望值：true,实际值：true,测试成功！PASS
+2019-06-20 11:49:53,005 - INFO - SUCCESS  退出浏览器.
+2019-06-20 11:49:53,007 - INFO - ############################### END ###############################
+2019-06-20 11:58:02,695 - INFO - ############################## START ##############################
+2019-06-20 11:58:39,578 - INFO - ############################## START ##############################
+2019-06-20 11:58:39,579 - INFO - SUCCESS  用例名称: /*【注册功能测试用例】*/
+2019-06-20 11:58:40,930 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 11:58:40,933 - INFO - SUCCESS  用例名称: 1、登录-用户名密码为空校验
+2019-06-20 11:58:40,956 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:58:41,738 - INFO - SUCCESS  输入用户名: 
+2019-06-20 11:58:41,787 - INFO - SUCCESS  输入密码: 
+2019-06-20 11:58:41,872 - INFO - SUCCESS  点击->登录
+2019-06-20 11:58:42,908 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:58:42,909 - INFO - SUCCESS  期望值：请输入登录手机号,实际值：请输入登录手机号,测试成功！PASS
+2019-06-20 11:58:42,916 - INFO - SUCCESS  用例名称: 2、登录-用户名为空校验
+2019-06-20 11:58:43,209 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:58:43,447 - INFO - SUCCESS  输入用户名: 
+2019-06-20 11:58:43,544 - INFO - SUCCESS  输入密码: 111111
+2019-06-20 11:58:43,613 - INFO - SUCCESS  点击->登录
+2019-06-20 11:58:44,645 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:58:44,646 - INFO - SUCCESS  期望值：请输入登录手机号,实际值：请输入登录手机号,测试成功！PASS
+2019-06-20 11:58:44,653 - INFO - SUCCESS  用例名称: 3、登录-密码为空校验
+2019-06-20 11:58:45,091 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:58:45,238 - INFO - SUCCESS  输入用户名: 13720673941
+2019-06-20 11:58:45,285 - INFO - SUCCESS  输入密码: 
+2019-06-20 11:58:45,348 - INFO - SUCCESS  点击->登录
+2019-06-20 11:58:46,382 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:58:46,383 - INFO - SUCCESS  期望值：请输入密码,实际值：请输入密码,测试成功！PASS
+2019-06-20 11:58:46,389 - INFO - SUCCESS  用例名称: 4、登录-用户名不正确密码正确校验
+2019-06-20 11:58:46,872 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:58:47,036 - INFO - SUCCESS  输入用户名: 1372067394
+2019-06-20 11:58:47,139 - INFO - SUCCESS  输入密码: 111111
+2019-06-20 11:58:47,225 - INFO - SUCCESS  点击->登录
+2019-06-20 11:58:48,260 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:58:48,261 - INFO - SUCCESS  期望值：用户名不存在,实际值：用户名不存在,测试成功！PASS
+2019-06-20 11:58:48,266 - INFO - SUCCESS  用例名称: 5、登录-用户名正确密码不正确校验
+2019-06-20 11:58:48,554 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:58:48,957 - INFO - SUCCESS  输入用户名: 13720673941
+2019-06-20 11:58:49,055 - INFO - SUCCESS  输入密码: 123123
+2019-06-20 11:58:49,136 - INFO - SUCCESS  点击->登录
+2019-06-20 11:58:50,169 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:58:50,171 - INFO - SUCCESS  期望值：用户名或密码错误,实际值：用户名或密码错误,测试成功！PASS
+2019-06-20 11:58:50,177 - INFO - SUCCESS  用例名称: 6、登录-正确用户名密码校验
+2019-06-20 11:58:50,477 - INFO - SUCCESS  刷新页面.
+2019-06-20 11:58:50,817 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 11:58:50,924 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 11:58:51,037 - INFO - SUCCESS  点击->登录
+2019-06-20 11:58:52,198 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 11:58:52,200 - INFO - SUCCESS  期望值：登录成功,实际值：登录成功,测试成功！PASS
+2019-06-20 11:58:54,544 - INFO - SUCCESS  退出浏览器.
+2019-06-20 11:58:54,545 - INFO - ############################### END ###############################
+2019-06-20 14:03:02,138 - INFO - ############################## START ##############################
+2019-06-20 14:03:02,140 - INFO - -=【网点登录】=-
+2019-06-20 14:03:02,142 - INFO - SUCCESS  等待元素加载...
+2019-06-20 14:03:03,619 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 14:03:03,688 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="text"]')
+2019-06-20 14:03:03,843 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 14:03:03,913 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="password"]')
+2019-06-20 14:03:04,021 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 14:03:04,196 - INFO - SUCCESS  点击->登录
+2019-06-20 14:03:05,551 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="退出"]')可见
+2019-06-20 14:03:05,552 - INFO - SUCCESS  网点登录成功！
+2019-06-20 14:03:05,607 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单
+2019-06-20 14:03:05,609 - INFO - SUCCESS  用例名称: 1、完成工单-师傅预约时间为空校验
+2019-06-20 14:03:06,438 - INFO - SUCCESS  刷新页面.
+2019-06-20 14:03:09,492 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 14:03:09,678 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 14:03:09,929 - INFO - SUCCESS  点击->完成服务
+2019-06-20 14:03:10,614 - INFO - SUCCESS  输入故障类型：2019-06-20 14:03:10
+2019-06-20 14:03:10,787 - INFO - SUCCESS  输入师傅预约时间：
+2019-06-20 14:03:10,984 - INFO - SUCCESS  输入师傅上门时间：2019-06-20
+2019-06-20 14:03:11,183 - INFO - SUCCESS  输入师傅完成时间：2019-06-20
+2019-06-20 14:03:11,236 - INFO - SUCCESS  获取子元素总和: 3个 
+2019-06-20 14:03:12,314 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 14:03:13,367 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 14:03:14,432 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 14:03:14,649 - INFO - SUCCESS  页面元素: ('xpath', '//button[text()="提交"]')可见
+2019-06-20 14:03:16,767 - INFO - SUCCESS  点击->提交
+2019-06-20 14:03:18,808 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 14:03:18,809 - INFO - SUCCESS  期望值：师傅预约日期不能为空,实际值：师傅预约日期不能为空,测试成功！PASS
+2019-06-20 14:03:18,814 - INFO - SUCCESS  用例名称: 2、完成工单-师傅上门时间为空校验
+2019-06-20 14:03:19,043 - INFO - SUCCESS  刷新页面.
+2019-06-20 14:03:22,082 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 14:03:22,229 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 14:03:22,405 - INFO - SUCCESS  点击->完成服务
+2019-06-20 14:03:23,076 - INFO - SUCCESS  输入故障类型：2019-06-20 14:03:23
+2019-06-20 14:03:23,301 - INFO - SUCCESS  输入师傅预约时间：2019-06-20
+2019-06-20 14:03:23,384 - INFO - SUCCESS  输入师傅上门时间：
+2019-06-20 14:03:23,555 - INFO - SUCCESS  输入师傅完成时间：2019-06-20
+2019-06-20 14:03:23,589 - INFO - SUCCESS  获取子元素总和: 3个 
+2019-06-20 14:03:24,642 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 14:03:25,694 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 14:03:26,788 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 14:03:26,962 - INFO - SUCCESS  页面元素: ('xpath', '//button[text()="提交"]')可见
+2019-06-20 14:03:29,084 - INFO - SUCCESS  点击->提交
+2019-06-20 14:03:31,183 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 14:03:31,185 - INFO - SUCCESS  期望值：师傅上门时间不能为空,实际值：师傅上门时间不能为空,测试成功！PASS
+2019-06-20 14:03:31,192 - INFO - SUCCESS  用例名称: 3、完成工单-师傅完工时间为空校验
+2019-06-20 14:03:31,622 - INFO - SUCCESS  刷新页面.
+2019-06-20 14:03:34,660 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 14:03:34,817 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 14:03:35,009 - INFO - SUCCESS  点击->完成服务
+2019-06-20 14:03:35,635 - INFO - SUCCESS  输入故障类型：2019-06-20 14:03:35
+2019-06-20 14:03:35,876 - INFO - SUCCESS  输入师傅预约时间：2019-06-20
+2019-06-20 14:03:36,107 - INFO - SUCCESS  输入师傅上门时间：2019-06-20
+2019-06-20 14:03:36,226 - INFO - SUCCESS  输入师傅完成时间：
+2019-06-20 14:03:36,262 - INFO - SUCCESS  获取子元素总和: 3个 
+2019-06-20 14:03:37,358 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 14:03:38,493 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 14:03:39,617 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 14:03:39,808 - INFO - SUCCESS  页面元素: ('xpath', '//button[text()="提交"]')可见
+2019-06-20 14:03:41,928 - INFO - SUCCESS  点击->提交
+2019-06-20 14:03:43,974 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 14:03:43,975 - INFO - SUCCESS  期望值：师傅完成服务不能为空,实际值：师傅完成服务不能为空,测试成功！PASS
+2019-06-20 14:03:43,980 - INFO - SUCCESS  用例名称: 4、完成工单-师傅上传图片为空校验
+2019-06-20 14:03:44,235 - INFO - SUCCESS  刷新页面.
+2019-06-20 14:03:47,290 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 14:03:47,441 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 14:03:47,592 - INFO - SUCCESS  点击->完成服务
+2019-06-20 14:03:48,522 - INFO - SUCCESS  输入故障类型：2019-06-20 14:03:48
+2019-06-20 14:03:48,696 - INFO - SUCCESS  输入师傅预约时间：2019-06-20
+2019-06-20 14:03:48,972 - INFO - SUCCESS  输入师傅上门时间：2019-06-20
+2019-06-20 14:03:49,134 - INFO - SUCCESS  输入师傅完成时间：2019-06-20
+2019-06-20 14:03:49,239 - INFO - SUCCESS  点击->提交
+2019-06-20 14:03:51,325 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 14:03:51,327 - INFO - SUCCESS  期望值：服务图片必须上传完整,实际值：服务图片必须上传完整,测试成功！PASS
+2019-06-20 14:03:51,335 - INFO - SUCCESS  用例名称: 5、完成工单-网点完成服务校验
+2019-06-20 14:03:51,542 - INFO - SUCCESS  刷新页面.
+2019-06-20 14:03:54,667 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 14:03:54,842 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 14:03:54,985 - INFO - SUCCESS  点击->完成服务
+2019-06-20 14:03:55,523 - INFO - SUCCESS  输入故障类型：2019-06-20 14:03:55
+2019-06-20 14:03:55,708 - INFO - SUCCESS  输入师傅预约时间：2019-06-20
+2019-06-20 14:03:55,905 - INFO - SUCCESS  输入师傅上门时间：2019-06-20
+2019-06-20 14:03:56,113 - INFO - SUCCESS  输入师傅完成时间：2019-06-20
+2019-06-20 14:03:56,169 - INFO - SUCCESS  获取子元素总和: 3个 
+2019-06-20 14:03:57,273 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture01.jpg
+2019-06-20 14:03:58,362 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture02.jpg
+2019-06-20 14:03:59,453 - INFO - SUCCESS  正在上传图片: D:\MyWork\UItest-branch\data\picture\picture03.jpg
+2019-06-20 14:03:59,604 - INFO - SUCCESS  页面元素: ('xpath', '//button[text()="提交"]')可见
+2019-06-20 14:04:01,766 - INFO - SUCCESS  点击->提交
+2019-06-20 14:04:03,844 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 14:04:03,845 - ERROR - FAIL  期望值：操作成功,实际值：网络请求错误：Request failed with status code 400,测试失败！FAIL
+2019-06-20 14:04:04,285 - INFO - SUCCESS  截图保存位置: D:\MyWork\UItest-branch\result\image\20190620140403.png
+2019-06-20 14:04:06,504 - INFO - SUCCESS  退出浏览器.
+2019-06-20 14:04:06,505 - INFO - ############################### END ###############################
+2019-06-20 15:25:29,387 - INFO - -=【网点登录】=-
+2019-06-20 15:25:29,392 - INFO - SUCCESS  等待元素加载...
+2019-06-20 15:25:30,928 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 15:25:30,995 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="text"]')
+2019-06-20 15:25:31,118 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 15:25:31,179 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="password"]')
+2019-06-20 15:25:31,250 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 15:25:31,338 - INFO - SUCCESS  点击->登录
+2019-06-20 15:25:32,558 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="退出"]')可见
+2019-06-20 15:25:32,560 - INFO - SUCCESS  网点登录成功！
+2019-06-20 15:25:32,623 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单
+2019-06-20 15:25:32,625 - INFO - SUCCESS  用例名称: 1、网点回访订单功能校验
+2019-06-20 15:25:33,068 - INFO - SUCCESS  刷新页面.
+2019-06-20 15:25:36,129 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[1]/td[3]/*/a')文本
+2019-06-20 15:25:36,180 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[2]/td[3]/*/a')文本
+2019-06-20 15:25:36,228 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[3]/td[3]/*/a')文本
+2019-06-20 15:25:36,272 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[4]/td[3]/*/a')文本
+2019-06-20 15:25:36,315 - INFO - SUCCESS  获取元素: ('xpath', '//div[4]/div[2]/*/*/tr[5]/td[3]/*/a')文本
+2019-06-20 15:25:36,514 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 15:25:36,787 - INFO - SUCCESS  点击->回访
+2019-06-20 15:25:36,956 - INFO - SUCCESS  选择服务态度：非常满意
+2019-06-20 15:25:37,055 - INFO - SUCCESS  选择安全评价：按安全规范操作
+2019-06-20 15:25:37,549 - INFO - SUCCESS  输入回访总额：100
+2019-06-20 15:25:37,620 - INFO - SUCCESS  选择回访结果：已完工
+2019-06-20 15:25:37,825 - INFO - SUCCESS  输入回访反馈：2019-06-20 15:25:37
+2019-06-20 15:25:37,894 - INFO - SUCCESS  选择奖惩：奖励
+2019-06-20 15:25:37,964 - INFO - SUCCESS  输入奖惩金额：10
+2019-06-20 15:25:38,181 - INFO - SUCCESS  输入奖惩备注：2019-06-20 15:25:38
+2019-06-20 15:25:38,263 - INFO - SUCCESS  点击->确定
+2019-06-20 15:25:39,410 - INFO - SUCCESS  获取元素: ('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')文本
+2019-06-20 15:25:39,411 - INFO - SUCCESS  期望值：操作成功,实际值：操作成功,测试成功！PASS
+2019-06-20 15:25:41,661 - INFO - SUCCESS  退出浏览器.
+2019-06-20 15:25:41,664 - INFO - ############################### END ###############################
+2019-06-20 15:41:24,964 - INFO - ############################## START ##############################
+2019-06-20 15:41:24,969 - INFO - -=【网点登录】=-
+2019-06-20 15:41:24,972 - INFO - SUCCESS  等待元素加载...
+2019-06-20 15:41:26,672 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/login
+2019-06-20 15:41:26,771 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="text"]')
+2019-06-20 15:41:26,936 - INFO - SUCCESS  输入用户名: 13700000004
+2019-06-20 15:41:26,999 - INFO - SUCCESS  清除输入框: ('xpath', '//input[@type="password"]')
+2019-06-20 15:41:27,104 - INFO - SUCCESS  输入密码: 222222
+2019-06-20 15:41:27,265 - INFO - SUCCESS  点击->登录
+2019-06-20 15:41:28,508 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="退出"]')可见
+2019-06-20 15:41:28,509 - INFO - SUCCESS  网点登录成功！
+2019-06-20 15:41:28,574 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=待返单&page=1
+2019-06-20 15:41:28,575 - INFO - SUCCESS  用例名称: 1、返单-修改返单服务商为空校验
+2019-06-20 15:41:30,762 - INFO - SUCCESS  刷新页面.
+2019-06-20 15:41:32,975 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 15:41:34,485 - INFO - SUCCESS  期望值：请选择服务商,实际值：请选择服务商,测试成功！PASS
+2019-06-20 15:41:34,560 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=待返单&page=1
+2019-06-20 15:41:34,563 - INFO - SUCCESS  用例名称: 2、返单-修改返单服务商成功校验
+2019-06-20 15:41:34,866 - INFO - SUCCESS  刷新页面.
+2019-06-20 15:41:37,409 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 15:41:39,083 - INFO - SUCCESS  期望值：修改返单成功,实际值：修改返单成功,测试成功！PASS
+2019-06-20 15:41:39,188 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=待返单&page=1
+2019-06-20 15:41:39,190 - INFO - SUCCESS  用例名称: 3、返单-返单成功校验
+2019-06-20 15:41:39,564 - INFO - SUCCESS  刷新页面.
+2019-06-20 15:41:41,861 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 15:41:43,121 - INFO - SUCCESS  期望值：操作成功！,实际值：操作成功！,测试成功！PASS
+2019-06-20 15:41:43,188 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=待返单&page=1
+2019-06-20 15:41:43,190 - INFO - SUCCESS  用例名称: 4、返单-添加代结单服务商校验
+2019-06-20 15:41:43,659 - INFO - SUCCESS  刷新页面.
+2019-06-20 15:41:46,409 - INFO - SUCCESS  页面元素: ('xpath', '//a[text()="添加经销商"]')可见
+2019-06-20 15:41:46,411 - INFO - SUCCESS  期望值：True,实际值：True,测试成功！PASS
+2019-06-20 15:41:46,636 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=待返单&page=1
+2019-06-20 15:41:46,808 - INFO - SUCCESS  打开: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=已返单&page=1
+2019-06-20 15:41:46,811 - INFO - SUCCESS  用例名称: 5、返单-撤销返单校验
+2019-06-20 15:41:47,022 - INFO - SUCCESS  刷新页面.
+2019-06-20 15:41:49,528 - INFO - SUCCESS  选择派单订单: 636966255081133106 
+2019-06-20 15:41:50,944 - INFO - SUCCESS  期望值：操作成功！,实际值：操作成功！,测试成功！PASS
+2019-06-20 15:41:53,219 - INFO - SUCCESS  退出浏览器.
+2019-06-20 15:41:53,221 - INFO - ############################### END ###############################
