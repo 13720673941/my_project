@@ -29,6 +29,10 @@ class SettleOrderPage(BasePage):
     def __init__(self,driver):
         BasePage.__init__(self,driver)
 
+    def enter_return_wait_settle(self):
+        """进入代结订单页"""
+        self.open_url(self.return_settle_url)
+
     def click_settle_btn(self):
         '''点击结算按钮'''
         self.click_button(self.settleBtn)

@@ -115,7 +115,7 @@ class Settle_Order(unittest.TestCase):
         #登录返单网点账号
         self.login.login_main(returnUse,returnPwd)
         #进入订单结算列表页面
-        self.base.open_url(ReturnOrderData["ReturnOrderUrl"])
+        self.returnOrder.enter_return_order_page()
         #点击订单进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         self.base.sleep(1)
@@ -218,7 +218,7 @@ class Settle_Order(unittest.TestCase):
         #用例名称
         self.base.print_case_name(Data008["CaseName"])
         #进入订单列表页面
-        self.base.open_url(getdata.get_test_data()["PleaseOrder"]["PleaseUrl"])
+        self.pleaseOrder.enter_please_order_page()
         self.base.sleep(1)
         #进入订单详情页
         self.base.open_order_message(self.OrderNumber)

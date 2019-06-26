@@ -122,7 +122,7 @@ class Settle_Order(unittest.TestCase):
         #登录经销商
         self.login.login_main(self.Use,self.Pwd)
         #进入全部订单列表页
-        self.base.open_url(getdata.get_test_data()["PleaseOrder"]["PleaseUrl"])
+        self.pleaseOrder.enter_please_order_page()
         self.base.sleep(1)
         #进入订单详情页面
         self.base.open_order_message(self.OrderNum)
