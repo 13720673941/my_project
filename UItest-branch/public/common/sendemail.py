@@ -37,9 +37,12 @@ class Send_Email(object):
         Time = time.strftime('%y-%m-%d',time.localtime(time.time()))
         self.Message['Subject'] = Time + '自动化测试结果'
 
-    def EmailAddTextMessage(self,start_time):
+    def EmailAddTextMessage(self,start_time,run_time):
         '''添加邮件正文文本信息'''
-        TextMessage = 'test start time: '+start_time+''
+        TextMessage = 'test start time: '+start_time+'\nrunning time: '+run_time+'' \
+                      '\n1、注册登录模块：' \
+                      '\n2、修改密码模块：' \
+                      '\n3、订单管理模块：'
         #plain文本格式
         att = MIMEText(TextMessage,'plain','utf-8')
         self.Message.attach(att)
@@ -52,18 +55,20 @@ class Send_Email(object):
         for ReportDir in ReportDirs:
             #获取每个文件夹下的报告列表
             ReportList = os.listdir(ReportPath + ReportDir)
-            #把获取的报告文件列表文件按照创建顺序排列
-            NewResportList = sorted(ReportList,key=lambda x:os.path.getctime(os.path.join(ReportPath+ReportDir,x)))
-            #获取最后一个报告就是最新的报告
-            NewReport = ReportPath + '\\'+ReportDir+'\\' + NewResportList[-1]
-            #上传文件到邮件
-            #长传附件
-            att = MIMEText(open(NewReport,'rb').read(),'base64','utf-8')
-            att['content-Type'] = 'application/octet-stream'
-            #邮件类型附件，附件名称
-            att.add_header('Content-Disposition','attachment',filename=('gbk','',ReportDir+".html"))  #文件名字有汉字设置编码
-            #att['Content-Disposition'] = 'attachment; filename=report.html"')
-            self.Message.attach(att)
+            #跳过为空的文件夹
+            if len(ReportList) != 0:
+                #把获取的报告文件列表文件按照创建顺序排列
+                NewResportList = sorted(ReportList,key=lambda x:os.path.getctime(os.path.join(ReportPath+ReportDir,x)))
+                #获取最后一个报告就是最新的报告
+                NewReport = ReportPath + '\\'+ReportDir+'\\' + NewResportList[-1]
+                #上传文件到邮件
+                #长传附件
+                att = MIMEText(open(NewReport,'rb').read(),'base64','utf-8')
+                att['content-Type'] = 'application/octet-stream'
+                #邮件类型附件，附件名称
+                att.add_header('Content-Disposition','attachment',filename=('gbk','',ReportDir+".html"))  #文件名字有汉字设置编码
+                #att['Content-Disposition'] = 'attachment; filename=report.html"')
+                self.Message.attach(att)
 
     def AttNewResult(self):
         '''获取测试结果文件上传'''
@@ -94,7 +99,7 @@ class Send_Email(object):
         #关闭连接
         server.quit()
 
-    def SendEmailMain(self):
+    def SendEmailMain(self,start_time,run_time):
         #==========【主函数发送邮件】==========
         isOk=True
         try:
@@ -103,7 +108,7 @@ class Send_Email(object):
             #创建邮件实例
             SE.EmailTitleMessage()
             #上传文件
-            SE.EmailAddTextMessage()
+            SE.EmailAddTextMessage(start_time,run_time)
             #上传附件
             SE.AttNewReport()
             SE.AttNewResult()

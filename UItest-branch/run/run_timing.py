@@ -4,7 +4,6 @@
 # @Time    : 2019/6/25 18:43
 
 from public.common.sendemail import Send_Email
-from public.common import runreport
 import sys
 SE = Send_Email()
 sys.path.append('../run')
@@ -43,6 +42,6 @@ if __name__ == '__main__':
         #脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
         #发送邮件
-        SE.SendEmailMain(StartTime=timing,RunTime=runtime)
+        SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')
