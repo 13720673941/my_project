@@ -39,7 +39,7 @@ class Alter_Password(unittest.TestCase):
         cls.username = rwconfig.read_config_data('蓝魔科技','username')
         cls.password = rwconfig.read_config_data('蓝魔科技','password')
         #获取新密码
-        for pwd in get_test_data()["ForgetPassword"]["PwdList"]:
+        for pwd in get_test_data()["ForgetPwdPage"]["PwdList"]:
             if  pwd != cls.password:
                 cls.new_pwd = pwd
         #新密码写入到修改成功的密码参数中

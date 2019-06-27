@@ -43,7 +43,7 @@ class Set_InvalidOrder(unittest.TestCase):
         #网点登录
         cls.loginPage.login_main(UserName,PassWord)
         #添加订单默认为需返单订单，便于测试
-        OrderData = getdata.get_test_data()["CreateOrder"]["CreateData"][-1]
+        OrderData = getdata.get_test_data()["CreateOrderPage"]["create_order_fnc"][-1]
         #获取添加订单数据信息
         cls.Name = OrderData["username"]
         cls.PhoneNum = OrderData["PhoneNum"]

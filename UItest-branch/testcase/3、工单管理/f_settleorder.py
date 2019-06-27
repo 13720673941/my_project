@@ -115,7 +115,7 @@ class Settle_Order(unittest.TestCase):
         #登录返单网点账号
         self.login.login_main(returnUse,returnPwd)
         #进入订单结算列表页面
-        self.returnOrder.enter_return_order_page()
+        self.settleOrder.enter_return_wait_settle()
         #点击订单进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         self.base.sleep(1)

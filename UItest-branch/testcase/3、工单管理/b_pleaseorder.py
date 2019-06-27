@@ -70,7 +70,7 @@ class Please_Order(unittest.TestCase):
     def test_pleaseOrder001(self):
         '''选择订单为空时派单校验'''
         #获取测试数据
-        TestData1 = getdata.get_test_data()["PleaseOrder"]["TestCase001"]
+        TestData1 = getdata.get_test_data()["PleaseOrderPage"]["TestCase001"]
         #点击派单按钮不选择订单
         self.basePage.print_case_name(TestData1["CaseName"])
         self.basePage.refresh_page()
@@ -151,7 +151,7 @@ class Please_Order(unittest.TestCase):
     def test_pleaseOrder005(self):
         '''师傅不能转派网点校验'''
         #获取数据
-        Data = getdata.get_test_data()["PleaseOrder"]["TestCase002"]
+        Data = getdata.get_test_data()["PleaseOrderPage"]["TestCase002"]
         #刷新页面
         self.basePage.refresh_page()
         #选择新建订单

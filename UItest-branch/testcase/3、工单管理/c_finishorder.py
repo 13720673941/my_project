@@ -95,12 +95,11 @@ class Finish_Order(unittest.TestCase):
         self.finishOrder.input_master_doorTime(doorTime=FinishDate["DoorTime"])
         #输入师傅完成服务时间
         self.finishOrder.input_master_finishTime(finishTime=FinishDate["FinishTime"])
-        self.basePage.sleep(1)
         #上传图片
         self.finishOrder.up_finish_picture(upLoading=FinishDate["UpLoading"])
+        self.basePage.sleep(1)
         #点击提交信息
         self.finishOrder.click_submit_btn()
-        self.basePage.sleep(1)
         #断言
         isSuccess = self.assert_mode.assert_equal(FinishDate["expect"],self.basePage.get_system_msg())
         #写入测试结果

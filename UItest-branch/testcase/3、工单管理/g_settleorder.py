@@ -167,7 +167,7 @@ class Settle_Order(unittest.TestCase):
         #登录服务商账号
         self.login.login_main(self.Use1,self.Pwd1)
         #进入全部订单列表页
-        self.base.open_url(getdata.get_test_data()["PleaseOrder"]["PleaseUrl"])
+        self.pleaseOrder.enter_please_order_page()
         #进入订单详情页面
         self.base.open_order_message(self.OrderNum)
         #点击结算
@@ -182,6 +182,7 @@ class Settle_Order(unittest.TestCase):
         '''经销商工单结算-服务商端订单结算校验'''
         #测试用例名称
         self.base.print_case_name(ddtData2["CaseName"])
+
         #进入订单详情页面
         self.base.open_order_message(self.OrderNum)
         #点击结算

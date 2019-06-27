@@ -369,7 +369,7 @@ class BasePage(object):
                 actions.release(dragButton).perform() #释放左键
                 break
             else:
-                actions.move_by_offset(1,dragButton_y).perform()
+                actions.move_by_offset(0.5,dragButton_y).perform()
         log.info('{0} Button: {1}, remove right arrive {2}, Spend {3} seconds.'.format(self.success,element,arrivetxt,time.time()-t1))
 
     def get_element_count(self,parentEl,childEl='li'):

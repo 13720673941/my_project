@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Alter PassWord Test Result</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">Alter PassWord Test Result</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2019-06-27 09:43:41</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:02:46.976719</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 37，通过 37，通过率= 100.00%</p>
+
+<p class='description'>alter/forget password case test result.</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 37 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 37 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>a_forgetpwd.Forget_Pwd</td>
+    <td class="text-center">16</td>
+    <td class="text-center">16</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',16)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_1: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align='left'>
+    <pre>
+    
+pt1_1: 2019-06-27 09:43:48,206 - INFO - SUCCESS  Load case name: 1、忘记密码-手机号为空校验
+2019-06-27 09:43:49,002 - INFO - SUCCESS  Refresh current page, Spend 0.7957134246826172 seconds.
+2019-06-27 09:43:49,341 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.3378102779388428 seconds.
+2019-06-27 09:43:49,439 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.4344668388366699 seconds.
+2019-06-27 09:43:49,494 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.054677486419677734 seconds.
+2019-06-27 09:43:49,565 - INFO - SUCCESS  Input message: , Spend 0.12399721145629883 seconds
+2019-06-27 09:43:49,594 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.027339458465576172 seconds.
+2019-06-27 09:43:49,757 - INFO - SUCCESS  Input message: 88888888, Spend 0.1903858184814453 seconds
+2019-06-27 09:43:49,787 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.02928924560546875 seconds.
+2019-06-27 09:43:49,915 - INFO - SUCCESS  Input message: 111111, Spend 0.15718436241149902 seconds
+2019-06-27 09:43:49,951 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.03319549560546875 seconds.
+2019-06-27 09:43:50,087 - INFO - SUCCESS  Input message: 111111, Spend 0.16891169548034668 seconds
+2019-06-27 09:43:50,117 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.028310060501098633 seconds.
+2019-06-27 09:43:50,225 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.13570713996887207 seconds.
+2019-06-27 09:43:52,226 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:43:52,249 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.021486282348632812 seconds.
+2019-06-27 09:43:52,280 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.052721261978149414 seconds.
+2019-06-27 09:43:52,282 - INFO - SUCCESS  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_10: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align='left'>
+    <pre>
+    
+pt1_2: 2019-06-27 09:43:52,289 - INFO - SUCCESS  Load case name: 10、忘记密码-新密码与确认密码不同校验
+2019-06-27 09:43:52,983 - INFO - SUCCESS  Refresh current page, Spend 0.6922249794006348 seconds.
+2019-06-27 09:43:53,296 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.31047511100769043 seconds.
+2019-06-27 09:43:53,398 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.41298985481262207 seconds.
+2019-06-27 09:43:53,417 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.017571687698364258 seconds.
+2019-06-27 09:43:53,632 - INFO - SUCCESS  Input message: 13700000004, Spend 0.23139309883117676 seconds
+2019-06-27 09:43:53,654 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.021481990814208984 seconds.
+2019-06-27 09:43:53,849 - INFO - SUCCESS  Input message: 88888888, Spend 0.21675395965576172 seconds
+2019-06-27 09:43:53,872 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.020504236221313477 seconds.
+2019-06-27 09:43:53,988 - INFO - SUCCESS  Input message: 111111, Spend 0.13766169548034668 seconds
+2019-06-27 09:43:54,007 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.017573833465576172 seconds.
+2019-06-27 09:43:54,117 - INFO - SUCCESS  Input message: 222222, Spend 0.1269230842590332 seconds
+2019-06-27 09:43:54,140 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.020499229431152344 seconds.
+2019-06-27 09:43:54,271 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.15230441093444824 seconds.
+2019-06-27 09:43:56,274 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:43:56,289 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.01366877555847168 seconds.
+2019-06-27 09:43:56,317 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.04100680351257324 seconds.
+2019-06-27 09:43:56,318 - INFO - SUCCESS  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_11: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align='left'>
+    <pre>
+    
+pt1_3: 2019-06-27 09:43:56,324 - INFO - SUCCESS  Load case name: 11、忘记密码-修改密码成功校验
+2019-06-27 09:43:56,859 - INFO - SUCCESS  Refresh current page, Spend 0.5330781936645508 seconds.
+2019-06-27 09:43:57,115 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.2548234462738037 seconds.
+2019-06-27 09:43:57,207 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.34660887718200684 seconds.
+2019-06-27 09:43:57,226 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.01659870147705078 seconds.
+2019-06-27 09:43:57,437 - INFO - SUCCESS  Input message: 13700000004, Spend 0.22846245765686035 seconds
+2019-06-27 09:43:57,453 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.014646530151367188 seconds.
+2019-06-27 09:43:57,592 - INFO - SUCCESS  Input message: 88888888, Spend 0.1532900333404541 seconds
+2019-06-27 09:43:57,610 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.015620946884155273 seconds.
+2019-06-27 09:43:57,779 - INFO - SUCCESS  Input message: 222222, Spend 0.18551135063171387 seconds
+2019-06-27 09:43:57,805 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.023443222045898438 seconds.
+2019-06-27 09:43:57,942 - INFO - SUCCESS  Input message: 222222, Spend 0.16109943389892578 seconds
+2019-06-27 09:43:57,964 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.019527912139892578 seconds.
+2019-06-27 09:43:58,075 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.13082647323608398 seconds.
+2019-06-27 09:44:00,078 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:00,091 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.012692451477050781 seconds.
+2019-06-27 09:44:00,124 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.04394245147705078 seconds.
+2019-06-27 09:44:00,125 - INFO - SUCCESS  Expect: 密码修改成功 equal Faction: 密码修改成功, test -&gt; PASS.
+Write success value: 222222 in 蓝魔科技-password
+New password: 222222
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_2: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align='left'>
+    <pre>
+    
+pt1_4: 2019-06-27 09:44:00,133 - INFO - SUCCESS  Load case name: 2、忘记密码-验证码为空校验
+2019-06-27 09:44:00,721 - INFO - SUCCESS  Refresh current page, Spend 0.585801362991333 seconds.
+2019-06-27 09:44:01,012 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.28801870346069336 seconds.
+2019-06-27 09:44:01,130 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.40712928771972656 seconds.
+2019-06-27 09:44:01,153 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.02147817611694336 seconds.
+2019-06-27 09:44:01,361 - INFO - SUCCESS  Input message: 13700000004, Spend 0.22943925857543945 seconds
+2019-06-27 09:44:01,384 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.022454500198364258 seconds.
+2019-06-27 09:44:01,448 - INFO - SUCCESS  Input message: , Spend 0.08689332008361816 seconds
+2019-06-27 09:44:01,472 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.021482229232788086 seconds.
+2019-06-27 09:44:01,608 - INFO - SUCCESS  Input message: 111111, Spend 0.15523838996887207 seconds
+2019-06-27 09:44:01,634 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.024414539337158203 seconds.
+2019-06-27 09:44:01,758 - INFO - SUCCESS  Input message: 111111, Spend 0.14840054512023926 seconds
+2019-06-27 09:44:01,781 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.021477222442626953 seconds.
+2019-06-27 09:44:01,876 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.11618161201477051 seconds.
+2019-06-27 09:44:03,878 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:03,895 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.016594648361206055 seconds.
+2019-06-27 09:44:03,928 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.04881787300109863 seconds.
+2019-06-27 09:44:03,929 - INFO - SUCCESS  Expect: 请输入短信验证码 equal Faction: 请输入短信验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_3: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" align='left'>
+    <pre>
+    
+pt1_5: 2019-06-27 09:44:03,937 - INFO - SUCCESS  Load case name: 3、忘记密码-新密码为空校验
+2019-06-27 09:44:04,865 - INFO - SUCCESS  Refresh current page, Spend 0.9245836734771729 seconds.
+2019-06-27 09:44:04,902 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.03515005111694336 seconds.
+2019-06-27 09:44:04,993 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.127899169921875 seconds.
+2019-06-27 09:44:05,021 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.027333498001098633 seconds.
+2019-06-27 09:44:05,243 - INFO - SUCCESS  Input message: 13700000004, Spend 0.24797940254211426 seconds
+2019-06-27 09:44:05,267 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.022456645965576172 seconds.
+2019-06-27 09:44:05,449 - INFO - SUCCESS  Input message: 88888888, Spend 0.2050321102142334 seconds
+2019-06-27 09:44:05,470 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.019528627395629883 seconds.
+2019-06-27 09:44:05,534 - INFO - SUCCESS  Input message: , Spend 0.08494186401367188 seconds
+2019-06-27 09:44:05,553 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.016598224639892578 seconds.
+2019-06-27 09:44:05,685 - INFO - SUCCESS  Input message: 111111, Spend 0.14840221405029297 seconds
+2019-06-27 09:44:05,702 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.015621662139892578 seconds.
+2019-06-27 09:44:05,809 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.12204599380493164 seconds.
+2019-06-27 09:44:07,809 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:07,859 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.0468595027923584 seconds.
+2019-06-27 09:44:07,920 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.10739803314208984 seconds.
+2019-06-27 09:44:07,922 - INFO - SUCCESS  Expect: 请输入6-18位登录密码 equal Faction: 请输入6-18位登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_4: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" align='left'>
+    <pre>
+    
+pt1_6: 2019-06-27 09:44:07,928 - INFO - SUCCESS  Load case name: 4、忘记密码-确认密码为空校验
+2019-06-27 09:44:08,870 - INFO - SUCCESS  Refresh current page, Spend 0.940208911895752 seconds.
+2019-06-27 09:44:08,899 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.027338504791259766 seconds.
+2019-06-27 09:44:09,008 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.1376631259918213 seconds.
+2019-06-27 09:44:09,068 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.05760526657104492 seconds.
+2019-06-27 09:44:09,474 - INFO - SUCCESS  Input message: 13700000004, Spend 0.4637594223022461 seconds
+2019-06-27 09:44:09,502 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.02635931968688965 seconds.
+2019-06-27 09:44:09,824 - INFO - SUCCESS  Input message: 88888888, Spend 0.34953761100769043 seconds
+2019-06-27 09:44:09,860 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.03417229652404785 seconds.
+2019-06-27 09:44:10,017 - INFO - SUCCESS  Input message: 111111, Spend 0.1903848648071289 seconds
+2019-06-27 09:44:10,040 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.02343010902404785 seconds.
+2019-06-27 09:44:10,115 - INFO - SUCCESS  Input message: , Spend 0.09763240814208984 seconds
+2019-06-27 09:44:10,133 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.015616893768310547 seconds.
+2019-06-27 09:44:10,249 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.13277626037597656 seconds.
+2019-06-27 09:44:12,253 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:12,270 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.01659083366394043 seconds.
+2019-06-27 09:44:12,301 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.04783320426940918 seconds.
+2019-06-27 09:44:12,302 - INFO - SUCCESS  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_5: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in" align='left'>
+    <pre>
+    
+pt1_7: 2019-06-27 09:44:12,311 - INFO - SUCCESS  Load case name: 5、忘记密码-未注册手机号校验
+2019-06-27 09:44:13,156 - INFO - SUCCESS  Refresh current page, Spend 0.8435494899749756 seconds.
+2019-06-27 09:44:13,184 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.02635931968688965 seconds.
+2019-06-27 09:44:13,293 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.1357100009918213 seconds.
+2019-06-27 09:44:13,315 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.01854991912841797 seconds.
+2019-06-27 09:44:13,525 - INFO - SUCCESS  Input message: 11111111111, Spend 0.22944951057434082 seconds
+2019-06-27 09:44:13,547 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.020502805709838867 seconds.
+2019-06-27 09:44:13,758 - INFO - SUCCESS  Input message: 88888888, Spend 0.23236775398254395 seconds
+2019-06-27 09:44:13,778 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.018557071685791016 seconds.
+2019-06-27 09:44:13,898 - INFO - SUCCESS  Input message: 111111, Spend 0.13863873481750488 seconds
+2019-06-27 09:44:13,916 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.01757502555847168 seconds.
+2019-06-27 09:44:14,026 - INFO - SUCCESS  Input message: 111111, Spend 0.1269237995147705 seconds
+2019-06-27 09:44:14,046 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.01854991912841797 seconds.
+2019-06-27 09:44:14,150 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.12302255630493164 seconds.
+2019-06-27 09:44:16,152 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:16,166 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.012688875198364258 seconds.
+2019-06-27 09:44:16,190 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.03711676597595215 seconds.
+2019-06-27 09:44:16,191 - INFO - SUCCESS  Expect: 该账号还未注册 equal Faction: 该账号还未注册, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_6: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align='left'>
+    <pre>
+    
+pt1_8: 2019-06-27 09:44:16,197 - INFO - SUCCESS  Load case name: 6、忘记密码-验证码不正确校验
+2019-06-27 09:44:17,001 - INFO - SUCCESS  Refresh current page, Spend 0.802520751953125 seconds.
+2019-06-27 09:44:17,040 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.03710222244262695 seconds.
+2019-06-27 09:44:17,121 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.11813235282897949 seconds.
+2019-06-27 09:44:17,142 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.019527196884155273 seconds.
+2019-06-27 09:44:17,331 - INFO - SUCCESS  Input message: 13700000004, Spend 0.20893526077270508 seconds
+2019-06-27 09:44:17,351 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.01854991912841797 seconds.
+2019-06-27 09:44:17,486 - INFO - SUCCESS  Input message: 000000, Spend 0.15328407287597656 seconds
+2019-06-27 09:44:17,508 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.022463321685791016 seconds.
+2019-06-27 09:44:17,624 - INFO - SUCCESS  Input message: 111111, Spend 0.1376636028289795 seconds
+2019-06-27 09:44:17,646 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.021480083465576172 seconds.
+2019-06-27 09:44:17,835 - INFO - SUCCESS  Input message: 111111, Spend 0.20992231369018555 seconds
+2019-06-27 09:44:17,867 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.030261993408203125 seconds.
+2019-06-27 09:44:17,973 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.13668274879455566 seconds.
+2019-06-27 09:44:19,974 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:19,990 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.013666868209838867 seconds.
+2019-06-27 09:44:20,017 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.041982412338256836 seconds.
+2019-06-27 09:44:20,019 - INFO - SUCCESS  Expect: 验证码不符 equal Faction: 验证码不符, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_7: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in" align='left'>
+    <pre>
+    
+pt1_9: 2019-06-27 09:44:20,026 - INFO - SUCCESS  Load case name: 7、忘记密码-新密码长度上点值校验
+2019-06-27 09:44:20,807 - INFO - SUCCESS  Refresh current page, Spend 0.779120683670044 seconds.
+2019-06-27 09:44:20,832 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.02245640754699707 seconds.
+2019-06-27 09:44:20,907 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.09762978553771973 seconds.
+2019-06-27 09:44:20,932 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.022439956665039062 seconds.
+2019-06-27 09:44:21,133 - INFO - SUCCESS  Input message: 13700000004, Spend 0.2235715389251709 seconds
+2019-06-27 09:44:21,156 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.021480083465576172 seconds.
+2019-06-27 09:44:21,321 - INFO - SUCCESS  Input message: 88888888, Spend 0.1864793300628662 seconds
+2019-06-27 09:44:21,338 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.016597270965576172 seconds.
+2019-06-27 09:44:21,452 - INFO - SUCCESS  Input message: 11111, Spend 0.1298537254333496 seconds
+2019-06-27 09:44:21,475 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.02342963218688965 seconds.
+2019-06-27 09:44:21,574 - INFO - SUCCESS  Input message: 11111, Spend 0.1210627555847168 seconds
+2019-06-27 09:44:21,592 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.01757502555847168 seconds.
+2019-06-27 09:44:21,683 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.10837268829345703 seconds.
+2019-06-27 09:44:23,685 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:23,701 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.016600370407104492 seconds.
+2019-06-27 09:44:23,730 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.04491782188415527 seconds.
+2019-06-27 09:44:23,731 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_8: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse in" align='left'>
+    <pre>
+    
+pt1_10: 2019-06-27 09:44:23,738 - INFO - SUCCESS  Load case name: 8、忘记密码-新密码长度离点值校验
+2019-06-27 09:44:24,133 - INFO - SUCCESS  Refresh current page, Spend 0.3934645652770996 seconds.
+2019-06-27 09:44:24,605 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.470595121383667 seconds.
+2019-06-27 09:44:24,767 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.631690502166748 seconds.
+2019-06-27 09:44:24,800 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.03026413917541504 seconds.
+2019-06-27 09:44:25,096 - INFO - SUCCESS  Input message: 13700000004, Spend 0.32609081268310547 seconds
+2019-06-27 09:44:25,116 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.017574548721313477 seconds.
+2019-06-27 09:44:25,284 - INFO - SUCCESS  Input message: 88888888, Spend 0.18648457527160645 seconds
+2019-06-27 09:44:25,299 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.013668537139892578 seconds.
+2019-06-27 09:44:25,582 - INFO - SUCCESS  Input message: 0000000000000000000, Spend 0.29680538177490234 seconds
+2019-06-27 09:44:25,601 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.017574787139892578 seconds.
+2019-06-27 09:44:25,860 - INFO - SUCCESS  Input message: 0000000000000000000, Spend 0.2763090133666992 seconds
+2019-06-27 09:44:25,874 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.013669252395629883 seconds.
+2019-06-27 09:44:25,972 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.11130237579345703 seconds.
+2019-06-27 09:44:27,975 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:27,993 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.01757025718688965 seconds.
+2019-06-27 09:44:28,024 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.04881119728088379 seconds.
+2019-06-27 09:44:28,026 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_9: 忘记密码功能测试用例脚本</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse in" align='left'>
+    <pre>
+    
+pt1_11: 2019-06-27 09:44:28,035 - INFO - SUCCESS  Load case name: 9、忘记密码-新密码特殊字符校验
+2019-06-27 09:44:28,931 - INFO - SUCCESS  Refresh current page, Spend 0.8952994346618652 seconds.
+2019-06-27 09:44:28,968 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.03514504432678223 seconds.
+2019-06-27 09:44:29,064 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.13082456588745117 seconds.
+2019-06-27 09:44:29,089 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.02245783805847168 seconds.
+2019-06-27 09:44:29,336 - INFO - SUCCESS  Input message: 13700000004, Spend 0.2704474925994873 seconds
+2019-06-27 09:44:29,356 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/input')&gt;, Spend 0.019526958465576172 seconds.
+2019-06-27 09:44:29,549 - INFO - SUCCESS  Input message: 88888888, Spend 0.21186566352844238 seconds
+2019-06-27 09:44:29,575 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[3]/input')&gt;, Spend 0.023431777954101562 seconds.
+2019-06-27 09:44:29,756 - INFO - SUCCESS  Input message: ！@#$a0, Spend 0.20600605010986328 seconds
+2019-06-27 09:44:29,777 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[4]/input')&gt;, Spend 0.018550395965576172 seconds.
+2019-06-27 09:44:29,905 - INFO - SUCCESS  Input message: ！@#$a0, Spend 0.1474289894104004 seconds
+2019-06-27 09:44:29,921 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.01562190055847168 seconds.
+2019-06-27 09:44:30,021 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="重置密码"]')&gt;, Spend 0.11423230171203613 seconds.
+2019-06-27 09:44:32,022 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-06-27 09:44:32,043 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.018557071685791016 seconds.
+2019-06-27 09:44:32,075 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.05174541473388672 seconds.
+2019-06-27 09:44:32,076 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd002_1: 获取验证码功能校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse in" align='left'>
+    <pre>
+    
+pt1_12: 2019-06-27 09:44:32,085 - INFO - SUCCESS  Load case name: 12、获取验证码-手机号为空校验
+2019-06-27 09:44:32,491 - INFO - SUCCESS  Refresh current page, Spend 0.4042024612426758 seconds.
+2019-06-27 09:44:32,888 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.3963906764984131 seconds.
+2019-06-27 09:44:32,997 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.5047667026519775 seconds.
+2019-06-27 09:44:33,017 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.018551349639892578 seconds.
+2019-06-27 09:44:33,074 - INFO - SUCCESS  Input message: , Spend 0.07517433166503906 seconds
+2019-06-27 09:44:33,101 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.024409770965576172 seconds.
+2019-06-27 09:44:33,188 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.11131024360656738 seconds.
+2019-06-27 09:44:34,191 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:44:34,209 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.01759052276611328 seconds.
+2019-06-27 09:44:34,249 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.056627511978149414 seconds.
+2019-06-27 09:44:34,250 - INFO - SUCCESS  Expect: 请输入正确的手机号码 equal Faction: 请输入正确的手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_13' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd002_2: 获取验证码功能校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse in" align='left'>
+    <pre>
+    
+pt1_13: 2019-06-27 09:44:34,260 - INFO - SUCCESS  Load case name: 13、获取验证码-手机号未注册校验
+2019-06-27 09:44:35,073 - INFO - SUCCESS  Refresh current page, Spend 0.812314510345459 seconds.
+2019-06-27 09:44:35,103 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.02831244468688965 seconds.
+2019-06-27 09:44:35,180 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.10349416732788086 seconds.
+2019-06-27 09:44:35,200 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.02050018310546875 seconds.
+2019-06-27 09:44:35,442 - INFO - SUCCESS  Input message: 11111111111, Spend 0.2606782913208008 seconds
+2019-06-27 09:44:35,466 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.022460222244262695 seconds.
+2019-06-27 09:44:35,556 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.11227893829345703 seconds.
+2019-06-27 09:44:36,558 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:44:36,575 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.015615224838256836 seconds.
+2019-06-27 09:44:36,620 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.060527801513671875 seconds.
+2019-06-27 09:44:36,621 - INFO - SUCCESS  Expect: 当前手机号还未注册网点，请重新输入 equal Faction: 当前手机号还未注册网点，请重新输入, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_14' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd003: 发送成功验证码</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse in" align='left'>
+    <pre>
+    
+pt1_14: 2019-06-27 09:44:36,633 - INFO - SUCCESS  Load case name: 14、获取验证码-正确发送验证码校验
+2019-06-27 09:44:37,101 - INFO - SUCCESS  Refresh current page, Spend 0.4657132625579834 seconds.
+2019-06-27 09:44:38,103 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:44:38,121 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.015620708465576172 seconds.
+2019-06-27 09:44:38,205 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="forgetbtn"]')&gt;, Spend 0.09958648681640625 seconds.
+2019-06-27 09:44:38,221 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[1]/input')&gt;, Spend 0.01562643051147461 seconds.
+2019-06-27 09:44:38,385 - INFO - SUCCESS  Input message: 13720673941, Spend 0.17965030670166016 seconds
+2019-06-27 09:44:38,404 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.016599178314208984 seconds.
+2019-06-27 09:44:38,483 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.09665751457214355 seconds.
+2019-06-27 09:44:39,485 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:44:39,500 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt;, Spend 0.014644622802734375 seconds.
+2019-06-27 09:44:39,512 - INFO - SUCCESS  Get element &lt;('xpath', '//div[text()="忘记密码"]/../form/ul/li[2]/a')&gt; , attribute by class, Spend 0.025395870208740234 seconds.
+2019-06-27 09:44:39,513 - INFO - SUCCESS  Expect: getCode disabled equal Faction: getCode disabled, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_15' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd004_1: 修改密码后逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_15' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_15'>通过</button>
+    <div id='div_pt1_15' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_15' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_15'>通过</button>
+    <div id='div_pt1_15' class="collapse in" align='left'>
+    <pre>
+    
+pt1_15: 2019-06-27 09:44:39,519 - INFO - SUCCESS  Load case name: 15、忘记密码-使用旧密码不能登陆校验
+2019-06-27 09:44:40,117 - INFO - SUCCESS  Refresh current page, Spend 0.5984935760498047 seconds.
+2019-06-27 09:44:40,164 - INFO - SUCCESS  Open url &lt;http://www.51shouhou.cn/singleBranch/#/login&gt;, Spend 0.04393935203552246 seconds.
+2019-06-27 09:44:40,208 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.043943166732788086 seconds.
+2019-06-27 09:44:40,447 - INFO - SUCCESS  Input message: 13700000004, Spend 0.2831382751464844 seconds
+2019-06-27 09:44:40,477 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.028313636779785156 seconds.
+2019-06-27 09:44:40,670 - INFO - SUCCESS  Input message: 111111, Spend 0.22162699699401855 seconds
+2019-06-27 09:44:40,699 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.027338027954101562 seconds.
+2019-06-27 09:44:40,824 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.1513376235961914 seconds.
+2019-06-27 09:44:41,825 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:44:41,839 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.013669490814208984 seconds.
+2019-06-27 09:44:41,858 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.03222179412841797 seconds.
+2019-06-27 09:44:41,859 - INFO - SUCCESS  Expect: 用户名或密码错误 equal Faction: 用户名或密码错误, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_16' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd004_2: 修改密码后逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_16' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_16'>通过</button>
+    <div id='div_pt1_16' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_16' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_16'>通过</button>
+    <div id='div_pt1_16' class="collapse in" align='left'>
+    <pre>
+    
+pt1_16: 2019-06-27 09:44:41,862 - INFO - SUCCESS  Load case name: 16、忘记密码-使用新密码可以成功登陆校验
+2019-06-27 09:44:42,160 - INFO - SUCCESS  Refresh current page, Spend 0.29680562019348145 seconds.
+2019-06-27 09:44:42,498 - INFO - SUCCESS  Open url &lt;http://www.51shouhou.cn/singleBranch/#/login&gt;, Spend 0.3368411064147949 seconds.
+2019-06-27 09:44:42,524 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.025390148162841797 seconds.
+2019-06-27 09:44:42,689 - INFO - SUCCESS  Input message: 13700000004, Spend 0.18940949440002441 seconds
+2019-06-27 09:44:42,699 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.009762763977050781 seconds.
+2019-06-27 09:44:42,788 - INFO - SUCCESS  Input message: 222222, Spend 0.09958553314208984 seconds
+2019-06-27 09:44:42,800 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.009764671325683594 seconds.
+2019-06-27 09:44:42,846 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.05662822723388672 seconds.
+2019-06-27 09:44:43,848 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:44:44,413 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.5457720756530762 seconds.
+2019-06-27 09:44:44,482 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.6141154766082764 seconds.
+2019-06-27 09:44:44,483 - INFO - SUCCESS  Expect: 登录成功 equal Faction: 登录成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>b_alterPwd.Alter_Password</td>
+    <td class="text-center">9</td>
+    <td class="text-center">9</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',9)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd001: 登陆密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align='left'>
+    <pre>
+    
+pt2_1: 2019-06-27 09:44:57,774 - INFO - SUCCESS  Refresh current page, Spend 0.624840497970581 seconds.
+2019-06-27 09:44:59,583 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.8071954250335693 seconds.
+2019-06-27 09:45:00,167 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 2.3910446166992188 seconds.
+2019-06-27 09:45:00,168 - INFO - SUCCESS  Load case name: 1、修改密码-原登录密码为空校验
+2019-06-27 09:45:00,232 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.058574676513671875 seconds.
+2019-06-27 09:45:00,652 - INFO - SUCCESS  Input message: 111111, Spend 0.48132824897766113 seconds
+2019-06-27 09:45:00,690 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.03612637519836426 seconds.
+2019-06-27 09:45:00,946 - INFO - SUCCESS  Input message: 111111, Spend 0.2929058074951172 seconds
+2019-06-27 09:45:01,949 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-06-27 09:45:01,987 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.03710174560546875 seconds.
+2019-06-27 09:45:02,119 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.16891026496887207 seconds.
+2019-06-27 09:45:02,183 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="原登录密码:"]/../div/div[2]')&gt;, Spend 0.06247973442077637 seconds.
+2019-06-27 09:45:02,245 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="原登录密码:"]/../div/div[2]')&gt; text, Spend 0.123992919921875 seconds.
+2019-06-27 09:45:02,253 - INFO - SUCCESS  Expect: 请输入原登录密码 equal Faction: 请输入原登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd002: 新密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align='left'>
+    <pre>
+    
+pt2_2: 2019-06-27 09:45:03,273 - INFO - SUCCESS  Refresh current page, Spend 1.011484146118164 seconds.
+2019-06-27 09:45:04,760 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.486957311630249 seconds.
+2019-06-27 09:45:05,248 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.9741485118865967 seconds.
+2019-06-27 09:45:05,249 - INFO - SUCCESS  Load case name: 2、修改密码-新登录密码为空校验
+2019-06-27 09:45:05,328 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.07810735702514648 seconds.
+2019-06-27 09:45:05,622 - INFO - SUCCESS  Input message: 222222, Spend 0.37100839614868164 seconds
+2019-06-27 09:45:05,649 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.02537822723388672 seconds.
+2019-06-27 09:45:05,853 - INFO - SUCCESS  Input message: 111111, Spend 0.22943329811096191 seconds
+2019-06-27 09:45:05,888 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.03319859504699707 seconds.
+2019-06-27 09:45:05,997 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.1425483226776123 seconds.
+2019-06-27 09:45:06,040 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="新登录密码:"]/../div/div[2]')&gt;, Spend 0.04296231269836426 seconds.
+2019-06-27 09:45:06,088 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="新登录密码:"]/../div/div[2]')&gt; text, Spend 0.08982276916503906 seconds.
+2019-06-27 09:45:06,089 - INFO - SUCCESS  Expect: 请输入新登录密码 equal Faction: 请输入新登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd003: 新密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align='left'>
+    <pre>
+    
+pt2_3: 2019-06-27 09:45:07,536 - INFO - SUCCESS  Refresh current page, Spend 1.4400978088378906 seconds.
+2019-06-27 09:45:07,982 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 0.44324445724487305 seconds.
+2019-06-27 09:45:08,131 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 0.5916464328765869 seconds.
+2019-06-27 09:45:08,135 - INFO - SUCCESS  Load case name: 3、修改密码-确认新登录密码为空校验
+2019-06-27 09:45:08,169 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.03221416473388672 seconds.
+2019-06-27 09:45:08,539 - INFO - SUCCESS  Input message: 222222, Spend 0.4012768268585205 seconds
+2019-06-27 09:45:08,573 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.03222012519836426 seconds.
+2019-06-27 09:45:08,802 - INFO - SUCCESS  Input message: 111111, Spend 0.2606806755065918 seconds
+2019-06-27 09:45:08,825 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.02150416374206543 seconds.
+2019-06-27 09:45:08,937 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.13181257247924805 seconds.
+2019-06-27 09:45:08,973 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="重复密码:"]/../div/div[2]')&gt;, Spend 0.035147666931152344 seconds.
+2019-06-27 09:45:09,016 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="重复密码:"]/../div/div[2]')&gt; text, Spend 0.07811617851257324 seconds.
+2019-06-27 09:45:09,017 - INFO - SUCCESS  Expect: 请重复输入新登录密码 equal Faction: 请重复输入新登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_1: 修改密码逻辑/密码格式校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse in" align='left'>
+    <pre>
+    
+pt2_4: 2019-06-27 09:45:09,378 - INFO - SUCCESS  Refresh current page, Spend 0.353435754776001 seconds.
+2019-06-27 09:45:10,603 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.2233405113220215 seconds.
+2019-06-27 09:45:11,014 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.6343867778778076 seconds.
+2019-06-27 09:45:11,017 - INFO - SUCCESS  Load case name: 4、修改密码-新登录密码格式左边界值校验
+2019-06-27 09:45:11,040 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.02245497703552246 seconds.
+2019-06-27 09:45:11,448 - INFO - SUCCESS  Input message: 222222, Spend 0.42958760261535645 seconds
+2019-06-27 09:45:11,478 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.02928948402404785 seconds.
+2019-06-27 09:45:11,699 - INFO - SUCCESS  Input message: 11111, Spend 0.24994158744812012 seconds
+2019-06-27 09:45:11,720 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.019525766372680664 seconds.
+2019-06-27 09:45:11,936 - INFO - SUCCESS  Input message: 11111, Spend 0.23627185821533203 seconds
+2019-06-27 09:45:11,969 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.03221917152404785 seconds.
+2019-06-27 09:45:12,103 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.16597700119018555 seconds.
+2019-06-27 09:45:12,146 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.04002046585083008 seconds.
+2019-06-27 09:45:12,188 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.08200335502624512 seconds.
+2019-06-27 09:45:12,191 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_2: 修改密码逻辑/密码格式校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse in" align='left'>
+    <pre>
+    
+pt2_5: 2019-06-27 09:45:12,572 - INFO - SUCCESS  Refresh current page, Spend 0.37198352813720703 seconds.
+2019-06-27 09:45:13,736 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.163787603378296 seconds.
+2019-06-27 09:45:14,285 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.7124888896942139 seconds.
+2019-06-27 09:45:14,286 - INFO - SUCCESS  Load case name: 5、修改密码-新登录密码格式特殊字符校验
+2019-06-27 09:45:14,320 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.03221774101257324 seconds.
+2019-06-27 09:45:14,616 - INFO - SUCCESS  Input message: 222222, Spend 0.3270721435546875 seconds
+2019-06-27 09:45:14,638 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.0195159912109375 seconds.
+2019-06-27 09:45:14,875 - INFO - SUCCESS  Input message: ！@#！@#, Spend 0.2567636966705322 seconds
+2019-06-27 09:45:14,899 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.022455453872680664 seconds.
+2019-06-27 09:45:15,106 - INFO - SUCCESS  Input message: ！@#！@#, Spend 0.22943782806396484 seconds
+2019-06-27 09:45:15,135 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.0273282527923584 seconds.
+2019-06-27 09:45:15,254 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.146439790725708 seconds.
+2019-06-27 09:45:15,283 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.02538609504699707 seconds.
+2019-06-27 09:45:15,330 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.07420110702514648 seconds.
+2019-06-27 09:45:15,331 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_3: 修改密码逻辑/密码格式校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
+    <div id='div_pt2_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
+    <div id='div_pt2_6' class="collapse in" align='left'>
+    <pre>
+    
+pt2_6: 2019-06-27 09:45:15,668 - INFO - SUCCESS  Refresh current page, Spend 0.329021692276001 seconds.
+2019-06-27 09:45:17,040 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.369798183441162 seconds.
+2019-06-27 09:45:17,413 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.7417826652526855 seconds.
+2019-06-27 09:45:17,414 - INFO - SUCCESS  Load case name: 6、修改密码-新登录密码格式汉字密码校验
+2019-06-27 09:45:17,449 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.03417181968688965 seconds.
+2019-06-27 09:45:17,802 - INFO - SUCCESS  Input message: 222222, Spend 0.38565492630004883 seconds
+2019-06-27 09:45:17,831 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.027336597442626953 seconds.
+2019-06-27 09:45:18,031 - INFO - SUCCESS  Input message: 我们都是共产, Spend 0.22650814056396484 seconds
+2019-06-27 09:45:18,054 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.021472454071044922 seconds.
+2019-06-27 09:45:18,267 - INFO - SUCCESS  Input message: 我们都是共产, Spend 0.2343132495880127 seconds
+2019-06-27 09:45:18,300 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.03319430351257324 seconds.
+2019-06-27 09:45:18,419 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.15035462379455566 seconds.
+2019-06-27 09:45:18,449 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.029280662536621094 seconds.
+2019-06-27 09:45:18,507 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.08591437339782715 seconds.
+2019-06-27 09:45:18,508 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_4: 修改密码逻辑/密码格式校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_7'>通过</button>
+    <div id='div_pt2_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_7'>通过</button>
+    <div id='div_pt2_7' class="collapse in" align='left'>
+    <pre>
+    
+pt2_7: 2019-06-27 09:45:20,128 - INFO - SUCCESS  Refresh current page, Spend 1.612908124923706 seconds.
+2019-06-27 09:45:20,231 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 0.10153961181640625 seconds.
+2019-06-27 09:45:20,389 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 0.25970458984375 seconds.
+2019-06-27 09:45:20,392 - INFO - SUCCESS  Load case name: 7、修改密码-新密码和重复密码不同校验
+2019-06-27 09:45:20,429 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.03612351417541504 seconds.
+2019-06-27 09:45:21,166 - INFO - SUCCESS  Input message: 222222, Spend 0.7722818851470947 seconds
+2019-06-27 09:45:21,187 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.020501136779785156 seconds.
+2019-06-27 09:45:21,434 - INFO - SUCCESS  Input message: 111111, Spend 0.2665379047393799 seconds
+2019-06-27 09:45:21,456 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.021478891372680664 seconds.
+2019-06-27 09:45:21,689 - INFO - SUCCESS  Input message: 222222, Spend 0.2528715133666992 seconds
+2019-06-27 09:45:21,714 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.02440810203552246 seconds.
+2019-06-27 09:45:21,921 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.23139572143554688 seconds.
+2019-06-27 09:45:21,942 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.020503520965576172 seconds.
+2019-06-27 09:45:21,981 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.058580875396728516 seconds.
+2019-06-27 09:45:21,983 - INFO - SUCCESS  Expect: 重复密码与新登录密码不相同 equal Faction: 重复密码与新登录密码不相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_5: 修改密码逻辑/密码格式校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_8'>通过</button>
+    <div id='div_pt2_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_8'>通过</button>
+    <div id='div_pt2_8' class="collapse in" align='left'>
+    <pre>
+    
+pt2_8: 2019-06-27 09:45:22,011 - INFO - SUCCESS  Refresh current page, Spend 0.018555879592895508 seconds.
+2019-06-27 09:45:23,859 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.8462498188018799 seconds.
+2019-06-27 09:45:24,334 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 2.3207578659057617 seconds.
+2019-06-27 09:45:24,335 - INFO - SUCCESS  Load case name: 8、修改密码-成功修改密码校验
+2019-06-27 09:45:24,389 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.05272221565246582 seconds.
+2019-06-27 09:45:24,778 - INFO - SUCCESS  Input message: 222222, Spend 0.44032812118530273 seconds
+2019-06-27 09:45:24,802 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.023432493209838867 seconds.
+2019-06-27 09:45:25,019 - INFO - SUCCESS  Input message: 111111, Spend 0.24115562438964844 seconds
+2019-06-27 09:45:25,045 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.02538323402404785 seconds.
+2019-06-27 09:45:25,286 - INFO - SUCCESS  Input message: 111111, Spend 0.2655625343322754 seconds
+2019-06-27 09:45:25,306 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.017569541931152344 seconds.
+2019-06-27 09:45:25,442 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.15328025817871094 seconds.
+2019-06-27 09:45:27,013 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 1.5709228515625 seconds.
+2019-06-27 09:45:27,131 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 1.6880886554718018 seconds.
+Write success value: 111111 in 蓝魔科技-password
+New password: 111111.
+2019-06-27 09:45:27,135 - INFO - SUCCESS  Expect: 修改成功 equal Faction: 修改成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd005: 登陆密码不正确校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_9'>通过</button>
+    <div id='div_pt2_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_9'>通过</button>
+    <div id='div_pt2_9' class="collapse in" align='left'>
+    <pre>
+    
+pt2_9: 2019-06-27 09:45:27,554 - INFO - SUCCESS  Refresh current page, Spend 0.4080934524536133 seconds.
+2019-06-27 09:45:29,072 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.5152709484100342 seconds.
+2019-06-27 09:45:29,544 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="登陆密码："]/../div/p/a')&gt;, Spend 1.9878346920013428 seconds.
+2019-06-27 09:45:29,545 - INFO - SUCCESS  Load case name: 9、修改密码-原登录密码不正确校验
+2019-06-27 09:45:29,581 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入原登录密码"]')&gt;, Spend 0.0332026481628418 seconds.
+2019-06-27 09:45:29,904 - INFO - SUCCESS  Input message: 123456, Spend 0.35831546783447266 seconds
+2019-06-27 09:45:29,929 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="6-18位数字、字母的组合"]')&gt;, Spend 0.023435592651367188 seconds.
+2019-06-27 09:45:30,215 - INFO - SUCCESS  Input message: 111111, Spend 0.30754613876342773 seconds
+2019-06-27 09:45:30,239 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="请重复输入新登录密码"]')&gt;, Spend 0.022455692291259766 seconds.
+2019-06-27 09:45:30,439 - INFO - SUCCESS  Input message: 111111, Spend 0.22260451316833496 seconds
+2019-06-27 09:45:30,465 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.023430585861206055 seconds.
+2019-06-27 09:45:30,619 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//div[text()="修改登录密码"]/../../div[3]/div/button')&gt;, Spend 0.17867541313171387 seconds.
+2019-06-27 09:45:30,719 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.09861040115356445 seconds.
+2019-06-27 09:45:30,768 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.14742732048034668 seconds.
+2019-06-27 09:45:30,771 - INFO - SUCCESS  Expect: 当前密码不正确 equal Faction: 当前密码不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>c_alterphenum.Alter_PhoneNum</td>
+    <td class="text-center">12</td>
+    <td class="text-center">12</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',12)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='pt3_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum001: 登录密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse in" align='left'>
+    <pre>
+    
+pt3_1: 2019-06-27 09:45:44,037 - INFO - SUCCESS  Refresh current page, Spend 1.0681114196777344 seconds.
+2019-06-27 09:45:45,165 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.126699447631836 seconds.
+2019-06-27 09:45:45,574 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.5367510318756104 seconds.
+2019-06-27 09:45:45,576 - INFO - SUCCESS  Load case name: 1、修改手机-登录密码为空校验
+2019-06-27 09:45:45,656 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.07810568809509277 seconds.
+2019-06-27 09:45:46,293 - INFO - SUCCESS  Input message: 13572597243, Spend 0.7176053524017334 seconds
+2019-06-27 09:45:46,335 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入验证码"]')&gt;, Spend 0.04100680351257324 seconds.
+2019-06-27 09:45:46,600 - INFO - SUCCESS  Input message: 88888888, Spend 0.30559659004211426 seconds
+2019-06-27 09:45:46,635 - INFO - SUCCESS  Find element &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.033194541931152344 seconds.
+2019-06-27 09:45:46,785 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.18355011940002441 seconds.
+2019-06-27 09:45:46,827 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="登录密码:"]/../div/div[2]')&gt;, Spend 0.04100537300109863 seconds.
+2019-06-27 09:45:46,920 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="登录密码:"]/../div/div[2]')&gt; text, Spend 0.1337580680847168 seconds.
+2019-06-27 09:45:46,922 - INFO - SUCCESS  Expect: 请输入登录密码 equal Faction: 请输入登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum002: 手机号为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse in" align='left'>
+    <pre>
+    
+pt3_2: 2019-06-27 09:45:46,967 - INFO - SUCCESS  Refresh current page, Spend 0.03223013877868652 seconds.
+2019-06-27 09:45:49,240 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 2.2719318866729736 seconds.
+2019-06-27 09:45:49,386 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 2.417414665222168 seconds.
+2019-06-27 09:45:49,388 - INFO - SUCCESS  Load case name: 2、修改手机-手机号为空校验
+2019-06-27 09:45:49,508 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.12009596824645996 seconds.
+2019-06-27 09:45:49,912 - INFO - SUCCESS  Input message: 111111, Spend 0.5233170986175537 seconds
+2019-06-27 09:45:49,933 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入验证码"]')&gt;, Spend 0.019526004791259766 seconds.
+2019-06-27 09:45:50,290 - INFO - SUCCESS  Input message: 88888888, Spend 0.377840518951416 seconds
+2019-06-27 09:45:50,315 - INFO - SUCCESS  Find element &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.022455692291259766 seconds.
+2019-06-27 09:45:50,506 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.21381735801696777 seconds.
+2019-06-27 09:45:50,612 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号码:"]/../div/div[2]')&gt;, Spend 0.10446619987487793 seconds.
+2019-06-27 09:45:50,704 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="手机号码:"]/../div/div[2]')&gt; text, Spend 0.19722199440002441 seconds.
+2019-06-27 09:45:50,705 - INFO - SUCCESS  Expect: 请输入手机号码 equal Faction: 请输入手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum003: 验证码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
+    <div id='div_pt3_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
+    <div id='div_pt3_3' class="collapse in" align='left'>
+    <pre>
+    
+pt3_3: 2019-06-27 09:45:51,384 - INFO - SUCCESS  Refresh current page, Spend 0.6707417964935303 seconds.
+2019-06-27 09:45:52,259 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 0.8747966289520264 seconds.
+2019-06-27 09:45:52,878 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.4928197860717773 seconds.
+2019-06-27 09:45:52,879 - INFO - SUCCESS  Load case name: 3、修改手机-验证码为空校验
+2019-06-27 09:45:52,915 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.03417181968688965 seconds.
+2019-06-27 09:45:53,262 - INFO - SUCCESS  Input message: 111111, Spend 0.381746768951416 seconds
+2019-06-27 09:45:53,292 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.027339696884155273 seconds.
+2019-06-27 09:45:53,660 - INFO - SUCCESS  Input message: 13572597243, Spend 0.39736318588256836 seconds
+2019-06-27 09:45:53,684 - INFO - SUCCESS  Find element &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.02245473861694336 seconds.
+2019-06-27 09:45:53,807 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.14547514915466309 seconds.
+2019-06-27 09:45:53,851 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="验证码"]/../div/div[2]')&gt;, Spend 0.04296565055847168 seconds.
+2019-06-27 09:45:53,909 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="验证码"]/../div/div[2]')&gt; text, Spend 0.10056328773498535 seconds.
+2019-06-27 09:45:53,910 - INFO - SUCCESS  Expect: 输入验证码 equal Faction: 输入验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum004: 错误的登陆密码修改手机校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
+    <div id='div_pt3_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
+    <div id='div_pt3_4' class="collapse in" align='left'>
+    <pre>
+    
+pt3_4: 2019-06-27 09:45:54,236 - INFO - SUCCESS  Refresh current page, Spend 0.319260835647583 seconds.
+2019-06-27 09:45:55,404 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.1667208671569824 seconds.
+2019-06-27 09:45:55,928 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.690035104751587 seconds.
+2019-06-27 09:45:55,929 - INFO - SUCCESS  Load case name: 4、修改手机-错误的登陆密码校验
+2019-06-27 09:45:55,993 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.0634613037109375 seconds.
+2019-06-27 09:45:56,294 - INFO - SUCCESS  Input message: 00000000, Spend 0.36417269706726074 seconds
+2019-06-27 09:45:56,318 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.02245020866394043 seconds.
+2019-06-27 09:45:56,736 - INFO - SUCCESS  Input message: 13720673941, Spend 0.4403226375579834 seconds
+2019-06-27 09:45:56,759 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入验证码"]')&gt;, Spend 0.022457122802734375 seconds.
+2019-06-27 09:45:57,003 - INFO - SUCCESS  Input message: 88888888, Spend 0.2645871639251709 seconds
+2019-06-27 09:45:57,029 - INFO - SUCCESS  Find element &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.025385379791259766 seconds.
+2019-06-27 09:45:57,150 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.14547419548034668 seconds.
+2019-06-27 09:45:57,276 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.1259465217590332 seconds.
+2019-06-27 09:45:57,333 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.18159985542297363 seconds.
+2019-06-27 09:45:57,335 - INFO - SUCCESS  Expect: 当前密码不正确 equal Faction: 当前密码不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum005: 错误的验证码修改手机校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
+    <div id='div_pt3_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
+    <div id='div_pt3_5' class="collapse in" align='left'>
+    <pre>
+    
+pt3_5: 2019-06-27 09:45:57,785 - INFO - SUCCESS  Refresh current page, Spend 0.441303014755249 seconds.
+2019-06-27 09:45:59,116 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.3297703266143799 seconds.
+2019-06-27 09:45:59,676 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.8882319927215576 seconds.
+2019-06-27 09:45:59,677 - INFO - SUCCESS  Load case name: 5、修改手机-错误的验证码校验
+2019-06-27 09:45:59,726 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.046863555908203125 seconds.
+2019-06-27 09:46:00,101 - INFO - SUCCESS  Input message: 111111, Spend 0.42372989654541016 seconds
+2019-06-27 09:46:00,129 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.02635979652404785 seconds.
+2019-06-27 09:46:00,556 - INFO - SUCCESS  Input message: 13720673941, Spend 0.4530198574066162 seconds
+2019-06-27 09:46:00,592 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入验证码"]')&gt;, Spend 0.03319263458251953 seconds.
+2019-06-27 09:46:00,865 - INFO - SUCCESS  Input message: 888888, Spend 0.3075418472290039 seconds
+2019-06-27 09:46:00,888 - INFO - SUCCESS  Find element &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.021480083465576172 seconds.
+2019-06-27 09:46:01,009 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[contains(.,"确定修改")]')&gt;, Spend 0.14254450798034668 seconds.
+2019-06-27 09:46:01,112 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.10056829452514648 seconds.
+2019-06-27 09:46:01,159 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.14743351936340332 seconds.
+2019-06-27 09:46:01,160 - INFO - SUCCESS  Expect: 验证码不符 equal Faction: 验证码不符, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_1: 获取手机验证码逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
+    <div id='div_pt3_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
+    <div id='div_pt3_6' class="collapse in" align='left'>
+    <pre>
+    
+pt3_6: 2019-06-27 09:46:01,570 - INFO - SUCCESS  Refresh current page, Spend 0.4012730121612549 seconds.
+2019-06-27 09:46:03,044 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.4713358879089355 seconds.
+2019-06-27 09:46:03,462 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.8901841640472412 seconds.
+2019-06-27 09:46:03,463 - INFO - SUCCESS  Load case name: 6、修改手机-已经注册过的手机号校验
+2019-06-27 09:46:03,523 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.05858111381530762 seconds.
+2019-06-27 09:46:03,891 - INFO - SUCCESS  Input message: 111111, Spend 0.4266703128814697 seconds
+2019-06-27 09:46:03,920 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.02831268310546875 seconds.
+2019-06-27 09:46:04,269 - INFO - SUCCESS  Input message: 13720673941, Spend 0.37686586380004883 seconds
+2019-06-27 09:46:04,320 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.047835588455200195 seconds.
+2019-06-27 09:46:04,501 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.22845721244812012 seconds.
+2019-06-27 09:46:04,573 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.07224750518798828 seconds.
+2019-06-27 09:46:04,644 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.14351963996887207 seconds.
+2019-06-27 09:46:04,646 - INFO - SUCCESS  Expect: 该手机号已注册为网点,请重新输入! equal Faction: 该手机号已注册为网点,请重新输入!, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_2: 获取手机验证码逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
+    <div id='div_pt3_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
+    <div id='div_pt3_7' class="collapse in" align='left'>
+    <pre>
+    
+pt3_7: 2019-06-27 09:46:05,079 - INFO - SUCCESS  Refresh current page, Spend 0.42274951934814453 seconds.
+2019-06-27 09:46:06,785 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.706634521484375 seconds.
+2019-06-27 09:46:07,400 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 2.3207485675811768 seconds.
+2019-06-27 09:46:07,402 - INFO - SUCCESS  Load case name: 7、修改手机-手机号码左边界值校验
+2019-06-27 09:46:07,448 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.04686546325683594 seconds.
+2019-06-27 09:46:07,781 - INFO - SUCCESS  Input message: 111111, Spend 0.37882137298583984 seconds
+2019-06-27 09:46:07,809 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.02734208106994629 seconds.
+2019-06-27 09:46:08,164 - INFO - SUCCESS  Input message: 1372067394, Spend 0.3827242851257324 seconds
+2019-06-27 09:46:08,184 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.01854991912841797 seconds.
+2019-06-27 09:46:08,296 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.12986135482788086 seconds.
+2019-06-27 09:46:08,320 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.02246260643005371 seconds.
+2019-06-27 09:46:08,385 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.0868990421295166 seconds.
+2019-06-27 09:46:08,386 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_3: 获取手机验证码逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_8'>通过</button>
+    <div id='div_pt3_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_8'>通过</button>
+    <div id='div_pt3_8' class="collapse in" align='left'>
+    <pre>
+    
+pt3_8: 2019-06-27 09:46:08,850 - INFO - SUCCESS  Refresh current page, Spend 0.4539976119995117 seconds.
+2019-06-27 09:46:10,174 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.3219645023345947 seconds.
+2019-06-27 09:46:10,548 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.6968717575073242 seconds.
+2019-06-27 09:46:10,549 - INFO - SUCCESS  Load case name: 8、修改手机-手机号码右边界值校验
+2019-06-27 09:46:10,599 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.04783987998962402 seconds.
+2019-06-27 09:46:10,957 - INFO - SUCCESS  Input message: 111111, Spend 0.40712714195251465 seconds
+2019-06-27 09:46:10,977 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.017574548721313477 seconds.
+2019-06-27 09:46:11,336 - INFO - SUCCESS  Input message: 137206739411, Spend 0.37686991691589355 seconds
+2019-06-27 09:46:11,357 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.019527196884155273 seconds.
+2019-06-27 09:46:11,475 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.1376633644104004 seconds.
+2019-06-27 09:46:11,502 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.026363849639892578 seconds.
+2019-06-27 09:46:11,560 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.08396601676940918 seconds.
+2019-06-27 09:46:11,561 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_4: 获取手机验证码逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_9'>通过</button>
+    <div id='div_pt3_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_9'>通过</button>
+    <div id='div_pt3_9' class="collapse in" align='left'>
+    <pre>
+    
+pt3_9: 2019-06-27 09:46:11,943 - INFO - SUCCESS  Refresh current page, Spend 0.37393808364868164 seconds.
+2019-06-27 09:46:13,264 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.3200044631958008 seconds.
+2019-06-27 09:46:13,856 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.9116787910461426 seconds.
+2019-06-27 09:46:13,857 - INFO - SUCCESS  Load case name: 9、修改手机-手机号码格式特殊符号校验
+2019-06-27 09:46:13,918 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.05858421325683594 seconds.
+2019-06-27 09:46:14,257 - INFO - SUCCESS  Input message: 111111, Spend 0.3983447551727295 seconds
+2019-06-27 09:46:14,276 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.018552303314208984 seconds.
+2019-06-27 09:46:14,708 - INFO - SUCCESS  Input message: 137206739！@, Spend 0.44912099838256836 seconds
+2019-06-27 09:46:14,737 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.026362180709838867 seconds.
+2019-06-27 09:46:14,861 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.15035676956176758 seconds.
+2019-06-27 09:46:14,923 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.06150364875793457 seconds.
+2019-06-27 09:46:14,971 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.10836911201477051 seconds.
+2019-06-27 09:46:14,972 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_5: 获取手机验证码逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_10'>通过</button>
+    <div id='div_pt3_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_10'>通过</button>
+    <div id='div_pt3_10' class="collapse in" align='left'>
+    <pre>
+    
+pt3_10: 2019-06-27 09:46:15,414 - INFO - SUCCESS  Refresh current page, Spend 0.43446874618530273 seconds.
+2019-06-27 09:46:17,084 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.6685571670532227 seconds.
+2019-06-27 09:46:17,556 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 2.1391496658325195 seconds.
+2019-06-27 09:46:17,560 - INFO - SUCCESS  Load case name: 10、修改手机-手机号码格式字母校验
+2019-06-27 09:46:17,592 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.02928900718688965 seconds.
+2019-06-27 09:46:17,904 - INFO - SUCCESS  Input message: 111111, Spend 0.3407411575317383 seconds
+2019-06-27 09:46:17,936 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.03026437759399414 seconds.
+2019-06-27 09:46:18,285 - INFO - SUCCESS  Input message: 137206739as, Spend 0.3788168430328369 seconds
+2019-06-27 09:46:18,309 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.023431777954101562 seconds.
+2019-06-27 09:46:18,442 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.15718936920166016 seconds.
+2019-06-27 09:46:18,477 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.03319668769836426 seconds.
+2019-06-27 09:46:18,526 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.08103609085083008 seconds.
+2019-06-27 09:46:18,527 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_6: 获取手机验证码逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_11'>通过</button>
+    <div id='div_pt3_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_11'>通过</button>
+    <div id='div_pt3_11' class="collapse in" align='left'>
+    <pre>
+    
+pt3_11: 2019-06-27 09:46:18,943 - INFO - SUCCESS  Refresh current page, Spend 0.4071311950683594 seconds.
+2019-06-27 09:46:20,240 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.2965724468231201 seconds.
+2019-06-27 09:46:20,769 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.8247716426849365 seconds.
+2019-06-27 09:46:20,770 - INFO - SUCCESS  Load case name: 11、修改手机-手机号码格式汉字校验
+2019-06-27 09:46:20,873 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.10251569747924805 seconds.
+2019-06-27 09:46:21,304 - INFO - SUCCESS  Input message: 111111, Spend 0.5330791473388672 seconds
+2019-06-27 09:46:21,342 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.03612470626831055 seconds.
+2019-06-27 09:46:21,762 - INFO - SUCCESS  Input message: 1372067394我们, Spend 0.4569242000579834 seconds
+2019-06-27 09:46:21,783 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.018550634384155273 seconds.
+2019-06-27 09:46:21,906 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.14352178573608398 seconds.
+2019-06-27 09:46:21,936 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.02831411361694336 seconds.
+2019-06-27 09:46:22,005 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text, Spend 0.09666156768798828 seconds.
+2019-06-27 09:46:22,006 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum007: 错误的验证码修改手机校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_12'>通过</button>
+    <div id='div_pt3_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_12'>通过</button>
+    <div id='div_pt3_12' class="collapse in" align='left'>
+    <pre>
+    
+pt3_12: 2019-06-27 09:46:22,757 - INFO - SUCCESS  Refresh current page, Spend 0.7420153617858887 seconds.
+2019-06-27 09:46:23,726 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 0.964616060256958 seconds.
+2019-06-27 09:46:24,335 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//label[text()="手机号："]/../div/p/a')&gt;, Spend 1.5757975578308105 seconds.
+2019-06-27 09:46:24,339 - INFO - SUCCESS  Load case name: 12、修改手机-正确手机号发送验证码校验
+2019-06-27 09:46:24,397 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入登录密码"]')&gt;, Spend 0.05662822723388672 seconds.
+2019-06-27 09:46:24,791 - INFO - SUCCESS  Input message: 111111, Spend 0.452042818069458 seconds
+2019-06-27 09:46:24,815 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入手机号码"]')&gt;, Spend 0.02343153953552246 seconds.
+2019-06-27 09:46:25,237 - INFO - SUCCESS  Input message: 13572597243, Spend 0.4442322254180908 seconds
+2019-06-27 09:46:25,257 - INFO - SUCCESS  Find element &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.01854872703552246 seconds.
+2019-06-27 09:46:25,363 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//span[text()="获取验证码"]')&gt;, Spend 0.1239936351776123 seconds.
+2019-06-27 09:46:25,404 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="验证码"]/../div/div[1]/div[2]/button')&gt;, Spend 0.04003500938415527 seconds.
+2019-06-27 09:46:25,417 - INFO - SUCCESS  Get element &lt;('xpath', '//label[text()="验证码"]/../div/div[1]/div[2]/button')&gt; , attribute by disabled, Spend 0.05272650718688965 seconds.
+2019-06-27 09:46:25,421 - INFO - SUCCESS  Expect: true equal Faction: true, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>37</td>
+    <td>37</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

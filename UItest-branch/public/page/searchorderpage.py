@@ -14,9 +14,9 @@ class SearchOrderPage(BasePage):
 
     '''搜索页面元素信息'''
     search_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单'
-    inputOrderNum = (By.XPATH,'//input[@placeholder="输入工单编号"]')
-    inputUserName = (By.XPATH,'//input[@placeholder="输入用户姓名"]')
-    inputUserPhone = (By.XPATH,'//input[@placeholder="输入用户电话"]')
+    inputOrderNum = (By.XPATH,'//label[text()="工单编号"]/following-sibling::input[1]')
+    inputUserName = (By.XPATH,'//label[text()="用户姓名"]/following-sibling::input[1]')
+    inputUserPhone = (By.XPATH,'//label[text()="用户电话"]/following-sibling::input[1]')
     openServerType = (By.XPATH,'//label[text()="服务类型"]/following-sibling::div/div')
     selectServerType = (By.XPATH,'//label[text()="服务类型"]/../div/div[2]/ul[2]')
     openOrderStatus = (By.XPATH,'//label[text()="工单状态"]/following-sibling::div/div')

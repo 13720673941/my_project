@@ -41,7 +41,7 @@ class Forget_Pwd(unittest.TestCase):
         #旧密码替换 15 测试用例的密码
         Data3[0]["password"] = cls.old_pwd
         #获取新密码
-        for pwd in getdata.get_test_data()["ForgetPassword"]["PwdList"]:
+        for pwd in getdata.get_test_data()["ForgetPwdPage"]["PwdList"]:
             if  pwd != cls.old_pwd:
                 cls.new_pwd = pwd
         #新密码写入到修改成功的密码参数中
