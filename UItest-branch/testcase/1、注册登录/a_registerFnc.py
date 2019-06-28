@@ -8,7 +8,7 @@ from public.common.assertmode import Assert
 from config.pathconfig import *
 from public.common import mytest
 from public.common import driver,writetestresult
-from public.page.registerpage import RegisterPage
+from public.page.registerPage import RegisterPage
 from public.common.basepage import BasePage
 from public.common import getdata
 import unittest,ddt

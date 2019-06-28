@@ -6,10 +6,10 @@
 from public.common import rwconfig,mytest
 from public.common import driver,getdata,writetestresult
 from public.common.basepage import BasePage
-from public.page.pleaseorderpage import PleaseOrderPage
-from public.page.addorderpage import AddOrderPage
-from public.page.loginpage import LoginPage
-from public.page.invalidpage import InvalidOrder
+from public.page.pleaseOrderPage import PleaseOrderPage
+from public.page.addOrderPage import AddOrderPage
+from public.page.loginPage import LoginPage
+from public.page.invalidOrderPage import InvalidOrder
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,logging,ddt

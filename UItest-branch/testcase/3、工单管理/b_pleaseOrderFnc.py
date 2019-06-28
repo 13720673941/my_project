@@ -7,9 +7,9 @@ from public.common import rwconfig,writetestresult
 from public.common import driver,getdata,mytest
 from public.common.assertmode import Assert
 from public.common.basepage import BasePage
-from public.page.pleaseorderpage import PleaseOrderPage
-from public.page.addorderpage import AddOrderPage
-from public.page.loginpage import LoginPage
+from public.page.pleaseOrderPage import PleaseOrderPage
+from public.page.addOrderPage import AddOrderPage
+from public.page.loginPage import LoginPage
 from config.pathconfig import *
 import unittest,logging,ddt
 '''
@@ -149,7 +149,7 @@ class Please_Order(unittest.TestCase):
         writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data3["CaseName"])
 
     def test_pleaseOrder005(self):
-        '''师傅不能转派网点校验'''
+        '''派到师傅可以转派到服务商校验'''
         #获取数据
         Data = getdata.get_test_data()["PleaseOrderPage"]["TestCase002"]
         #刷新页面
@@ -159,9 +159,38 @@ class Please_Order(unittest.TestCase):
         self.basePage.select_new_order(self.OrderNumber)
         #点击派单按钮
         self.pleaseOrderPage.click_pleaseOrder_btn()
-        self.basePage.sleep(2)
+        #派单到服务商
+        self.pleaseOrderPage.please_to_branch()
+        #选择派单服务商
+        self.pleaseOrderPage.select_please_page(page_name=Data["BranchName"])
+        #确定派单
+        self.pleaseOrderPage.click_confirm_btn()
+        self.basePage.sleep(1)
         #断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.pleaseOrderPage.get_to_branch_attribute())
+        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
+        #写入测试结果
+        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data["CaseName"])
+
+    def test_pleaseOrder006(self):
+        '''派到师傅可以转派到服务商校验'''
+        #获取数据
+        Data = getdata.get_test_data()["PleaseOrderPage"]["TestCase003"]
+        #刷新页面
+        self.basePage.refresh_page()
+        #选择新建订单
+        self.basePage.print_case_name(Data["CaseName"])
+        self.basePage.select_new_order(self.OrderNumber)
+        #点击派单按钮
+        self.pleaseOrderPage.click_pleaseOrder_btn()
+        #派单到服务商
+        self.pleaseOrderPage.please_to_master()
+        #选择派单服务商
+        self.pleaseOrderPage.select_please_page(page_name=Data["MasterName"])
+        #确定派单
+        self.pleaseOrderPage.click_confirm_btn()
+        self.basePage.sleep(1)
+        #断言
+        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data["CaseName"])
 
@@ -180,7 +209,7 @@ if __name__ == '__main__':
     suit.addTest(Please_Order('test_pleaseOrder003'))
     suit.addTest(Please_Order('test_pleaseOrder004'))
     suit.addTest(Please_Order('test_pleaseOrder005'))
-
+    suit.addTest(Please_Order('test_pleaseOrder006'))
     unittest.TextTestRunner().run(suit)
 
 

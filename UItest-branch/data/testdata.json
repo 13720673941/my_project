@@ -80,7 +80,11 @@
         {"CaseName": "7、修改密码-新密码和重复密码不同校验","OldPwd": "取配置文件中的密码","NewPwd": "111111","ConfirmPwd": "222222","expect": "重复密码与新登录密码不相同"},
         {"CaseName": "8、修改密码-成功修改密码校验","OldPwd": "取配置文件中的密码","NewPwd": "获取PwdList中的值","ConfirmPwd": "获取PwdList中的值","expect": "修改成功"}
       ],
-      "TestCase005": {"CaseName": "9、修改密码-原登录密码不正确校验","OldPwd": "123456","NewPwd": "111111","ConfirmPwd": "111111","expect": "当前密码不正确"}
+      "TestCase005": {"CaseName": "9、修改密码-原登录密码不正确校验","OldPwd": "123456","NewPwd": "111111","ConfirmPwd": "111111","expect": "当前密码不正确"},
+      "logic_test": [
+      {"CaseName": "10、修改密码-使用旧密码不能登陆校验","username": "13700000004","password": "获取的旧密码","expect": "用户名或密码错误"},
+      {"CaseName": "11、修改密码-使用新密码可以成功登陆校验","username": "13700000004","password": "获取新密码","expect": "登录成功"}
+    ]
     }
   },
   "5": "/*【添加订单功能测试用例】*/",
@@ -129,7 +133,8 @@
       {"CaseName": "11、派单-重复派单师傅校验","MasterName": "邓鹏飞","expect": "订单已经派给该师傅，勿重复派工！"},
       {"CaseName": "12、派单-师傅转派师傅校验","MasterName": "XIAOMI师傅","expect":"派工成功"}
     ],
-    "TestCase002": {"CaseName": "13、派单-师傅转派网点校验","MasterName": "","expect":"true"}
+    "TestCase002": {"CaseName": "13、派单-派到师傅的订单可以转派网点校验","BranchName": "branch03","expect":"派单成功"},
+    "TestCase003": {"CaseName": "14、派单-派到服务商的订单可以转派师傅校验","MasterName": "邓鹏飞","expect":"派工成功"}
   },
   "7": "/*【设置无效工单功能测试用例】*/",
   "InvalidOrderPage":{
@@ -218,26 +223,28 @@
     ],
     "TestCase005": {"CaseName": "17、经销商工单结算-结算后提示信息校验"},
     "TestCase006": [
-      {"CaseName": "18、经销商工单结算-钱包结算余额不足校验","SettleType":"按固定比例","BranchNum":"6","PayType":"钱包结算","expect": "账户钱包余额不足"},
-      {"CaseName": "19、经销商工单结算-服务商线下结算成功校验","SettleType":"按固定比例","BranchNum":"6","PayType":"线下结算","expect": "结算完成"}
+      {"CaseName": "18、经销商工单结算-钱包结算余额不足校验","SettleType":"按固定比例","BranchNum":"60","PayType":"钱包结算","expect": "账户钱包余额不足"},
+      {"CaseName": "19、经销商工单结算-服务商线下结算成功校验","SettleType":"按固定比例","BranchNum":"60","PayType":"线下结算","expect": "结算完成"}
       ]
   },
   "14": "/*【经销商页面功能测试用例集】*/",
-  "AddManagePage":{
+  "AddDealerPage":{
+    "auto_name_fnc": {"CaseName": "1、添加经销商-已经注册的用户自动带出用户名称校验","PhoneNum": "13700000001","expect": "XM-服务商"},
     "add_branch_fnc": [
-      {"CaseName": "1、添加经销商-用户账号为空校验","PhoneNum": "","RemarkName": "AutoTest","expect": "请输入客户主账号"},
-      {"CaseName": "2、添加经销商-用户名称为空校验","PhoneNum": "13572597243","RemarkName": "","expect": "请输入客户姓名"},
-      {"CaseName": "3、添加经销商-用户账号格式左边界值校验","PhoneNum": "1357259724","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
-      {"CaseName": "4、添加经销商-用户账号格式右边界值校验","PhoneNum": "135725972411","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
-      {"CaseName": "5、添加经销商-用户账号格式校验","PhoneNum": "branch!@#我","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
-      {"CaseName": "6、添加经销商-成功邀请经销商校验","PhoneNum": "13572597243","RemarkName": "AutoTest","expect": "添加成功"}
+      {"CaseName": "2、添加经销商-用户账号为空校验","PhoneNum": "","RemarkName": "AutoTest","expect": "请输入客户主账号"},
+      {"CaseName": "3、添加经销商-用户名称为空校验","PhoneNum": "13572597243","RemarkName": "","expect": "请输入客户姓名"},
+      {"CaseName": "4、添加经销商-用户账号格式左边界值校验","PhoneNum": "1357259724","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
+      {"CaseName": "5、添加经销商-用户账号格式右边界值校验","PhoneNum": "135725972411","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
+      {"CaseName": "6、添加经销商-用户账号格式校验","PhoneNum": "branch!@#我","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
+      {"CaseName": "7、添加经销商-成功邀请经销商校验","PhoneNum": "13572597243","RemarkName": "AutoTest","expect": "添加成功"},
+      {"CaseName": "8、添加经销商-重复邀请经销商校验","PhoneNum": "13572597243","RemarkName": "AutoTest","expect": "您已申请过该经销商"}
     ],
     "search_branch_fnc": [
-      {"CaseName": "7、客户搜索-按客户手机号搜索校验","SearchInfo": "13700000001","expect": "13700000001"},
-      {"CaseName": "8、客户搜索-按客户名称搜索校验","SearchInfo": "XM-服务商","expect": "XM-服务商"}
+      {"CaseName": "9、客户搜索-按客户手机号搜索校验","SearchInfo": "13700000001","expect": "13700000001"},
+      {"CaseName": "10、客户搜索-按客户名称搜索校验","SearchInfo": "XM-服务商","expect": "XM-服务商"}
     ],
-    "server_set_fnc": {"CaseName": "9、经销商服务设置-经销商备注设置校验","BranchRemark": "AutoTest","expect": "AutoTest"},
-    "stop_take_fnc": {"CaseName": "10、暂停接单-暂停接单功能校验","expect": "恢复接单"},
-    "open_take_fnc": {"CaseName": "11、恢复接单-暂停接单功能校验","expect": "暂停接单"}
+    "server_set_fnc": {"CaseName": "11、经销商服务设置-经销商备注设置校验","BranchRemark": "AutoTest","expect": "AutoTest"},
+    "stop_take_fnc": {"CaseName": "12、暂停接单-暂停接单功能校验","expect": "恢复接单"},
+    "open_take_fnc": {"CaseName": "13、恢复接单-恢复接单功能校验","expect": "暂停接单"}
   }
 }

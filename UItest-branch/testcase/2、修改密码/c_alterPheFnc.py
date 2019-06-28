@@ -8,8 +8,8 @@ from public.common.basepage import BasePage
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
 from public.common import mytest,rwconfig,writetestresult
-from public.page.loginpage import LoginPage
-from public.page.alterpassword import AlterPwdPage
+from public.page.loginPage import LoginPage
+from public.page.alterPwdPage import AlterPwdPage
 import unittest,ddt
 """
 网点登录后修改手机号：

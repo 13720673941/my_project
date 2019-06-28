@@ -13,7 +13,6 @@ class Assert(BasePage):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
-        self.isSuccess = 'FAIL'
 
     def assert_in(self,expect,fact):
         '''
@@ -21,12 +20,12 @@ class Assert(BasePage):
         '''
         if expect in fact or fact in expect:
             log.info('{0} Expect: {1} in Faction: {2}, test -> PASS.'.format(self.success,expect,fact))
-            self.isSuccess='PASS'
+            return self.success
         else:
             log.error('{0} Expect: {1} not in Faction: {2}, test -> FAIL.'.format(self.fail,expect,fact))
             #错误截图
             self.take_screen_shot()
-        return self.isSuccess
+            return self.fail
 
     def assert_equal(self,expect,fact):
         '''
@@ -34,11 +33,11 @@ class Assert(BasePage):
         '''
         if expect == fact:
             log.info('{0} Expect: {1} equal Faction: {2}, test -> PASS.'.format(self.success,expect,fact))
-            self.isSuccess = 'PASS'
+            return self.success
         else:
             log.error('{0} Expect: {1} not equal Faction: {2}, test -> FAIL.'.format(self.fail,expect,fact))
             self.take_screen_shot()
-        return self.isSuccess
+            return self.fail
 
     def assert_more_str_in(self,dictData,fact):
         '''
@@ -60,11 +59,11 @@ class Assert(BasePage):
         #断言
         if flag:
             log.info('{0} Test -> PASS.'.format(self.success))
-            self.isSuccess = 'PASS'
+            return self.success
         else:
             log.error('{0} Test -> FAIL.'.format(self.fail))
             self.take_screen_shot()
-        return self.isSuccess
+            return self.fail
 
     def assert_el_in_page(self,fact):
         """
@@ -72,11 +71,11 @@ class Assert(BasePage):
         """
         if fact:
             log.info('{0} Expect: True, Faction: {1}, test -> PASS.'.format(self.success,fact))
-            self.isSuccess = 'PASS'
+            return self.success
         else:
             log.error('{0} Expect: True, Faction: {1}, test -> FAIL.'.format(self.fail,fact))
             self.take_screen_shot()
-        return self.isSuccess
+            return self.fail
 
     def assert_el_not_in_page(self,fact):
         """
@@ -85,10 +84,11 @@ class Assert(BasePage):
         if fact:
             log.error('{0} Expect: False, Faction: {1}, test -> FAIL.'.format(self.fail,fact))
             self.take_screen_shot()
+            return self.fail
         else:
             self.isSuccess='PASS'
             log.info('{0} Expect: False, Faction: {1}, test -> PASS.'.format(self.success,fact))
-        return self.isSuccess
+            return self.success
     
     def assert_att_is_none(self,att_fact):
         """
@@ -96,8 +96,8 @@ class Assert(BasePage):
         """
         if att_fact is None:
             log.info('{0} Expect: {1} is None, Faction: {2} is None, test -> PASS.'.format(self.success,att_fact,att_fact))
-            self.isSuccess='PASS'
+            return self.success
         else:
             log.error('{0} Expect: {1} is None, Faction: {2} is not None, test -> FAIL.'.format(self.fail,att_fact,att_fact))
             self.take_screen_shot()
-        return self.isSuccess
+            return self.fail

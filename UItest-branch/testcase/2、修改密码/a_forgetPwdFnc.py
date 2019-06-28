@@ -5,8 +5,8 @@
 
 from public.common import writetestresult
 from public.common import driver,getdata,rwconfig
-from public.page.forgetpwdpage import ForgetPwd
-from public.page.loginpage import LoginPage
+from public.page.forgetPwdPage import ForgetPwd
+from public.page.loginPage import LoginPage
 from public.common.basepage import BasePage
 from public.common.assertmode import Assert
 from public.common import mytest

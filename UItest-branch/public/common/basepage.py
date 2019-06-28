@@ -272,6 +272,12 @@ class BasePage(object):
             log.error('{0} Unable switch to window handle, Spend {1} seconds.'.format(self.fail,time.time()-t1))
             raise
 
+    def up_roll_page(self):
+        """页面向上滑动"""
+        t1 = time.time()
+        self.use_js("window.scrollBy(0,500)")
+        log.info('{0} Roll current page up, Spend {1} seconds.'.format(self.success,time.time()-t1))
+
     def take_screen_shot(self):
         """
         截图
@@ -365,11 +371,12 @@ class BasePage(object):
         while True:
             self.sleep(1)
             txt2 = self.get_text(txtelement)
-            if txt2 == arrivetxt:
+            #不能做相等处理，暂时没解决办法，滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，只能判断大于期望的比例
+            if int(txt2) > int(arrivetxt):
                 actions.release(dragButton).perform() #释放左键
                 break
             else:
-                actions.move_by_offset(0.5,dragButton_y).perform()
+                actions.move_by_offset(1,dragButton_y).perform()
         log.info('{0} Button: {1}, remove right arrive {2}, Spend {3} seconds.'.format(self.success,element,arrivetxt,time.time()-t1))
 
     def get_element_count(self,parentEl,childEl='li'):

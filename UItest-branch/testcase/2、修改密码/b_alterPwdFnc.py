@@ -8,8 +8,8 @@ from public.common.basepage import BasePage
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
 from public.common import mytest,rwconfig,writetestresult
-from public.page.loginpage import LoginPage
-from public.page.alterpassword import AlterPwdPage
+from public.page.loginPage import LoginPage
+from public.page.alterPwdPage import AlterPwdPage
 import unittest,ddt
 """
 网点登陆后修改密码功能：
@@ -20,6 +20,7 @@ import unittest,ddt
 #获取测试数据
 testData = get_test_data()["AlterPwdPage"]["alter_pwd_fnc"]
 ddtData = testData["TestCase004"]
+ddtData1 = testData["logic_test"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt
@@ -45,6 +46,9 @@ class Alter_Password(unittest.TestCase):
         #新密码写入到修改成功的密码参数中
         ddtData[-1]["NewPwd"] = cls.new_pwd
         ddtData[-1]["ConfirmPwd"] = cls.new_pwd
+        #新旧密码写入到logic_test登录逻辑校验数据中
+        ddtData1[0]["password"] = cls.password
+        ddtData1[1]["password"] = cls.new_pwd
         #登陆网点
         cls.login.login_main(cls.username,cls.password)
         #进入修改密码页面
@@ -147,6 +151,24 @@ class Alter_Password(unittest.TestCase):
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,"AlterPassWord",Data["CaseName"])
 
+    @ddt.data(*ddtData1)
+    def test_alterPwd006(self,ddtData1):
+        """修改密码后登录逻辑校验"""
+        #获取测试用例名称
+        self.basePage.print_case_name(ddtData1["CaseName"])
+        #刷新页面
+        self.basePage.refresh_page()
+        #调用登录
+        self.login.enter_login_page()
+        self.login.input_username(UserName=ddtData1["username"])
+        self.login.input_password(PassWord=ddtData1["password"])
+        self.login.click_login_button()
+        self.basePage.sleep(1)
+        #断言
+        isSuccess = self.assertMode.assert_equal(ddtData1["expect"],self.basePage.get_system_msg())
+        #写入测试结果
+        writetestresult.write_test_result(isWrite,isSuccess,'AlterPassWord',ddtData1['CaseName'])
+
     @classmethod
     def tearDownClass(cls):
         #退出驱动
@@ -162,4 +184,5 @@ if __name__ == '__main__':
     suit.addTest(Alter_Password("test_alterPwd003"))
     suit.addTest(Alter_Password("test_alterPwd004"))
     suit.addTest(Alter_Password("test_alterPwd005"))
+    suit.addTest(Alter_Password("test_alterPwd006"))
     unittest.TextTestRunner().run(suit)

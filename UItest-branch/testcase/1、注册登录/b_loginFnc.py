@@ -7,7 +7,7 @@ from public.common import writetestresult
 from public.common import driver,rwconfig
 from public.common import mytest
 from public.common.assertmode import Assert
-from public.page.loginpage import LoginPage
+from public.page.loginPage import LoginPage
 from public.common.basepage import BasePage
 from public.common import getdata
 import unittest,ddt

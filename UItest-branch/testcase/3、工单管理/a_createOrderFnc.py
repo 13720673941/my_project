@@ -7,9 +7,9 @@ from public.common import rwconfig,mytest
 from config.pathconfig import *
 from public.common.assertmode import Assert
 from public.common import driver,getdata,writetestresult
-from public.page.addorderpage import AddOrderPage
-from public.page.pleaseorderpage import PleaseOrderPage
-from public.page.loginpage import LoginPage
+from public.page.addOrderPage import AddOrderPage
+from public.page.pleaseOrderPage import PleaseOrderPage
+from public.page.loginPage import LoginPage
 from public.common.basepage import BasePage
 import unittest,ddt
 '''

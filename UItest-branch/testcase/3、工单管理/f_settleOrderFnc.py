@@ -6,11 +6,11 @@
 from public.common import rwconfig,mytest
 from public.common import driver,getdata,writetestresult
 from public.common.basepage import BasePage
-from public.page.loginpage import LoginPage
-from public.page.pleaseorderpage import PleaseOrderPage
-from public.page.finishorderpage import FinishOrder
-from public.page.returnpage import ReturnOrderPage
-from public.page.settlepage import SettleOrderPage
+from public.page.loginPage import LoginPage
+from public.page.pleaseOrderPage import PleaseOrderPage
+from public.page.finishOrderPage import FinishOrder
+from public.page.returnOrderPage import ReturnOrderPage
+from public.page.settleOrderPage import SettleOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,ddt
