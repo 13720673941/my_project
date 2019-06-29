@@ -155,9 +155,9 @@ class Alter_Password(unittest.TestCase):
     def test_alterPwd006(self,ddtData1):
         """修改密码后登录逻辑校验"""
         #获取测试用例名称
-        self.basePage.print_case_name(ddtData1["CaseName"])
+        self.base.print_case_name(ddtData1["CaseName"])
         #刷新页面
-        self.basePage.refresh_page()
+        self.base.refresh_page()
         #调用登录
         self.login.enter_login_page()
         self.login.input_username(UserName=ddtData1["username"])
@@ -165,7 +165,7 @@ class Alter_Password(unittest.TestCase):
         self.login.click_login_button()
         self.basePage.sleep(1)
         #断言
-        isSuccess = self.assertMode.assert_equal(ddtData1["expect"],self.basePage.get_system_msg())
+        isSuccess = self.assertMode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'AlterPassWord',ddtData1['CaseName'])
 

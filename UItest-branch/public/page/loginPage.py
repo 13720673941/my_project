@@ -15,11 +15,16 @@ log = Log()
 class LoginPage(BasePage):#所有的操作继承Base基类
 
     '''网点登录界面信息'''
+    #系统登陆页面url
     login_url = 'http://www.51shouhou.cn/singleBranch/#/login'
-    inputUserName = (By.XPATH,'//input[@type="text"]')
-    inputPassWord = (By.XPATH,'//input[@type="password"]')
-    clickButton = (By.XPATH,'//a[@class="loginBtn"]')
-    logoutText = (By.XPATH,'//a[text()="退出"]')
+    #用户名输入框
+    username_input = (By.XPATH,'//input[@type="text"]')
+    #密码输入框
+    password_input = (By.XPATH,'//input[@type="password"]')
+    #登陆按钮
+    login_btn = (By.XPATH,'//a[@class="loginBtn"]')
+    #退出按钮
+    logout_btn = (By.XPATH,'//a[text()="退出"]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -30,23 +35,19 @@ class LoginPage(BasePage):#所有的操作继承Base基类
 
     def input_username(self,UserName):
         '''输入用户名'''
-        self.input_message(self.inputUserName,UserName)
-        #log.info('{0}输入用户名: {1}'.format(self.success,UserName))
+        self.input_message(self.username_input,UserName)
 
     def input_password(self,PassWord):
         '''输入密码'''
-        self.input_message(self.inputPassWord,PassWord)
-        #log.info('{0}输入密码: {1}'.format(self.success,PassWord))
+        self.input_message(self.password_input,PassWord)
 
     def click_login_button(self):
         '''点击登陆按钮'''
-        self.click_button(self.clickButton)
-        #log.info('{0}点击->登录'.format(self.success))
+        self.click_button(self.login_btn)
 
     def click_logout_button(self):
         '''点击退出按钮'''
-        self.click_button(self.logoutText)
-        #log.info('{0}点击->退出登录'.format(self.success))
+        self.click_button(self.logout_btn)
 
     def login_main(self,UserName,PassWord,Url='http://www.51shouhou.cn/singleBranch/#/login'):
         '''
@@ -54,40 +55,17 @@ class LoginPage(BasePage):#所有的操作继承Base基类
         :param PassWord: 登录密码
         :return:
         '''
-        #log.info('-=【网点登录】=-')
+        log.info('-=【网点登录】=-')
         self.wait()
         self.open_url(Url)
-        self.clear_input(self.inputUserName)
+        self.clear_input(self.username_input)
         self.input_username(UserName)
-        self.clear_input(self.inputPassWord)
+        self.clear_input(self.password_input)
         self.input_password(PassWord)
         self.click_login_button()
         self.sleep(1)
         #断言
-        if self.is_display(self.logoutText):
-            log.info('{0} *Branch login succss！'.format(self.success))
+        if self.is_display(self.logout_btn):
+            log.info('{0} *Branch login success！'.format(self.success))
         else:
             log.error('{0} *Branch login fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
-
-
-
-
-# if __name__ == '__main__':
-#
-#     from public.common import driver
-#     import time
-#     from public.common.basepage import BasePage
-#     from public.page.alterpassword import AlterPwdPage
-#     from selenium.webdriver.common.action_chains import ActionChains
-#
-#     DictData = {"OrderNum":"636953272191964103","aa":""}
-#     d = driver.browser_driver()
-#     b = BasePage(d)
-#     a = LoginPage(d)
-#     AA = AlterPwdPage(d)
-#     a.login_main(UserName='13700000004',PassWord='222222')
-#     d.get('http://www.51shouhou.cn/singleBranch/#/customer/list')
-#     time.sleep(2)
-#     txt = d.find_element_by_xpath('//div/div[2]/table/tbody/tr[1]').text
-#     print(txt)
-

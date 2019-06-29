@@ -14,16 +14,26 @@ log=Log()
 class FinishOrder(BasePage):
 
     '''网点完成工单页面'''
+    #完成工单列表页面
     finish_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单'
-    finishOrderBtn = (By.XPATH,'//a[text()="完成服务"]')
-    inputBreakType = (By.XPATH,'//input[@placeholder="请输入故障类型"]')
-    masterOrderTime = (By.XPATH,'//input[@placeholder="请选择师傅预约日期"]')
-    masterDoorTime = (By.XPATH,'//input[@placeholder="请选择师傅上门时间"]')
-    masterFinishTime = (By.XPATH,'//input[@placeholder="请选择师傅完成时间"]')
-    inputRemark = (By.XPATH,'//label[text()="服务反馈："]/following-sibling::textarea')
-    upLoadingPicture = (By.XPATH,'//input[@type="file"]')
-    submitBtn = (By.XPATH,'//button[text()="提交"]')
-    parentUpPicture = (By.XPATH,'//label[text()="服务照片："]/../div')
+    #完成工单按钮
+    finish_order_btn = (By.XPATH,'//a[text()="完成服务"]')
+    #故障类型输入框
+    break_type_input = (By.XPATH,'//input[@placeholder="请输入故障类型"]')
+    #师傅预约时间输入框
+    master_order_time_input = (By.XPATH,'//input[@placeholder="请选择师傅预约日期"]')
+    #师傅上门时间输入框
+    master_door_time_input = (By.XPATH,'//input[@placeholder="请选择师傅上门时间"]')
+    #师傅完成时间输入框
+    master_finish_time_input = (By.XPATH,'//input[@placeholder="请选择师傅完成时间"]')
+    #完成服务备注
+    remark_input = (By.XPATH,'//label[text()="服务反馈："]/following-sibling::textarea')
+    #上传图片输入框
+    update_picture_input = (By.XPATH,'//input[@type="file"]')
+    #完成服务提交按钮
+    finish_order_confirm_btn = (By.XPATH,'//button[text()="提交"]')
+    #上传图片父路(判断上传图片的个数)
+    parent_up_picture = (By.XPATH,'//label[text()="服务照片："]/../div')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -34,48 +44,41 @@ class FinishOrder(BasePage):
 
     def click_finish_btn(self):
         '''点击完成工单按钮'''
-        self.click_button(self.finishOrderBtn)
-        #log.info('{0}点击->完成服务'.format(self.success))
+        self.click_button(self.finish_order_btn)
 
     def input_break_type(self):
         '''输入故障类型'''
-        self.input_message(self.inputBreakType,self.get_now_time(Time=True))
-        #log.info('{0}输入故障类型：{1}'.format(self.success,self.get_now_time(Time=True)))
+        self.input_message(self.break_type_input,self.get_now_time(Time=True))
 
     def input_master_orderTime(self,orderTime):
         '''输入师傅预约时间'''
-        self.input_message(self.masterOrderTime,orderTime)
-        #log.info('{0}输入师傅预约时间：{1}'.format(self.success,orderTime))
+        self.input_message(self.master_order_time_input,orderTime)
 
     def input_master_doorTime(self,doorTime):
         '''输入师傅上门时间'''
-        self.input_message(self.masterDoorTime,doorTime)
-        #log.info('{0}输入师傅上门时间：{1}'.format(self.success,doorTime))
+        self.input_message(self.master_door_time_input,doorTime)
 
     def input_master_finishTime(self,finishTime):
         '''输入师傅完成时间'''
-        self.input_message(self.masterFinishTime,finishTime)
-        #log.info('{0}输入师傅完成时间：{1}'.format(self.success,finishTime))
+        self.input_message(self.master_finish_time_input,finishTime)
 
     def input_remark(self):
         '''输入备注'''
-        self.input_message(self.inputRemark,self.get_now_time(Time=True))
-        #log.info('{0}输入备注：{1}'.format(self.success,self.get_now_time(Time=True)))
+        self.input_message(self.remark_input,self.get_now_time(Time=True))
 
     def up_finish_picture(self,upLoading='True'):
         '''上传图片'''
         if upLoading == 'True':
             #获取上传图片个数
-            PictureNum = self.get_element_count(parentEl=self.parentUpPicture,childEl='dl')
+            PictureNum = self.get_element_count(parentEl=self.parent_up_picture,childEl='dl')
             #上传图片
-            self.up_loading_picture(PictureNum,self.upLoadingPicture)
+            self.up_loading_picture(PictureNum,self.update_picture_input)
 
     def click_submit_btn(self):
         '''点击提交按钮'''
-        self.click_button(self.submitBtn)
-        #log.info('{0}点击->提交'.format(self.success))
+        self.click_button(self.finish_order_confirm_btn)
 
-    def finish_order_main(self,ordernumber,url='http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单'):
+    def finish_order_main(self,ordernumber):
         '''
         :param OrderTime:   师傅预约时间
         :param DoorTime:    上门时间
@@ -84,9 +87,9 @@ class FinishOrder(BasePage):
         :return:
         '''
         #'''网点完成服务'''
-        #log.info('-=【网点完成服务】=-')
+        log.info('-=【网点完成服务】=-')
         #进入完工订单列表页面
-        self.open_url(url)
+        self.enter_finish_order_page()
         #选择工单
         self.select_new_order(ordernumber)
         #点击订单列表完成服务按钮
@@ -111,15 +114,3 @@ class FinishOrder(BasePage):
             log.info('{0} *Finish order is success！'.format(self.success))
         else:
             log.error('{0} *Finish order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
-
-
-
-# from Common import getData
-#
-# jsonData = getData.GetJsonData()["FinishOrder"]
-# dict1 = jsonData[0]
-# for k,v in dict1.items():
-#     if v == '当前时间':
-#         dict1[k] = '2019-06-06'
-#
-# print(dict1)

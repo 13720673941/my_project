@@ -5,25 +5,34 @@
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
-from public.common.logconfig import Log
-log = Log()
 '''
 注册页面信息
 '''
-
 class RegisterPage(BasePage):
 
-    '''网点注册页面信息'''
+    '''
+    网点注册页面信息
+    '''
+    #注册url
     register_url = 'http://www.51shouhou.cn/singleBranch/#/login'
-    ParentPath = '//div[contains(text(),"企业用户注册")]/../form/ul'
-    freeRegister = (By.XPATH,'//p[text()="还没有网点账号？"]/a')
-    inputUserName = (By.XPATH,''+ParentPath+'/li[2]/input')
-    inputPhoneNum = (By.XPATH,''+ParentPath+'/li[3]/input')
-    inputCodeNum = (By.XPATH,''+ParentPath+'/li[4]/input')
-    getCodeNumBtn = (By.XPATH,''+ParentPath+'/li[4]/a')
-    inputLoginPwd = (By.XPATH,''+ParentPath+'/li[5]/input')
-    inputConfirmPwd = (By.XPATH,''+ParentPath+'/li[6]/input')
-    registerBtn = (By.XPATH,'//a[text()="马上注册"]')
+    #注册页面所有元素的父路径
+    parent_path = '//div[contains(text(),"企业用户注册")]/../form/ul'
+    #免费注册按钮
+    free_register_btn = (By.XPATH,'//p[text()="还没有网点账号？"]/a')
+    #用户名输入框
+    username_input = (By.XPATH,''+parent_path+'/li[2]/input')
+    #手机号输入框
+    phe_num_input = (By.XPATH,''+parent_path+'/li[3]/input')
+    #验证码输入框
+    code_num_input = (By.XPATH,''+parent_path+'/li[4]/input')
+    #获取验证码按钮
+    get_code_num_btn = (By.XPATH,''+parent_path+'/li[4]/a')
+    #登陆密码输入框
+    login_pwd_input = (By.XPATH,''+parent_path+'/li[5]/input')
+    #确定登陆密码输入框
+    confirm_pwd_input = (By.XPATH,''+parent_path+'/li[6]/input')
+    #马上注册按钮
+    register_btn = (By.XPATH,'//a[text()="马上注册"]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -34,35 +43,28 @@ class RegisterPage(BasePage):
 
     def click_free_register(self):
         '''点击登录页面免费注册'''
-        self.click_button(self.freeRegister)
-        #log.info('{0}点击->免费注册'.format(self.success))
+        self.click_button(self.free_register_btn)
 
     def input_username(self,UserName):
         '''输入注册用户名'''
-        self.input_message(self.inputUserName,UserName)
-        #log.info('{0}输入注册用户名: {1}'.format(self.success,UserName))
+        self.input_message(self.username_input,UserName)
 
     def input_phoneNum(self,PhoneNum):
         '''输入注册手机号'''
-        self.input_message(self.inputPhoneNum,PhoneNum)
-        #log.info('{0}输入注册手机号: {1}'.format(self.success,PhoneNum))
+        self.input_message(self.phe_num_input,PhoneNum)
 
     def input_codeNum(self,CodeNum):
         '''输入验证码'''
-        self.input_message(self.inputCodeNum,CodeNum)
-        #log.info('{0}输入验证码: {1}'.format(self.success,CodeNum))
+        self.input_message(self.code_num_input,CodeNum)
 
     def input_login_pwd(self,LoginPwd):
         '''输入登录密码'''
-        self.input_message(self.inputLoginPwd,LoginPwd)
-        #log.info('{0}输入登录密码: {1}'.format(self.success,LoginPwd))
+        self.input_message(self.login_pwd_input,LoginPwd)
 
     def input_confirm_pwd(self,ConfirmPwd):
         '''输入确认密码'''
-        self.input_message(self.inputConfirmPwd,ConfirmPwd)
-        #log.info('{0}输入确认密码: {1}'.format(self.success,ConfirmPwd))
+        self.input_message(self.confirm_pwd_input,ConfirmPwd)
 
     def click_register_btn(self):
         ''''点击注册按钮'''
-        self.click_button(self.registerBtn)
-        #log.info('{0}点击->立即注册'.format(self.success))
+        self.click_button(self.register_btn)

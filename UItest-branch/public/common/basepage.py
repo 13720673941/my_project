@@ -147,7 +147,7 @@ class BasePage(object):
         t1 = time.time()
         try:
             element_text = self.get_element(element).text
-            log.info('{0} Get element <{1}> text, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
+            log.info('{0} Get element <{1}> text: {2}, Spend {3} seconds.'.format(self.success,element,element_text,time.time()-t1))
             return element_text
         except Exception:
             log.error('{0} Unable get element <{1}> text, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))

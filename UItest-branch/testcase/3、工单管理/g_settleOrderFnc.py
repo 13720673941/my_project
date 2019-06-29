@@ -104,12 +104,8 @@ class Settle_Order(unittest.TestCase):
         #断言 判断两个选择的按钮的属性 不能选择 true
         isSuccess1 = self.assert_mode.assert_att_is_none(Att1)
         isSuccess2 = self.assert_mode.assert_att_is_none(Att3)
-        if isSuccess1 and isSuccess2 == 'PASS':
-            isSuccess = 'PASS'
-        else:
-            isSuccess = 'FAIL'
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data002["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'SettleOrder',Data002["CaseName"])
 
     def test_settleOrder003(self):
         '''经销商工单结算-经商端设置结算价格不能修改校验验'''

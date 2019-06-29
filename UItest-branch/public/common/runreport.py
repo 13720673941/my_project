@@ -14,7 +14,9 @@ def get_suits(ChildName,CaseName):
     #获取测试用例目录文件默认路径
     case_dir = testCasePath + ChildName + '\\'
     #discover函数遍历指定目录，按条件过滤文件，返回测试套件列表
-    discover_suites = unittest.defaultTestLoader.discover(case_dir,pattern=''+CaseName+'')
+    #top_level_dir 必须加上用例的主目录，不然默认为none还是上次的路径，会报错
+    #这个top_level_dir会作为self的参数保存下来，这样第二次运行时 top_level_dir实际取的是上一次的路径，直接影响到了下一次的运行
+    discover_suites = unittest.defaultTestLoader.discover(case_dir,pattern=CaseName,top_level_dir =testCasePath)
     return discover_suites
 
 def run_report(ReportName,FileName,title,description,case):
@@ -36,4 +38,6 @@ def run_report(ReportName,FileName,title,description,case):
         runner.run(case)
         print('*Create test report success, report path: {0}.'.format(ReportPath))
 
-
+# print(get_suits(ChildName='1、注册登录',CaseName='*.py'))
+# print(get_suits(ChildName='3、工单管理',CaseName='*.py'))
+# print(get_suits(ChildName='2、修改密码',CaseName='*.py'))

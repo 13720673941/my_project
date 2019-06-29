@@ -93,12 +93,8 @@ class Settle_Order(unittest.TestCase):
         #断言 判断两个选择的按钮的属性 不能选择 None
         isSuccess1 = self.assert_mode.assert_att_is_none(Att1)
         isSuccess2 = self.assert_mode.assert_att_is_none(Att3)
-        if isSuccess1 and isSuccess2 == 'PASS':
-            isSuccess = 'PASS'
-        else:
-            isSuccess = 'FAIL'
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data002["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'SettleOrder',Data002["CaseName"])
 
     def test_settleOrder003(self):
         '''厂商结算价格不能编辑校验'''
@@ -180,7 +176,7 @@ class Settle_Order(unittest.TestCase):
         #输入结算价格
         self.settleOrder.input_settle_money(settleMoney=Data006["SettleMoney"])
         #获取结算金额属性断言
-        isSuccess = self.assert_mode.assert_att_is_none(self.settleOrder.settle_money_att()) #返回的是None 不是字符串 是个函数
+        isSuccess = self.assert_mode.assert_att_is_none(self.settleOrder.brands_settle_money_attribute()) #返回的是None 不是字符串 是个函数
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data006["CaseName"])
 
@@ -249,13 +245,8 @@ class Settle_Order(unittest.TestCase):
         #断言 判断两个选择的按钮的属性 不能选择 true
         isSuccess1 = self.assert_mode.assert_att_is_none(Att1)
         isSuccess2 = self.assert_mode.assert_att_is_none(Att3)
-        #并列断言
-        if isSuccess1 and isSuccess2 == 'PASS':
-            isSuccess = 'PASS'
-        else:
-            isSuccess = 'FAIL'
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data009["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'SettleOrder',Data009["CaseName"])
 
     def test_settleOrder010(self):
         '''提成规则线下结算成功校验'''

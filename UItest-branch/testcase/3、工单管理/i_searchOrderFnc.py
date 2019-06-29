@@ -76,6 +76,8 @@ class Search_Order(unittest.TestCase):
         self.searchOrder.click_search_btn()
         #时间加载
         self.basePage.sleep(2)
+        #搜索工单条数
+        self.searchOrder.search_order_count()
         #断言
         isSuccess = self.assert_mode.assert_more_str_in(ddtData1,self.searchOrder.get_first_order_info())
         #写入测试结果
@@ -113,6 +115,8 @@ class Search_Order(unittest.TestCase):
         #点击搜索按钮
         self.searchOrder.click_more_search_btn()
         self.basePage.sleep(2)
+        #搜索工单条数
+        self.searchOrder.search_order_count()
         #断言
         isSuccess = self.assert_mode.assert_more_str_in(ddtData2,self.searchOrder.get_first_order_info())
         #写入测试结果

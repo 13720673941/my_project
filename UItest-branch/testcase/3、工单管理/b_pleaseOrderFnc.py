@@ -172,7 +172,7 @@ class Please_Order(unittest.TestCase):
         writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data["CaseName"])
 
     def test_pleaseOrder006(self):
-        '''派到师傅可以转派到服务商校验'''
+        '''派到服务商可以转派到师傅校验'''
         #获取数据
         Data = getdata.get_test_data()["PleaseOrderPage"]["TestCase003"]
         #刷新页面
