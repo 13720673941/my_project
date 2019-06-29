@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="6-26,18.35">
-      <change afterPath="$PROJECT_DIR$/public/page/serverBranchPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/report/客户管理/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/4、客户管理/manageBranchFnc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/4、客户管理/serverBranchFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ordernumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/ordernumber.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testdata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/assertmode.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/assertmode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/basepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/basepage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/addorderpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/addOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/alterpassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/alterPwdPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/finishorderpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/finishOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/forgetpwdpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/forgetPwdPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/invalidpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/invalidOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/loginpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/loginPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/managebranchpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/manageBranchPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/pleaseorderpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/pleaseOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/registerpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/registerPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/returnpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/returnOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/searchorderpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/searchOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/settlepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/settleOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/visitpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/visitOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/testresult.ini" beforeDir="false" afterPath="$PROJECT_DIR$/result/testresult.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/1、注册登录/a_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/1、注册登录/a_registerFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/1、注册登录/b_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/1、注册登录/b_loginFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/2、修改密码/a_forgetpwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/2、修改密码/a_forgetPwdFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/2、修改密码/b_alterPwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/2、修改密码/b_alterPwdFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/2、修改密码/c_alterphenum.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/2、修改密码/c_alterPheFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/a_addorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/a_createOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/c_finishorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/c_finishOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/d_visitorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/d_visitOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/e_returnorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/e_returnOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/f_settleorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/f_settleOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/g_settleorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/g_settleOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/h_Invalidorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/h_invalidOrderFnc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/i_searchorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/i_searchOrderFnc.py" afterDir="false" />
-    </list>
+    <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -638,7 +599,7 @@
       <workItem from="1561524855416" duration="764000" />
       <workItem from="1561525684355" duration="14284000" />
       <workItem from="1561598094895" duration="8076000" />
-      <workItem from="1561684243740" duration="21995000" />
+      <workItem from="1561684243740" duration="22199000" />
     </task>
     <task id="LOCAL-00001" summary="git test">
       <created>1561443687108</created>
@@ -682,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561545367772</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="6-28,18.35">
+      <created>1561718730221</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561718730221</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -718,7 +686,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="614136000" />
+    <option name="totallyTimeSpent" value="614340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,7 +699,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -811,7 +778,8 @@
     <MESSAGE value="修改json中url获取方式，新增修改密码脚本" />
     <MESSAGE value="新增经销商页面" />
     <MESSAGE value="6-26,18.35" />
-    <option name="LAST_COMMIT_MESSAGE" value="6-26,18.35" />
+    <MESSAGE value="6-28,18.35" />
+    <option name="LAST_COMMIT_MESSAGE" value="6-28,18.35" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/ordermessage.ini">
