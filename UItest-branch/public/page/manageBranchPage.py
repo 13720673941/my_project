@@ -25,6 +25,14 @@ class DealerBranchPage(BasePage):
     search_branch_btn = (By.XPATH,'//a[text()="搜索"]')
     #服务设置按钮
     set_server_btn = (By.XPATH,'//div/div[2]/.//a[text()="服务设置"]')
+    #合作类型选择框
+    teamwork_type_select = (By.XPATH,'//label[text()="合作类型："]/.././/input[@value="派单"]')
+    #授权服务类型选择框
+    server_type_select = (By.XPATH,'//label[text()="服务类型："]/.././/input[@class="ivu-checkbox-input"]')
+    #授权服务品牌选择框
+    server_brands_select = (By.XPATH,'//label[text()="服务品牌："]/.././/input[@class="ivu-checkbox-input"]')
+    #授权服务品类选择框
+    server_kinds_select = (By.XPATH, '//label[text()="服务品类："]/.././/input[@class="ivu-checkbox-input"]')
     #输入客户备注
     branch_remark = (By.XPATH,'//label[text()="客户备注："]/../div/div/div/div/input')
     #服务设置确定按钮
@@ -96,12 +104,34 @@ class DealerBranchPage(BasePage):
         """输入客户备注"""
         self.input_message(self.branch_remark,branch_remark)
 
+    def get_teamwork_type_attribute(self):
+        """获取合作类型选择框的属性(期望不能选择)"""
+        return self.get_att(self.teamwork_type_select,"disabled")
+
+    def get_server_type_attribute(self):
+        """获取服务类型选择框的属性(期望不能选择)"""
+        return self.get_att(self.server_type_select,"disabled")
+
+    def get_brands_type_attribute(self):
+        """获取服务品牌选择框的属性(期望不能选择)"""
+        return self.get_att(self.server_brands_select,"disabled")
+
+    def get_kinds_type_attribute(self):
+        """获取服务品类选择框的属性(期望不能选择)"""
+        return self.get_att(self.server_kinds_select,"disabled")
+
     def click_server_set_confirm(self):
         """点击服务设置的确定"""
         self.click_button(self.set_server_confirm_btn)
 
     def click_stop_take_order(self):
         """点击暂停接单"""
+        self.sleep(2)
+        first_branch_info = self.get_first_branch_info()
+        #判断是否初始化为暂停接单按钮，不是的化先初始化暂停接单
+        if "恢复接单" in first_branch_info:
+            self.click_open_take_order()
+            self.click_open_take_confirm()
         self.click_button(self.stop_take_order_btn)
 
     def click_stop_take_confirm(self):
@@ -110,6 +140,12 @@ class DealerBranchPage(BasePage):
 
     def click_open_take_order(self):
         """点击开启接单"""
+        self.sleep(2)
+        first_branch_info = self.get_first_branch_info()
+        #判断是否初始化为暂停接单按钮，不是的化先初始化暂停接单
+        if "暂停接单" in first_branch_info:
+            self.click_stop_take_order()
+            self.click_stop_take_confirm()
         self.click_button(self.open_take_order_btn)
 
     def click_open_take_confirm(self):

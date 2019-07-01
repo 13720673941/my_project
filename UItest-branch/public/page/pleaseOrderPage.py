@@ -27,12 +27,18 @@ class PleaseOrderPage(BasePage):
     search_page_input = (By.XPATH,'//input[@placeholder="输入师傅姓名/手机号进行查询"]')
     #搜索按钮
     search_btn = (By.XPATH,'//input[@placeholder="输入师傅姓名/手机号进行查询"]/following-sibling::a')
+    #搜索服务商
+    search_branch_input = (By.XPATH,'//input[@placeholder="输入服务商名称/手机号进行查询"]')
+    #搜索按钮
+    search_branch_btn = (By.XPATH,'//input[@placeholder="输入服务商名称/手机号进行查询"]/following-sibling::a')
     #第一个派单对象名称
     search_after_first_name = (By.XPATH,'//div[3]/table/tbody/tr/td/div/label')
     #预报价输入框
     order_settle_money_input = (By.XPATH,'//input[@placeholder="选填，也可结算时填写"]')
     #确定派单按钮
     confirm_btn = (By.XPATH,'//b[text()="派单给师傅"]/../../../../following-sibling::div[1]/button[2]')
+    #暂停接单后师傅标记暂停接单字段
+    stop_take_order_text = (By.XPATH,'//span[text()="（暂停接单）"]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -65,6 +71,14 @@ class PleaseOrderPage(BasePage):
         '''点击搜索按钮'''
         self.click_button(self.search_btn)
 
+    def input_search_branch_name(self,branch_name):
+        """搜索服务商输入"""
+        self.input_message(self.search_branch_input,branch_name)
+
+    def click_search_branch(self):
+        """点击搜索服务撒"""
+        self.click_button(self.search_branch_btn)
+
     def get_search_name(self):
         '''获取搜索后第一个师傅名称'''
         return self.get_text(self.search_after_first_name)
@@ -77,6 +91,10 @@ class PleaseOrderPage(BasePage):
     def click_confirm_btn(self):
         '''点击确定按钮'''
         self.click_button(self.confirm_btn)
+
+    def stop_take_order_is_displayed(self):
+        """暂停接单是否在页面上"""
+        return self.is_display(self.stop_take_order_text)
 
     def please_order_main(self,ordernumber,pagename,please_to_branch=False,
                         Url='http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单'):

@@ -194,22 +194,25 @@
   },
   "12": "/*【网点订单返单结算功能测试用例】*/",
   "SettleReturnPage": {
-    "return_not_settle_fnc": {
+    "before_return_settle_fnc": {
       "TestCase001": {"CaseName": "1、返单结算-返单未结算系统提示校验","expect": "服务商尚未结算"},
       "TestCase002": {"CaseName": "2、返单结算-返单未结算只能选择固定金额校验","expect": "None"}
     },
     "return_settle_fnc": {
       "TestCase001": {"CaseName": "3、返单结算-厂商结算价格不能编辑校验","expect": "true"},
       "TestCase002": {"CaseName": "4、返单结算-厂商未结算提示信息校验","expect": "厂商尚未结算"},
-      "TestCase003": {"CaseName": "5、返单结算-按规则结算结算价格不能编辑校验","SettleType":"按提成规则","expect": "true"},
-      "TestCase004": {"CaseName": "6、返单结算-按固定金额结算金可以编辑校验","SettleType":"按固定金额","SettleMoney": "50"},
+      "TestCase003": {"CaseName": "5、返单结算-按规则结算结算价格不能编辑校验","expect": "true"},
+      "TestCase004": {"CaseName": "6、返单结算-按固定金额结算金可以编辑校验","SettleMoney": "50","expect": "50"},
+      "TestCase005": {"CaseName": "7、返单结算-按规则结算比例计算校验"},
       "pay_fnc": [
-        {"CaseName": "7、返单结算-钱包余额不足支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"钱包结算","expect": "账户钱包余额不足"},
-        {"CaseName": "8、返单结算-线下成功支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"线下结算","expect": "返单结算完成"}
-      ],
-      "TestCase006": {"CaseName": "9、返单结算-返单结算后系统提示校验"},
-      "TestCase007": {"CaseName": "10、返单结算-返单结算123结算方式都能选择校验"},
-      "TestCase008": {"CaseName": "11、返单结算-固定金额线下结算成功校验","SettleType":"按固定比例","PayType":"线下结算","expect": "结算完成"}
+        {"CaseName": "8、返单结算-钱包余额不足支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"钱包结算","expect": "账户钱包余额不足"},
+        {"CaseName": "9、返单结算-线下成功支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"线下结算","expect": "返单结算完成"}
+      ]
+    },
+    "after_return_settle_fnc": {
+      "TestCase006": {"CaseName": "10、返单结算-返单结算后系统提示校验"},
+      "TestCase007": {"CaseName": "11、返单结算-返单结算123结算方式都能选择校验"},
+      "TestCase008": {"CaseName": "12、返单结算-固定金额线下结算成功校验","SettleType":"按固定比例","PayType":"线下结算","expect": "结算完成"}
     }
   },
   "13": "/*【网点订单经销商工单结算功能测试用例】*/",
@@ -243,9 +246,15 @@
       {"CaseName": "9、客户搜索-按客户手机号搜索校验","SearchInfo": "13700000001","expect": "13700000001"},
       {"CaseName": "10、客户搜索-按客户名称搜索校验","SearchInfo": "XM-服务商","expect": "XM-服务商"}
     ],
-    "server_set_fnc": {"CaseName": "11、经销商服务设置-经销商备注设置校验","BranchRemark": "AutoTest","expect": "AutoTest"},
-    "stop_take_fnc": {"CaseName": "12、暂停接单-暂停接单功能校验","expect": "恢复接单"},
-    "open_take_fnc": {"CaseName": "13、恢复接单-恢复接单功能校验","expect": "暂停接单"}
+    "server_set_fnc":{
+      "test_case001": {"CaseName": "11、经销商服务设置-经销商备注设置校验","BranchRemark": "AutoTest","expect": "AutoTest"},
+      "test_case002": {"CaseName": "12、经销商服务设置-合作类型不能编辑校验","expect": "true"},
+      "test_case003": {"CaseName": "13、经销商服务设置-服务类型不能编辑校验","expect": "true"},
+      "test_case004": {"CaseName": "14、经销商服务设置-服务品牌不能编辑校验","expect": "true"},
+      "test_case005": {"CaseName": "15、经销商服务设置-服务品类不能编辑校验","expect": "true"}
+    },
+    "stop_take_fnc": {"CaseName": "16、暂停接单-暂停接单功能校验","StopTakeBranch":"XIAOMI科技有限公司","BranchName": "蓝魔科技","expect": "恢复接单"},
+    "open_take_fnc": {"CaseName": "17、恢复接单-恢复接单功能校验","OpenTakeBranch":"XIAOMI科技有限公司","BranchName": "蓝魔科技","expect": "暂停接单"}
   },
   "15": "/*【服务商页面功能测试用例集】*/",
   "AddServerPage": {

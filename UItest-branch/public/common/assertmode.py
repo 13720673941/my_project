@@ -58,10 +58,10 @@ class Assert(BasePage):
                     break
         #断言
         if flag:
-            log.info('{0} Test -> PASS.'.format(self.success))
+            log.info('{0} Expect all value in string of get in page, test -> PASS.'.format(self.success))
             return self.success
         else:
-            log.error('{0} Test -> FAIL.'.format(self.fail))
+            log.error('{0} Expect all value not in string of get in page, test -> FAIL.'.format(self.fail))
             self.take_screen_shot()
             return self.fail
 
@@ -95,9 +95,9 @@ class Assert(BasePage):
         判断获取元素属性为空
         """
         if att_fact is None:
-            log.info('{0} Expect: {1} is None, Faction: {2} is None, test -> PASS.'.format(self.success,att_fact,att_fact))
+            log.info('{0} Expect: is None, Faction: {1} is None, test -> PASS.'.format(self.success,att_fact))
             return self.success
         else:
-            log.error('{0} Expect: {1} is None, Faction: {2} is not None, test -> FAIL.'.format(self.fail,att_fact,att_fact))
+            log.error('{0} Expect: is None, Faction: {1} is not None, test -> FAIL.'.format(self.fail,att_fact))
             self.take_screen_shot()
             return self.fail

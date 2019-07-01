@@ -31,6 +31,13 @@ class ServerBranchPage(BasePage):
     search_branch_input = (By.XPATH,'//input[@placeholder="输入客户名称/手机号进行查询"]')
     #搜索按钮
     search_branch_btn = (By.XPATH,'//a[text()="搜索"]')
+    #左右滑动托条按钮
+    roll_btn = (By.XPATH,'//*[@class="ivu-table-body ivu-table-overflowX"]')
+    #服务设置按钮
+    set_server_btn = (By.XPATH,'//div/div[2]/.//a[text()="服务设置"]')
+    #服务撒备注
+    server_branch_remark = (By.XPATH,'//label[contains(.,"客户备注：")]/.././/input[@type="text"]')
+
 
 
 

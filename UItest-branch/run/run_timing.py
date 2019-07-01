@@ -17,7 +17,7 @@ if __name__ == '__main__':
     isPass = False
     #定时间
     startTime = time.time()
-    timing = '13:23'
+    timing = '12:20'
     while True:
         #获取当前时间
         time.sleep(1)

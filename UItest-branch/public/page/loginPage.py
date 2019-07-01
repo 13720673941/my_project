@@ -35,10 +35,12 @@ class LoginPage(BasePage):#所有的操作继承Base基类
 
     def input_username(self,UserName):
         '''输入用户名'''
+        self.clear_input(self.username_input)
         self.input_message(self.username_input,UserName)
 
     def input_password(self,PassWord):
         '''输入密码'''
+        self.clear_input(self.password_input)
         self.input_message(self.password_input,PassWord)
 
     def click_login_button(self):
@@ -58,9 +60,7 @@ class LoginPage(BasePage):#所有的操作继承Base基类
         log.info('-=【网点登录】=-')
         self.wait()
         self.open_url(Url)
-        self.clear_input(self.username_input)
         self.input_username(UserName)
-        self.clear_input(self.password_input)
         self.input_password(PassWord)
         self.click_login_button()
         self.sleep(1)

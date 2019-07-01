@@ -15,12 +15,12 @@ import unittest,ddt
 """
 邀请经销商功能测试：
 1、添加经销商-用户账号为空校验 2、添加经销商-用户名称为空校验 3、添加经销商-用户账号格式左边界值校验 
-4、添加经销商-用户账号格式右边界值校验 5、添加经销商-用户账号格式校验 6、添加经销商-成功邀请经销商校验
+4、添加经销商-用户账号格式右边界值校验 5、添加经销商-用户账号格式校验 6、添加经销商-成功邀请经销商校验 
+7、重复邀请校验
 """
 #获取数据
 dealer_page_data = get_test_data()["AddDealerPage"]
 add_dealer_data = dealer_page_data["add_branch_fnc"]
-search_branch_data = dealer_page_data["search_branch_fnc"]
 #默认写入测试结果
 isWrite=True
 @ddt.ddt
@@ -57,7 +57,8 @@ class Visit_Dealer(unittest.TestCase):
         self.dealer_page.click_add_manage_branch()
         #输入客户主账号
         self.dealer_page.input_branch_phone_num(phone_num=auto_name_data["PhoneNum"])
-        #点击空白区域
+        self.base_page.sleep(1)
+        #获取自动带出的经销商名称
         branch_name = self.dealer_page.get_branch_name()
         #判断
         isSuccess = self.assert_mode.assert_equal(auto_name_data["expect"],branch_name)
@@ -83,81 +84,6 @@ class Visit_Dealer(unittest.TestCase):
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",add_dealer_data["CaseName"])
 
-    @ddt.data(*search_branch_data)
-    def test_visit_dealer003(self,search_branch_data):
-        """搜索经销商功能校验"""
-        #打印测试名称
-        self.base_page.print_case_name(search_branch_data["CaseName"])
-        #输入搜索关键字
-        self.dealer_page.input_search_message(search_info=search_branch_data["SearchInfo"])
-        #点击搜索
-        self.dealer_page.click_search()
-        self.base_page.sleep(2)
-        #输出第一行的所有数据字段
-        first_branch_info = self.dealer_page.get_first_branch_info()
-        #断言
-        isSuccess = self.assert_mode.assert_in(search_branch_data["expect"],first_branch_info)
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",search_branch_data["CaseName"])
-
-    def test_visit_dealer004(self):
-        """设置经销商的备注校验"""
-        #获取测试数据
-        set_server_data = dealer_page_data["server_set_fnc"]
-        #打印测试名称
-        self.base_page.print_case_name(set_server_data["CaseName"])
-        #点击设置服务
-        self.dealer_page.click_set_server()
-        #清除输入框
-        self.dealer_page.clear_branch_remark()
-        #输入备注
-        self.dealer_page.input_branch_remark(branch_remark=set_server_data["BranchRemark"])
-        #点击确定
-        self.dealer_page.click_server_set_confirm()
-        self.base_page.sleep(1)
-        #输出第一行的所有数据字段
-        first_branch_info = self.dealer_page.get_first_branch_info()
-        #断言
-        isSuccess = self.assert_mode.assert_in(set_server_data["expect"],first_branch_info)
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",set_server_data["CaseName"])
-
-    def test_visit_dealer005(self):
-        """暂停接单功能校验"""
-        #获取测试数据
-        stop_take_data = dealer_page_data["stop_take_fnc"]
-        #打印测试名称
-        self.base_page.print_case_name(stop_take_data["CaseName"])
-        #点击暂停接单
-        self.dealer_page.click_stop_take_order()
-        #点击暂停接单确定
-        self.dealer_page.click_stop_take_confirm()
-        self.base_page.sleep(2)
-        #输出第一行的所有数据字段
-        first_branch_info = self.dealer_page.get_first_branch_info()
-        #断言
-        isSuccess = self.assert_mode.assert_in(stop_take_data["expect"],first_branch_info)
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",stop_take_data["CaseName"])
-
-    def test_visit_dealer006(self):
-        """开启接单功能校验"""
-        #获取测试数据
-        open_take_data = dealer_page_data["open_take_fnc"]
-        #打印测试名称
-        self.base_page.print_case_name(open_take_data["CaseName"])
-        #点击暂停接单
-        self.dealer_page.click_open_take_order()
-        #点击暂停接单确定
-        self.dealer_page.click_open_take_confirm()
-        self.base_page.sleep(2)
-        #输出第一行的所有数据字段
-        first_branch_info = self.dealer_page.get_first_branch_info()
-        #断言
-        isSuccess = self.assert_mode.assert_in(open_take_data["expect"],first_branch_info)
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",open_take_data["CaseName"])
-
     @classmethod
     def tearDownClass(cls):
         #关闭浏览
@@ -170,8 +96,4 @@ if __name__ == '__main__':
     suits = unittest.TestSuite()
     suits.addTest(Visit_Dealer("test_visit_dealer001"))
     suits.addTest(Visit_Dealer("test_visit_dealer002"))
-    suits.addTest(Visit_Dealer("test_visit_dealer003"))
-    suits.addTest(Visit_Dealer("test_visit_dealer004"))
-    suits.addTest(Visit_Dealer("test_visit_dealer005"))
-    suits.addTest(Visit_Dealer("test_visit_dealer006"))
     unittest.TextTestRunner().run(suits)

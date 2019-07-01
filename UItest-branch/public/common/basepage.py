@@ -342,43 +342,6 @@ class BasePage(object):
         #返回时间戳
         return time.mktime(time.strptime(DataTime,timeType))
 
-    def drag_button(self,element,txtelement,arrivetxt):
-        """
-        结算页面固定比例结算按钮左右滑动封装
-        :param txtelement 判断所用获取的文本
-        :param arrivetxt  索要滑动的位置文本
-        """
-        t1 = time.time()
-        #等待按钮加载
-        self.sleep(2)
-        dragButton = self.get_element(element)
-        #获取滑块y坐标位置
-        dragButton_y = dragButton.location['y']
-        actions = self.click_and_hold_btn(dragButton)
-        #归零0，y
-        self.sleep(1)
-        while True:
-            #获取移动后的文本
-            txt1 = self.get_text(txtelement)
-            #滑块x坐标归零
-            if txt1 == '0':
-                break
-            else:
-                actions.move_by_offset(-1,dragButton_y).perform()
-        #清除缓存操作
-        actions.reset_actions()
-        log.info('{0} Button: <{1}>, remove zero, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
-        while True:
-            self.sleep(1)
-            txt2 = self.get_text(txtelement)
-            #不能做相等处理，暂时没解决办法，滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，只能判断大于期望的比例
-            if int(txt2) > int(arrivetxt):
-                actions.release(dragButton).perform() #释放左键
-                break
-            else:
-                actions.move_by_offset(1,dragButton_y).perform()
-        log.info('{0} Button: {1}, remove right arrive {2}, Spend {3} seconds.'.format(self.success,element,arrivetxt,time.time()-t1))
-
     def get_element_count(self,parentEl,childEl='li'):
         '''
         获取元素个数信息
@@ -462,9 +425,9 @@ class BasePage(object):
         time.sleep(2)
         for i in range(1,10):
             try:
-                OrderNum = self.get_text((By.XPATH,'//div/div[2]/table/tbody/tr['+str(i)+']/td[3]/div/a'))
+                OrderNum = self.get_text((By.XPATH,'//div/div[2]/.//tr['+str(i)+']/td[3]/div/a'))
                 if OrderNum == OrderNumber:
-                    self.click_button((By.XPATH,'//div/div[2]/table/tbody/tr['+str(i)+']/td[2]/div/label/span/input'))
+                    self.click_button((By.XPATH,'//div/div[2]/.//tr['+str(i)+']/td[2]/.//input'))
                     log.info('{0} Select order: {1}.'.format(self.success,OrderNumber))
                     break
             except Exception:
@@ -488,14 +451,14 @@ class BasePage(object):
             try:
                 #获取第一个订单的创建时间
                 if insteadOrder: #代报单获取创建时间不一样
-                    addOrderTime = self.get_text(element=(By.XPATH,'//div/div[2]/*/*/tr[1]/td[6]/*/span'))
+                    addOrderTime = self.get_text(element=(By.XPATH,'//div/div[2]/.//tr[1]/td[6]/.//span'))
                 else:
-                    addOrderTime = self.get_text(element=(By.XPATH,'//div/div[2]/*/*/tr[1]/td[5]/*/span'))
+                    addOrderTime = self.get_text(element=(By.XPATH,'//div/div[2]/.//tr[1]/td[5]/.//span'))
                 #把时间转化为时间戳小于30秒就是新订单
                 oldTimeNumber = self.get_one_timenum(DataTime=addOrderTime,Time=True)
                 newTime = self.get_now_timenum()
                 if newTime - oldTimeNumber < 60:
-                    newOrderNum = self.get_text(element=(By.XPATH,'//div/div[2]/table/tbody/tr[1]/td[3]/div/a'))
+                    newOrderNum = self.get_text(element=(By.XPATH,'//div/div[2]/.//tr[1]/td[3]/div/a'))
                     log.info('{0} Get order number: {1}.'.format(self.success,newOrderNum))
                     #有时候获取不到订单单号，判断单号的长度，否则刷新页面
                     if len(newOrderNum) == 18:
@@ -521,9 +484,9 @@ class BasePage(object):
         time.sleep(2)
         for i in range(1,10):
             try:
-                OrderNum = self.get_text((By.XPATH,'//div/div[2]/table/tbody/tr['+str(i)+']/td[3]/div/a'))
+                OrderNum = self.get_text((By.XPATH,'//div/div[2]/.//tr['+str(i)+']/td[3]/div/a'))
                 if OrderNum == OrderNumber:
-                    self.click_button((By.XPATH,'//div/div[2]/table/tbody/tr['+str(i)+']/td[3]/div/a'))
+                    self.click_button((By.XPATH,'//div/div[2]/.//tr['+str(i)+']/td[3]/div/a'))
                     log.info('{0} Into order: {1} message page.'.format(self.success,OrderNumber))
                     break
             except Exception:
