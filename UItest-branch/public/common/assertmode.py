@@ -5,6 +5,7 @@
 
 from public.common.logconfig import Log
 from public.common.basepage import BasePage
+import unittest
 log = Log()
 """
 封装断言函数
@@ -86,7 +87,6 @@ class Assert(BasePage):
             self.take_screen_shot()
             return self.fail
         else:
-            self.isSuccess='PASS'
             log.info('{0} Expect: False, Faction: {1}, test -> PASS.'.format(self.success,fact))
             return self.success
     

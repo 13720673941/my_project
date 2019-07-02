@@ -31,10 +31,14 @@ class SettleOrderPage(BasePage):
     brands_settle_money_input = (By.XPATH,'//label[contains(.,"结算方式：")]/../../div[1]/.//input[@type="text"]')
     #未结算提示信息
     settle_red_msg = (By.XPATH,'//label[text()="结算方式："]/../../div/div/span[2]')
-    #三种结算方式
-    settle_type_1 = (By.XPATH,'//label[text()="结算方式："]/../div/label[1]')
-    settle_type_2 = (By.XPATH,'//label[text()="结算方式："]/../div/label[2]')
-    settle_type_3 = (By.XPATH,'//label[text()="结算方式："]/../div/label[3]')
+    #三种结算方式属性元素
+    settle_type_1_att = (By.XPATH,'//div[2]/div/label[1]/input')
+    settle_type_2_att = (By.XPATH,'//div[2]/div/label[2]/input')
+    settle_type_3_att = (By.XPATH,'//div[2]/div/label[3]/input')
+    #三种结算方式选择按钮元素
+    settle_type_1 = (By.XPATH,'//div[2]/div/label[1]')
+    settle_type_2 = (By.XPATH,'//div[2]/div/label[2]')
+    settle_type_3 = (By.XPATH,'//div[2]/div/label[3]')
     #滑动按钮
     drop_btn = (By.XPATH,'//*[@class="ivu-slider-button"]')
     #滑动后比例的输出位置文本
@@ -94,7 +98,7 @@ class SettleOrderPage(BasePage):
 
     def get_settle_type_1_att(self):
         """获取规则结算方式选择属性"""
-        return self.get_att(self.settle_type_1,"disabled")
+        return self.get_att(self.settle_type_1_att,"disabled")
 
     def select_settle_type_2(self):
         """选择按固定金额结算"""
@@ -102,7 +106,7 @@ class SettleOrderPage(BasePage):
 
     def get_settle_type_2_att(self):
         """获取固定金额结算方式选择属性"""
-        return self.get_att(self.settle_type_2,"disabled")
+        return self.get_att(self.settle_type_2_att,"disabled")
 
     def select_settle_type_3(self):
         """选择按固定比例结算"""
@@ -110,7 +114,7 @@ class SettleOrderPage(BasePage):
 
     def get_settle_type_3_att(self):
         """获取固定比例结算方式选择属性"""
-        return self.get_att(self.settle_type_3,"disabled")
+        return self.get_att(self.settle_type_3_att,"disabled")
 
     def get_drop_arrive_text(self):
         """获取我方的比例"""

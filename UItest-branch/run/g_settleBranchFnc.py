@@ -15,18 +15,24 @@ from public.common.assertmode import Assert
 import unittest,ddt
 '''
 经销商工单结算测试用例：
-1、经销商工单结算-未结算提示信息校验 2、经销商工单结算-1/3结算方式可以选择校验 3、经销商工单结算-设置结算价格不能修改校验
-4、经销商工单结算-钱包结算余额不足校验 5、经销商工单结算-线下结算成功校验 6、经销商工单结算-结算后提示信息校验
-7、经销商工单结算-钱包结算余额不足校验 8、经销商工单结算-线下结算成功校验
+14、经销商工单结算(有预报价)-未结算提示信息校验 15、经销商工单结算(有预报价)-未结算1/3结算方式不能选择校验 
+16、经销商工单结算(有预报价)-未结算服务商端设置的结算预报价不能修改校验 17、经销商工单结算(有预报价)-经商端设置结算价格不能修改校验
+18、经销商工单结算(有预报价)-经商端钱包结算余额不足校验 19、经销商工单结算(有预报价)-经商端线下结算成功校验 
+20、经销商工单结算(有预报价)-结算后服务商端提示信息校 21、经销商工单结算(有预报价)-结算后服务商端1/3结算方式不能选择校验
+22、经销商工单结算(有预报价)-结算后服务商端设置的结算预报价不能修改校验 23、经销商工单结算(有预报价)-结算后服务商端固定金额线下结算成功校验
+24、经销商工单结算(无预报价)-未结算1/3结算方式不能选择校验 25、经销商工单结算(无预报价)-未结算服务商端结算价格可以输入校
+26、经销商工单结算(无预报价)-经商端设置结算价格可以随便输入校验 27、经销商工单结算(无预报价)-经商端线下结算成功校验
+28、经销商工单结算(无预报价)-服务商端经销商结算价格校验 29、经销商工单结算(无预报价)-服务商端1/3结算方式可以选择校验
+30、经销商工单结算(无预报价)-服务商端按固定比例结算校验
 '''
 #获取数据
 SettleData = getdata.get_test_data()["SettleManagePage"]
-ddtData1 = SettleData["TestCase004"]
-ddtData2 = SettleData["TestCase006"]
+have_settle_money = SettleData["have_settle_money_flow"]
+no_settle_money = SettleData["no_settle_money_flow"]
 #默认写入测试结果
 isWrite = True
 @ddt.ddt
-class Settle_Order(unittest.TestCase):
+class Manage_Settle(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -47,18 +53,29 @@ class Settle_Order(unittest.TestCase):
         cls.Pwd = rwconfig.read_config_data('蓝魔科技',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
         #获取派单到服务商数据 关联派单数据中的信息
-        BranchName = rwconfig.read_config_data('蓝魔科技','branch002')
-        #派单到服务商
-        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName,please_to_branch=True)
+        BranchName1 = rwconfig.read_config_data('蓝魔科技','branch001')
+        #派单到服务商1-XM-服务撒
+        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True)
         #退出登录
         cls.login.click_logout_button()
-        #获取服务商账号密码
-        cls.Use1 = rwconfig.read_config_data(BranchName,'username')
-        cls.Pwd1 = rwconfig.read_config_data(BranchName,'password')
-        #登录派单服务商
+        #获取服务商1账号密码
+        cls.Use1 = rwconfig.read_config_data(BranchName1,'username')
+        cls.Pwd1 = rwconfig.read_config_data(BranchName1,'password')
+        #登录派单服务商1
         cls.login.login_main(cls.Use1,cls.Pwd1)
+        #获取派单到服务商数据 关联派单数据中的信息
+        BranchName2 = rwconfig.read_config_data(BranchName1,'branch001')
+        #派单到服务商2-branch03
+        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName2,please_to_branch=True)
+        #退出登录
+        cls.login.click_logout_button()
+        #获取服务商2账号密码
+        cls.Use2 = rwconfig.read_config_data(BranchName2,'username')
+        cls.Pwd2 = rwconfig.read_config_data(BranchName2,'password')
+        #登录派单服务商2
+        cls.login.login_main(cls.Use2, cls.Pwd2)
         #获取派单师傅
-        MasterName = rwconfig.read_config_data(BranchName,'master001')
+        MasterName = rwconfig.read_config_data(BranchName2,'master001')
         #服务商派单到师傅
         cls.pleaseOrder.please_order_main(cls.OrderNum,MasterName)
         #网点完成服务
@@ -70,132 +87,87 @@ class Settle_Order(unittest.TestCase):
         #刷新页面时间加载
         self.base.refresh_page()
 
-    def test_settleOrder001(self):
-        '''经销商工单结算-未结算提示信息校验'''
-        #获取001测试数据
-        Data001 = SettleData["TestCase001"]
-        #测试用例名称
-        self.base.print_case_name(Data001["CaseName"])
-        self.base.sleep(1)
-        #进入订单详情页面
-        self.base.open_order_message(self.OrderNum)
-        self.base.sleep(1)
-        #点击结算
-        self.settleOrder.click_settle_btn()
-        #断言
-        isSuccess = self.assert_mode.assert_equal(Data001["expect"],self.settleOrder.get_settle_money_msg())
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data001["CaseName"])
-
-    def test_settleOrder002(self):
-        '''经销商工单结算-1/3结算方式可以选择校验'''
-        #获取002测试数据
-        Data002 = SettleData["TestCase002"]
-        #测试用例名称
-        self.base.print_case_name(Data002["CaseName"])
-        #进入订单详情页面
-        self.base.open_order_message(self.OrderNum)
-        self.base.sleep(1)
-        #点击结算
-        self.settleOrder.click_settle_btn()
-        #获取1、3结算方式的选择属性：不能选择
-        Att1 = self.settleOrder.get_settleType1_att()
-        Att3 = self.settleOrder.get_settleType3_att()
-        #断言 判断两个选择的按钮的属性 不能选择 true
-        isSuccess1 = self.assert_mode.assert_att_is_none(Att1)
-        isSuccess2 = self.assert_mode.assert_att_is_none(Att3)
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'SettleOrder',Data002["CaseName"])
-
-    def test_settleOrder003(self):
-        '''经销商工单结算-经商端设置结算价格不能修改校验验'''
-        #获取003测试数据
-        Data003 = SettleData["TestCase003"]
-        #测试用例名称
-        self.base.print_case_name(Data003["CaseName"])
-        #退出服务商
+    def test_manage_settle001(self):
+        """经销商工单结算(有预报价)-未结算提示信息校验"""
+        #获取测试数据
+        data = have_settle_money["TestCase001"]
+        #打印测试用例名称
+        self.base.print_case_name(data["CaseName"])
+        #退出登录
         self.login.click_logout_button()
-        #登录经销商
-        self.login.login_main(self.Use,self.Pwd)
-        #进入全部订单列表页
-        self.pleaseOrder.enter_please_order_page()
-        self.base.sleep(1)
-        #进入订单详情页面
-        self.base.open_order_message(self.OrderNum)
-        self.base.sleep(1)
-        #点击结算
-        self.settleOrder.click_settle_btn()
-        self.base.sleep(1)
-        #获取元素属性
-        att = self.settleOrder.brands_settle_money_attribute()
-        #获取结算输入框属性断言
-        isSuccess = self.assert_mode.assert_equal(Data003["expect"],att)
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data003["CaseName"])
-
-    @ddt.data(*ddtData1)
-    def test_settleOrder004(self,ddtData1):
-        '''经销商工单结算-经销商端订单结算校验'''
-        #测试用例名称
-        self.base.print_case_name(ddtData1["CaseName"])
-        #进入订单详情页面
-        self.base.open_order_message(self.OrderNum)
-        self.base.sleep(1)
-        #点击结算
-        self.settleOrder.click_settle_btn()
-        #选择支付方式
-        self.settleOrder.select_pay_type(payType=ddtData1["PayType"])
-        #点击确定
-        self.settleOrder.click_confirm_btn()
-        #断言
-        isSuccess = self.assert_mode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
-        #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',ddtData1["CaseName"])
-
-    def test_settleOrder005(self):
-        '''经销商工单结算-结算后提示信息校验'''
-        #获取005测试数据
-        Data005 = SettleData["TestCase005"]
-        #测试用例名称
-        self.base.print_case_name(Data005["CaseName"])
-        #退出经销商账号
-        self.login.click_logout_button()
-        #登录服务商账号
+        #登录服务商1
         self.login.login_main(self.Use1,self.Pwd1)
-        #进入全部订单列表页
-        self.pleaseOrder.enter_please_order_page()
-        #进入订单详情页面
+        #进入服务撒工单结算列表页面
+        self.settleOrder.enter_branch_settle_page()
+        #进入工单详情页
         self.base.open_order_message(self.OrderNum)
-        #点击结算
+        #点击结算按钮
         self.settleOrder.click_settle_btn()
-        #断言 判断页面元素是否存在
-        isSuccess = self.assert_mode.assert_el_not_in_page(self.settleOrder.settle_msg_isDisplayed())
+        #获取经销商未结算提示进行断言
+        isSuccess = self.assert_mode.assert_equal(data["expect"],self.settleOrder.get_settle_msg())
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',Data005["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
 
-    @ddt.data(*ddtData2)
-    def test_settleOrder006(self,ddtData2):
-        '''经销商工单结算-服务商端订单结算校验'''
-        #测试用例名称
-        self.base.print_case_name(ddtData2["CaseName"])
-
-        #进入订单详情页面
+    def test_manage_settle002(self):
+        """经销商工单结算(有预报价)-未结算1/3结算方式不能选择校验"""
+        #获取测试数据
+        data = have_settle_money["TestCase002"]
+        #打印测试用例名称
+        self.base.print_case_name(data["CaseName"])
+        #进入服务撒工单结算列表页面
+        self.settleOrder.enter_branch_settle_page()
+        #进入工单详情页
         self.base.open_order_message(self.OrderNum)
-        #点击结算
+        #点击结算按钮
         self.settleOrder.click_settle_btn()
-        #选择结算方式
-        self.settleOrder.select_settle_type(settleType=ddtData2["SettleType"])
-        #选择结算比例
-        self.settleOrder.select_settle_proportion(arriveTxt=ddtData2["BranchNum"])
-        #选择支付方式
-        self.settleOrder.select_pay_type(payType=ddtData2["PayType"])
-        #点击确定
-        self.settleOrder.click_confirm_btn()
-        self.base.sleep(1)
-        #断言
-        isSuccess = self.assert_mode.assert_equal(ddtData2["expect"],self.base.get_system_msg())
+        #获取结算方式1、3的选择属性
+        settle_type_att1 = self.settleOrder.get_settle_type_1_att()
+        settle_type_att2 = self.settleOrder.get_settle_type_2_att()
+        #获取经销商未结算提示进行断言
+        isSuccess1 = self.assert_mode.assert_equal(data["expect"],settle_type_att1)
+        isSuccess2 = self.assert_mode.assert_equal(data["expect"],settle_type_att2)
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SettleOrder',ddtData2["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"SettleOrder",data["CaseName"])
+
+    def test_manage_settle003(self):
+        """经销商工单结算(有预报价)-未结算服务商端设置的结算预报价不能修改校验"""
+        #获取测试数据
+        data = have_settle_money["TestCase003"]
+        #打印测试用例名称
+        self.base.print_case_name(data["CaseName"])
+        #进入服务撒工单结算列表页面
+        self.settleOrder.enter_branch_settle_page()
+        #进入工单详情页
+        self.base.open_order_message(self.OrderNum)
+        #点击结算按钮
+        self.settleOrder.click_settle_btn()
+        #获取固定结算金额不能编辑的属性
+        settle_money_attribute = self.settleOrder.get_settle_money_attribute()
+        #获取经销商未结算提示进行断言
+        isSuccess = self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
+        #写入测试结果
+        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+
+    def test_manage_settle004(self):
+        """17、经销商工单结算(有预报价)-经商端设置结算价格不能修改校验"""
+        #获取测试数据
+        data = have_settle_money["TestCase004"]
+        #打印测试用例名称
+        self.base.print_case_name(data["CaseName"])
+        #
+        #进入服务撒工单结算列表页面
+        self.settleOrder.enter_branch_settle_page()
+        #进入工单详情页
+        self.base.open_order_message(self.OrderNum)
+        #点击结算按钮
+        self.settleOrder.click_settle_btn()
+        #获取固定结算金额不能编辑的属性
+        settle_money_attribute = self.settleOrder.get_settle_money_attribute()
+        #获取经销商未结算提示进行断言
+        isSuccess = self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
+        #写入测试结果
+        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+
 
     @classmethod
     def tearDownClass(cls):

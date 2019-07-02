@@ -96,7 +96,7 @@ class PleaseOrderPage(BasePage):
         """暂停接单是否在页面上"""
         return self.is_display(self.stop_take_order_text)
 
-    def please_order_main(self,ordernumber,pagename,please_to_branch=False,
+    def please_order_main(self,ordernumber,pagename,please_to_branch=False,set_order_money=True,
                         Url='http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单'):
         '''
         :param OrderNumber:     订单单号
@@ -117,8 +117,9 @@ class PleaseOrderPage(BasePage):
         if please_to_branch:
             #如果派单到服务商为真则派单到服务商
             self.please_to_branch()
-            #输入预结算报价
-            self.set_order_money()
+            if set_order_money:
+                #输入预结算报价
+                self.set_order_money()
         #选择派单服务商/师傅
         self.select_please_page(pagename)
         #点击派单按钮

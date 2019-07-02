@@ -163,7 +163,7 @@ class Alter_Password(unittest.TestCase):
         self.login.input_username(UserName=ddtData1["username"])
         self.login.input_password(PassWord=ddtData1["password"])
         self.login.click_login_button()
-        self.basePage.sleep(1)
+        self.base.sleep(1)
         #断言
         isSuccess = self.assertMode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
         #写入测试结果

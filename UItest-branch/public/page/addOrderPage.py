@@ -122,7 +122,7 @@ class AddOrderPage(BasePage):
         self.sleep(1)
         self.click_button(Path)
         #选择服务商
-        if orderType != '无需返单':
+        if orderType != '无需返单' and branchName != '':
             self.sleep(1)
             self.operate_select(self.branch_select,branchName)
         else:

@@ -48,6 +48,7 @@ class BasePage(object):
         """
         t1 = time.time()
         try:
+            self.sleep(1)
             self.driver.get(url)
             log.info('{0} Open url <{1}>, Spend {2} seconds.'.format(self.success,url,time.time()-t1))
         except Exception:
@@ -490,7 +491,9 @@ class BasePage(object):
                     log.info('{0} Into order: {1} message page.'.format(self.success,OrderNumber))
                     break
             except Exception:
-                if i == 9:
+                if i == 2:
+                    self.refresh_page()
+                elif i == 9:
                     log.error('{0} Unable into order: {1} message page.'.format(self.fail,OrderNumber))
                     raise
 

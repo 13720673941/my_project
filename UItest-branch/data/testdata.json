@@ -8,7 +8,7 @@
     {"CaseName": "5、注册-确认密码为空校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "","expect": "确认登录密码须与密码相同"},
     {"CaseName": "6、注册-已经注册的用户名校验","username": "branch01","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "branch01已存在"},
     {"CaseName": "7、注册-已经注册的手机号校验","username": "AutoTest","PhoneNum": "13720673941","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "手机号码已存在"},
-    {"CaseName": "8、注册-错误验证码校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "111111","NewPwd": "111111","ConfirmPwd": "111111","expect": "请重新获取验证码"},
+    {"CaseName": "8、注册-错误验证码校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "111111","NewPwd": "111111","ConfirmPwd": "111111","expect": "验证码不符"},
     {"CaseName": "9、注册-两个密码不同校验","username": "AutoTest","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "222222","expect": "确认登录密码须与密码相同"},
     {"CaseName": "10、注册-用户名格式校验","username": "！@#￥%","PhoneNum": "11111111111","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入汉字、字母、0-9、下划线"},
     {"CaseName": "11、注册-手机号格式校验","username": "AutoTest","PhoneNum": "137000000","CodeNum": "88888888","NewPwd": "111111","ConfirmPwd": "111111","expect": "请输入正确手机号码"},
@@ -196,7 +196,7 @@
   "SettleReturnPage": {
     "before_return_settle_fnc": {
       "TestCase001": {"CaseName": "1、返单结算-返单未结算系统提示校验","expect": "服务商尚未结算"},
-      "TestCase002": {"CaseName": "2、返单结算-返单未结算只能选择固定金额校验","expect": "None"}
+      "TestCase002": {"CaseName": "2、返单结算-返单未结算只能选择固定金额校验","expect": "true"}
     },
     "return_settle_fnc": {
       "TestCase001": {"CaseName": "3、返单结算-厂商结算价格不能编辑校验","expect": "true"},
@@ -204,31 +204,40 @@
       "TestCase003": {"CaseName": "5、返单结算-按规则结算结算价格不能编辑校验","expect": "true"},
       "TestCase004": {"CaseName": "6、返单结算-按固定金额结算金可以编辑校验","SettleMoney": "50","expect": "50"},
       "TestCase005": {"CaseName": "7、返单结算-按规则结算比例计算校验"},
-      "pay_fnc": [
-        {"CaseName": "8、返单结算-钱包余额不足支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"钱包结算","expect": "账户钱包余额不足"},
-        {"CaseName": "9、返单结算-线下成功支付校验","SettleType":"按固定金额","SettleMoney": "50","PayType":"线下结算","expect": "返单结算完成"}
-      ]
+      "TestCase006":{"CaseName": "8、返单结算-钱包余额不足支付校验","expect": "账户钱包余额不足"},
+      "TestCase007":{"CaseName": "9、返单结算-线下成功支付校验","expect": "返单结算完成"}
+
     },
     "after_return_settle_fnc": {
-      "TestCase006": {"CaseName": "10、返单结算-返单结算后系统提示校验"},
-      "TestCase007": {"CaseName": "11、返单结算-返单结算123结算方式都能选择校验"},
-      "TestCase008": {"CaseName": "12、返单结算-固定金额线下结算成功校验","SettleType":"按固定比例","PayType":"线下结算","expect": "结算完成"}
+      "TestCase001": {"CaseName": "10、返单结算-返单结算后系统提示校验"},
+      "TestCase002": {"CaseName": "11、返单结算-返单结算后结算价格校验","expect": "100"},
+      "TestCase003": {"CaseName": "12、返单结算-返单结算123结算方式都能选择校验"},
+      "TestCase004": {"CaseName": "13、返单结算-固定金额线下结算成功校验","expect": "结算完成"}
     }
   },
   "13": "/*【网点订单经销商工单结算功能测试用例】*/",
   "SettleManagePage": {
-    "TestCase001": {"CaseName": "12、经销商工单结算-未结算提示信息校验","expect": "经销商尚未结算"},
-    "TestCase002": {"CaseName": "13、经销商工单结算-1/3结算方式可以选择校验"},
-    "TestCase003": {"CaseName": "14、经销商工单结算-经商端设置结算价格不能修改校验","expect": "true"},
-    "TestCase004": [
-      {"CaseName": "15、经销商工单结算-钱包结算余额不足校验","PayType":"钱包结算","expect": "账户钱包余额不足"},
-      {"CaseName": "16、经销商工单结算-经销商线下结算成功校验","PayType":"线下结算","expect": "结算完成"}
-    ],
-    "TestCase005": {"CaseName": "17、经销商工单结算-结算后提示信息校验"},
-    "TestCase006": [
-      {"CaseName": "18、经销商工单结算-钱包结算余额不足校验","SettleType":"按固定比例","BranchNum":"60","PayType":"钱包结算","expect": "账户钱包余额不足"},
-      {"CaseName": "19、经销商工单结算-服务商线下结算成功校验","SettleType":"按固定比例","BranchNum":"60","PayType":"线下结算","expect": "结算完成"}
-      ]
+    "have_settle_money_flow": {
+      "TestCase001": {"CaseName": "14、经销商工单结算(有预报价)-未结算提示信息校验","expect": "经销商尚未结算"},
+      "TestCase002": {"CaseName": "15、经销商工单结算(有预报价)-未结算1/3结算方式不能选择校验","expect": "true"},
+      "TestCase003": {"CaseName": "16、经销商工单结算(有预报价)-未结算服务商端设置的结算预报价不能修改校验","expect": "true"},
+      "TestCase004": {"CaseName": "17、经销商工单结算(有预报价)-经商端设置结算价格不能修改校验","expect": "true"},
+      "TestCase005": {"CaseName": "18、经销商工单结算(有预报价)-经商端钱包结算余额不足校验","expect": "账户钱包余额不足"},
+      "TestCase006": {"CaseName": "19、经销商工单结算(有预报价)-经商端线下结算成功校验","expect": "结算完成"},
+      "TestCase007": {"CaseName": "20、经销商工单结算(有预报价)-结算后服务商端提示信息校验"},
+      "TestCase008": {"CaseName": "21、经销商工单结算(有预报价)-结算后服务商端1/3结算方式不能选择校验","expect": "true"},
+      "TestCase009": {"CaseName": "22、经销商工单结算(有预报价)-结算后服务商端设置的结算预报价不能修改校验","expect": "true"},
+      "TestCase010": {"CaseName": "23、经销商工单结算(有预报价)-结算后服务商端固定金额线下结算成功校验","expect": "结算完成"}
+    },
+    "no_settle_money_flow": {
+      "TestCase001": {"CaseName": "24、经销商工单结算(无预报价)-未结算1/3结算方式不能选择校验","expect": "true"},
+      "TestCase002": {"CaseName": "25、经销商工单结算(无预报价)-未结算服务商端结算价格可以输入校验","SettleMoney":"100","expect": "100"},
+      "TestCase003": {"CaseName": "26、经销商工单结算(无预报价)-经商端设置结算价格可以随便输入校验","SettleMoney":"200","expect": "200"},
+      "TestCase004": {"CaseName": "27、经销商工单结算(无预报价)-经商端线下结算成功校验","expect": "结算完成"},
+      "TestCase005": {"CaseName": "28、经销商工单结算(无预报价)-服务商端经销商结算价格校验","expect": "200"},
+      "TestCase006": {"CaseName": "29、经销商工单结算(无预报价)-服务商端1/3结算方式可以选择校验"},
+      "TestCase007": {"CaseName": "30、经销商工单结算(无预报价)-服务商端按固定比例结算校验","ArriveNum": "60","expect": "结算完成"}
+    }
   },
   "14": "/*【经销商页面功能测试用例集】*/",
   "AddDealerPage":{
