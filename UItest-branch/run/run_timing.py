@@ -7,7 +7,7 @@ from public.common.sendemail import Send_Email
 import sys
 SE = Send_Email()
 sys.path.append('../run')
-import run_a_registerLogin,run_b_alterPassword,run_c_orderManage
+import run_a_registerLogin,run_b_alterPassword,run_c_orderManage,run_d_customManage
 
 if __name__ == '__main__':
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     isPass = False
     #定时间
     startTime = time.time()
-    timing = '12:20'
+    timing = '09:14'
     while True:
         #获取当前时间
         time.sleep(1)
@@ -31,6 +31,7 @@ if __name__ == '__main__':
             run_a_registerLogin.run()
             run_b_alterPassword.run()
             run_c_orderManage.run()
+            run_d_customManage.run()
             print('========== 结束 ==========')
             endTime = time.time()
             isPass = True

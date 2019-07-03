@@ -27,19 +27,14 @@ class BasePage(object):
         
     def get_element(self,element):
         """
-        定位页面元素位置
+        等待页面元素加载
         eg：driver.get_element(element=(By.XPATH,'//div[@id="kw"]'))
         """
         t1 = time.time()
-        try:
-            el = WebDriverWait(self.driver,20,1).until(EC.presence_of_element_located(element))
-            log.info('{0} Find element <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
-            return el
-        except TimeoutException:
-            # log.error('{0} Unable find element <{1}>, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))
-            raise TimeoutException('{0} Unable find element <{1}> timeout, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))
-        finally:
-            pass
+        message = 'Get element {0} timeout 20 seconds.'.format(element)
+        el = WebDriverWait(self.driver,20,1).until(EC.presence_of_element_located(element),message)
+        log.info('{0} Find element <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
+        return el
 
     def open_url(self,url):
         """

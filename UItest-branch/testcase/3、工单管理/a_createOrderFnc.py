@@ -253,13 +253,8 @@ class Add_Order(unittest.TestCase):
         ##断言
         isSuccess1 = self.assert_mode.assert_equal(Data["expect"],msg)
         isSuccess2 = self.assert_mode.assert_el_in_page(isTrue)
-        #并列条件判断
-        if isSuccess1 == 'PASS' and isSuccess2 == 'PASS':
-            isSuccess = 'PASS'
-        else:
-            isSuccess = 'FAIL'
         #写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data["CaseName"])
+        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'AddOrder',Data["CaseName"])
 
     def test_addOrder006(self):
         '''打印工单页面跳转'''

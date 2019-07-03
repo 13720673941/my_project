@@ -10,7 +10,7 @@ log = Log()
 """
 封装断言函数
 """
-class Assert(BasePage):
+class Assert(BasePage,unittest.TestCase):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)

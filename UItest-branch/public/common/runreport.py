@@ -3,8 +3,8 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/6/2 11:58
 
-import HTMLTestRunnerCN
 from config.pathconfig import *
+from config import HTMLTestRunnerCN
 import unittest,time
 '''
 1、获取测试用例集 2、生成报告

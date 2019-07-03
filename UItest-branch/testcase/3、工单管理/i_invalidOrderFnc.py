@@ -12,7 +12,7 @@ from public.page.loginPage import LoginPage
 from public.page.invalidOrderPage import InvalidOrder
 from config.pathconfig import *
 from public.common.assertmode import Assert
-import unittest,logging,ddt
+import unittest,ddt
 '''
 网点设置无效工单测试用例脚本：
 1、无效工单类型为空校验 2、设置无效工单校验校验 3、服务商待派不能设置无效校验 4、已结算订单不能设置无效校验
@@ -42,22 +42,17 @@ class Set_InvalidOrder(unittest.TestCase):
         PassWord = rwconfig.read_config_data('蓝魔科技','password')
         #网点登录
         cls.loginPage.login_main(UserName,PassWord)
-        #添加订单默认为需返单订单，便于测试
-        OrderData = getdata.get_test_data()["CreateOrderPage"]["create_order_fnc"][-1]
-        #获取添加订单数据信息
-        cls.Name = OrderData["username"]
-        cls.PhoneNum = OrderData["PhoneNum"]
-        cls.ServerAdd = OrderData["ServerAddress"]
-        cls.Collage = OrderData["Collage"]
-        cls.OrderType = OrderData["OrderType"]
-        cls.BranchName = OrderData["Branch"]
-        cls.ServerType = OrderData["ServerType"]
-        cls.Brands = OrderData["Brands"]
-        cls.Kinds = OrderData["Kinds"]
-        cls.Expect = OrderData["expect"]
-        #添加订单
-        cls.addOrderPage.create_order_main(cls.Name,cls.PhoneNum,cls.ServerAdd,cls.Collage,cls.OrderType,cls.BranchName,
-                                           cls.ServerType,cls.Brands,cls.Kinds)
+        #获取订单信息
+        user = rwconfig.read_config_data("NotReturnOrder","用户姓名",orderInfo)
+        phe = rwconfig.read_config_data("NotReturnOrder","联系方式",orderInfo)
+        address = rwconfig.read_config_data("NotReturnOrder","服务地址",orderInfo)
+        collage = rwconfig.read_config_data("NotReturnOrder","详细地址",orderInfo)
+        order_type = rwconfig.read_config_data("NotReturnOrder","工单类型",orderInfo)
+        server = rwconfig.read_config_data("NotReturnOrder","服务类型",orderInfo)
+        brands = rwconfig.read_config_data("NotReturnOrder","品牌",orderInfo)
+        kinds = rwconfig.read_config_data("NotReturnOrder","品类",orderInfo)
+        #经销商下单程序下单
+        cls.create_order_page.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
         #获取创建成功的订单单号
         cls.OrderNumber = cls.basePage.get_order_number()
 
