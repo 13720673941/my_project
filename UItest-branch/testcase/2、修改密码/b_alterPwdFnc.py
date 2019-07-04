@@ -57,14 +57,14 @@ class Alter_Password(unittest.TestCase):
     def setUp(self):
         #刷新页面
         self.base.refresh_page()
-        #点击密码后面的修改
-        self.alter_pwd.click_alter_pwd()
 
     def test_alterPwd001(self):
         '''登陆密码为空校验'''
         #获取测试数据
         Data = testData["TestCase001"]
         self.base.print_case_name(Data["CaseName"])
+        #点击密码后面的修改
+        self.alter_pwd.click_alter_pwd()
         #输入新密码
         self.alter_pwd.input_new_pwd(new_pwd=Data["NewPwd"])
         #输入确认密码
@@ -82,6 +82,8 @@ class Alter_Password(unittest.TestCase):
         #获取测试数据
         Data = testData["TestCase002"]
         self.base.print_case_name(Data["CaseName"])
+        #点击密码后面的修改
+        self.alter_pwd.click_alter_pwd()
         #输入登陆密码
         self.alter_pwd.input_old_pwd(old_pwd=self.password)
         #输入确认密码
@@ -98,6 +100,8 @@ class Alter_Password(unittest.TestCase):
         #获取测试数据
         Data = testData["TestCase003"]
         self.base.print_case_name(Data["CaseName"])
+        #点击密码后面的修改
+        self.alter_pwd.click_alter_pwd()
         #输入登陆密码
         self.alter_pwd.input_old_pwd(old_pwd=self.password)
         #输入新密码
@@ -114,6 +118,8 @@ class Alter_Password(unittest.TestCase):
         '''修改密码逻辑/密码格式校验'''
         #打印用例名称
         self.base.print_case_name(ddtData["CaseName"])
+        #点击密码后面的修改
+        self.alter_pwd.click_alter_pwd()
         #输入旧密码
         self.alter_pwd.input_old_pwd(old_pwd=self.password)
         #输入新密码
@@ -138,6 +144,8 @@ class Alter_Password(unittest.TestCase):
         #获取测试数据
         Data = testData["TestCase005"]
         self.base.print_case_name(Data["CaseName"])
+        #点击密码后面的修改
+        self.alter_pwd.click_alter_pwd()
         #输入登陆密码
         self.alter_pwd.input_old_pwd(old_pwd=Data["OldPwd"])
         #输入新密码
@@ -165,7 +173,7 @@ class Alter_Password(unittest.TestCase):
         self.login.click_login_button()
         self.base.sleep(1)
         #断言
-        isSuccess = self.assertMode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
+        isSuccess = self.assert_mode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'AlterPassWord',ddtData1['CaseName'])
 

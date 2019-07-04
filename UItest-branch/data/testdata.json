@@ -232,10 +232,10 @@
     },
     "no_settle_money_flow": {
       "TestCase001": {"CaseName": "25、经销商工单结算(无预报价)-未结算1/3结算方式不能选择校验","expect": "true"},
-      "TestCase002": {"CaseName": "26、经销商工单结算(无预报价)-未结算服务商端结算价格可以输入校验","SettleMoney":"90","expect": "90"},
+      "TestCase002": {"CaseName": "26、经销商工单结算(无预报价)-未结算服务商端结算价格可以输入校验","expect": "None"},
       "TestCase003": {"CaseName": "27、经销商工单结算(无预报价)-经商端设置结算价格可以随便输入校验","SettleMoney":"200","expect": "200"},
       "TestCase004": {"CaseName": "29、经销商工单结算(无预报价)-服务商端经销商结算价格校验","expect": "200"},
-      "TestCase005": {"CaseName": "30、经销商工单结算(无预报价)-服务商端1/2/3结算方式可以选择校验"},
+      "TestCase005": {"CaseName": "30、经销商工单结算(无预报价)-服务商端1/2/3结算方式可以选择校验","expect": "None"},
       "TestCase006": {"CaseName": "31、经销商工单结算(无预报价)-服务商端按固定比例结算校验","ArriveNum": "60","expect": "结算完成"}
     }
   },

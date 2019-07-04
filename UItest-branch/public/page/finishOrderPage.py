@@ -94,6 +94,7 @@ class FinishOrder(BasePage):
         self.select_new_order(ordernumber)
         #点击订单列表完成服务按钮
         self.click_finish_btn()
+        self.sleep(1)
         #输入故障类型
         self.input_break_type()
         #输入师傅预约时间
@@ -107,6 +108,7 @@ class FinishOrder(BasePage):
         self.input_remark()
         #上传图片
         self.up_finish_picture()
+        self.sleep(1)
         #点击提交
         self.click_submit_btn()
         #判断

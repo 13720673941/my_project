@@ -42,7 +42,7 @@ class SettleOrderPage(BasePage):
     #滑动按钮
     drop_btn = (By.XPATH,'//*[@class="ivu-slider-button"]')
     #滑动后比例的输出位置文本
-    drop_arrive_text = (By.XPATH,'//span[contains(.,"我方：")]/following-sibling::input')
+    drop_arrive_text = (By.XPATH,'//div[@class="ivu-slider-bar"]/preceding-sibling::input')
     #结算价格输入框
     settle_money_input = (By.XPATH,'//label[contains(.,"结算价格：")]/.././/input[@class="ivu-input-number-input"]')
     #钱包结算
@@ -118,7 +118,7 @@ class SettleOrderPage(BasePage):
 
     def get_drop_arrive_text(self):
         """获取我方的比例"""
-        return self.get_att(self.drop_arrive_text,"value")
+        return self.get_att(self.drop_arrive_text,"value").split(',')[0]
 
     def input_settle_money(self,settle_money='100'):
         """输入结算价格"""
@@ -159,21 +159,21 @@ class SettleOrderPage(BasePage):
         dragButton_y = dragButton.location['y']
         actions = self.click_and_hold_btn(dragButton)
         #归零0，y
-        self.sleep(1)
         while True:
+            self.sleep(2)
             #获取移动后的文本
             txt1 = self.get_text(self.drop_arrive_text)
             #滑块x坐标归零
             if txt1 == '0':
                 break
             else:
-                actions.move_by_offset(-1,dragButton_y).perform()
+                actions.move_by_offset(-5,dragButton_y).perform()
         #清除缓存操作
         actions.reset_actions()
         log.info('{0} Button: <{1}>, remove zero, Spend {2} seconds.'
                  .format(self.success,self.drop_btn,time.time()-t1))
         while True:
-            self.sleep(1)
+            self.sleep(2)
             txt2 = self.get_text(self.drop_arrive_text)
             #滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，
             #只能判断大于期望的比例
