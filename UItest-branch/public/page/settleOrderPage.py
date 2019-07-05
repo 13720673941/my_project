@@ -162,19 +162,19 @@ class SettleOrderPage(BasePage):
         while True:
             self.sleep(2)
             #获取移动后的文本
-            txt1 = self.get_text(self.drop_arrive_text)
+            txt1 = self.get_drop_arrive_text()
             #滑块x坐标归零
             if txt1 == '0':
                 break
             else:
-                actions.move_by_offset(-5,dragButton_y).perform()
+                actions.move_by_offset(-1,dragButton_y).perform()
         #清除缓存操作
         actions.reset_actions()
         log.info('{0} Button: <{1}>, remove zero, Spend {2} seconds.'
                  .format(self.success,self.drop_btn,time.time()-t1))
         while True:
             self.sleep(2)
-            txt2 = self.get_text(self.drop_arrive_text)
+            txt2 = self.get_drop_arrive_text()
             #滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，
             #只能判断大于期望的比例
             if int(txt2) > int(arrive_txt):

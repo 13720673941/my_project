@@ -157,7 +157,7 @@ class BasePage(object):
         t1 = time.time()
         try:
             att =  self.get_element(element).get_attribute(attribute)
-            log.info('{0} Get element <{1}> , attribute by {2}, Spend {3} seconds.'.format(self.success,element,attribute,time.time()-t1))
+            log.info('{0} Get element <{1}> , value: "{2}" attribute: "{3}", Spend {4} seconds.'.format(self.success,element,attribute,att,time.time()-t1))
             return att
         except Exception:
             log.error('{0} Unable get element <{1}> , attribute by {2} Spend {3} seconds.'.format(self.fail,element,attribute,time.time()-t1))
