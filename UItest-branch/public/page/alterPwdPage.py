@@ -5,8 +5,6 @@
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
-from public.common.logconfig import Log
-import sys
 """
 网点登录后修改密码页面
 """

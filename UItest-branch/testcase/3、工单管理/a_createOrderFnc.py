@@ -47,75 +47,54 @@ class Add_Order(unittest.TestCase):
         cls.loginPage.login_main(UserName,PassWord)
         cls.basePage.sleep(2)
 
-    def setUp(self):
-        #进入添加订单页面
+    def public_operation(self,name,phoneNum,serverAddress,collage,orderType,branchName,serverType,brands,kinds):
+        """工共操作下单"""
+        # 进入添加订单页面
         self.addOrderPage.enter_create_order_url()
-        #刷新页面
+        # 刷新页面
         self.basePage.refresh_page()
+        # 等待页面加载
+        self.basePage.wait()
+        # 输入联系人名称
+        self.addOrderPage.input_username(name)
+        # 输入联系方式
+        self.addOrderPage.input_phoneNum(phoneNum)
+        # 选择服务地址
+        self.addOrderPage.select_server_address(serverAddress)
+        # 输入详细地址
+        self.addOrderPage.input_add_collage(collage)
+        # 选择工单类型
+        self.addOrderPage.select_order_type(orderType, branchName)
+        # 选择服务类型
+        self.addOrderPage.select_server_type(serverType)
+        # 选择预约时间和时间段
+        self.addOrderPage.input_orderTime()
+        # 选择家电品牌
+        self.addOrderPage.input_brands(brands)
+        # 选择家电品类
+        self.addOrderPage.input_kinds(kinds)
 
     @ddt.data(*Data1)
     def test_addOrder001(self,Data1):
         '''网点新建订单测试用例脚本'''
         #打印测试用例名称
         self.basePage.print_case_name(Data1["CaseName"])
-        self.basePage.refresh_page()
-        #等待页面加载
-        self.basePage.wait()
-        #输入联系人名称
-        self.addOrderPage.input_username(name=Data1["username"])
-        #输入联系方式
-        self.addOrderPage.input_phoneNum(phoneNum=Data1["PhoneNum"])
-        #选择服务地址
-        self.addOrderPage.select_server_address(serverAddress=Data1["ServerAddress"])
-        #输入详细地址
-        self.addOrderPage.input_add_collage(collage=Data1["Collage"])
-        #选择工单类型
-        self.addOrderPage.select_order_type(orderType=Data1["OrderType"],branchName=Data1["Branch"])
-        #选择服务类型
-        self.addOrderPage.select_server_type(serverType=Data1["ServerType"])
-        #选择预约时间和时间段
-        self.addOrderPage.input_orderTime()
-        #选择家电品牌
-        self.addOrderPage.input_brands(brands=Data1["Brands"])
-        #选择家电品类
-        self.addOrderPage.input_kinds(kinds=Data1["Kinds"])
-        # #输入产品型号
-        # self.addOrderPage.input_productNum()
-        # #输入内机条码
-        # self.addOrderPage.input_in_phoneNum()
-        # #输入外机条码
-        # self.addOrderPage.input_out_phoneNum()
-        # #输入购买时间
-        # self.addOrderPage.select_buyTime()
-        # #选择购买渠道
-        # self.addOrderPage.select_buyPlace()
-        # #选择信息来源
-        # self.addOrderPage.select_info_from()
-        # #输入服务描述信息
-        # self.addOrderPage.input_remark()
-        # #上传图片
-        # self.addOrderPage.update_picture()
+        #获取订单信息
+        name=Data1["username"]
+        phoneNum=Data1["PhoneNum"]
+        serverAddress=Data1["ServerAddress"]
+        collage=Data1["Collage"]
+        orderType=Data1["OrderType"]
+        branchName=Data1["Branch"]
+        serverType=Data1["ServerType"]
+        brands=Data1["Brands"]
+        kinds=Data1["Kinds"]
+        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,serverType,brands,kinds)
         #点击保存按钮
         self.addOrderPage.click_save_btn()
-        self.basePage.sleep(2)
+        self.basePage.sleep(1)
         #断言结果
         isSuccess = self.assert_mode.assert_equal(Data1["expect"],self.basePage.get_system_msg())
-        #写入订单单号
-        if Data1["expect"] == '创建成功':
-            #获取创建成功的订单单号
-            sec = ''
-            OrderNumber = ''
-            if '11' in Data1["CaseName"]:
-                sec = 'NotReturnOrder'
-                OrderNumber = self.basePage.get_order_number()
-            elif '13' in Data1["CaseName"]:
-                sec = 'ReturnOrder'
-                OrderNumber = self.basePage.get_order_number()
-            elif '12' in Data1["CaseName"]:
-                sec = 'OnlyInsteadOrder'
-                OrderNumber = self.basePage.get_order_number(insteadOrder=True)
-                #写入配置文件orderNumber中
-            rwconfig.write_config_data(sec,'id',OrderNumber,orderNumPath)
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data1["CaseName"])
 
@@ -147,26 +126,17 @@ class Add_Order(unittest.TestCase):
         Data = getdata.get_test_data()["CreateOrderPage"]["reset_btn_fnc"]
         #打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
-        #刷新页面
-        self.basePage.refresh_page()
-        #等待页面加载
-        self.basePage.wait()
-        #输入联系人名称
-        self.addOrderPage.input_username(name=Data["username"])
-        #输入联系方式
-        self.addOrderPage.input_phoneNum(phoneNum=Data["PhoneNum"])
-        #选择服务地址
-        self.addOrderPage.select_server_address(serverAddress=Data["ServerAddress"])
-        #输入详细地址
-        self.addOrderPage.input_add_collage(collage=Data["Collage"])
-        #选择工单类型
-        self.addOrderPage.select_order_type(orderType=Data["OrderType"],branchName=Data["Branch"])
-        #选择服务类型
-        self.addOrderPage.select_server_type(serverType=Data["ServerType"])
-        #选择家电品牌
-        self.addOrderPage.input_brands(brands=Data["Brands"])
-        #选择家电品类
-        self.addOrderPage.input_kinds(kinds=Data["Kinds"])
+        # 获取订单信息
+        name = Data["username"]
+        phoneNum = Data["PhoneNum"]
+        serverAddress = Data["ServerAddress"]
+        collage = Data["Collage"]
+        orderType = Data["OrderType"]
+        branchName = Data["Branch"]
+        serverType = Data["ServerType"]
+        brands = Data["Brands"]
+        kinds = Data["Kinds"]
+        self.public_operation(name, phoneNum, serverAddress, collage, orderType, branchName, serverType, brands, kinds)
         #点击重置按钮
         self.addOrderPage.click_reset_btn()
         #点击保存
@@ -183,26 +153,17 @@ class Add_Order(unittest.TestCase):
         Data = getdata.get_test_data()["CreateOrderPage"]["direct_please_fnc"]
         #打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
-        #刷新页面
-        self.basePage.refresh_page()
-        #等待页面加载
-        self.basePage.wait()
-        #输入联系人名称
-        self.addOrderPage.input_username(name=Data["username"])
-        #输入联系方式
-        self.addOrderPage.input_phoneNum(phoneNum=Data["PhoneNum"])
-        #选择服务地址
-        self.addOrderPage.select_server_address(serverAddress=Data["ServerAddress"])
-        #输入详细地址
-        self.addOrderPage.input_add_collage(collage=Data["Collage"])
-        #选择工单类型
-        self.addOrderPage.select_order_type(orderType=Data["OrderType"], branchName=Data["Branch"])
-        #选择服务类型
-        self.addOrderPage.select_server_type(serverType=Data["ServerType"])
-        #选择家电品牌
-        self.addOrderPage.input_brands(brands=Data["Brands"])
-        #选择家电品类
-        self.addOrderPage.input_kinds(kinds=Data["Kinds"])
+        # 获取订单信息
+        name = Data["username"]
+        phoneNum = Data["PhoneNum"]
+        serverAddress = Data["ServerAddress"]
+        collage = Data["Collage"]
+        orderType = Data["OrderType"]
+        branchName = Data["Branch"]
+        serverType = Data["ServerType"]
+        brands = Data["Brands"]
+        kinds = Data["Kinds"]
+        self.public_operation(name, phoneNum, serverAddress, collage, orderType, branchName, serverType, brands, kinds)
         #点击直接派单
         self.addOrderPage.click_please_btn()
         self.basePage.sleep(1)
@@ -224,26 +185,17 @@ class Add_Order(unittest.TestCase):
         Data = getdata.get_test_data()["CreateOrderPage"]["save_add_btn_fnc"]
         #打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
-        #刷新页面
-        self.basePage.refresh_page()
-        #等待页面加载
-        self.basePage.wait()
-        #输入联系人名称
-        self.addOrderPage.input_username(name=Data["username"])
-        #输入联系方式
-        self.addOrderPage.input_phoneNum(phoneNum=Data["PhoneNum"])
-        #选择服务地址
-        self.addOrderPage.select_server_address(serverAddress=Data["ServerAddress"])
-        #输入详细地址
-        self.addOrderPage.input_add_collage(collage=Data["Collage"])
-        #选择工单类型
-        self.addOrderPage.select_order_type(orderType=Data["OrderType"], branchName=Data["Branch"])
-        #选择服务类型
-        self.addOrderPage.select_server_type(serverType=Data["ServerType"])
-        #选择家电品牌
-        self.addOrderPage.input_brands(brands=Data["Brands"])
-        #选择家电品类
-        self.addOrderPage.input_kinds(kinds=Data["Kinds"])
+        # 获取订单信息
+        name = Data["username"]
+        phoneNum = Data["PhoneNum"]
+        serverAddress = Data["ServerAddress"]
+        collage = Data["Collage"]
+        orderType = Data["OrderType"]
+        branchName = Data["Branch"]
+        serverType = Data["ServerType"]
+        brands = Data["Brands"]
+        kinds = Data["Kinds"]
+        self.public_operation(name, phoneNum, serverAddress, collage, orderType, branchName, serverType, brands, kinds)
         #点击添加并继续
         self.addOrderPage.click_save_and_add()
         self.basePage.sleep(1)
@@ -255,33 +207,6 @@ class Add_Order(unittest.TestCase):
         isSuccess2 = self.assert_mode.assert_el_in_page(isTrue)
         #写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'AddOrder',Data["CaseName"])
-
-    def test_addOrder006(self):
-        '''打印工单页面跳转'''
-        #获取测试数据
-        Data = getdata.get_test_data()["CreateOrderPage"]["print_order_fnc"]
-        #打印用例名称
-        self.basePage.print_case_name(Data["CaseName"])
-        self.basePage.sleep(1)
-        #进入全部工单列表
-        self.pleaseOrder.enter_please_order_page()
-        self.basePage.refresh_page()
-        #获取工单单号
-        order_number = rwconfig.read_config_data('ReturnOrder','id',orderNumPath)
-        #进入工单详情页
-        self.basePage.open_order_message(order_number)
-        #获取旧的窗口句柄
-        old_handle = self.basePage.get_current_handle()
-        #点击打印
-        self.addOrderPage.print_order_info()
-        #获取所有窗口句柄
-        all_handle = self.basePage.get_all_handles()
-        #切换窗口
-        self.basePage.switch_window_handle(all_handle,old_handle)
-        #断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_title())
-        #写入结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data["CaseName"])
 
     @classmethod
     def tearDownClass(cls):

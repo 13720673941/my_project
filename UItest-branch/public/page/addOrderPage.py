@@ -71,8 +71,6 @@ class AddOrderPage(BasePage):
     save_create_btn = (By.XPATH,'//div[@class="btnMenubox"]/button[4]')
     #添加工单页面的小title(判断页面是否关闭)
     add_order_page_title = (By.XPATH,'//span[contains(.,"添加工单")]')
-    #打印工单按钮
-    print_order_btn = (By.XPATH,'//button[contains(.,"打印工单")]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -99,6 +97,7 @@ class AddOrderPage(BasePage):
 
     def input_phoneNum(self,phoneNum):
         '''输入联系人手机号'''
+        self.clear_input(self.phone_num_input)
         self.input_message(self.phone_num_input,phoneNum)
 
     def select_server_address(self,serverAddress):
@@ -201,10 +200,6 @@ class AddOrderPage(BasePage):
     def create_title_is_displayed(self):
         '''判断 添加工单的table是否关闭'''
         return self.is_display(self.add_order_page_title)
-
-    def print_order_info(self):
-        '''打印工单按钮切换窗口'''
-        self.click_button(self.print_order_btn)
 
     def create_order_main(self,name,phoneNum,serverAdd,collage,orderType,
                           server_type_select,brands,kinds,branchName=None):

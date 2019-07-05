@@ -40,33 +40,25 @@ class Visit_Order(unittest.TestCase):
         PassWord = rwconfig.read_config_data('蓝魔科技','password')
         #网点登录
         self.loginPage.login_main(UserName,PassWord)
-        # #添加订单默认为需返单订单，便于测试
-        # OrderData = getData.GetTestData()["CreateOrder"][-1]
-        # #获取添加订单数据信息
-        # self.OpenUrl = getData.GetTestData()["AddOrderUrl"]
-        # self.Name = OrderData["username"]
-        # self.PhoneNum = OrderData["PhoneNum"]
-        # self.ServerAdd = OrderData["ServerAddress"]
-        # self.Collage = OrderData["Collage"]
-        # self.OrderType = OrderData["OrderType"]
-        # self.BranchName = OrderData["Branch"]
-        # self.ServerType = OrderData["ServerType"]
-        # self.Brands = OrderData["Brands"]
-        # self.Kinds = OrderData["Kinds"]
-        # self.Expect = OrderData["expect"]
-        # #添加订单
-        # self.addOrderPage.AddOrderMain(self.OpenUrl,self.Name,self.PhoneNum,self.ServerAdd,self.Collage,self.OrderType,self.BranchName,
-        #                               self.ServerType,self.Brands,self.Kinds,self.Expect)
-        # #获取创建成功的订单单号
-        # self.OrderNumber = self.basePage.GetNewOrderNum()
-        # #获取派单数据
-        # Master = getData.GetTestData()["PleaseOrder"]["ToMaster"][-1]["MasterName"]
-        # #派单
-        # self.pleaseOrderPage.PleaseOrderMain(self.OrderNumber,Master)
-        # #完成服务
-        # self.finishOrder.FinishOrderMain(FinishUrl,self.OrderNumber)
-        #获取工单单号
-        self.OrderNumber = rwconfig.read_config_data('ReturnOrder','id',orderNumPath)
+        # 获取订单信息
+        user = rwconfig.read_config_data("NotReturnOrder", "用户姓名", orderInfo)
+        phe = rwconfig.read_config_data("NotReturnOrder", "联系方式", orderInfo)
+        address = rwconfig.read_config_data("NotReturnOrder", "服务地址", orderInfo)
+        collage = rwconfig.read_config_data("NotReturnOrder", "详细地址", orderInfo)
+        order_type = rwconfig.read_config_data("NotReturnOrder", "工单类型", orderInfo)
+        server = rwconfig.read_config_data("NotReturnOrder", "服务类型", orderInfo)
+        brands = rwconfig.read_config_data("NotReturnOrder", "品牌", orderInfo)
+        kinds = rwconfig.read_config_data("NotReturnOrder", "品类", orderInfo)
+        # 经销商下单程序下单
+        self.addOrderPage.create_order_main(user, phe, address, collage, order_type, server, brands, kinds)
+        # 获取单号
+        self.OrderNumber = self.basePage.get_order_number()
+        #获取派单数据
+        Master = rwconfig.read_config_data('蓝魔科技','master001')
+        #派单
+        self.pleaseOrderPage.please_order_main(self.OrderNumber,Master)
+        #完成服务
+        self.finishOrder.finish_order_main(self.OrderNumber)
         #进入回访页面
         self.visitOrder.enter_visit_order_page()
 

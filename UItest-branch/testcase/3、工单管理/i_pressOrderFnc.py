@@ -1,0 +1,205 @@
+#-*- coding: utf-8 -*-
+
+#@Author  : Mr.Deng
+#@Time    : 2019/7/5 14:09
+
+from public.common import getdata,mytest,writetestresult
+from public.common.rwconfig import read_config_data
+from public.common.assertmode import Assert
+from public.common.basepage import BasePage
+from public.common.driver import browser_driver
+from public.page.loginPage import LoginPage
+from public.page.addOrderPage import AddOrderPage
+from public.page.pleaseOrderPage import PleaseOrderPage
+from public.page.orderDetailsPage import OrderDetailsPage
+from config.pathconfig import *
+import unittest,ddt,datetime
+"""
+订单详情页按钮功能测试用例：
+1、预约订单-预约时间为空校验 2、预约订单-预约成功校验 3、修改预约-成功修改预约校验 4、修改订单-修改订单手机号校验
+5、催单-催单信息内容为空校验 6、催单-催单成功校验 7、新建工单-直接新建工单校验" 8、打印工单-打印工单页面跳转校验
+"""
+#获取ddt测试数据
+data = getdata.get_test_data()["OrderDetailPage"]
+appoint_data = data["appoint_order_fnc"]
+cui_data = data["cui_order_fnc"]
+#默认写入测试结果
+isWrite=True
+@ddt.ddt
+class Order_Details(unittest.TestCase):
+    
+    @classmethod
+    def setUpClass(cls):
+        #设置浏览器驱动
+        cls.driver = browser_driver()
+        #实例化
+        cls.base_page = BasePage(cls.driver)
+        cls.login = LoginPage(cls.driver)
+        cls.create_order = AddOrderPage(cls.driver)
+        cls.please_order = PleaseOrderPage(cls.driver)
+        cls.order_detail = OrderDetailsPage(cls.driver)
+        cls.assert_mode = Assert(cls.driver)
+        mytest.start_test()
+        #登录网点 蓝魔科技
+        cls.Use = read_config_data('蓝魔科技',"username")
+        cls.Pwd = read_config_data('蓝魔科技',"password")
+        cls.login.login_main(cls.Use,cls.Pwd)
+        #新建工单-获取订单信息
+        user = read_config_data("NotReturnOrder","用户姓名",orderInfo)
+        phe = read_config_data("NotReturnOrder","联系方式",orderInfo)
+        address = read_config_data("NotReturnOrder","服务地址",orderInfo)
+        collage = read_config_data("NotReturnOrder","详细地址",orderInfo)
+        order_type = read_config_data("NotReturnOrder","工单类型",orderInfo)
+        server = read_config_data("NotReturnOrder","服务类型",orderInfo)
+        brands = read_config_data("NotReturnOrder","品牌",orderInfo)
+        kinds = read_config_data("NotReturnOrder","品类",orderInfo)
+        #经销商下单程序下单
+        cls.create_order.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
+        #获取工单单号
+        cls.order_number = cls.base_page.get_order_number()
+        #获取派单师傅
+        master = read_config_data('蓝魔科技','master001')
+        #派单到师傅
+        cls.please_order.please_order_main(cls.order_number,master)
+
+    def setUp(self):
+        """工共操作"""
+        #刷新
+        self.base_page.refresh_page()
+        #进入订单列表页
+        self.please_order.enter_please_order_page()
+        #进入订单详情
+        self.base_page.open_order_message(self.order_number)
+
+    @ddt.data(*appoint_data)
+    def test_order_details001(self,appoint_data):
+        """订单详情页预约功能测试用例"""
+        #打印测试用例名称
+        self.base_page.print_case_name(appoint_data["CaseName"])
+        #点击预约按钮
+        self.order_detail.click_appoint_btn()
+        #清除预约日期
+        self.order_detail.clear_appoint_date()
+        #输入预约日期
+        self.order_detail.input_appoint_date()
+        #点击空白区
+        self.order_detail.click_white_place()
+        #选择预约时间
+        self.order_detail.select_appoint_time(appoint_data["AppointTime"])
+        #点击确定预约
+        self.order_detail.click_confirm_appoint_btn()
+        #断言
+        isSuccess1 = self.assert_mode.assert_equal(appoint_data["expect"],self.base_page.get_system_msg())
+        #写入结果
+        writetestresult.write_test_result(isWrite,isSuccess1,'OrderDetails',appoint_data["CaseName"])
+
+    def test_order_details002(self):
+        """订单详情页修改预约功能测试用例"""
+        #获取测试数据
+        alter_appoint_data = data["alter_appoint_fnc"]
+        #打印测试用例名称
+        self.base_page.print_case_name(alter_appoint_data["CaseName"])
+        #点击修改预约按钮
+        self.order_detail.click_alter_appoint_btn()
+        # 清除预约日期
+        self.order_detail.clear_appoint_date()
+        #输入预约日期
+        self.order_detail.input_appoint_date(alter=True)
+        # 点击空白区
+        self.order_detail.click_white_place()
+        #选择预约时间
+        self.order_detail.select_appoint_time(alter_appoint_data["AppointTime"])
+        #点击确定预约
+        self.order_detail.confirm_appoint_btn()
+        #断言
+        isSuccess1 = self.assert_mode.assert_equal(alter_appoint_data["expect"],self.base_page.get_system_msg())
+        #获取当前日期后一天修改预约判断用
+        alter_date = str(datetime.datetime.now().date()+datetime.timedelta(1))
+        #判断修改的预约时间在订单详情页已经改变
+        isSuccess2 = self.assert_mode.assert_in(alter_date,self.order_detail.get_appoint_text())
+        #写入结果
+        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'OrderDetails',alter_appoint_data["CaseName"])
+
+    def test_order_details003(self):
+        """订单详情页修改订单内容功能用例"""
+        #获取测试数据
+        alter_order_data = data["alter_order_fnc"]
+        #打印测试用例名称
+        self.base_page.print_case_name(alter_order_data["CaseName"])
+        #点击修改订单
+        self.order_detail.click_alter_order_btn()
+        #输入手机号
+        self.create_order.input_phoneNum(alter_order_data["PhoneNum"])
+        #点击保存订单
+        self.create_order.click_save_btn()
+        #进入订单详情判断
+        self.base_page.open_order_message(self.order_number)
+        #获取修改字段
+        alter_text = self.order_detail.get_alter_text_of_order()
+        #判断修改订单成功
+        isSuccess = self.assert_mode.assert_in(alter_text,self.order_detail.get_appoint_text())
+        #写入结果
+        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',alter_order_data["CaseName"])
+
+    @ddt.data(*cui_data)
+    def test_order_details004(self,cui_data):
+        """订单详情催单功能测试用例"""
+        #打印测试用例名称
+        self.base_page.print_case_name(cui_data["CaseName"])
+        #点击预约按钮
+        self.order_detail.click_cui_order_btn()
+        #输入催单备注
+        self.order_detail.input_cui_of_reason(cui_data["CuiReason"])
+        #点击确定催单
+        self.order_detail.click_confirm_cui_order()
+        #断言
+        isSuccess = self.assert_mode.assert_equal(cui_data["expect"],self.base_page.get_system_msg())
+        #写入结果
+        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',cui_data["CaseName"])
+
+    def test_order_details005(self):
+        """订单详情页新建订单功能用例"""
+        #获取测试数据
+        create_order_data = data["new_create_fnc"]
+        #打印测试用例名称
+        self.base_page.print_case_name(create_order_data["CaseName"])
+        #点击新建订单
+        self.order_detail.click_new_create_btn()
+        #点击保存订单
+        self.create_order.click_save_btn()
+        #判断新建订单成功
+        isSuccess = self.assert_mode.assert_equal(create_order_data["expect"],self.base_page.get_system_msg())
+        #写入结果
+        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',create_order_data["CaseName"])
+
+    def test_order_details006(self):
+        """订单详情页打印订单功能用例"""
+        #获取测试数据
+        print_order_data = data["print_order_fnc"]
+        #打印测试用例名称
+        self.base_page.print_case_name(print_order_data["CaseName"])
+        #获取当前窗口handle
+        old_handle = self.base_page.get_current_handle()
+        #点击打印订单
+        self.order_detail.click_print_order_btn()
+        #获取全部handles
+        handles = self.base_page.get_all_handles()
+        #切换页面
+        self.base_page.switch_window_handle(handles,old_handle)
+        #判断新建订单成功
+        isSuccess = self.assert_mode.assert_equal(print_order_data["expect"],self.base_page.get_title())
+        #写入结果
+        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',print_order_data["CaseName"])
+
+if __name__ == '__main__':
+    unittest.main()
+
+    suit = unittest.TestSuite()
+    suit.addTest(Order_Details("test_order_details001"))
+    suit.addTest(Order_Details("test_order_details002"))
+    suit.addTest(Order_Details("test_order_details003"))
+    suit.addTest(Order_Details("test_order_details004"))
+    suit.addTest(Order_Details("test_order_details005"))
+    suit.addTest(Order_Details("test_order_details006"))
+
+    unittest.TextTestRunner().run(suit)

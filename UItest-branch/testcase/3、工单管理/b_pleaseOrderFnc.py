@@ -3,7 +3,8 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/6/3 10:24
 
-from public.common import rwconfig,writetestresult
+from public.common import writetestresult
+from public.common.rwconfig import read_config_data
 from public.common import driver,getdata,mytest
 from public.common.assertmode import Assert
 from public.common.basepage import BasePage
@@ -11,7 +12,7 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.addOrderPage import AddOrderPage
 from public.page.loginPage import LoginPage
 from config.pathconfig import *
-import unittest,logging,ddt
+import unittest,ddt
 '''
 网点派单功能测试用例脚本：
 1、派单-选择工单为空点击派单按钮校验 2、派单-按师傅名称搜索校验 3、派单-按手机号搜索校验 4、派单-派单师傅为空校验
@@ -41,29 +42,24 @@ class Please_Order(unittest.TestCase):
         #开始
         mytest.start_test()
         #获取网点登录数据
-        UserName = rwconfig.read_config_data('蓝魔科技','username')
-        PassWord = rwconfig.read_config_data('蓝魔科技','password')
+        UserName = read_config_data('蓝魔科技','username')
+        PassWord = read_config_data('蓝魔科技','password')
         #网点登录
         cls.loginPage.login_main(UserName,PassWord)
-        # #添加订单默认为需返单订单，便于测试
-        # OrderData = getData.GetJsonData()["CreateOrder"][-1]
-        # #获取添加订单数据信息
-        # cls.OpenUrl = getData.GetJsonData()["AddOrderUrl"]
-        # cls.Name = OrderData["username"]
-        # cls.PhoneNum = OrderData["PhoneNum"]
-        # cls.ServerAdd = OrderData["ServerAddress"]
-        # cls.Collage = OrderData["Collage"]
-        # cls.OrderType = OrderData["OrderType"]
-        # cls.BranchName = OrderData["Branch"]
-        # cls.ServerType = OrderData["ServerType"]
-        # cls.Brands = OrderData["Brands"]
-        # cls.Kinds = OrderData["Kinds"]
-        # cls.Expect = OrderData["expect"]
-        # #添加订单
-        # cls.addOrderPage.AddOrderMain(cls.OpenUrl,cls.Name,cls.PhoneNum,cls.ServerAdd,cls.Collage,cls.OrderType,cls.BranchName,
-        #                               cls.ServerType,cls.Brands,cls.Kinds,cls.Expect)
-        #获取创建成功的订单单号(新建订单的测试用力中会把新建订单单号写入configData 配置文件中)
-        cls.OrderNumber = rwconfig.read_config_data('ReturnOrder','id',orderNumPath)
+        # 获取订单信息
+        user = read_config_data("ReturnOrder", "用户姓名", orderInfo)
+        phe = read_config_data("ReturnOrder", "联系方式", orderInfo)
+        address = read_config_data("ReturnOrder", "服务地址", orderInfo)
+        collage = read_config_data("ReturnOrder", "详细地址", orderInfo)
+        order_type = read_config_data("ReturnOrder", "工单类型", orderInfo)
+        server = read_config_data("ReturnOrder", "服务类型", orderInfo)
+        brands = read_config_data("ReturnOrder", "品牌", orderInfo)
+        kinds = read_config_data("ReturnOrder", "品类", orderInfo)
+        branch_name = read_config_data("ReturnOrder", "服务商", orderInfo)
+        # 经销商下单程序下单
+        cls.addOrderPage.create_order_main(user, phe, address, collage, order_type, server, brands, kinds,branch_name)
+        # 获取单号
+        cls.OrderNumber = cls.basePage.get_order_number()
         #进入派单页面
         cls.pleaseOrderPage.enter_please_order_page()
 

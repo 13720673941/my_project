@@ -84,11 +84,11 @@ class VisitOrderPage(BasePage):
         '''点击确定按钮'''
         self.click_button(self.confirm_btn)
 
-    def visit_order_main(self,url,orderNumber,serverStatus,safetyAssess,visitMoney,visitResult):
+    def visit_order_main(self,orderNumber,serverStatus,safetyAssess,visitMoney,visitResult):
         '''订单回访主程序'''
         log.info('-=【订单回访】=-')
         #进入完工订单列表页面
-        self.open_url(url)
+        self.enter_visit_order_page()
         #选择工单
         self.select_new_order(orderNumber)
         #点击回访按钮

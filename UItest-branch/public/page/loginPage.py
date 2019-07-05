@@ -51,7 +51,7 @@ class LoginPage(BasePage):#所有的操作继承Base基类
         '''点击退出按钮'''
         self.click_button(self.logout_btn)
 
-    def login_main(self,UserName,PassWord,Url='http://www.51shouhou.cn/singleBranch/#/login'):
+    def login_main(self,UserName,PassWord):
         '''
         :param UserName: 登录用户名
         :param PassWord: 登录密码
@@ -59,7 +59,7 @@ class LoginPage(BasePage):#所有的操作继承Base基类
         '''
         log.info('-=【网点登录】=-')
         self.wait()
-        self.open_url(Url)
+        self.enter_login_page()
         self.input_username(UserName)
         self.input_password(PassWord)
         self.click_login_button()

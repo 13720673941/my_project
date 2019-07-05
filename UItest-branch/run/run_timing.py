@@ -17,7 +17,7 @@ if __name__ == '__main__':
     isPass = False
     #定时间
     startTime = time.time()
-    timing = '09:10'
+    timing = '13:02'
     while True:
         #获取当前时间
         time.sleep(1)
@@ -43,6 +43,6 @@ if __name__ == '__main__':
         #脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
         #发送邮件
-        SE.SendEmailMain(start_time=timing,run_time=runtime)
+        # SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')

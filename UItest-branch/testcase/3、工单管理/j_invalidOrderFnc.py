@@ -52,7 +52,7 @@ class Set_InvalidOrder(unittest.TestCase):
         brands = rwconfig.read_config_data("NotReturnOrder","品牌",orderInfo)
         kinds = rwconfig.read_config_data("NotReturnOrder","品类",orderInfo)
         #经销商下单程序下单
-        cls.create_order_page.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
+        cls.addOrderPage.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
         #获取创建成功的订单单号
         cls.OrderNumber = cls.basePage.get_order_number()
 
