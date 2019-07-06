@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Register/Login Test Result</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">Register/Login Test Result</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2019-07-06 13:15:33</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:01:46.761917</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 20，通过 20，通过率= 100.00%</p>
+
+<p class='description'>register and login case test result.</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 20 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 20 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>1、注册登录.a_registerFnc.Register_Branch</td>
+    <td class="text-center">14</td>
+    <td class="text-center">14</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',14)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_01: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align='left'>
+    <pre>
+    
+pt1_1: 2019-07-06 13:15:40,511 - INFO - SUCCESS  Load case name: 1、注册-用户名为空校验
+2019-07-06 13:15:40,922 - INFO - SUCCESS  Refresh current page, Spend 0.40976643562316895 seconds.
+2019-07-06 13:15:41,223 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.2998318672180176 seconds.
+2019-07-06 13:15:41,278 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.35379719734191895 seconds.
+2019-07-06 13:15:41,334 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.054968833923339844 seconds.
+2019-07-06 13:15:41,397 - INFO - SUCCESS  Input message: , Spend 0.11793327331542969 seconds
+2019-07-06 13:15:43,397 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:43,413 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.013992786407470703 seconds.
+2019-07-06 13:15:43,596 - INFO - SUCCESS  Input message: 11111111111, Spend 0.19688773155212402 seconds
+2019-07-06 13:15:43,619 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.02298760414123535 seconds.
+2019-07-06 13:15:43,735 - INFO - SUCCESS  Input message: 88888888, Spend 0.13892102241516113 seconds
+2019-07-06 13:15:43,760 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.02398514747619629 seconds.
+2019-07-06 13:15:43,850 - INFO - SUCCESS  Input message: 111111, Spend 0.11293435096740723 seconds
+2019-07-06 13:15:43,868 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.01798844337463379 seconds.
+2019-07-06 13:15:43,942 - INFO - SUCCESS  Input message: 111111, Spend 0.09094691276550293 seconds
+2019-07-06 13:15:43,959 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.01699042320251465 seconds.
+2019-07-06 13:15:44,007 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.06496524810791016 seconds.
+2019-07-06 13:15:46,010 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:46,058 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.04594159126281738 seconds.
+2019-07-06 13:15:46,118 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入用户名, Spend 0.10593819618225098 seconds.
+2019-07-06 13:15:46,120 - INFO - SUCCESS  Expect: 请输入用户名 equal Faction: 请输入用户名, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_02: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align='left'>
+    <pre>
+    
+pt1_2: 2019-07-06 13:15:46,136 - INFO - SUCCESS  Load case name: 2、注册-手机号为空校验
+2019-07-06 13:15:46,687 - INFO - SUCCESS  Refresh current page, Spend 0.5486528873443604 seconds.
+2019-07-06 13:15:46,709 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.02098846435546875 seconds.
+2019-07-06 13:15:46,780 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.09394645690917969 seconds.
+2019-07-06 13:15:46,801 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.01898932456970215 seconds.
+2019-07-06 13:15:46,953 - INFO - SUCCESS  Input message: AutoTest, Spend 0.17090106010437012 seconds
+2019-07-06 13:15:48,954 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:48,986 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.0300142765045166 seconds.
+2019-07-06 13:15:49,107 - INFO - SUCCESS  Input message: , Spend 0.15091657638549805 seconds
+2019-07-06 13:15:49,122 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.013991832733154297 seconds.
+2019-07-06 13:15:49,251 - INFO - SUCCESS  Input message: 88888888, Spend 0.14191770553588867 seconds
+2019-07-06 13:15:49,262 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.009973764419555664 seconds.
+2019-07-06 13:15:49,333 - INFO - SUCCESS  Input message: 111111, Spend 0.08194756507873535 seconds
+2019-07-06 13:15:49,346 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.011993408203125 seconds.
+2019-07-06 13:15:49,406 - INFO - SUCCESS  Input message: 111111, Spend 0.07096004486083984 seconds
+2019-07-06 13:15:49,417 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.01098942756652832 seconds.
+2019-07-06 13:15:49,470 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.0629587173461914 seconds.
+2019-07-06 13:15:51,471 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:51,481 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.007997274398803711 seconds.
+2019-07-06 13:15:51,498 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入正确手机号码, Spend 0.025987863540649414 seconds.
+2019-07-06 13:15:51,499 - INFO - SUCCESS  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_03: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align='left'>
+    <pre>
+    
+pt1_3: 2019-07-06 13:15:51,505 - INFO - SUCCESS  Load case name: 3、注册-验证码为空校验
+2019-07-06 13:15:51,965 - INFO - SUCCESS  Refresh current page, Spend 0.45973753929138184 seconds.
+2019-07-06 13:15:52,017 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.05196738243103027 seconds.
+2019-07-06 13:15:52,072 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.10593843460083008 seconds.
+2019-07-06 13:15:52,090 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.01698613166809082 seconds.
+2019-07-06 13:15:52,268 - INFO - SUCCESS  Input message: AutoTest, Spend 0.19587945938110352 seconds
+2019-07-06 13:15:54,271 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:54,302 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.02898573875427246 seconds.
+2019-07-06 13:15:54,480 - INFO - SUCCESS  Input message: 11111111111, Spend 0.20688176155090332 seconds
+2019-07-06 13:15:54,490 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.008994579315185547 seconds.
+2019-07-06 13:15:54,528 - INFO - SUCCESS  Input message: , Spend 0.04697251319885254 seconds
+2019-07-06 13:15:54,541 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.011992216110229492 seconds.
+2019-07-06 13:15:54,618 - INFO - SUCCESS  Input message: 111111, Spend 0.08994770050048828 seconds
+2019-07-06 13:15:54,632 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.01199197769165039 seconds.
+2019-07-06 13:15:54,713 - INFO - SUCCESS  Input message: 111111, Spend 0.09394550323486328 seconds
+2019-07-06 13:15:54,727 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.012991666793823242 seconds.
+2019-07-06 13:15:54,787 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.07197165489196777 seconds.
+2019-07-06 13:15:56,788 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:56,817 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.027014970779418945 seconds.
+2019-07-06 13:15:56,876 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入短信验证码, Spend 0.0859527587890625 seconds.
+2019-07-06 13:15:56,878 - INFO - SUCCESS  Expect: 请输入短信验证码 equal Faction: 请输入短信验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_04: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align='left'>
+    <pre>
+    
+pt1_4: 2019-07-06 13:15:56,891 - INFO - SUCCESS  Load case name: 4、注册-新密码为空校验
+2019-07-06 13:15:57,375 - INFO - SUCCESS  Refresh current page, Spend 0.48271918296813965 seconds.
+2019-07-06 13:15:57,394 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.01898980140686035 seconds.
+2019-07-06 13:15:57,446 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.06995892524719238 seconds.
+2019-07-06 13:15:57,462 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.014998674392700195 seconds.
+2019-07-06 13:15:57,585 - INFO - SUCCESS  Input message: AutoTest, Spend 0.1379246711730957 seconds
+2019-07-06 13:15:59,586 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:15:59,617 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.02898550033569336 seconds.
+2019-07-06 13:15:59,803 - INFO - SUCCESS  Input message: 11111111111, Spend 0.21488046646118164 seconds
+2019-07-06 13:15:59,813 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.009002685546875 seconds.
+2019-07-06 13:15:59,894 - INFO - SUCCESS  Input message: 88888888, Spend 0.08994889259338379 seconds
+2019-07-06 13:15:59,908 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.012992382049560547 seconds.
+2019-07-06 13:15:59,952 - INFO - SUCCESS  Input message: , Spend 0.056975364685058594 seconds
+2019-07-06 13:15:59,961 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.007992982864379883 seconds.
+2019-07-06 13:16:00,050 - INFO - SUCCESS  Input message: 111111, Spend 0.09694290161132812 seconds
+2019-07-06 13:16:00,062 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.010993003845214844 seconds.
+2019-07-06 13:16:00,121 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.0699608325958252 seconds.
+2019-07-06 13:16:02,124 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:02,150 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.02298569679260254 seconds.
+2019-07-06 13:16:02,183 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入6-18位登录密码, Spend 0.05698847770690918 seconds.
+2019-07-06 13:16:02,185 - INFO - SUCCESS  Expect: 请输入6-18位登录密码 equal Faction: 请输入6-18位登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_05: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" align='left'>
+    <pre>
+    
+pt1_5: 2019-07-06 13:16:02,193 - INFO - SUCCESS  Load case name: 5、注册-确认密码为空校验
+2019-07-06 13:16:02,728 - INFO - SUCCESS  Refresh current page, Spend 0.5346746444702148 seconds.
+2019-07-06 13:16:02,748 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.018976449966430664 seconds.
+2019-07-06 13:16:02,806 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.07694530487060547 seconds.
+2019-07-06 13:16:02,830 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.022002696990966797 seconds.
+2019-07-06 13:16:02,976 - INFO - SUCCESS  Input message: AutoTest, Spend 0.16790032386779785 seconds
+2019-07-06 13:16:04,977 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:05,008 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.029013395309448242 seconds.
+2019-07-06 13:16:05,190 - INFO - SUCCESS  Input message: 11111111111, Spend 0.21187686920166016 seconds
+2019-07-06 13:16:05,203 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.011994600296020508 seconds.
+2019-07-06 13:16:05,301 - INFO - SUCCESS  Input message: 88888888, Spend 0.10993838310241699 seconds
+2019-07-06 13:16:05,312 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.00999593734741211 seconds.
+2019-07-06 13:16:05,388 - INFO - SUCCESS  Input message: 111111, Spend 0.08495235443115234 seconds
+2019-07-06 13:16:05,401 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.012993097305297852 seconds.
+2019-07-06 13:16:05,435 - INFO - SUCCESS  Input message: , Spend 0.046973228454589844 seconds
+2019-07-06 13:16:05,445 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.0099945068359375 seconds.
+2019-07-06 13:16:05,495 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.058966875076293945 seconds.
+2019-07-06 13:16:07,497 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:07,525 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.025955677032470703 seconds.
+2019-07-06 13:16:07,559 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 确认登录密码须与密码相同, Spend 0.06093335151672363 seconds.
+2019-07-06 13:16:07,560 - INFO - SUCCESS  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_06: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" align='left'>
+    <pre>
+    
+pt1_6: 2019-07-06 13:16:07,566 - INFO - SUCCESS  Load case name: 6、注册-已经注册的用户名校验
+2019-07-06 13:16:08,054 - INFO - SUCCESS  Refresh current page, Spend 0.48671746253967285 seconds.
+2019-07-06 13:16:08,070 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.014992237091064453 seconds.
+2019-07-06 13:16:08,132 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.07695698738098145 seconds.
+2019-07-06 13:16:08,145 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.01199483871459961 seconds.
+2019-07-06 13:16:08,265 - INFO - SUCCESS  Input message: branch01, Spend 0.13192486763000488 seconds
+2019-07-06 13:16:10,268 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:10,302 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.031951189041137695 seconds.
+2019-07-06 13:16:10,455 - INFO - SUCCESS  Input message: 11111111111, Spend 0.18486261367797852 seconds
+2019-07-06 13:16:10,465 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.009997367858886719 seconds.
+2019-07-06 13:16:10,664 - INFO - SUCCESS  Input message: 88888888, Spend 0.20888066291809082 seconds
+2019-07-06 13:16:10,679 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.013991355895996094 seconds.
+2019-07-06 13:16:10,794 - INFO - SUCCESS  Input message: 111111, Spend 0.1279299259185791 seconds
+2019-07-06 13:16:10,808 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.012992143630981445 seconds.
+2019-07-06 13:16:10,882 - INFO - SUCCESS  Input message: 111111, Spend 0.08695006370544434 seconds
+2019-07-06 13:16:10,895 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.011994600296020508 seconds.
+2019-07-06 13:16:10,965 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.08195257186889648 seconds.
+2019-07-06 13:16:12,966 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:12,990 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.02299642562866211 seconds.
+2019-07-06 13:16:13,043 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: branch01已存在, Spend 0.07695579528808594 seconds.
+2019-07-06 13:16:13,044 - INFO - SUCCESS  Expect: branch01已存在 equal Faction: branch01已存在, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_07: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in" align='left'>
+    <pre>
+    
+pt1_7: 2019-07-06 13:16:13,051 - INFO - SUCCESS  Load case name: 7、注册-已经注册的手机号校验
+2019-07-06 13:16:13,537 - INFO - SUCCESS  Refresh current page, Spend 0.4857008457183838 seconds.
+2019-07-06 13:16:13,549 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.009993314743041992 seconds.
+2019-07-06 13:16:13,612 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.07395720481872559 seconds.
+2019-07-06 13:16:13,630 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.017989635467529297 seconds.
+2019-07-06 13:16:13,750 - INFO - SUCCESS  Input message: AutoTest, Spend 0.13692188262939453 seconds
+2019-07-06 13:16:15,752 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:15,785 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.030984163284301758 seconds.
+2019-07-06 13:16:15,960 - INFO - SUCCESS  Input message: 13720673941, Spend 0.20588135719299316 seconds
+2019-07-06 13:16:15,971 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.010993480682373047 seconds.
+2019-07-06 13:16:16,055 - INFO - SUCCESS  Input message: 88888888, Spend 0.09394574165344238 seconds
+2019-07-06 13:16:16,067 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.011991739273071289 seconds.
+2019-07-06 13:16:16,138 - INFO - SUCCESS  Input message: 111111, Spend 0.08195781707763672 seconds
+2019-07-06 13:16:16,147 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.008994340896606445 seconds.
+2019-07-06 13:16:16,244 - INFO - SUCCESS  Input message: 111111, Spend 0.10593843460083008 seconds
+2019-07-06 13:16:16,257 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.010993003845214844 seconds.
+2019-07-06 13:16:16,306 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.06096673011779785 seconds.
+2019-07-06 13:16:18,306 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:18,320 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.012994766235351562 seconds.
+2019-07-06 13:16:18,349 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 手机号码已存在, Spend 0.04197525978088379 seconds.
+2019-07-06 13:16:18,350 - INFO - SUCCESS  Expect: 手机号码已存在 equal Faction: 手机号码已存在, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_08: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align='left'>
+    <pre>
+    
+pt1_8: 2019-07-06 13:16:18,356 - INFO - SUCCESS  Load case name: 8、注册-错误验证码校验
+2019-07-06 13:16:19,070 - INFO - SUCCESS  Refresh current page, Spend 0.7125723361968994 seconds.
+2019-07-06 13:16:19,083 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.010992050170898438 seconds.
+2019-07-06 13:16:19,137 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.06496167182922363 seconds.
+2019-07-06 13:16:19,149 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.011992216110229492 seconds.
+2019-07-06 13:16:19,265 - INFO - SUCCESS  Input message: AutoTest, Spend 0.12792730331420898 seconds
+2019-07-06 13:16:21,267 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:21,279 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.010973691940307617 seconds.
+2019-07-06 13:16:21,437 - INFO - SUCCESS  Input message: 11111111111, Spend 0.16988277435302734 seconds
+2019-07-06 13:16:21,453 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.013993024826049805 seconds.
+2019-07-06 13:16:21,527 - INFO - SUCCESS  Input message: 111111, Spend 0.0879507064819336 seconds
+2019-07-06 13:16:21,539 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.009993314743041992 seconds.
+2019-07-06 13:16:21,607 - INFO - SUCCESS  Input message: 111111, Spend 0.07895565032958984 seconds
+2019-07-06 13:16:21,619 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.011992454528808594 seconds.
+2019-07-06 13:16:21,677 - INFO - SUCCESS  Input message: 111111, Spend 0.06895923614501953 seconds
+2019-07-06 13:16:21,687 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.008994817733764648 seconds.
+2019-07-06 13:16:21,757 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.07995414733886719 seconds.
+2019-07-06 13:16:23,759 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:23,788 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.027014970779418945 seconds.
+2019-07-06 13:16:23,841 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 验证码不符, Spend 0.08097600936889648 seconds.
+2019-07-06 13:16:23,842 - INFO - SUCCESS  Expect: 验证码不符 equal Faction: 验证码不符, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_09: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in" align='left'>
+    <pre>
+    
+pt1_9: 2019-07-06 13:16:23,850 - INFO - SUCCESS  Load case name: 9、注册-两个密码不同校验
+2019-07-06 13:16:24,384 - INFO - SUCCESS  Refresh current page, Spend 0.5316722393035889 seconds.
+2019-07-06 13:16:24,397 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.011992931365966797 seconds.
+2019-07-06 13:16:24,449 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.06496214866638184 seconds.
+2019-07-06 13:16:24,464 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.012992382049560547 seconds.
+2019-07-06 13:16:24,584 - INFO - SUCCESS  Input message: AutoTest, Spend 0.13392400741577148 seconds
+2019-07-06 13:16:26,585 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:26,600 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.0139923095703125 seconds.
+2019-07-06 13:16:26,756 - INFO - SUCCESS  Input message: 11111111111, Spend 0.1699049472808838 seconds
+2019-07-06 13:16:26,769 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.010993003845214844 seconds.
+2019-07-06 13:16:26,882 - INFO - SUCCESS  Input message: 88888888, Spend 0.12392830848693848 seconds
+2019-07-06 13:16:26,896 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.013987302780151367 seconds.
+2019-07-06 13:16:26,980 - INFO - SUCCESS  Input message: 111111, Spend 0.09794068336486816 seconds
+2019-07-06 13:16:26,991 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.010992765426635742 seconds.
+2019-07-06 13:16:27,051 - INFO - SUCCESS  Input message: 222222, Spend 0.07095885276794434 seconds
+2019-07-06 13:16:27,061 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.008995532989501953 seconds.
+2019-07-06 13:16:27,111 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.058966636657714844 seconds.
+2019-07-06 13:16:29,112 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:29,123 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.010004997253417969 seconds.
+2019-07-06 13:16:29,139 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 确认登录密码须与密码相同, Spend 0.02698516845703125 seconds.
+2019-07-06 13:16:29,140 - INFO - SUCCESS  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_10: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse in" align='left'>
+    <pre>
+    
+pt1_10: 2019-07-06 13:16:29,144 - INFO - SUCCESS  Load case name: 10、注册-用户名格式校验
+2019-07-06 13:16:29,610 - INFO - SUCCESS  Refresh current page, Spend 0.46471309661865234 seconds.
+2019-07-06 13:16:29,627 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.015990257263183594 seconds.
+2019-07-06 13:16:29,678 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.06796073913574219 seconds.
+2019-07-06 13:16:29,693 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.013992786407470703 seconds.
+2019-07-06 13:16:29,789 - INFO - SUCCESS  Input message: ！@#￥%, Spend 0.10993766784667969 seconds
+2019-07-06 13:16:31,789 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:31,807 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.017006397247314453 seconds.
+2019-07-06 13:16:31,977 - INFO - SUCCESS  Input message: 11111111111, Spend 0.1868891716003418 seconds
+2019-07-06 13:16:31,991 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.012992620468139648 seconds.
+2019-07-06 13:16:32,227 - INFO - SUCCESS  Input message: 88888888, Spend 0.24885845184326172 seconds
+2019-07-06 13:16:32,241 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.013992547988891602 seconds.
+2019-07-06 13:16:32,359 - INFO - SUCCESS  Input message: 111111, Spend 0.13192439079284668 seconds
+2019-07-06 13:16:32,374 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.013992071151733398 seconds.
+2019-07-06 13:16:32,449 - INFO - SUCCESS  Input message: 111111, Spend 0.08894896507263184 seconds
+2019-07-06 13:16:32,461 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.00999307632446289 seconds.
+2019-07-06 13:16:32,519 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.06796050071716309 seconds.
+2019-07-06 13:16:34,522 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:34,550 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.0259859561920166 seconds.
+2019-07-06 13:16:34,583 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入汉字、字母、0-9、下划线, Spend 0.05896711349487305 seconds.
+2019-07-06 13:16:34,584 - INFO - SUCCESS  Expect: 请输入汉字、字母、0-9、下划线 equal Faction: 请输入汉字、字母、0-9、下划线, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_11: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse in" align='left'>
+    <pre>
+    
+pt1_11: 2019-07-06 13:16:34,588 - INFO - SUCCESS  Load case name: 11、注册-手机号格式校验
+2019-07-06 13:16:34,937 - INFO - SUCCESS  Refresh current page, Spend 0.3468024730682373 seconds.
+2019-07-06 13:16:35,173 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.2348639965057373 seconds.
+2019-07-06 13:16:35,222 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.2848353385925293 seconds.
+2019-07-06 13:16:35,238 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.014992952346801758 seconds.
+2019-07-06 13:16:35,374 - INFO - SUCCESS  Input message: AutoTest, Spend 0.15091347694396973 seconds
+2019-07-06 13:16:37,374 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:37,391 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.014995098114013672 seconds.
+2019-07-06 13:16:37,535 - INFO - SUCCESS  Input message: 137000000, Spend 0.16090798377990723 seconds
+2019-07-06 13:16:37,547 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.009990453720092773 seconds.
+2019-07-06 13:16:37,628 - INFO - SUCCESS  Input message: 88888888, Spend 0.09094715118408203 seconds
+2019-07-06 13:16:37,638 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.009994029998779297 seconds.
+2019-07-06 13:16:37,739 - INFO - SUCCESS  Input message: 111111, Spend 0.11093544960021973 seconds
+2019-07-06 13:16:37,753 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.011992931365966797 seconds.
+2019-07-06 13:16:37,816 - INFO - SUCCESS  Input message: 111111, Spend 0.07595634460449219 seconds
+2019-07-06 13:16:37,828 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.011992454528808594 seconds.
+2019-07-06 13:16:37,886 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.06896090507507324 seconds.
+2019-07-06 13:16:39,888 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:39,918 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.027982711791992188 seconds.
+2019-07-06 13:16:39,946 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入正确手机号码, Spend 0.05696535110473633 seconds.
+2019-07-06 13:16:39,947 - INFO - SUCCESS  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_12: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse in" align='left'>
+    <pre>
+    
+pt1_12: 2019-07-06 13:16:39,951 - INFO - SUCCESS  Load case name: 12、注册-密码特殊字符校验
+2019-07-06 13:16:40,564 - INFO - SUCCESS  Refresh current page, Spend 0.6116514205932617 seconds.
+2019-07-06 13:16:40,583 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.01798725128173828 seconds.
+2019-07-06 13:16:40,630 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.06595945358276367 seconds.
+2019-07-06 13:16:40,639 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.007995367050170898 seconds.
+2019-07-06 13:16:40,766 - INFO - SUCCESS  Input message: AutoTest, Spend 0.1339244842529297 seconds
+2019-07-06 13:16:42,766 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:42,776 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.009010076522827148 seconds.
+2019-07-06 13:16:42,934 - INFO - SUCCESS  Input message: 11111111111, Spend 0.16690516471862793 seconds
+2019-07-06 13:16:42,949 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.01399087905883789 seconds.
+2019-07-06 13:16:43,029 - INFO - SUCCESS  Input message: 88888888, Spend 0.09394574165344238 seconds
+2019-07-06 13:16:43,040 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.009992122650146484 seconds.
+2019-07-06 13:16:43,112 - INFO - SUCCESS  Input message: ！@#！@#, Spend 0.08195090293884277 seconds
+2019-07-06 13:16:43,124 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.010987281799316406 seconds.
+2019-07-06 13:16:43,188 - INFO - SUCCESS  Input message: ！@#！@#, Spend 0.07494974136352539 seconds
+2019-07-06 13:16:43,198 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.009987592697143555 seconds.
+2019-07-06 13:16:43,283 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.0949394702911377 seconds.
+2019-07-06 13:16:45,286 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:45,318 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.030997514724731445 seconds.
+2019-07-06 13:16:45,346 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 密码格式不正确, Spend 0.058960914611816406 seconds.
+2019-07-06 13:16:45,347 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_13' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_13: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse in" align='left'>
+    <pre>
+    
+pt1_13: 2019-07-06 13:16:45,351 - INFO - SUCCESS  Load case name: 13、注册-密码上点值校验
+2019-07-06 13:16:45,825 - INFO - SUCCESS  Refresh current page, Spend 0.4717268943786621 seconds.
+2019-07-06 13:16:45,847 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.021988630294799805 seconds.
+2019-07-06 13:16:45,903 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.075958251953125 seconds.
+2019-07-06 13:16:45,926 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.02198195457458496 seconds.
+2019-07-06 13:16:46,054 - INFO - SUCCESS  Input message: AutoTest, Spend 0.14990973472595215 seconds
+2019-07-06 13:16:48,055 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:48,085 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.028014183044433594 seconds.
+2019-07-06 13:16:48,257 - INFO - SUCCESS  Input message: 11111111111, Spend 0.20088458061218262 seconds
+2019-07-06 13:16:48,268 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.010993719100952148 seconds.
+2019-07-06 13:16:48,355 - INFO - SUCCESS  Input message: 88888888, Spend 0.09694457054138184 seconds
+2019-07-06 13:16:48,367 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.010998249053955078 seconds.
+2019-07-06 13:16:48,426 - INFO - SUCCESS  Input message: 11111, Spend 0.07095932960510254 seconds
+2019-07-06 13:16:48,441 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.01299142837524414 seconds.
+2019-07-06 13:16:48,493 - INFO - SUCCESS  Input message: 11111, Spend 0.06596016883850098 seconds
+2019-07-06 13:16:48,505 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.009993553161621094 seconds.
+2019-07-06 13:16:48,554 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.058966636657714844 seconds.
+2019-07-06 13:16:50,556 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:50,579 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.02098560333251953 seconds.
+2019-07-06 13:16:50,605 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 密码格式不正确, Spend 0.04696989059448242 seconds.
+2019-07-06 13:16:50,606 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_14' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_registerBranch_14: 网点注册测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse in" align='left'>
+    <pre>
+    
+pt1_14: 2019-07-06 13:16:50,611 - INFO - SUCCESS  Load case name: 14、注册-密码离点值校验
+2019-07-06 13:16:50,937 - INFO - SUCCESS  Refresh current page, Spend 0.3248097896575928 seconds.
+2019-07-06 13:16:51,186 - INFO - SUCCESS  Find element &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.24785828590393066 seconds.
+2019-07-06 13:16:51,241 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//p[text()="还没有网点账号？"]/a')&gt;, Spend 0.3028249740600586 seconds.
+2019-07-06 13:16:51,256 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[2]/input')&gt;, Spend 0.013992786407470703 seconds.
+2019-07-06 13:16:51,399 - INFO - SUCCESS  Input message: AutoTest, Spend 0.15691089630126953 seconds
+2019-07-06 13:16:53,400 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:53,425 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[3]/input')&gt;, Spend 0.02301645278930664 seconds.
+2019-07-06 13:16:53,635 - INFO - SUCCESS  Input message: 11111111111, Spend 0.2328650951385498 seconds
+2019-07-06 13:16:53,645 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[4]/input')&gt;, Spend 0.00900411605834961 seconds.
+2019-07-06 13:16:53,727 - INFO - SUCCESS  Input message: 88888888, Spend 0.09094762802124023 seconds
+2019-07-06 13:16:53,738 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[5]/input')&gt;, Spend 0.009989738464355469 seconds.
+2019-07-06 13:16:53,879 - INFO - SUCCESS  Input message: 11111111111111111111, Spend 0.14990901947021484 seconds
+2019-07-06 13:16:53,892 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"企业用户注册")]/../form/ul/li[6]/input')&gt;, Spend 0.010991811752319336 seconds.
+2019-07-06 13:16:54,071 - INFO - SUCCESS  Input message: 11111111111111111111, Spend 0.18989157676696777 seconds
+2019-07-06 13:16:54,083 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.011989116668701172 seconds.
+2019-07-06 13:16:54,137 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[text()="马上注册"]')&gt;, Spend 0.06596088409423828 seconds.
+2019-07-06 13:16:56,138 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-07-06 13:16:56,167 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.027005910873413086 seconds.
+2019-07-06 13:16:56,214 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 密码格式不正确, Spend 0.07394933700561523 seconds.
+2019-07-06 13:16:56,215 - INFO - SUCCESS  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>1、注册登录.b_loginFnc.Branch_Login</td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',6)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align='left'>
+    <pre>
+    
+pt2_1: 2019-07-06 13:17:05,103 - INFO - SUCCESS  Load case name: 1、登录-用户名密码为空校验
+2019-07-06 13:17:05,111 - INFO - SUCCESS  Refresh current page, Spend 0.007994890213012695 seconds.
+2019-07-06 13:17:05,651 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.5286986827850342 seconds.
+2019-07-06 13:17:05,707 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="text"]')&gt; input message, Spend 0.5946621894836426 seconds.
+2019-07-06 13:17:05,716 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.008995294570922852 seconds.
+2019-07-06 13:17:05,741 - INFO - SUCCESS  Input message: , Spend 0.033982276916503906 seconds
+2019-07-06 13:17:05,755 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.013989925384521484 seconds.
+2019-07-06 13:17:05,783 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="password"]')&gt; input message, Spend 0.041980743408203125 seconds.
+2019-07-06 13:17:05,792 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.008011579513549805 seconds.
+2019-07-06 13:17:05,821 - INFO - SUCCESS  Input message: , Spend 0.03697919845581055 seconds
+2019-07-06 13:17:05,836 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.013994693756103516 seconds.
+2019-07-06 13:17:05,900 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.0779561996459961 seconds.
+2019-07-06 13:17:06,902 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-07-06 13:17:06,923 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.019987821578979492 seconds.
+2019-07-06 13:17:06,944 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入登录手机号, Spend 0.03997468948364258 seconds.
+2019-07-06 13:17:06,944 - INFO - SUCCESS  Expect: 请输入登录手机号 equal Faction: 请输入登录手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align='left'>
+    <pre>
+    
+pt2_2: 2019-07-06 13:17:06,948 - INFO - SUCCESS  Load case name: 2、登录-用户名为空校验
+2019-07-06 13:17:07,391 - INFO - SUCCESS  Refresh current page, Spend 0.44174838066101074 seconds.
+2019-07-06 13:17:07,421 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.027985811233520508 seconds.
+2019-07-06 13:17:07,453 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="text"]')&gt; input message, Spend 0.0599665641784668 seconds.
+2019-07-06 13:17:07,462 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.007998228073120117 seconds.
+2019-07-06 13:17:07,489 - INFO - SUCCESS  Input message: , Spend 0.035980939865112305 seconds
+2019-07-06 13:17:07,498 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.007995128631591797 seconds.
+2019-07-06 13:17:07,525 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="password"]')&gt; input message, Spend 0.03499436378479004 seconds.
+2019-07-06 13:17:07,535 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.009005308151245117 seconds.
+2019-07-06 13:17:07,610 - INFO - SUCCESS  Input message: 111111, Spend 0.08394193649291992 seconds
+2019-07-06 13:17:07,622 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.010985612869262695 seconds.
+2019-07-06 13:17:07,674 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.06295037269592285 seconds.
+2019-07-06 13:17:08,675 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-07-06 13:17:08,685 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.007997512817382812 seconds.
+2019-07-06 13:17:08,706 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入登录手机号, Spend 0.02998638153076172 seconds.
+2019-07-06 13:17:08,707 - INFO - SUCCESS  Expect: 请输入登录手机号 equal Faction: 请输入登录手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align='left'>
+    <pre>
+    
+pt2_3: 2019-07-06 13:17:08,712 - INFO - SUCCESS  Load case name: 3、登录-密码为空校验
+2019-07-06 13:17:09,324 - INFO - SUCCESS  Refresh current page, Spend 0.6116514205932617 seconds.
+2019-07-06 13:17:09,336 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.011991500854492188 seconds.
+2019-07-06 13:17:09,372 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="text"]')&gt; input message, Spend 0.04697132110595703 seconds.
+2019-07-06 13:17:09,382 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.00899648666381836 seconds.
+2019-07-06 13:17:09,503 - INFO - SUCCESS  Input message: 13720673941, Spend 0.12992644309997559 seconds
+2019-07-06 13:17:09,515 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.011991500854492188 seconds.
+2019-07-06 13:17:09,554 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="password"]')&gt; input message, Spend 0.049970388412475586 seconds.
+2019-07-06 13:17:09,567 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.011992216110229492 seconds.
+2019-07-06 13:17:09,618 - INFO - SUCCESS  Input message: , Spend 0.06396222114562988 seconds
+2019-07-06 13:17:09,630 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.01099395751953125 seconds.
+2019-07-06 13:17:09,688 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.06796145439147949 seconds.
+2019-07-06 13:17:10,689 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-07-06 13:17:10,709 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.01898932456970215 seconds.
+2019-07-06 13:17:10,735 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入密码, Spend 0.0459742546081543 seconds.
+2019-07-06 13:17:10,736 - INFO - SUCCESS  Expect: 请输入密码 equal Faction: 请输入密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse in" align='left'>
+    <pre>
+    
+pt2_4: 2019-07-06 13:17:10,743 - INFO - SUCCESS  Load case name: 4、登录-用户名不正确密码正确校验
+2019-07-06 13:17:11,387 - INFO - SUCCESS  Refresh current page, Spend 0.6426324844360352 seconds.
+2019-07-06 13:17:11,408 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.02098679542541504 seconds.
+2019-07-06 13:17:11,442 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="text"]')&gt; input message, Spend 0.053967952728271484 seconds.
+2019-07-06 13:17:11,452 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.00899505615234375 seconds.
+2019-07-06 13:17:11,565 - INFO - SUCCESS  Input message: 1372067394, Spend 0.12192964553833008 seconds
+2019-07-06 13:17:11,575 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.008991479873657227 seconds.
+2019-07-06 13:17:11,614 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="password"]')&gt; input message, Spend 0.04696941375732422 seconds.
+2019-07-06 13:17:11,624 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.009995222091674805 seconds.
+2019-07-06 13:17:11,702 - INFO - SUCCESS  Input message: 111111, Spend 0.08795022964477539 seconds
+2019-07-06 13:17:11,715 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.011994123458862305 seconds.
+2019-07-06 13:17:11,772 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.06796932220458984 seconds.
+2019-07-06 13:17:12,772 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-07-06 13:17:12,783 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.010995149612426758 seconds.
+2019-07-06 13:17:12,802 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 用户名不存在, Spend 0.028985023498535156 seconds.
+2019-07-06 13:17:12,802 - INFO - SUCCESS  Expect: 用户名不存在 equal Faction: 用户名不存在, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse in" align='left'>
+    <pre>
+    
+pt2_5: 2019-07-06 13:17:12,806 - INFO - SUCCESS  Load case name: 5、登录-用户名正确密码不正确校验
+2019-07-06 13:17:13,347 - INFO - SUCCESS  Refresh current page, Spend 0.5386931896209717 seconds.
+2019-07-06 13:17:13,368 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.020988941192626953 seconds.
+2019-07-06 13:17:13,401 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="text"]')&gt; input message, Spend 0.05297040939331055 seconds.
+2019-07-06 13:17:13,417 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.014991283416748047 seconds.
+2019-07-06 13:17:13,569 - INFO - SUCCESS  Input message: 13720673941, Spend 0.16690492630004883 seconds
+2019-07-06 13:17:13,582 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.011992931365966797 seconds.
+2019-07-06 13:17:13,628 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="password"]')&gt; input message, Spend 0.05896615982055664 seconds.
+2019-07-06 13:17:13,649 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.0199887752532959 seconds.
+2019-07-06 13:17:13,776 - INFO - SUCCESS  Input message: 123123, Spend 0.14691686630249023 seconds
+2019-07-06 13:17:13,789 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.010991096496582031 seconds.
+2019-07-06 13:17:13,845 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.06696033477783203 seconds.
+2019-07-06 13:17:14,847 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-07-06 13:17:14,863 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.013993501663208008 seconds.
+2019-07-06 13:17:14,890 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 用户名或密码错误, Spend 0.0419764518737793 seconds.
+2019-07-06 13:17:14,891 - INFO - SUCCESS  Expect: 用户名或密码错误 equal Faction: 用户名或密码错误, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
+    <div id='div_pt2_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
+    <div id='div_pt2_6' class="collapse in" align='left'>
+    <pre>
+    
+pt2_6: 2019-07-06 13:17:14,899 - INFO - SUCCESS  Load case name: 6、登录-正确用户名密码校验
+2019-07-06 13:17:15,543 - INFO - SUCCESS  Refresh current page, Spend 0.6416304111480713 seconds.
+2019-07-06 13:17:15,565 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.02098679542541504 seconds.
+2019-07-06 13:17:15,635 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="text"]')&gt; input message, Spend 0.09194707870483398 seconds.
+2019-07-06 13:17:15,662 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="text"]')&gt;, Spend 0.024985074996948242 seconds.
+2019-07-06 13:17:15,779 - INFO - SUCCESS  Input message: 13700000004, Spend 0.14191889762878418 seconds
+2019-07-06 13:17:15,789 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.007995843887329102 seconds.
+2019-07-06 13:17:15,823 - INFO - SUCCESS  Clear element &lt;('xpath', '//input[@type="password"]')&gt; input message, Spend 0.04297685623168945 seconds.
+2019-07-06 13:17:15,833 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@type="password"]')&gt;, Spend 0.009993314743041992 seconds.
+2019-07-06 13:17:15,911 - INFO - SUCCESS  Input message: 222222, Spend 0.08794975280761719 seconds
+2019-07-06 13:17:15,926 - INFO - SUCCESS  Find element &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.012998104095458984 seconds.
+2019-07-06 13:17:15,985 - INFO - SUCCESS  Click button -&gt; &lt;('xpath', '//a[@class="loginBtn"]')&gt;, Spend 0.07395625114440918 seconds.
+2019-07-06 13:17:16,987 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-07-06 13:17:17,144 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.15591120719909668 seconds.
+2019-07-06 13:17:17,192 - INFO - SUCCESS  Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 登录成功, Spend 0.20388364791870117 seconds.
+2019-07-06 13:17:17,193 - INFO - SUCCESS  Expect: 登录成功 equal Faction: 登录成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>20</td>
+    <td>20</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>
