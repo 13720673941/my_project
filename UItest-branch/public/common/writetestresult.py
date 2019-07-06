@@ -15,14 +15,14 @@ def write_test_result(isWrite,run_result,section,case):
     :param case:        用例的名称
     :return:
     '''
-    #测试结果写入配置文件
-    #测试结果写入路径文件夹
+    # 测试结果写入配置文件
+    # 测试结果写入路径文件夹
     tm = time.strftime('%m-%d %H:%M',time.localtime(time.time()))
-    if isWrite:  #为真写入测试结果
+    if isWrite:  # 为真写入测试结果
         result = run_result + " " + tm
         ResultPath = testResultPath
         cf = ConfigParser()
-        cf.read(ResultPath,encoding='gb18030') #使用utf-8编码报错，字节超出范围不能写入测试结果，更换gb18030
+        cf.read(ResultPath,encoding='gb18030') # 使用utf-8编码报错，字节超出范围不能写入测试结果，更换gb18030
         cf.set(section,case,result)
         with open(ResultPath,"w") as f:
             cf.write(f)

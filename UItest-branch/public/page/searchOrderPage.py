@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/6/4 11:57
+#  @Author  : Mr.Deng
+#  @Time    : 2019/6/4 11:57
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
@@ -13,60 +13,60 @@ class SearchOrderPage(BasePage):
     '''
     搜索页面元素信息
     '''
-    #订单列表页url
+    # 订单列表页url
     search_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单'
-    #订单单号输入框
+    # 订单单号输入框
     order_num_input = (By.XPATH,'//label[text()="工单编号"]/following-sibling::input[1]')
-    #用户姓名输入框
+    # 用户姓名输入框
     username_input = (By.XPATH,'//label[text()="用户姓名"]/following-sibling::input[1]')
-    #用户手机号输入框
+    # 用户手机号输入框
     phe_num_input = (By.XPATH,'//label[text()="用户电话"]/following-sibling::input[1]')
-    #服务类型打开按钮
+    # 服务类型打开按钮
     server_type_open = (By.XPATH,'//label[text()="服务类型"]/following-sibling::div/div')
-    #服务类型选择框
+    # 服务类型选择框
     server_type_select = (By.XPATH,'//label[text()="服务类型"]/../div/div[2]/ul[2]')
-    #订单状态打开下拉按钮
+    # 订单状态打开下拉按钮
     order_status_open = (By.XPATH,'//label[text()="工单状态"]/following-sibling::div/div')
-    #订单状态选择框
+    # 订单状态选择框
     order_status_select = (By.XPATH,'//label[text()="工单状态"]/../div[2]/div[2]/ul[2]')
-    #接单师傅打开按钮
+    # 接单师傅打开按钮
     master_open = (By.XPATH,'//label[text()="服务师傅"]/following-sibling::div/div')
-    #接单师傅选择框
+    # 接单师傅选择框
     master_select = (By.XPATH,'//label[text()="服务师傅"]/../div[3]/div[2]/ul[2]')
-    #第一个搜索按钮
+    # 第一个搜索按钮
     search_btn = (By.XPATH,'//a[text()="搜索"]')
-    #更多搜索条件打开下拉
+    # 更多搜索条件打开下拉
     more_search_btn = (By.XPATH,'//a[text()="更多"]')
-    #第一个订单信息(两部分)
+    # 第一个订单信息(两部分)
     first_order_info = (By.XPATH,'//div/div[2]/table/tbody/tr[1]')
     first_order_info1 = (By.XPATH, '//div/div[2]/table/tbody/tr[1]')
-    #品牌选择框
+    # 品牌选择框
     brands_select = (By.XPATH,'//label[text()="家电品牌"]/../select')
-    #品类选择框
+    # 品类选择框
     kinds_select = (By.XPATH,'//label[text()="家电品类"]/../select')
-    #产品型号输入框
+    # 产品型号输入框
     product_num_input = (By.XPATH,'//input[@placeholder="输入产品型号"]')
-    #内机条码输入框
+    # 内机条码输入框
     in_phe_num_input = (By.XPATH,'//input[@placeholder="输入内机条码"]')
-    #工单来源打开下拉
+    # 工单来源打开下拉
     order_from_open = (By.XPATH,'//span[text()="请选择工单来源"]')
-    #工单来源选择框
+    # 工单来源选择框
     parent_order_from = (By.XPATH,'//label[text()="工单来源"]/../div/div[2]/ul[2]')
-    #购买渠道打开下拉
+    # 购买渠道打开下拉
     buy_place_open = (By.XPATH,'//label[text()="购买渠道"]/../div/div')
-    #购买渠道选择框
+    # 购买渠道选择框
     parent_buy_place = (By.XPATH,'//span[text()="全部购买渠道"]/../../div[2]/ul[2]')
-    #下单开始日期输入框
+    # 下单开始日期输入框
     add_order_start_date = (By.XPATH,'//label[text()="下单日期"]/../div/div/div/input')
-    #下单结束日期输入框
+    # 下单结束日期输入框
     add_order_end_date = (By.XPATH,'//label[text()="下单日期"]/../div[2]/div/div/input')
-    #完成工单开始日期输入框
+    # 完成工单开始日期输入框
     finish_order_start_date = (By.XPATH,'//label[text()="完成日期"]/../div/div/div/input')
-    #完成工单结束日期输入框
+    # 完成工单结束日期输入框
     finish_order_end_date = (By.XPATH,'//label[text()="完成日期"]/../div[2]/div/div/input')
-    #更多页面的搜索按钮
+    # 更多页面的搜索按钮
     search_btn1 = (By.XPATH,'//label[text()="工单编号"]/../../../div[2]/div[9]/a')
-    #搜索订单条数
+    # 搜索订单条数
     order_count = (By.XPATH,'//span[@class="ivu-page-total"]')
 
     def __init__(self,driver):

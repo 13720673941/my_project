@@ -7,9 +7,9 @@ from public.common import runreport
 
 def run():
 
-    #创建测试套件
+    # 创建测试套件
     suit = runreport.get_suits(ChildName='2、修改密码',CaseName='*.py')
-    #生成报告
+    # 生成报告
     runreport.run_report(ReportName='alter_pwd_test_report_', FileName='2、修改密码', title='Alter PassWord Test Result',
                         description='alter/forget password case test result.', case=suit)
 

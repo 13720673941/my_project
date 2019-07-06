@@ -8,7 +8,7 @@ from config.pathconfig import *
 from public.common.logconfig import Log
 log = Log()
 
-#获取配置文件路径，默认文件路径
+# 获取配置文件路径，默认文件路径
 Data = accountDataPath
 def read_config_data(section,option,DataPath=Data):
     '''

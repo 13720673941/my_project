@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/5/24 17:13
+#  @Author  : Mr.Deng
+#  @Time    : 2019/5/24 17:13
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -125,9 +125,9 @@ class BasePage(object):
             button.click()
             log.info('{0} Click button -> <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
         except Exception:
-            #报错再次判断页面元素是否存在
+            # 报错再次判断页面元素是否存在
             if self.is_display(element):
-                #等待两秒再次点击
+                # 等待两秒再次点击
                 self.sleep(2)
                 button.click()
                 log.info('{0} Second time click button -> <{1}>, Spend {2} seconds.'.format(self.success, element, time.time()-t1))
@@ -217,6 +217,48 @@ class BasePage(object):
         self.driver.refresh()
         log.info('{0} Refresh current page, Spend {1} seconds.'.format(self.success,time.time()-t1))
 
+    def mouse_move_and_click(self,element):
+        """
+        鼠标移动到某元素点击
+        :return:
+        """
+        move_element = self.get_element(element)
+        t1 = time.time()
+        try:
+            ActionChains(self.driver).move_to_element(move_element).click().perform()
+            log.info('{0} Move mouse to element: <{1}> and click, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
+        except:
+            log.error('{0} Unable move mouse to element: <{1}> and click.'.format(self.fail,element))
+            raise
+
+    def mouse_double_click(self,element):
+        """
+        鼠标双击
+        :return:
+        """
+        double_click_element = self.get_element(element)
+        t1 = time.time()
+        try:
+            ActionChains(self.driver).double_click(double_click_element).perform()
+            log.info('{0} Double click element: <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
+        except:
+            log.error('{0} Unable double click element: <{1}>.'.format(self.fail,element))
+            raise
+
+    def mouse_right_click(self,element):
+        """
+        鼠标右键点击
+        :return:
+        """
+        click_element= self.get_element(element)
+        t1 = time.time()
+        try:
+            ActionChains(self.driver).context_click(click_element).perform()
+            log.info('{0} Mouse right click element: <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
+        except:
+            log.error('{0} Unable right click element: <{1}>.'.format(self.fail,element))
+            raise
+
     def click_and_hold_btn(self,element):
         """
         点击并保持长按鼠标左键
@@ -261,7 +303,7 @@ class BasePage(object):
         try:
             for handle in all_handles:
                 if handle != old_handle:
-                    #切换新窗口
+                    # 切换新窗口
                     self.driver.switch_to.window(handle)
                     log.info('{0} Switch to window handle <{1}>, Spend {2} seconds.'.format(self.success,handle,time.time()-t1))
         except Exception:
@@ -292,16 +334,16 @@ class BasePage(object):
         操作select选择框，按文本选择或者随机选择
         """
         t1 = time.time()
-        #因下单页面涉及select模块较多封装调用
+        # 因下单页面涉及select模块较多封装调用
         select_method = Select(self.get_element(element))
         try:
             if is_random:
                 AllOption = self.get_element(element)
                 options = AllOption.find_elements_by_tag_name('option')
-                #随机选择一个数字，选择该选项的索引
+                # 随机选择一个数字，选择该选项的索引
                 chooseNum = random.randint(1,len(options)-1)
                 select_method.select_by_index(chooseNum)
-                #返回一个该随机选择的文本值
+                # 返回一个该随机选择的文本值
                 for select in select_method.all_selected_options:
                     log.info('{0} Select value: {1}, Spend {2} seconds.'.format(self.success,select.text,time.time()-t1))
             else:
@@ -335,7 +377,7 @@ class BasePage(object):
             timeType = '%Y-%m-%d %H:%M:%S'
         else:
             timeType = '%Y-%m-%d'
-        #返回时间戳
+        # 返回时间戳
         return time.mktime(time.strptime(DataTime,timeType))
 
     def get_element_count(self,parentEl,childEl='li'):
@@ -365,15 +407,18 @@ class BasePage(object):
         :param Random   是否随机选择
         """
         t1 = time.time()
-        #点击打开选择框
+        # 点击打开选择框
         self.click_button(open_el)
-        self.sleep(1)
+        self.sleep(2)
         try:
             ParentPath = self.get_element(parent_el)
             ChildList = ParentPath.find_elements_by_tag_name(child_el)
             SelectNum = random.randint(1,len(ChildList))
             if is_random:
-                ChildList[SelectNum].click()
+                # 下拉不能显示全部的加js滑动到点击位置
+                #  self.use_js(js=("arguments[0].scrollIntoView();",ChildList[SelectNum-1]))
+                self.sleep(2)
+                ChildList[SelectNum-1].click()
                 log.info('{0} Select value: {1} by random choose, Spend {2} seconds.'.format(self.success,ChildList[SelectNum].text,time.time()-t1))
             else:
                 for child in ChildList:
@@ -392,9 +437,9 @@ class BasePage(object):
         :param num      上传图片的个数
         :param element  上传图片元素位置
         '''
-        #加载图片列表
+        # 加载图片列表
         Plist = os.listdir(picturePath)
-        #循环上传
+        # 循环上传
         for i in range(num):
             t1 = time.time()
             try:
@@ -435,28 +480,28 @@ class BasePage(object):
         '''
         获取最新工单单号
         '''
-        #仅报单 到待报单页面获取
+        # 仅报单 到待报单页面获取
         if insteadOrder:
-            self.open_url('http://www.51shouhou.cn/singleBranch/#/order/search/instead')
-        #等待页面加载
+            self.open_url('http://www.51shouhou.cn/singleBranch/# /order/search/instead')
+        # 等待页面加载
         self.sleep(2)
         self.refresh_page()
         newOrderNum=''
-        #获取工单单号
+        # 获取工单单号
         for i in range(10):
             try:
-                #获取第一个订单的创建时间
-                if insteadOrder: #代报单获取创建时间不一样
+                # 获取第一个订单的创建时间
+                if insteadOrder: # 代报单获取创建时间不一样
                     addOrderTime = self.get_text(element=(By.XPATH,'//div/div[2]/.//tr[1]/td[6]/.//span'))
                 else:
                     addOrderTime = self.get_text(element=(By.XPATH,'//div/div[2]/.//tr[1]/td[5]/.//span'))
-                #把时间转化为时间戳小于30秒就是新订单
+                # 把时间转化为时间戳小于30秒就是新订单
                 oldTimeNumber = self.get_one_timenum(DataTime=addOrderTime,Time=True)
                 newTime = self.get_now_timenum()
                 if newTime - oldTimeNumber < 60:
                     newOrderNum = self.get_text(element=(By.XPATH,'//div/div[2]/.//tr[1]/td[3]/div/a'))
                     log.info('{0} Get order number: {1}.'.format(self.success,newOrderNum))
-                    #有时候获取不到订单单号，判断单号的长度，否则刷新页面
+                    # 有时候获取不到订单单号，判断单号的长度，否则刷新页面
                     if len(newOrderNum) == 18:
                         break
                     else:

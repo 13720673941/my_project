@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/6/10 15:44
+#  @Author  : Mr.Deng
+#  @Time    : 2019/6/10 15:44
 
 from public.common import rwconfig,mytest
 from public.common import driver,getdata,writetestresult
@@ -17,17 +17,17 @@ import unittest
 '''
 网点回访工单
 '''
-#获取网点回访订单参数信息
+# 获取网点回访订单参数信息
 VisitData = getdata.get_test_data()["VisitOrderPage"]
 ddtData = VisitData["visit_order_fnc"]
-#默认写入测试结果
+# 默认写入测试结果
 isWrite=True
 class Visit_Order(unittest.TestCase):
 
     def setUp(self):
-        #设置浏览器驱动
+        # 设置浏览器驱动
         self.dr = driver.browser_driver()
-        #实例化
+        # 实例化
         self.basePage = BasePage(self.dr)
         self.pleaseOrderPage = PleaseOrderPage(self.dr)
         self.addOrderPage = AddOrderPage(self.dr)
@@ -35,12 +35,12 @@ class Visit_Order(unittest.TestCase):
         self.finishOrder = FinishOrder(self.dr)
         self.visitOrder = VisitOrderPage(self.dr)
         self.assert_mode = Assert(self.dr)
-        #获取网点登录数据
+        # 获取网点登录数据
         UserName = rwconfig.read_config_data('蓝魔科技','username')
         PassWord = rwconfig.read_config_data('蓝魔科技','password')
-        #网点登录
+        # 网点登录
         self.loginPage.login_main(UserName,PassWord)
-        # 获取订单信息
+        #  获取订单信息
         user = rwconfig.read_config_data("NotReturnOrder", "用户姓名", orderInfo)
         phe = rwconfig.read_config_data("NotReturnOrder", "联系方式", orderInfo)
         address = rwconfig.read_config_data("NotReturnOrder", "服务地址", orderInfo)
@@ -49,52 +49,52 @@ class Visit_Order(unittest.TestCase):
         server = rwconfig.read_config_data("NotReturnOrder", "服务类型", orderInfo)
         brands = rwconfig.read_config_data("NotReturnOrder", "品牌", orderInfo)
         kinds = rwconfig.read_config_data("NotReturnOrder", "品类", orderInfo)
-        # 经销商下单程序下单
+        #  经销商下单程序下单
         self.addOrderPage.create_order_main(user, phe, address, collage, order_type, server, brands, kinds)
-        # 获取单号
+        #  获取单号
         self.OrderNumber = self.basePage.get_order_number()
-        #获取派单数据
+        # 获取派单数据
         Master = rwconfig.read_config_data('蓝魔科技','master001')
-        #派单
+        # 派单
         self.pleaseOrderPage.please_order_main(self.OrderNumber,Master)
-        #完成服务
+        # 完成服务
         self.finishOrder.finish_order_main(self.OrderNumber)
-        #进入回访页面
+        # 进入回访页面
         self.visitOrder.enter_visit_order_page()
 
     def test_visitOrder001(self):
         '''订单回访功能校验'''
-        #用例名称
+        # 用例名称
         self.basePage.print_case_name(ddtData["CaseName"])
-        #刷新页面
+        # 刷新页面
         self.basePage.refresh_page()
         self.basePage.sleep(1)
-        #选择完成的工单
+        # 选择完成的工单
         self.basePage.select_new_order(OrderNumber=self.OrderNumber)
-        #点击回访
+        # 点击回访
         self.visitOrder.click_visit_btn()
-        #选择服务态度
+        # 选择服务态度
         self.visitOrder.select_server_status(serverStatus=ddtData["ServerStatus"])
-        #选择安全评价
+        # 选择安全评价
         self.visitOrder.select_safety_assess(safetyAssess=ddtData["SafetyAssess"])
-        #输入回访总额
+        # 输入回访总额
         self.visitOrder.input_visit_money()
-        #选择回访结果
+        # 选择回访结果
         self.visitOrder.select_visit_result(visitResult=ddtData["visitResult"])
-        #输入回访反馈
+        # 输入回访反馈
         self.visitOrder.input_visit_remark()
-        #选择奖惩
+        # 选择奖惩
         self.visitOrder.select_reward_punish()
-        #输入奖惩金额
+        # 输入奖惩金额
         self.visitOrder.input_reward_punish_money()
-        #输入奖惩备注
+        # 输入奖惩备注
         self.visitOrder.input_reward_punish_remark()
-        #点击提交按钮
+        # 点击提交按钮
         self.visitOrder.click_confirm_btn()
         self.basePage.sleep(1)
-        #断言
+        # 断言
         isSuccess = self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
-        #写入测试结果
+        # 写入测试结果
         writetestresult.write_test_result(isWrite,isSuccess,'VisitOrder',ddtData["CaseName"])
 
     def tearDown(self):

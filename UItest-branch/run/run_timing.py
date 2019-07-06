@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/6/25 18:43
+#  @Author  : Mr.Deng
+#  @Time    : 2019/6/25 18:43
 
 from public.common.sendemail import Send_Email
 import sys
@@ -13,21 +13,21 @@ if __name__ == '__main__':
 
     import time
 
-    #默认脚本执行失败
+    # 默认脚本执行失败
     isPass = False
-    #定时间
+    # 定时间
     startTime = time.time()
-    timing = '13:02'
+    timing = '13:15'
     while True:
-        #获取当前时间
+        # 获取当前时间
         time.sleep(1)
         now_time = time.strftime("%H:%M",time.localtime(time.time()))
         if now_time == timing:
-            #获取开始时间
-            #starttime = time.strftime("%H:%M",time.localtime(time.time()))
-            #时间一样执行脚本
+            # 获取开始时间
+            # starttime = time.strftime("%H:%M",time.localtime(time.time()))
+            # 时间一样执行脚本
             print('========== 开始 ==========')
-            #调用脚本用例集
+            # 调用脚本用例集
             run_a_registerLogin.run()
             run_b_alterPassword.run()
             run_c_orderManage.run()
@@ -36,13 +36,13 @@ if __name__ == '__main__':
             endTime = time.time()
             isPass = True
             break
-    #脚本执行成功发送邮件
+    # 脚本执行成功发送邮件
     if isPass:
         print("\n脚本执行成功！")
-        runtime = str(int((endTime-startTime)/60))#float类型取整,写入文本的是字符串类型转化为str
-        #脚本运行时间
+        runtime = str(int((endTime-startTime)/60))# float类型取整,写入文本的是字符串类型转化为str
+        # 脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
-        #发送邮件
-        # SE.SendEmailMain(start_time=timing,run_time=runtime)
+        # 发送邮件
+        #  SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')

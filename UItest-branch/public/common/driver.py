@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/5/24 17:13
+#  @Author  : Mr.Deng
+#  @Time    : 2019/5/24 17:13
 
 from selenium import webdriver
 from public.common.logconfig import Log
@@ -11,9 +11,9 @@ log=Log()
 
 def browser_driver():
     t1 = time.time()
-    #浏览器驱动-谷歌
+    # 浏览器驱动-谷歌
     options = webdriver.ChromeOptions()
-    #禁止历览器弹窗
+    # 禁止历览器弹窗
     prefs = {'profile.default_content_setting_values':{'notifications':2}}
     options.add_experimental_option('prefs',prefs)
     driver = webdriver.Chrome(options=options)

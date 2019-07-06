@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/5/27 18:03
+#  @Author  : Mr.Deng
+#  @Time    : 2019/5/27 18:03
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
@@ -13,25 +13,25 @@ class RegisterPage(BasePage):
     '''
     网点注册页面信息
     '''
-    #注册url
+    # 注册url
     register_url = 'http://www.51shouhou.cn/singleBranch/#/login'
-    #注册页面所有元素的父路径
+    # 注册页面所有元素的父路径
     parent_path = '//div[contains(text(),"企业用户注册")]/../form/ul'
-    #免费注册按钮
+    # 免费注册按钮
     free_register_btn = (By.XPATH,'//p[text()="还没有网点账号？"]/a')
-    #用户名输入框
+    # 用户名输入框
     username_input = (By.XPATH,''+parent_path+'/li[2]/input')
-    #手机号输入框
+    # 手机号输入框
     phe_num_input = (By.XPATH,''+parent_path+'/li[3]/input')
-    #验证码输入框
+    # 验证码输入框
     code_num_input = (By.XPATH,''+parent_path+'/li[4]/input')
-    #获取验证码按钮
+    # 获取验证码按钮
     get_code_num_btn = (By.XPATH,''+parent_path+'/li[4]/a')
-    #登陆密码输入框
+    # 登陆密码输入框
     login_pwd_input = (By.XPATH,''+parent_path+'/li[5]/input')
-    #确定登陆密码输入框
+    # 确定登陆密码输入框
     confirm_pwd_input = (By.XPATH,''+parent_path+'/li[6]/input')
-    #马上注册按钮
+    # 马上注册按钮
     register_btn = (By.XPATH,'//a[text()="马上注册"]')
 
     def __init__(self,driver):

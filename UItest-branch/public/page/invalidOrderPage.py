@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/6/3 18:50
+#  @Author  : Mr.Deng
+#  @Time    : 2019/6/3 18:50
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
@@ -11,13 +11,13 @@ from selenium.webdriver.common.by import By
 class InvalidOrder(BasePage):
 
     '''设置无效工单页面元素'''
-    #无效工单按钮
+    # 无效工单按钮
     invalid_order_btn = (By.XPATH,'//a[text()="无效工单"]')
-    #无效类型选择框
+    # 无效类型选择框
     invalid_type_select = (By.XPATH,'//label[text()="无效工单类型："]/../div/select')
-    #无效原因输入框
+    # 无效原因输入框
     invalid_reason_input = (By.XPATH,'//label[text()="无效工单理由："]/../*/*/textarea')
-    #无效工单确定按钮
+    # 无效工单确定按钮
     confirm_btn = (By.XPATH,'//div[text()="无效工单"]/../../div[3]/button[2]')
 
     def __init__(self,driver):

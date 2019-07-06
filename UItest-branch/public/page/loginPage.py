@@ -1,29 +1,29 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/5/21 10:45
+#  @Author  : Mr.Deng
+#  @Time    : 2019/5/21 10:45
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
-#实例化
+# 实例化
 log = Log()
 
 '''
 登录页面信息
 '''
-class LoginPage(BasePage):#所有的操作继承Base基类
+class LoginPage(BasePage):# 所有的操作继承Base基类
 
     '''网点登录界面信息'''
-    #系统登陆页面url
+    # 系统登陆页面url
     login_url = 'http://www.51shouhou.cn/singleBranch/#/login'
-    #用户名输入框
+    # 用户名输入框
     username_input = (By.XPATH,'//input[@type="text"]')
-    #密码输入框
+    # 密码输入框
     password_input = (By.XPATH,'//input[@type="password"]')
-    #登陆按钮
+    # 登陆按钮
     login_btn = (By.XPATH,'//a[@class="loginBtn"]')
-    #退出按钮
+    # 退出按钮
     logout_btn = (By.XPATH,'//a[text()="退出"]')
 
     def __init__(self,driver):
@@ -64,7 +64,7 @@ class LoginPage(BasePage):#所有的操作继承Base基类
         self.input_password(PassWord)
         self.click_login_button()
         self.sleep(1)
-        #断言
+        # 断言
         if self.is_display(self.logout_btn):
             log.info('{0} *Branch login success！'.format(self.success))
         else:

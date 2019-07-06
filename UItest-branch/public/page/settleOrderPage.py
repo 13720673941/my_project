@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/6/10 18:15
+#  @Author  : Mr.Deng
+#  @Time    : 2019/6/10 18:15
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
@@ -16,40 +16,40 @@ class SettleOrderPage(BasePage):
     '''
     订单结算页面
     '''
-    #师傅待结算订单页面
+    # 师傅待结算订单页面
     master_wait_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitsettle?' \
                              'tabType=师傅工单结算&SubtabType=待结算&page=1'
-    #服务商待结算订单页面
+    # 服务商待结算订单页面
     branch_wait_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitsettle?' \
                              'tabType=服务商工单结算&SubtabType=待结算&page=1'
-    #代结算订单列表页
+    # 代结算订单列表页
     return_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/branchreturn?' \
                         'tabType=代结待结算&page=1'
-    #结算按钮
+    # 结算按钮
     settle_btn = (By.XPATH,'//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')
-    #结算价格输入框,厂商/经销商结算价格输入框
+    # 结算价格输入框,厂商/经销商结算价格输入框
     brands_settle_money_input = (By.XPATH,'//label[contains(.,"结算方式：")]/../../div[1]/.//input[@type="text"]')
-    #未结算提示信息
+    # 未结算提示信息
     settle_red_msg = (By.XPATH,'//label[text()="结算方式："]/../../div/div/span[2]')
-    #三种结算方式属性元素
+    # 三种结算方式属性元素
     settle_type_1_att = (By.XPATH,'//div[2]/div/label[1]/input')
     settle_type_2_att = (By.XPATH,'//div[2]/div/label[2]/input')
     settle_type_3_att = (By.XPATH,'//div[2]/div/label[3]/input')
-    #三种结算方式选择按钮元素
+    # 三种结算方式选择按钮元素
     settle_type_1 = (By.XPATH,'//div[2]/div/label[1]')
     settle_type_2 = (By.XPATH,'//div[2]/div/label[2]')
     settle_type_3 = (By.XPATH,'//div[2]/div/label[3]')
-    #滑动按钮
+    # 滑动按钮
     drop_btn = (By.XPATH,'//*[@class="ivu-slider-button"]')
-    #滑动后比例的输出位置文本
+    # 滑动后比例的输出位置文本
     drop_arrive_text = (By.XPATH,'//div[@class="ivu-slider-bar"]/preceding-sibling::input')
-    #结算价格输入框
+    # 结算价格输入框
     settle_money_input = (By.XPATH,'//label[contains(.,"结算价格：")]/.././/input[@class="ivu-input-number-input"]')
-    #钱包结算
+    # 钱包结算
     wallet_settle = (By.XPATH,'//label[contains(.,"付款方式：")]/.././/label[1]')
-    #线下结算
+    # 线下结算
     line_down_settle = (By.XPATH,'//label[contains(.,"付款方式：")]/.././/label[2]')
-    #确定结算
+    # 确定结算
     confirm_btn = (By.XPATH,'//div[contains(.,"钱包余额：")]/../button[2]')
 
     def __init__(self,driver):
@@ -152,33 +152,33 @@ class SettleOrderPage(BasePage):
         :param arrivetxt  索要滑动的位置文本
         """
         t1 = time.time()
-        #等待按钮加载
+        # 等待按钮加载
         self.sleep(2)
         dragButton = self.get_element(self.drop_btn)
-        #获取滑块y坐标位置
+        # 获取滑块y坐标位置
         dragButton_y = dragButton.location['y']
         actions = self.click_and_hold_btn(dragButton)
-        #归零0，y
+        # 归零0，y
         while True:
             self.sleep(2)
-            #获取移动后的文本
+            # 获取移动后的文本
             txt1 = self.get_drop_arrive_text()
-            #滑块x坐标归零
+            # 滑块x坐标归零
             if txt1 == '0':
                 break
             else:
                 actions.move_by_offset(-1,dragButton_y).perform()
-        #清除缓存操作
+        # 清除缓存操作
         actions.reset_actions()
         log.info('{0} Button: <{1}>, remove zero, Spend {2} seconds.'
                  .format(self.success,self.drop_btn,time.time()-t1))
         while True:
             self.sleep(2)
             txt2 = self.get_drop_arrive_text()
-            #滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，
-            #只能判断大于期望的比例
+            # 滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，
+            # 只能判断大于期望的比例
             if int(txt2) > int(arrive_txt):
-                actions.release(dragButton).perform() #释放左键
+                actions.release(dragButton).perform() # 释放左键
                 break
             else:
                 actions.move_by_offset(1,dragButton_y).perform()

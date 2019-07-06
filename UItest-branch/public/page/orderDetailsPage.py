@@ -27,11 +27,11 @@ class OrderDetailsPage(BasePage):
     #预约时间打开下拉按钮
     open_appoint_select = (By.XPATH,'//label[text()="预约时间："]/../div/div/span[1]')
     #下拉时间段的统计父目录
-    parent_for_select = (By.XPATH,'//div[45]/ul[2]')
+    parent_for_select = (By.XPATH,'//div[contains(text(),"预约时间")]/../../../../../preceding-sibling::div[1]/ul[2]')
     #确定预约按钮
     confirm_appoint_btn = (By.XPATH,'//div[contains(text(),"预约时间")]/../../div[3]/button[2]')
     #预约后详情页有预约字段
-    appoint_time_text = (By.XPATH,'//label[text()="预约上门时间："]')
+    appoint_time_text = (By.XPATH,'//label[text()="预约上门时间："]/../div')
     #修改工单按钮
     alter_order_btn = (By.XPATH,'//button[contains(.,"修改工单")]')
     #订单详情页修改订单手机号的字段
@@ -64,8 +64,7 @@ class OrderDetailsPage(BasePage):
 
     def clear_appoint_date(self):
         """清除预约日期"""
-        ActionChains(self.driver).move_to_element(self.get_element(self.appoint_date_clear)).click().perform()
-
+        self.mouse_move_and_click(self.appoint_date_clear)
 
     def input_appoint_date(self,alter=False):
         """输入预约日期"""

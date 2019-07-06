@@ -12,7 +12,7 @@ def get_test_data():
     :return:
     """
     with open(testData,encoding='utf-8') as f:
-        #适用json模块读取是字典格式的
+        # 适用json模块读取是字典格式的
         return json.load(f)
 
 

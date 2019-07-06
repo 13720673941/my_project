@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/6/6 14:31
+#  @Author  : Mr.Deng
+#  @Time    : 2019/6/6 14:31
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
@@ -15,27 +15,27 @@ class VisitOrderPage(BasePage):
     '''
     回访页面元素信息
     '''
-    #订单回访列表页
+    # 订单回访列表页
     visit_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单'
-    #回访按钮
+    # 回访按钮
     visit_btn = (By.XPATH,'//a[text()="回访"]')
-    #服务态度选择
+    # 服务态度选择
     server_status_select = (By.XPATH,'//div[contains(text(),"服务态度：")]/select')
-    #安全评价选择
+    # 安全评价选择
     safety_assessment_select = (By.XPATH,'//div[contains(text(),"安全评价：")]/select')
-    #回访价格
+    # 回访价格
     visit_money_input = (By.XPATH,'//div[contains(text(),"回访总额：")]/div[1]/div[2]/input')
-    #回访结果
+    # 回访结果
     visit_result_select = (By.XPATH,'//div[contains(text(),"回访结果：")]/select')
-    #回访备注
+    # 回访备注
     visit_remark_input = (By.XPATH,'//div[contains(text(),"回访反馈：")]/textarea')
-    #奖惩选择
+    # 奖惩选择
     reward_or_punish = (By.XPATH,'//span[text()="订单奖惩"]/../../div[2]/form/div/div[1]/select')
-    #奖惩金钱输入框
+    # 奖惩金钱输入框
     reward_punish_money = (By.XPATH,'//span[text()="订单奖惩"]/../../div[2]/form/div/div[2]/input')
-    #奖惩备注
+    # 奖惩备注
     reward_punish_remark = (By.XPATH,'//input[@placeholder="请填写备注说明"]')
-    #确定回访
+    # 确定回访
     confirm_btn = (By.XPATH,'//div[text()="回访"]/../../div[3]/button[2]')
 
     def __init__(self,driver):
@@ -56,7 +56,7 @@ class VisitOrderPage(BasePage):
         '''选择安全评价'''
         self.operate_select(self.safety_assessment_select,safetyAssess)
 
-    def input_visit_money(self,visitMoney='100'):#默认100元
+    def input_visit_money(self,visitMoney='100'):# 默认100元
         '''输入回访总额'''
         self.input_message(self.visit_money_input,visitMoney)
 
@@ -87,32 +87,32 @@ class VisitOrderPage(BasePage):
     def visit_order_main(self,orderNumber,serverStatus,safetyAssess,visitMoney,visitResult):
         '''订单回访主程序'''
         log.info('-=【订单回访】=-')
-        #进入完工订单列表页面
+        # 进入完工订单列表页面
         self.enter_visit_order_page()
-        #选择工单
+        # 选择工单
         self.select_new_order(orderNumber)
-        #点击回访按钮
+        # 点击回访按钮
         self.click_visit_btn()
-        #选择服务态度
+        # 选择服务态度
         self.select_server_status(serverStatus)
-        #选择安全评价
+        # 选择安全评价
         self.select_safety_assess(safetyAssess)
-        #输入回访总额
+        # 输入回访总额
         self.input_visit_money(visitMoney)
-        #选择回访结果
+        # 选择回访结果
         self.select_visit_result(visitResult)
-        #输入回访反馈
+        # 输入回访反馈
         self.input_visit_remark()
-        #选择奖惩
+        # 选择奖惩
         self.select_reward_punish()
-        #输入奖惩金额
+        # 输入奖惩金额
         self.input_reward_punish_money()
-        #输入奖惩备注
+        # 输入奖惩备注
         self.input_reward_punish_remark()
-        #点击提交按钮
+        # 点击提交按钮
         self.click_confirm_btn()
         self.sleep(1)
-        #断言
+        # 断言
         if self.get_system_msg() == '操作成功':
             log.info('{0} *Visit order is success！'.format(self.success))
         else:
