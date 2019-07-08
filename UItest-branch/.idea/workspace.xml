@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="优化代码">
-      <change beforePath="$PROJECT_DIR$/public/page/serverBranchPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/serverBranchPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/common/basepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/basepage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +167,6 @@
             <state>
               <folding>
                 <element signature="e#48#2414#0" />
-                <element signature="e#2459#3051#0" />
                 <element signature="n#!!block;n#ForgetPwdPage#0;n#!!top" />
                 <element signature="n#!!block;n#AlterPwdPage#0;n#!!top" />
                 <element signature="n#!!block;n#CreateOrderPage#0;n#!!top" />
@@ -186,13 +186,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/page/serverBranchPage.py">
+        <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-458">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-              <folding>
-                <element signature="e#76#119#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="95">
+              <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -281,7 +278,6 @@
         <option value="$PROJECT_DIR$/data/testdata.json" />
         <option value="$PROJECT_DIR$/data/accountdata.ini" />
         <option value="$PROJECT_DIR$/config/pathconfig.py" />
-        <option value="$PROJECT_DIR$/public/common/basepage.py" />
         <option value="$PROJECT_DIR$/public/common/createuser.py" />
         <option value="$PROJECT_DIR$/public/common/driver.py" />
         <option value="$PROJECT_DIR$/public/common/getdata.py" />
@@ -329,10 +325,11 @@
         <option value="$PROJECT_DIR$/testcase/4、客户管理/c_setServerFnc.py" />
         <option value="$PROJECT_DIR$/testcase/4、客户管理/d_stopOpenTakeFnc.py" />
         <option value="$PROJECT_DIR$/public/page/serverBranchPage.py" />
+        <option value="$PROJECT_DIR$/public/common/basepage.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1380" />
@@ -344,6 +341,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -382,12 +380,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/MyWork/Pythonandme" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
@@ -597,6 +594,10 @@
       <workItem from="1562289147594" duration="29142000" />
       <workItem from="1562375098986" duration="1621000" />
       <workItem from="1562376756204" duration="20653000" />
+      <workItem from="1562422443205" duration="679000" />
+      <workItem from="1562490022060" duration="404000" />
+      <workItem from="1562492441873" duration="11000" />
+      <workItem from="1562492502773" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="git test">
       <created>1561443687108</created>
@@ -704,7 +705,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="774469000" />
+    <option name="totallyTimeSpent" value="775614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,7 +719,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1203,43 +1204,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/testdata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#48#2414#0" />
-            <element signature="e#2459#3051#0" />
-            <element signature="n#!!block;n#ForgetPwdPage#0;n#!!top" />
-            <element signature="n#!!block;n#AlterPwdPage#0;n#!!top" />
-            <element signature="n#!!block;n#CreateOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#PleaseOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#InvalidOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#SearchOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#FinishOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#VisitOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#ReturnOrderPage#0;n#!!top" />
-            <element signature="n#!!block;n#SettleReturnPage#0;n#!!top" />
-            <element signature="n#!!block;n#SettleManagePage#0;n#!!top" />
-            <element signature="n#!!block;n#OrderDetailPage#0;n#!!top" />
-            <element signature="n#!!block;n#AddDealerPage#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/a_addManageFnc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1447">
           <caret line="88" column="10" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
-          <folding>
-            <element signature="e#79#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7790">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding>
             <element signature="e#79#122#0" expanded="true" />
           </folding>
@@ -1274,11 +1242,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/page/serverBranchPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        <state relative-caret-position="343">
+          <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
           <folding>
             <element signature="e#76#119#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/testdata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#48#2414#0" />
+            <element signature="n#!!block;n#ForgetPwdPage#0;n#!!top" />
+            <element signature="n#!!block;n#AlterPwdPage#0;n#!!top" />
+            <element signature="n#!!block;n#CreateOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#PleaseOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#InvalidOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#SearchOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#FinishOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#VisitOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#ReturnOrderPage#0;n#!!top" />
+            <element signature="n#!!block;n#SettleReturnPage#0;n#!!top" />
+            <element signature="n#!!block;n#SettleManagePage#0;n#!!top" />
+            <element signature="n#!!block;n#OrderDetailPage#0;n#!!top" />
+            <element signature="n#!!block;n#AddDealerPage#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
         </state>
       </provider>
     </entry>
