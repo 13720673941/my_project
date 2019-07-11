@@ -7,7 +7,7 @@ from public.common.basepage import BasePage
 from public.common.assertmode import Assert
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
-from public.common import mytest,writetestresult
+from public.common import mytest
 from public.common.rwconfig import read_config_data
 from public.page.loginPage import LoginPage
 from public.page.manageBranchPage import DealerBranchPage
@@ -21,8 +21,6 @@ import unittest,ddt
 """
 # 获取数据
 dealer_page_data = get_test_data()["AddDealerPage"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Stop_Open_TakeOrder(unittest.TestCase):
 
@@ -86,7 +84,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         # 输出第一行的所有数据字段
         first_branch_info = self.dealer_page.get_first_branch_info()
         # 断言
-        isSuccess1 = self.assert_mode.assert_in(stop_take_data["expect"],first_branch_info)
+        self.assert_mode.assert_in(stop_take_data["expect"],first_branch_info)
         # 退出服务商
         self.login.click_logout_button()
         # 登录经销商
@@ -105,9 +103,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         # 点击搜索
         self.please_order_page.click_search_branch()
         # 验证是否有暂停接单字段
-        isSuccess2 = self.assert_mode.assert_el_in_page(self.please_order_page.stop_take_order_is_displayed())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"VisitDealer",stop_take_data["CaseName"])
+        self.assert_mode.assert_el_in_page(self.please_order_page.stop_take_order_is_displayed())
 
     def test_stop_open_takeOrder002(self):
         """开启接单功能校验"""
@@ -133,7 +129,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         # 输出第一行的所有数据字段
         first_branch_info = self.dealer_page.get_first_branch_info()
         # 断言
-        isSuccess1 = self.assert_mode.assert_in(open_take_data["expect"],first_branch_info)
+        self.assert_mode.assert_in(open_take_data["expect"],first_branch_info)
         # 退出服务商
         self.login.click_logout_button()
         # 登录经销商
@@ -152,9 +148,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         # 点击搜索
         self.please_order_page.click_search_branch()
         # 验证是否有暂停接单字段
-        isSuccess2 = self.assert_mode.assert_el_not_in_page(self.please_order_page.stop_take_order_is_displayed())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"VisitDealer",open_take_data["CaseName"])
+        self.assert_mode.assert_el_not_in_page(self.please_order_page.stop_take_order_is_displayed())
 
     @classmethod
     def tearDownClass(cls):

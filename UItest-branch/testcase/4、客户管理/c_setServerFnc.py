@@ -6,7 +6,7 @@ from public.common.basepage import BasePage
 from public.common.assertmode import Assert
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
-from public.common import mytest,writetestresult
+from public.common import mytest
 from public.common.rwconfig import read_config_data
 from public.page.loginPage import LoginPage
 from public.page.manageBranchPage import DealerBranchPage
@@ -18,8 +18,6 @@ import unittest,ddt
 """
 # 获取数据
 dealer_page_data = get_test_data()["AddDealerPage"]["server_set_fnc"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Set_Server(unittest.TestCase):
 
@@ -62,9 +60,7 @@ class Set_Server(unittest.TestCase):
         # 输出第一行的所有数据字段
         first_branch_info = self.dealer_page.get_first_branch_info()
         # 断言
-        isSuccess = self.assert_mode.assert_in(set_server_data["expect"],first_branch_info)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",set_server_data["CaseName"])
+        self.assert_mode.assert_in(set_server_data["expect"],first_branch_info)
 
     def test_Set_Server002(self):
         """经销商服务设置合作类型不能编辑"""
@@ -75,9 +71,7 @@ class Set_Server(unittest.TestCase):
         # 获取合作类型选择属性
         teamwork_attribute = self.dealer_page.get_teamwork_type_attribute()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(set_server_data["expect"],teamwork_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",set_server_data["CaseName"])
+        self.assert_mode.assert_equal(set_server_data["expect"],teamwork_attribute)
 
     def test_Set_Server003(self):
         """经销商服务设置服务类型不能编辑"""
@@ -88,9 +82,7 @@ class Set_Server(unittest.TestCase):
         # 获取合作类型选择属性
         server_type_attribute = self.dealer_page.get_server_type_attribute()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(set_server_data["expect"],server_type_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",set_server_data["CaseName"])
+        self.assert_mode.assert_equal(set_server_data["expect"],server_type_attribute)
 
     def test_Set_Server004(self):
         """经销商服务设置服务品牌不能编辑"""
@@ -101,9 +93,7 @@ class Set_Server(unittest.TestCase):
         # 获取合作类型选择属性
         server_brands_attribute = self.dealer_page.get_brands_type_attribute()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(set_server_data["expect"],server_brands_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",set_server_data["CaseName"])
+        self.assert_mode.assert_equal(set_server_data["expect"],server_brands_attribute)
 
     def test_Set_Server005(self):
         """经销商服务设置服务品类不能编辑"""
@@ -114,9 +104,7 @@ class Set_Server(unittest.TestCase):
         # 获取合作类型选择属性
         server_kinds_attribute = self.dealer_page.get_kinds_type_attribute()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(set_server_data["expect"],server_kinds_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",set_server_data["CaseName"])
+        self.assert_mode.assert_equal(set_server_data["expect"],server_kinds_attribute)
 
     @classmethod
     def tearDownClass(cls):

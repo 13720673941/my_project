@@ -4,7 +4,7 @@
 #  @Time    : 2019/6/10 18:14
 
 from public.common import rwconfig,mytest
-from public.common import driver,writetestresult
+from public.common import driver
 from public.common.getdata import get_test_data
 from public.common.basepage import BasePage
 from public.page.loginPage import LoginPage
@@ -27,8 +27,7 @@ SettleData = get_test_data()["SettleReturnPage"]
 before_return_data = SettleData["before_return_settle_fnc"]
 return_settle_data = SettleData["return_settle_fnc"]
 after_settle_data = SettleData["after_return_settle_fnc"]
-# 默认写入测试结果
-isWrite = True
+
 @ddt.ddt
 class Return_Settle(unittest.TestCase):
 
@@ -93,9 +92,7 @@ class Return_Settle(unittest.TestCase):
         # 获取未结算提示信息
         msg = self.settleOrder.get_settle_msg()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],msg)
 
     def test_return_settle002(self):
         """返单未结算-经销商只能选择固定金额结算校验"""
@@ -113,10 +110,8 @@ class Return_Settle(unittest.TestCase):
         settle_type_att1 = self.settleOrder.get_settle_type_1_att()
         settle_type_att2 = self.settleOrder.get_settle_type_1_att()
         # 断言
-        isSuccess1 = self.assert_mode.assert_equal(data["expect"],settle_type_att1)
-        isSuccess2 = self.assert_mode.assert_equal(data["expect"],settle_type_att2)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_type_att1)
+        self.assert_mode.assert_equal(data["expect"],settle_type_att2)
 
     def test_return_settle003(self):
         """返单结算-服务商端厂商结算金额不能修改校验"""
@@ -144,9 +139,7 @@ class Return_Settle(unittest.TestCase):
         # 获取厂商结算价格属性验证不能编辑
         brands_settle_attribute = self.settleOrder.get_brands_settle_money_attribute()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],brands_settle_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],brands_settle_attribute)
 
     def test_return_settle004(self):
         """返单结算-服务商端厂商未结算提示信息校验"""
@@ -163,9 +156,7 @@ class Return_Settle(unittest.TestCase):
         # 获取红字未结算提示信息
         brands_settle_msg = self.settleOrder.get_settle_msg()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],brands_settle_msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],brands_settle_msg)
 
     def test_return_settle005(self):
         """返单结算-服务商端按规则结算结算价不能修改校验"""
@@ -182,9 +173,7 @@ class Return_Settle(unittest.TestCase):
         # 获取结算价格属性不能编辑
         settle_attribute = self.settleOrder.get_settle_money_attribute()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],settle_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_attribute)
 
     def test_return_settle006(self):
         """返单结算-服务商端按固定金额结算结可以修改结算金额校验"""
@@ -205,9 +194,7 @@ class Return_Settle(unittest.TestCase):
         # 获取输入价格的value值
         settle_money_value = self.settleOrder.get_settle_money_value()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],settle_money_value)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_money_value)
 
     def test_return_settle007(self):
         """返单结算-按规则结算比例计算校验"""
@@ -231,9 +218,7 @@ class Return_Settle(unittest.TestCase):
         # 获取最终结算价格. 获取的价格为100.0 不能直接int
         finally_settle_money = int(self.settleOrder.get_settle_money_value().split('.')[0])
         # 断言
-        isSuccess = self.assert_mode.assert_equal(pay_money,finally_settle_money)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(pay_money,finally_settle_money)
 
     def test_return_settle008(self):
         """返单结算-钱包余额不足不能支付校验"""
@@ -252,9 +237,7 @@ class Return_Settle(unittest.TestCase):
         # 获取系统提示信息
         msg = self.base.get_system_msg()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],msg)
 
     def test_return_settle009(self):
         """返单结算-线下支付成功校验"""
@@ -275,9 +258,7 @@ class Return_Settle(unittest.TestCase):
         # 获取系统提示信息
         msg = self.base.get_system_msg()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],msg)
 
     def test_return_settle010(self):
         """返单结算后-经销商端未结算提示信息不显示校验"""
@@ -296,9 +277,7 @@ class Return_Settle(unittest.TestCase):
         # 点击结算
         self.settleOrder.click_settle_btn()
         # 判断未结算提示信息是否再页面显示
-        isSuccess = self.assert_mode.assert_el_not_in_page(self.settleOrder.not_settle_msg_is_display())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_el_not_in_page(self.settleOrder.not_settle_msg_is_display())
 
     def test_return_settle011(self):
         """返单结算后-经销商端结算价格校验"""
@@ -315,9 +294,7 @@ class Return_Settle(unittest.TestCase):
         # 获取服务撒结算价格
         branch_settle_money = self.settleOrder.get_brands_settle_value_attribute()
         # 判断未结算提示信息是否再页面显示
-        isSuccess = self.assert_mode.assert_equal(data["expect"],branch_settle_money)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],branch_settle_money)
 
     def test_return_settle012(self):
         """返单结算后-经销商端123结算方式都可以选择校验"""
@@ -335,11 +312,9 @@ class Return_Settle(unittest.TestCase):
         settle_type_att2 = self.settleOrder.get_settle_type_2_att()
         settle_type_att3 = self.settleOrder.get_settle_type_3_att()
         # 判断未结算提示信息是否再页面显示
-        isSuccess1 = self.assert_mode.assert_att_is_none(settle_type_att1)
-        isSuccess2 = self.assert_mode.assert_att_is_none(settle_type_att2)
-        isSuccess3 = self.assert_mode.assert_att_is_none(settle_type_att3)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2+isSuccess3,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_att_is_none(settle_type_att1)
+        self.assert_mode.assert_att_is_none(settle_type_att2)
+        self.assert_mode.assert_att_is_none(settle_type_att3)
 
     def test_return_settle013(self):
         """经销商师傅结算-线下支付成功校验"""
@@ -362,9 +337,7 @@ class Return_Settle(unittest.TestCase):
         # 获取系统提示信息
         msg = self.base.get_system_msg()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],msg)
 
     @classmethod
     def tearDownClass(cls):

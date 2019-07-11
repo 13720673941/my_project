@@ -4,7 +4,7 @@
 #  @Time    : 2019/6/10 15:44
 
 from public.common import rwconfig,mytest
-from public.common import driver,getdata,writetestresult
+from public.common import driver,getdata
 from public.common.basepage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.addOrderPage import AddOrderPage
@@ -20,8 +20,7 @@ import unittest
 # 获取网点回访订单参数信息
 VisitData = getdata.get_test_data()["VisitOrderPage"]
 ddtData = VisitData["visit_order_fnc"]
-# 默认写入测试结果
-isWrite=True
+
 class Visit_Order(unittest.TestCase):
 
     def setUp(self):
@@ -93,9 +92,7 @@ class Visit_Order(unittest.TestCase):
         self.visitOrder.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'VisitOrder',ddtData["CaseName"])
+        self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
 
     def tearDown(self):
         self.basePage.quit_browser()

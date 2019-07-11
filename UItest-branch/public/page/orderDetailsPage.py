@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#  -*- coding: utf-8 -*-
 
-# @Author  : Mr.Deng
-# @Time    : 2019/7/5 14:11
+#  @Author  : Mr.Deng
+#  @Time    : 2019/7/5 14:11
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
@@ -16,39 +16,39 @@ class OrderDetailsPage(BasePage):
     """
     订单详情页操作
     """
-    #预约订单按钮
+    # 预约订单按钮
     appoint_order_btn = (By.XPATH,'//button[contains(.,"预约")]')
-    #改约订单按钮
+    # 改约订单按钮
     alter_appoint_time_btn = (By.XPATH,'//button[contains(.,"改约")]')
-    #清除预约日期
+    # 清除预约日期
     appoint_date_clear = (By.XPATH,'//label[text()="预约日期："]/../div/div/div/i')
-    #预约日期输入框
+    # 预约日期输入框
     appoint_time_input = (By.XPATH,'//input[@placeholder="选择起始日期"]')
-    #预约时间打开下拉按钮
+    # 预约时间打开下拉按钮
     open_appoint_select = (By.XPATH,'//label[text()="预约时间："]/../div/div/span[1]')
-    #下拉时间段的统计父目录
+    # 下拉时间段的统计父目录
     parent_for_select = (By.XPATH,'//div[contains(text(),"预约时间")]/../../../../../preceding-sibling::div[1]/ul[2]')
-    #确定预约按钮
+    # 确定预约按钮
     confirm_appoint_btn = (By.XPATH,'//div[contains(text(),"预约时间")]/../../div[3]/button[2]')
-    #预约后详情页有预约字段
+    # 预约后详情页有预约字段
     appoint_time_text = (By.XPATH,'//label[text()="预约上门时间："]/../div')
-    #修改工单按钮
+    # 修改工单按钮
     alter_order_btn = (By.XPATH,'//button[contains(.,"修改工单")]')
-    #订单详情页修改订单手机号的字段
+    # 订单详情页修改订单手机号的字段
     order_info_of_pheNum = (By.XPATH,'//label[text()="联系方式："]/../div')
-    #催单按钮
+    # 催单按钮
     cui_order_btn = (By.XPATH,'//button[contains(.,"催单")]')
-    #催单反馈输入框
+    # 催单反馈输入框
     cui_reason_input = (By.XPATH,'//label[text()="催单内容："]/.././/textarea')
-    #催单确定按钮
+    # 催单确定按钮
     confirm_cui_button = (By.XPATH,'//div[contains(text(),"催单内容")]/../../div[3]/button[2]')
-    #催单校验字
+    # 催单校验字
     order_info_of_cui = (By.XPATH,'//label[text()="服务反馈："]/../div')
-    #详情页新建工单
+    # 详情页新建工单
     new_create_order_btn = (By.XPATH,'//button[contains(.,"新建工单")]')
-    #打印工单按钮
+    # 打印工单按钮
     print_order_btn = (By.XPATH,'//button[contains(.,"打印工单")]')
-    #点击空白关闭日期框
+    # 点击空白关闭日期框
     white_place = (By.XPATH,'//label[contains(.,"预约日期：")]')
 
     def __init__(self,driver):

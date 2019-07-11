@@ -7,7 +7,7 @@ from public.common.assertmode import Assert
 from public.common.basepage import BasePage
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
-from public.common import mytest,rwconfig,writetestresult
+from public.common import mytest,rwconfig
 from public.page.loginPage import LoginPage
 from public.page.alterPwdPage import AlterPwdPage
 import unittest,ddt
@@ -20,8 +20,7 @@ import unittest,ddt
 # 获取测试数据
 testData = get_test_data()["AlterPwdPage"]["alter_pheNum_fnc"]
 ddtData = testData["TestCase006"]
-# 默认写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Alter_PhoneNum(unittest.TestCase):
 
@@ -63,9 +62,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_confirm_alter()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_login_pwd_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPhoneNum",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_login_pwd_msg())
 
     def test_alter_phoneNum002(self):
         '''手机号为空校验'''
@@ -80,9 +77,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_confirm_alter()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_phone_num_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPhoneNum",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_phone_num_msg())
 
     def test_alter_phoneNum003(self):
         '''验证码为空校验'''
@@ -97,9 +92,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_confirm_alter()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_input_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPhoneNum",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_input_msg())
 
     def test_alter_phoneNum004(self):
         '''错误的登陆密码修改手机校验'''
@@ -116,9 +109,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_confirm_alter()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPhoneNum",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.base.get_system_msg())
 
     def test_alter_phoneNum005(self):
         '''错误的验证码修改手机校验'''
@@ -135,9 +126,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_confirm_alter()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"], self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite, isSuccess, "AlterPhoneNum", Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"], self.base.get_system_msg())
 
     @ddt.data(*ddtData)
     def test_alter_phoneNum006(self,ddtData):
@@ -151,9 +140,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_code_button()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(ddtData["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPhoneNum",ddtData["CaseName"])
+        self.assert_mode.assert_equal(ddtData["expect"],self.base.get_system_msg())
 
     def test_alter_phoneNum007(self):
         '''错误的验证码修改手机校验'''
@@ -168,9 +155,7 @@ class Alter_PhoneNum(unittest.TestCase):
         # 点击确定
         self.alterPwd.click_code_button()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_button_att())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPhoneNum",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_button_att())
 
     @classmethod
     def tearDownClass(cls):

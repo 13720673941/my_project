@@ -6,25 +6,18 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from config.urlconfig import *
 import time
 log=Log()
-'''
+"""
 订单结算页面
-'''
+"""
 class SettleOrderPage(BasePage):
 
-    '''
+    """
     订单结算页面
-    '''
-    # 师傅待结算订单页面
-    master_wait_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitsettle?' \
-                             'tabType=师傅工单结算&SubtabType=待结算&page=1'
-    # 服务商待结算订单页面
-    branch_wait_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitsettle?' \
-                             'tabType=服务商工单结算&SubtabType=待结算&page=1'
-    # 代结算订单列表页
-    return_settle_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/branchreturn?' \
-                        'tabType=代结待结算&page=1'
+    """
+    
     # 结算按钮
     settle_btn = (By.XPATH,'//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')
     # 结算价格输入框,厂商/经销商结算价格输入框
@@ -57,15 +50,15 @@ class SettleOrderPage(BasePage):
 
     def enter_master_settle_page(self):
         """进入师傅待结算订单页面"""
-        self.open_url(self.master_wait_settle_url)
+        self.open_url(master_wait_settle_url)
 
     def enter_branch_settle_page(self):
         """进入服务商待结算订单页面"""
-        self.open_url(self.branch_wait_settle_url)
+        self.open_url(branch_wait_settle_url)
 
     def enter_return_wait_settle(self):
         """进入代结订单页"""
-        self.open_url(self.return_settle_url)
+        self.open_url(return_settle_url)
 
     def click_settle_btn(self):
         """点击结算按钮"""

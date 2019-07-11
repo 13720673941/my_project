@@ -7,7 +7,7 @@ from public.common.assertmode import Assert
 from public.common.basepage import BasePage
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
-from public.common import mytest,rwconfig,writetestresult
+from public.common import mytest,rwconfig
 from public.page.loginPage import LoginPage
 from public.page.alterPwdPage import AlterPwdPage
 import unittest,ddt
@@ -21,8 +21,7 @@ import unittest,ddt
 testData = get_test_data()["AlterPwdPage"]["alter_pwd_fnc"]
 ddtData = testData["TestCase004"]
 ddtData1 = testData["logic_test"]
-# 默认写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Alter_Password(unittest.TestCase):
 
@@ -73,9 +72,7 @@ class Alter_Password(unittest.TestCase):
         # 点击确定
         self.alter_pwd.click_confirm_alterPwd()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alter_pwd.get_old_pwd_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPassWord",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alter_pwd.get_old_pwd_msg())
 
     def test_alterPwd002(self):
         '''新密码为空校验'''
@@ -91,9 +88,7 @@ class Alter_Password(unittest.TestCase):
         # 点击确定
         self.alter_pwd.click_confirm_alterPwd()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alter_pwd.get_new_pwd_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPassWord",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alter_pwd.get_new_pwd_msg())
 
     def test_alterPwd003(self):
         '''新密码为空校验'''
@@ -109,9 +104,7 @@ class Alter_Password(unittest.TestCase):
         # 点击确定
         self.alter_pwd.click_confirm_alterPwd()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.alter_pwd.get_confirm_pwd_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPassWord",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.alter_pwd.get_confirm_pwd_msg())
 
     @ddt.data(*ddtData)
     def test_alterPwd004(self,ddtData):
@@ -135,9 +128,7 @@ class Alter_Password(unittest.TestCase):
             rwconfig.write_config_data("蓝魔科技","password",self.new_pwd)
             print("New password: {0}.".format(self.new_pwd))
         # 断言
-        isSuccess = self.assert_mode.assert_equal(ddtData["expect"],msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPassWord",ddtData["CaseName"])
+        self.assert_mode.assert_equal(ddtData["expect"],msg)
 
     def test_alterPwd005(self):
         '''登陆密码不正确校验'''
@@ -155,9 +146,7 @@ class Alter_Password(unittest.TestCase):
         # 点击确定
         self.alter_pwd.click_confirm_alterPwd()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"AlterPassWord",Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.base.get_system_msg())
 
     @ddt.data(*ddtData1)
     def test_alterPwd006(self,ddtData1):
@@ -173,9 +162,7 @@ class Alter_Password(unittest.TestCase):
         self.login.click_login_button()
         self.base.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AlterPassWord',ddtData1['CaseName'])
+        self.assert_mode.assert_equal(ddtData1["expect"],self.base.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

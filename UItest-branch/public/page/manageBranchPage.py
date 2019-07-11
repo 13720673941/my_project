@@ -2,15 +2,17 @@
 
 #  @Author  : Mr.Deng
 #  @Time    : 2019/6/26 12:00
+
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
+from config.urlconfig import *
 """
 客户管理-经销商列表页面
 """
 class DealerBranchPage(BasePage):
 
     """经销商列表页面"""
-    branch_list_url = 'http://www.51shouhou.cn/singleBranch/#/customer/list'
+
     # 添加经销商按钮
     add_manage_branch_btn = (By.XPATH,'//a[text()="添加经销商"]')
     # 经销商客户主账号输入框
@@ -57,7 +59,7 @@ class DealerBranchPage(BasePage):
 
     def enter_dealer_page(self):
         """进入邀请经销商页面"""
-        self.open_url(self.branch_list_url)
+        self.open_url(teamwork_branch_list_url)
 
     def click_add_manage_branch(self):
         """点击添加经销商"""
@@ -136,6 +138,7 @@ class DealerBranchPage(BasePage):
 
     def click_stop_take_confirm(self):
         """点击暂停接单确定"""
+        self.sleep(1)
         self.click_button(self.stop_take_confirm_btn)
 
     def click_open_take_order(self):
@@ -150,4 +153,5 @@ class DealerBranchPage(BasePage):
 
     def click_open_take_confirm(self):
         """点击开启接单确定"""
+        self.sleep(1)
         self.click_button(self.open_take_confirm_btn)

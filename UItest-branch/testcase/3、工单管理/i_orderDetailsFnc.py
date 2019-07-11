@@ -3,7 +3,7 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/7/5 14:09
 
-from public.common import getdata,mytest,writetestresult
+from public.common import getdata,mytest
 from public.common.rwconfig import read_config_data
 from public.common.assertmode import Assert
 from public.common.basepage import BasePage
@@ -23,8 +23,6 @@ import unittest,ddt,datetime
 data = getdata.get_test_data()["OrderDetailPage"]
 appoint_data = data["appoint_order_fnc"]
 cui_data = data["cui_order_fnc"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Order_Details(unittest.TestCase):
     
@@ -89,9 +87,7 @@ class Order_Details(unittest.TestCase):
         # 点击确定预约
         self.order_detail.click_confirm_appoint_btn()
         # 断言
-        isSuccess1 = self.assert_mode.assert_equal(appoint_data["expect"],self.base_page.get_system_msg())
-        # 写入结果
-        writetestresult.write_test_result(isWrite,isSuccess1,'OrderDetails',appoint_data["CaseName"])
+        self.assert_mode.assert_equal(appoint_data["expect"],self.base_page.get_system_msg())
 
     def test_order_details002(self):
         """订单详情页修改预约功能测试用例"""
@@ -112,13 +108,11 @@ class Order_Details(unittest.TestCase):
         # 点击确定预约
         self.order_detail.click_confirm_appoint_btn()
         # 断言
-        isSuccess1 = self.assert_mode.assert_equal(alter_appoint_data["expect"],self.base_page.get_system_msg())
+        self.assert_mode.assert_equal(alter_appoint_data["expect"],self.base_page.get_system_msg())
         # 获取当前日期后一天修改预约判断用
         alter_date = str(datetime.datetime.now().date()+datetime.timedelta(1))
         # 判断修改的预约时间在订单详情页已经改变
-        isSuccess2 = self.assert_mode.assert_in(alter_date,self.order_detail.get_appoint_text())
-        # 写入结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'OrderDetails',alter_appoint_data["CaseName"])
+        self.assert_mode.assert_in(alter_date,self.order_detail.get_appoint_text())
 
     def test_order_details003(self):
         """订单详情页修改订单内容功能用例"""
@@ -135,12 +129,12 @@ class Order_Details(unittest.TestCase):
         self.create_order.click_save_btn()
         # 进入订单详情判断
         self.base_page.open_order_message(self.order_number)
+        # 加载
+        self.base_page.sleep(1)
         # 获取修改字段
         alter_text = self.order_detail.get_alter_text_of_order()
         # 判断修改订单成功
-        isSuccess = self.assert_mode.assert_in(alter_order_data["expect"],alter_text)
-        # 写入结果
-        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',alter_order_data["CaseName"])
+        self.assert_mode.assert_in(alter_order_data["expect"],alter_text)
 
     @ddt.data(*cui_data)
     def test_order_details004(self,cui_data):
@@ -154,9 +148,7 @@ class Order_Details(unittest.TestCase):
         # 点击确定催单
         self.order_detail.click_confirm_cui_order()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(cui_data["expect"],self.base_page.get_system_msg())
-        # 写入结果
-        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',cui_data["CaseName"])
+        self.assert_mode.assert_equal(cui_data["expect"],self.base_page.get_system_msg())
 
     def test_order_details005(self):
         """订单详情页新建订单功能用例"""
@@ -170,9 +162,7 @@ class Order_Details(unittest.TestCase):
         # 点击保存订单
         self.create_order.click_save_btn()
         # 判断新建订单成功
-        isSuccess = self.assert_mode.assert_equal(create_order_data["expect"],self.base_page.get_system_msg())
-        # 写入结果
-        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',create_order_data["CaseName"])
+        self.assert_mode.assert_equal(create_order_data["expect"],self.base_page.get_system_msg())
 
     def test_order_details006(self):
         """订单详情页打印订单功能用例"""
@@ -189,9 +179,7 @@ class Order_Details(unittest.TestCase):
         # 切换页面
         self.base_page.switch_window_handle(handles,old_handle)
         # 判断新建订单成功
-        isSuccess = self.assert_mode.assert_equal(print_order_data["expect"],self.base_page.get_title())
-        # 写入结果
-        writetestresult.write_test_result(isWrite,isSuccess,'OrderDetails',print_order_data["CaseName"])
+        self.assert_mode.assert_equal(print_order_data["expect"],self.base_page.get_title())
 
     @classmethod
     def tearDownClass(cls):

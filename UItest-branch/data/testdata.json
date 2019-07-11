@@ -91,7 +91,7 @@
   "CreateOrderPage": {
     "create_order_fnc": [
     {"CaseName":"1、新建订单-联系人为空校验","username": "","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "用户姓名不能为空!"},
-    {"CaseName":"2、新建订单-联系方式为空校验","username": "AutoTest","PhoneNum": "","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "请正确输入联系方式!"},
+    {"CaseName":"2、新建订单-联系方式为空校验","username": "AutoTest","PhoneNum": "","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "联系方式不能为空!"},
     {"CaseName":"3、新建订单-服务地址为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "","OrderType": "无需返单","Branch":"XM-服务商","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "详细地址不能为空!"},
     {"CaseName":"4、新建订单-选择服务商为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"","ServerType": "安装","Brands": "海尔","Kinds": "空调","expect": "请选择服务商!"},
     {"CaseName":"5、新建订单-服务类型为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "","Brands": "海尔","Kinds": "空调","expect": "服务类型不能为空!"},
@@ -132,7 +132,7 @@
       {"CaseName": "11、派单-重复派单师傅校验","MasterName": "邓鹏飞","expect": "订单已经派给该师傅，勿重复派工！"},
       {"CaseName": "12、派单-师傅转派师傅校验","MasterName": "XIAOMI师傅","expect":"派工成功"}
     ],
-    "TestCase002": {"CaseName": "13、派单-派到师傅的订单可以转派网点校验","BranchName": "branch03","expect":"派单成功"},
+    "TestCase002": {"CaseName": "13、派单-派到师傅的订单可以转派网点校验","BranchName": "XM-服务商","expect":"派单成功"},
     "TestCase003": {"CaseName": "14、派单-派到服务商的订单可以转派师傅校验","MasterName": "邓鹏飞","expect":"派工成功"}
   },
   "7": "/*【设置无效工单功能测试用例：设置无效工单】*/",
@@ -253,7 +253,7 @@
     "new_create_fnc": {"CaseName": "7、新建工单-直接新建工单校验","expect": "创建成功"},
     "print_order_fnc": {"CaseName": "8、打印工单-打印工单页面跳转校验","expect": "打印工单"}
   },
-  "15": "/*【经销商页面功能测试用例集】*/",
+  "15": "/*【经销商页面功能测试用例集：自动带出名称、添加经销商、客户搜索、备注设置、停止接单、恢复接单】*/",
   "AddDealerPage":{
     "auto_name_fnc": {"CaseName": "1、添加经销商-已经注册的用户自动带出用户名称校验","PhoneNum": "13700000001","expect": "XM-服务商"},
     "add_branch_fnc": [
@@ -281,6 +281,35 @@
   },
   "16": "/*【服务商页面功能测试用例集】*/",
   "AddServerPage": {
-
+    "auto_name_fnc": {"CaseName": "1、添加服务商-输入客户手机号自动带出服务商名称校验","PhoneNum": "13700000002","expect": "branch03"},
+    "add_branch_fnc": [
+      {"CaseName": "2、添加服务商-客户主账号为空校验","PhoneNum": "","BranchName": "auto_add","IsSelect": "true","expect": "请输入客户主账号"},
+      {"CaseName": "3、添加服务商-客户备注为空校验","PhoneNum": "13572597243","BranchName": "","IsSelect": "true","expect": "请输入客户姓名"},
+      {"CaseName": "4、添加服务商-客户手机号左边界值校验","PhoneNum": "1370000000","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
+      {"CaseName": "5、添加服务商-客户手机号右边界值校验","PhoneNum": "137000000022","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
+      {"CaseName": "6、添加服务商-客户手机号特殊字符格式校验","PhoneNum": "137a000000.","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
+      {"CaseName": "7、添加服务商-合作工单类型空校验","PhoneNum": "13700000002","BranchName": "auto_add","IsSelect": "false","expect": "请选择至少一个合作工单类型"},
+      {"CaseName": "8、添加服务商-不能重复邀请校验","PhoneNum": "13700000002","BranchName": "auto_add","IsSelect": "true","expect": "您已申请过该服务商"},
+      {"CaseName": "9、添加服务商-成功邀请服务商校验","PhoneNum": "13572597243","BranchName": "auto_add","IsSelect": "true","expect": "添加成功"}
+    ],
+    "search_branch_fnc": [
+      {"CaseName": "10、搜索服务商-按照客户手机号搜索校验","SearchWord": "13700000002","expect": "branch03"},
+      {"CaseName": "11、搜索服务商-按照客户名称搜索校验","SearchWord": "branch03","expect": "13700000002"},
+      {"CaseName": "12、搜索服务商-按客户名称模糊搜索校验","SearchWord": "XM-","expect": "XM-服务商"},
+      {"CaseName": "13、搜索服务商-按客户手机号模糊搜索校验","SearchWord": "3941","expect": "XM科技有限公司"}
+    ],
+    "server_set_fnc": {
+      "TestCase001": {"CaseName": "14、服务设置-设置服务商客户备注校验","SetBranch": "branch05","BranchRemark": "auto_branch_name","expect": "auto_branch_name"},
+      "TestCase002": {"CaseName": "15、服务设置-合作类型不能为空校验","SetBranch": "branch05","expect": "请选择合作类型"},
+      "TestCase003": {"CaseName": "16、服务设置-无派单合作类型不能派单校验","SetBranch": "branch05"},
+      "TestCase004": {"CaseName": "17、服务设置-无报单合作类型不能添加报单订单校验","SetBranch": "branch05","OrderType": "仅报单"},
+      "TestCase005": {"CaseName": "18、服务设置-无返单合作类型不能添加返单订单校验","SetBranch": "branch05","OrderType": "需返单"},
+      "TestCase006": {"CaseName": "19、服务设置-授权服务类型不能为空校验","SetBranch": "branch05","expect": "请选择服务类型"},
+      "TestCase007": {"CaseName": "20、服务设置-授权服务品牌不能为空校验","SetBranch": "branch05","expect": "请选择服务品牌"},
+      "TestCase008": {"CaseName": "21、服务设置-授权服务品类不能为空校验","SetBranch": "branch05","expect": "请选择服务品类"},
+      "TestCase009": {"CaseName": "22、服务设置-授权服务所有类型配置成功校验","SetBranch": "branch05","ServerType": "维修,安装","Kinds": "空调,冰箱,洗衣机"},
+      "TestCase010": {"CaseName": "23、服务设置-授权服务区域不能为空校验","SetBranch": "branch05"},
+      "TestCase011": {"CaseName": "24、服务设置-不在授权区域的订单不能派单校验","BranchName": "branch05","expect": "False"}
+    }
   }
 }

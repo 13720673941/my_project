@@ -5,16 +5,16 @@
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
-'''
+from config.urlconfig import *
+"""
 搜索订单页面信息
-'''
+"""
 class SearchOrderPage(BasePage):
 
-    '''
+    """
     搜索页面元素信息
-    '''
-    # 订单列表页url
-    search_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单'
+    """
+    
     # 订单单号输入框
     order_num_input = (By.XPATH,'//label[text()="工单编号"]/following-sibling::input[1]')
     # 用户姓名输入框
@@ -73,97 +73,97 @@ class SearchOrderPage(BasePage):
         BasePage.__init__(self,driver)
 
     def enter_search_order_page(self):
-        self.open_url(self.search_order_url)
+        self.open_url(all_order_list_url)
 
     def input_order_Nnumber(self,orderNum):
-        '''输入工单编号'''
+        """输入工单编号"""
         self.input_message(self.order_num_input,orderNum)
 
     def input_username(self,username):
-        '''输入用户名字'''
+        """输入用户名字"""
         self.input_message(self.username_input,username)
 
     def input_user_phone(self,phoneNum):
-        '''输入用户手机号'''
+        """输入用户手机号"""
         self.input_message(self.phe_num_input,phoneNum)
 
     def select_server_type(self,value):
-        '''选择服务类型'''
+        """选择服务类型"""
         if value != '':
             self.operate_not_select(self.server_type_open,self.server_type_select,value)
 
     def select_order_status(self,value):
-        '''选择工单状态'''
+        """选择工单状态"""
         if value != '':
             self.operate_not_select(self.order_status_open,self.order_status_select,value)
 
     def select_master(self,value):
-        '''选择服务师傅'''
+        """选择服务师傅"""
         if value != '':
             self.operate_not_select(self.master_open,self.master_select,value)
 
     def click_search_btn(self):
-        '''点击搜索按钮'''
+        """点击搜索按钮"""
         self.click_button(self.search_btn)
 
     def click_search_more(self):
-        '''点击搜索更多'''
+        """点击搜索更多"""
         self.click_button(self.more_search_btn)
 
     def select_product_brand(self,value):
-        '''选择家电品牌'''
+        """选择家电品牌"""
         if value != '':
             self.operate_select(self.brands_select,value)
 
     def select_product_kinds(self,value):
-        '''选择家电品类'''
+        """选择家电品类"""
         if value != '':
             self.operate_select(self.kinds_select,value)
 
     def input_product_number(self,productNum):
-        '''输入产品型号'''
+        """输入产品型号"""
         self.input_message(self.product_num_input,productNum)
 
     def input_in_pheNum(self,in_pheNum):
-        '''输入内机条码'''
+        """输入内机条码"""
         self.input_message(self.in_phe_num_input,in_pheNum)
 
     def select_order_from(self,value):
-        '''选择工单来源'''
+        """选择工单来源"""
         if value != '':
             self.operate_not_select(self.order_from_open,self.parent_order_from,value)
 
     def select_buy_place(self,value):
-        '''选择购买渠道'''
+        """选择购买渠道"""
         if value != '':
             self.operate_not_select(self.buy_place_open,self.parent_buy_place,value)
 
     def input_create_start_date(self,date):
-        '''输入订单创建开始日期'''
+        """输入订单创建开始日期"""
         self.input_message(self.add_order_start_date,date)
 
     def input_create_end_date(self,date):
-        '''输入订单创建结束日期'''
+        """输入订单创建结束日期"""
         self.input_message(self.add_order_end_date,date)
 
     def input_finish_start_date(self,date):
-        '''输入完成订单开始日期'''
+        """输入完成订单开始日期"""
         self.input_message(self.finish_order_start_date,date)
 
     def input_finish_end_date(self,date):
-        '''输入完成订单结束日期'''
+        """输入完成订单结束日期"""
         self.input_message(self.finish_order_end_date,date)
 
     def click_more_search_btn(self):
-        '''点击更多订单搜索的搜索按钮'''
+        """点击更多订单搜索的搜索按钮"""
         self.click_button(self.search_btn1)
 
     def search_order_count(self):
-        '''获取搜索订单数量'''
+        """获取搜索订单数量"""
         self.get_text(self.order_count)
 
     def get_first_order_info(self):
-        '''获取订单列表第一行订单的所有信息'''
+        """获取订单列表第一行订单的所有信息"""
         orderInfo = self.get_text(self.first_order_info) + self.get_text(self.first_order_info1)
         return orderInfo
 

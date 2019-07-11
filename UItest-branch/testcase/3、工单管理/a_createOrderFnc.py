@@ -4,9 +4,8 @@
 # @Time    : 2019/5/30 18:21
 
 from public.common import rwconfig,mytest
-from config.pathconfig import *
 from public.common.assertmode import Assert
-from public.common import driver,getdata,writetestresult
+from public.common import driver,getdata
 from public.page.addOrderPage import AddOrderPage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.loginPage import LoginPage
@@ -23,8 +22,7 @@ import unittest,ddt
 # 获取添加订单信息数据
 Data1 = getdata.get_test_data()["CreateOrderPage"]["create_order_fnc"]
 Data2 = getdata.get_test_data()["CreateOrderPage"]["text_recognition_fnc"]
-# 默认写入执行结果
-isWrite=True
+
 @ddt.ddt
 class Add_Order(unittest.TestCase):
 
@@ -94,15 +92,15 @@ class Add_Order(unittest.TestCase):
         self.addOrderPage.click_save_btn()
         self.basePage.sleep(1)
         # 断言结果
-        isSuccess = self.assert_mode.assert_equal(Data1["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data1["CaseName"])
+        self.assert_mode.assert_equal(Data1["expect"],self.basePage.get_system_msg())
 
     @ddt.data(*Data2)
     def test_addOrder002(self,Data2):
         '''添加订单页面智能文本识别功能跳转校验'''
         # 加载用例名称
         self.basePage.print_case_name(Data2["CaseName"])
+        # 刷新页面
+        self.basePage.refresh_page()
         # 点击打开输入智能识别的按钮
         self.addOrderPage.click_recognition_btn()
         # 等待页面加载
@@ -116,9 +114,7 @@ class Add_Order(unittest.TestCase):
         if '15' in Data2["CaseName"]:
             self.addOrderPage.click_save_btn()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data2["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data2["CaseName"])
+        self.assert_mode.assert_equal(Data2["expect"],self.basePage.get_system_msg())
 
     def test_addOrder003(self):
         '''添加工单页面重置功能校验'''
@@ -143,9 +139,7 @@ class Add_Order(unittest.TestCase):
         self.addOrderPage.click_save_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
 
     def test_addOrder004(self):
         '''直接派单功能校验'''
@@ -175,9 +169,7 @@ class Add_Order(unittest.TestCase):
         self.pleaseOrder.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'AddOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
 
     def test_addOrder005(self):
         '''添加订单页面添加并继续功能校验'''
@@ -203,10 +195,8 @@ class Add_Order(unittest.TestCase):
         isTrue = self.addOrderPage.create_title_is_displayed()
         msg = self.basePage.get_system_msg()
         # # 断言
-        isSuccess1 = self.assert_mode.assert_equal(Data["expect"],msg)
-        isSuccess2 = self.assert_mode.assert_el_in_page(isTrue)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,'AddOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],msg)
+        self.assert_mode.assert_el_in_page(isTrue)
 
     @classmethod
     def tearDownClass(cls):

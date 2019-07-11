@@ -3,7 +3,6 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/5/21 14:59
 
-from public.common import writetestresult
 from public.common import driver,rwconfig
 from public.common import mytest
 from public.common.assertmode import Assert
@@ -18,8 +17,7 @@ import unittest,ddt
 '''
 # 获取登录数据信息
 loginData = getdata.get_test_data()["LoginPage"]
-# 默认写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Branch_Login(unittest.TestCase):
     # setUpClass类方法，加装饰器@classmethod值调用一次
@@ -55,10 +53,8 @@ class Branch_Login(unittest.TestCase):
         self.basePage.sleep(1)
         # 获取系统提示信息
         Msg = self.loginPage.get_system_msg()
-        # 添加断言,封装的AssertIn判断是否在预期的字段相等
-        isSuccess = self.assertMode.assert_equal(loginData["expect"],Msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'BranchLogin',loginData["CaseName"])
+        # 添加断言
+        self.assertMode.assert_equal(loginData["expect"],Msg)
 
     @classmethod
     def tearDownClass(cls):
@@ -67,7 +63,7 @@ class Branch_Login(unittest.TestCase):
         mytest.end_test()
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
 
     suit = unittest.TestSuite()
     suit.addTest(Branch_Login("test_login"))

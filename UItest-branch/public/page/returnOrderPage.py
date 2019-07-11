@@ -6,19 +6,17 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from config.urlconfig import *
 log=Log()
-'''
+"""
 返单页面操作
-'''
+"""
 class ReturnOrderPage(BasePage):
 
-    '''
+    """
     返单页面元素操作
-    '''
-    # 待返单url
-    return_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=待返单&page=1'
-    # 已返单url
-    finish_return_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=已返单&page=1'
+    """
+    
     # 返单按钮
     return_order_btn = (By.XPATH,'//a[text()="返单"]')
     # 修改返单服务商按钮
@@ -36,43 +34,43 @@ class ReturnOrderPage(BasePage):
         BasePage.__init__(self,driver)
 
     def enter_return_order_page(self):
-        self.open_url(self.return_order_url)
+        self.open_url(wait_return_url)
 
     def enter_finish_return_page(self):
-        self.open_url(self.finish_return_url)
+        self.open_url(finish_return_url)
 
     def click_return_btn(self):
-        '''点击返单按钮'''
+        """点击返单按钮"""
         self.click_button(self.return_order_btn)
 
     def click_alter_return_branch(self):
-        '''点击修改返单服务商'''
+        """点击修改返单服务商"""
         self.click_button(self.alter_return_branch_btn)
 
     def select_branch_name(self,branchName):
-        '''选择返单服务商名称'''
+        """选择返单服务商名称"""
         if branchName != '':
             self.click_button(element=(By.XPATH,'//label[text()=" '+branchName+'"]'))
 
     def click_confirm_btn(self):
-        '''点击确定'''
+        """点击确定"""
         self.click_button(self.confirm_alter_btn)
         # log.info('{0}点击->确定'.format(self.success))
 
     def click_add_branch(self):
-        '''点击添加待接单服务商'''
+        """点击添加待接单服务商"""
         self.click_button(self.add_branch_btn)
 
     def click_del_return(self):
-        '''点击撤销返单'''
+        """点击撤销返单"""
         self.click_button(self.del_return_btn)
 
     def turn_title_isDisplayed(self):
-        '''判断页面是否跳转添加服务商页面'''
+        """判断页面是否跳转添加服务商页面"""
         return self.is_display(self.turn_add_branch_title)
 
     def return_order_main(self,orderNumber,alter_return_branch_btn=False,branchName=None):
-        '''返单主程序'''
+        """返单主程序"""
         log.info('-=【返单】=-')
         # 进入返单页面
         self.enter_return_order_page()
@@ -90,6 +88,6 @@ class ReturnOrderPage(BasePage):
         self.sleep(1)
         # 断言
         if '操作成功' in self.get_system_msg():
-            log.info('{0} *Return order: {1} success！'.format(self.success,orderNumber))
+            log.info('{0} ** Return order: {1} success！'.format(self.success,orderNumber))
         else:
-            log.error('{0} *Return order: {1} fail, system msg: {2}.'.format(self.fail,orderNumber,self.get_system_msg()))
+            log.error('{0} ** Return order: {1} fail, system msg: {2}.'.format(self.fail,orderNumber,self.get_system_msg()))

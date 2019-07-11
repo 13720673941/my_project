@@ -4,7 +4,7 @@
 #  @Time    : 2019/6/4 10:29
 
 from public.common import rwconfig,mytest
-from public.common import driver,getdata,writetestresult
+from public.common import driver,getdata
 from public.common.basepage import BasePage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.addOrderPage import AddOrderPage
@@ -13,15 +13,13 @@ from public.page.invalidOrderPage import InvalidOrder
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,ddt
-'''
+"""
 网点设置无效工单测试用例脚本：
 1、无效工单类型为空校验 2、设置无效工单校验校验 3、服务商待派不能设置无效校验 4、已结算订单不能设置无效校验
-'''
+"""
 # 获取无效工单测试数据
 Data = getdata.get_test_data()["InvalidOrderPage"]
 ddtData = Data["set_invalid_fnc"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Set_InvalidOrder(unittest.TestCase):
 
@@ -58,7 +56,7 @@ class Set_InvalidOrder(unittest.TestCase):
 
     @ddt.data(*ddtData)
     def test_setInvalid001(self,ddtData):
-        '''网点设置无效工单测试用例'''
+        """网点设置无效工单测试用例"""
         # 打印测试用力名称
         self.basePage.print_case_name(ddtData["CaseName"])
         # 刷新页面
@@ -74,12 +72,10 @@ class Set_InvalidOrder(unittest.TestCase):
         # 点击确定
         self.setInvalid.click_confirm_btn()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SetInvalidOrder',ddtData["CaseName"])
+        self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
 
     def test_setInvalid002(self):
-        '''待服务商派单订单不能设置无效工单校验'''
+        """待服务商派单订单不能设置无效工单校验"""
         # 获取派单数据
         BranchName = rwconfig.read_config_data('蓝魔科技','branch002')
         InvalidData = Data["TestCase001"]
@@ -94,12 +90,10 @@ class Set_InvalidOrder(unittest.TestCase):
         # 点击无效工单
         self.setInvalid.click_invalid_btn()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(InvalidData["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SetInvalidOrder',InvalidData["CaseName"])
+        self.assert_mode.assert_equal(InvalidData["expect"],self.basePage.get_system_msg())
 
     def test_setInvalid003(self):
-        '''已结算的订单设置无效工单校验'''
+        """已结算的订单设置无效工单校验"""
         # 获取数据
         InvalidData = Data["TestCase002"]
         self.basePage.print_case_name(InvalidData["CaseName"])
@@ -113,9 +107,7 @@ class Set_InvalidOrder(unittest.TestCase):
         self.setInvalid.click_invalid_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(InvalidData["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'SetInvalidOrder',InvalidData["CaseName"])
+        self.assert_mode.assert_equal(InvalidData["expect"],self.basePage.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

@@ -4,7 +4,7 @@
 #  @Time    : 2019/6/5 18:07
 
 from public.common import rwconfig,mytest
-from public.common import driver,getdata,writetestresult
+from public.common import driver,getdata
 from public.common.basepage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.addOrderPage import AddOrderPage
@@ -22,8 +22,7 @@ import unittest,ddt
 # 获取测试数据信息
 Data = getdata.get_test_data()["FinishOrderPage"]
 FinishDate = Data["finish_order_fnc"]
-# 写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Finish_Order(unittest.TestCase):
 
@@ -94,10 +93,9 @@ class Finish_Order(unittest.TestCase):
         self.basePage.sleep(1)
         # 点击提交信息
         self.finishOrder.click_submit_btn()
+        self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(FinishDate["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'FinishOrder',FinishDate["CaseName"])
+        self.assert_mode.assert_equal(FinishDate["expect"],self.basePage.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

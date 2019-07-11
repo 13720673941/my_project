@@ -3,7 +3,6 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/6/3 10:24
 
-from public.common import writetestresult
 from public.common.rwconfig import read_config_data
 from public.common import driver,getdata,mytest
 from public.common.assertmode import Assert
@@ -13,19 +12,18 @@ from public.page.addOrderPage import AddOrderPage
 from public.page.loginPage import LoginPage
 from config.pathconfig import *
 import unittest,ddt
-'''
+"""
 网点派单功能测试用例脚本：
 1、派单-选择工单为空点击派单按钮校验 2、派单-按师傅名称搜索校验 3、派单-按手机号搜索校验 4、派单-派单师傅为空校验
 5、派单-成功派单到师傅校验 6、派单-派单网点为空校验 7、派单-成功派单到网点校验 8、派单-成功派单到网点校验 
 9、派单-成功派单到网点校验 10、派单-师傅转派师傅校验 11、派单-师傅转派网点校验 12、派单-网点转派网点校验
 13、派单-网点转派师傅校验 14、派单-派单到返单服务商校验
-'''
+"""
 # 获取ddt模式文件参数信息
 Data1 = getdata.get_test_data()["PleaseOrderPage"]["search_fnc"]
 Data2 = getdata.get_test_data()["PleaseOrderPage"]["to_branch_fnc"]
 Data3 = getdata.get_test_data()["PleaseOrderPage"]["to_master_fnc"]
-# 默认写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Please_Order(unittest.TestCase):
 
@@ -64,7 +62,7 @@ class Please_Order(unittest.TestCase):
         cls.pleaseOrderPage.enter_please_order_page()
 
     def test_pleaseOrder001(self):
-        '''选择订单为空时派单校验'''
+        """选择订单为空时派单校验"""
         # 获取测试数据
         TestData1 = getdata.get_test_data()["PleaseOrderPage"]["TestCase001"]
         # 点击派单按钮不选择订单
@@ -75,13 +73,11 @@ class Please_Order(unittest.TestCase):
         self.pleaseOrderPage.click_pleaseOrder_btn()
         Msg = self.basePage.get_system_msg()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(TestData1["expect"],Msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',TestData1["CaseName"])
+        self.assert_mode.assert_equal(TestData1["expect"],Msg)
 
     @ddt.data(*Data1)
     def test_pleaseOrder002(self,Data1):
-        '''网点派单页面搜索师傅/网点测试'''
+        """网点派单页面搜索师傅/网点测试"""
         # 刷新页面
         self.basePage.refresh_page()
         # 选择新建订单
@@ -98,13 +94,11 @@ class Please_Order(unittest.TestCase):
         # 获取师傅名称
         Name = self.pleaseOrderPage.get_search_name()
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data1["expect"],Name)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data1["CaseName"])
+        self.assert_mode.assert_equal(Data1["expect"],Name)
 
     @ddt.data(*Data2)
     def test_pleaseOrder003(self,Data2):
-        '''派单到网点测试用例'''
+        """派单到网点测试用例"""
         # 刷新页面
         self.basePage.refresh_page()
         # 选择新建订单
@@ -120,13 +114,11 @@ class Please_Order(unittest.TestCase):
         self.pleaseOrderPage.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data2["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data2["CaseName"])
+        self.assert_mode.assert_equal(Data2["expect"],self.basePage.get_system_msg())
 
     @ddt.data(*Data3)
     def test_pleaseOrder004(self,Data3):
-        '''派单到师傅测试用例'''
+        """派单到师傅测试用例"""
         # 刷新页面
         self.basePage.refresh_page()
         # 选择新建订单
@@ -140,12 +132,10 @@ class Please_Order(unittest.TestCase):
         self.pleaseOrderPage.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data3["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data3["CaseName"])
+        self.assert_mode.assert_equal(Data3["expect"],self.basePage.get_system_msg())
 
     def test_pleaseOrder005(self):
-        '''派到师傅可以转派到服务商校验'''
+        """派到师傅可以转派到服务商校验"""
         # 获取数据
         Data = getdata.get_test_data()["PleaseOrderPage"]["TestCase002"]
         # 刷新页面
@@ -163,12 +153,10 @@ class Please_Order(unittest.TestCase):
         self.pleaseOrderPage.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
 
     def test_pleaseOrder006(self):
-        '''派到服务商可以转派到师傅校验'''
+        """派到服务商可以转派到师傅校验"""
         # 获取数据
         Data = getdata.get_test_data()["PleaseOrderPage"]["TestCase003"]
         # 刷新页面
@@ -186,9 +174,7 @@ class Please_Order(unittest.TestCase):
         self.pleaseOrderPage.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'PleaseOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

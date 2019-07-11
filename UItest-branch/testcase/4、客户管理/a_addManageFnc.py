@@ -7,7 +7,7 @@ from public.common.basepage import BasePage
 from public.common.assertmode import Assert
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
-from public.common import mytest,writetestresult
+from public.common import mytest
 from public.common.rwconfig import read_config_data
 from public.page.loginPage import LoginPage
 from public.page.manageBranchPage import DealerBranchPage
@@ -21,8 +21,6 @@ import unittest,ddt
 # 获取数据
 dealer_page_data = get_test_data()["AddDealerPage"]
 add_dealer_data = dealer_page_data["add_branch_fnc"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Visit_Dealer(unittest.TestCase):
 
@@ -61,9 +59,7 @@ class Visit_Dealer(unittest.TestCase):
         # 获取自动带出的经销商名称
         branch_name = self.dealer_page.get_branch_name()
         # 判断
-        isSuccess = self.assert_mode.assert_equal(auto_name_data["expect"],branch_name)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",auto_name_data["CaseName"])
+        self.assert_mode.assert_equal(auto_name_data["expect"],branch_name)
 
     @ddt.data(*add_dealer_data)
     def test_visit_dealer002(self,add_dealer_data):
@@ -80,9 +76,7 @@ class Visit_Dealer(unittest.TestCase):
         self.dealer_page.click_confirm_add()
         self.base_page.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(add_dealer_data["expect"],self.base_page.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",add_dealer_data["CaseName"])
+        self.assert_mode.assert_equal(add_dealer_data["expect"],self.base_page.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

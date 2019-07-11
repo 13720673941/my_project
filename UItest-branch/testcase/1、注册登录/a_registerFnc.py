@@ -7,7 +7,7 @@ from public.common import createuser
 from public.common.assertmode import Assert
 from config.pathconfig import *
 from public.common import mytest
-from public.common import driver,writetestresult
+from public.common import driver
 from public.page.registerPage import RegisterPage
 from public.common.basepage import BasePage
 from public.common import getdata
@@ -20,8 +20,7 @@ import unittest,ddt
 '''
 # 读取注册脚本测试数据
 Data = getdata.get_test_data()["RegisterPage"]
-# 默认写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Register_Branch(unittest.TestCase):
 
@@ -71,14 +70,12 @@ class Register_Branch(unittest.TestCase):
         # 获取当前时间
         CreateTime = self.basePage.get_now_time(Time=True)
         # 添加断言
-        isSuccess = self.assertMode.assert_equal(Data["expect"],Msg)
+        self.assertMode.assert_equal(Data["expect"],Msg)
         if Msg == '注册成功':
             # 写入新注册的账号密码信息
             with open(accountDataPath,'a') as f:
                 f.write('注册时间：%s,新用户名：%s,手机号：%s,密码：%s'%(CreateTime,self.username,self.phoneNum,Data["NewPwd"])+'\n')
                 print('*Write branch account to txt is success, directory path: {0}'.format(accountDataPath))
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'RegisterBranch',Data["CaseName"])
 
     @classmethod
     def tearDownClass(cls):

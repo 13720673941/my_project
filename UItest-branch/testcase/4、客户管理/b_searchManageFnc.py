@@ -7,7 +7,7 @@ from public.common.basepage import BasePage
 from public.common.assertmode import Assert
 from public.common.driver import browser_driver
 from public.common.getdata import get_test_data
-from public.common import mytest,writetestresult
+from public.common import mytest
 from public.common.rwconfig import read_config_data
 from public.page.loginPage import LoginPage
 from public.page.manageBranchPage import DealerBranchPage
@@ -19,8 +19,6 @@ import unittest,ddt
 # 获取数据
 dealer_page_data = get_test_data()["AddDealerPage"]
 search_branch_data = dealer_page_data["search_branch_fnc"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Search_Dealer(unittest.TestCase):
 
@@ -58,9 +56,7 @@ class Search_Dealer(unittest.TestCase):
         # 输出第一行的所有数据字段
         first_branch_info = self.dealer_page.get_first_branch_info()
         # 断言
-        isSuccess = self.assert_mode.assert_in(search_branch_data["expect"],first_branch_info)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"VisitDealer",search_branch_data["CaseName"])
+        self.assert_mode.assert_in(search_branch_data["expect"],first_branch_info)
 
     @classmethod
     def tearDownClass(cls):

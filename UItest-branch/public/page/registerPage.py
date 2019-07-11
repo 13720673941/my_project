@@ -5,16 +5,16 @@
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
-'''
+from config.urlconfig import *
+"""
 注册页面信息
-'''
+"""
 class RegisterPage(BasePage):
 
-    '''
+    """
     网点注册页面信息
-    '''
-    # 注册url
-    register_url = 'http://www.51shouhou.cn/singleBranch/#/login'
+    """
+    
     # 注册页面所有元素的父路径
     parent_path = '//div[contains(text(),"企业用户注册")]/../form/ul'
     # 免费注册按钮
@@ -38,33 +38,33 @@ class RegisterPage(BasePage):
         BasePage.__init__(self,driver)
 
     def enter_register_page(self):
-        '''进入注册页面'''
-        self.open_url(self.register_url)
+        """进入注册页面"""
+        self.open_url(login_url)
 
     def click_free_register(self):
-        '''点击登录页面免费注册'''
+        """点击登录页面免费注册"""
         self.click_button(self.free_register_btn)
 
     def input_username(self,UserName):
-        '''输入注册用户名'''
+        """输入注册用户名"""
         self.input_message(self.username_input,UserName)
 
     def input_phoneNum(self,PhoneNum):
-        '''输入注册手机号'''
+        """输入注册手机号"""
         self.input_message(self.phe_num_input,PhoneNum)
 
     def input_codeNum(self,CodeNum):
-        '''输入验证码'''
+        """输入验证码"""
         self.input_message(self.code_num_input,CodeNum)
 
     def input_login_pwd(self,LoginPwd):
-        '''输入登录密码'''
+        """输入登录密码"""
         self.input_message(self.login_pwd_input,LoginPwd)
 
     def input_confirm_pwd(self,ConfirmPwd):
-        '''输入确认密码'''
+        """输入确认密码"""
         self.input_message(self.confirm_pwd_input,ConfirmPwd)
 
     def click_register_btn(self):
-        ''''点击注册按钮'''
+        """'点击注册按钮"""
         self.click_button(self.register_btn)

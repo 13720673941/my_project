@@ -3,7 +3,6 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/5/27 10:44
 
-from public.common import writetestresult
 from public.common import driver,getdata,rwconfig
 from public.page.forgetPwdPage import ForgetPwd
 from public.page.loginPage import LoginPage
@@ -22,8 +21,6 @@ import unittest,ddt
 Data = getdata.get_test_data()["ForgetPwdPage"]["forget_pwd_fnc"]
 Data1 = getdata.get_test_data()["ForgetPwdPage"]["get_code_fnc"]
 Data3 = getdata.get_test_data()["ForgetPwdPage"]["logic_test"]
-# 默认写入测试结果
-isWrite=True
 @ddt.ddt
 class Forget_Pwd(unittest.TestCase):
 
@@ -76,13 +73,11 @@ class Forget_Pwd(unittest.TestCase):
         # 获取系统系统提示信息
         Msg = self.basePage.get_system_msg()
         # 断言
-        isSuccess = self.assertMode.assert_equal(Data["expect"],Msg)
+        self.assertMode.assert_equal(Data["expect"],Msg)
         if Msg == '密码修改成功':
             # 把修改的密码写入配置文件中
             rwconfig.write_config_data('蓝魔科技','password',self.new_pwd)
             print('New password: {0}'.format(self.new_pwd))
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ForgetPwd',Data['CaseName'])
 
     @ddt.data(*Data1)
     def test_forgetPwd002(self,Data1):
@@ -104,9 +99,7 @@ class Forget_Pwd(unittest.TestCase):
         # 获取系统提示字段
         Msg = self.basePage.get_system_msg()
         # 断言结果
-        isSuccess = self.assertMode.assert_equal(Data1["expect"],Msg)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ForgetPwd',Data1['CaseName'])
+        self.assertMode.assert_equal(Data1["expect"],Msg)
 
     def test_forgetPwd003(self):
         '''发送成功验证码'''
@@ -127,9 +120,7 @@ class Forget_Pwd(unittest.TestCase):
         # 获取发送成功后按钮元素属性
         Attribute = self.forgetPwd.get_codeBtn_attribute(AttrName='class')
         # 断言
-        isSuccess = self.assertMode.assert_equal(Data2["expect"],Attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ForgetPwd',Data2['CaseName'])
+        self.assertMode.assert_equal(Data2["expect"],Attribute)
 
     @ddt.data(*Data3)
     def test_forgetPwd004(self,Data3):
@@ -145,9 +136,7 @@ class Forget_Pwd(unittest.TestCase):
         self.login.click_login_button()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assertMode.assert_equal(Data3["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ForgetPwd',Data3['CaseName'])
+        self.assertMode.assert_equal(Data3["expect"],self.basePage.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

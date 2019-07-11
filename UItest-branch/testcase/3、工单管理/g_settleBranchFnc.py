@@ -4,7 +4,7 @@
 #  @Time    : 2019/6/15 10:42
 
 from public.common import mytest,rwconfig
-from public.common import driver,getdata,writetestresult
+from public.common import driver,getdata
 from public.common.basepage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.addOrderPage import AddOrderPage
@@ -26,8 +26,7 @@ import unittest
 # 获取数据
 SettleData = getdata.get_test_data()["SettleManagePage"]
 have_settle_money = SettleData["have_settle_money_flow"]
-# 默认写入测试结果
-isWrite = True
+
 class Manage_Settle(unittest.TestCase):
 
     @classmethod
@@ -85,7 +84,7 @@ class Manage_Settle(unittest.TestCase):
         # 登录派单服务商2
         cls.login.login_main(cls.Use2, cls.Pwd2)
         # 获取派单师傅
-        MasterName = rwconfig.read_config_data(BranchName2,'master001')
+        MasterName = rwconfig.read_config_data(BranchName2,'master002')
         # 服务商派单到师傅
         cls.pleaseOrder.please_order_main(cls.OrderNum,MasterName)
         # 网点完成服务
@@ -114,9 +113,7 @@ class Manage_Settle(unittest.TestCase):
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],self.settleOrder.get_settle_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],self.settleOrder.get_settle_msg())
 
     def test_manage_settle002(self):
         """经销商工单结算(有预报价)-未结算1/3结算方式不能选择校验"""
@@ -134,10 +131,8 @@ class Manage_Settle(unittest.TestCase):
         settle_type_att1 = self.settleOrder.get_settle_type_1_att()
         settle_type_att2 = self.settleOrder.get_settle_type_3_att()
         # 获取经销商未结算提示进行断言
-        isSuccess1 = self.assert_mode.assert_equal(data["expect"],settle_type_att1)
-        isSuccess2 = self.assert_mode.assert_equal(data["expect"],settle_type_att2)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_type_att1)
+        self.assert_mode.assert_equal(data["expect"],settle_type_att2)
 
     def test_manage_settle003(self):
         """经销商工单结算(有预报价)-未结算服务商端设置的结算预报价不能修改校验"""
@@ -151,12 +146,11 @@ class Manage_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
+        self.base.sleep(2)
         # 获取固定结算金额不能编辑的属性
         settle_money_attribute = self.settleOrder.get_settle_money_attribute()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
 
     def test_manage_settle004(self):
         """经销商工单结算(有预报价)-经商端设置结算价格不能修改校验"""
@@ -177,9 +171,7 @@ class Manage_Settle(unittest.TestCase):
         # 获取经销商结算金额属性不能编辑
         settle_money_attribute = self.settleOrder.get_settle_money_attribute()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
 
     def test_manage_settle005(self):
         """经销商工单结算(有预报价)-经商端钱包结算余额不足校验"""
@@ -198,9 +190,7 @@ class Manage_Settle(unittest.TestCase):
         # 点击确定结算
         self.settleOrder.click_confirm_pay()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],self.base.get_system_msg())
 
     def test_manage_settle006(self):
         """经销商工单结算(有预报价)-经商端线下结算成功校验"""
@@ -219,9 +209,7 @@ class Manage_Settle(unittest.TestCase):
         # 点击确定结算
         self.settleOrder.click_confirm_pay()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],self.base.get_system_msg())
 
     def test_manage_settle007(self):
         """经销商工单结算(有预报价)-结算后服务商端提示信息校验"""
@@ -240,9 +228,7 @@ class Manage_Settle(unittest.TestCase):
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_el_not_in_page(self.settleOrder.get_settle_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_el_not_in_page(self.settleOrder.get_settle_msg())
 
     def test_manage_settle008(self):
         """经销商工单结算(有预报价)-结算后服务商端显示的经销商结算金额校验"""
@@ -259,9 +245,7 @@ class Manage_Settle(unittest.TestCase):
         # 获取上级结算价格
         brands_settle_money = self.settleOrder.get_brands_settle_value_attribute()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],brands_settle_money)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],brands_settle_money)
 
     def test_manage_settle009(self):
         """经销商工单结算(有预报价)-结算后服务商端1/3结算方式不能选择校验"""
@@ -280,10 +264,8 @@ class Manage_Settle(unittest.TestCase):
         settle_type_att1 = self.settleOrder.get_settle_type_1_att()
         settle_type_att2 = self.settleOrder.get_settle_type_3_att()
         # 获取经销商未结算提示进行断言
-        isSuccess1 = self.assert_mode.assert_equal(data["expect"],settle_type_att1)
-        isSuccess2 = self.assert_mode.assert_equal(data["expect"],settle_type_att2)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_type_att1)
+        self.assert_mode.assert_equal(data["expect"],settle_type_att2)
 
     def test_manage_settle010(self):
         """经销商工单结算(有预报价)-结算后服务商端设置的结算预报价不能修改100校验"""
@@ -301,10 +283,8 @@ class Manage_Settle(unittest.TestCase):
         settle_money_attribute = self.settleOrder.get_settle_money_attribute()
         set_money = self.settleOrder.get_settle_money_value()
         # 获取经销商未结算提示进行断言
-        isSuccess1 = self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
-        isSuccess2 = self.assert_mode.assert_equal(data["expect1"],set_money)
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess1+isSuccess2,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
+        self.assert_mode.assert_equal(data["expect1"],set_money)
 
     def test_manage_settle011(self):
         """经销商工单结算(有预报价)-服务商端线下结算成功校验"""
@@ -323,9 +303,7 @@ class Manage_Settle(unittest.TestCase):
         # 点击确定结算
         self.settleOrder.click_confirm_pay()
         # 获取经销商未结算提示进行断言
-        isSuccess = self.assert_mode.assert_equal(data["expect"],self.base.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,"SettleOrder",data["CaseName"])
+        self.assert_mode.assert_equal(data["expect"],self.base.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

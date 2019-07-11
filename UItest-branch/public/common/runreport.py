@@ -5,12 +5,14 @@
 
 from config.pathconfig import *
 from config import HTMLTestRunnerCN
-import unittest,time
-'''
+from public.common.rwconfig import write_txt_data
+import unittest,time,datetime
+"""
 1、获取测试用例集 2、生成报告
-'''
+"""
 def get_suits(ChildName,CaseName):
-    '''运行测试套件，批量执行测试用例'''
+    """运行测试套件，批量执行测试用例"""
+
     # 获取测试用例目录文件默认路径
     case_dir = testCasePath + ChildName + '\\'
     # discover函数遍历指定目录，按条件过滤文件，返回测试套件列表
@@ -19,25 +21,58 @@ def get_suits(ChildName,CaseName):
     discover_suites = unittest.defaultTestLoader.discover(case_dir,pattern=CaseName,top_level_dir =testCasePath)
     return discover_suites
 
+    # # 加载读取测试用例类下的test测试用例
+    #
+    # suits = unittest.TestLoader().loadTestsFromTestCase(test_case_class)
+    # return suits
+
+
+
 def run_report(ReportName,FileName,title,description,case):
-    '''
+
+    """
     :param FileName:        报告的文件名称
     :param title:           html报告页面标题信息
     :param description:     报告描述
     :param case:            用例集合
     :return:
-    '''
+    """
+
     tm = time.strftime("%Y-%m-%d_%H-%M-%S",time.localtime(time.time()))
     Report = ReportName + tm + '.html'
     ReportPath = reportSavePath + FileName + '\\' + Report
     with open(ReportPath,'wb') as f:
-        runner = HTMLTestRunnerCN.HTMLTestRunner(stream=f,
+        test_result = HTMLTestRunnerCN.HTMLTestRunner(stream=f,
                                                title=title,
                                                description=description
-                                               )
-        runner.run(case)
-        print('*Create test report success, report path: {0}.'.format(ReportPath))
+                                               ).run(case)
+    print('*Create test report success, report path: {0}.'.format(ReportPath))
 
-#  print(get_suits(ChildName='1、注册登录',CaseName='*.py'))
-#  print(get_suits(ChildName='3、工单管理',CaseName='*.py'))
-#  print(get_suits(ChildName='2、修改密码',CaseName='*.py'))
+    # ======写入脚本执行结果======
+    # 写入脚本标题
+    date = datetime.datetime.now().date()
+    write_txt_data(testResultPath,"====={0}{1}=====".format(FileName,date)+"\n")
+    # 获取所有测试用例的个数
+    all_case_number = str(test_result.testsRun)
+    # 写入测试用例个数
+    write_txt_data(testResultPath,"All test case: {0}".format(all_case_number)+'\n')
+    # 获取成功的测试用例个数
+    pass_case_number = str(test_result.success_count)
+    # 写入测试用例个数
+    write_txt_data(testResultPath,"Pass test case: {0}".format(pass_case_number)+'\n')
+    # 获取失败的用例列表
+    fail_case_number = str(len(test_result.failures))
+    # 写入测试用例个数
+    write_txt_data(testResultPath,"Fail test case: {0}".format(fail_case_number)+'\n')
+    # # 写入失败用例的id
+    # write_txt_data(testResultPath,"Fail test case ID: ")
+    # # 循环失败用例列表保存报错信息
+    # for case,reason in test_result.failures:
+    #     # 写入失败用例的id 和 reason
+    #     write_txt_data(testResultPath," * "+case.id())
+
+
+
+
+
+

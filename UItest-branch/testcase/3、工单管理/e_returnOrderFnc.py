@@ -4,7 +4,7 @@
 #  @Time    : 2019/6/12 16:31
 
 from public.common import rwconfig,mytest
-from public.common import driver,getdata,writetestresult
+from public.common import driver,getdata
 from public.common.basepage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.addOrderPage import AddOrderPage
@@ -22,8 +22,7 @@ import unittest,ddt
 # 获取返单测试数据
 ReturnData = getdata.get_test_data()["ReturnOrderPage"]
 ddtData = ReturnData["alter_return_fnc"]
-# 默认写入测试结果
-isWrite=True
+
 @ddt.ddt
 class Return_Order(unittest.TestCase):
 
@@ -86,9 +85,7 @@ class Return_Order(unittest.TestCase):
         self.returnOrder.click_confirm_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ReturnOrder',ddtData["CaseName"])
+        self.assert_mode.assert_equal(ddtData["expect"],self.basePage.get_system_msg())
 
     def test_returnOrder002(self):
         '''网点成功返单校验'''
@@ -103,9 +100,7 @@ class Return_Order(unittest.TestCase):
         self.returnOrder.click_return_btn()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ReturnOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
 
     def test_returnOrder003(self):
         '''返单页面点击添加代结单服务商校验'''
@@ -118,9 +113,7 @@ class Return_Order(unittest.TestCase):
         self.returnOrder.click_add_branch()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_el_in_page(self.returnOrder.turn_title_isDisplayed())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ReturnOrder',Data["CaseName"])
+        self.assert_mode.assert_el_in_page(self.returnOrder.turn_title_isDisplayed())
 
     def test_returnOrder004(self):
         '''撤销返单校验'''
@@ -137,9 +130,7 @@ class Return_Order(unittest.TestCase):
         self.returnOrder.click_del_return()
         self.basePage.sleep(1)
         # 断言
-        isSuccess = self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
-        # 写入测试结果
-        writetestresult.write_test_result(isWrite,isSuccess,'ReturnOrder',Data["CaseName"])
+        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
 
     @classmethod
     def tearDownClass(cls):

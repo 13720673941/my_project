@@ -6,15 +6,15 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from config.urlconfig import *
 log = Log()
-'''
+"""
 网点添加订单页面
-'''
+"""
 class AddOrderPage(BasePage):
 
-    '''网点新建订单页面信息'''
-    # 创建订单页面url
-    create_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/add'
+    """网点新建订单页面信息"""
+    
     # 打开只能识别按钮
     open_text_recognition_btn = (By.XPATH,'//a[text()="智能文本识别"]')
     # 识别文本输入框
@@ -76,32 +76,32 @@ class AddOrderPage(BasePage):
         BasePage.__init__(self,driver)
 
     def enter_create_order_url(self):
-        '''进入新建订单页面'''
-        self.open_url(self.create_order_url)
+        """进入新建订单页面"""
+        self.open_url(create_order_url)
 
     def click_recognition_btn(self):
-        '''点击智能文本识别按钮'''
+        """点击智能文本识别按钮"""
         self.click_button(self.open_text_recognition_btn)
 
     def input_text_recognition(self,textRecognition):
-        '''输入识别文本'''
+        """输入识别文本"""
         self.input_message(self.text_recognition_input,textRecognition)
 
     def click_recognition_submit(self):
-        '''点击提交识别按钮'''
+        """点击提交识别按钮"""
         self.click_button(self.text_recognition_confirm)
 
     def input_username(self,name):
-        '''输入联系人名称'''
+        """输入联系人名称"""
         self.input_message(self.username_input,name)
 
     def input_phoneNum(self,phoneNum):
-        '''输入联系人手机号'''
+        """输入联系人手机号"""
         self.clear_input(self.phone_num_input)
         self.input_message(self.phone_num_input,phoneNum)
 
     def select_server_address(self,serverAddress):
-        '''选择服务地址'''
+        """选择服务地址"""
         # 获取省市区数据
         province,city,area = serverAddress.split('-')
         # 选择省份
@@ -112,14 +112,15 @@ class AddOrderPage(BasePage):
         self.operate_select(self.area_select,area)
 
     def input_add_collage(self,collage):
-        '''输入详细地址信息'''
+        """输入详细地址信息"""
         self.input_message(self.collage_input,collage)
 
     def select_order_type(self,orderType,branchName=None):
-        '''选择工单类型'''
-        Path = (By.XPATH,'//input[@name="radio"and@value="'+orderType+'"]/following-sibling::i')
+        """选择工单类型"""
+
+        self.path = (By.XPATH,'//input[@name="radio"and@value="'+orderType+'"]/following-sibling::i')
         self.sleep(1)
-        self.click_button(Path)
+        self.click_button(self.path)
         # 选择服务商
         if orderType != '无需返单' and branchName != '':
             self.sleep(1)
@@ -128,84 +129,101 @@ class AddOrderPage(BasePage):
             pass
 
     def select_server_type(self,serverType):
-        '''选择服务类型'''
+        """选择服务类型"""
         if serverType != "":
             self.operate_select(self.server_type_select,serverType)
         else:
             pass
 
     def input_orderTime(self):
-        '''输入预约时间'''
+        """输入预约时间"""
         self.input_message(self.order_time_input,self.get_now_time())
         # 选择预约时间段
         self.operate_select(self.time_of_day_select,is_random=True)
 
     def input_brands(self,brands):
-        '''输入产品品牌'''
+        """输入产品品牌"""
         self.input_message(self.brands_input,brands)
 
     def input_kinds(self,kinds):
-        '''输入产品品类'''
+        """输入产品品类"""
         self.input_message(self.kinds_input,kinds)
 
     def input_productNum(self):
-        '''输入产品型号'''
+        """输入产品型号"""
         # 指定产品型号格式
         self.input_message(self.product_num_input,'XH0000')
 
     def input_in_phoneNum(self):
-        '''输入内机条码'''
+        """输入内机条码"""
         self.input_message(self.product_in_num_input,'NEIJI'+str(int(self.get_now_timenum())))
 
     def input_out_phoneNum(self):
-        '''输入外机条码'''
+        """输入外机条码"""
         self.input_message(self.product_out_num_input,'WAIJI'+str(int(self.get_now_timenum())))
 
     def select_buyTime(self):
-        '''选择购买时间'''
+        """选择购买时间"""
         self.input_message(self.buy_time_input,self.get_now_time())
 
     def select_buyPlace(self):
-        '''选择购买渠道'''
+        """选择购买渠道"""
         self.operate_select(self.buy_place_select,is_random=True)
 
     def select_info_from(self):
-        '''选择信息来源'''
+        """选择信息来源"""
         self.operate_select(self.info_from_select,is_random=True)
 
     def input_remark(self):
-        '''输入下单备注'''
+        """输入下单备注"""
         self.input_message(self.remark_input,'备注'+self.get_now_time(Time=True))
 
     def update_picture(self):
-        '''上传图片'''
+        """上传图片"""
         self.up_loading_picture(5,self.update_picture_input)
 
     def click_save_btn(self):
-        '''点击保存按钮'''
+        """点击保存按钮"""
         self.click_button(self.save_order_btn)
 
     def click_reset_btn(self):
-        '''点击重置按钮'''
+        """点击重置按钮"""
         self.click_button(self.reset_order_btn)
 
     def click_please_btn(self):
-        '''点击直接派单按钮'''
+        """点击直接派单按钮"""
         self.click_button(self.please_order_btn)
 
     def click_save_and_add(self):
-        '''点击保存并继续添加按钮'''
+        """点击保存并继续添加按钮"""
         self.click_button(self.save_create_btn)
 
     def create_title_is_displayed(self):
-        '''判断 添加工单的table是否关闭'''
+        """判断 添加工单的table是否关闭"""
         return self.is_display(self.add_order_page_title)
+
+    # 授权页面的服务配置操作方法
+    def select_order_type_for_set(self,orderType):
+        """选择工单类型-服务设置判断操作"""
+        self.click_button((By.XPATH,'//input[@name="radio"and@value="'+orderType+'"]/following-sibling::i'))
+
+    def get_branch_name_list_for_set(self):
+        """获取返单、报单服务商的全部名称列表"""
+
+        # 获取下拉网点元素列表
+        branch_element_list = self.get_element_count(self.branch_select,"option")[1]
+        # 保存元素文本列表中去
+        branch_name_list = []
+        # 循环元素列表报存到文本列表中
+        for name in branch_element_list:
+            branch_name_list.append(name.text)
+        return branch_name_list
 
     def create_order_main(self,name,phoneNum,serverAdd,collage,orderType,
                           server_type_select,brands,kinds,branchName=None):
-        '''
+        """
         添加订单主程序
-        '''
+        """
         log.info('-=【创建订单】=-')
         # 进入添加订单页面
         self.enter_create_order_url()
@@ -250,6 +268,6 @@ class AddOrderPage(BasePage):
         self.sleep(1)
         # 获取系统提示信息
         if self.get_system_msg() == '创建成功':
-            log.info('{0} *Create order is success！'.format(self.success))
+            log.info('{0} ** Create order is success！'.format(self.success))
         else:
-            log.error('{0} *Create order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
+            log.error('{0} ** Create order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))

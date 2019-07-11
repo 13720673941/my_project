@@ -6,17 +6,17 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from config.urlconfig import *
 log=Log()
-'''
+"""
 回访页面信息
-'''
+"""
 class VisitOrderPage(BasePage):
 
-    '''
+    """
     回访页面元素信息
-    '''
-    # 订单回访列表页
-    visit_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单'
+    """
+    
     # 回访按钮
     visit_btn = (By.XPATH,'//a[text()="回访"]')
     # 服务态度选择
@@ -42,50 +42,50 @@ class VisitOrderPage(BasePage):
         BasePage.__init__(self,driver)
 
     def enter_visit_order_page(self):
-        self.open_url(self.visit_order_url)
+        self.open_url(wait_visit_order_url)
 
     def click_visit_btn(self):
-        '''点击回访按钮'''
+        """点击回访按钮"""
         self.click_button(self.visit_btn)
 
     def select_server_status(self,serverStatus):
-        '''选择服务态度'''
+        """选择服务态度"""
         self.operate_select(self.server_status_select,serverStatus)
 
     def select_safety_assess(self,safetyAssess):
-        '''选择安全评价'''
+        """选择安全评价"""
         self.operate_select(self.safety_assessment_select,safetyAssess)
 
     def input_visit_money(self,visitMoney='100'):# 默认100元
-        '''输入回访总额'''
+        """输入回访总额"""
         self.input_message(self.visit_money_input,visitMoney)
 
     def select_visit_result(self,visitResult):
-        '''选择回访结果'''
+        """选择回访结果"""
         self.operate_select(self.visit_result_select,visitResult)
 
     def input_visit_remark(self):
-        '''输入回访反馈'''
+        """输入回访反馈"""
         self.input_message(self.visit_remark_input,self.get_now_time(Time=True))
 
     def select_reward_punish(self,rewardOrPunish='奖励'):
-        '''选择奖励/惩罚默认是奖励'''
+        """选择奖励/惩罚默认是奖励"""
         self.operate_select(self.reward_or_punish,rewardOrPunish)
 
     def input_reward_punish_money(self,rewardPunishMoney='10'):
-        '''输入奖惩金额'''
+        """输入奖惩金额"""
         self.input_message(self.reward_punish_money,rewardPunishMoney)
 
     def input_reward_punish_remark(self):
-        '''输入奖惩备注'''
+        """输入奖惩备注"""
         self.input_message(self.reward_punish_remark,self.get_now_time(Time=True))
 
     def click_confirm_btn(self):
-        '''点击确定按钮'''
+        """点击确定按钮"""
         self.click_button(self.confirm_btn)
 
     def visit_order_main(self,orderNumber,serverStatus,safetyAssess,visitMoney,visitResult):
-        '''订单回访主程序'''
+        """订单回访主程序"""
         log.info('-=【订单回访】=-')
         # 进入完工订单列表页面
         self.enter_visit_order_page()
@@ -114,6 +114,6 @@ class VisitOrderPage(BasePage):
         self.sleep(1)
         # 断言
         if self.get_system_msg() == '操作成功':
-            log.info('{0} *Visit order is success！'.format(self.success))
+            log.info('{0} ** Visit order is success！'.format(self.success))
         else:
-            log.error('{0} *Visit order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
+            log.error('{0} ** Visit order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
