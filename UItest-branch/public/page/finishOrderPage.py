@@ -107,7 +107,7 @@ class FinishOrder(BasePage):
         self.input_remark()
         # 上传图片
         self.up_finish_picture()
-        self.sleep(1)
+        self.sleep(2)
         # 点击提交
         self.click_submit_btn()
         # 判断

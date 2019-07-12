@@ -1,4 +1,39 @@
-=====1、登录注册2019-07-11=====
+
+
+********** 2019-07-12 **********
+
+---------- 1、登录注册 ----------
 All test case: 20
 Pass test case: 20
+Error test case: 0
 Fail test case: 0
+Fail test case ID:
+---------- 2、修改密码 ----------
+All test case: 39
+Pass test case: 38
+Error test case: 0
+Fail test case: 1
+Fail test case ID:
+ * 2、修改密码.c_alterPheFnc.Alter_PhoneNum.test_alter_phoneNum002
+---------- 3、工单管理 ----------
+All test case: 101
+Pass test case: 94
+Error test case: 6
+Fail test case: 1
+Fail test case ID:
+ * 3、工单管理.a_createOrderFnc.Add_Order.test_addOrder002_2
+---------- 4、客户管理 ----------
+All test case: 31
+Pass test case: 29
+Error test case: 1
+Fail test case: 1
+Fail test case ID:
+ * 4、客户管理.a_addManageFnc.Visit_Dealer.test_visit_dealer002_7
+---------- 3、工单管理 ----------
+All test case: 101
+Pass test case: 94
+Error test case: 5
+Fail test case: 2
+Fail test case ID: 
+ * 3、工单管理.a_createOrderFnc.Add_Order.test_addOrder002_2
+ * 3、工单管理.g_settleBranchFnc.Manage_Settle.test_manage_settle007

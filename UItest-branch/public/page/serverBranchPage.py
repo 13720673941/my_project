@@ -16,7 +16,7 @@ class ServerBranchPage(BasePage):
     """页面元素信息"""
 
     # 父路径该页面有两个一样的页面需要从根目录定位
-    parent_xpath = '//div[@id="main"]/following-sibling::div[22]/'
+    parent_xpath = '//div[@id="main"]/following-sibling::div[21]/'
     # 切换服务商的table按钮
     server_branch_table = (By.XPATH,'//a[text()="服务商"]')
     # 添加服务商按钮
@@ -81,8 +81,6 @@ class ServerBranchPage(BasePage):
     confirm_please_btn = (By.XPATH,'//div[contains(text(),"是否")]/../div[4]/a[2]')
     # 选择属性表示字段
     is_select = "ivu-checkbox-wrapper-checked"
-    # 判断省份下的区域是否全选 判断属性字段
-    province_after_all_is_select = "ivu-checkbox-indeterminate"
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -324,37 +322,27 @@ class ServerBranchPage(BasePage):
     def clear_server_address_info(self):
         """清空服务地址信息"""
 
-        # 获取第一个服务商的服务地址信息
-        branch_server_address = self.get_text(self.first_branch_address_info)
-        # 解析地址信息，清空地址只需要单击/双击选择的省份
-        branch_address = branch_server_address.split(",")[0]
-        # 省市区已经获取，拆分字符串获取前面两个字符
-        address_of_province = branch_address[:3]
         # 统计所有的省份
         provinces_count,all_provinces_element = self.get_element_count(parentEl=self.server_province_parent)
-        # 转换所有省份的文本信息放到列表中
-        province_name_list = []
-        for name in all_provinces_element:
-            province_name_list.append(name.text)
-        # 遍历省列表判断已经配置的省份在列表的位置
-        for province_name in province_name_list:
-            # 如果设置的省份在所有省份的列表中的某个字段中时，输出索引
-            if address_of_province in province_name:
-                set_province_index = province_name_list.index(province_name)+1
-        # 获取该索引位置的省份的 label、span 元素的 class 属性
-        label_attribute = self.get_att(element=('//div[@id="main"]/following-sibling::div[22]/.//div[text()="选择服务省份"]/..'
-                                                '/ul/li['+str(set_province_index)+']/.//label'),attribute="class")
-        span_attribute = self.get_att(element=('//div[@id="main"]/following-sibling::div[22]/.//div[text()="选择服务省份"]/..'
-                                                '/ul/li['+str(set_province_index)+']/.//label/span'),attribute="class")
-        # 判断省份一下市区是全部选择还是漏选::全选单击清除，漏选双击清除
-        if self.is_select in label_attribute and self.province_after_all_is_select not in span_attribute:
-            # 该情况为省份全选单击所选择的省份
-            self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[22]/'
-                                                './/div[text()="选择服务省份"]/../ul/li['+str(set_province_index)+']/.//input'))
-        elif self.is_select not in label_attribute and self.province_after_all_is_select in span_attribute:
-            # 该情况为漏选省份后面的地址双击省份清空所有
-            self.mouse_double_click(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[22]/'
-                                                     './/div[text()="选择服务省份"]/../ul/li['+str(set_province_index)+']/.//input'))
+        # 判断省份下的区域是否全选 判断属性字段
+        all_is_not_select = "ivu-checkbox-indeterminate"
+        all_is_select = "ivu-checkbox-checked"
+        # 遍历所有的省份的选择属性值，判断是否已经选择
+        for i in range(1,provinces_count):
+            # 获取该索引位置的省份的 label、span 元素的 class 属性
+            span_attribute = self.get_att(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                                                            '../ul/li['+str(i)+']/.//label/span'),attribute="class")
+            # 判断省份一下市区是全部选择还是漏选::全选单击清除，漏选双击清除
+            if all_is_select in span_attribute:
+                # 该情况为省份全选单击所选择的省份
+                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                                                    '../ul/li['+str(i)+']/.//input'))
+            elif all_is_not_select in span_attribute:
+                # 该情况为漏选省份后面的地址双击省份清空所有
+                self.mouse_double_click(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                                                      '../ul/li['+str(i)+']/.//input'))
+            else:
+                pass
 
     # ======选择省市区======
     def select_server_province(self,province_list):
@@ -363,14 +351,17 @@ class ServerBranchPage(BasePage):
         # province_list 参数默认写成一个列表的类型
         # 统计所有的省份
         provinces_count,all_provinces_element = self.get_element_count(parentEl=self.server_province_parent)
-        # 循环遍历所有的省份
-        for i in range(provinces_count):
-            province_name = all_provinces_element[i].text
-            # 判断省份的名称在所要选择的省份列表中时，选择该省份
-            if province_name in province_list:
-                self.sleep(1)
-                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[22]/'
-                                                    './/div[text()="选择服务省份"]/../ul/li['+str(i)+']/.//input'))
+        # 循环遍历所有的省份,第一个不能点击从2开始
+        for i in range(1,provinces_count):
+            try:
+                province_name = all_provinces_element[i].text
+                # 判断省份的名称在所要选择的省份列表中时，选择该省份
+                if province_name in province_list:
+                    self.sleep(1)
+                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                                                    '../ul/li['+str(i+1)+']/.//input'))
+            except Exception as e:
+                raise e
 
     def select_server_city(self,city_list):
         """选择服务市区"""
@@ -378,13 +369,16 @@ class ServerBranchPage(BasePage):
         # 统计所有的市区
         city_count,all_city_element = self.get_element_count(parentEl=self.server_city_parent)
         # 循环遍历所有的省份
-        for i in range(city_count):
-            city_name = all_city_element[i].text
-            # 判断省份的名称在所要选择的省份列表中时，选择该省份
-            if city_name in city_list:
-                self.sleep(1)
-                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[22]/'
-                                                    './/div[text()="选择服务城市"]/../ul/li['+str(i)+']/.//input'))
+        for i in range(1,city_count):
+            try:
+                city_name = all_city_element[i].text
+                # 判断省份的名称在所要选择的省份列表中时，选择该省份
+                if city_name in city_list:
+                    self.sleep(1)
+                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务城市"]/'
+                                                        '../ul/li['+str(i+1)+']/.//input'))
+            except Exception as e:
+                raise e
 
     def select_server_area(self,area_list):
         """选择服务区县"""
@@ -392,13 +386,16 @@ class ServerBranchPage(BasePage):
         # 统计所有的区县
         area_count,all_area_element = self.get_element_count(parentEl=self.server_area_parent)
         # 循环遍历所有的省份
-        for i in range(area_count):
-            area_name = all_area_element[i].text
-            # 判断省份的名称在所要选择的省份列表中时，选择该省份
-            if area_name in area_list:
-                self.sleep(1)
-                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[22]/'
-                                                    './/div[text()="选择服务区/县"]/../ul/li['+str(i)+']/.//input'))
+        for i in range(1,area_count):
+            try:
+                area_name = all_area_element[i].text
+                # 判断省份的名称在所要选择的省份列表中时，选择该省份
+                if area_name in area_list:
+                    self.sleep(1)
+                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务区/县"]/'
+                                                        '../ul/li['+str(i+1)+']/.//input'))
+            except Exception as e:
+                raise e
 
     def click_save_set_server(self):
         """确定服务设置"""
@@ -406,10 +403,24 @@ class ServerBranchPage(BasePage):
 
     def click_stop_please_order(self):
         """点击禁止派单"""
+
+        # 初始化操作按钮
+        first_branch_info = self.get_first_branch_info()
+        if "恢复派单" in first_branch_info:
+            # 说明按钮处于恢复派单状态，恢复按钮初始字段，要不然找不到按钮
+            self.click_open_please_order()
+            self.click_confirm_stop_please()
         self.click_button(self.stop_please_btn)
 
     def click_open_please_order(self):
         """点击恢复接单"""
+
+        # 初始化操作按钮
+        first_branch_info = self.get_first_branch_info()
+        if "禁止派单" in first_branch_info:
+            # 说明按钮处于禁止派单状态，恢复按钮初始字段，要不然找不到按钮
+            self.click_stop_please_order()
+            self.click_confirm_stop_please()
         self.click_button(self.open_please_btn)
 
     def click_confirm_stop_please(self):

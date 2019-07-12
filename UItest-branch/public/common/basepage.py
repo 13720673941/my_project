@@ -414,13 +414,13 @@ class BasePage(object):
             ChildElList = ParentPath.find_elements_by_tag_name(childEl)
             count = len(ChildElList)
             # 定义一个空列表，把子元素的列表文本添加进去
-            text_list = []
-            for i in range(count):
-                text_list.append(ChildElList[i])
-            log.info('{0} Get children element <{1}> count are {2}, Spend {3} seconds.'.format(self.success,childEl,count,time.time()-t1))
-            return count,text_list
+            # text_list = []
+            # for i in range(count):
+            #     text_list.append(ChildElList[i])
+            log.info('{0} Get children element: <{1}> count are {2}, Spend {3} seconds.'.format(self.success,childEl,count,time.time()-t1))
+            return count,ChildElList
         except Exception:
-            log.error('{0} Get element <{1}> count is anomaly, Spend {2} seconds.'.format(self.fail,childEl,time.time()-t1))
+            log.error('{0} Get element: <{1}> count is anomaly, Spend {2} seconds.'.format(self.fail,childEl,time.time()-t1))
             raise
 
     def operate_not_select(self,open_el,parent_el,value=None,child_el='li',is_random=False):
@@ -470,7 +470,7 @@ class BasePage(object):
             t1 = time.time()
             try:
                 Picture = picturePath+Plist[i]
-                self.sleep(1)
+                self.sleep(2)
                 self.input_message(element,message=Picture)
                 log.info('{0} Uploading picture: {1}, Spend {2} seconds.'.format(self.success,Picture,time.time()-t1))
             except Exception:
@@ -503,8 +503,7 @@ class BasePage(object):
                 if i == 1:
                     self.refresh_page()
                 elif i == 9:
-                    log.error('{0} Select order: {1} anomaly.'.format(self.fail,OrderNumber))
-                    raise
+                    raise Exception("{0} Not found order number: {1} in order list.".format(self.fail,OrderNumber))
 
     def get_order_number(self,insteadOrder=False):
         """

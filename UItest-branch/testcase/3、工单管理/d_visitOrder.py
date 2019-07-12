@@ -11,12 +11,13 @@ from public.page.addOrderPage import AddOrderPage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.visitOrderPage import VisitOrderPage
+from public.page.searchOrderPage import SearchOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest
-'''
+"""
 网点回访工单
-'''
+"""
 # 获取网点回访订单参数信息
 VisitData = getdata.get_test_data()["VisitOrderPage"]
 ddtData = VisitData["visit_order_fnc"]
@@ -33,6 +34,7 @@ class Visit_Order(unittest.TestCase):
         self.loginPage = LoginPage(self.dr)
         self.finishOrder = FinishOrder(self.dr)
         self.visitOrder = VisitOrderPage(self.dr)
+        self.search_order = SearchOrderPage(self.dr)
         self.assert_mode = Assert(self.dr)
         # 获取网点登录数据
         UserName = rwconfig.read_config_data('蓝魔科技','username')
@@ -62,12 +64,17 @@ class Visit_Order(unittest.TestCase):
         self.visitOrder.enter_visit_order_page()
 
     def test_visitOrder001(self):
-        '''订单回访功能校验'''
+        """订单回访功能校验"""
         # 用例名称
         self.basePage.print_case_name(ddtData["CaseName"])
         # 刷新页面
         self.basePage.refresh_page()
         self.basePage.sleep(1)
+        # 搜索订单
+        # 输入工单编号
+        self.search_order.input_order_Nnumber(orderNum=self.OrderNumber)
+        # 点击搜索
+        self.search_order.click_search_btn()
         # 选择完成的工单
         self.basePage.select_new_order(OrderNumber=self.OrderNumber)
         # 点击回访

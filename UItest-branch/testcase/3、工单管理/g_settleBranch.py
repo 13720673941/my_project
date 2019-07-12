@@ -227,6 +227,7 @@ class Manage_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
+        self.base.sleep(1)
         # 获取经销商未结算提示进行断言
         self.assert_mode.assert_el_not_in_page(self.settleOrder.get_settle_msg())
 

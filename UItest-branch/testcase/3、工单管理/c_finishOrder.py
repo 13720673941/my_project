@@ -13,11 +13,11 @@ from public.page.finishOrderPage import FinishOrder
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,ddt
-'''
+"""
 网点完成服务页面功能测试用例：
 1、完成工单-师傅预约时间为空校验 2、完成工单-师傅上门时间为空校验 3、完成工单-师傅完工时间为空校验 4、完成工单-师傅上传图片为空校验
 5、完成工单-网点完成服务校验
-'''
+"""
 # 写入日志
 # 获取测试数据信息
 Data = getdata.get_test_data()["FinishOrderPage"]
@@ -66,7 +66,7 @@ class Finish_Order(unittest.TestCase):
 
     @ddt.data(*FinishDate)
     def test_finishOrder001(self,FinishDate):
-        '''网点完成工单功能校验'''
+        """网点完成工单功能校验"""
         # 设置参数信息
         for key,value in FinishDate.items():
             if value == '当前时间':
@@ -93,7 +93,7 @@ class Finish_Order(unittest.TestCase):
         self.basePage.sleep(1)
         # 点击提交信息
         self.finishOrder.click_submit_btn()
-        self.basePage.sleep(1)
+        self.basePage.sleep(2)
         # 断言
         self.assert_mode.assert_equal(FinishDate["expect"],self.basePage.get_system_msg())
 

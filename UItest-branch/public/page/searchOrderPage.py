@@ -6,6 +6,8 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from config.urlconfig import *
+from public.common.logconfig import Log
+log = Log()
 """
 搜索订单页面信息
 """
@@ -166,7 +168,5 @@ class SearchOrderPage(BasePage):
         """获取订单列表第一行订单的所有信息"""
         orderInfo = self.get_text(self.first_order_info) + self.get_text(self.first_order_info1)
         return orderInfo
-
-
 
 

@@ -25,7 +25,7 @@ class Send_Email(object):
         self.ToEmailAddress = cf.get('To_Email','email_address')
 
     def EmailTitleMessage(self):
-        '''邮件标题信息'''
+        """邮件标题信息"""
         # 邮件发送人、收件人、标题、文件标题信息
         # 创建实例
         self.Message = MIMEMultipart()
@@ -38,7 +38,7 @@ class Send_Email(object):
         self.Message['Subject'] = Time + '自动化测试结果'
 
     def EmailAddTextMessage(self,start_time,run_time):
-        '''添加邮件正文文本信息'''
+        """添加邮件正文文本信息"""
         TextMessage = 'test start time: '+start_time+'\nrunning time: '+run_time+'' \
                       '\n1、注册登录模块：' \
                       '\n2、修改密码模块：' \
@@ -48,7 +48,7 @@ class Send_Email(object):
         self.Message.attach(att)
 
     def AttNewReport(self):
-        '''获取最新的测试报告路径'''
+        """获取最新的测试报告路径"""
         ReportPath = reportSavePath
         ReportDirs = os.listdir(ReportPath)
         # 循环获取最新的测试报告
@@ -71,7 +71,8 @@ class Send_Email(object):
                 self.Message.attach(att)
 
     def AttNewResult(self):
-        '''获取测试结果文件上传'''
+        """获取测试结果文件上传"""
+
         TestResult = testResultPath
         # 获取日志名称
         LogName = TestResult.split("\\")[-1]
@@ -83,12 +84,12 @@ class Send_Email(object):
         self.Message.attach(att1)
 
     def SendEmailMessage(self):
-        '''
+        """
         :param FromEmailAddress:    我方邮箱地址
         :param FromEmailPassword:   我方邮箱密码
         :param ToEmailAddress:      他方邮箱
         :param message:             实例函数
-        '''
+        """
         # ==========【发送邮件的信息】==========
         # 服务器以及端口QQ邮箱端口是465
         server = smtplib.SMTP_SSL('smtp.qq.com',465)

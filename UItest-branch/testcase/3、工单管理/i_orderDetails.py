@@ -68,6 +68,7 @@ class Order_Details(unittest.TestCase):
         self.please_order.enter_please_order_page()
         # 进入订单详情
         self.base_page.open_order_message(self.order_number)
+        self.base_page.sleep(2)
 
     @ddt.data(*appoint_data)
     def test_order_details001(self,appoint_data):
@@ -141,7 +142,7 @@ class Order_Details(unittest.TestCase):
         """订单详情催单功能测试用例"""
         # 打印测试用例名称
         self.base_page.print_case_name(cui_data["CaseName"])
-        # 点击预约按钮
+        # 点击催单按钮
         self.order_detail.click_cui_order_btn()
         # 输入催单备注
         self.order_detail.input_cui_of_reason(cui_data["CuiReason"])

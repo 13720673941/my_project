@@ -124,7 +124,7 @@
       {"CaseName": "5、派单-派单到返单服务商校验","BranchName": "branch03","expect": "订单不能派给返单网点"},
       {"CaseName": "6、派单-成功派单到网点校验","BranchName": "XM-服务商","expect": "派单成功"},
       {"CaseName": "7、派单-重复派单到网点校验","BranchName": "XM-服务商","expect": "订单已在该服务商下，勿重复派单"},
-      {"CaseName": "8、派单-网点转派网点校验","BranchName": "branch05","expect": "派单成功"}
+      {"CaseName": "8、派单-网点转派网点校验","BranchName": "XM科技有限公司","expect": "派单成功"}
     ],
     "to_master_fnc": [
       {"CaseName": "9、派单-派单师傅为空校验","MasterName": "","expect": "请选择师傅"},
@@ -279,7 +279,7 @@
     "stop_take_fnc": {"CaseName": "16、暂停接单-暂停接单功能校验","StopTakeBranch":"XM-服务商","BranchName": "蓝魔科技","expect": "恢复接单"},
     "open_take_fnc": {"CaseName": "17、恢复接单-恢复接单功能校验","OpenTakeBranch":"XM-服务商","BranchName": "蓝魔科技","expect": "暂停接单"}
   },
-  "16": "/*【服务商页面功能测试用例集】*/",
+  "16": "/*【服务商页面功能测试用例集：自动带出名称、添加服务商、客户搜索、服务配置设置、禁止派单、恢复派单】*/",
   "AddServerPage": {
     "auto_name_fnc": {"CaseName": "1、添加服务商-输入客户手机号自动带出服务商名称校验","PhoneNum": "13700000002","expect": "branch03"},
     "add_branch_fnc": [
@@ -307,9 +307,13 @@
       "TestCase006": {"CaseName": "19、服务设置-授权服务类型不能为空校验","SetBranch": "branch05","expect": "请选择服务类型"},
       "TestCase007": {"CaseName": "20、服务设置-授权服务品牌不能为空校验","SetBranch": "branch05","expect": "请选择服务品牌"},
       "TestCase008": {"CaseName": "21、服务设置-授权服务品类不能为空校验","SetBranch": "branch05","expect": "请选择服务品类"},
-      "TestCase009": {"CaseName": "22、服务设置-授权服务所有类型配置成功校验","SetBranch": "branch05","ServerType": "维修,安装","Kinds": "空调,冰箱,洗衣机"},
-      "TestCase010": {"CaseName": "23、服务设置-授权服务区域不能为空校验","SetBranch": "branch05"},
+      "TestCase009": {"CaseName": "22、服务设置-授权服务区域不能为空校验","SetBranch": "branch05","expect": "请完善服务区域"},
+      "TestCase010": {"CaseName": "23、服务设置-授权服务所有类型配置成功校验","SetBranch": "branch05","ServerType": ["维修","安装"],"Brands": ["海尔","美的"],"Kinds": ["空调","冰箱","洗衣机"],"Province": ["北京","天津"],"expect": "操作成功"},
       "TestCase011": {"CaseName": "24、服务设置-不在授权区域的订单不能派单校验","BranchName": "branch05","expect": "False"}
+    },
+    "stop_open_please_fnc": {
+      "TestCase001": {"CaseName": "25、禁止派单-禁止派单功能校验","StopPleaseBranch":"branch002","expect": "恢复派单"},
+      "TestCase002": {"CaseName": "26、恢复派单-恢复派单功能校验","StopPleaseBranch":"branch002","expect": "禁止派单"}
     }
   }
 }
