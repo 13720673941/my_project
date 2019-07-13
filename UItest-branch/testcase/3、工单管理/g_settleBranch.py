@@ -42,8 +42,6 @@ class Manage_Settle(unittest.TestCase):
         cls.settleOrder = SettleOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
         mytest.start_test()
-        # 获取定单订单号::新建工单时添加的无需返单订单
-        #  cls.OrderNum = rwconfig.read_config_data('NotReturnOrder','id',orderNumPath)
         # 登录网点 蓝魔科技
         cls.Use = rwconfig.read_config_data('蓝魔科技',"username")
         cls.Pwd = rwconfig.read_config_data('蓝魔科技',"password")
@@ -63,7 +61,7 @@ class Manage_Settle(unittest.TestCase):
         cls.OrderNum = cls.base.get_order_number()
         # 获取派单到服务商数据 关联派单数据中的信息
         BranchName1 = rwconfig.read_config_data('蓝魔科技','branch001')
-        # 派单到服务商1-XM-服务撒
+        # 派单到服务商1-自动化测试网点01
         cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True)
         # 退出登录
         cls.login.click_logout_button()
@@ -74,7 +72,7 @@ class Manage_Settle(unittest.TestCase):
         cls.login.login_main(cls.Use1,cls.Pwd1)
         # 获取派单到服务商数据 关联派单数据中的信息
         BranchName2 = rwconfig.read_config_data(BranchName1,'branch001')
-        # 派单到服务商2-branch03
+        # 派单到服务商2-自动化测试网点02
         cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName2,please_to_branch=True)
         # 退出登录
         cls.login.click_logout_button()
@@ -84,7 +82,7 @@ class Manage_Settle(unittest.TestCase):
         # 登录派单服务商2
         cls.login.login_main(cls.Use2, cls.Pwd2)
         # 获取派单师傅
-        MasterName = rwconfig.read_config_data(BranchName2,'master002')
+        MasterName = rwconfig.read_config_data(BranchName2,'master001')
         # 服务商派单到师傅
         cls.pleaseOrder.please_order_main(cls.OrderNum,MasterName)
         # 网点完成服务
@@ -127,6 +125,7 @@ class Manage_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
+        self.base.sleep(2)
         # 获取结算方式1、3的选择属性
         settle_type_att1 = self.settleOrder.get_settle_type_1_att()
         settle_type_att2 = self.settleOrder.get_settle_type_3_att()
@@ -243,6 +242,7 @@ class Manage_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
+        self.base.sleep(2)
         # 获取上级结算价格
         brands_settle_money = self.settleOrder.get_brands_settle_value_attribute()
         # 获取经销商未结算提示进行断言

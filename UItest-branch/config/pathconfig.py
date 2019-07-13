@@ -31,7 +31,7 @@ reportSavePath = os.path.join(parentPath,'result','report') + '\\'
 # 错误截图保存路径文件夹
 errorImagePath = os.path.join(parentPath,'result','image') + '\\'
 # 测试结果保存路径
-testResultPath = os.path.join(parentPath,'result','testresult.txt')
+testResultPath = os.path.join(parentPath,'result','testresult')+'\\'
 # 获取测试用例路径
 testCasePath = os.path.join(parentPath,'testcase') + '\\'
 

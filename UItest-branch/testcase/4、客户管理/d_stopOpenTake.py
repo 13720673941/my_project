@@ -37,8 +37,8 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 登录经销账号下单
-        cls.manage_branch_use = read_config_data("XM-服务商","username")
-        cls.manage_branch_pwd = read_config_data("XM-服务商","password")
+        cls.manage_branch_use = read_config_data("自动化测试网点03","username")
+        cls.manage_branch_pwd = read_config_data("自动化测试网点03","password")
         cls.login.login_main(cls.manage_branch_use,cls.manage_branch_pwd)
         # 获取订单信息
         user = read_config_data("NotReturnOrder","用户姓名",orderInfo)
@@ -102,6 +102,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         self.please_order_page.input_search_branch_name(branch_name=stop_take_data["BranchName"])
         # 点击搜索
         self.please_order_page.click_search_branch()
+        self.base_page.sleep(2)
         # 验证是否有暂停接单字段
         self.assert_mode.assert_el_in_page(self.please_order_page.stop_take_order_is_displayed())
 
@@ -147,6 +148,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         self.please_order_page.input_search_branch_name(branch_name=open_take_data["BranchName"])
         # 点击搜索
         self.please_order_page.click_search_branch()
+        self.base_page.sleep(2)
         # 验证是否有暂停接单字段
         self.assert_mode.assert_el_not_in_page(self.please_order_page.stop_take_order_is_displayed())
 

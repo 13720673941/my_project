@@ -48,3 +48,6 @@ instead_order_list_url = 'http://www.51shouhou.cn/singleBranch/# /order/search/i
 
 # 合作网点列表页url
 teamwork_branch_list_url = 'http://www.51shouhou.cn/singleBranch/#/customer/list'
+
+# 客户统计页面url
+customer_statistics_url = 'http://www.51shouhou.cn/singleBranch/?#/customer/statistics'

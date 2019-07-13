@@ -50,7 +50,7 @@ class Alter_PhoneNum(unittest.TestCase):
         self.alterPwd.click_alter_pheNum()
 
     def test_alter_phoneNum001(self):
-        '''登录密码为空校验'''
+        """登录密码为空校验"""
         # 获取测试数据
         Data = testData["TestCase001"]
         # 打印测试用例名称
@@ -65,7 +65,7 @@ class Alter_PhoneNum(unittest.TestCase):
         self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_login_pwd_msg())
 
     def test_alter_phoneNum002(self):
-        '''手机号为空校验'''
+        """手机号为空校验"""
         # 获取测试数据
         Data = testData["TestCase002"]
         # 打印测试用例名称
@@ -80,7 +80,7 @@ class Alter_PhoneNum(unittest.TestCase):
         self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_phone_num_msg())
 
     def test_alter_phoneNum003(self):
-        '''验证码为空校验'''
+        """验证码为空校验"""
         # 获取测试数据
         Data = testData["TestCase003"]
         # 打印测试用例名称
@@ -95,7 +95,7 @@ class Alter_PhoneNum(unittest.TestCase):
         self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_input_msg())
 
     def test_alter_phoneNum004(self):
-        '''错误的登陆密码修改手机校验'''
+        """错误的登陆密码修改手机校验"""
         # 获取测试数据
         Data = testData["TestCase004"]
         # 打印测试用例名称
@@ -112,7 +112,7 @@ class Alter_PhoneNum(unittest.TestCase):
         self.assert_mode.assert_equal(Data["expect"],self.base.get_system_msg())
 
     def test_alter_phoneNum005(self):
-        '''错误的验证码修改手机校验'''
+        """错误的验证码修改手机校验"""
         # 获取测试数据
         Data = testData["TestCase005"]
         # 打印测试用例名称
@@ -130,7 +130,7 @@ class Alter_PhoneNum(unittest.TestCase):
 
     @ddt.data(*ddtData)
     def test_alter_phoneNum006(self,ddtData):
-        '''获取手机验证码逻辑校验'''
+        """获取手机验证码逻辑校验"""
         # 打印测试用例名称
         self.base.print_case_name(ddtData["CaseName"])
         # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
@@ -143,7 +143,7 @@ class Alter_PhoneNum(unittest.TestCase):
         self.assert_mode.assert_equal(ddtData["expect"],self.base.get_system_msg())
 
     def test_alter_phoneNum007(self):
-        '''错误的验证码修改手机校验'''
+        """错误的验证码修改手机校验"""
         # 获取测试数据
         Data = testData["TestCase007"]
         # 打印测试用例名称

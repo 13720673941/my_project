@@ -88,9 +88,9 @@ class BasePage(object):
         t1 = time.time()
         flag = False
         try:
-            self.get_element(element).is_displayed()
-            log.info('{0} * Find element <{1}> is true, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
-            flag = True
+            if self.get_element(element).is_displayed():
+                log.info('{0} * Find element <{1}> is true, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
+                flag = True
         except:
             log.info('{0} * Find element <{1}> is false, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))
         finally:
@@ -445,7 +445,7 @@ class BasePage(object):
                 #  self.use_js(js=("arguments[0].scrollIntoView();",ChildList[SelectNum-1]))
                 self.sleep(2)
                 ChildList[SelectNum-1].click()
-                log.info('{0} Select value: {1} by random choose, Spend {2} seconds.'.format(self.success,ChildList[SelectNum].text,time.time()-t1))
+                log.info('{0} Select value: {1} by random choose, Spend {2} seconds.'.format(self.success,ChildList[SelectNum-1].text,time.time()-t1))
             else:
                 for child in ChildList:
                     self.sleep(1)

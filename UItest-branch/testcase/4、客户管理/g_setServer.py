@@ -87,6 +87,7 @@ class Server_Set(unittest.TestCase):
 
         # 刷新页面
         self.base_page.refresh_page()
+        self.base_page.sleep(2)
         # 进入客户列表页面
         self.server_branch.enter_customer_list_page()
         # 点击服务商table
@@ -159,7 +160,7 @@ class Server_Set(unittest.TestCase):
         self.please_order.input_search_branch_name(branch_name=data["SetBranch"])
         # 点击搜索
         self.please_order.click_search_branch()
-        self.base_page.sleep(1)
+        self.base_page.sleep(2)
         # 断言-获取服务商是否存在页面的属性 False
         self.assert_mode.assert_el_not_in_page(self.please_order.search_branch_is_display())
 

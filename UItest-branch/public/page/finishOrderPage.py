@@ -69,9 +69,9 @@ class FinishOrder(BasePage):
         """上传图片"""
         if upLoading == 'True':
             # 获取上传图片个数
-            PictureNum = self.get_element_count(parentEl=self.parent_up_picture,childEl='dl')
+            PictureNum,PictureList = self.get_element_count(parentEl=self.parent_up_picture,childEl='dl')
             # 上传图片
-            self.up_loading_picture(PictureNum[0],self.update_picture_input)
+            self.up_loading_picture(PictureNum,self.update_picture_input)
 
     def click_submit_btn(self):
         """点击提交按钮"""

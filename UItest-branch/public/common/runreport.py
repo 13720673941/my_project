@@ -35,40 +35,44 @@ def write_test_result(FileName,test_result):
     # ======写入脚本执行结果======
     # 写入脚本标题
     date = datetime.datetime.now().date()
+    # 测试结果名称
+    test_result_path = testResultPath+str(date)+'.txt'
     # 日期只写入一次
     if "登录注册" in FileName:
-        write_txt_data(testResultPath, '\n')
-        write_txt_data(testResultPath,'********** {0} **********'.format(date) + '\n')
-    write_txt_data(testResultPath,"\n"+"---------- {0} ----------".format(FileName) + "\n")
+        write_txt_data(test_result_path, '\n')
+        write_txt_data(test_result_path,'********** {0} **********'.format(date) + '\n')
+    write_txt_data(test_result_path,"\n"+"---------- {0} ----------".format(FileName) + "\n")
     # 获取所有测试用例的个数
     all_case_number = str(test_result.testsRun)
     # 写入测试用例个数
-    write_txt_data(testResultPath, "All test case: {0}".format(all_case_number) + '\n')
+    write_txt_data(test_result_path, "All test case: {0}".format(all_case_number) + '\n')
     # 获取成功的测试用例个数
     pass_case_number = str(test_result.success_count)
     # 写入pass测试用例个数
-    write_txt_data(testResultPath, "Pass test case: {0}".format(pass_case_number) + '\n')
+    write_txt_data(test_result_path, "Pass test case: {0}".format(pass_case_number) + '\n')
     # 错误的测试用例个数
     error_case_number = str(len(test_result.errors))
+    # 写入错误的测试用例数据
+    write_txt_data(test_result_path, "Error test case: {0}".format(error_case_number) + '\n')
     # 写入错误执行用例id
     if int(error_case_number) != 0:
+        # 写入执行报错用例的id
+        write_txt_data(test_result_path, "Error test case ID: " + "\n")
         for case_error,reason_error in test_result.errors:
             # 写入失败用例的id 和 reason
-            write_txt_data(testResultPath," * "+case_error.id()+"\n")
-    # 写入错误的测试用例数据
-    write_txt_data(testResultPath, "Error test case: {0}".format(error_case_number) + '\n')
+            write_txt_data(test_result_path," * "+case_error.id()+"\n")
     # 获取失败的用例列表
     fail_case_number = str(len(test_result.failures))
     # 写入测试用例个数
-    write_txt_data(testResultPath, "Fail test case: {0}".format(fail_case_number) + '\n')
-    # 写入失败用例的id
-    write_txt_data(testResultPath,"Fail test case ID: " + "\n")
+    write_txt_data(test_result_path, "Fail test case: {0}".format(fail_case_number) + '\n')
     # 如果失败为零不写入
     if int(fail_case_number) != 0:
+        # 写入失败用例的id
+        write_txt_data(test_result_path, "Fail test case ID: " + "\n")
         # 循环失败用例列表保存报错信息
         for case,reason in test_result.failures:
             # 写入失败用例的id 和 reason
-            write_txt_data(testResultPath," * "+case.id()+"\n")
+            write_txt_data(test_result_path," * "+case.id()+"\n")
 
 def run_report(ReportName,FileName,title,description,case):
 

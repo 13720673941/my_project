@@ -408,6 +408,7 @@ class ServerBranchPage(BasePage):
         first_branch_info = self.get_first_branch_info()
         if "恢复派单" in first_branch_info:
             # 说明按钮处于恢复派单状态，恢复按钮初始字段，要不然找不到按钮
+            self.click_and_roll_right_page()
             self.click_open_please_order()
             self.click_confirm_stop_please()
         self.click_button(self.stop_please_btn)
@@ -419,6 +420,7 @@ class ServerBranchPage(BasePage):
         first_branch_info = self.get_first_branch_info()
         if "禁止派单" in first_branch_info:
             # 说明按钮处于禁止派单状态，恢复按钮初始字段，要不然找不到按钮
+            self.click_and_roll_right_page()
             self.click_stop_please_order()
             self.click_confirm_stop_please()
         self.click_button(self.open_please_btn)
