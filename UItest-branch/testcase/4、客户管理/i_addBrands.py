@@ -70,21 +70,24 @@ class Add_Brands(unittest.TestCase):
         # 断言
         self.assert_mode.assert_equal(ddt_data["expect"],system_message)
 
-    def test_add_brands002(self):
-        """删除添加的账号测试"""
-
-        # 获取测试数据
-        data = brands_page_data["del_brands_fnc"]
-        # 打印用例名称
-        self.base_page.print_case_name(data["CaseName"])
-        # 点击删除
-        self.brands_page.click_delete_brands(del_brand_name=data["BrandsName"])
-        # 确认删除
-        self.brands_page.click_confirm_del_brands()
-        # 获取系统提示信息
-        system_message = self.base_page.get_system_msg()
-        # 断言
-        self.assert_mode.assert_equal(data["expect"],system_message)
+    """
+    取消了厂商账号的删除功能
+    """
+    # def test_add_brands002(self):
+    #     """删除添加的账号测试"""
+    #
+    #     # 获取测试数据
+    #     data = brands_page_data["del_brands_fnc"]
+    #     # 打印用例名称
+    #     self.base_page.print_case_name(data["CaseName"])
+    #     # 点击删除
+    #     self.brands_page.click_delete_brands(del_brand_name=data["BrandsName"])
+    #     # 确认删除
+    #     self.brands_page.click_confirm_del_brands()
+    #     # 获取系统提示信息
+    #     system_message = self.base_page.get_system_msg()
+    #     # 断言
+    #     self.assert_mode.assert_equal(data["expect"],system_message)
 
     @classmethod
     def tearDownClass(cls):

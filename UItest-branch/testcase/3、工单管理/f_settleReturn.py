@@ -13,6 +13,7 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.returnOrderPage import ReturnOrderPage
 from public.page.settleOrderPage import SettleOrderPage
+from public.page.searchOrderPage import SearchOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,ddt
@@ -43,6 +44,7 @@ class Return_Settle(unittest.TestCase):
         cls.finishOrder = FinishOrder(cls.dr)
         cls.returnOrder = ReturnOrderPage(cls.dr)
         cls.settleOrder = SettleOrderPage(cls.dr)
+        cls.search_order = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
         mytest.start_test()
         # 登录网点 蓝魔科技
@@ -85,6 +87,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入师傅结算工单列表
         self.settleOrder.enter_master_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算按钮
@@ -102,6 +106,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入师傅结算工单列表
         self.settleOrder.enter_master_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算按钮
@@ -132,6 +138,8 @@ class Return_Settle(unittest.TestCase):
         self.login.login_main(self.server_branch_use,self.server_branch_pwd)
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -149,6 +157,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -166,6 +176,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -183,6 +195,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -204,6 +218,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -228,6 +244,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -247,6 +265,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
@@ -272,6 +292,8 @@ class Return_Settle(unittest.TestCase):
         self.login.login_main(self.Use,self.Pwd)
         # 进入代结算工单列表页
         self.settleOrder.enter_master_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算
@@ -287,6 +309,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_master_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算
@@ -304,6 +328,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_master_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算
@@ -324,6 +350,8 @@ class Return_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入代结算工单列表页
         self.settleOrder.enter_return_wait_settle()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算
@@ -346,4 +374,7 @@ class Return_Settle(unittest.TestCase):
         mytest.end_test()
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+
+    suit = unittest.TestLoader().loadTestsFromTestCase(Return_Settle)
+    unittest.TextTestRunner().run(suit)

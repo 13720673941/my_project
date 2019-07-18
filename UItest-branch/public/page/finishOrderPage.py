@@ -6,6 +6,7 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 log=Log()
 """
@@ -36,6 +37,7 @@ class FinishOrder(BasePage):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
+        self.search_page = SearchOrderPage(driver)
 
     def enter_finish_order_page(self):
         """进入完成工单列表页"""
@@ -89,6 +91,9 @@ class FinishOrder(BasePage):
         log.info('-=【网点完成服务】=-')
         # 进入完工订单列表页面
         self.enter_finish_order_page()
+        self.sleep(2)
+        # 搜索订单
+        self.search_page.search_order_by_number(ordernumber)
         # 选择工单
         self.select_new_order(ordernumber)
         # 点击订单列表完成服务按钮

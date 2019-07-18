@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dd974a1-314d-447f-92b1-b3856a79065f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1、python基础/1.5、random随机取值.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.12、append、insert列表中添加值.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.13、sort 列表的排序.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.14、例子程序.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.15、类似于列表的类型：字符串.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.16、字符串的字符替换.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.17、元组数据类型.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.18、列表元组类型的转换.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.19、copy模块的使用.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4、列表/4.20、数字网格.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.1、字典和.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.2、key、value、items方法.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.2、检查字典中是否存在键值.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.3、get 方法.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.5、嵌套的字典和列表.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/5.6、列表的值加到字典的函数.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5、字典/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6、字符串的操作/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/customerStatisticsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/customerStatisticsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/pleaseOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/pleaseOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/h_stopOpenPlease.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/h_stopOpenPlease.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/i_addBrands.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/i_addBrands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,66 +27,74 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/my_python$4_8.coverage" NAME="4.8、列表的循环 Coverage Results" MODIFIED="1562488788645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1562494022615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$4_3len.coverage" NAME="4.3、len取列表的长度 Coverage Results" MODIFIED="1562486620093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$3_4.coverage" NAME="3.4、全局变量 Coverage Results" MODIFIED="1562482396999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
-    <SUITE FILE_PATH="coverage/my_python$4_2.coverage" NAME="4.2、利用切片取子列表 Coverage Results" MODIFIED="1562486477014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$5_0.coverage" NAME="5.0、列表的多重赋值 Coverage Results" MODIFIED="1562489716160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$5_3get_.coverage" NAME="5.3、get 方法 Coverage Results" MODIFIED="1563031575076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$5_2keyvalueitems.coverage" NAME="5.2、key、value、items方法 Coverage Results" MODIFIED="1563030991507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$2_1.coverage" NAME="2.1布尔值 Coverage Results" MODIFIED="1562426557105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
-    <SUITE FILE_PATH="coverage/my_python$2_7exit__.coverage" NAME="2.7、exit()提前结束程序 Coverage Results" MODIFIED="1562436616977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
-    <SUITE FILE_PATH="coverage/my_python$3_7.coverage" NAME="3.7、判断是偶数还是奇数的程序 Coverage Results" MODIFIED="1562484906587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
-    <SUITE FILE_PATH="coverage/my_python$4_5.coverage" NAME="4.5、列表的连接和复制 Coverage Results" MODIFIED="1562486892915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$1_5random.coverage" NAME="1.5、random随机取值 Coverage Results" MODIFIED="1562504001742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1、python基础" />
     <SUITE FILE_PATH="coverage/my_python$4_12appendinsert.coverage" NAME="4.12、append、insert列表中添加值 Coverage Results" MODIFIED="1562503173578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$4_6.coverage" NAME="4.6、删除列表中的值 Coverage Results" MODIFIED="1562487337283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$3_1def_.coverage" NAME="3.1、def 函数和参数 Coverage Results" MODIFIED="1562438811362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
+    <SUITE FILE_PATH="coverage/my_python$5_1.coverage" NAME="5.1、字典和列表 Coverage Results" MODIFIED="1563030658623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$5_4setdefault_.coverage" NAME="5.4、setdefault 方法 Coverage Results" MODIFIED="1563104626415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$2_5while.coverage" NAME="2.5、while语句 Coverage Results" MODIFIED="1562428875393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
+    <SUITE FILE_PATH="coverage/my_python$2_2.coverage" NAME="2.2比较符 Coverage Results" MODIFIED="1562426700027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
+    <SUITE FILE_PATH="coverage/my_python$2_4ifelifelse.coverage" NAME="2.4、if、elif、else语句 Coverage Results" MODIFIED="1562428056179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
+    <SUITE FILE_PATH="coverage/my_python$4_4.coverage" NAME="4.4、修改列表中的值 Coverage Results" MODIFIED="1562486735879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$4_17.coverage" NAME="4.17、元组数据类型 Coverage Results" MODIFIED="1562505791453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$3_3.coverage" NAME="3.3、局部变量 Coverage Results" MODIFIED="1562482289431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
+    <SUITE FILE_PATH="coverage/my_python$1_2.coverage" NAME="1.2整型、浮点、字符串 Coverage Results" MODIFIED="1562424752581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第一章" />
+    <SUITE FILE_PATH="coverage/my_python$2_3.coverage" NAME="2.3、布尔操作符 Coverage Results" MODIFIED="1562427334828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
+    <SUITE FILE_PATH="coverage/my_python$1_3printinputlen.coverage" NAME="1.3、print、input、len函数 Coverage Results" MODIFIED="1562508538840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1、python基础" />
+    <SUITE FILE_PATH="coverage/my_python$4_18.coverage" NAME="4.18、列表元组类型的转换 Coverage Results" MODIFIED="1562506549623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$4_9innot_in.coverage" NAME="4.9、in和not in操作符 Coverage Results" MODIFIED="1562489129798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$2_6forrange.coverage" NAME="2.6、for循环、range函数 Coverage Results" MODIFIED="1562488886568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2、控制流" />
+    <SUITE FILE_PATH="coverage/my_python$5_5.coverage" NAME="5.5、嵌套的字典和列表 Coverage Results" MODIFIED="1563083160971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$5_6.coverage" NAME="5.6、列表到字典的函数 Coverage Results" MODIFIED="1563108052644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$4_8.coverage" NAME="4.8、列表的循环 Coverage Results" MODIFIED="1562488788645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1562494022615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$3_4.coverage" NAME="3.4、全局变量 Coverage Results" MODIFIED="1562482396999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
+    <SUITE FILE_PATH="coverage/my_python$4_2.coverage" NAME="4.2、利用切片取子列表 Coverage Results" MODIFIED="1562486477014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$5_0.coverage" NAME="5.0、列表的多重赋值 Coverage Results" MODIFIED="1562489716160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$2_7exit__.coverage" NAME="2.7、exit()提前结束程序 Coverage Results" MODIFIED="1562436616977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
+    <SUITE FILE_PATH="coverage/my_python$3_7.coverage" NAME="3.7、判断是偶数还是奇数的程序 Coverage Results" MODIFIED="1562484906587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
+    <SUITE FILE_PATH="coverage/my_python$4_5.coverage" NAME="4.5、列表的连接和复制 Coverage Results" MODIFIED="1562486892915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$6_1.coverage" NAME="6.1、转义字符串 Coverage Results" MODIFIED="1563355486018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
     <SUITE FILE_PATH="coverage/my_python$4_16.coverage" NAME="4.16、字符串的字符替换 Coverage Results" MODIFIED="1562505256993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$1_3_printinputlen.coverage" NAME="1.3 print、input、len函数 Coverage Results" MODIFIED="1562425303598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第一章" />
     <SUITE FILE_PATH="coverage/my_python$3_5global.coverage" NAME="3.5、global、语句 Coverage Results" MODIFIED="1562483744984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$4_20.coverage" NAME="4.20、数字网格 Coverage Results" MODIFIED="1562510059994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$3_1def_.coverage" NAME="3.1、def 函数和参数 Coverage Results" MODIFIED="1562438811362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$1_2none.coverage" NAME="1.2、整型、浮点、字符串、none数据类型 Coverage Results" MODIFIED="1562481670861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1、python基础" />
     <SUITE FILE_PATH="coverage/my_python$4_13sort_.coverage" NAME="4.13、sort 列表的排序 Coverage Results" MODIFIED="1562503629896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$4_19copy.coverage" NAME="4.19、copy模块的使用 Coverage Results" MODIFIED="1562507024673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$5_1index.coverage" NAME="5.1、列表中index的使用 Coverage Results" MODIFIED="1562494656699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$2_5while.coverage" NAME="2.5、while语句 Coverage Results" MODIFIED="1562428875393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
     <SUITE FILE_PATH="coverage/my_python$1_4strintfloat.coverage" NAME="1.4str、int、float函数 Coverage Results" MODIFIED="1562426150132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第一章" />
-    <SUITE FILE_PATH="coverage/my_python$2_2.coverage" NAME="2.2比较符 Coverage Results" MODIFIED="1562426700027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
     <SUITE FILE_PATH="coverage/my_python$3_6.coverage" NAME="3.6、异常的处理 Coverage Results" MODIFIED="1562484614707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$4_6delpopremove.coverage" NAME="4.6、del、pop、remove删除列表中的值 Coverage Results" MODIFIED="1562487604878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$4_14.coverage" NAME="4.14、例子程序 Coverage Results" MODIFIED="1562504460520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$2_4ifelifelse.coverage" NAME="2.4、if、elif、else语句 Coverage Results" MODIFIED="1562428056179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
-    <SUITE FILE_PATH="coverage/my_python$4_4.coverage" NAME="4.4、修改列表中的值 Coverage Results" MODIFIED="1562486735879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$1_1python.coverage" NAME="1.1python运算符 Coverage Results" MODIFIED="1562424214169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第一章" />
-    <SUITE FILE_PATH="coverage/my_python$4_17.coverage" NAME="4.17、元组数据类型 Coverage Results" MODIFIED="1562505791453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$3_3.coverage" NAME="3.3、局部变量 Coverage Results" MODIFIED="1562482289431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$4_1.coverage" NAME="4.1、取列表中的某一个值 Coverage Results" MODIFIED="1562485986660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$1_2.coverage" NAME="1.2整型、浮点、字符串 Coverage Results" MODIFIED="1562424752581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第一章" />
-    <SUITE FILE_PATH="coverage/my_python$2_3.coverage" NAME="2.3、布尔操作符 Coverage Results" MODIFIED="1562427334828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
-    <SUITE FILE_PATH="coverage/my_python$1_3printinputlen.coverage" NAME="1.3、print、input、len函数 Coverage Results" MODIFIED="1562508538840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1、python基础" />
+    <SUITE FILE_PATH="coverage/my_python$5_2.coverage" NAME="5.2、检查字典中是否存在键值 Coverage Results" MODIFIED="1563031179212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$4_7.coverage" NAME="4.7、列表的使用 Coverage Results" MODIFIED="1562488175185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$4_18.coverage" NAME="4.18、列表元组类型的转换 Coverage Results" MODIFIED="1562506549623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$4_9innot_in.coverage" NAME="4.9、in和not in操作符 Coverage Results" MODIFIED="1562489129798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$2_6forrange.coverage" NAME="2.6、for循环、range函数 Coverage Results" MODIFIED="1562488886568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2、控制流" />
     <SUITE FILE_PATH="coverage/my_python$3_2return.coverage" NAME="3.2、返回值和return函数 Coverage Results" MODIFIED="1562439105781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$4_15.coverage" NAME="4.15、类似于列表的类型：字符串和元组 Coverage Results" MODIFIED="1562504853221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/4、列表/4.18、列表元组类型的转换.py">
+        <entry file="file://$PROJECT_DIR$/5、字典/5.6、列表的值加到字典的函数.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="760">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/4、列表/4.20、数字网格.py">
+        <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="445">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -101,10 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第一章/1.1python运算符.py" />
-        <option value="$PROJECT_DIR$/第一章/1.2整型/浮点/字符串.py" />
-        <option value="$PROJECT_DIR$/第一章/1.2整型、浮点、字符串.py" />
-        <option value="$PROJECT_DIR$/第一章/1.3 print、input、len函数.py" />
         <option value="$PROJECT_DIR$/第一章/1.4str、int.py" />
         <option value="$PROJECT_DIR$/第一章/1.4str、int、float函数.py" />
         <option value="$PROJECT_DIR$/第二章、控制流/2.1布尔值.py" />
@@ -148,14 +157,21 @@
         <option value="$PROJECT_DIR$/4、列表/4.18、列表元组类型的转换.py" />
         <option value="$PROJECT_DIR$/4、列表/4.19、copy模块的使用.py" />
         <option value="$PROJECT_DIR$/4、列表/4.20、数字网格.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.1、字典和列表.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.2、key、value、items方法.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.2、检查字典中是否存在键值.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.3、get 方法.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.5、嵌套的字典和列表.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" />
+        <option value="$PROJECT_DIR$/5、字典/5.6、列表到字典的函数.py" />
+        <option value="$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1380" />
-    <option name="height" value="780" />
+    <option name="y" value="520" />
+    <option name="width" value="640" />
+    <option name="height" value="525" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -171,6 +187,11 @@
               <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_python" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_python" type="462c0819:PsiDirectoryNode" />
+              <item name="6、字符串的操作" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -182,7 +203,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../UItest-branch" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -196,8 +217,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.4.20、数字网格">
-    <configuration name="1.3、print、input、len函数" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.6.1、转义字符串">
+    <configuration name="5.3、get 方法" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,12 +226,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1、python基础" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5、字典" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1、python基础/1.3、print、input、len函数.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5、字典/5.3、get 方法.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,7 +240,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4.17、元组数据类型" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="5.4、setdefault 方法" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -227,12 +248,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4、列表" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5、字典" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4、列表/4.17、元组数据类型.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,7 +262,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4.18、列表元组类型的转换" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="5.5、嵌套的字典和列表" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,12 +270,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4、列表" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5、字典" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4、列表/4.18、列表元组类型的转换.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5、字典/5.5、嵌套的字典和列表.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -263,7 +284,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4.19、copy模块的使用" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="5.6、列表到字典的函数" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -271,12 +292,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4、列表" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5、字典" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4、列表/4.19、copy模块的使用.py" />
+      <option name="SCRIPT_NAME" value="D:\my_test_script\my_python\5、字典\5.6、列表的值加到字典的函数.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -285,7 +306,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4.20、数字网格" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="6.1、转义字符串" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -293,12 +314,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4、列表" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6、字符串的操作" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4、列表/4.20、数字网格.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -309,11 +330,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.4.20、数字网格" />
-        <item itemvalue="Python.1.3、print、input、len函数" />
-        <item itemvalue="Python.4.19、copy模块的使用" />
-        <item itemvalue="Python.4.18、列表元组类型的转换" />
-        <item itemvalue="Python.4.17、元组数据类型" />
+        <item itemvalue="Python.6.1、转义字符串" />
+        <item itemvalue="Python.5.6、列表到字典的函数" />
+        <item itemvalue="Python.5.4、setdefault 方法" />
+        <item itemvalue="Python.5.5、嵌套的字典和列表" />
+        <item itemvalue="Python.5.3、get 方法" />
       </list>
     </recent_temporary>
   </component>
@@ -334,22 +355,26 @@
       <workItem from="1562502849875" duration="6000" />
       <workItem from="1562502925462" duration="7129000" />
       <workItem from="1562548502682" duration="20000" />
+      <workItem from="1563030310849" duration="1775000" />
+      <workItem from="1563078431273" duration="9587000" />
+      <workItem from="1563347826236" duration="2589000" />
+      <workItem from="1563412249632" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28461000" />
+    <option name="totallyTimeSpent" value="42424000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.269437" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28485253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -393,7 +418,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第一章/1.2整型/浮点/字符串.py" />
     <entry file="file://$PROJECT_DIR$/1、python基础/1.4、str、int、float函数.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -690,8 +714,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/4、列表/4.20、数字网格.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="152">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.3、get 方法.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.2、检查字典中是否存在键值.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.2、key、value、items方法.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.1、字典和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.5、嵌套的字典和列表.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5、字典/5.6、列表的值加到字典的函数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>

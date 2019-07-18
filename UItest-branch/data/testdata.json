@@ -327,5 +327,19 @@
       {"CaseName": "6、添加签约厂商-厂商系统重复校验","BrandsName": "日日顺","brandsUser": "1","brandsPwd": "1","expect": "不能重复添加"}
     ],
     "del_brands_fnc": {"CaseName": "7、删除签约厂商-删除厂商系统账号校验","BrandsName": "日日顺","expect": "删除成功"}
+  },
+  "18": "/*【经销商工单数量信息统计测试数据：按客户信息关键字搜索客户、按下单时间搜索统计信息、已结单、已完单、未完单、差评单数量信息统计】*/",
+  "ManageStatisticsPage": {
+    "search_manage_fnc": [
+      {"CaseName": "1、客户搜索-按客户手机号搜索客户校验","search_keyword": "13700000002","expect": "自动化测试网点03"},
+      {"CaseName": "2、客户搜索-按客户名称搜索客户校验","search_keyword": "自动化测试网点03","expect": "13700000002"}
+    ],
+    "order_statistics_fnc": {
+      "TestCase001": {"CaseName":"3、经销商工单统计-未完单订单数据的同步校验","expect": 1},
+      "TestCase002": {"CaseName":"4、经销商工单统计-已完单订单数据的同步校验","expect": 1},
+      "TestCase003": {"CaseName":"5、经销商工单统计-差评单订单数据的同步校验","ServerStatus": "不满意","expect": 1},
+      "TestCase004": {"CaseName":"5、经销商工单统计-已结单订单数据的同步校验","expect": 1}
+    },
+    "create_time_search_fnc": {"CaseName": "6、订单统计搜索-按下单时间搜索订单统计数量校验","OrderFrom": "自动化测试网点03","CreateTime": "当前时间"}
   }
 }

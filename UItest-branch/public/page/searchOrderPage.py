@@ -162,11 +162,20 @@ class SearchOrderPage(BasePage):
 
     def search_order_count(self):
         """获取搜索订单数量"""
-        self.get_text(self.order_count)
+        return self.get_text(self.order_count)
 
     def get_first_order_info(self):
         """获取订单列表第一行订单的所有信息"""
         orderInfo = self.get_text(self.first_order_info) + self.get_text(self.first_order_info1)
         return orderInfo
+
+    def search_order_by_number(self,order_number):
+        """按照订单号搜索订单"""
+
+        # 输入订单号
+        self.input_order_Nnumber(order_number)
+        # 点击搜索
+        self.click_search_btn()
+        self.sleep(2)
 
 

@@ -6,6 +6,7 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 log=Log()
 """
@@ -40,6 +41,7 @@ class VisitOrderPage(BasePage):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
+        self.search_order = SearchOrderPage(driver)
 
     def enter_visit_order_page(self):
         self.open_url(wait_visit_order_url)
@@ -84,11 +86,15 @@ class VisitOrderPage(BasePage):
         """点击确定按钮"""
         self.click_button(self.confirm_btn)
 
-    def visit_order_main(self,orderNumber,serverStatus,safetyAssess,visitMoney,visitResult):
+    def visit_order_main(self,orderNumber,serverStatus,safetyAssess="按安全规范操作",
+                         visitMoney="100",visitResult="已完工"):
         """订单回访主程序"""
+
         log.info('-=【订单回访】=-')
         # 进入完工订单列表页面
         self.enter_visit_order_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(orderNumber)
         # 选择工单
         self.select_new_order(orderNumber)
         # 点击回访按钮

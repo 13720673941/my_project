@@ -67,6 +67,7 @@ class Stop_Open_Please(unittest.TestCase):
         self.base_page.refresh_page()
         # 进入服务商列表页面
         self.server_branch.enter_customer_list_page()
+        self.base_page.sleep(2)
         # 点击服务商table
         self.server_branch.click_server_branch_table()
 

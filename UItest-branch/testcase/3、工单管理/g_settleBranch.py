@@ -11,6 +11,7 @@ from public.page.addOrderPage import AddOrderPage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.settleOrderPage import SettleOrderPage
+from public.page.searchOrderPage import SearchOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest
@@ -40,6 +41,7 @@ class Manage_Settle(unittest.TestCase):
         cls.pleaseOrder = PleaseOrderPage(cls.dr)
         cls.finishOrder = FinishOrder(cls.dr)
         cls.settleOrder = SettleOrderPage(cls.dr)
+        cls.search_order = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
         mytest.start_test()
         # 登录网点 蓝魔科技
@@ -106,6 +108,8 @@ class Manage_Settle(unittest.TestCase):
         self.login.login_main(self.Use1,self.Pwd1)
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -121,6 +125,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -141,6 +147,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -163,6 +171,8 @@ class Manage_Settle(unittest.TestCase):
         self.login.login_main(self.Use,self.Pwd)
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -180,6 +190,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -199,6 +211,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -222,6 +236,8 @@ class Manage_Settle(unittest.TestCase):
         self.login.login_main(self.Use1,self.Pwd1)
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -238,6 +254,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -256,6 +274,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -276,6 +296,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
@@ -295,6 +317,8 @@ class Manage_Settle(unittest.TestCase):
         self.base.print_case_name(data["CaseName"])
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮

@@ -10,6 +10,7 @@ from public.page.loginPage import LoginPage
 from public.page.addOrderPage import AddOrderPage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
+from public.page.searchOrderPage import SearchOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,ddt
@@ -37,6 +38,7 @@ class Finish_Order(unittest.TestCase):
         cls.loginPage = LoginPage(cls.dr)
         cls.finishOrder = FinishOrder(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        cls.search_order = SearchOrderPage(cls.dr)
         mytest.start_test()
         # 获取网点登录数据
         UserName = rwconfig.read_config_data('蓝魔科技','username')
@@ -75,7 +77,9 @@ class Finish_Order(unittest.TestCase):
         self.basePage.print_case_name(FinishDate["CaseName"])
         # 刷新页面
         self.basePage.refresh_page()
-        self.basePage.sleep(1)
+        self.basePage.sleep(2)
+        # 搜索工单
+        self.search_order.search_order_by_number(self.OrderNumber)
         # 选择完成的工单
         self.basePage.select_new_order(OrderNumber=self.OrderNumber)
         # 点击完成工单按钮

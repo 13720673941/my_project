@@ -6,6 +6,7 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 log=Log()
 """
@@ -42,6 +43,7 @@ class PleaseOrderPage(BasePage):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
+        self.search_order = SearchOrderPage(driver)
 
     def enter_please_order_page(self):
         """进入派单页面"""
@@ -57,6 +59,7 @@ class PleaseOrderPage(BasePage):
 
     def please_to_branch(self):
         """点击派单到服务商"""
+        self.sleep(1)
         self.click_button(self.to_branch_btn)
 
     def set_order_money(self,set_price='100'):
@@ -111,6 +114,8 @@ class PleaseOrderPage(BasePage):
         log.info('-=【网点派单】=-')
         # 进入订单列表
         self.enter_please_order_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(ordernumber)
         # 选择匹配订单
         self.select_new_order(ordernumber)
         # 点击派单按钮
