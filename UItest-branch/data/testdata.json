@@ -289,7 +289,7 @@
       {"CaseName": "5、添加服务商-客户手机号右边界值校验","PhoneNum": "137000000022","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
       {"CaseName": "6、添加服务商-客户手机号特殊字符格式校验","PhoneNum": "137a000000.","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
       {"CaseName": "7、添加服务商-合作工单类型空校验","PhoneNum": "13700000002","BranchName": "auto_add","IsSelect": "false","expect": "请选择至少一个合作工单类型"},
-      {"CaseName": "8、添加服务商-不能重复邀请校验","PhoneNum": "13700000002","BranchName": "auto_add","IsSelect": "true","expect": "您已申请过该服务商"},
+      {"CaseName": "8、添加服务商-不能重复邀请校验","PhoneNum": "13572597243","BranchName": "auto_add","IsSelect": "true","expect": "您已申请过该服务商"},
       {"CaseName": "9、添加服务商-成功邀请服务商校验","PhoneNum": "13572597243","BranchName": "auto_add","IsSelect": "true","expect": "添加成功"}
     ],
     "search_branch_fnc": [
@@ -341,5 +341,24 @@
       "TestCase004": {"CaseName":"5、经销商工单统计-已结单订单数据的同步校验","expect": 1}
     },
     "create_time_search_fnc": {"CaseName": "6、订单统计搜索-按下单时间搜索订单统计数量校验","OrderFrom": "自动化测试网点03","CreateTime": "当前时间"}
+  },
+  "19": "/*【服务商工单数量信息统计测试数据：已结单、已完单、未完单、待结算数量信息统计】*/",
+  "ServerStatisticsPage": {
+    "order_statistics_fnc": {
+      "TestCase001": {"CaseName":"1、经销商工单统计-未完单订单数据的同步校验","expect": 1},
+      "TestCase002": {"CaseName":"2、经销商工单统计-已完单订单数据的同步校验","expect": 1},
+      "TestCase003": {"CaseName":"3、经销商工单统计-待结单订单数据的同步校验","expect": 1},
+      "TestCase004": {"CaseName":"4、经销商工单统计-已结单订单数据的同步校验","expect": 1}
+    }
+  },
+  "20": "/*【合作申请页面功能测试用例：拒绝合作，撤销合作】*/",
+  "TeamWorkPage": {
+    "search_teamwork_msg": [
+      {"CaseName": "1、合作申请搜索-按客户名称搜索校验","keyword":"自动化测试网点04","expect": "13572597243"},
+      {"CaseName": "2、合作申请搜索-按客户手机号搜索校验","keyword":"13572597243","expect": "自动化测试网点04"}
+    ],
+    "refuse_teamwork_fnc": {"CaseName": "3、申请合作-拒绝合作申请校验","keyword":"蓝魔科技","keyword1":"自动化测试网点04","expect": "已拒绝"},
+    "del_teamwork_fnc": {"CaseName": "4、申请合作-撤销合作申请校验","keyword":"自动化测试网点04","expect": "操作成功"},
+    "again_visit_fnc": {"CaseName": "5、申请合作-再次邀请合作校验","keyword":"自动化测试网点04","expect": "等待对方确认"}
   }
 }

@@ -12,10 +12,6 @@ log = Log()
 搜索订单页面信息
 """
 class SearchOrderPage(BasePage):
-
-    """
-    搜索页面元素信息
-    """
     
     # 订单单号输入框
     order_num_input = (By.XPATH,'//label[text()="工单编号"]/following-sibling::input[1]')

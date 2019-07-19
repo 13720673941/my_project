@@ -11,10 +11,6 @@ from config.urlconfig import *
 """
 class RegisterPage(BasePage):
 
-    """
-    网点注册页面信息
-    """
-    
     # 注册页面所有元素的父路径
     parent_path = '//div[contains(text(),"企业用户注册")]/../form/ul'
     # 免费注册按钮

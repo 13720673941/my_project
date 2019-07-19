@@ -13,9 +13,6 @@ import datetime
 
 class OrderDetailsPage(BasePage):
 
-    """
-    订单详情页操作
-    """
     # 预约订单按钮
     appoint_order_btn = (By.XPATH,'//button[contains(.,"预约")]')
     # 改约订单按钮

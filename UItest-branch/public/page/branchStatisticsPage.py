@@ -7,12 +7,12 @@ from selenium.webdriver.common.by import By
 from config.urlconfig import *
 from public.common.basepage import BasePage
 """
-客户统计页面
+客户统计页面: 经销商/服务商订单统计页面
 """
-class ManageStatisticsPage(BasePage):
+class BranchStatisticsPage(BasePage):
 
-    """经销商订单统计页面数据获取元素"""
-
+    # 切换服务商的table按钮
+    server_table_btn = (By.XPATH, '//a[text()="服务商"]')
     # 客户名称手机号搜索输入框
     customer_search_input = (By.XPATH,'//label[text()="客户名称/手机号："]/..//input')
     # 下单开始时间输入框
@@ -29,6 +29,8 @@ class ManageStatisticsPage(BasePage):
     not_finish_order = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[5]//span')
     # 差评单订单数量
     negative_comment_order = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[6]//span')
+    # 待结算单量
+    wait_settle_order = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[6]//span')
     # 客户名称
     customer_first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
 
@@ -38,6 +40,10 @@ class ManageStatisticsPage(BasePage):
     def enter_statistics_page(self):
         """进入经销商工单统计页面"""
         self.open_url(customer_statistics_url)
+
+    def click_table_to_server(self):
+        """点击table按钮切换服务商"""
+        self.click_button(self.server_table_btn)
 
     def input_customer_search_keyword(self,keyword):
         """输入客户搜索关键词"""
@@ -70,6 +76,10 @@ class ManageStatisticsPage(BasePage):
     def get_negative_comment_count(self):
         """获取差评单数量"""
         return self.get_text(self.negative_comment_order)
+
+    def get_wait_settle_count(self):
+        """待结算单量统计数量"""
+        return self.get_text(self.wait_settle_order)
 
     def get_after_search_customer_info(self):
         """获取客户统计列表第一行所有的信息"""

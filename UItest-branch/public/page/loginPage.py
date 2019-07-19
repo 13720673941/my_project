@@ -14,8 +14,6 @@ log = Log()
 登录页面信息
 """
 class LoginPage(BasePage): # 所有的操作继承Base基类
-
-    """网点登录界面信息"""
     
     # 用户名输入框
     username_input = (By.XPATH,'//input[@type="text"]')

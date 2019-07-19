@@ -9,8 +9,6 @@ from selenium.webdriver.common.by import By
 忘记密码页面
 """
 class ForgetPwd(BasePage):
-
-    """忘记密码页面元素路径信息"""
     
     # 忘记密码页面所有元素的父路径
     parent_path = '//div[text()="忘记密码"]/../form/ul'

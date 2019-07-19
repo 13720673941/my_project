@@ -13,10 +13,6 @@ log=Log()
 网点派单页面
 """
 class PleaseOrderPage(BasePage):
-
-    """
-    元素位置信息
-    """
     
     # 派单按钮
     please_order_btn = (By.XPATH,'//a[text()="派单"]')

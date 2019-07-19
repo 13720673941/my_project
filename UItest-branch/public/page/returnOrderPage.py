@@ -12,10 +12,6 @@ log=Log()
 返单页面操作
 """
 class ReturnOrderPage(BasePage):
-
-    """
-    返单页面元素操作
-    """
     
     # 返单按钮
     return_order_btn = (By.XPATH,'//a[text()="返单"]')

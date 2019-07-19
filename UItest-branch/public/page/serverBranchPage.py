@@ -13,8 +13,6 @@ log = Log()
 """
 class ServerBranchPage(BasePage):
 
-    """页面元素信息"""
-
     # 父路径该页面有两个一样的页面需要从根目录定位
     parent_xpath = '//div[@id="main"]/following-sibling::div[21]/'
     # 切换服务商的table按钮

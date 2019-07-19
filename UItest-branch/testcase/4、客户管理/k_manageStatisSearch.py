@@ -11,7 +11,7 @@ from public.common.getdata import get_test_data
 from public.common.assertmode import Assert
 from public.page.loginPage import LoginPage
 from public.page.searchOrderPage import SearchOrderPage
-from public.page.manageStatisticsPage import ManageStatisticsPage
+from public.page.branchStatisticsPage import BranchStatisticsPage
 import unittest,ddt
 """
 经销商统计列表页面搜索功能测试：
@@ -33,7 +33,7 @@ class ManageStatisticsSearch(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.search_order = SearchOrderPage(cls.driver)
-        cls.order_statistics = ManageStatisticsPage(cls.driver)
+        cls.order_statistics = BranchStatisticsPage(cls.driver)
         # 开始执行
         mytest.start_test()
         # 获取服务商账号信息

@@ -16,7 +16,7 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.visitOrderPage import VisitOrderPage
 from public.page.settleOrderPage import SettleOrderPage
-from public.page.manageStatisticsPage import ManageStatisticsPage
+from public.page.branchStatisticsPage import BranchStatisticsPage
 import unittest
 """
 经销商客户工单统计数据测试用例：
@@ -40,7 +40,7 @@ class Manage_Order_Statistics(unittest.TestCase):
         cls.finish_order = FinishOrder(cls.driver)
         cls.visit_order = VisitOrderPage(cls.driver)
         cls.settle_order = SettleOrderPage(cls.driver)
-        cls.order_statistics = ManageStatisticsPage(cls.driver)
+        cls.order_statistics = BranchStatisticsPage(cls.driver)
         # 开始用例
         mytest.start_test()
         # 获取服务商账号信息

@@ -51,3 +51,9 @@ teamwork_branch_list_url = 'http://www.51shouhou.cn/singleBranch/#/customer/list
 
 # 客户统计页面url
 customer_statistics_url = 'http://www.51shouhou.cn/singleBranch/?#/customer/statistics'
+
+# 合作消息列表页面
+teamwork_news_list_url = 'http://www.51shouhou.cn/singleBranch/#/customer/coopApplication'
+
+# 师傅列表页面
+master_list_url = 'http://www.51shouhou.cn/singleBranch/#/master/index/index'

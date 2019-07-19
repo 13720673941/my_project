@@ -11,8 +11,6 @@ from config.urlconfig import *
 """
 class DealerBranchPage(BasePage):
 
-    """经销商列表页面"""
-
     # 添加经销商按钮
     add_manage_branch_btn = (By.XPATH,'//a[text()="添加经销商"]')
     # 经销商客户主账号输入框

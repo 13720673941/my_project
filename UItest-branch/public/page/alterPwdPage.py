@@ -10,10 +10,6 @@ from config.urlconfig import *
 网点登录后修改密码页面
 """
 class AlterPwdPage(BasePage):
-
-    """
-    页面元素路径信息
-    """
     
     # 手机号->修改按钮
     phe_alter_btn = (By.XPATH,'//label[text()="手机号："]/../div/p/a')

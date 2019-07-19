@@ -14,10 +14,6 @@ log=Log()
 """
 class SettleOrderPage(BasePage):
 
-    """
-    订单结算页面
-    """
-    
     # 结算按钮
     settle_btn = (By.XPATH,'//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')
     # 结算价格输入框,厂商/经销商结算价格输入框

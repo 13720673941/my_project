@@ -11,8 +11,6 @@ from config.urlconfig import *
 """
 class BrandsPage(BasePage):
 
-    """厂商系统账号列表页面元素"""
-
     # 厂商系统table按钮
     brands_table_btn = (By.XPATH,'//a[text()="签约厂商系统"]')
     # 添加厂商账号按钮

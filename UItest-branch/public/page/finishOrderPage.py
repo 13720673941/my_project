@@ -13,8 +13,6 @@ log=Log()
 网点完成工单页面
 """
 class FinishOrder(BasePage):
-
-    """网点完成工单页面"""
     
     # 完成工单按钮
     finish_order_btn = (By.XPATH,'//a[text()="完成服务"]')
@@ -91,6 +89,8 @@ class FinishOrder(BasePage):
         log.info('-=【网点完成服务】=-')
         # 进入完工订单列表页面
         self.enter_finish_order_page()
+        # 刷新页面
+        self.refresh_page()
         self.sleep(2)
         # 搜索订单
         self.search_page.search_order_by_number(ordernumber)

@@ -10,7 +10,6 @@ from selenium.webdriver.common.by import By
 """
 class InvalidOrder(BasePage):
 
-    """设置无效工单页面元素"""
     # 无效工单按钮
     invalid_order_btn = (By.XPATH,'//a[text()="无效工单"]')
     # 无效类型选择框
