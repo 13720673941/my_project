@@ -6,10 +6,11 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from config.urlconfig import *
-"""
-注册页面信息
-"""
+
 class RegisterPage(BasePage):
+    """
+    注册页面信息
+    """
 
     # 注册页面所有元素的父路径
     parent_path = '//div[contains(text(),"企业用户注册")]/../form/ul'

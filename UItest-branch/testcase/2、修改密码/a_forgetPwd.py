@@ -69,7 +69,7 @@ class Forget_Pwd(unittest.TestCase):
         # 点击重置密码按钮
         self.forgetPwd.click_reset_pwd_btn()
         # 时间加载等待
-        self.basePage.sleep(2)
+        self.basePage.sleep(1)
         # 获取系统系统提示信息
         Msg = self.basePage.get_system_msg()
         # 断言

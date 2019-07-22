@@ -6,10 +6,10 @@
 from selenium.webdriver.common.by import By
 from config.urlconfig import *
 from public.common.basepage import BasePage
-"""
-客户统计页面: 经销商/服务商订单统计页面
-"""
+
 class BranchStatisticsPage(BasePage):
+
+    """客户统计页面: 经销商/服务商订单统计页面"""
 
     # 切换服务商的table按钮
     server_table_btn = (By.XPATH, '//a[text()="服务商"]')

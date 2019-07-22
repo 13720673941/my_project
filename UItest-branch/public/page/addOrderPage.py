@@ -8,10 +8,10 @@ from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
 from config.urlconfig import *
 log = Log()
-"""
-网点添加订单页面
-"""
+
 class AddOrderPage(BasePage):
+
+    """网点添加订单页面"""
     
     # 打开只能识别按钮
     open_text_recognition_btn = (By.XPATH,'//a[text()="智能文本识别"]')

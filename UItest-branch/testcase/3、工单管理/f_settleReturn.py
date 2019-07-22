@@ -348,8 +348,8 @@ class Return_Settle(unittest.TestCase):
         data = after_settle_data["TestCase004"]
         # 打印用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入代结算工单列表页
-        self.settleOrder.enter_return_wait_settle()
+        # 进入师傅工单结算页面
+        self.settleOrder.enter_master_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNumber)
         # 进入订单详情页

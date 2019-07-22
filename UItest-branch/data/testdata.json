@@ -258,7 +258,7 @@
     "auto_name_fnc": {"CaseName": "1、添加经销商-已经注册的用户自动带出用户名称校验","PhoneNum": "13700000001","expect": "XM-服务商"},
     "add_branch_fnc": [
       {"CaseName": "2、添加经销商-用户账号为空校验","PhoneNum": "","RemarkName": "AutoTest","expect": "请输入客户主账号"},
-      {"CaseName": "3、添加经销商-用户名称为空校验","PhoneNum": "13572597243","RemarkName": "","expect": "请输入客户姓名"},
+      {"CaseName": "3、添加经销商-用户名称为空校验","PhoneNum": "13999999999","RemarkName": "","expect": "请输入客户姓名"},
       {"CaseName": "4、添加经销商-用户账号格式左边界值校验","PhoneNum": "1357259724","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
       {"CaseName": "5、添加经销商-用户账号格式右边界值校验","PhoneNum": "135725972411","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
       {"CaseName": "6、添加经销商-用户账号格式校验","PhoneNum": "branch!@#我","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
@@ -284,12 +284,12 @@
     "auto_name_fnc": {"CaseName": "1、添加服务商-输入客户手机号自动带出服务商名称校验","PhoneNum": "13700000002","expect": "自动化测试网点03"},
     "add_branch_fnc": [
       {"CaseName": "2、添加服务商-客户主账号为空校验","PhoneNum": "","BranchName": "auto_add","IsSelect": "true","expect": "请输入客户主账号"},
-      {"CaseName": "3、添加服务商-客户备注为空校验","PhoneNum": "13572597243","BranchName": "","IsSelect": "true","expect": "请输入客户姓名"},
+      {"CaseName": "3、添加服务商-客户备注为空校验","PhoneNum": "13999999999","BranchName": "","IsSelect": "true","expect": "请输入客户姓名"},
       {"CaseName": "4、添加服务商-客户手机号左边界值校验","PhoneNum": "1370000000","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
       {"CaseName": "5、添加服务商-客户手机号右边界值校验","PhoneNum": "137000000022","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
       {"CaseName": "6、添加服务商-客户手机号特殊字符格式校验","PhoneNum": "137a000000.","BranchName": "auto_add","IsSelect": "true","expect": "请输入正确客户主账号"},
       {"CaseName": "7、添加服务商-合作工单类型空校验","PhoneNum": "13700000002","BranchName": "auto_add","IsSelect": "false","expect": "请选择至少一个合作工单类型"},
-      {"CaseName": "8、添加服务商-不能重复邀请校验","PhoneNum": "13572597243","BranchName": "auto_add","IsSelect": "true","expect": "您已申请过该服务商"},
+      {"CaseName": "8、添加服务商-不能重复邀请校验","PhoneNum": "13100000002","BranchName": "auto_add","IsSelect": "true","expect": "您已申请过该服务商"},
       {"CaseName": "9、添加服务商-成功邀请服务商校验","PhoneNum": "13572597243","BranchName": "auto_add","IsSelect": "true","expect": "添加成功"}
     ],
     "search_branch_fnc": [
@@ -360,5 +360,39 @@
     "refuse_teamwork_fnc": {"CaseName": "3、申请合作-拒绝合作申请校验","keyword":"蓝魔科技","keyword1":"自动化测试网点04","expect": "已拒绝"},
     "del_teamwork_fnc": {"CaseName": "4、申请合作-撤销合作申请校验","keyword":"自动化测试网点04","expect": "操作成功"},
     "again_visit_fnc": {"CaseName": "5、申请合作-再次邀请合作校验","keyword":"自动化测试网点04","expect": "等待对方确认"}
+  },
+  "21": "/*【合作师傅列表功能测试用例：邀请师傅、服务设置、禁止恢复派单、师傅搜索】*/",
+  "MasterListPage": {
+    "visit_master_fnc": {
+      "TestCase001": {"CaseName": "1、添加师傅-自动带出师傅名称校验","MasterPhone": "13720673941","expect": "邓鹏飞"},
+      "TestCase002": {"CaseName": "2、添加师傅-未注册的师傅邀请提示发送短信校验","MasterPhone": "13900000001","expect": "师傅尚未注册，将会发送短信邀请通知！"},
+      "TestCase003": {"CaseName": "3、添加师傅-师傅手机号为空校验","MasterName": "auto_test","expect": "error"},
+      "TestCase004": {"CaseName": "4、添加师傅-师傅姓名为空校验","MasterPhone": "13900000001","expect": "error"},
+      "TestCase005": [
+      {"CaseName": "5、添加师傅-师傅手机号左边界值校验","MasterPhone": "1372067394","MasterName": "auto_test","expect": "请输入正确手机号"},
+      {"CaseName": "6、添加师傅-师傅手机号格式校验","MasterPhone": "13200000！aa","MasterName": "auto_test","expect": "请输入正确手机号"},
+      {"CaseName": "7、添加师傅-成功邀请师傅校验校验","MasterPhone": "13572597243","MasterName": "auto_test","expect": "操作成功"},
+      {"CaseName": "8、添加师傅-重复邀请师傅校验校验","MasterPhone": "13572597243","MasterName": "auto_test","expect": "该师傅已经存在，勿重复邀请"}
+      ]
+    },
+    "search_master_fnc": [
+      {"CaseName": "9、师傅搜索-按照师傅手机号搜索师傅校验","KeyWord": "13720673941","expect": "邓鹏飞"},
+      {"CaseName": "10、师傅搜索-按照师傅名称搜索师傅校验","KeyWord": "邓鹏飞","expect": "13720673941"},
+      {"CaseName": "11、师傅搜索-按照师傅手机号模糊搜索师傅校验","KeyWord": "3941","expect": "邓鹏飞"},
+      {"CaseName": "12、师傅搜索-按照师傅名字模糊搜索师傅校验","KeyWord": "邓","expect": "13720673941"}
+    ],
+    "master_operate_fnc": {
+      "stop_please": {"CaseName": "13、禁止派单-师傅禁止派单功能校验","MasterName":"XIAOMI师傅","expect": "False//派单列表页没有该师傅"},
+      "open_please": {"CaseName": "14、恢复派单-师傅恢复派单功能校验","MasterName":"XIAOMI师傅","expect": "True//该师傅存在于派单师傅列表页"},
+      "del_visit_master": {"CaseName": "15、撤销邀请-撤销师傅邀请校验","MasterName": "13572597243","expect": "提交成功！"}
+    },
+    "server_set_fnc": {
+      "TestCase001": {"CaseName": "16、服务设置-师傅备注设置校验","MasterAccount":"13700000002","Remark": "auto_test","expect": "auto_test"},
+      "TestCase002": {"CaseName": "17、服务设置-师傅服务类型为空校验","expect": "请选择服务类型"},
+      "TestCase003": {"CaseName": "18、服务设置-师傅服务品类为空校验","expect": "请选择服务品类"},
+      "TestCase004": {"CaseName": "19、服务设置-师傅服务区域为空校验","expect": "请完善服务区域"},
+      "TestCase005": {"CaseName": "20、服务设置-师傅位置为空校验","expect": "请选择师傅位置"},
+      "TestCase006": {"CaseName": "21、服务设置-师傅服务设置成功校验","Remark": "auto_test","Server": ["不限","维修","安装"],"Kinds":["不限","空调","热水器","冰箱","洗衣机"],"ServerPlace":["北京","天津"],"expect": "操作成功"}
+    }
   }
 }

@@ -9,10 +9,11 @@ from public.common.logconfig import Log
 from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 log=Log()
-"""
-网点派单页面
-"""
+
 class PleaseOrderPage(BasePage):
+    """
+    网点派单页面
+    """
     
     # 派单按钮
     please_order_btn = (By.XPATH,'//a[text()="派单"]')
@@ -29,7 +30,7 @@ class PleaseOrderPage(BasePage):
     # 搜索按钮
     search_branch_btn = (By.XPATH,'//input[@placeholder="输入服务商名称/手机号进行查询"]/following-sibling::a')
     # 第一个派单对象名称
-    search_after_first_name = (By.XPATH,'//div[3]/table/tbody/tr/td/div/label')
+    search_after_first_name = (By.XPATH,'//div[contains(text(),"列表")]/../..//tbody/tr[1]')
     # 预报价输入框
     order_settle_money_input = (By.XPATH,'//input[@placeholder="选填，也可结算时填写"]')
     # 确定派单按钮

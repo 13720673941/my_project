@@ -70,11 +70,12 @@ class Visit_Dealer(unittest.TestCase):
         self.dealer_page.click_add_manage_branch()
         # 输入客户主账号
         self.dealer_page.input_branch_phone_num(phone_num=add_dealer_data["PhoneNum"])
+        self.base_page.sleep(1)
         # 输入客户名称
         self.dealer_page.input_branch_name(branch_name=add_dealer_data["RemarkName"])
+        self.base_page.sleep(1)
         # 点击确定按钮
         self.dealer_page.click_confirm_add()
-        self.base_page.sleep(1)
         # 断言
         self.assert_mode.assert_equal(add_dealer_data["expect"],self.base_page.get_system_msg())
 

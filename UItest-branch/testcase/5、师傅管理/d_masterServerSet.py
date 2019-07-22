@@ -1,0 +1,88 @@
+# -*- coding: utf-8 -*-
+
+# @Author  : Mr.Deng
+# @Time    : 2019/7/22 14:48
+
+from public.common.driver import browser_driver
+from public.common.getdata import get_test_data
+from public.common.basepage import BasePage
+from public.common.assertmode import Assert
+from public.common.rwconfig import read_config_data
+from public.common import mytest
+from public.page.loginPage import LoginPage
+from public.page.masterListPage import MasterListPage
+import unittest
+"""
+师傅服务设置功能测试用例：
+1、师傅备注设置校验 2、师傅服务类型为空校验 3、师傅服务品类为空校验 4、师傅服务区域为空校验
+5、师傅位置为空校验 6、师傅服务设置成功校验
+"""
+class Master_Server_Set(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+
+        # 获取测试数据
+        cls.test_data = get_test_data()["MasterListPage"]["server_set_fnc"]
+        # 设置浏览器驱动
+        cls.driver = browser_driver()
+        # 实例化类
+        cls.base_page = BasePage(cls.driver)
+        cls.assert_mode = Assert(cls.driver)
+        cls.login = LoginPage(cls.driver)
+        cls.master_page = MasterListPage(cls.driver)
+        mytest.start_test()
+        # 获取登录的账号密码
+        username = read_config_data("蓝魔科技","username")
+        password = read_config_data("蓝魔科技","password")
+        # 登录经销商
+        cls.login.login_main(username,password)
+
+    def enter_master_server_set_page(self,search_word):
+        """师傅列表页面搜索师傅点击设置"""
+
+        # 搜索师傅名字 -固定设置的师傅
+        self.master_page.input_keyword_for_search(search_word)
+        # 点击搜索
+        self.master_page.click_search_btn()
+        # 页面宫动到按钮位置
+        self.master_page.roll_right_to_operate_btn()
+        # 点击服务设置按钮
+        self.master_page.click_server_set_btn()
+        self.base_page.sleep(1)
+
+    def search_master(self,search_word):
+        """师傅列表搜索师傅"""
+
+        self.base_page.refresh_page()
+        self.master_page.input_keyword_for_search(search_word)
+        self.master_page.click_search_btn()
+        self.base_page.sleep(1)
+
+    def setUp(self):
+        # 进入师傅列表页面
+        self.master_page.enter_master_list_page()
+        # 刷新页面
+        self.base_page.refresh_page()
+
+    def test_server_set001(self):
+        """师傅备注设置校验"""
+
+        #获取测试数据
+        data = self.test_data["TestCase001"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 进入设置页面
+        self.enter_master_server_set_page(search_word=data["MasterAccount"])
+        # 输入客户备注信息
+        self.master_page.input_master_remark(master_remark=data["Remark"])
+        # 保存服务设置
+        self.master_page.click_set_server_save()
+        self.base_page.sleep(1)
+        #搜索师傅
+        self.search_master(search_word=data["MasterAccount"])
+        # 获取第一行的数据
+        first_master_info = self.master_page.get_first_master_info()
+        # 断言
+        self.assert_mode.assert_in(data["expect"],first_master_info)
+

@@ -8,15 +8,16 @@ from public.common.basepage import BasePage
 from config.urlconfig import *
 from public.common.logconfig import Log
 log = Log()
-"""
-客户管理-服务商列表页面
-"""
+
 class ServerBranchPage(BasePage):
+    """
+    客户管理-服务商列表页面
+    """
 
     # 父路径该页面有两个一样的页面需要从根目录定位
     parent_xpath = '//div[@id="main"]/following-sibling::div[21]/'
     # 切换服务商的table按钮
-    server_branch_table = (By.XPATH,'//a[text()="服务商"]')
+    server_branch_table = (By.XPATH,'//a[contains(text(),"服务商")]')
     # 添加服务商按钮
     add_server_btn = (By.XPATH,'//a[text()="添加服务商"]')
     # 客户手机号输入框

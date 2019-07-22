@@ -9,10 +9,11 @@ from public.common.logconfig import Log
 from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 log=Log()
-"""
-网点完成工单页面
-"""
+
 class FinishOrder(BasePage):
+    """
+    网点完成工单页面
+    """
     
     # 完成工单按钮
     finish_order_btn = (By.XPATH,'//a[text()="完成服务"]')

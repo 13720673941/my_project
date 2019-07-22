@@ -14,7 +14,7 @@ from public.page.serverBranchPage import ServerBranchPage
 from public.page.addOrderPage import AddOrderPage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from config.pathconfig import *
-import unittest,ddt
+import unittest
 """
 设置服务商禁止派单/恢复派单操作：
 1、禁止派单功能校验 2、恢复派单功能校验

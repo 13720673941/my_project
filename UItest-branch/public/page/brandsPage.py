@@ -6,10 +6,12 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from config.urlconfig import *
-"""
-厂商系统添加页面
-"""
+
 class BrandsPage(BasePage):
+
+    """
+    厂商系统添加页面
+    """
 
     # 厂商系统table按钮
     brands_table_btn = (By.XPATH,'//a[text()="签约厂商系统"]')

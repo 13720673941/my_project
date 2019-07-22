@@ -125,6 +125,11 @@ class Teamwork_Visit_Operate(unittest.TestCase):
         # 断言
         self.assert_mode.assert_equal(data["expect"],system_message)
 
+    @classmethod
+    def tearDownClass(cls):
+        cls.base_page.quit_browser()
+        mytest.end_test()
+
 
 if __name__ == '__main__':
     # unittest.main()

@@ -9,10 +9,11 @@ from public.common.logconfig import Log
 from config.urlconfig import *
 import time
 log=Log()
-"""
-订单结算页面
-"""
+
 class SettleOrderPage(BasePage):
+    """
+    订单结算页面
+    """
 
     # 结算按钮
     settle_btn = (By.XPATH,'//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')

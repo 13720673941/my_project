@@ -8,10 +8,11 @@ from selenium.webdriver.common.by import By
 from config.urlconfig import *
 from public.common.logconfig import Log
 log = Log()
-"""
-搜索订单页面信息
-"""
+
 class SearchOrderPage(BasePage):
+    """
+    搜索订单页面信息
+    """
     
     # 订单单号输入框
     order_num_input = (By.XPATH,'//label[text()="工单编号"]/following-sibling::input[1]')

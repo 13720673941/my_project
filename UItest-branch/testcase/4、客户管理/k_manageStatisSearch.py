@@ -93,6 +93,8 @@ class ManageStatisticsSearch(unittest.TestCase):
         # 下单时间
         self.order_statistics.input_start_date(start_date=self.base_page.get_now_time())
         self.order_statistics.input_end_date(end_date=self.base_page.get_now_time())
+        # 点击搜索
+        self.order_statistics.click_search_btn()
         # 等待搜索结果
         self.base_page.sleep(1)
         # 获取经销商的已完单和未完单数量

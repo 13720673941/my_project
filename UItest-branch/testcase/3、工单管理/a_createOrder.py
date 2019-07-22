@@ -45,7 +45,8 @@ class Add_Order(unittest.TestCase):
         cls.loginPage.login_main(UserName,PassWord)
         cls.basePage.sleep(2)
 
-    def public_operation(self,name,phoneNum,serverAddress,collage,orderType,branchName,serverType,brands,kinds):
+    def public_operation(self,name,phoneNum,serverAddress,collage,orderType,
+                         branchName,serverType,brands,kinds):
         """工共操作下单"""
         #  进入添加订单页面
         self.addOrderPage.enter_create_order_url()
@@ -87,7 +88,8 @@ class Add_Order(unittest.TestCase):
         serverType=Data1["ServerType"]
         brands=Data1["Brands"]
         kinds=Data1["Kinds"]
-        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,serverType,brands,kinds)
+        self.public_operation(name,phoneNum,serverAddress,collage,orderType,
+                              branchName,serverType,brands,kinds)
         # 点击保存按钮
         self.addOrderPage.click_save_btn()
         self.basePage.sleep(1)

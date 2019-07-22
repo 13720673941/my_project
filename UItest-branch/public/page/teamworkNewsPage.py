@@ -6,10 +6,11 @@
 from selenium.webdriver.common.by import By
 from config.urlconfig import *
 from public.page.brandsPage import BasePage
-"""
-合作申请页面: 收到的申请/发出的申请
-"""
+
 class TeamWorkNewsPage(BasePage):
+    """
+    合作申请页面: 收到的申请/发出的申请
+    """
 
     # 切换发出申请的table
     table_btn = (By.XPATH,'//a[contains(text(),"发出的申请")]')

@@ -7,11 +7,11 @@ from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 import datetime
-"""
-订单详情页面
-"""
 
 class OrderDetailsPage(BasePage):
+    """
+    订单详情页面
+    """
 
     # 预约订单按钮
     appoint_order_btn = (By.XPATH,'//button[contains(.,"预约")]')

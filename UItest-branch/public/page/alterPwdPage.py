@@ -6,11 +6,11 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from config.urlconfig import *
-"""
-网点登录后修改密码页面
-"""
+
 class AlterPwdPage(BasePage):
-    
+
+    """网点登录后修改密码页面"""
+
     # 手机号->修改按钮
     phe_alter_btn = (By.XPATH,'//label[text()="手机号："]/../div/p/a')
     # 登录密码输入框

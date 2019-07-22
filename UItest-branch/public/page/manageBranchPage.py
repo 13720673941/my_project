@@ -69,7 +69,9 @@ class DealerBranchPage(BasePage):
 
     def input_branch_name(self,branch_name):
         """输入客户名称"""
+
         self.clear_input(self.manage_branch_name_input)
+        self.sleep(1)
         self.input_message(self.manage_branch_name_input,branch_name)
 
     def get_branch_name(self):

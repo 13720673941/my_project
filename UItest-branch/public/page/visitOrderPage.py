@@ -9,10 +9,10 @@ from public.common.logconfig import Log
 from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 log=Log()
-"""
-回访页面信息
-"""
+
 class VisitOrderPage(BasePage):
+
+    """回访页面信息"""
     
     # 回访按钮
     visit_btn = (By.XPATH,'//a[text()="回访"]')

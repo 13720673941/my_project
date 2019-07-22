@@ -10,10 +10,11 @@ from config.urlconfig import *
 # 实例化
 log = Log()
 
-"""
-登录页面信息
-"""
 class LoginPage(BasePage): # 所有的操作继承Base基类
+
+    """
+    登录页面信息
+    """
     
     # 用户名输入框
     username_input = (By.XPATH,'//input[@type="text"]')
@@ -23,6 +24,8 @@ class LoginPage(BasePage): # 所有的操作继承Base基类
     login_btn = (By.XPATH,'//a[@class="loginBtn"]')
     # 退出按钮
     logout_btn = (By.XPATH,'//a[text()="退出"]')
+    # 弹窗
+    dump_windows = (By.XPATH,'//div[@class="modal-dialog"]//a[text()="关闭"]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -49,6 +52,15 @@ class LoginPage(BasePage): # 所有的操作继承Base基类
         """点击退出按钮"""
         self.click_button(self.logout_btn)
 
+    def dumps_window_close(self):
+        """判断是否有提醒充值的弹窗并且关闭"""
+
+        # 如果弹窗出现
+        if self.is_display(self.dump_windows):
+            # 点击关闭
+            self.click_button(self.dump_windows)
+
+
     def login_main(self,UserName,PassWord):
         """
         :param UserName: 登录用户名
@@ -62,6 +74,7 @@ class LoginPage(BasePage): # 所有的操作继承Base基类
         self.input_password(PassWord)
         self.click_login_button()
         self.sleep(1)
+        self.dumps_window_close()
         # 断言
         if self.is_display(self.logout_btn):
             log.info('{0} ** Branch login success！'.format(self.success))

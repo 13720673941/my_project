@@ -5,10 +5,11 @@
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
-"""
-设置无效工单页面
-"""
+
 class InvalidOrder(BasePage):
+    """
+    设置无效工单页面
+    """
 
     # 无效工单按钮
     invalid_order_btn = (By.XPATH,'//a[text()="无效工单"]')

@@ -121,6 +121,7 @@ class Alter_Password(unittest.TestCase):
         self.alter_pwd.input_confirm_pwd(confirm_pwd=ddtData["ConfirmPwd"])
         # 点击确定
         self.alter_pwd.click_confirm_alterPwd()
+        self.base.sleep(1)
         # 获取系统提示
         msg = self.base.get_system_msg()
         # 写入新改的密码
