@@ -57,3 +57,9 @@ teamwork_news_list_url = 'http://www.51shouhou.cn/singleBranch/#/customer/coopAp
 
 # 师傅列表页面
 master_list_url = 'http://www.51shouhou.cn/singleBranch/#/master/index/index'
+
+# 师傅工单统计页面url
+master_order_statistics_url = 'http://www.51shouhou.cn/singleBranch/#/master/masterOrder/index'
+
+# 网点单量记录页面url
+master_order_number_url = 'http://www.51shouhou.cn/singleBranch/#/operate/orderLog/index'

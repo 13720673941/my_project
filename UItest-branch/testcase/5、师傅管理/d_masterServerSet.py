@@ -86,3 +86,116 @@ class Master_Server_Set(unittest.TestCase):
         # 断言
         self.assert_mode.assert_in(data["expect"],first_master_info)
 
+    def test_server_set002(self):
+        """师傅服务类型为空校验"""
+
+        #获取测试数据
+        data = self.test_data["TestCase002"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 进入师傅服务设置页面
+        self.enter_master_server_set_page(search_word=data["MasterAccount"])
+        # 清空服务类型配置
+        self.master_page.clear_server_type()
+        # 点击保存
+        self.master_page.click_set_server_save()
+        # 获取系统提示信息
+        system_message = self.base_page.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data["expect"],system_message)
+
+    def test_server_set003(self):
+        """师傅服务品类为空校验"""
+
+        #获取测试数据
+        data = self.test_data["TestCase003"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 进入师傅服务设置页面
+        self.enter_master_server_set_page(search_word=data["MasterAccount"])
+        # 清空服务类型配置
+        self.master_page.clear_kinds_type()
+        # 点击保存
+        self.master_page.click_set_server_save()
+        # 获取系统提示信息
+        system_message = self.base_page.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data["expect"],system_message)
+
+    def test_server_set004(self):
+        """师傅服务区域为空校验"""
+
+        #获取测试数据
+        data = self.test_data["TestCase004"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 进入师傅服务设置页面
+        self.enter_master_server_set_page(search_word=data["MasterAccount"])
+        # 清空服务类型配置
+        self.master_page.clear_master_server_place()
+        # 点击保存
+        self.master_page.click_set_server_save()
+        # 获取系统提示信息
+        system_message = self.base_page.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data["expect"],system_message)
+
+    def test_server_set005(self):
+        """师傅位置为空校验"""
+
+        #获取测试数据
+        data = self.test_data["TestCase005"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 进入师傅服务设置页面
+        self.enter_master_server_set_page(search_word=data["MasterAccount"])
+        # 清空服务类型配置
+        self.master_page.clear_master_location()
+        # 点击保存
+        self.master_page.click_set_server_save()
+        # 获取系统提示信息
+        system_message = self.base_page.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data["expect"],system_message)
+
+    def test_server_set006(self):
+        """师傅服务设置成功校验"""
+
+        #获取测试数据
+        data = self.test_data["TestCase006"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 进入师傅服务设置页面
+        self.enter_master_server_set_page(search_word=data["MasterAccount"])
+        # 清空服务类型配置
+        self.master_page.clear_server_type()
+        # 清空服务品类
+        self.master_page.clear_kinds_type()
+        # 清空服务区域
+        self.master_page.clear_master_server_place()
+        # 设置服务类型
+        self.master_page.select_server_type(server_list=data["Server"])
+        # 设置品类
+        self.master_page.select_kinds_type(kinds_list=data["Kinds"])
+        # 设置服务区域
+        self.master_page.select_server_province(province_list=data["ServerPlace"])
+        # 点击保存
+        self.master_page.click_set_server_save()
+        # 获取系统提示信息
+        system_message = self.base_page.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data["expect"],system_message)
+
+    @classmethod
+    def tearDownClass(cls):
+
+        cls.base_page.quit_browser()
+        mytest.end_test()
+
+if __name__ == '__main__':
+    # unittest.main()
+
+    suits = unittest.TestLoader().loadTestsFromTestCase(Master_Server_Set)
+
+    unittest.TextTestRunner(verbosity=2).run(suits)
+

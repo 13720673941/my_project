@@ -88,10 +88,13 @@ def run_report(ReportName,FileName,title,description,case):
     Report = ReportName + tm + '.html'
     ReportPath = reportSavePath + FileName + '\\' + Report
     with open(ReportPath,'wb') as f:
-        test_result = HTMLTestRunnerCN.HTMLTestRunner(stream=f,
+        test_result = HTMLTestRunnerCN.HTMLTestRunner(
+                                               verbosity=2,
+                                               stream=f,
                                                title=title,
                                                description=description
-                                               ).run(case)
+                                               )\
+            .run(case)
     print(' ** Create test report success, report path: {0}.'.format(ReportPath))
 
     # 写入测试结果

@@ -236,7 +236,9 @@ class MasterListPage(BasePage):
             if element_list[i].text in server_place:
                 # 点击选择框
                 self.click_button(element=(By.XPATH,'//div[@class="city-picker"][1]'
-                                                    '//ul/li['+str(i+2)+']//input'))
+                                                    '//ul/li['+str(i+1)+']//input'))
+                # 流程简化只选择一个服务区域
+                break
             else:
                 pass
 
@@ -251,7 +253,9 @@ class MasterListPage(BasePage):
             if element_list[i].text in province_list:
                 # 点击选择框
                 self.click_button(element=(By.XPATH,'//div[@class="city-picker"][1]'
-                                                    '//ul/li['+str(i+2)+']//input'))
+                                                    '//ul/li['+str(i+1)+']//input'))
+                # 流程简化只选择一个服务区域
+                break
             else:
                 pass
 
