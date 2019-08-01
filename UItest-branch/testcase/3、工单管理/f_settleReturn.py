@@ -51,7 +51,7 @@ class Return_Settle(unittest.TestCase):
         cls.Use = rwconfig.read_config_data('蓝魔科技',"username")
         cls.Pwd = rwconfig.read_config_data('蓝魔科技',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
-        #  获取订单信息
+        # 获取订单信息
         user = rwconfig.read_config_data("ReturnOrder", "用户姓名", orderInfo)
         phe = rwconfig.read_config_data("ReturnOrder", "联系方式", orderInfo)
         address = rwconfig.read_config_data("ReturnOrder", "服务地址", orderInfo)
@@ -61,18 +61,18 @@ class Return_Settle(unittest.TestCase):
         brands = rwconfig.read_config_data("ReturnOrder", "品牌", orderInfo)
         kinds = rwconfig.read_config_data("ReturnOrder", "品类", orderInfo)
         branch_name = rwconfig.read_config_data("ReturnOrder", "服务商", orderInfo)
-        #  经销商下单程序下单
+        # 经销商下单程序下单
         cls.create_order_page.create_order_main(user, phe, address, collage, order_type, server, brands, kinds,
                                                 branch_name)
-        #  获取单号
+        # 获取单号
         cls.OrderNumber = cls.base.get_order_number()
         # 单号写入配置文件后面无效工单使用
         rwconfig.write_config_data('for_invalid_and_search','id',cls.OrderNumber,orderNumPath)
-        #  获取派单师傅
+        # 获取派单师傅
         master = rwconfig.read_config_data('蓝魔科技', 'master001')
-        #  派单
+        # 派单
         cls.pleaseOrder.please_order_main(cls.OrderNumber, master)
-        #  完单
+        # 完单
         cls.finishOrder.finish_order_main(cls.OrderNumber)
 
     def setUp(self):
@@ -205,6 +205,7 @@ class Return_Settle(unittest.TestCase):
         self.settleOrder.select_settle_type_2()
         # 输入结算价格
         self.settleOrder.input_settle_money(settle_money=data["SettleMoney"])
+        self.base.sleep(1)
         # 获取输入价格的value值
         settle_money_value = self.settleOrder.get_settle_money_value()
         # 断言

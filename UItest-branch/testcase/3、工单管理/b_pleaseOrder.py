@@ -94,7 +94,7 @@ class Please_Order(unittest.TestCase):
         # 获取师傅名称
         Name = self.pleaseOrderPage.get_search_name()
         # 断言
-        self.assert_mode.assert_equal(Data1["expect"],Name)
+        self.assert_mode.assert_in(Data1["expect"],Name)
 
     @ddt.data(*Data2)
     def test_pleaseOrder003(self,Data2):

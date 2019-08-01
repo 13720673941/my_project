@@ -99,6 +99,7 @@ class Manage_Settle(unittest.TestCase):
         """工共操作:: 进入服务商订单结算列表->点击单号进入订单详情->点击结算按钮"""
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        self.base.sleep(1)
         # 搜索工单
         self.searchOrder.search_order_by_number(self.OrderNum)
         # 进入工单详情页

@@ -92,6 +92,8 @@ class Finish_Order(unittest.TestCase):
         self.finishOrder.input_master_doorTime(doorTime=FinishDate["DoorTime"])
         # 输入师傅完成服务时间
         self.finishOrder.input_master_finishTime(finishTime=FinishDate["FinishTime"])
+        # 完成服务备注
+        self.finishOrder.input_remark()
         # 上传图片
         self.finishOrder.up_finish_picture(upLoading=FinishDate["UpLoading"])
         self.basePage.sleep(1)
