@@ -42,20 +42,19 @@ class Master_List_Operate(unittest.TestCase):
         password = read_config_data("蓝魔科技", "password")
         # 登录网点
         cls.login.login_main(username, password)
-        # # 获取订单信息
-        # user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
-        # phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
-        # address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
-        # collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
-        # order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
-        # server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
-        # brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
-        # kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
-        # # 经销商下单程序下单
-        # cls.create_order.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
-        # # 获取单号
-        # cls.order_number = cls.base_page.get_order_number()
-        cls.order_number = "636992419953098256"
+        # 获取订单信息
+        user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
+        phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
+        address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
+        collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
+        order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
+        server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
+        brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
+        kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
+        # 经销商下单程序下单
+        cls.create_order.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
+        # 获取单号
+        cls.order_number = cls.base_page.get_order_number()
 
     def public_operate(self,search_word):
         """进入师傅列表页->搜索师傅"""
@@ -75,6 +74,7 @@ class Master_List_Operate(unittest.TestCase):
         self.base_page.select_new_order(self.order_number)
         # 点击派单
         self.please_order.click_pleaseOrder_btn()
+        self.base_page.sleep(1)
         # 搜索派单师傅
         self.please_order.input_search_name(name)
         # 点击搜索
@@ -117,6 +117,25 @@ class Master_List_Operate(unittest.TestCase):
         self.base_page.sleep(1)
         # 断言 判断师傅存在页面
         self.assert_mode.assert_el_in_page(self.please_order.search_branch_is_display())
+
+    def test_master_list_operate003(self):
+        """师傅撤销邀请功能校验"""
+
+        # 获取测试数据
+        data = test_data["del_visit_master"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 搜索师傅
+        self.public_operate(search_word=data["MasterName"])
+        # 点击撤销按钮
+        self.master_page.click_del_visit_master()
+        # 确认撤销
+        self.master_page.click_confirm_window_operate()
+        # 获取系统提示信息
+        system_message = self.base_page.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data["expect"],system_message)
+
 
     @classmethod
     def tearDownClass(cls):

@@ -123,8 +123,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase002"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -145,8 +145,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase003"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -188,8 +188,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase005"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -209,8 +209,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase006"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -252,8 +252,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase008"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -272,8 +272,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase009"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -294,16 +294,18 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase010"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
         self.base.open_order_message(self.OrderNum)
         # 点击结算按钮
         self.settleOrder.click_settle_btn()
+        self.base.sleep(1)
         # 获取固定结算金额不能编辑的属性
         settle_money_attribute = self.settleOrder.get_settle_money_attribute()
+        # 获取结算金额
         set_money = self.settleOrder.get_settle_money_value()
         # 获取经销商未结算提示进行断言
         self.assert_mode.assert_equal(data["expect"],settle_money_attribute)
@@ -315,8 +317,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase011"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # 进入服务撒工单结算列表页面
-        self.settleOrder.enter_branch_settle_page()
+        # # 进入服务撒工单结算列表页面
+        # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页

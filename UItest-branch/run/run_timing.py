@@ -7,17 +7,17 @@ from public.common.sendemail import Send_Email
 import sys
 SE = Send_Email()
 sys.path.append('../run')
-import run_a_registerLogin,run_b_alterPassword,run_c_orderManage,run_d_customManage
+import run_a_registerLogin,run_b_alterPassword,run_c_orderManage,run_d_customManage,\
+    run_e_masterManage
 
 if __name__ == '__main__':
 
     import time
-
     # 默认脚本执行失败
     isPass = False
     # 定时间
     startTime = time.time()
-    timing = '12:10'
+    timing = "12:15"
     while True:
         # 获取当前时间
         time.sleep(1)
@@ -32,6 +32,7 @@ if __name__ == '__main__':
             run_b_alterPassword.run()
             run_c_orderManage.run()
             run_d_customManage.run()
+            run_e_masterManage.run()
             print('========== 结束 ==========')
             endTime = time.time()
             isPass = True
@@ -43,6 +44,6 @@ if __name__ == '__main__':
         # 脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
         # 发送邮件
-        #SE.SendEmailMain(start_time=timing,run_time=runtime)
+        SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')

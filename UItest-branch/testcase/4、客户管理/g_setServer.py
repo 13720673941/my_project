@@ -181,6 +181,7 @@ class Server_Set(unittest.TestCase):
         self.server_branch.select_teamwork_type_3()
         # 保存设置
         self.server_branch.click_save_set_server()
+        self.base_page.sleep(1)
         # 进入创建订单列表页面
         self.create_order.enter_create_order_url()
         # 选择代报单

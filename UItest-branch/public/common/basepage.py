@@ -219,6 +219,7 @@ class BasePage(object):
         """
         t1 = time.time()
         self.driver.refresh()
+        self.sleep(2)
         log.info('{0} Refresh current page, Spend {1} seconds.'.format(self.success,time.time()-t1))
 
     def mouse_move_and_click(self,element):

@@ -27,6 +27,10 @@ class OrderLogPage(BasePage):
     def __init__(self,driver):
         BasePage.__init__(self,driver)
 
+    def enter_order_log_page(self):
+        """进入单量扣除日志页面"""
+        self.open_url(master_order_number_url)
+
     def input_start_date(self,start_date):
         """输入开始开始的日期"""
         self.input_message(self.start_date_input,start_date)
@@ -35,13 +39,16 @@ class OrderLogPage(BasePage):
         """输入结束日期"""
         self.input_message(self.end_date_input,end_date)
 
-    def select_type_by_value(self,value):
-        """选择派单类型筛选"""
+    def select_deduct_type(self,value):
+        """选择扣除类型筛选"""
         self.operate_not_select(open_el=self.open_down_list,
                                 parent_el=self.type_select_parent_path,
                                 value=value)
 
-    def input_order_number(self):
+    def input_order_number(self,order_number):
         """输入工单编号"""
+        self.input_message(self.order_number_input,order_number)
 
-
+    def click_search_btn(self):
+        """点击搜索按钮"""
+        self.click_button(self.search_btn)

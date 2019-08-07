@@ -110,6 +110,7 @@ class Order_Details(unittest.TestCase):
         self.order_detail.click_confirm_appoint_btn()
         # 断言
         self.assert_mode.assert_equal(alter_appoint_data["expect"],self.base_page.get_system_msg())
+        self.base_page.sleep(1)
         # 获取当前日期后一天修改预约判断用
         alter_date = str(datetime.datetime.now().date()+datetime.timedelta(1))
         # 判断修改的预约时间在订单详情页已经改变

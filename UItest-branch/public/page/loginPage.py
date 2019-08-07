@@ -59,6 +59,8 @@ class LoginPage(BasePage): # 所有的操作继承Base基类
         if self.is_display(self.dump_windows):
             # 点击关闭
             self.click_button(self.dump_windows)
+        else:
+            pass
 
 
     def login_main(self,UserName,PassWord):

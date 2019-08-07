@@ -11,7 +11,7 @@ spam = "hello"
 
 pyperclip.copy(spam)
 
-pyperclip.paste()
+print(pyperclip.paste())
 
 
 # 打印出 "hello"

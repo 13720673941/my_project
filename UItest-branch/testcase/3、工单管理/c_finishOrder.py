@@ -84,6 +84,7 @@ class Finish_Order(unittest.TestCase):
         self.basePage.select_new_order(OrderNumber=self.OrderNumber)
         # 点击完成工单按钮
         self.finishOrder.click_finish_btn()
+        self.basePage.sleep(1)
         # 输入故障类型
         self.finishOrder.input_break_type()
         # 输入师傅预约时间

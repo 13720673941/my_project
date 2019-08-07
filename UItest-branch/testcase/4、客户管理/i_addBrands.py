@@ -57,6 +57,8 @@ class Add_Brands(unittest.TestCase):
         self.base_page.print_case_name(ddt_data["CaseName"])
         # 点击添加厂商账号
         self.brands_page.click_add_brands_account()
+        # 等待
+        self.base_page.sleep(1)
         # 选择厂商系统
         self.brands_page.select_brands_system(brands_name=ddt_data["BrandsName"])
         # 输入登录账号

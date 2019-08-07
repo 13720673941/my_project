@@ -201,7 +201,7 @@
       "TestCase001": {"CaseName": "3、返单结算-厂商结算价格不能编辑校验","expect": "true"},
       "TestCase002": {"CaseName": "4、返单结算-厂商未结算提示信息校验","expect": "厂商尚未结算"},
       "TestCase003": {"CaseName": "5、返单结算-按规则结算结算价格不能编辑校验","expect": "true"},
-      "TestCase004": {"CaseName": "6、返单结算-按固定金额结算金可以编辑校验","SettleMoney": "50","expect": "50"},
+      "TestCase004": {"CaseName": "6、返单结算-按固定金额结算金可以编辑校验","SettleMoney": "100","expect": "100"},
       "TestCase005": {"CaseName": "7、返单结算-按规则结算比例计算校验"},
       "TestCase006":{"CaseName": "8、返单结算-钱包余额不足支付校验","expect": "账户钱包余额不足"},
       "TestCase007":{"CaseName": "9、返单结算-线下成功支付校验","expect": "返单结算完成"}
@@ -296,20 +296,20 @@
       {"CaseName": "10、搜索服务商-按照客户手机号搜索校验","SearchWord": "13700000002","expect": "自动化测试网点03"},
       {"CaseName": "11、搜索服务商-按照客户名称搜索校验","SearchWord": "自动化测试网点03","expect": "13700000002"},
       {"CaseName": "12、搜索服务商-按客户名称模糊搜索校验","SearchWord": "测试网点03","expect": "13700000002"},
-      {"CaseName": "13、搜索服务商-按客户手机号模糊搜索校验","SearchWord": "0002","expect": "自动化测试网点03"}
+      {"CaseName": "13、搜索服务商-按客户手机号模糊搜索校验","SearchWord": "3941","expect": "XM科技有限公司"}
     ],
     "server_set_fnc": {
-      "TestCase001": {"CaseName": "14、服务设置-设置服务商客户备注校验","SetBranch": "branch05","BranchRemark": "auto_branch_name","expect": "auto_branch_name"},
-      "TestCase002": {"CaseName": "15、服务设置-合作类型不能为空校验","SetBranch": "branch05","expect": "请选择合作类型"},
-      "TestCase003": {"CaseName": "16、服务设置-无派单合作类型不能派单校验","SetBranch": "branch05"},
-      "TestCase004": {"CaseName": "17、服务设置-无报单合作类型不能添加报单订单校验","SetBranch": "branch05","OrderType": "仅报单"},
-      "TestCase005": {"CaseName": "18、服务设置-无返单合作类型不能添加返单订单校验","SetBranch": "branch05","OrderType": "需返单"},
-      "TestCase006": {"CaseName": "19、服务设置-授权服务类型不能为空校验","SetBranch": "branch05","expect": "请选择服务类型"},
-      "TestCase007": {"CaseName": "20、服务设置-授权服务品牌不能为空校验","SetBranch": "branch05","expect": "请选择服务品牌"},
-      "TestCase008": {"CaseName": "21、服务设置-授权服务品类不能为空校验","SetBranch": "branch05","expect": "请选择服务品类"},
-      "TestCase009": {"CaseName": "22、服务设置-授权服务区域不能为空校验","SetBranch": "branch05","expect": "请完善服务区域"},
-      "TestCase010": {"CaseName": "23、服务设置-授权服务所有类型配置成功校验","SetBranch": "branch05","ServerType": ["维修","安装"],"Brands": ["海尔","美的"],"Kinds": ["空调","冰箱","洗衣机"],"Province": ["北京","天津"],"expect": "操作成功"},
-      "TestCase011": {"CaseName": "24、服务设置-不在授权区域的订单不能派单校验","BranchName": "branch05","expect": "False"}
+      "TestCase001": {"CaseName": "14、服务设置-设置服务商客户备注校验","SetBranch": "自动化测试网点05","BranchRemark": "auto_branch_name","expect": "auto_branch_name"},
+      "TestCase002": {"CaseName": "15、服务设置-合作类型不能为空校验","SetBranch": "自动化测试网点05","expect": "请选择合作类型"},
+      "TestCase003": {"CaseName": "16、服务设置-无派单合作类型不能派单校验","SetBranch": "自动化测试网点05"},
+      "TestCase004": {"CaseName": "17、服务设置-无报单合作类型不能添加报单订单校验","SetBranch": "自动化测试网点05","OrderType": "仅报单"},
+      "TestCase005": {"CaseName": "18、服务设置-无返单合作类型不能添加返单订单校验","SetBranch": "自动化测试网点05","OrderType": "需返单"},
+      "TestCase006": {"CaseName": "19、服务设置-授权服务类型不能为空校验","SetBranch": "自动化测试网点05","expect": "请选择服务类型"},
+      "TestCase007": {"CaseName": "20、服务设置-授权服务品牌不能为空校验","SetBranch": "自动化测试网点05","expect": "请选择服务品牌"},
+      "TestCase008": {"CaseName": "21、服务设置-授权服务品类不能为空校验","SetBranch": "自动化测试网点05","expect": "请选择服务品类"},
+      "TestCase009": {"CaseName": "22、服务设置-授权服务区域不能为空校验","SetBranch": "自动化测试网点05","expect": "请完善服务区域"},
+      "TestCase010": {"CaseName": "23、服务设置-授权服务所有类型配置成功校验","SetBranch": "自动化测试网点05","ServerType": ["维修","安装"],"Brands": ["海尔","美的"],"Kinds": ["空调","冰箱","洗衣机"],"Province": ["北京","天津"],"expect": "操作成功"},
+      "TestCase011": {"CaseName": "24、服务设置-不在授权区域的订单不能派单校验","BranchName": "自动化测试网点05","expect": "False"}
     },
     "stop_open_please_fnc": {
       "TestCase001": {"CaseName": "25、禁止派单-禁止派单功能校验","StopPleaseBranch":"自动化测试网点03","expect": "恢复派单"},
@@ -382,8 +382,8 @@
       {"CaseName": "12、师傅搜索-按照师傅名字模糊搜索师傅校验","KeyWord": "邓","expect": "13720673941"}
     ],
     "master_operate_fnc": {
-      "stop_please": {"CaseName": "13、禁止派单-师傅禁止派单功能校验","MasterName":"XIAOMI师傅","expect": "False//派单列表页没有该师傅"},
-      "open_please": {"CaseName": "14、恢复派单-师傅恢复派单功能校验","MasterName":"XIAOMI师傅","expect": "True//该师傅存在于派单师傅列表页"},
+      "stop_please": {"CaseName": "13、禁止派单-师傅禁止派单功能校验","MasterName":"13700000002","expect": "False//派单列表页没有该师傅"},
+      "open_please": {"CaseName": "14、恢复派单-师傅恢复派单功能校验","MasterName":"13700000002","expect": "True//该师傅存在于派单师傅列表页"},
       "del_visit_master": {"CaseName": "15、撤销邀请-撤销师傅邀请校验","MasterName": "13572597243","expect": "提交成功！"}
     },
     "server_set_fnc": {
@@ -392,7 +392,7 @@
       "TestCase003": {"CaseName": "18、服务设置-师傅服务品类为空校验","MasterAccount":"13700000002","expect": "请选择服务品类"},
       "TestCase004": {"CaseName": "19、服务设置-师傅服务区域为空校验","MasterAccount":"13700000002","expect": "请完善服务区域"},
       "TestCase005": {"CaseName": "20、服务设置-师傅位置为空校验","MasterAccount":"13700000002","expect": "请选择师傅位置"},
-      "TestCase006": {"CaseName": "21、服务设置-师傅服务设置成功校验","MasterAccount":"13700000002","Server": ["不限","维修","安装"],"Kinds":["不限","空调","热水器","冰箱","洗衣机"],"ServerPlace":["北京"],"expect": "操作成功"}
+      "TestCase006": {"CaseName": "21、服务设置-师傅服务设置成功校验","MasterAccount":"13700000002","Server": ["维修","安装"],"Kinds":["空调","热水器"],"ServerPlace":["陕西省"],"expect": "操作成功"}
     }
   },
   "22": "/*师傅工单统计页面功能测试用例：师傅列表搜索、师傅已接单、已完单、未完单、待结算、差评单数量统计*/",

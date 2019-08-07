@@ -131,7 +131,7 @@ class Master_Server_Set(unittest.TestCase):
         self.base_page.print_case_name(data["CaseName"])
         # 进入师傅服务设置页面
         self.enter_master_server_set_page(search_word=data["MasterAccount"])
-        # 清空服务类型配置
+        # 清空服务区域配置
         self.master_page.clear_master_server_place()
         # 点击保存
         self.master_page.click_set_server_save()

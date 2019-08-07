@@ -43,11 +43,11 @@ class MasterListPage(BasePage):
     # 师傅备注输入框
     master_remark_input = (By.XPATH,'//label[text()="师傅备注："]/..//input')
     # 获取师傅服务类型配置
-    master_server_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[10]//span')
+    master_server_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[10]/div/div')
     # 获取师傅服务品类的配置
-    master_kinds_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[11]//span')
+    master_kinds_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')
     # 获取师傅服务区域的配置
-    master_server_place_type = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[12]//span')
+    master_server_place_type = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')
     # 清除服务区域设置
     master_place_clear_btn = (By.XPATH,'//a[text()="清除"]')
     # 服务设置确定按钮
@@ -116,6 +116,11 @@ class MasterListPage(BasePage):
 
     def click_del_visit_master(self):
         """撤销师傅邀请"""
+
+        # 滑动托条点击
+        self.roll_right_to_operate_btn()
+        self.sleep(1)
+        # 点击撤销按钮
         self.click_button(self.del_master_teamwork_btn)
 
     def find_roll_button(self):
@@ -228,10 +233,12 @@ class MasterListPage(BasePage):
 
         # 获取师傅服务区域
         server_place = self.get_text(self.master_server_place_type)
+        print(server_place)
         # 获取全部省的子元素列表和总和
         province_count,element_list = self.get_element_count(self.province_parent_path)
+        print(element_list[0].text)
         # 循环输出所有的省份
-        for i in range(province_count):
+        for i in range(1,province_count):
             self.sleep(1)
             if element_list[i].text in server_place:
                 # 点击选择框
