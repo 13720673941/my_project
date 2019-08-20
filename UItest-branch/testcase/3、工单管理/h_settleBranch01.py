@@ -119,6 +119,7 @@ class Manage_Settle(unittest.TestCase):
         self.login.login_main(self.Use1,self.Pwd1)
         # 调用工共操作
         self.public_operation()
+        self.base.sleep(2)
         # 获取结算方式1、3的选择属性
         settle_type_att1 = self.settleOrder.get_settle_type_1_att()
         settle_type_att3 = self.settleOrder.get_settle_type_3_att()

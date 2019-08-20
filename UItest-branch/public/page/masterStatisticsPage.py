@@ -12,21 +12,25 @@ class MasterStatisticsPage(BasePage):
     """师傅工单统计页面"""
 
     # 统计页面师傅搜索输入框
-    master_search_input = (By.XPATH,'//input[starts-with(@placeholder,"")]')
+    master_search_input = (By.XPATH,'//input[starts-with(@placeholder,"输入师傅姓名")]')
     # 搜索按钮
     master_search_btn = (By.XPATH,'//a[text()="搜索"]')
     # 师傅列表第一行数据
     master_first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
     # 师傅已接单订单统计数量
-    master_take_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[4]//span')
+    master_take_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[6]//span')
     # 师傅已完单数量
-    master_finish_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[5]//span')
+    master_finish_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[8]//span')
     # 师傅待结算订单数量
-    master_wait_settle_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[6]//span')
+    master_wait_settle_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[10]//span')
+    # 师傅已结算订单数量
+    master_already_settle_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[9]//span')
     # 师傅未完单订单数量
-    master_not_finish_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[7]//span')
+    master_not_finish_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[11]//span')
     # 师傅差评单订单数量
-    master_negative_order_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[8]//span')
+    master_good_talk_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[12]//span')
+    # 师傅好评率获取
+    master_favorable_rate_count = (By.XPATH,'//tr[@class="ivu-table-row"][1]/td[14]//span')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -63,6 +67,14 @@ class MasterStatisticsPage(BasePage):
         """获取师傅待结算订单数量"""
         return self.get_text(self.master_wait_settle_count)
 
-    def get_master_negative_count(self):
-        """获取师傅差评单数量"""
-        return self.get_text(self.master_negative_order_count)
+    def get_master_good_talk_count(self):
+        """获取师傅好评单数量"""
+        return self.get_text(self.master_good_talk_count)
+
+    def get_master_already_settle_count(self):
+        """获取师傅已结算订单数量"""
+        return self.get_text(self.master_already_settle_count)
+
+    def get_master_favorable_rate_count(self):
+        """获取师傅好评率"""
+        return self.get_text(self.master_favorable_rate_count)

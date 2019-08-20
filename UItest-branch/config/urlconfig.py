@@ -10,6 +10,9 @@
 # 登录页面的url
 login_url = 'http://www.51shouhou.cn/singleBranch/#/login'
 
+# 网点首页预览页Url
+review_url = 'http://www.51shouhou.cn/singleBranch/#/overview/index'
+
 # 修改密码页面url
 alter_pwd_url = 'http://www.51shouhou.cn/singleBranch/#/changePassword'
 

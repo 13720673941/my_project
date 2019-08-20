@@ -70,18 +70,18 @@ class Send_Email(object):
                 # att['Content-Disposition'] = 'attachment; filename=report.html"')
                 self.Message.attach(att)
 
-    def AttNewResult(self):
-        """获取测试结果文件上传"""
-
-        TestResult = testResultPath
-        # 获取日志名称
-        LogName = TestResult.split("\\")[-1]
-        # 上传附件
-        att1 = MIMEText(open(TestResult,'rb').read(),'base64','utf-8')
-        att1['content-Type'] = 'application/octet-stream'
-        # 邮件类型附件，附件名称
-        att1['Content-Disposition'] = 'attachment;filename=' + LogName + ''
-        self.Message.attach(att1)
+    # def AttNewResult(self):
+    #     """获取测试结果文件上传"""
+    #
+    #     TestResult = testResultPath
+    #     # 获取日志名称
+    #     LogName = TestResult.split("\\")[-1]
+    #     # 上传附件
+    #     att1 = MIMEText(open(TestResult,'rb').read(),'base64','utf-8')
+    #     att1['content-Type'] = 'application/octet-stream'
+    #     # 邮件类型附件，附件名称
+    #     att1['Content-Disposition'] = 'attachment;filename=' + LogName + ''
+    #     self.Message.attach(att1)
 
     def SendEmailMessage(self):
         """
@@ -112,7 +112,7 @@ class Send_Email(object):
             SE.EmailAddTextMessage(start_time,run_time)
             # 上传附件
             SE.AttNewReport()
-            SE.AttNewResult()
+            # SE.AttNewResult()
             # 发送邮件
             SE.SendEmailMessage()
         except Exception as A:

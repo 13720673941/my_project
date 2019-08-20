@@ -95,6 +95,7 @@ class Manage_Settle(unittest.TestCase):
     def setUp(self):
         # 刷新页面时间加载
         self.base.refresh_page()
+        self.base.sleep(2)
 
     def test_manage_settle001(self):
         """经销商工单结算(有预报价)-未结算提示信息校验"""
@@ -188,7 +189,7 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase005"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # # 进入服务撒工单结算列表页面
+        # 进入服务撒工单结算列表页面
         # self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)

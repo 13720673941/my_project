@@ -405,10 +405,23 @@
     ],
     "order_statistic_fnc": {
       "TestCase001": {"CaseName": "5、师傅工单统计-师傅已接单订单数量校验","expect": 1},
-      "TestCase002": {"CaseName": "5、师傅工单统计-师傅已完单订单数量校验","expect": 1},
-      "TestCase003": {"CaseName": "5、师傅工单统计-师傅未完单订单数量校验","expect": 1},
-      "TestCase004": {"CaseName": "5、师傅工单统计-师傅待结算订单数量校验","expect": 1},
-      "TestCase005": {"CaseName": "5、师傅工单统计-师傅差评单订单数量校验","expect": 1}
+      "TestCase002": {"CaseName": "6、师傅工单统计-师傅已完单订单数量校验","expect": 1},
+      "TestCase003": {"CaseName": "7、师傅工单统计-师傅待结算订单数量校验","expect": 1},
+      "TestCase004": {"CaseName": "8、师傅工单统计-师傅已结单订单数量校验","expect": 1},
+      "TestCase005": {"CaseName": "9、师傅工单统计-师傅好评率校验"}
+    }
+  },
+  "23": "/*工单余量扣除功能测试用例：派单扣除单量功能、单量扣除日志记录搜索功能*/",
+  "OrderLogPage": {
+    "search_log_fnc": {
+      "TestCase001": {"CaseName":"1、按照创建订单日期搜索校验","StartTime": "","EndTime": ""},
+      "TestCase002": {"CaseName":"2、按照派单类型搜索校验","SearchType": "派单扣除"},
+      "TestCase003": {"CaseName":"3、按照订单单号搜索校验","SearchType": ""},
+      "TestCase004": {"CaseName":"4、混合搜索扣除记录校验","Time": "当前时间","SearchType": "派单扣除","工单编号": ""}
+    },
+    "deduct_order_fnc": {
+      "TestCase001": {"CaseName":"1、网点派单扣除工单余量校验","expect": 1},
+      "TestCase002": {"CaseName":"2、网点派单日志记录校验"}
     }
   }
 }

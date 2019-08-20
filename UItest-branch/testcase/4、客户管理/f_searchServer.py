@@ -67,6 +67,7 @@ class Search_Branch(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         cls.base_page.quit_browser()
+        mytest.end_test()
 
 
 

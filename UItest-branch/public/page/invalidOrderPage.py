@@ -14,7 +14,7 @@ class InvalidOrder(BasePage):
     # 无效工单按钮
     invalid_order_btn = (By.XPATH,'//a[text()="无效工单"]')
     # 无效类型选择框
-    invalid_type_select = (By.XPATH,'//label[text()="无效工单类型："]/../div/select')
+    invalid_type_select = (By.XPATH,'//label[contains(text(),"无效工单类型：")]/../div/select')
     # 无效原因输入框
     invalid_reason_input = (By.XPATH,'//label[text()="无效工单理由："]/../*/*/textarea')
     # 无效工单确定按钮

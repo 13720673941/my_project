@@ -23,6 +23,12 @@ class OrderLogPage(BasePage):
     order_number_input = (By.XPATH,'//label[contains(text(),"编号")]/..//input')
     # 搜索按钮
     search_btn = (By.XPATH,'//a[contains(text(),"搜索")]')
+    # 第一行日志记录的信息
+    first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
+    # 首页工单余量
+    order_count = (By.XPATH,'//div[contains(text(),"工单余量")]/span')
+    # 首页短信余量
+    message_count = (By.XPATH,'//div[contains(text(),"短信余量")]/span')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -52,3 +58,15 @@ class OrderLogPage(BasePage):
     def click_search_btn(self):
         """点击搜索按钮"""
         self.click_button(self.search_btn)
+
+    def get_first_row_info(self):
+        """获取日志记录第一行的信息"""
+        return self.get_text(self.first_row_info)
+
+    def get_order_count(self):
+        """获取网点工单余量"""
+        return self.get_text(self.order_count)
+
+    def get_short_msg_count(self):
+        """获取网点短信余量"""
+        return self.get_text(self.message_count)
