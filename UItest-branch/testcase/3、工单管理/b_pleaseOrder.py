@@ -44,19 +44,9 @@ class Please_Order(unittest.TestCase):
         PassWord = read_config_data('蓝魔科技','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
-        #  获取订单信息
-        user = read_config_data("ReturnOrder", "用户姓名", orderInfo)
-        phe = read_config_data("ReturnOrder", "联系方式", orderInfo)
-        address = read_config_data("ReturnOrder", "服务地址", orderInfo)
-        collage = read_config_data("ReturnOrder", "详细地址", orderInfo)
-        order_type = read_config_data("ReturnOrder", "工单类型", orderInfo)
-        server = read_config_data("ReturnOrder", "服务类型", orderInfo)
-        brands = read_config_data("ReturnOrder", "品牌", orderInfo)
-        kinds = read_config_data("ReturnOrder", "品类", orderInfo)
-        branch_name = read_config_data("ReturnOrder", "服务商", orderInfo)
-        #  经销商下单程序下单
-        cls.addOrderPage.create_order_main(user, phe, address, collage, order_type, server, brands, kinds,branch_name)
-        #  获取单号
+        # 创建订单
+        cls.addOrderPage.create_return_order()
+        # 获取单号
         cls.OrderNumber = cls.basePage.get_order_number()
         # 进入派单页面
         cls.pleaseOrderPage.enter_please_order_page()

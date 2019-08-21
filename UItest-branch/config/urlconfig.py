@@ -66,3 +66,6 @@ master_order_statistics_url = 'http://www.51shouhou.cn/singleBranch/#/master/mas
 
 # 网点单量记录页面url
 master_order_number_url = 'http://www.51shouhou.cn/singleBranch/#/operate/orderLog/index'
+
+# 短信发送记录页面url
+short_msg_log_url = 'http://www.51shouhou.cn/singleBranch/#/operate/noteLog/index'

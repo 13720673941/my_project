@@ -48,17 +48,8 @@ class Manage_Settle(unittest.TestCase):
         cls.Use = rwconfig.read_config_data('蓝魔科技',"username")
         cls.Pwd = rwconfig.read_config_data('蓝魔科技',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
-        # 新建工单-获取订单信息
-        user = rwconfig.read_config_data("NotReturnOrder", "用户姓名", orderInfo)
-        phe = rwconfig.read_config_data("NotReturnOrder", "联系方式", orderInfo)
-        address = rwconfig.read_config_data("NotReturnOrder", "服务地址", orderInfo)
-        collage = rwconfig.read_config_data("NotReturnOrder", "详细地址", orderInfo)
-        order_type = rwconfig.read_config_data("NotReturnOrder", "工单类型", orderInfo)
-        server = rwconfig.read_config_data("NotReturnOrder", "服务类型", orderInfo)
-        brands = rwconfig.read_config_data("NotReturnOrder", "品牌", orderInfo)
-        kinds = rwconfig.read_config_data("NotReturnOrder", "品类", orderInfo)
-        # 经销商下单程序下单
-        cls.createOrder.create_order_main(user, phe, address, collage, order_type, server, brands, kinds)
+        #  经销商下单程序下单
+        cls.createOrder.create_not_return_order()
         # 获取工单单号
         cls.OrderNum = cls.base.get_order_number()
         # 获取派单到服务商数据 关联派单数据中的信息

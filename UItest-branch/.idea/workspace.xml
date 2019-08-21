@@ -2,124 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/result/report/1、登录注册/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/report/2、修改密码/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/6、运营管理/a_orderMarginLog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/page/shortMsgLogPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/6、运营管理/c_sendShortMsg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urlconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urlconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/accountdata.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/accountdata.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ordermessage.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/ordermessage.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/ordernumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/ordernumber.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testdata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/sendemail.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/sendemail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/invalidOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/invalidOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/masterStatisticsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/masterStatisticsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page/addOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/addOrderPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/page/orderLogPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/orderLogPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-18.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-19.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-20.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-21.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-24.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-25.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-26.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-27.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-28.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-29.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-06-30.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-01.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-02.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-03.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-04.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-05.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-06.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-09.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-10.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-12.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-17.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-18.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-19.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-20.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/log/2019-07-22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report2019-06-25_17-34-13.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-06-27_09-23-45.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-06-27_09-25-17.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-06-28_09-11-41.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-06-29_13-23-43.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-01_12-20-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-02_12-20-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-03_13-55-11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-03_13-58-49.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-04_09-10-25.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-05_13-02-42.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-06_12-12-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-06_13-15-33.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-17_15-43-44.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-18_12-15-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-19_09-06-48.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-19_12-20-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-20_09-12-28.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/1、登录注册/register_and_login_test_report_2019-07-20_12-31-53.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-06-25_17-45-21.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-06-27_09-29-41.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-06-27_09-34-58.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-06-27_09-43-41.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-06-28_09-14-09.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-06-29_13-25-28.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-01_12-22-03.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-02_12-21-46.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-03_09-16-14.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-04_09-12-10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-05_13-04-27.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-06_12-13-47.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-06_13-17-20.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-17_15-45-59.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-18_12-17-07.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-19_09-08-34.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-19_12-21-45.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-20_09-14-15.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/2、修改密码/alter_pwd_test_report_2019-07-20_12-34-02.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-06-28_09-16-26.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-06-29_13-27-15.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-01_12-25-10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-02_12-24-21.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-03_09-18-42.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-04_09-14-49.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-05_13-06-34.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-06_12-16-04.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-06_13-19-29.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-17_15-48-11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-18_12-20-17.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-19_09-10-40.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-19_12-23-55.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-20_09-21-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/3、工单管理/order_manage_test_report_2019-07-20_12-37-03.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-05_13-18-48.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-06_12-36-13.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-06_13-40-22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-10_09-56-29.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-12_09-48-46.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-12_12-44-22.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-13_10-46-24.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-13_12-56-44.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-17_16-17-41.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-18_12-57-59.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-19_12-49-32.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/report/4、客户管理/customer_manage_test_report_2019-07-20_13-14-57.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/testresult/2019-07-13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/testresult/2019-07-17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/testresult/2019-07-18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/testresult/2019-07-19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/testresult/2019-07-20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/run_timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run_timing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/a_createOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/a_createOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/c_finishOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/c_finishOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/d_visitOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/d_visitOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/e_returnOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/e_returnOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/f_settleReturn.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/f_settleReturn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/g_settleBranch.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/g_settleBranch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/h_settleBranch01.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/h_settleBranch01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/4、客户管理/f_searchServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/4、客户管理/f_searchServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/i_orderDetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/i_orderDetails.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/j_invalidOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/j_invalidOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/4、客户管理/d_stopOpenTake.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/4、客户管理/d_stopOpenTake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/4、客户管理/h_stopOpenPlease.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/4、客户管理/h_stopOpenPlease.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/4、客户管理/j_manageStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/4、客户管理/j_manageStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/4、客户管理/l_serverStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/4、客户管理/l_serverStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/5、师傅管理/c_masterOperate.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/5、师傅管理/c_masterOperate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/5、师傅管理/e_orderStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/5、师傅管理/e_orderStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/6、运营管理/a_orderMarginLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/6、运营管理/a_orderMargin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,8 +50,9 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_d_visitOrderFnc_py.coverage" NAME="Unittests in d_visitOrderFnc.py Coverage Results" MODIFIED="1562913308104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_a_addorder_Add_Order.coverage" NAME="Unittests for a_addorder.Add_Order Coverage Results" MODIFIED="1561169806007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_j_manageStatistics_py.coverage" NAME="Unittests in j_manageStatistics.py Coverage Results" MODIFIED="1563440415388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
-    <SUITE FILE_PATH="coverage/UItest_branch$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1564537768563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/page" />
+    <SUITE FILE_PATH="coverage/UItest_branch$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1566372353990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/common" />
     <SUITE FILE_PATH="coverage/UItest_branch$logconfig.coverage" NAME="logconfig Coverage Results" MODIFIED="1560828262132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/common" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_searchOrderLog_py.coverage" NAME="Unittests in b_searchOrderLog.py Coverage Results" MODIFIED="1566377660032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_finishOrder_py.coverage" NAME="Unittests in finishOrder.py Coverage Results" MODIFIED="1560159819284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_g_setServerFnc_Server_Set_test_server_set005.coverage" NAME="Unittests for g_setServerFnc.Server_Set.test_server_set005 Coverage Results" MODIFIED="1562668988613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_i_orderDetails_py.coverage" NAME="Unittests in i_orderDetails.py Coverage Results" MODIFIED="1562995926430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
@@ -161,6 +72,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_loginFnc_py.coverage" NAME="Unittests in b_loginFnc.py Coverage Results" MODIFIED="1562729011935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/1、注册登录" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_d_masterServerSet_py.coverage" NAME="Unittests in d_masterServerSet.py Coverage Results" MODIFIED="1565150770004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_g_settleorder_py.coverage" NAME="Unittests in g_settleorder.py Coverage Results" MODIFIED="1561612043014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_b_searchOrderLog_Search_Order_Log_test_order_log001.coverage" NAME="Unittests for b_searchOrderLog.Search_Order_Log.test_order_log001 Coverage Results" MODIFIED="1566357612397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in___init___py.coverage" NAME="Unittests in __init__.py Coverage Results" MODIFIED="1562057766429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_e_InvalidOrder_py.coverage" NAME="Unittests in e_InvalidOrder.py Coverage Results" MODIFIED="1560160750809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$createuser.coverage" NAME="createuser Coverage Results" MODIFIED="1560751026827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
@@ -181,6 +93,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_a_registerFnc_py.coverage" NAME="Unittests in a_registerFnc.py Coverage Results" MODIFIED="1562388263461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/1、注册登录" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_7_searchOrder_py.coverage" NAME="Unittests in 7_searchOrder.py Coverage Results" MODIFIED="1559805105804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_d_visitOrder_py.coverage" NAME="Unittests in d_visitOrder.py Coverage Results" MODIFIED="1563500681321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_a_createOrder_py.coverage" NAME="Unittests in a_createOrder.py Coverage Results" MODIFIED="1566374601918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_e_returnorder_py.coverage" NAME="Unittests in e_returnorder.py Coverage Results" MODIFIED="1561611262018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_a_visitMaster_Visit_Master_test_visit_master003.coverage" NAME="Unittests for a_visitMaster.Visit_Master.test_visit_master003 Coverage Results" MODIFIED="1563611357663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$b_loginFnc.coverage" NAME="b_loginFnc Coverage Results" MODIFIED="1562727432269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/1、注册登录" />
@@ -212,7 +125,8 @@
     <SUITE FILE_PATH="coverage/UItest_branch$run_alterpassword.coverage" NAME="run_alterpassword Coverage Results" MODIFIED="1561455919961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_g_setServer_Server_Set.coverage" NAME="Unittests for g_setServer.Server_Set Coverage Results" MODIFIED="1562925437777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$run_e_masterManage.coverage" NAME="run_e_masterManage Coverage Results" MODIFIED="1565148573312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
-    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_pleaseOrder_py.coverage" NAME="Unittests in b_pleaseOrder.py Coverage Results" MODIFIED="1563500193994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_a_createOrder_Add_Order_test_addOrder001.coverage" NAME="Unittests for a_createOrder.Add_Order.test_addOrder001 Coverage Results" MODIFIED="1566373939002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_pleaseOrder_py.coverage" NAME="Unittests in b_pleaseOrder.py Coverage Results" MODIFIED="1566377028224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$runreport.coverage" NAME="runreport Coverage Results" MODIFIED="1562731470810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/common" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_visitdealer_Visit_Dealer_test_visit_dealer003.coverage" NAME="Unittests for visitdealer.Visit_Dealer.test_visit_dealer003 Coverage Results" MODIFIED="1561694617613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_e_orderStatistics_Order_Statistics_test_order_statistics001.coverage" NAME="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics001 Coverage Results" MODIFIED="1565921870825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
@@ -229,6 +143,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_i_invalidOrderFnc_py.coverage" NAME="Unittests in i_invalidOrderFnc.py Coverage Results" MODIFIED="1562306380065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_e_returnOrderFnc_py.coverage" NAME="Unittests in e_returnOrderFnc.py Coverage Results" MODIFIED="1562899711052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_a_addOrder_py.coverage" NAME="Unittests in a_addOrder.py Coverage Results" MODIFIED="1560736101884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_b_searchOrderLog_Search_Order_Log_test_order_log002.coverage" NAME="Unittests for b_searchOrderLog.Search_Order_Log.test_order_log002 Coverage Results" MODIFIED="1566358127229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_a_forgetPwdFnc_py.coverage" NAME="Unittests in a_forgetPwdFnc.py Coverage Results" MODIFIED="1562809023637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/2、修改密码" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_j_manageStatistics_Manage_Order_Statistics_test_order_statistics001.coverage" NAME="Unittests for j_manageStatistics.Manage_Order_Statistics.test_order_statistics001 Coverage Results" MODIFIED="1563422244996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_e_orderStatistics_Order_Statistics_test_order_statistics004.coverage" NAME="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics004 Coverage Results" MODIFIED="1566198891183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
@@ -273,7 +188,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_d_masterServerSet_Master_Server_Set_test_server_set004.coverage" NAME="Unittests for d_masterServerSet.Master_Server_Set.test_server_set004 Coverage Results" MODIFIED="1565160541467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_visitdealer_Visit_Dealer.coverage" NAME="Unittests for visitdealer.Visit_Dealer Coverage Results" MODIFIED="1561702871588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_h_Invalidorder_py.coverage" NAME="Unittests in h_Invalidorder.py Coverage Results" MODIFIED="1561612241310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
-    <SUITE FILE_PATH="coverage/UItest_branch$b_searchOrderLog.coverage" NAME="b_searchOrderLog Coverage Results" MODIFIED="1566292695609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$b_searchOrderLog.coverage" NAME="b_searchOrderLog Coverage Results" MODIFIED="1566357300881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_PleaseOrder_py.coverage" NAME="Unittests in PleaseOrder.py Coverage Results" MODIFIED="1560159613747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_4_addOrder_py.coverage" NAME="Unittests in 4_addOrder.py Coverage Results" MODIFIED="1559804703269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_e_returnOrder_py.coverage" NAME="Unittests in e_returnOrder.py Coverage Results" MODIFIED="1563500786362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
@@ -304,6 +219,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$run_c_orderManage.coverage" NAME="run_c_orderManage Coverage Results" MODIFIED="1564189950381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/SingleBranch$basePage.coverage" NAME="basePage Coverage Results" MODIFIED="1560149370855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Page" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_mytest_Assert.coverage" NAME="Unittests for mytest.Assert Coverage Results" MODIFIED="1562131177549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/common" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_b_searchOrderLog_Search_Order_Log_test_order_log003.coverage" NAME="Unittests for b_searchOrderLog.Search_Order_Log.test_order_log003 Coverage Results" MODIFIED="1566358755874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_f_settleorder_Settle_Order.coverage" NAME="Unittests for f_settleorder.Settle_Order Coverage Results" MODIFIED="1561093918037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$5_PleaseOrder.coverage" NAME="5_PleaseOrder Coverage Results" MODIFIED="1559555367530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_c_finishOrderFnc_py.coverage" NAME="Unittests in c_finishOrderFnc.py Coverage Results" MODIFIED="1562899177896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
@@ -312,6 +228,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_g_setServerFnc_py.coverage" NAME="Unittests in g_setServerFnc.py Coverage Results" MODIFIED="1562903888989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_c_setServer_py.coverage" NAME="Unittests in c_setServer.py Coverage Results" MODIFIED="1562997749430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_searchManageFnc_py.coverage" NAME="Unittests in b_searchManageFnc.py Coverage Results" MODIFIED="1561879674180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_a_orderMarginLog_py.coverage" NAME="Unittests in a_orderMarginLog.py Coverage Results" MODIFIED="1566377563470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/6、运营管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_m_teamworkSearch_py.coverage" NAME="Unittests in m_teamworkSearch.py Coverage Results" MODIFIED="1563523007217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_searchOrder_py.coverage" NAME="Unittests in searchOrder.py Coverage Results" MODIFIED="1560130219690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_n_teamworkOperate_py.coverage" NAME="Unittests in n_teamworkOperate.py Coverage Results" MODIFIED="1563528528930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
@@ -331,6 +248,7 @@
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_registerBranch_py.coverage" NAME="Unittests in registerBranch.py Coverage Results" MODIFIED="1559285597757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_forgetPwd_py.coverage" NAME="Unittests in forgetPwd.py Coverage Results" MODIFIED="1560129762616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_a_forgetPwd_py.coverage" NAME="Unittests in a_forgetPwd.py Coverage Results" MODIFIED="1560734798518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/2、修改密码" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_b_pleaseOrder_Please_Order.coverage" NAME="Unittests for b_pleaseOrder.Please_Order Coverage Results" MODIFIED="1566376769754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -351,8 +269,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/testdata.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="415" column="19" selection-start-line="415" selection-start-column="5" selection-end-line="415" selection-end-column="19" />
+            <state relative-caret-position="447">
+              <caret line="430" column="19" selection-start-line="430" selection-start-column="5" selection-end-line="430" selection-end-column="19" />
               <folding>
                 <element signature="e#46#2412#0" />
                 <element signature="e#2455#3051#0" />
@@ -384,35 +302,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/page/orderLogPage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-              <folding>
-                <element signature="e#76#119#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/a_orderMarginLog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="15" lean-forward="true" selection-start-line="5" selection-end-line="17" selection-end-column="15" />
-              <folding>
-                <element signature="e#76#119#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py">
+        <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/c_sendShortMsg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state relative-caret-position="580">
+              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+              <folding>
+                <element signature="e#76#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/a_orderMargin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="56" column="67" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="56" selection-end-column="67" />
+              <folding>
+                <element signature="e#76#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/page/shortMsgLogPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
               <folding>
                 <element signature="e#76#119#0" expanded="true" />
               </folding>
@@ -442,7 +360,6 @@
       <find>return self.fail</find>
       <find>...</find>
       <find>NotReturnOrder</find>
-      <find>rwconfig.</find>
       <find>http://www.51shouhou.cn/singleBranch/# /order/search/waitvisit?tabType=全部工单</find>
       <find>isSuccess1 =</find>
       <find>isSuccess =</find>
@@ -461,6 +378,7 @@
       <find>18、经销商工单结算(有预报价)-经商端钱包结算余额不足校验</find>
       <find>完成工单-网点完成服务校验</find>
       <find>、工单搜索-按工单编码搜索工单校验</find>
+      <find>rwconfig.</find>
     </findStrings>
     <replaceStrings>
       <replace>username_input</replace>
@@ -501,57 +419,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/page/forgetPwdPage.py" />
-        <option value="$PROJECT_DIR$/public/page/orderDetailsPage.py" />
-        <option value="$PROJECT_DIR$/public/page/registerPage.py" />
-        <option value="$PROJECT_DIR$/public/page/returnOrderPage.py" />
-        <option value="$PROJECT_DIR$/public/page/searchOrderPage.py" />
-        <option value="$PROJECT_DIR$/public/page/settleOrderPage.py" />
-        <option value="$PROJECT_DIR$/public/page/serverBranchPage.py" />
-        <option value="$PROJECT_DIR$/public/page/teamworkNewsPage.py" />
-        <option value="$PROJECT_DIR$/public/page/visitOrderPage.py" />
-        <option value="$PROJECT_DIR$/testcase/5、师傅管理/a_visitMaster.py" />
-        <option value="$PROJECT_DIR$/testcase/5、师傅管理/b_searchMaster.py" />
-        <option value="$PROJECT_DIR$/public/page/pleaseOrderPage.py" />
-        <option value="$PROJECT_DIR$/testcase/1、注册登录/b_login.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/a_createOrder.py" />
-        <option value="$PROJECT_DIR$/result/__init__.py" />
         <option value="$PROJECT_DIR$/public/common/runreport.py" />
         <option value="$PROJECT_DIR$/public/__init__.py" />
         <option value="$PROJECT_DIR$/result/testresult/2019-07-29.txt" />
         <option value="$PROJECT_DIR$/public/page/__init__.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrder.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/f_settleReturn.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/i_orderDetails.py" />
         <option value="$PROJECT_DIR$/testcase/4、客户管理/g_setServer.py" />
-        <option value="$PROJECT_DIR$/testcase/4、客户管理/h_stopOpenPlease.py" />
         <option value="$PROJECT_DIR$/run/run_zcmd.bat" />
         <option value="$PROJECT_DIR$/public/common/basepage.py" />
         <option value="$PROJECT_DIR$/run/run_e_masterManage.py" />
         <option value="$PROJECT_DIR$/result/testresult/2019-08-07.txt" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/c_finishOrder.py" />
         <option value="$PROJECT_DIR$/testcase/4、客户管理/i_addBrands.py" />
         <option value="$PROJECT_DIR$/testcase/5、师傅管理/d_masterServerSet.py" />
-        <option value="$PROJECT_DIR$/testcase/5、师傅管理/c_masterOperate.py" />
         <option value="$PROJECT_DIR$/public/page/loginPage.py" />
         <option value="$PROJECT_DIR$/public/page/masterListPage.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/h_settleBranch01.py" />
         <option value="$PROJECT_DIR$/public/page/invalidOrderPage.py" />
         <option value="$PROJECT_DIR$/public/common/sendemail.py" />
         <option value="$PROJECT_DIR$/run/run_timing.py" />
-        <option value="$PROJECT_DIR$/testcase/3、工单管理/g_settleBranch.py" />
         <option value="$PROJECT_DIR$/testcase/4、客户管理/f_searchServer.py" />
         <option value="$PROJECT_DIR$/public/page/masterStatisticsPage.py" />
-        <option value="$PROJECT_DIR$/testcase/5、师傅管理/e_orderStatistics.py" />
         <option value="$PROJECT_DIR$/testcase/6、运营管理/a_ordercountLog.py" />
         <option value="$PROJECT_DIR$/data/accountdata.ini" />
-        <option value="$PROJECT_DIR$/config/urlconfig.py" />
-        <option value="$PROJECT_DIR$/public/page/orderLogPage.py" />
-        <option value="$PROJECT_DIR$/data/testdata.json" />
         <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/data/ordernumber.ini" />
         <option value="$PROJECT_DIR$/testcase/6、运营管理/a_ordermarginLog.py" />
+        <option value="$PROJECT_DIR$/public/page/orderLogPage.py" />
+        <option value="$PROJECT_DIR$/data/ordernumber.ini" />
         <option value="$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py" />
+        <option value="$PROJECT_DIR$/config/urlconfig.py" />
+        <option value="$PROJECT_DIR$/public/page/shortMsgPage.py" />
+        <option value="$PROJECT_DIR$/public/page/shortMsgLogPage.py" />
+        <option value="$PROJECT_DIR$/public/common/__init__.py" />
+        <option value="$PROJECT_DIR$/data/ordermessage.ini" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/a_createOrder.py" />
+        <option value="$PROJECT_DIR$/public/page/addOrderPage.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/c_finishOrder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/d_visitOrder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/e_returnOrder.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/f_settleReturn.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/g_settleBranch.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/h_settleBranch01.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/i_orderDetails.py" />
+        <option value="$PROJECT_DIR$/testcase/3、工单管理/j_invalidOrder.py" />
+        <option value="$PROJECT_DIR$/testcase/4、客户管理/d_stopOpenTake.py" />
+        <option value="$PROJECT_DIR$/testcase/4、客户管理/h_stopOpenPlease.py" />
+        <option value="$PROJECT_DIR$/testcase/4、客户管理/j_manageStatistics.py" />
+        <option value="$PROJECT_DIR$/testcase/4、客户管理/l_serverStatistics.py" />
+        <option value="$PROJECT_DIR$/testcase/5、师傅管理/c_masterOperate.py" />
+        <option value="$PROJECT_DIR$/testcase/5、师傅管理/e_orderStatistics.py" />
+        <option value="$PROJECT_DIR$/data/testdata.json" />
+        <option value="$PROJECT_DIR$/testcase/6、运营管理/a_orderMarginLog.py" />
+        <option value="$PROJECT_DIR$/testcase/6、运营管理/c_msgMarginLog.py" />
+        <option value="$PROJECT_DIR$/testcase/6、运营管理/c_sendShortMsg.py" />
       </list>
     </option>
   </component>
@@ -567,7 +485,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,12 +496,6 @@
               <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
               <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
@@ -601,6 +512,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -638,103 +550,89 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.b_searchOrderLog">
-    <configuration name="b_searchOrderLog" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="UItest-branch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/6、运营管理" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in b_searchOrderLog.py">
+    <configuration name="Unittests for b_pleaseOrder.Please_Order" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/6、运营管理" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/3、工单管理" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;a_ordermarginLog.Order_Margin_Log.test_order_margin_log&quot;" />
+      <option name="_new_target" value="&quot;b_pleaseOrder.Please_Order&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics004" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in a_createOrder.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/5、师傅管理" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/3、工单管理" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;e_orderStatistics.Order_Statistics.test_order_statistics004&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics005" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="UItest-branch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/5、师傅管理" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;e_orderStatistics.Order_Statistics.test_order_statistics005&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in a_orderMarginLog.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="UItest-branch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/6、运营管理" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/6、运营管理/a_orderMarginLog.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/3、工单管理/a_createOrder.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python tests.Unittests for e_orderStatistics.Order_Statistics.test_order_statistics004" />
-      <item itemvalue="Python tests.Unittests for e_orderStatistics.Order_Statistics.test_order_statistics005" />
-      <item itemvalue="Python tests.Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" />
-      <item itemvalue="Python tests.Unittests in a_orderMarginLog.py" />
-      <item itemvalue="Python.b_searchOrderLog" />
-    </list>
+    <configuration name="Unittests in a_orderMargin.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="UItest-branch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/6、运营管理" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/6、运营管理/a_orderMargin.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in b_pleaseOrder.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="UItest-branch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/3、工单管理" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrder.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in b_searchOrderLog.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="UItest-branch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/6、运营管理" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.b_searchOrderLog" />
-        <item itemvalue="Python tests.Unittests in a_orderMarginLog.py" />
-        <item itemvalue="Python tests.Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" />
-        <item itemvalue="Python tests.Unittests for e_orderStatistics.Order_Statistics.test_order_statistics005" />
-        <item itemvalue="Python tests.Unittests for e_orderStatistics.Order_Statistics.test_order_statistics004" />
+        <item itemvalue="Python tests.Unittests in b_searchOrderLog.py" />
+        <item itemvalue="Python tests.Unittests in a_orderMargin.py" />
+        <item itemvalue="Python tests.Unittests in b_pleaseOrder.py" />
+        <item itemvalue="Python tests.Unittests for b_pleaseOrder.Please_Order" />
+        <item itemvalue="Python tests.Unittests in a_createOrder.py" />
       </list>
     </recent_temporary>
   </component>
@@ -867,7 +765,8 @@
       <workItem from="1565669088363" duration="1384000" />
       <workItem from="1565917784561" duration="13098000" />
       <workItem from="1566178899999" duration="20250000" />
-      <workItem from="1566262969999" duration="18187000" />
+      <workItem from="1566262969999" duration="18199000" />
+      <workItem from="1566349623727" duration="22674000" />
     </task>
     <task id="LOCAL-00001" summary="git test">
       <created>1561443687108</created>
@@ -992,39 +891,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_e_orderStatistics_Order_Statistics_test_order_statistics005 - 2019.08.19 at 16h 45m 49s.xml">
-      <configuration name="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics005" configurationId="tests" />
+    <history-entry file="Unittests_for_b_searchOrderLog_Search_Order_Log_test_order_log003 - 2019.08.21 at 11h 39m 52s.xml">
+      <configuration name="Unittests for b_searchOrderLog.Search_Order_Log.test_order_log003" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_a_ordermarginLog_Order_Margin_Log_test_order_margin_log - 2019.08.20 at 16h 08m 49s.xml">
-      <configuration name="Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" configurationId="tests" />
+    <history-entry file="Unittests_in_b_searchOrderLog_py - 2019.08.21 at 11h 42m 47s.xml">
+      <configuration name="Unittests in b_searchOrderLog.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_a_ordermarginLog_Order_Margin_Log_test_order_margin_log - 2019.08.20 at 16h 10m 10s.xml">
-      <configuration name="Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" configurationId="tests" />
+    <history-entry file="Unittests_for_a_createOrder_Add_Order_test_addOrder001 - 2019.08.21 at 15h 52m 19s.xml">
+      <configuration name="Unittests for a_createOrder.Add_Order.test_addOrder001" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_a_ordermarginLog_Order_Margin_Log_test_order_margin_log - 2019.08.20 at 16h 12m 42s.xml">
-      <configuration name="Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" configurationId="tests" />
+    <history-entry file="Unittests_in_a_createOrder_py - 2019.08.21 at 15h 55m 21s.xml">
+      <configuration name="Unittests in a_createOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_a_ordermarginLog_Order_Margin_Log_test_order_margin_log - 2019.08.20 at 16h 14m 45s.xml">
-      <configuration name="Unittests for a_ordermarginLog.Order_Margin_Log.test_order_margin_log" configurationId="tests" />
+    <history-entry file="Unittests_in_a_createOrder_py - 2019.08.21 at 16h 02m 56s.xml">
+      <configuration name="Unittests in a_createOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_a_ordermarginLog_py - 2019.08.20 at 16h 46m 47s.xml">
-      <configuration name="Unittests in a_ordermarginLog.py" configurationId="tests" />
+    <history-entry file="Unittests_in_a_createOrder_py - 2019.08.21 at 16h 06m 17s.xml">
+      <configuration name="Unittests in a_createOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_a_ordermarginLog_py - 2019.08.20 at 16h 52m 32s.xml">
-      <configuration name="Unittests in a_ordermarginLog.py" configurationId="tests" />
+    <history-entry file="Unittests_for_b_pleaseOrder_Please_Order - 2019.08.21 at 16h 39m 31s.xml">
+      <configuration name="Unittests for b_pleaseOrder.Please_Order" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_a_ordermarginLog_py - 2019.08.20 at 16h 55m 37s.xml">
-      <configuration name="Unittests in a_ordermarginLog.py" configurationId="tests" />
+    <history-entry file="Unittests_in_b_pleaseOrder_py - 2019.08.21 at 16h 46m 03s.xml">
+      <configuration name="Unittests in b_pleaseOrder.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_a_ordermarginLog_py - 2019.08.20 at 16h 57m 09s.xml">
-      <configuration name="Unittests in a_ordermarginLog.py" configurationId="tests" />
+    <history-entry file="Unittests_in_a_orderMarginLog_py - 2019.08.21 at 16h 54m 00s.xml">
+      <configuration name="Unittests in a_orderMarginLog.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_a_ordermarginLog_py - 2019.08.20 at 17h 03m 52s.xml">
-      <configuration name="Unittests in a_ordermarginLog.py" configurationId="tests" />
+    <history-entry file="Unittests_in_b_searchOrderLog_py - 2019.08.21 at 16h 55m 27s.xml">
+      <configuration name="Unittests in b_searchOrderLog.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1176214000" />
+    <option name="totallyTimeSpent" value="1198900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,10 +935,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20576407" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20844504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1047,7 +946,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.34560907" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.8385269" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.47308782" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32719547" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3243626" />
@@ -1153,169 +1052,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="优化代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/result/image/20190806135713.png" />
-    <entry file="file://$PROJECT_DIR$/result/testresult/2019-08-06.txt" />
-    <entry file="file://$PROJECT_DIR$/result/image/20190806134801.png" />
-    <entry file="file://$PROJECT_DIR$/run/run_e_masterManage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/f_settleReturn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="203" column="19" lean-forward="true" selection-start-line="203" selection-start-column="19" selection-end-line="203" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/finishOrderPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-580">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="e#78#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/c_finishOrder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/i_addBrands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/testresult/2019-08-07.txt" />
-    <entry file="file://$PROJECT_DIR$/testcase/5、师傅管理/a_visitMaster.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/logconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/loginPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/l_serverStatistics.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/k_manageStatisSearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-          <folding>
-            <element signature="e#76#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/report/1、登录注册/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/report/2、修改密码/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/testresult/2019-08-10.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/j_manageStatistics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="83" column="59" selection-start-line="71" selection-start-column="8" selection-end-line="83" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/testresult/2019-08-13.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/h_settleBranch01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="116" column="40" lean-forward="true" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/invalidOrderPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/sendemail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="115" column="12" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/testresult/2019-08-16.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/settleOrderPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-          <folding>
-            <element signature="e#79#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/searchOrderPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/g_settleBranch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1581">
-          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run/run_timing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <element signature="e#79#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/g_setServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3439">
-          <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
-          <folding>
-            <element signature="e#75#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result/log/2019-08-16.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116584">
@@ -1364,24 +1100,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/5、师傅管理/c_masterOperate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/accountdata.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/urlconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1402,16 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/5、师傅管理/e_orderStatistics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="205" lean-forward="true" selection-start-line="205" selection-end-line="205" />
-          <folding>
-            <element signature="e#75#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcase/5、师傅管理/b_searchMaster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -1421,19 +1133,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="196" column="8" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="8" />
-          <folding>
-            <element signature="e#79#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ordermessage.ini">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/pathconfig.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1456,10 +1155,238 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/a_orderMarginLog.py">
+    <entry file="file://$PROJECT_DIR$/public/page/orderLogPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/urlconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="70" column="81" selection-start-line="70" selection-start-column="81" selection-end-line="70" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/settleOrderPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="e#79#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/teamworkNewsPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/1、注册登录/b_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="410" column="35" lean-forward="true" selection-start-line="410" selection-start-column="35" selection-end-line="410" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/common/basepage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="e#79#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/loginPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/a_createOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="229" column="33" selection-start-line="229" selection-start-column="33" selection-end-line="229" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/e_addServerBranch.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/k_manageStatisSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/m_teamworkSearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/n_teamworkOperate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/k_searchOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ordermessage.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/b_pleaseOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/c_finishOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding>
+            <element signature="e#78#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/d_visitOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/e_returnOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/f_settleReturn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="54" column="55" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/h_settleBranch01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/g_settleBranch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="51" column="49" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/i_orderDetails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/j_invalidOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="51" column="58" lean-forward="true" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/d_stopOpenTake.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/h_stopOpenPlease.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="44" column="50" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/j_manageStatistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/4、客户管理/l_serverStatistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/5、师傅管理/c_masterOperate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="5" selection-end-line="17" selection-end-column="15" />
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/5、师傅管理/e_orderStatistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="e#75#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="110" column="73" lean-forward="true" selection-start-line="110" selection-start-column="73" selection-end-line="110" selection-end-column="73" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/addOrderPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6042">
+          <caret line="318" column="68" lean-forward="true" selection-start-line="318" selection-start-column="68" selection-end-line="318" selection-end-column="68" />
           <folding>
             <element signature="e#76#119#0" expanded="true" />
           </folding>
@@ -1468,8 +1395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/testdata.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="415" column="19" selection-start-line="415" selection-start-column="5" selection-end-line="415" selection-end-column="19" />
+        <state relative-caret-position="447">
+          <caret line="430" column="19" selection-start-line="430" selection-start-column="5" selection-end-line="430" selection-end-column="19" />
           <folding>
             <element signature="e#46#2412#0" />
             <element signature="e#2455#3051#0" />
@@ -1500,20 +1427,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/orderLogPage.py">
+    <entry file="file://$PROJECT_DIR$/public/page/shortMsgLogPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        <state relative-caret-position="228">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding>
             <element signature="e#76#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/b_searchOrderLog.py">
+    <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/a_orderMargin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state relative-caret-position="428">
+          <caret line="56" column="67" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="56" selection-end-column="67" />
+          <folding>
+            <element signature="e#76#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/6、运营管理/c_sendShortMsg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
           <folding>
             <element signature="e#76#119#0" expanded="true" />
           </folding>

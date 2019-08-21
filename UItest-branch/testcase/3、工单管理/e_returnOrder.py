@@ -44,18 +44,8 @@ class Return_Order(unittest.TestCase):
         PassWord = rwconfig.read_config_data('蓝魔科技','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
-        #  获取订单信息
-        user = rwconfig.read_config_data("ReturnOrder", "用户姓名", orderInfo)
-        phe = rwconfig.read_config_data("ReturnOrder", "联系方式", orderInfo)
-        address = rwconfig.read_config_data("ReturnOrder", "服务地址", orderInfo)
-        collage = rwconfig.read_config_data("ReturnOrder", "详细地址", orderInfo)
-        order_type = rwconfig.read_config_data("ReturnOrder", "工单类型", orderInfo)
-        server = rwconfig.read_config_data("ReturnOrder", "服务类型", orderInfo)
-        brands = rwconfig.read_config_data("ReturnOrder", "品牌", orderInfo)
-        kinds = rwconfig.read_config_data("ReturnOrder", "品类", orderInfo)
-        branch_name = rwconfig.read_config_data("ReturnOrder", "服务商", orderInfo)
         #  经销商下单程序下单
-        cls.create_order_page.create_order_main(user, phe, address, collage, order_type, server, brands, kinds,branch_name)
+        cls.create_order_page.create_return_order()
         #  获取单号
         cls.OrderNumber = cls.basePage.get_order_number()
         # 获取派单师傅

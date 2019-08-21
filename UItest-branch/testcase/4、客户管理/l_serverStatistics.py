@@ -63,17 +63,8 @@ class Server_Order_Statistics(unittest.TestCase):
         cls.already_finish_count = int(cls.order_statistics.get_already_finish_count())
         cls.wait_settle_count = int(cls.order_statistics.get_wait_settle_count())
         cls.already_settle_count = int(cls.order_statistics.get_already_settle_count())
-        # 获取订单信息
-        user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
-        phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
-        address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
-        collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
-        order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
-        server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
-        brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
-        kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
-        # 经销商下单程序下单
-        cls.create_order.create_order_main(user, phe, address, collage, order_type, server, brands, kinds)
+        #  经销商下单程序下单
+        cls.create_order.create_not_return_order()
         # 获取单号
         cls.order_number = cls.base_page.get_order_number()
 

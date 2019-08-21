@@ -40,17 +40,8 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         cls.manage_branch_use = read_config_data("自动化测试网点03","username")
         cls.manage_branch_pwd = read_config_data("自动化测试网点03","password")
         cls.login.login_main(cls.manage_branch_use,cls.manage_branch_pwd)
-        # 获取订单信息
-        user = read_config_data("NotReturnOrder","用户姓名",orderInfo)
-        phe = read_config_data("NotReturnOrder","联系方式",orderInfo)
-        address = read_config_data("NotReturnOrder","服务地址",orderInfo)
-        collage = read_config_data("NotReturnOrder","详细地址",orderInfo)
-        order_type = read_config_data("NotReturnOrder","工单类型",orderInfo)
-        server = read_config_data("NotReturnOrder","服务类型",orderInfo)
-        brands = read_config_data("NotReturnOrder","品牌",orderInfo)
-        kinds = read_config_data("NotReturnOrder","品类",orderInfo)
-        # 经销商下单程序下单
-        cls.create_order_page.create_order_main(user,phe,address,collage,order_type,server,brands,kinds)
+        #  经销商下单程序下单
+        cls.create_order_page.create_not_return_order()
         # 获取单号
         cls.order_number = cls.base_page.get_order_number()
         # 退出登录

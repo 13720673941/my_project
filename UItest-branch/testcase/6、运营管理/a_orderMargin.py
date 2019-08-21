@@ -18,7 +18,7 @@ from config.urlconfig import *
 import unittest
 """
 网点工单扣除记录测试：
-1、派单扣除网点单量记记录校验
+1、派单扣除网点单量记记录校验 2、网点工单余量扣除记录日志校验
 """
 # 获取测试数据
 test_data = get_test_data()["OrderLogPage"]["deduct_order_fnc"]
@@ -44,17 +44,8 @@ class Order_Margin_Log(unittest.TestCase):
         cls.login.login_main(username, password)
         # 获取工单余量
         cls.order_count = int(cls.order_log.get_order_count())
-        # 获取订单信息
-        user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
-        phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
-        address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
-        collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
-        order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
-        server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
-        brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
-        kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
-        # 经销商下单程序下单
-        cls.create_order.create_order_main(user, phe, address, collage, order_type, server, brands, kinds)
+        #  经销商下单程序下单
+        cls.create_order.create_not_return_order()
         # 获取单号
         cls.order_number = cls.base_page.get_order_number()
         # 写入工单单号后面扣除/短信日志搜索使用

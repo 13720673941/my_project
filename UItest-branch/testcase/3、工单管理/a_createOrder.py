@@ -46,36 +46,41 @@ class Add_Order(unittest.TestCase):
         cls.basePage.sleep(2)
 
     def public_operation(self,name,phoneNum,serverAddress,collage,orderType,
-                         branchName,serverType,brands,kinds):
+                         branchName,serverType,brands,big_kinds,kinds,small_kinds):
         """工共操作下单"""
-        #  进入添加订单页面
+        # 进入添加订单页面
         self.addOrderPage.enter_create_order_url()
-        #  刷新页面
+        # 刷新页面
         self.basePage.refresh_page()
-        #  等待页面加载
+        # 等待页面加载
         self.basePage.wait()
-        #  输入联系人名称
+        # 输入联系人名称
         self.addOrderPage.input_username(name)
-        #  输入联系方式
+        # 输入联系方式
         self.addOrderPage.input_phoneNum(phoneNum)
-        #  选择服务地址
+        # 选择服务地址
         self.addOrderPage.select_server_address(serverAddress)
-        #  输入详细地址
+        # 输入详细地址
         self.addOrderPage.input_add_collage(collage)
-        #  选择工单类型
+        # 选择工单类型
         self.addOrderPage.select_order_type(orderType, branchName)
-        #  选择服务类型
+        # 选择服务类型
         self.addOrderPage.select_server_type(serverType)
-        #  选择预约时间和时间段
+        # 选择预约时间和时间段
         self.addOrderPage.input_orderTime()
-        #  选择家电品牌
+        # 选择家电品牌
         self.addOrderPage.input_brands(brands)
-        #  选择家电品类
-        self.addOrderPage.input_kinds(kinds)
+        # 选择产品大类
+        self.addOrderPage.select_product_big_kinds(big_kinds)
+        # 选择家电品类
+        self.addOrderPage.select_product_kinds(kinds)
+        # 选择小类
+        self.addOrderPage.select_product_small_kinds(small_kinds)
 
     @ddt.data(*Data1)
     def test_addOrder001(self,Data1):
         '''网点新建订单测试用例脚本'''
+
         # 打印测试用例名称
         self.basePage.print_case_name(Data1["CaseName"])
         # 获取订单信息
@@ -87,9 +92,11 @@ class Add_Order(unittest.TestCase):
         branchName=Data1["Branch"]
         serverType=Data1["ServerType"]
         brands=Data1["Brands"]
+        big_kinds=Data1["BigKinds"]
         kinds=Data1["Kinds"]
-        self.public_operation(name,phoneNum,serverAddress,collage,orderType,
-                              branchName,serverType,brands,kinds)
+        small_kinds=Data1["SmallKinds"]
+        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
+                              serverType,brands,big_kinds,kinds,small_kinds)
         # 点击保存按钮
         self.addOrderPage.click_save_btn()
         self.basePage.sleep(1)
@@ -124,7 +131,7 @@ class Add_Order(unittest.TestCase):
         Data = getdata.get_test_data()["CreateOrderPage"]["reset_btn_fnc"]
         # 打印测试用例名称
         self.basePage.print_case_name(Data["CaseName"])
-        #  获取订单信息
+        # 获取订单信息
         name = Data["username"]
         phoneNum = Data["PhoneNum"]
         serverAddress = Data["ServerAddress"]
@@ -133,8 +140,11 @@ class Add_Order(unittest.TestCase):
         branchName = Data["Branch"]
         serverType = Data["ServerType"]
         brands = Data["Brands"]
+        big_kinds = Data["BigKinds"]
         kinds = Data["Kinds"]
-        self.public_operation(name, phoneNum, serverAddress, collage, orderType, branchName, serverType, brands, kinds)
+        small_kinds = Data["SmallKinds"]
+        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
+                              serverType,brands,big_kinds,kinds,small_kinds)
         # 点击重置按钮
         self.addOrderPage.click_reset_btn()
         # 点击保存
@@ -158,8 +168,11 @@ class Add_Order(unittest.TestCase):
         branchName = Data["Branch"]
         serverType = Data["ServerType"]
         brands = Data["Brands"]
+        big_kinds = Data["BigKinds"]
         kinds = Data["Kinds"]
-        self.public_operation(name, phoneNum, serverAddress, collage, orderType, branchName, serverType, brands, kinds)
+        small_kinds = Data["SmallKinds"]
+        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
+                              serverType,brands,big_kinds,kinds,small_kinds)
         # 点击直接派单
         self.addOrderPage.click_please_btn()
         self.basePage.sleep(1)
@@ -188,8 +201,11 @@ class Add_Order(unittest.TestCase):
         branchName = Data["Branch"]
         serverType = Data["ServerType"]
         brands = Data["Brands"]
+        big_kinds = Data["BigKinds"]
         kinds = Data["Kinds"]
-        self.public_operation(name, phoneNum, serverAddress, collage, orderType, branchName, serverType, brands, kinds)
+        small_kinds = Data["SmallKinds"]
+        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
+                              serverType,brands,big_kinds,kinds,small_kinds)
         # 点击添加并继续
         self.addOrderPage.click_save_and_add()
         self.basePage.sleep(1)

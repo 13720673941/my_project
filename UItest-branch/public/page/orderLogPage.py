@@ -12,9 +12,9 @@ class OrderLogPage(BasePage):
     """网点单量记录页面"""
 
     # 搜索开始日期输入框
-    start_date_input = (By.XPATH,'//input[contains(@placeholder,"开始日期")]')
+    start_date_input = (By.XPATH,'//input[@placeholder="选择开始日期"]')
     # 搜索结束日期输入框
-    end_date_input = (By.XPATH,'//input[contains(@placeholder,"结束日期")]')
+    end_date_input = (By.XPATH,'//input[@placeholder="选择结束日期"]')
     # 打开类型下拉按钮
     open_down_list = (By.XPATH,'//label[contains(text(),"类型")]/..//div[1]')
     # 扣除类型搜索父路径

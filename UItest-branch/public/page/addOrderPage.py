@@ -6,7 +6,9 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from public.common.rwconfig import read_config_data
 from config.urlconfig import *
+from config.pathconfig import *
 log = Log()
 
 class AddOrderPage(BasePage):
@@ -41,8 +43,12 @@ class AddOrderPage(BasePage):
     time_of_day_select = (By.XPATH,'//label[text()="预约时间："]/../select')
     # 品牌输入框
     brands_input = (By.XPATH,'//input[@placeholder="请选择家电品牌"]')
-    # 品类输入框
-    kinds_input = (By.XPATH,'//input[@placeholder="请选择家电品类"]')
+    # 产品大类选择框
+    big_kinds_select = (By.XPATH,'//label[text()="产品大类："]/../select')
+    # 产品品类选择框
+    kinds_select = (By.XPATH,'//label[text()="产品品类："]/../select')
+    # 产品小类选择框
+    small_kinds_select = (By.XPATH,'//label[text()="产品小类："]/../select')
     # 产品编码输入框
     product_num_input = (By.XPATH,'//input[@placeholder="请输入产品型号"]')
     # 内机编码输入框
@@ -143,9 +149,20 @@ class AddOrderPage(BasePage):
         """输入产品品牌"""
         self.input_message(self.brands_input,brands)
 
-    def input_kinds(self,kinds):
-        """输入产品品类"""
-        self.input_message(self.kinds_input,kinds)
+    def select_product_big_kinds(self,big_kinds):
+        """选择产品大类"""
+        if big_kinds != "":
+            self.operate_select(self.big_kinds_select,big_kinds)
+
+    def select_product_kinds(self,kinds):
+        """选择产品品类"""
+        if kinds != "":
+            self.operate_select(self.kinds_select,kinds)
+
+    def select_product_small_kinds(self,small_kinds):
+        """选择产品小类"""
+        if small_kinds != "":
+            self.operate_select(self.small_kinds_select,small_kinds)
 
     def input_productNum(self):
         """输入产品型号"""
@@ -217,8 +234,8 @@ class AddOrderPage(BasePage):
             branch_name_list.append(name.text)
         return branch_name_list
 
-    def create_order_main(self,name,phoneNum,serverAdd,collage,orderType,
-                          server_type_select,brands,kinds,branchName=None):
+    def create_order_main(self,name,phoneNum,serverAdd,collage,orderType,server_type_select,
+                          brands,big_kinds,kinds,small_kinds,branchName=None):
         """
         添加订单主程序
         """
@@ -243,8 +260,12 @@ class AddOrderPage(BasePage):
         self.input_orderTime()
         # 选择家电品牌
         self.input_brands(brands)
+        # 选择产品大类
+        self.select_product_big_kinds(big_kinds)
         # 选择家电品类
-        self.input_kinds(kinds)
+        self.select_product_kinds(kinds)
+        # 选择产品小类
+        self.select_product_small_kinds(small_kinds)
         # 输入产品型号
         self.input_productNum()
         # 输入内机条码
@@ -269,3 +290,36 @@ class AddOrderPage(BasePage):
             log.info('{0} ** Create order is success！'.format(self.success))
         else:
             log.error('{0} ** Create order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
+
+    def create_not_return_order(self):
+        """默认创建无需返单订单"""
+
+        user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
+        phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
+        address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
+        collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
+        order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
+        server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
+        brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
+        big_kinds = read_config_data("NotReturnOrder", "大类", orderInfo)
+        kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
+        small_kinds = read_config_data("NotReturnOrder", "小类", orderInfo)
+
+        self.create_order_main(user,phe,address,collage,order_type,server,brands,big_kinds,kinds,small_kinds)
+
+    def create_return_order(self):
+        """默认创建需返单订单"""
+
+        user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
+        phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
+        address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
+        collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
+        order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
+        server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
+        brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
+        big_kinds = read_config_data("NotReturnOrder", "大类", orderInfo)
+        kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
+        small_kinds = read_config_data("NotReturnOrder", "小类", orderInfo)
+        branch_name = read_config_data("NotReturnOrder", "服务商", orderInfo)
+
+        self.create_order_main(user,phe,address,collage,order_type,server,brands,big_kinds,kinds,small_kinds,branch_name)
