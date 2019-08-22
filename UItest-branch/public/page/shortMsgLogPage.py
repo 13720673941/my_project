@@ -27,9 +27,17 @@ class ShortMsgLogPage(BasePage):
     send_end_time_input = (By.XPATH,'//input[@placeholder="选择结束日期"]')
     # 搜索按钮
     search_btn = (By.XPATH,'//a[contains(text(),"搜索")]')
+    # 首页短信余量总数
+    short_msg_count = (By.XPATH,'//div[contains(text(),"短信余量")]/span')
+    # 获取第一行数据
+    first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
+
+    def get_short_msg_count(self):
+        """获取首页短信余量总数"""
+        return self.get_text(self.short_msg_count)
 
     def enter_short_msg_list_page(self):
         """进入发送短信记录的页面"""
@@ -60,3 +68,7 @@ class ShortMsgLogPage(BasePage):
     def click_search_btn(self):
         """"点击搜索按钮"""
         self.click_button(self.search_btn)
+
+    def get_first_row_info(self):
+        """获取第一行所有信息"""
+        return self.get_text(self.first_row_info)

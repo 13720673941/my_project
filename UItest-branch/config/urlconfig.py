@@ -69,3 +69,6 @@ master_order_number_url = 'http://www.51shouhou.cn/singleBranch/#/operate/orderL
 
 # 短信发送记录页面url
 short_msg_log_url = 'http://www.51shouhou.cn/singleBranch/#/operate/noteLog/index'
+
+# 我的支出页面Url
+my_income_url = 'http://test.super.com.cn/singleBranch/#/finance/brincome/income'

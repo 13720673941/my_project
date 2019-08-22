@@ -426,10 +426,13 @@
   "24": "/*短信发送功能测试用例*/",
   "ShortMsgLogPage": {
     "search_log_fnc": {
-      "TestCase001": {"CaseName": "按工单编号搜索短信发送记录校验","OrderNumber": ""}
+      "TestCase001": {"CaseName": "1、按工单编号搜索短信发送记录校验","OrderNumber": "工单余量扣除关联工单号"},
+      "TestCase002": {"CaseName": "2、按短信类型搜索短信发送记录校验","ShortMsgType": "派工提醒"},
+      "TestCase003": {"CaseName": "3、按手机号搜索短信发送记录校验","PhoneNum": "13720673941"},
+      "TestCase004": {"CaseName": "4、按发送日期搜索短信发送记录校验","Date": "当前日期"}
     },
     "deduct_msg_fnc": {
-      "TestCase001": {"CaseName":"1、网点派单扣除短信数量校验","expect": 1},
+      "TestCase001": {"CaseName":"1、网点派单扣除短信数量校验","expect":1},
       "TestCase002": {"CaseName":"2、网点短信发送成功日志记录校验","expect": "发送成功"}
     }
   }
