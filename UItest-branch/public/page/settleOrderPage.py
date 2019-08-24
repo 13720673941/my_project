@@ -6,6 +6,7 @@
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
 from public.common.logconfig import Log
+from public.page.searchOrderPage import SearchOrderPage
 from config.urlconfig import *
 import time
 log=Log()
@@ -44,6 +45,7 @@ class SettleOrderPage(BasePage):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
+        self.search_order = SearchOrderPage(driver)
 
     def enter_master_settle_page(self):
         """进入师傅待结算订单页面"""
@@ -175,8 +177,34 @@ class SettleOrderPage(BasePage):
         log.info('{0} Button: {1}, remove right arrive {2}, Spend {3} seconds.'
                  .format(self.success,self.drop_btn,self.drop_arrive_text,time.time()-t1))
 
+    def settle_main(self,order_number,settle_branch=False):
+        """结算主程序"""
 
-
+        # 进入工单结算页面
+        if settle_branch:
+            self.enter_branch_settle_page()
+        else:
+            self.enter_master_settle_page()
+        # 搜索工单
+        self.sleep(2)
+        self.search_order.input_order_Nnumber(orderNum=order_number)
+        self.search_order.click_search_btn()
+        self.sleep(1)
+        # 进入工单详情页
+        self.open_order_message(OrderNumber=order_number)
+        self.sleep(1)
+        # 点击结算
+        self.click_settle_btn()
+        # 选择线下结算
+        self.select_line_down_pay()
+        # 确定结算
+        self.click_confirm_pay()
+        system_msg = self.get_system_msg()
+        # 判断结算结果
+        if system_msg == "结算完成":
+            log.info("{0} ** {1} Settle Success!".format(self.success,order_number))
+        else:
+            log.error("{0} ** {1} Settle Fail!".format(self.fail,order_number))
 
 
 

@@ -435,5 +435,24 @@
       "TestCase001": {"CaseName":"1、网点派单扣除短信数量校验","expect":1},
       "TestCase002": {"CaseName":"2、网点短信发送成功日志记录校验","expect": "发送成功"}
     }
+  },
+  "25": "/*订单结算生成日志记录功能*/",
+  "FinanceManagePage": {
+    "TestCase001": {"CaseName": "1、网点收入日志记录功能校验","expect": "搜索工单号验证"},
+    "TestCase002": {"CaseName": "2、网点支出日志记录功能校验","expect": "搜索工单号验证"}
+  },
+  "26": "/*收入日志页面搜索功能测试用例*/",
+  "MyIncomePage": {
+    "TestCase001": {"CaseName": "1、按收入类型搜索校验","IncomeType": "经销商工单","expect": "经销商"},
+    "TestCase002": {"CaseName": "2、按服务类型搜索校验","ServerType": "安装"},
+    "TestCase003": {"CaseName": "3、按服务师傅名称搜索校验","MasterName": "邓鹏飞"},
+    "TestCase004": {"CaseName": "4、按工单编号搜索校验","OrderNumber": "获取记录功能校验的订单单号"}
+  },
+  "27": "/*支出日志页面搜索功能测试用例*/",
+  "MyExpendPage": {
+    "TestCase001": {"CaseName": "1、按支出类型搜索校验","IncomeType": "师傅结算","expect": "师傅"},
+    "TestCase002": {"CaseName": "2、按服务类型搜索校验","ServerType": "安装"},
+    "TestCase003": {"CaseName": "3、按服务师傅名称搜索校验","MasterName": "邓鹏飞"},
+    "TestCase004": {"CaseName": "4、按工单编号搜索校验","OrderNumber": "获取记录功能校验的订单单号"}
   }
 }

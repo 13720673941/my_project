@@ -51,10 +51,13 @@ class Manage_Settle(unittest.TestCase):
         cls.createOrder.create_not_return_order()
         # 获取工单单号
         cls.OrderNum = cls.base.get_order_number()
+        # 订单号写入配置文件，后面财务管理中收入支出使用
+        # rwconfig.write_config_data("for_finance_manage_search","id",cls.OrderNum,orderNumPath)
         # 获取派单到服务商数据 关联派单数据中的信息
         BranchName1 = rwconfig.read_config_data('蓝魔科技','branch001')
         # 派单到服务商1-XM-服务撒 //派单到服务商不设置结算预报价
-        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True,set_order_money=False)
+        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True,
+                                          set_order_money=False)
         # 退出登录
         cls.login.click_logout_button()
         # 获取服务商1账号密码
@@ -65,7 +68,8 @@ class Manage_Settle(unittest.TestCase):
         # 获取派单到服务商数据 关联派单数据中的信息
         BranchName2 = rwconfig.read_config_data(BranchName1,'branch001')
         # 派单到服务商2-branch03 //派单到服务商不设置结算预报价
-        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName2,please_to_branch=True,set_order_money=False)
+        cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName2,please_to_branch=True,
+                                          set_order_money=False)
         # 退出登录
         cls.login.click_logout_button()
         # 获取服务商2账号密码
@@ -90,6 +94,8 @@ class Manage_Settle(unittest.TestCase):
         """工共操作:: 进入服务商订单结算列表->点击单号进入订单详情->点击结算按钮"""
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        # 刷新页面-有时进不去网点结算页面
+        self.base.refresh_page()
         self.base.sleep(1)
         # 搜索工单
         self.searchOrder.search_order_by_number(self.OrderNum)
