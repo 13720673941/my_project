@@ -13,15 +13,14 @@ from public.page.loginPage import LoginPage
 from public.page.manageBranchPage import DealerBranchPage
 from public.page.addOrderPage import AddOrderPage
 from public.page.pleaseOrderPage import PleaseOrderPage
-from config.pathconfig import *
-import unittest,ddt
+import unittest
 """
 经销商暂停恢复接单功能：
 1、暂停接单经销商不能选择该服务撒派单校验 2、恢复接单经销商可以选择该服务商派单校验
 """
 # 获取数据
 dealer_page_data = get_test_data()["AddDealerPage"]
-@ddt.ddt
+
 class Stop_Open_TakeOrder(unittest.TestCase):
 
     @classmethod
@@ -146,7 +145,7 @@ class Stop_Open_TakeOrder(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         # 关闭浏览
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         mytest.end_test()
 
 

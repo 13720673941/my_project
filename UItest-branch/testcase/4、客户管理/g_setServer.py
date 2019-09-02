@@ -358,7 +358,7 @@ class Server_Set(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         # 关闭浏览器
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         mytest.end_test()
 
 if __name__ == '__main__':

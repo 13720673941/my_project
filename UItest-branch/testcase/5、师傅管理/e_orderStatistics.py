@@ -190,7 +190,7 @@ class Order_Statistics(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
 
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         mytest.end_test()
 
 

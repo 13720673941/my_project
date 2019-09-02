@@ -10,7 +10,7 @@ from config.urlconfig import *
 class FinanceManagePage(BasePage):
 
     """
-    我的收入和支出页面
+    财务管理-【我的收入】和【我的支出】页面
     """
     # 打开下拉收入类型按钮
     open_income_type_btn = (By.XPATH,'//label[text()="收入类型："]/../div/div')
@@ -38,9 +38,12 @@ class FinanceManagePage(BasePage):
     find_btn = (By.XPATH,'//a[contains(text(),"查询")]')
     # 收入列表第一行全部信息
     income_first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
+    # 获取收入第一行内的日期
+    first_row_income_date = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[12]//span')
     # 支出列表第一行全部信息
-    expend_first_row_info = (By.XPATH,'//label[text()="支出类型："]/../../../div/div[2]'
-                                      '//tr[@class="ivu-table-row"][1]')
+    expend_first_row_info = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[2]')
+    # 支出第一行日期时间信息
+    first_row_expend_date = (By.XPATH,'(//tr[@class="ivu-table-row"][1]//td[12]//span)[2]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -99,3 +102,11 @@ class FinanceManagePage(BasePage):
     def get_expend_first_row_info(self):
         """我的支出列表第一行全部信息"""
         return self.get_text(self.expend_first_row_info)
+
+    def get_income_date(self):
+        """获取收入第一行日期"""
+        return self.get_text(self.first_row_income_date)
+
+    def get_expend_date(self):
+        """获取支出第一行日期"""
+        return self.get_text(self.first_row_expend_date)

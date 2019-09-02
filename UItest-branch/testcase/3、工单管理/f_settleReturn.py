@@ -29,7 +29,6 @@ before_return_data = SettleData["before_return_settle_fnc"]
 return_settle_data = SettleData["return_settle_fnc"]
 after_settle_data = SettleData["after_return_settle_fnc"]
 
-@ddt.ddt
 class Return_Settle(unittest.TestCase):
 
     @classmethod
@@ -360,7 +359,7 @@ class Return_Settle(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         # 退出浏览器
-        cls.base.quit_browser()
+        cls().base.quit_browser()
         mytest.end_test()
 
 if __name__ == '__main__':

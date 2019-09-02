@@ -15,6 +15,7 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.settleOrderPage import SettleOrderPage
 from public.page.financeManagePage import FinanceManagePage
+from config.pathconfig import *
 import unittest
 """
 结算订单生成收入支出日志记录功能：
@@ -49,6 +50,9 @@ class Finance_Log_Manage(unittest.TestCase):
         cls.create_order.create_not_return_order()
         # 获取工单号
         cls.order_number = cls.base_page.get_order_number()
+        # 写入工单单号
+        rwconfig.write_config_data("for_finance_manage_search","id",
+                                   cls.order_number,orderNumPath)
         # 获取经销商下的服务商
         server_branch_name = rwconfig.read_config_data("蓝魔科技","branch001")
         # 派单到服务商
@@ -93,7 +97,7 @@ class Finance_Log_Manage(unittest.TestCase):
         self.finance_log.input_order_number(order_number=self.order_number)
         # 点击搜索
         self.finance_log.click_search_btn()
-        self.base_page.sleep(1)
+        self.base_page.sleep(2)
         # 获取收入列表第一行全部信息
         first_log_info = self.finance_log.get_income_first_row_info()
         # 断言
@@ -125,7 +129,7 @@ class Finance_Log_Manage(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
 
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         mytest.end_test()
 
 

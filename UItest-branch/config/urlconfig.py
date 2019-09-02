@@ -75,3 +75,15 @@ my_income_url = 'http://www.51shouhou.cn/singleBranch/#/finance/brincome/income'
 
 # 我的支出页面url
 my_expend_url = 'http://www.51shouhou.cn/singleBranch/#/finance/brincome/outgoing'
+
+# 我的钱包页面
+my_wallet_url = 'http://www.51shouhou.cn/singleBranch/#/finance/wallet'
+
+# 备件公司库存页面
+company_inventory_url = 'http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company'
+
+# 备件师傅领用记录页面
+master_receive_log_url = 'http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord'
+
+# 备件库存调整记录页面
+inventory_adjust_url = 'http://www.51shouhou.cn/singleBranch/#/sparepart/stock/IORecord'

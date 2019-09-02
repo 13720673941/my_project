@@ -131,7 +131,7 @@ class Master_List_Operate(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         # 退出浏览器
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         # 结束脚本
         mytest.end_test()
 

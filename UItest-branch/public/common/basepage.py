@@ -549,7 +549,11 @@ class BasePage(object):
         """
         获取系统提示信息
         """
-        return self.get_text(element)
+        try:
+            system_message = self.get_text(element)
+            return system_message
+        except:
+            return "System message is none."
 
     def open_order_message(self,OrderNumber):
         """

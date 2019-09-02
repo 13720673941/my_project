@@ -102,7 +102,7 @@ class Search_Order_Log(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
 
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         mytest.end_test()
 
 if __name__ == '__main__':

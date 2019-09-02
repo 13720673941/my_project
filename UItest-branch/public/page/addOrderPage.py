@@ -62,7 +62,7 @@ class AddOrderPage(BasePage):
     # 订单来源选择框
     info_from_select = (By.XPATH,'//label[text()="信息来源："]/../select')
     # 备注输入框
-    remark_input = (By.XPATH,'//label[text()="服务描述："]/../textarea')
+    remark_input = (By.XPATH,'//label[text()="反馈情况："]/../textarea')
     # 图片上传元素路径
     update_picture_input = (By.XPATH,'//input[@type="file"]')
     # 保存工单按钮

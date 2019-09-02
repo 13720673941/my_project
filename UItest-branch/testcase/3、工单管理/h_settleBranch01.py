@@ -224,7 +224,8 @@ class Manage_Settle(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        cls.base.quit_browser()
+
+        cls().base.quit_browser()
         mytest.end_test()
 
 if __name__ == '__main__':
