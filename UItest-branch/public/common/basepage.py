@@ -450,7 +450,7 @@ class BasePage(object):
             else:
                 for child in ChildList:
                     self.sleep(1)
-                    if child.text == value:
+                    if child.text in value:
                         child.click()
                         break
                 log.info('{0} Select value: {1}, Spend {2} seconds.'.format(self.success,value,time.time()-t1))

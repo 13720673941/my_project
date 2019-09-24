@@ -34,4 +34,6 @@ errorImagePath = os.path.join(parentPath,'result','image') + '\\'
 testResultPath = os.path.join(parentPath,'result','testresult')+'\\'
 # 获取测试用例路径
 testCasePath = os.path.join(parentPath,'testcase') + '\\'
+# 导出文件的默认路径位置
+exportFilePath = "C:\\Users\\kk\\Downloads"
 

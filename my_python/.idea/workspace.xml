@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dd974a1-314d-447f-92b1-b3856a79065f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../UItest-branch/run/run_e_masterManage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/e_orderStatistics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6、字符串的操作/7.2、项目.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6、字符串的操作/test.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/page/masterReceivePage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/a_createSparePart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/b_searchSparePart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/c_deleteSparePart.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/accountdata.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/accountdata.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/pathconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/config/pathconfig.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UItest-branch/data/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/testdata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/orderLogPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/orderLogPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_timing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/g_settleBranch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/g_settleBranch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/i_orderDetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/i_orderDetails.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/g_setServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/g_setServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/h_stopOpenPlease.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/h_stopOpenPlease.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6、字符串的操作/7.0、字符串的拷贝和粘贴.py" beforeDir="false" afterPath="$PROJECT_DIR$/6、字符串的操作/7.0、字符串的拷贝和粘贴.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/companyInventoryPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/companyInventoryPage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,20 +85,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.1、命令行运行程序.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
               <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.2、项目.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -192,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,16 +183,20 @@
               <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_python" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_python" type="462c0819:PsiDirectoryNode" />
+              <item name="6、字符串的操作" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UItest-branch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
@@ -375,16 +363,18 @@
       <workItem from="1564901245301" duration="1040000" />
       <workItem from="1564902327165" duration="5268000" />
       <workItem from="1564966930912" duration="14000" />
+      <workItem from="1567754902415" duration="77000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61344000" />
+    <option name="totallyTimeSpent" value="61421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27412868" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27815014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -543,13 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.13、sort 列表的排序.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -753,10 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.1、命令行运行程序.py">
+    <entry file="file://$PROJECT_DIR$/4、列表/4.13、sort 列表的排序.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -764,6 +747,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.1、命令行运行程序.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
         </state>
       </provider>
     </entry>
