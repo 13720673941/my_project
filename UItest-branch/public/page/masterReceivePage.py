@@ -22,11 +22,11 @@ class MasterReceivePage(BasePage):
     # 工程师下拉父节点
     master_select_parent_xpath = (By.XPATH,'//label[contains(text(),"工程师")]/../div//ul[2]')
     # 备件申请数量输入框
-    sparePart_count_input = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[3]/td[6]//input')
+    sparePart_count_input = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[2]/td[6]//input')
     # 领用备件备注输入框
     remark_input = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[3]/td[7]//input')
     # 备件删除按钮
-    sparePart_del_btn = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[3]/td[8]//a')
+    sparePart_del_btn = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[2]/td[8]//a')
     # 获取第一行备件的所有信息
     receive_first_info = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[3]')
     # 保存按钮
@@ -76,7 +76,7 @@ class MasterReceivePage(BasePage):
         self.input_message(self.remark_input,receive_remark)
 
     def click_delete_sparePart(self):
-        """点击删除备件按钮"""
+        """点击领用页面删除备件按钮"""
         self.click_button(self.sparePart_del_btn)
 
     def get_receive_first_info(self):

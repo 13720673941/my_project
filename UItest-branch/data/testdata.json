@@ -504,11 +504,13 @@
   },
   "30": "/*师傅领用记录页面功能测试用例*/",
   "MasterReceivePage": {
-    "receive_fnc": [
-      {"CaseName": "1、备件领取师傅名称为空校验","MasterName": "","SP_Count": "","expect": "请输入备件数量"},
-      {"CaseName": "2、备件名称为空校验","MasterName": "","SP_Count": "请选择备件"},
-      {"CaseName": "3、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Count": "10","expect": "申请成功"}
-    ],
+    "receive_fnc": {
+      "TestCase001": {"CaseName": "1、备件领取数量为空校验","MasterName": "邓鹏飞","SP_Name":"OLED屏幕-4寸","expect": "请输入备件数量"},
+      "TestCase002": {"CaseName": "2、备件名称为空校验","MasterName": "邓鹏飞","expect": "请选择备件"},
+      "TestCase003": {"CaseName": "3、领取备件师傅名称为空校验","SP_Name":"OLED屏幕-4寸","expect": "请选择工程师"},
+      "TestCase004": {"CaseName": "4、领取页面删除备件校验","MasterName": "邓鹏飞","SP_Name":"OLED屏幕-4寸","expect": "请选择备件"},
+      "TestCase005": {"CaseName": "5、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Name":"OLED屏幕-4寸","SP_Count": "10","expect": "申请成功"}
+    },
     "log_search_fnc": {
       "TeatCase001": {"CaseName": "按领取备件师傅名称搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"},
       "TeatCase002": {"CaseName": "按领取备件时间搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"}
