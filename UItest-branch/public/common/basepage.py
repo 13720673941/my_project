@@ -450,6 +450,7 @@ class BasePage(object):
             else:
                 for child in ChildList:
                     self.sleep(1)
+                    print(child.text)
                     if child.text in value:
                         child.click()
                         break

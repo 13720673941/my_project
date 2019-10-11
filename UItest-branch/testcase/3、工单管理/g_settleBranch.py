@@ -115,8 +115,8 @@ class Manage_Settle(unittest.TestCase):
         data = have_settle_money["TestCase002"]
         # 打印测试用例名称
         self.base.print_case_name(data["CaseName"])
-        # # 进入服务撒工单结算列表页面
-        # self.settleOrder.enter_branch_settle_page()
+        # 进入服务撒工单结算列表页面
+        self.settleOrder.enter_branch_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页
@@ -345,6 +345,6 @@ if __name__ == '__main__':
     suit.addTest(Manage_Settle("test_manage_settle009"))
     suit.addTest(Manage_Settle("test_manage_settle010"))
     suit.addTest(Manage_Settle("test_manage_settle011"))
-    unittest.TextTestRunner().run(suit)
+    unittest.TextTestRunner(verbosity=2).run(suit)
 
 

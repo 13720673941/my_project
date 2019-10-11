@@ -45,8 +45,11 @@ class Master_Server_Set(unittest.TestCase):
         self.master_page.input_keyword_for_search(search_word)
         # 点击搜索
         self.master_page.click_search_btn()
-        # 页面宫动到按钮位置
-        self.master_page.roll_right_to_operate_btn()
+        """
+        页面改动不需要拖动操作按钮放到上层页面了
+        """
+        # # 页面宫动到按钮位置
+        # self.master_page.roll_right_to_operate_btn()
         # 点击服务设置按钮
         self.master_page.click_server_set_btn()
         self.base_page.sleep(1)
@@ -122,23 +125,26 @@ class Master_Server_Set(unittest.TestCase):
         # 断言
         self.assert_mode.assert_equal(data["expect"],system_message)
 
-    def test_server_set004(self):
-        """师傅服务区域为空校验"""
-
-        #获取测试数据
-        data = self.test_data["TestCase004"]
-        # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
-        # 进入师傅服务设置页面
-        self.enter_master_server_set_page(search_word=data["MasterAccount"])
-        # 清空服务区域配置
-        self.master_page.clear_master_server_place()
-        # 点击保存
-        self.master_page.click_set_server_save()
-        # 获取系统提示信息
-        system_message = self.base_page.get_system_msg()
-        # 断言
-        self.assert_mode.assert_equal(data["expect"],system_message)
+    """
+    师傅服务区域改为可以为空：为空就是没有限制区域
+    """
+    # def test_server_set004(self):
+    #     """师傅服务区域为空校验"""
+    #
+    #     #获取测试数据
+    #     data = self.test_data["TestCase004"]
+    #     # 打印测试用例名称
+    #     self.base_page.print_case_name(data["CaseName"])
+    #     # 进入师傅服务设置页面
+    #     self.enter_master_server_set_page(search_word=data["MasterAccount"])
+    #     # 清空服务区域配置
+    #     self.master_page.clear_master_server_place()
+    #     # 点击保存
+    #     self.master_page.click_set_server_save()
+    #     # 获取系统提示信息
+    #     system_message = self.base_page.get_system_msg()
+    #     # 断言
+    #     self.assert_mode.assert_equal(data["expect"],system_message)
 
     def test_server_set005(self):
         """师傅位置为空校验"""

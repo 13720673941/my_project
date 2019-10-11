@@ -29,7 +29,7 @@ class VisitOrderPage(BasePage):
     # 奖惩选择
     reward_or_punish = (By.XPATH,'//span[text()="订单奖惩"]/../../div[2]/form/div/div[1]/select')
     # 奖惩金钱输入框
-    reward_punish_money = (By.XPATH,'//span[text()="订单奖惩"]/../../div[2]/form/div/div[2]/input')
+    reward_punish_money = (By.XPATH,'//span[text()="订单奖惩"]/../../div[2]/form/div/div[2]//input')
     # 奖惩备注
     reward_punish_remark = (By.XPATH,'//input[@placeholder="请填写备注说明"]')
     # 确定回访

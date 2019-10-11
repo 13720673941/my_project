@@ -44,9 +44,9 @@ class Return_Order(unittest.TestCase):
         PassWord = rwconfig.read_config_data('蓝魔科技','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
-        #  经销商下单程序下单
+        # 经销商下单程序下单
         cls.create_order_page.create_return_order()
-        #  获取单号
+        # 获取单号
         cls.OrderNumber = cls.basePage.get_order_number()
         # 获取派单师傅
         master = rwconfig.read_config_data('蓝魔科技','master001')

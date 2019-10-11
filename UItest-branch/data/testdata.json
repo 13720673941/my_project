@@ -90,27 +90,27 @@
   "5": "/*添加订单页面功能*/",
   "CreateOrderPage": {
     "create_order_fnc": [
-    {"CaseName":"1、新建订单-联系人为空校验","username": "","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "用户姓名不能为空!"},
-    {"CaseName":"2、新建订单-联系方式为空校验","username": "AutoTest","PhoneNum": "","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "联系方式不能为空!"},
-    {"CaseName":"3、新建订单-服务地址为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "详细地址不能为空!"},
-    {"CaseName":"4、新建订单-选择服务商为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds":"空调","SmallKinds":"挂机","expect": "请选择服务商!"},
-    {"CaseName":"5、新建订单-服务类型为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "服务类型不能为空!"},
+    {"CaseName":"1、新建订单-联系人为空校验","username": "","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "用户姓名不能为空!"},
+    {"CaseName":"2、新建订单-联系方式为空校验","username": "AutoTest","PhoneNum": "","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "联系方式不能为空!"},
+    {"CaseName":"3、新建订单-服务地址为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "详细地址不能为空!"},
+    {"CaseName":"4、新建订单-选择服务商为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds":"空调","SmallKinds":"挂机","expect": "请选择服务商!"},
+    {"CaseName":"5、新建订单-服务类型为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "服务类型不能为空!"},
     {"CaseName":"6、新建订单-家电品牌为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "","BigKinds":"","Kinds":"","SmallKinds":"","expect": "家电品牌不能为空!"},
     {"CaseName":"7、新建订单-家电品类为空校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"","Kinds": "","SmallKinds":"","expect": "家电品类不能为空!"},
-    {"CaseName":"8、新建订单-手机号左边界值校验","username": "AutoTest","PhoneNum": "1372067394","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "请正确输入联系方式!"},
-    {"CaseName":"9、新建订单-手机号右边界值校验","username": "AutoTest","PhoneNum": "137206739411","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "请正确输入联系方式!"},
-    {"CaseName":"10、新建订单-手机号格式校验","username": "AutoTest","PhoneNum": "！@#！@#！@#！@@","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "请正确输入联系方式!"},
-    {"CaseName":"11、新建订单-添加无需返单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"},
-    {"CaseName":"12、新建订单-添加仅报单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "仅报单","Branch":"自动化测试网点01","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"},
-    {"CaseName":"13、新建订单-添加需返单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"自动化测试网点01","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"}
+    {"CaseName":"8、新建订单-手机号左边界值校验","username": "AutoTest","PhoneNum": "1372067394","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "请正确输入联系方式!"},
+    {"CaseName":"9、新建订单-手机号右边界值校验","username": "AutoTest","PhoneNum": "137206739411","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "请正确输入联系方式!"},
+    {"CaseName":"10、新建订单-手机号格式校验","username": "AutoTest","PhoneNum": "！@#！@#！@#！@@","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "请正确输入联系方式!"},
+    {"CaseName":"11、新建订单-添加无需返单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"},
+    {"CaseName":"12、新建订单-添加仅报单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "仅报单","Branch":"自动化测试网点01","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"},
+    {"CaseName":"13、新建订单-添加需返单订单校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "需返单","Branch":"自动化测试网点01","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"}
     ],
     "text_recognition_fnc": [
       {"CaseName": "14、新建订单-智能文本识别为空校验","TextMsg": "","expect": "请输入文本内容!"},
-      {"CaseName": "15、新建订单-智能文本识别功能校验","TextMsg": "邓鹏飞 13720673941 陕西省西安市未央区大明宫万达广场 安装 海尔 空调","expect": "创建成功"}
+      {"CaseName": "15、新建订单-智能文本识别功能校验","TextMsg": "邓鹏飞 13720673941 陕西省西安市未央区大明宫万达广场 安装 海尔 家电X 空调 挂机","expect": "创建成功"}
     ],
-    "reset_btn_fnc": {"CaseName": "16、新建订单-添加订单重置功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "服务类型不能为空!"},
-    "direct_please_fnc": {"CaseName": "17、新建订单-直接派单功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"},
-    "save_add_btn_fnc": {"CaseName": "18、新建订单-保存并继续添加订单功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"}
+    "reset_btn_fnc": {"CaseName": "16、新建订单-添加订单重置功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "服务类型不能为空!"},
+    "direct_please_fnc": {"CaseName": "17、新建订单-直接派单功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"},
+    "save_add_btn_fnc": {"CaseName": "18、新建订单-保存并继续添加订单功能校验","username": "AutoTest","PhoneNum": "13720673941","ServerAddress": "陕西省-西安市-雁塔区","Collage": "沙井村","OrderType": "无需返单","Branch":"","ServerType": "安装","Brands": "海尔","BigKinds":"家电X","Kinds": "空调","SmallKinds":"挂机","expect": "创建成功"}
   },
   "6": "/*网点派单功能测试用例*/",
   "PleaseOrderPage": {
@@ -151,9 +151,9 @@
       {"CaseName": "2、工单搜索-按用户电话搜索工单校验","OrderNum": "","User":"","UserPhone": "13720673941","ServerType": "","Status": "","Master": ""},
       {"CaseName": "3、工单搜索-按服务类型搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "维修","Status": "","Master": ""},
       {"CaseName": "4、工单搜索-按工单状态搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "","Status": "服务完成","Master": ""},
-      {"CaseName": "5、工单搜索-按服务师傅搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "","Status": "","Master": "邓鹏飞"},
+      {"CaseName": "5、工单搜索-按服务师傅搜索工单校验","OrderNum": "","User":"","UserPhone": "","ServerType": "","Status": "","Master": "XIAOMI师傅"},
       {"CaseName": "6、工单搜索-按用户姓名搜索工单校验","OrderNum": "","User":"AutoTest","UserPhone": "","ServerType": "","Status": "","Master": ""},
-      {"CaseName": "7、工单搜索-按多条件混合搜索工单校验","OrderNum": "","User":"AutoTest","UserPhone": "13720673941","ServerType": "安装","Status": "等待师傅接单","Master": "邓鹏飞"}
+      {"CaseName": "7、工单搜索-按多条件混合搜索工单校验","OrderNum": "","User":"AutoTest","UserPhone": "13720673941","ServerType": "安装","Status": "等待师傅接单","Master": "XIAOMI师傅"}
     ],
     "more_search_fnc": [
       {"CaseName": "8、工单搜索-按品牌搜索工单校验","Brand": "海尔","Kind": "","ProductNum": "","InPheNum": "","From": "","BuyPlace": "","CreateDate": "","FinishDate": ""},
@@ -322,9 +322,7 @@
       {"CaseName": "1、添加签约厂商-厂商系统选择为空校验","BrandsName": "","brandsUser": "1","brandsPwd": "1","expect": "请选择厂商品牌"},
       {"CaseName": "2、添加签约厂商-登录账号为空校验","BrandsName": "日日顺","brandsUser": "","brandsPwd": "1","expect": "请输入账号"},
       {"CaseName": "3、添加签约厂商-登录密码为空校验","BrandsName": "日日顺","brandsUser": "1","brandsPwd": "","expect": "请输入密码"},
-      {"CaseName": "4、添加签约厂商-登录密码错误校验","BrandsName": "日日顺","brandsUser": "HR1388888","brandsPwd": "111111","expect": "账号密码错误，检查后重新输入！"},
-      {"CaseName": "5、添加签约厂商-厂商系统添加成功校验","BrandsName": "日日顺","brandsUser": "1","brandsPwd": "1","expect": "操作成功"},
-      {"CaseName": "6、添加签约厂商-厂商系统重复校验","BrandsName": "日日顺","brandsUser": "1","brandsPwd": "1","expect": "不能重复添加"}
+      {"CaseName": "4、添加签约厂商-登录密码错误校验","BrandsName": "日日顺","brandsUser": "HR1388888","brandsPwd": "111111","expect": "账号密码错误，检查后重新输入！"}
     ],
     "del_brands_fnc": {"CaseName": "7、删除签约厂商-删除厂商系统账号校验","BrandsName": "日日顺","expect": "删除成功"}
   },
@@ -443,7 +441,7 @@
   },
   "26": "/*收入日志页面搜索功能测试用例*/",
   "MyIncomePage": {
-    "TestCase001": {"CaseName": "1、按收入类型搜索校验","IncomeType": "经销商工单","expect": "经销商"},
+    "TestCase001": {"CaseName": "1、按收入类型搜索校验","IncomeType":"经销商工单 ","expect":"经销商"},
     "TestCase002": {"CaseName": "2、按服务类型搜索校验","ServerType": "安装"},
     "TestCase003": {"CaseName": "3、按服务师傅名称搜索校验","MasterName": "邓鹏飞"},
     "TestCase004": {"CaseName": "4、按工单编号搜索校验","OrderNumber": "获取记录功能校验的订单单号"},
@@ -477,7 +475,7 @@
   "29": "/*备件库存页面功能测试用例*/",
   "CompanyInventoryPage": {
     "search_sparePart_fnc": [
-      {"CaseName": "1、按备件条码搜索备件校验","SP_Num": "AUTO-ADD-SP-001","SP_Name": "","SP_Brand": "","SP_Type": "","SP_Kind": "","expect": "AutoAddSp0000"},
+      {"CaseName": "1、按备件条码搜索备件校验","SP_Num": "AUTO-ADD-SP-001","SP_Name": "","SP_Brand": "","SP_Type": "","SP_Kind": "","expect": "AUTO-ADD-SP-001"},
       {"CaseName": "2、按备件名称搜索备件校验","SP_Num": "","SP_Name": "自动化测试备件02","SP_Brand": "","SP_Type": "","SP_Kind": "","expect": "自动化测试备件02"},
       {"CaseName": "3、按备件品牌搜索备件校验","SP_Num": "","SP_Name": "","SP_Brand": "AutoBrand","SP_Type": "","SP_Kind": "","expect": "AutoBrand"},
       {"CaseName": "4、按备件类型搜索备件校验","SP_Num": "","SP_Name": "","SP_Brand": "","SP_Type": "配件","SP_Kind": "","expect": "配件"},
@@ -506,6 +504,14 @@
   },
   "30": "/*师傅领用记录页面功能测试用例*/",
   "MasterReceivePage": {
-
+    "receive_fnc": [
+      {"CaseName": "1、备件领取师傅名称为空校验","MasterName": "","SP_Count": "","expect": "请输入备件数量"},
+      {"CaseName": "2、备件名称为空校验","MasterName": "","SP_Count": "请选择备件"},
+      {"CaseName": "3、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Count": "10","expect": "申请成功"}
+    ],
+    "log_search_fnc": {
+      "TeatCase001": {"CaseName": "按领取备件师傅名称搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"},
+      "TeatCase002": {"CaseName": "按领取备件时间搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"}
+    }
   }
 }

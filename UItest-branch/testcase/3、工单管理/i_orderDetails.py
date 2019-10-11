@@ -115,7 +115,8 @@ class Order_Details(unittest.TestCase):
         self.base_page.print_case_name(alter_order_data["CaseName"])
         # 点击修改订单
         self.order_detail.click_alter_order_btn()
-        self.base_page.sleep(1)
+        # 页面加载慢等待原始数据加载出来再修改
+        self.base_page.sleep(3)
         # 输入手机号
         self.create_order.input_phoneNum(alter_order_data["PhoneNum"])
         # 点击保存订单
@@ -151,7 +152,7 @@ class Order_Details(unittest.TestCase):
         self.base_page.print_case_name(create_order_data["CaseName"])
         # 点击新建订单
         self.order_detail.click_new_create_btn()
-        self.base_page.sleep(1)
+        self.base_page.sleep(3)
         # 点击保存订单
         self.create_order.click_save_btn()
         # 判断新建订单成功

@@ -28,18 +28,18 @@ class MasterListPage(BasePage):
     # 获取第一行师傅所有信息
     first_master_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
     # 撤销申请师傅合作//默认先搜索师傅再撤销
-    del_master_teamwork_btn = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]//a[text()="撤销"]')
+    del_master_teamwork_btn = (By.XPATH,'(//a[text()="撤销"])[3]')
     # 确认弹窗操作按钮
     confirm_operate_btn = (By.XPATH,'//div[contains(text(),"？")]/..//a[2]')
     # 师傅禁止派单按钮
-    master_stop_please_btn = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]//a[text()="禁止派单"]')
+    master_stop_please_btn = (By.XPATH,'(//a[text()="禁止派单"])[3]')
     # 师傅恢复派单按钮
-    master_open_please_btn = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]//a[text()="恢复派单"]')
+    master_open_please_btn = (By.XPATH,'(//a[text()="恢复派单"])[3]')
     # 左右滑动托条按钮
     roll_btn = (By.XPATH, '//*[@class="ivu-table-body ivu-table-overflowX"]')
     # ===师傅服务设置===
     # 服务设置按钮
-    server_set_btn = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]//a[1]')
+    server_set_btn = (By.XPATH,'(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')
     # 师傅备注输入框
     master_remark_input = (By.XPATH,'//label[text()="师傅备注："]/..//input')
     # 获取师傅服务类型配置
@@ -116,11 +116,6 @@ class MasterListPage(BasePage):
 
     def click_del_visit_master(self):
         """撤销师傅邀请"""
-
-        # 滑动托条点击
-        self.roll_right_to_operate_btn()
-        self.sleep(1)
-        # 点击撤销按钮
         self.click_button(self.del_master_teamwork_btn)
 
     def find_roll_button(self):

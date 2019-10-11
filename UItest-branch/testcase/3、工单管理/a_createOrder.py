@@ -67,7 +67,7 @@ class Add_Order(unittest.TestCase):
         # 选择服务类型
         self.addOrderPage.select_server_type(serverType)
         # 选择预约时间和时间段
-        self.addOrderPage.input_orderTime()
+        # self.addOrderPage.input_orderTime()
         # 选择家电品牌
         self.addOrderPage.input_brands(brands)
         # 选择产品大类

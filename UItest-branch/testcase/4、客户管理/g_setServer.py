@@ -52,10 +52,12 @@ class Server_Set(unittest.TestCase):
         order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
         server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
         brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
+        big_kinds = read_config_data("NotReturnOrder", "大类", orderInfo)
         kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
+        small_kinds = read_config_data("NotReturnOrder", "小类", orderInfo)
         # 经销商下单程序下单
         cls.create_order.create_order_main(user, phe, address, collage, order_type,
-                                           server, brands, kinds)
+                                           server, brands, big_kinds, kinds, small_kinds)
         # 获取新建工单单号
         cls.order_number = cls.base_page.get_order_number()
 

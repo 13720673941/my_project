@@ -10,6 +10,7 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.addOrderPage import AddOrderPage
 from public.page.loginPage import LoginPage
 from public.page.invalidOrderPage import InvalidOrder
+from public.page.searchOrderPage import SearchOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest,ddt
@@ -34,6 +35,7 @@ class Set_InvalidOrder(unittest.TestCase):
         cls.loginPage = LoginPage(cls.dr)
         cls.setInvalid = InvalidOrder(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        cls.search_order = SearchOrderPage(cls.dr)
         mytest.start_test()
         # 获取网点登录数据
         UserName = rwconfig.read_config_data('蓝魔科技','username')
@@ -92,6 +94,8 @@ class Set_InvalidOrder(unittest.TestCase):
         OrderNum = rwconfig.read_config_data('for_invalid_and_search','id',orderNumPath)
         # 刷新页面
         self.basePage.refresh_page()
+        # 搜索订单
+        self.search_order.search_order_by_number(order_number=OrderNum)
         # 选择结算订单
         self.basePage.select_new_order(OrderNum)
         # 点击无效工单

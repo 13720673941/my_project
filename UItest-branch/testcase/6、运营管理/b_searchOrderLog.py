@@ -39,6 +39,8 @@ class Search_Order_Log(unittest.TestCase):
         cls.login.login_main(username,password)
         # 进入工单日志页面
         cls.order_log.enter_order_log_page()
+        # 页面加载
+        cls.base_page.sleep(1)
 
     def test_order_log001(self):
         """按下单日期搜索扣除订单的记录信息"""

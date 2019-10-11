@@ -153,13 +153,15 @@ class Order_Statistics(unittest.TestCase):
         self.search_master()
         self.base_page.sleep(1)
         # 获取已经结算订单数量
-        already_settle_count = int(self.order_statistics.get_master_wait_settle_count())
+        already_settle_count = int(self.order_statistics.get_master_already_settle_count())
         # 获取完单待结算订单数量
         wait_settle_count = int(self.order_statistics.get_master_wait_settle_count())
+        # 计算结算前后的订单数量差值
+        diff_number = already_settle_count - int(self.already_settle_count)
         # 断言1 已结算订单 +1
-        self.assert_mode.assert_equal(data["expect"],already_settle_count)
+        self.assert_mode.assert_equal(data["expect"],diff_number)
         # 断言2 待结算订单 -1
-        self.assert_mode.assert_equal(wait_settle_count,self.wait_settle_count)
+        self.assert_mode.assert_equal(int(self.wait_settle_count),wait_settle_count)
 
     def test_order_statistics005(self):
         """师傅好评率校验"""

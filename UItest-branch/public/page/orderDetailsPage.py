@@ -22,7 +22,7 @@ class OrderDetailsPage(BasePage):
     # 预约日期输入框
     appoint_time_input = (By.XPATH,'//input[@placeholder="选择起始日期"]')
     # 预约时间打开下拉按钮
-    open_appoint_select = (By.XPATH,'//label[text()="预约时间："]/../div/div/span[1]')
+    open_appoint_select = (By.XPATH,'//label[contains(.,"预约时间：")]/../div/div/span[1]')
     # 下拉时间段的统计父目录
     parent_for_select = (By.XPATH,'//div[contains(text(),"预约时间")]/../../../../../preceding-sibling::div[1]/ul[2]')
     # 确定预约按钮
@@ -46,7 +46,7 @@ class OrderDetailsPage(BasePage):
     # 打印工单按钮
     print_order_btn = (By.XPATH,'//button[contains(.,"打印工单")]')
     # 点击空白关闭日期框
-    white_place = (By.XPATH,'//label[contains(.,"预约日期：")]')
+    white_place = (By.XPATH,'(//label[contains(.,"预约日期：")])[3]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)

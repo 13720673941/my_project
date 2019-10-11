@@ -74,7 +74,8 @@ class Register_Branch(unittest.TestCase):
         if Msg == '注册成功':
             # 写入新注册的账号密码信息
             with open(accountDataPath,'a') as f:
-                f.write('注册时间：%s,新用户名：%s,手机号：%s,密码：%s'%(CreateTime,self.username,self.phoneNum,Data["NewPwd"])+'\n')
+                f.write('注册时间：%s,新用户名：%s,手机号：%s,密码：%s'
+                        %(CreateTime,self.username,self.phoneNum,Data["NewPwd"])+'\n')
                 print('*Write branch account to txt is success, directory path: {0}'.format(accountDataPath))
 
     @classmethod

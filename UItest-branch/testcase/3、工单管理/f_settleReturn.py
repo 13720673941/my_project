@@ -16,7 +16,7 @@ from public.page.settleOrderPage import SettleOrderPage
 from public.page.searchOrderPage import SearchOrderPage
 from config.pathconfig import *
 from public.common.assertmode import Assert
-import unittest,ddt
+import unittest
 '''
 网点返单结算测试用例：
 返单未结算系统提示校验 返单未结算只能选择固定金额校验 厂商结算价格不能编辑校验 厂商未结算提示信息校验
@@ -51,7 +51,8 @@ class Return_Settle(unittest.TestCase):
         cls.Pwd = rwconfig.read_config_data('蓝魔科技',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
         #  经销商下单程序下单
-        cls.create_order_page.create_not_return_order()
+        cls.create_order_page.create_return_order()
+        cls.base.sleep(2)
         # 获取单号
         cls.OrderNumber = cls.base.get_order_number()
         # 单号写入配置文件后面无效工单使用
@@ -199,31 +200,31 @@ class Return_Settle(unittest.TestCase):
         # 断言
         self.assert_mode.assert_equal(data["expect"],settle_money_value)
 
-    def test_return_settle007(self):
-        """返单结算-按规则结算比例计算校验"""
-        # 获取测试数据
-        data = return_settle_data["TestCase005"]
-        # 打印用例名称
-        self.base.print_case_name(data["CaseName"])
-        # 进入代结算工单列表页
-        self.settleOrder.enter_return_wait_settle()
-        # 搜索订单
-        self.search_order.search_order_by_number(self.OrderNumber)
-        # 进入订单详情页
-        self.base.open_order_message(self.OrderNumber)
-        # 点击返单结算
-        self.settleOrder.click_settle_btn()
-        self.base.sleep(2)
-        # 获取返单厂商结算价格
-        brands_settle_money = int(self.settleOrder.get_brands_settle_value_attribute())
-        # 获取结算比例
-        settle_ratio = int(self.settleOrder.get_drop_arrive_text())
-        # 按比例计算的厂商结算价格支付价格
-        pay_money = brands_settle_money * (100 - settle_ratio) * 0.01
-        # 获取最终结算价格. 获取的价格为100.0 不能直接int
-        finally_settle_money = int(self.settleOrder.get_settle_money_value().split('.')[0])
-        # 断言
-        self.assert_mode.assert_equal(pay_money,finally_settle_money)
+    # def test_return_settle007(self):
+    #     """返单结算-按规则结算比例计算校验"""
+    #     # 获取测试数据
+    #     data = return_settle_data["TestCase005"]
+    #     # 打印用例名称
+    #     self.base.print_case_name(data["CaseName"])
+    #     # 进入代结算工单列表页
+    #     self.settleOrder.enter_return_wait_settle()
+    #     # 搜索订单
+    #     self.search_order.search_order_by_number(self.OrderNumber)
+    #     # 进入订单详情页
+    #     self.base.open_order_message(self.OrderNumber)
+    #     # 点击返单结算
+    #     self.settleOrder.click_settle_btn()
+    #     self.base.sleep(2)
+    #     # 获取返单厂商结算价格
+    #     brands_settle_money = int(self.settleOrder.get_brands_settle_value_attribute())
+    #     # 获取结算比例
+    #     settle_ratio = int(self.settleOrder.get_drop_arrive_text())
+    #     # 按比例计算的厂商结算价格支付价格
+    #     pay_money = brands_settle_money * (100 - settle_ratio) * 0.01
+    #     # 获取最终结算价格. 获取的价格为100.0 不能直接int
+    #     finally_settle_money = int(self.settleOrder.get_settle_money_value().split('.')[0])
+    #     # 断言
+    #     self.assert_mode.assert_equal(pay_money,finally_settle_money)
 
     def test_return_settle008(self):
         """返单结算-钱包余额不足不能支付校验"""
@@ -239,6 +240,10 @@ class Return_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
         self.settleOrder.click_settle_btn()
+        # 选择固定金额结算
+        self.settleOrder.select_settle_type_2()
+        # 输入结算金额
+        self.settleOrder.input_settle_money()
         # 点击确定，默认的为钱包结算
         self.settleOrder.click_confirm_pay()
         # 获取系统提示信息
@@ -260,6 +265,10 @@ class Return_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
         self.settleOrder.click_settle_btn()
+        # 选择固定金额结算
+        self.settleOrder.select_settle_type_2()
+        # 输入结算金额
+        self.settleOrder.input_settle_money()
         # 选择线下结算
         self.settleOrder.select_line_down_pay()
         # 点击确定，默认的为钱包结算
@@ -283,6 +292,7 @@ class Return_Settle(unittest.TestCase):
         self.settleOrder.enter_master_settle_page()
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNumber)
+        self.base.sleep(1)
         # 进入订单详情页
         self.base.open_order_message(self.OrderNumber)
         # 点击结算
@@ -304,7 +314,7 @@ class Return_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNumber)
         # 点击结算
         self.settleOrder.click_settle_btn()
-        # 获取服务撒结算价格
+        # 获取服务商结算价格
         branch_settle_money = self.settleOrder.get_brands_settle_value_attribute()
         # 判断未结算提示信息是否再页面显示
         self.assert_mode.assert_equal(data["expect"],branch_settle_money)

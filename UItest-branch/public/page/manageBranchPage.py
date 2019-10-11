@@ -24,7 +24,7 @@ class DealerBranchPage(BasePage):
     # 搜索按钮
     search_branch_btn = (By.XPATH,'//a[text()="搜索"]')
     # 服务设置按钮
-    set_server_btn = (By.XPATH,'//div/div[2]/.//a[text()="服务设置"]')
+    set_server_btn = (By.XPATH,'(//a[contains(text(),"服务设置")])[5]')
     # 合作类型选择框
     teamwork_type_select = (By.XPATH,'//label[text()="合作类型："]/.././/input[@value="派单"]')
     # 授权服务类型选择框
@@ -38,13 +38,13 @@ class DealerBranchPage(BasePage):
     # 服务设置确定按钮
     set_server_confirm_btn = (By.XPATH,'//div[contains(.,"服务设置")]/../../div[3]/div/button[2]')
     # 第一个经销商的全部信息
-    first_branch_info = (By.XPATH,'//div/div[2]/table/tbody/tr[1]')
+    first_branch_info = (By.XPATH,'(//div/div[2]/table/tbody/tr[1])[2]')
     # 暂停接单按钮
-    stop_take_order_btn = (By.XPATH,'//a[contains(text(),"暂停接单")]')
+    stop_take_order_btn = (By.XPATH,'(//a[contains(text(),"暂停接单")])[2]')
     # 暂停接单确定按钮
     stop_take_confirm_btn = (By.XPATH,'//div[text()="是否暂停接单"]/../div[4]/a[2]')
     # 开启接单按钮
-    open_take_order_btn = (By.XPATH,'//a[contains(text(),"恢复接单")]')
+    open_take_order_btn = (By.XPATH,'(//a[contains(text(),"恢复接单")])[2]')
     # 开启接单确定按钮
     open_take_confirm_btn = (By.XPATH, '//div[text()="是否恢复接单"]/../div[4]/a[2]')
     # 撤销申请按钮

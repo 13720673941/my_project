@@ -63,8 +63,9 @@ class MasterReceivePage(BasePage):
 
     def select_receive_master_name(self,master_name):
         """选择领用备件师傅名字"""
-        self.operate_not_select(
-            open_el=self.master_select_open_btn,parent_el=self.master_select_parent_xpath,value=master_name)
+        if master_name != "":
+            self.operate_not_select(
+                open_el=self.master_select_open_btn,parent_el=self.master_select_parent_xpath,value=master_name)
 
     def input_receive_count(self,receive_count):
         """输入领用数量"""
@@ -88,8 +89,9 @@ class MasterReceivePage(BasePage):
 
     def select_search_master_name(self,master_name):
         """选择搜索师傅名称"""
-        self.operate_not_select(
-            open_el=self.search_master_open_btn,parent_el=self.search_master_parent_xpath,value=master_name)
+        if master_name != "":
+            self.operate_not_select(
+                open_el=self.search_master_open_btn,parent_el=self.search_master_parent_xpath,value=master_name)
 
     def input_receive_start_time(self,start_date):
         """输入师傅领用开始时间"""

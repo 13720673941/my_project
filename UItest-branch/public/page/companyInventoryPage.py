@@ -73,9 +73,9 @@ class CompanyInventoryPage(BasePage):
     # 确定删除备件按钮
     confirm_del_btn = (By.XPATH,'//div[contains(text(),"是否")]/../..//a[2]')
     # 搜索备件第一条选择框
-    first_sparePart_select_input = (By.XPATH,'(//tr[@class="ivu-table-row"][1]//input[@type="checkbox"])[2]')
+    first_sparePart_select_input = (By.XPATH,'//tr[@class="ivu-table-row"][1]//input[@type="checkbox"]')
     # 修改备件信息按钮
-    alter_sparePart_btn = (By.XPATH,'(//tr[@class="ivu-table-row"][1]//td[3]//a[2])[2]')
+    alter_sparePart_btn = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[3]//a[2]')
     # 修改页面输入备件名称
     alter_sparePart_name = (By.XPATH,'(//label[contains(text(),"备件名称")]/../div/div/input)[2]')
     # 第一条备件的所有信息

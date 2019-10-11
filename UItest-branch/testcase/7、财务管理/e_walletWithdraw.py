@@ -45,7 +45,7 @@ class Wallet_Withdraw(unittest.TestCase):
     def setUp(self):
 
         self.base_page.refresh_page()
-        # 点击充值
+        # 点击提现按钮
         self.my_wallet.click_withdraw_button()
         self.base_page.sleep(1)
 
