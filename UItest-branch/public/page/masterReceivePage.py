@@ -46,7 +46,7 @@ class MasterReceivePage(BasePage):
     # 搜索按钮
     search_receive_log_btn = (By.XPATH,'//a[contains(text(),"搜索")]')
     # 搜索后第一条备件全部信息
-    search_first_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
+    search_first_info = (By.XPATH,'(//tr[@class="ivu-table-row"])[1]')
     # 点击导出按钮
     export_btn = (By.XPATH,'//a[contains(text(),"导出")]')
 
@@ -95,11 +95,13 @@ class MasterReceivePage(BasePage):
 
     def input_receive_start_time(self,start_date):
         """输入师傅领用开始时间"""
-        self.input_message(self.receive_start_time_input,start_date)
+        if start_date == "True":
+            self.input_message(self.receive_start_time_input,self.get_now_time())
 
     def input_receive_end_time(self,end_date):
         """输入师傅领用结束日期"""
-        self.input_message(self.receive_end_time_input,end_date)
+        if end_date == "True":
+            self.input_message(self.receive_end_time_input,self.get_now_time())
 
     def input_sparePart_number(self,spartPart_number):
         """输入备件条码"""

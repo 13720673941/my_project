@@ -161,6 +161,28 @@ class Receive_Spare_Part(unittest.TestCase):
         # 断言
         self.assert_page.assert_equal(data["expect"],Msg)
 
+    def test_receive_sparePart006(self):
+        """师傅领取成功后领取记录中生成日志校验"""
+
+        # 获取测试数据
+        data = test_data["TestCase006"]
+        # 打印测试用例名称
+        self.base_page.print_case_name(data["CaseName"])
+        # 点击师傅领取记录table页面
+        self.receive_sparePart.enter_receive_log_page()
+        # 输入领取开始日期搜索领取记录
+        self.receive_sparePart.input_receive_start_time(start_date=self.base_page.get_now_time())
+        # 输入领取结束日期搜索领取记录
+        self.receive_sparePart.input_receive_end_time(end_date=self.base_page.get_now_time())
+        # 点击搜索
+        self.receive_sparePart.click_search_btn()
+        self.base_page.sleep(2)
+        # 获取第一行备件领取记录所有字段信息
+        first_receive_log = self.receive_sparePart.get_first_search_info()
+        # 断言备件名称和师傅名称
+        self.assert_page.assert_in(data["expect1"],first_receive_log)
+        self.assert_page.assert_in(data["expect2"],first_receive_log)
+
     @classmethod
     def tearDownClass(cls):
 

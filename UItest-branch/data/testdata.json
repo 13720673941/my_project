@@ -475,45 +475,49 @@
   "29": "/*备件库存页面功能测试用例*/",
   "CompanyInventoryPage": {
     "search_sparePart_fnc": [
-      {"CaseName": "1、按备件条码搜索备件校验","SP_Num": "AUTO-ADD-SP-001","SP_Name": "","SP_Brand": "","SP_Type": "","SP_Kind": "","expect": "AUTO-ADD-SP-001"},
+      {"CaseName": "1、按备件条码搜索备件校验","SP_Num": "AUTO-SP-001","SP_Name": "","SP_Brand": "","SP_Type": "","SP_Kind": "","expect": "AUTO-SP-001"},
       {"CaseName": "2、按备件名称搜索备件校验","SP_Num": "","SP_Name": "自动化测试备件02","SP_Brand": "","SP_Type": "","SP_Kind": "","expect": "自动化测试备件02"},
       {"CaseName": "3、按备件品牌搜索备件校验","SP_Num": "","SP_Name": "","SP_Brand": "AutoBrand","SP_Type": "","SP_Kind": "","expect": "AutoBrand"},
       {"CaseName": "4、按备件类型搜索备件校验","SP_Num": "","SP_Name": "","SP_Brand": "","SP_Type": "配件","SP_Kind": "","expect": "配件"},
       {"CaseName": "5、按备件适用品类搜索备件校验","SP_Num": "","SP_Name": "","SP_Brand": "","SP_Type": "","SP_Kind": "空调","expect": "空调"}
     ],
     "add_sparePart_fnc": [
-      {"CaseName": "1、备件名称为空校验","SP_Name": "","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件名称"},
-      {"CaseName": "2、备件类型为空校验","SP_Name": "自动化测试备件01","SP_Type": "","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择备件类型"},
-      {"CaseName": "3、计量单位为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择计量单位"},
+      {"CaseName": "1、备件名称为空校验","SP_Name": "","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件名称"},
+      {"CaseName": "2、备件类型为空校验","SP_Name": "自动化测试备件01","SP_Type": "","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择备件类型"},
+      {"CaseName": "3、计量单位为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择计量单位"},
       {"CaseName": "4、备件条码为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件条码"},
-      {"CaseName": "5、备件品牌为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件品牌"},
-      {"CaseName": "6、备件来源为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择备件来源"},
-      {"CaseName": "7、备件型号为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件型号"},
-      {"CaseName": "8、适用品类为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"False","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择适用品类"},
-      {"CaseName": "9、备件图片为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"False","Price1": "1","Price2": "2","expect": "请上传备件图片"},
-      {"CaseName": "10、入库价格为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "","Price2": "2","expect": "请输入入库价格"},
-      {"CaseName": "11、零售价格为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "","expect": "请输入零售价格"},
-      {"CaseName": "12、成功添加备件功能校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "保存成功"},
-      {"CaseName": "13、重复添加备件功能校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-ADD-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "备件重复"}
+      {"CaseName": "5、备件品牌为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件品牌"},
+      {"CaseName": "6、备件来源为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择备件来源"},
+      {"CaseName": "7、备件型号为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "请输入备件型号"},
+      {"CaseName": "8、适用品类为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"False","LoadUp":"True","Price1": "1","Price2": "2","expect": "请选择适用品类"},
+      {"CaseName": "9、备件图片为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"False","Price1": "1","Price2": "2","expect": "请上传备件图片"},
+      {"CaseName": "10、入库价格为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "","Price2": "2","expect": "请输入入库价格"},
+      {"CaseName": "11、零售价格为空校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "","expect": "请输入零售价格"},
+      {"CaseName": "12、成功添加备件功能校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "保存成功"},
+      {"CaseName": "13、重复添加备件功能校验","SP_Name": "自动化测试备件01","SP_Type": "配件","Measure_Unit": "件","SP_Num": "AUTO-SP-001","SP_Brand": "AutoBrand","SP_From": "厂家","SP_xh": "XH_0000","SP_Kind":"True","LoadUp":"True","Price1": "1","Price2": "2","expect": "备件重复"}
     ],
     "alter_sparePart_fnc": {"CaseName": "1、编辑备件校验","SP_Name1":"自动化测试备件01","SP_Name2": "自动化测试备件02","expect": "自动化测试备件02"},
     "del_sparePart_fnc": [
       {"CaseName": "1、有库存的备件不能删除校验","SP_Num": "RAMOS-PM001","expect": "该备件库存不为0"},
-      {"CaseName": "2、成功删除备件校验","SP_Num": "AUTO-ADD-SP-001","expect": "操作成功！"}
+      {"CaseName": "2、成功删除备件校验","SP_Num": "AUTO-SP-001","expect": "操作成功！"}
     ]
   },
   "30": "/*师傅领用记录页面功能测试用例*/",
   "MasterReceivePage": {
     "receive_fnc": {
-      "TestCase001": {"CaseName": "1、备件领取数量为空校验","MasterName": "邓鹏飞","SP_Name":"OLED屏幕-4寸","expect": "请输入备件数量"},
+      "TestCase001": {"CaseName": "1、备件领取数量为空校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件02","expect": "请输入备件数量"},
       "TestCase002": {"CaseName": "2、备件名称为空校验","MasterName": "邓鹏飞","expect": "请选择备件"},
-      "TestCase003": {"CaseName": "3、领取备件师傅名称为空校验","SP_Name":"OLED屏幕-4寸","expect": "请选择工程师"},
-      "TestCase004": {"CaseName": "4、领取页面删除备件校验","MasterName": "邓鹏飞","SP_Name":"OLED屏幕-4寸","expect": "请选择备件"},
-      "TestCase005": {"CaseName": "5、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Name":"OLED屏幕-4寸","SP_Count": "10","expect": "申请成功"}
+      "TestCase003": {"CaseName": "3、领取备件师傅名称为空校验","SP_Name":"自动化测试备件02","expect": "请选择工程师"},
+      "TestCase004": {"CaseName": "4、领取页面删除备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件02","expect": "请选择备件"},
+      "TestCase005": {"CaseName": "5、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件02","SP_Count": "10","expect": "申请成功"},
+      "TestCase006": {"CaseName": "6、师傅领取备件后日志记录校验","data": "True","expect1": "自动化测试备件02","expect2": "邓鹏飞"}
     },
-    "log_search_fnc": {
-      "TeatCase001": {"CaseName": "按领取备件师傅名称搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"},
-      "TeatCase002": {"CaseName": "按领取备件时间搜索校验","MasterName": "邓鹏飞","expect": "邓鹏飞"}
-    }
+    "log_search_fnc": [
+      {"CaseName": "1、按领取备件师傅名称搜索校验","MasterName": "邓鹏飞","ReceiveTime":"False","SP_Number":"","SP_Name":"","expect": "邓鹏飞"},
+      {"CaseName": "2、按领取备件时间搜索校验","MasterName": "","ReceiveTime":"True","SP_Number":"","SP_Name":"","expect": "自动化测试备件02"},
+      {"CaseName": "3、按领取备件条码搜索校验","MasterName": "","ReceiveTime":"False","SP_Number":"AUTO-SP-001","SP_Name":"","expect": "AUTO-SP-001"},
+      {"CaseName": "4、按领取备件名称搜索校验","MasterName": "","ReceiveTime":"False","SP_Number":"","SP_Name":"自动化测试备件02","expect": "自动化测试备件02"},
+      {"CaseName": "5、备件领取记录混合搜索校验","MasterName": "邓鹏飞","ReceiveTime":"True","SP_Number":"AUTO-SP-001","SP_Name":"自动化测试备件02","expect": "AUTO-SP-001"}
+    ]
   }
 }
