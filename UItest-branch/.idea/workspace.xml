@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/page/inventoryAdjustPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/8、备件管理/e_searchReceiveLog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testdata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/masterReceivePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/masterReceivePage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/8、备件管理/c_deleteSparePart.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/8、备件管理/z_deleteSparePart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/8、备件管理/d_receiveSparePart.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/8、备件管理/d_receiveSparePart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page/inventoryAdjustPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/inventoryAdjustPage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +43,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_g_setServerFnc_Server_Set_test_server_set011.coverage" NAME="Unittests for g_setServerFnc.Server_Set.test_server_set011 Coverage Results" MODIFIED="1562836685149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_e_orderStatistics_Order_Statistics_test_order_statistics005.coverage" NAME="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics005 Coverage Results" MODIFIED="1566204322271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_InvalidOrder_py.coverage" NAME="Unittests in InvalidOrder.py Coverage Results" MODIFIED="1560129836955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_c_inventoryAdjust_py.coverage" NAME="Unittests in c_inventoryAdjust.py Coverage Results" MODIFIED="1571048810557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/8、备件管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_a_addManageFnc_py.coverage" NAME="Unittests in a_addManageFnc.py Coverage Results" MODIFIED="1561880021839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_pleaseOrderFnc_py.coverage" NAME="Unittests in b_pleaseOrderFnc.py Coverage Results" MODIFIED="1562907849542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_for_branchLogin_Branch_Login_test_login.coverage" NAME="Unittests for branchLogin.Branch_Login.test_login Coverage Results" MODIFIED="1558685384418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
@@ -118,6 +116,7 @@
     <SUITE FILE_PATH="coverage/UItest_branch$runreport.coverage" NAME="runreport Coverage Results" MODIFIED="1562731470810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/common" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_visitdealer_Visit_Dealer_test_visit_dealer003.coverage" NAME="Unittests for visitdealer.Visit_Dealer.test_visit_dealer003 Coverage Results" MODIFIED="1561694617613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/4、客户管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_e_orderStatistics_Order_Statistics_test_order_statistics001.coverage" NAME="Unittests for e_orderStatistics.Order_Statistics.test_order_statistics001 Coverage Results" MODIFIED="1565921870825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/5、师傅管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust001.coverage" NAME="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust001 Coverage Results" MODIFIED="1571047879238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/8、备件管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_g_setServerFnc_Server_Set_test_server_set001.coverage" NAME="Unittests for g_setServerFnc.Server_Set.test_server_set001 Coverage Results" MODIFIED="1562655916283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_e_searchReceiveLog_py.coverage" NAME="Unittests in e_searchReceiveLog.py Coverage Results" MODIFIED="1570862686452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/8、备件管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$loginpage.coverage" NAME="loginpage Coverage Results" MODIFIED="1561534768582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/public/page" />
@@ -155,6 +154,7 @@
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_for_forgetPwd_Forget_Pwd_test_getCodeNum.coverage" NAME="Unittests for forgetPwd.Forget_Pwd.test_getCodeNum Coverage Results" MODIFIED="1558941404953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_b_alterPwdFnc_py.coverage" NAME="Unittests in b_alterPwdFnc.py Coverage Results" MODIFIED="1562809087883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/2、修改密码" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_g_settleBranchFnc_py.coverage" NAME="Unittests in g_settleBranchFnc.py Coverage Results" MODIFIED="1562831164322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust002.coverage" NAME="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust002 Coverage Results" MODIFIED="1571048186043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/8、备件管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$run_timing.coverage" NAME="run_timing Coverage Results" MODIFIED="1565928066361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_for_forgetPwd_GetCodeNum_test_getCodeNum.coverage" NAME="Unittests for forgetPwd.GetCodeNum.test_getCodeNum Coverage Results" MODIFIED="1558941566013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_g_setServerFnc_Server_Set_test_server_set002.coverage" NAME="Unittests for g_setServerFnc.Server_Set.test_server_set002 Coverage Results" MODIFIED="1562657866546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/run" />
@@ -201,6 +201,7 @@
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_in_f_settleReturnOrder_py.coverage" NAME="Unittests in f_settleReturnOrder.py Coverage Results" MODIFIED="1560736983090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$Unittests_for_h_InvalidOrder_Set_InvalidOrder_test_setInvalid003.coverage" NAME="Unittests for h_InvalidOrder.Set_InvalidOrder.test_setInvalid003 Coverage Results" MODIFIED="1560584598918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Script/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_a_addorder_py.coverage" NAME="Unittests in a_addorder.py Coverage Results" MODIFIED="1561685361703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
+    <SUITE FILE_PATH="coverage/UItest_branch$Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust003.coverage" NAME="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust003 Coverage Results" MODIFIED="1571048647765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/8、备件管理" />
     <SUITE FILE_PATH="coverage/SingleBranch$loginPage.coverage" NAME="loginPage Coverage Results" MODIFIED="1560564072291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Page" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_i_searchorder_py.coverage" NAME="Unittests in i_searchorder.py Coverage Results" MODIFIED="1561613336737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
     <SUITE FILE_PATH="coverage/UItest_branch$Unittests_in_h_settleBranch01Fnc_py.coverage" NAME="Unittests in h_settleBranch01Fnc.py Coverage Results" MODIFIED="1562830165852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase/3、工单管理" />
@@ -274,8 +275,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/testdata.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="505" column="23" selection-start-line="505" selection-start-column="23" selection-end-line="505" selection-end-column="23" />
+            <state relative-caret-position="419">
+              <caret line="527" column="65" selection-start-line="527" selection-start-column="65" selection-end-line="527" selection-end-column="65" />
               <folding>
                 <element signature="e#43#2409#0" />
                 <element signature="e#2449#3045#0" />
@@ -316,10 +317,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-427">
+              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+              <folding>
+                <element signature="e#77#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/page/companyInventoryPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-515">
+              <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/page/inventoryAdjustPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="466">
+              <caret line="109" column="13" lean-forward="true" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
               <folding>
                 <element signature="e#77#120#0" expanded="true" />
               </folding>
@@ -408,8 +430,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/testcase/6、运营管理/c_sendShortMsg.py" />
-        <option value="$PROJECT_DIR$/testcase/6、运营管理/d_searchShortMsgLog.py" />
         <option value="$PROJECT_DIR$/public/page/financeManagePage.py" />
         <option value="$PROJECT_DIR$/testcase/7、财务管理/d_walletTopUp.py" />
         <option value="$PROJECT_DIR$/public/page/myWalletPage.py" />
@@ -457,12 +477,14 @@
         <option value="$PROJECT_DIR$/testcase/8、备件管理/d_receiveSparePart.py" />
         <option value="$PROJECT_DIR$/public/page/masterReceivePage.py" />
         <option value="$PROJECT_DIR$/testcase/8、备件管理/e_searchReceiveLog.py" />
-        <option value="$PROJECT_DIR$/data/testdata.json" />
+        <option value="$PROJECT_DIR$/testcase/8、备件管理/f.py" />
         <option value="$PROJECT_DIR$/public/page/inventoryAdjustPage.py" />
+        <option value="$PROJECT_DIR$/data/testdata.json" />
+        <option value="$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1380" />
@@ -474,6 +496,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -500,11 +523,6 @@
             <path>
               <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
               <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
-              <item name="run" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UItest-branch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UItest-branch" type="462c0819:PsiDirectoryNode" />
               <item name="testcase" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -517,7 +535,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -555,8 +572,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in e_searchReceiveLog.py">
-    <configuration name="Unittests for d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in c_inventoryAdjust.py">
+    <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust001" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -567,11 +584,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006&quot;" />
+      <option name="_new_target" value="&quot;c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust001&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in b_searchSparePart.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust002" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -582,11 +599,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/8、备件管理/b_searchSparePart.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust002&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in d_receiveSparePart.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust003" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="UItest-branch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -597,7 +614,22 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/8、备件管理/d_receiveSparePart.py&quot;" />
+      <option name="_new_target" value="&quot;c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust003&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in c_inventoryAdjust.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="UItest-branch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/8、备件管理" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -616,28 +648,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in z_deleteSparePart.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="UItest-branch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase/8、备件管理" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/8、备件管理/z_deleteSparePart.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests in c_inventoryAdjust.py" />
+        <item itemvalue="Python tests.Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust003" />
+        <item itemvalue="Python tests.Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust002" />
+        <item itemvalue="Python tests.Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust001" />
         <item itemvalue="Python tests.Unittests in e_searchReceiveLog.py" />
-        <item itemvalue="Python tests.Unittests for d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006" />
-        <item itemvalue="Python tests.Unittests in b_searchSparePart.py" />
-        <item itemvalue="Python tests.Unittests in z_deleteSparePart.py" />
-        <item itemvalue="Python tests.Unittests in d_receiveSparePart.py" />
       </list>
     </recent_temporary>
   </component>
@@ -793,6 +810,7 @@
       <workItem from="1570669891005" duration="20014000" />
       <workItem from="1570755878610" duration="16460000" />
       <workItem from="1570843963436" duration="15527000" />
+      <workItem from="1571015371661" duration="16022000" />
     </task>
     <task id="LOCAL-00001" summary="git test">
       <created>1561443687108</created>
@@ -917,21 +935,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_d_receiveSparePart_Receive_Spare_Part_test_receive_sparePart006 - 2019.10.12 at 11h 09m 48s.xml">
-      <configuration name="Unittests for d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_d_receiveSparePart_Receive_Spare_Part_test_receive_sparePart006 - 2019.10.12 at 11h 11m 46s.xml">
-      <configuration name="Unittests for d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_d_receiveSparePart_Receive_Spare_Part_test_receive_sparePart006 - 2019.10.12 at 11h 13m 29s.xml">
-      <configuration name="Unittests for d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_d_receiveSparePart_Receive_Spare_Part_test_receive_sparePart006 - 2019.10.12 at 11h 15m 10s.xml">
-      <configuration name="Unittests for d_receiveSparePart.Receive_Spare_Part.test_receive_sparePart006" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_e_searchReceiveLog_py - 2019.10.12 at 12h 08m 02s.xml">
-      <configuration name="Unittests in e_searchReceiveLog.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_e_searchReceiveLog_py - 2019.10.12 at 14h 37m 34s.xml">
       <configuration name="Unittests in e_searchReceiveLog.py" configurationId="tests" />
     </history-entry>
@@ -947,9 +950,24 @@
     <history-entry file="Unittests_in_e_searchReceiveLog_py - 2019.10.12 at 14h 45m 59s.xml">
       <configuration name="Unittests in e_searchReceiveLog.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust001 - 2019.10.14 at 18h 09m 28s.xml">
+      <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust001" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust001 - 2019.10.14 at 18h 11m 42s.xml">
+      <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust001" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust002 - 2019.10.14 at 18h 16m 54s.xml">
+      <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust002" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_c_inventoryAdjust_Inventory_Adjust_test_inventory_adjust003 - 2019.10.14 at 18h 24m 25s.xml">
+      <configuration name="Unittests for c_inventoryAdjust.Inventory_Adjust.test_inventory_adjust003" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_c_inventoryAdjust_py - 2019.10.14 at 18h 26m 38s.xml">
+      <configuration name="Unittests in c_inventoryAdjust.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1406108000" />
+    <option name="totallyTimeSpent" value="1422130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -962,13 +980,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27345845" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19034852" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3282123" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5736544" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5736544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5042493" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1077,23 +1096,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="优化代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testcase/3、工单管理/e_returnOrder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/common/rwconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding>
-            <element signature="e#76#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/pathconfig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -1329,9 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/b_searchSparePart.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/a_createSparePart.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2375">
@@ -1339,13 +1338,6 @@
           <folding>
             <element signature="e#75#118#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/z_deleteSparePart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1364,20 +1356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/masterReceivePage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/financeManagePage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/page/visitOrderPage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -1392,13 +1370,6 @@
           <folding>
             <element signature="e#79#122#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/companyInventoryPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1427,10 +1398,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/run/run_f_operationManage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/z_deleteSparePart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/regaccount.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="57" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/masterReceivePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/financeManagePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/b_searchSparePart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/inventoryAdjustPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="109" column="13" lean-forward="true" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+          <folding>
+            <element signature="e#77#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/page/companyInventoryPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-515">
+          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/testdata.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="505" column="23" selection-start-line="505" selection-start-column="23" selection-end-line="505" selection-end-column="23" />
+        <state relative-caret-position="419">
+          <caret line="527" column="65" selection-start-line="527" selection-start-column="65" selection-end-line="527" selection-end-column="65" />
           <folding>
             <element signature="e#43#2409#0" />
             <element signature="e#2449#3045#0" />
@@ -1469,15 +1495,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run/run_f_operationManage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/page/inventoryAdjustPage.py">
+    <entry file="file://$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="-427">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
-            <element signature="e#77#120#0" expanded="true" />
+            <element signature="e#77#109#0" expanded="true" />
           </folding>
         </state>
       </provider>

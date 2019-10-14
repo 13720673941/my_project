@@ -37,6 +37,11 @@ class InventoryAdjust(BasePage):
     open_IO_inventory_btn = (By.XPATH,'//label[contains(text(),"出入库类型")]/../div')
     # 出入库类型父节点元素
     IO_inventory_parent_element = (By.XPATH,'//label[contains(text(),"出入库类型")]/..//ul[2]')
+    # 搜索按钮
+    search_btn = (By.XPATH,'//a[contains(text(),"搜索")]')
+    # 第一行全部数据
+    first_log_info = (By.XPATH,'(//tr[@class="ivu-table-row"])[1]')
+
 
     def enter_inventory_adjust_log_page(self):
         """进入库存调整页面"""
@@ -84,3 +89,30 @@ class InventoryAdjust(BasePage):
         """输入操作结束日期"""
         if end_date == "True":
             self.input_message(self.operate_end_date_input,self.get_now_time())
+
+    def input_spare_part_number(self,spare_part_number):
+        """输入备件条码"""
+        self.input_message(self.spare_part_number_input,spare_part_number)
+
+    def ubout_spare_part_name(self,spare_part_number):
+        """输入备件名称"""
+        self.input_message(self.spare_part_name_input, spare_part_number)
+
+    def select_IO_inventory_type(self,inventory_type):
+        """选择出入库类型"""
+
+        if inventory_type != "":
+
+            self.operate_not_select(
+                open_el=self.open_IO_inventory_btn,
+                parent_el=self.IO_inventory_parent_element,
+                value=inventory_type
+            )
+
+    def click_search_button(self):
+        """点击搜索按钮"""
+        self.click_button(self.search_btn)
+
+    def get_first_log_info(self):
+        """获取第一行日志记录信息"""
+        return self.get_text(self.first_log_info)

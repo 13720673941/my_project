@@ -505,19 +505,34 @@
   "30": "/*师傅领用记录页面功能测试用例*/",
   "MasterReceivePage": {
     "receive_fnc": {
-      "TestCase001": {"CaseName": "1、备件领取数量为空校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件02","expect": "请输入备件数量"},
+      "TestCase001": {"CaseName": "1、备件领取数量为空校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","expect": "请输入备件数量"},
       "TestCase002": {"CaseName": "2、备件名称为空校验","MasterName": "邓鹏飞","expect": "请选择备件"},
-      "TestCase003": {"CaseName": "3、领取备件师傅名称为空校验","SP_Name":"自动化测试备件02","expect": "请选择工程师"},
-      "TestCase004": {"CaseName": "4、领取页面删除备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件02","expect": "请选择备件"},
-      "TestCase005": {"CaseName": "5、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件02","SP_Count": "10","expect": "申请成功"},
-      "TestCase006": {"CaseName": "6、师傅领取备件后日志记录校验","data": "True","expect1": "自动化测试备件02","expect2": "邓鹏飞"}
+      "TestCase003": {"CaseName": "3、领取备件师傅名称为空校验","SP_Name":"自动化测试备件","expect": "请选择工程师"},
+      "TestCase004": {"CaseName": "4、领取页面删除备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","expect": "请选择备件"},
+      "TestCase005": {"CaseName": "5、师傅成功领取备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","SP_Count": "10","expect": "申请成功"},
+      "TestCase006": {"CaseName": "6、师傅领取备件后日志记录校验","data": "True","expect1": "自动化测试备件","expect2": "邓鹏飞"}
     },
     "log_search_fnc": [
       {"CaseName": "1、按领取备件师傅名称搜索校验","MasterName": "邓鹏飞","ReceiveTime":"False","SP_Number":"","SP_Name":"","expect": "邓鹏飞"},
-      {"CaseName": "2、按领取备件时间搜索校验","MasterName": "","ReceiveTime":"True","SP_Number":"","SP_Name":"","expect": "自动化测试备件02"},
+      {"CaseName": "2、按领取备件时间搜索校验","MasterName": "","ReceiveTime":"True","SP_Number":"","SP_Name":"","expect": "自动化测试备件"},
       {"CaseName": "3、按领取备件条码搜索校验","MasterName": "","ReceiveTime":"False","SP_Number":"AUTO-SP-001","SP_Name":"","expect": "AUTO-SP-001"},
-      {"CaseName": "4、按领取备件名称搜索校验","MasterName": "","ReceiveTime":"False","SP_Number":"","SP_Name":"自动化测试备件02","expect": "自动化测试备件02"},
-      {"CaseName": "5、备件领取记录混合搜索校验","MasterName": "邓鹏飞","ReceiveTime":"True","SP_Number":"AUTO-SP-001","SP_Name":"自动化测试备件02","expect": "AUTO-SP-001"}
+      {"CaseName": "4、按领取备件名称搜索校验","MasterName": "","ReceiveTime":"False","SP_Number":"","SP_Name":"自动化测试备件","expect": "自动化测试备件"},
+      {"CaseName": "5、备件领取记录混合搜索校验","MasterName": "邓鹏飞","ReceiveTime":"True","SP_Number":"AUTO-SP-001","SP_Name":"自动化测试备件","expect": "AUTO-SP-001"}
+    ]
+  },
+  "31": "/*库存调整功能测试用例*/",
+  "InventoryAdjustPage": {
+    "adjust_fnc": {
+      "TestCase001": {"CaseName": "调整原因不能为空校验","SP_Name":"自动化测试备件","SP_Number": "10","expect": "请输入调整原因"},
+      "TestCase002": {"CaseName": "成功调整备件库存校验","SP_Name":"自动化测试备件","SP_Number": "10","expect": 10},
+      "TestCase003": {"CaseName": "调整库存后生成库存调整记录校验","expect": "入库"}
+    },
+    "search_log": [
+      {"CaseName": "按操作人名称搜索校验","Operator": "branch04","OperateDate": "False","SP_Number": "","SP_Name": "","IO_Type": "","expect": "branch04"},
+      {"CaseName": "按操作时间日期搜索校验","Operator": "","OperateDate": "True","SP_Number": "","SP_Name": "","IO_Type": "","expect": "代码中赋值当前日期"},
+      {"CaseName": "按备件条码搜索校验","Operator": "","OperateDate": "False","SP_Number": "AUTO-SP-001","SP_Name": "","IO_Type": "","expect": "AUTO-SP-001"},
+      {"CaseName": "按备件名称搜索校验","Operator": "","OperateDate": "False","SP_Number": "","SP_Name": "自动化测试备件","IO_Type": "","expect": "自动化测试备件"},
+      {"CaseName": "按出入库类型搜索校验","Operator": "","OperateDate": "False","SP_Number": "","SP_Name": "","IO_Type": "师傅领用","expect": "师傅领用"}
     ]
   }
 }
