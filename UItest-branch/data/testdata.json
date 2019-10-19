@@ -534,5 +534,15 @@
       {"CaseName": "按备件名称搜索校验","Operator": "","OperateDate": "False","SP_Number": "","SP_Name": "自动化测试备件","IO_Type": "","expect": "自动化测试备件"},
       {"CaseName": "按出入库类型搜索校验","Operator": "","OperateDate": "False","SP_Number": "","SP_Name": "","IO_Type": "师傅领用","expect": "师傅领用"}
     ]
+  },
+  "32": "/*师傅返还备件功能测试用例*/",
+  "MasterReturnPage": {
+    "TestCase001": {"CaseName": "返还备件师傅名称不能为空校验","expect": "请选择师傅"},
+    "TestCase002": {"CaseName": "返还备件名称不能为空校验","MasterName": "邓鹏飞","expect": "请选择备件"},
+    "TestCase003": {"CaseName": "返还备件数量不能为空校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","expect": "请输入返还数量"},
+    "TestCase004": {"CaseName": "按备件条码模糊匹配备件校验","MasterName": "邓鹏飞","SP_Number":"AUTO-SP","expect": "AUTO-SP-001"},
+    "TestCase005": {"CaseName": "按备件名称模糊匹配备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","expect": "自动化测试备件"},
+    "TestCase006": {"CaseName": "返还的备件不能大于师傅库存备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","SP_Count":"100","expect": 10},
+    "TestCase007": {"CaseName": "成功返还备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","SP_Count":"10","expect": 10,"//": "这里校验两次网点库存增加10，师傅库存减少10"}
   }
 }

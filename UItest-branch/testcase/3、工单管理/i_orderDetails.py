@@ -68,12 +68,15 @@ class Order_Details(unittest.TestCase):
         self.base_page.print_case_name(appoint_data["CaseName"])
         # 点击预约按钮
         self.order_detail.click_appoint_btn()
+        """
+        产品修改：默认预约时间为当前日期，不用选择
+        """
         # 清除预约日期
-        self.order_detail.clear_appoint_date()
+        # self.order_detail.clear_appoint_date()
         # 输入预约日期
-        self.order_detail.input_appoint_date()
+        # self.order_detail.input_appoint_date()
         # 点击空白区
-        self.order_detail.click_white_place()
+        # self.order_detail.click_white_place()
         # 选择预约时间
         self.order_detail.select_appoint_time(appoint_data["AppointTime"])
         # 点击确定预约
@@ -89,13 +92,14 @@ class Order_Details(unittest.TestCase):
         self.base_page.print_case_name(alter_appoint_data["CaseName"])
         # 点击修改预约按钮
         self.order_detail.click_alter_appoint_btn()
-        #  清除预约日期
+        # 清除预约日期
         self.order_detail.clear_appoint_date()
         # 输入预约日期
         self.order_detail.input_appoint_date(alter=True)
-        #  点击空白区
+        self.base_page.sleep(1)
+        # 点击空白区
         self.order_detail.click_white_place()
-        # 选择预约时间
+        # 选择预约时间段
         self.order_detail.select_appoint_time(alter_appoint_data["AppointTime"])
         # 点击确定预约
         self.order_detail.click_confirm_appoint_btn()
@@ -103,7 +107,7 @@ class Order_Details(unittest.TestCase):
         self.assert_mode.assert_equal(alter_appoint_data["expect"],self.base_page.get_system_msg())
         self.base_page.sleep(1)
         # 获取当前日期后一天修改预约判断用
-        alter_date = str(datetime.datetime.now().date()+datetime.timedelta(1))
+        alter_date = str(datetime.datetime.now().date()+datetime.timedelta(2))
         # 判断修改的预约时间在订单详情页已经改变
         self.assert_mode.assert_in(alter_date,self.order_detail.get_appoint_text())
 

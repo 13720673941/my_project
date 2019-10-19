@@ -41,7 +41,7 @@ def create_phoneNum():
         else:
             # 如果在列表中及继续循还生成号码
             continue
-    print('*Create phone number: {0}.'.format(PhoneNum))
+    print('* Create phone number: {0}.'.format(PhoneNum))
     return PhoneNum
 
 def create_username():
@@ -81,7 +81,7 @@ def create_username():
             break
         else:
             continue
-    print('*Create user name: {0}.'.format(UserName))
+    print('* Create user name: {0}.'.format(UserName))
     return UserName
 
 

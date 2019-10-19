@@ -49,7 +49,7 @@ class Manage_Order_Statistics(unittest.TestCase):
         # 登录服务商
         cls.login.login_main(cls.server_use,cls.server_pwd)
         # 获取经销商的名称
-        cls.manage_branch_name = read_config_data("蓝魔科技","manageBranch")
+        cls.manage_branch_name = read_config_data("蓝魔科技","manage_branch")
         # 进入客户订单统计页面
         cls.order_statistics.enter_statistics_page()
         # 搜索经销商
@@ -68,7 +68,7 @@ class Manage_Order_Statistics(unittest.TestCase):
         cls.manage_pwd = read_config_data(cls.manage_branch_name,"password")
         cls.login.login_main(cls.manage_use,cls.manage_pwd)
         # 获取该经销商的合作服务商名称
-        cls.server_branch_name = read_config_data(cls.manage_branch_name, "branch001")
+        cls.server_branch_name = read_config_data(cls.manage_branch_name,"branch001")
         #  经销商下单程序下单
         cls.create_order.create_not_return_order()
         # 获取单号
@@ -80,7 +80,7 @@ class Manage_Order_Statistics(unittest.TestCase):
         self.base_page.refresh_page()
         self.order_statistics.input_customer_search_keyword(keyword=self.manage_branch_name)
         self.order_statistics.click_search_btn()
-        self.base_page.sleep(2)
+        self.base_page.sleep(1)
 
     def test_order_statistics001(self):
         """未完单订单数量统计校验"""

@@ -94,9 +94,9 @@ class InventoryAdjust(BasePage):
         """输入备件条码"""
         self.input_message(self.spare_part_number_input,spare_part_number)
 
-    def ubout_spare_part_name(self,spare_part_number):
+    def input_spare_part_name(self,spare_part_name):
         """输入备件名称"""
-        self.input_message(self.spare_part_name_input, spare_part_number)
+        self.input_message(self.spare_part_name_input, spare_part_name)
 
     def select_IO_inventory_type(self,inventory_type):
         """选择出入库类型"""

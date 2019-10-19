@@ -8,7 +8,7 @@ import sys
 SE = Send_Email()
 sys.path.append('../run')
 import run_a_registerLogin,run_b_alterPassword,run_c_orderManage,run_d_customManage,\
-    run_e_masterManage
+    run_e_masterManage,run_f_operationManage,run_g_financeManage
 
 if __name__ == '__main__':
 
@@ -17,22 +17,22 @@ if __name__ == '__main__':
     isPass = False
     # 定时间
     startTime = time.time()
-    timing = "12:01"
+    timing = "09:42"
     while True:
         # 获取当前时间
         time.sleep(1)
         now_time = time.strftime("%H:%M",time.localtime(time.time()))
         if now_time == timing:
-            # 获取开始时间
-            # starttime = time.strftime("%H:%M",time.localtime(time.time()))
             # 时间一样执行脚本
             print('========== 开始 ==========')
             # 调用脚本用例集
-            run_a_registerLogin.run()
-            run_b_alterPassword.run()
+            # run_a_registerLogin.run()
+            # run_b_alterPassword.run()
             run_c_orderManage.run()
             run_d_customManage.run()
             run_e_masterManage.run()
+            # run_f_operationManage.run()
+            # run_g_financeManage.run()
             print('========== 结束 ==========')
             endTime = time.time()
             isPass = True
@@ -44,6 +44,6 @@ if __name__ == '__main__':
         # 脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
         # 发送邮件
-        SE.SendEmailMain(start_time=timing,run_time=runtime)
+        # SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')

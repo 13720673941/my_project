@@ -222,6 +222,21 @@ class BasePage(object):
         self.sleep(2)
         log.info('{0} Refresh current page, Spend {1} seconds.'.format(self.success,time.time()-t1))
 
+    def mouse_move_to_element(self,element):
+        """
+        鼠标移动到某元素按钮上
+        :param element:
+        :return:
+        """
+        move_element = self.get_element(element)
+        t1 = time.time()
+        try:
+            ActionChains(self.driver).move_to_element(move_element).perform()
+            log.info('{0} * Move mouse to element: <{1}> , Spend {2} seconds.'.format(self.success, element,time.time() - t1))
+        except:
+            log.error('{0} Unable move mouse to element: <{1}> and click.'.format(self.fail, element))
+            raise
+
     def mouse_move_and_click(self,element):
         """
         鼠标移动到某元素点击
@@ -514,26 +529,25 @@ class BasePage(object):
         # 仅报单 到待报单页面获取
         if insteadOrder:
             self.open_url(instead_order_list_url)
+        else:
+            self.open_url(all_order_list_url)
         # 等待页面加载
         self.sleep(2)
-        self.refresh_page()
-        newOrderNum=''
+        newOrderNum = ''
         # 获取工单单号
         for i in range(10):
             try:
+                self.refresh_page()
                 # 获取第一个订单的创建时间
                 if insteadOrder: # 代报单获取创建时间不一样
-                    addOrderTime = self.get_text(element=(By.XPATH,'//span[@class="ivu-page-total"]/../../../'
-                                                   './/tr[@class="ivu-table-row"][1]/td[6]/div/span'))
+                    addOrderTime = self.get_text(element=(By.XPATH,'(//tr[@class="ivu-table-row"])[1]/td[6]//span'))
                 else:
-                    addOrderTime = self.get_text(element=(By.XPATH,'//span[@class="ivu-page-total"]/../../../'
-                                                   './/tr[@class="ivu-table-row"][1]/td[5]/div/span'))
+                    addOrderTime = self.get_text(element=(By.XPATH,'(//tr[@class="ivu-table-row"])[1]/td[5]//span'))
                 # 把时间转化为时间戳小于30秒就是新订单
                 oldTimeNumber = self.get_one_timenum(DataTime=addOrderTime,Time=True)
                 newTime = self.get_now_timenum()
                 if newTime - oldTimeNumber < 60:
-                    newOrderNum = self.get_text(element=(By.XPATH,'//span[@class="ivu-page-total"]/../../../'
-                                                   './/tr[@class="ivu-table-row"][1]/td[3]/div/a'))
+                    newOrderNum = self.get_text(element=(By.XPATH,'(//tr[@class="ivu-table-row"])[1]/td[3]//a'))
                     log.info('{0} Get order number: {1}.'.format(self.success,newOrderNum))
                     # 有时候获取不到订单单号，判断单号的长度，否则刷新页面
                     if len(newOrderNum) == 18:
@@ -563,11 +577,9 @@ class BasePage(object):
         time.sleep(2)
         for i in range(1,10):
             try:
-                OrderNum = self.get_text((By.XPATH,'//span[@class="ivu-page-total"]/../../../'
-                                                   './/tr[@class="ivu-table-row"]['+str(i)+']/td[3]/div/a'))
+                OrderNum = self.get_text((By.XPATH,'(//tr[@class="ivu-table-row"])['+str(i)+']/td[3]//a'))
                 if OrderNum == OrderNumber:
-                    self.click_button((By.XPATH,'//span[@class="ivu-page-total"]/../../../'
-                                                './/tr[@class="ivu-table-row"]['+str(i)+']/td[3]/div/a'))
+                    self.click_button((By.XPATH,'(//tr[@class="ivu-table-row"])['+str(i)+']/td[3]//a'))
                     log.info('{0} Into order: {1} message page.'.format(self.success,OrderNumber))
                     break
             except Exception:

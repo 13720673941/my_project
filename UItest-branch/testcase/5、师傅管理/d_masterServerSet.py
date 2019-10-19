@@ -45,6 +45,7 @@ class Master_Server_Set(unittest.TestCase):
         self.master_page.input_keyword_for_search(search_word)
         # 点击搜索
         self.master_page.click_search_btn()
+        self.base_page.sleep(1)
         """
         页面改动不需要拖动操作按钮放到上层页面了
         """

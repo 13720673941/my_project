@@ -39,6 +39,7 @@ class DealerBranchPage(BasePage):
     set_server_confirm_btn = (By.XPATH,'//div[contains(.,"服务设置")]/../../div[3]/div/button[2]')
     # 第一个经销商的全部信息
     first_branch_info = (By.XPATH,'(//div/div[2]/table/tbody/tr[1])[2]')
+    first_branch_info1 = (By.XPATH,'(//div/div[2]/table/tbody/tr[1])[1]')
     # 暂停接单按钮
     stop_take_order_btn = (By.XPATH,'(//a[contains(text(),"暂停接单")])[2]')
     # 暂停接单确定按钮
@@ -92,7 +93,7 @@ class DealerBranchPage(BasePage):
 
     def get_first_branch_info(self):
         """获取第一行的网点的信息"""
-        return self.get_text(self.first_branch_info)
+        return self.get_text(self.first_branch_info) + self.get_text(self.first_branch_info1)
 
     def click_set_server(self):
         """点击服务设置"""

@@ -15,7 +15,6 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.settleOrderPage import SettleOrderPage
 from public.page.masterStatisticsPage import MasterStatisticsPage
-from config.pathconfig import *
 import unittest
 """
 师傅工单状态统计测试用例：
@@ -184,9 +183,9 @@ class Order_Statistics(unittest.TestCase):
         # 获取师傅好评率
         master_favorable_rate = self.order_statistics.get_master_favorable_rate_count()
         # 计算好评率
-        favorable_rate = (round(master_favorable_orders/master_all_finish_orders,4))*100
+        favorable_rate = (round(master_favorable_orders/master_all_finish_orders,2))*100
         # 断言
-        self.assert_mode.assert_equal(str(favorable_rate)+"%",master_favorable_rate)
+        self.assert_mode.assert_in(str(int(favorable_rate)),master_favorable_rate)
 
 
     @classmethod

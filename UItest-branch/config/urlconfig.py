@@ -20,7 +20,7 @@ alter_pwd_url = 'http://www.51shouhou.cn/singleBranch/#/changePassword'
 create_order_url = 'http://www.51shouhou.cn/singleBranch/#/order/add'
 
 # 全部工单列表页面url
-all_order_list_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单'
+all_order_list_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1'
 
 # 服务中全部订单列表url
 servicing_order_list_url = 'http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单'
@@ -87,3 +87,6 @@ master_receive_log_url = 'http://www.51shouhou.cn/singleBranch/#/sparepart/stock
 
 # 备件库存调整记录页面
 inventory_adjust_url = 'http://www.51shouhou.cn/singleBranch/#/sparepart/stock/IORecord'
+
+# 待返厂页面
+wait_return_factory_url = 'http://www.51shouhou.cn/singleBranch/#/sparepart/returnFactory/waitReturn'

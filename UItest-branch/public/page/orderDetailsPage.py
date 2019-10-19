@@ -5,7 +5,6 @@
 
 from public.common.basepage import BasePage
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
 import datetime
 
 class OrderDetailsPage(BasePage):
@@ -24,7 +23,8 @@ class OrderDetailsPage(BasePage):
     # 预约时间打开下拉按钮
     open_appoint_select = (By.XPATH,'//label[contains(.,"预约时间：")]/../div/div/span[1]')
     # 下拉时间段的统计父目录
-    parent_for_select = (By.XPATH,'//div[contains(text(),"预约时间")]/../../../../../preceding-sibling::div[1]/ul[2]')
+    parent_for_select = (By.XPATH,'//div[contains(text(),"预约时间")]/../../../../..'
+                                  '/preceding-sibling::div[1]/ul[2]/li[1]')
     # 确定预约按钮
     confirm_appoint_btn = (By.XPATH,'//div[contains(text(),"预约时间")]/../../div[3]/button[2]')
     # 预约后详情页有预约字段
@@ -66,7 +66,7 @@ class OrderDetailsPage(BasePage):
     def input_appoint_date(self,alter=False):
         """输入预约日期"""
         if alter:
-            appoint_date = str(datetime.datetime.now().date() + datetime.timedelta(1))
+            appoint_date = str(datetime.datetime.now().date() + datetime.timedelta(2))
         else:
             appoint_date = self.get_now_time()
         self.input_message(self.appoint_time_input,appoint_date)
@@ -74,7 +74,9 @@ class OrderDetailsPage(BasePage):
     def select_appoint_time(self,appoint_time):
         """随机选择预约时间段"""
         if appoint_time != '':
-            self.operate_not_select(self.open_appoint_select,self.parent_for_select,is_random=True)
+            self.click_button(self.open_appoint_select)
+            self.sleep(2)
+            self.mouse_move_and_click(self.parent_for_select)
 
     def click_confirm_appoint_btn(self):
         """点击确定预约按钮"""

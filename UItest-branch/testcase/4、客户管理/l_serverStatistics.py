@@ -74,8 +74,9 @@ class Server_Order_Statistics(unittest.TestCase):
         self.order_statistics.enter_statistics_page()
         self.order_statistics.click_table_to_server()
         self.order_statistics.input_customer_search_keyword(keyword=self.server_branch_name)
+        self.base_page.sleep(2)
         self.order_statistics.click_search_btn()
-        self.base_page.sleep(1)
+        self.base_page.sleep(2)
 
     def test_server_statistics001(self):
         """未完单订单数量统计校验"""
