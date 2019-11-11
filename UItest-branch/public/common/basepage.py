@@ -32,7 +32,7 @@ class BasePage(object):
         """
         t1 = time.time()
         message = 'Get element {0} timeout 20 seconds.'.format(element)
-        el = WebDriverWait(self.driver,20,1).until(EC.presence_of_element_located(element),message)
+        el = WebDriverWait(self.driver,10,1).until(EC.presence_of_element_located(element),message)
         log.info('{0} Find element <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
         return el
 
@@ -151,7 +151,7 @@ class BasePage(object):
             return element_text
         except Exception:
             log.error('{0} Unable get element <{1}> text, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))
-            pass
+            raise
 
     def get_att(self,element,attribute):
         """

@@ -544,5 +544,14 @@
     "TestCase005": {"CaseName": "按备件名称模糊匹配备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","expect": "自动化测试备件"},
     "TestCase006": {"CaseName": "返还的备件不能大于师傅库存备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","SP_Count":"100","expect": 10},
     "TestCase007": {"CaseName": "成功返还备件校验","MasterName": "邓鹏飞","SP_Name":"自动化测试备件","SP_Count":"10","expect": 10,"//": "这里校验两次网点库存增加10，师傅库存减少10"}
+  },
+  "33": "/*新件返厂功能测试用例*/",
+  "ReturnFactoryPage": {
+    "TestCase001": {"CaseName": "新件返厂数量不能为空校验","SP_Name": "自动化测试备件","SP_Count": "","expect": "返厂数量必须大于0"},
+    "TestCase002": {"CaseName": "新件返厂成功校验","SP_Name": "自动化测试备件","SP_Count": "5","expect": "保存成功"},
+    "TestCase003": {"CaseName": "新件返厂生成日志记录校验","expect": "新件返厂"},
+    "TestCase004": {"CaseName": "新件返厂生成待返厂校验","expect": "自动化测试备件"},
+    "TestCase005": {"CaseName": "批量确认返厂校验","expect":"保存成功"},
+    "TestCase006": {"CaseName": "单个备件确认返厂校验","expect":"保存成功"}
   }
 }

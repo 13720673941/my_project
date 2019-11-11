@@ -1,0 +1,220 @@
+2019-10-26 09:07:34,519 - INFO - SUCCESS  Launch browser with chrome, Spend 3.541154623031616 seconds.
+2019-10-26 09:07:35,695 - INFO - SUCCESS  Set window size max, Spend 1.1756956577301025 seconds.
+2019-10-26 09:07:35,696 - INFO - ################################### START ###################################
+2019-10-26 09:07:35,705 - INFO - -=【网点登录】=-
+2019-10-26 09:07:35,710 - INFO - SUCCESS  Wait page load... , Spend 0.0019521713256835938 seconds.
+2019-10-26 09:07:36,711 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:07:39,189 - INFO - SUCCESS  Open url: <http://www.51shouhou.cn/singleBranch/#/login>, Spend 3.4786791801452637 seconds.
+2019-10-26 09:07:39,240 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.046863555908203125 seconds.
+2019-10-26 09:07:39,369 - INFO - SUCCESS  * Clear element <('xpath', '//input[@type="text"]')> input message, Spend 0.17769265174865723 seconds.
+2019-10-26 09:07:39,392 - INFO - SUCCESS  Find element <('xpath', '//input[@type="text"]')>, Spend 0.020502090454101562 seconds.
+2019-10-26 09:07:39,691 - INFO - SUCCESS  * Input message: 13700000004, Spend 0.3202366828918457 seconds
+2019-10-26 09:07:39,716 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.02343273162841797 seconds.
+2019-10-26 09:07:39,763 - INFO - SUCCESS  * Clear element <('xpath', '//input[@type="password"]')> input message, Spend 0.0702962875366211 seconds.
+2019-10-26 09:07:39,778 - INFO - SUCCESS  Find element <('xpath', '//input[@type="password"]')>, Spend 0.015623331069946289 seconds.
+2019-10-26 09:07:40,060 - INFO - SUCCESS  * Input message: 111111, Spend 0.29778218269348145 seconds
+2019-10-26 09:07:40,123 - INFO - SUCCESS  Find element <('xpath', '//a[@class="loginBtn"]')>, Spend 0.06150984764099121 seconds.
+2019-10-26 09:07:40,244 - INFO - SUCCESS  * Click button -> <('xpath', '//a[@class="loginBtn"]')>, Spend 0.18159842491149902 seconds.
+2019-10-26 09:07:41,246 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:03,122 - INFO - FAIL  * Find element <('xpath', '//div[@class="modal-dialog"]//a[text()="关闭"]')> is false, Spend 21.875742435455322 seconds.
+2019-10-26 09:08:03,149 - INFO - SUCCESS  Find element <('xpath', '//a[text()="退出"]')>, Spend 0.024407625198364258 seconds.
+2019-10-26 09:08:03,174 - INFO - SUCCESS  * Find element <('xpath', '//a[text()="退出"]')> is true, Spend 0.04979228973388672 seconds.
+2019-10-26 09:08:03,175 - INFO - SUCCESS  ** Branch login success！
+2019-10-26 09:08:05,177 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-10-26 09:08:05,178 - INFO - SUCCESS  Load case name: 1、新建订单-联系人为空校验
+2019-10-26 09:08:06,179 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:06,234 - INFO - SUCCESS  Open url: <http://www.51shouhou.cn/singleBranch/#/order/add>, Spend 1.0544416904449463 seconds.
+2019-10-26 09:08:09,560 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-10-26 09:08:09,562 - INFO - SUCCESS  Refresh current page, Spend 3.3273468017578125 seconds.
+2019-10-26 09:08:09,574 - INFO - SUCCESS  Wait page load... , Spend 0.011715888977050781 seconds.
+2019-10-26 09:08:10,141 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系人"]')>, Spend 0.5652966499328613 seconds.
+2019-10-26 09:08:10,392 - INFO - SUCCESS  * Input message: , Spend 0.8162155151367188 seconds
+2019-10-26 09:08:10,426 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.03319811820983887 seconds.
+2019-10-26 09:08:10,500 - INFO - SUCCESS  * Clear element <('xpath', '//input[@placeholder="请输入联系方式"]')> input message, Spend 0.10642027854919434 seconds.
+2019-10-26 09:08:10,530 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.029289960861206055 seconds.
+2019-10-26 09:08:11,023 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.5233151912689209 seconds
+2019-10-26 09:08:11,049 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[1]')>, Spend 0.025384902954101562 seconds.
+2019-10-26 09:08:11,197 - INFO - SUCCESS  Select value: 陕西省, Spend 0.17281150817871094 seconds.
+2019-10-26 09:08:11,232 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[2]')>, Spend 0.03417086601257324 seconds.
+2019-10-26 09:08:11,392 - INFO - SUCCESS  Select value: 西安市, Spend 0.1942903995513916 seconds.
+2019-10-26 09:08:11,428 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[3]')>, Spend 0.03417205810546875 seconds.
+2019-10-26 09:08:11,594 - INFO - SUCCESS  Select value: 雁塔区, Spend 0.2011244297027588 seconds.
+2019-10-26 09:08:11,635 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="为了能及时提供服务，请填写详细地址"]')>, Spend 0.03906726837158203 seconds.
+2019-10-26 09:08:11,858 - INFO - SUCCESS  * Input message: 沙井村, Spend 0.2626330852508545 seconds
+2019-10-26 09:08:12,859 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:12,894 - INFO - SUCCESS  Find element <('xpath', '//input[@name="radio"and@value="无需返单"]/following-sibling::i')>, Spend 0.031244754791259766 seconds.
+2019-10-26 09:08:12,957 - INFO - SUCCESS  * Click button -> <('xpath', '//input[@name="radio"and@value="无需返单"]/following-sibling::i')>, Spend 0.09568071365356445 seconds.
+2019-10-26 09:08:12,980 - INFO - SUCCESS  Find element <('xpath', '//label[text()="服务类型："]/../select')>, Spend 0.02245616912841797 seconds.
+2019-10-26 09:08:13,108 - INFO - SUCCESS  Select value: 安装, Spend 0.15035581588745117 seconds.
+2019-10-26 09:08:13,140 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请选择家电品牌"]')>, Spend 0.02929067611694336 seconds.
+2019-10-26 09:08:13,251 - INFO - SUCCESS  * Input message: 海尔, Spend 0.14156842231750488 seconds
+2019-10-26 09:08:13,274 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品大类："]/../select')>, Spend 0.022457361221313477 seconds.
+2019-10-26 09:08:13,395 - INFO - SUCCESS  Select value: 家电X, Spend 0.14254522323608398 seconds.
+2019-10-26 09:08:13,424 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品品类："]/../select')>, Spend 0.027336835861206055 seconds.
+2019-10-26 09:08:13,554 - INFO - SUCCESS  Select value: 空调, Spend 0.15719056129455566 seconds.
+2019-10-26 09:08:13,576 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品小类："]/../select')>, Spend 0.020500659942626953 seconds.
+2019-10-26 09:08:13,686 - INFO - SUCCESS  Select value: 挂机, Spend 0.1308274269104004 seconds.
+2019-10-26 09:08:13,711 - INFO - SUCCESS  Find element <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.022457361221313477 seconds.
+2019-10-26 09:08:13,778 - INFO - SUCCESS  * Click button -> <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.08982300758361816 seconds.
+2019-10-26 09:08:14,779 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:14,801 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.021480798721313477 seconds.
+2019-10-26 09:08:14,823 - INFO - SUCCESS  * Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text: 用户姓名不能为空!, Spend 0.04393720626831055 seconds.
+2019-10-26 09:08:14,824 - INFO - SUCCESS  Expect: 用户姓名不能为空! equal Faction: 用户姓名不能为空!, test -> PASS.
+2019-10-26 09:08:14,825 - INFO - SUCCESS  Load case name: 10、新建订单-手机号格式校验
+2019-10-26 09:08:15,827 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:15,857 - INFO - SUCCESS  Open url: <http://www.51shouhou.cn/singleBranch/#/order/add>, Spend 1.0301053524017334 seconds.
+2019-10-26 09:08:18,378 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-10-26 09:08:18,379 - INFO - SUCCESS  Refresh current page, Spend 2.5218698978424072 seconds.
+2019-10-26 09:08:18,382 - INFO - SUCCESS  Wait page load... , Spend 0.001951456069946289 seconds.
+2019-10-26 09:08:18,398 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系人"]')>, Spend 0.01562190055847168 seconds.
+2019-10-26 09:08:18,716 - INFO - SUCCESS  * Input message: AutoTest, Spend 0.3329305648803711 seconds
+2019-10-26 09:08:18,730 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.013668298721313477 seconds.
+2019-10-26 09:08:18,770 - INFO - SUCCESS  * Clear element <('xpath', '//input[@placeholder="请输入联系方式"]')> input message, Spend 0.05369853973388672 seconds.
+2019-10-26 09:08:18,784 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.013667821884155273 seconds.
+2019-10-26 09:08:19,206 - INFO - SUCCESS  * Input message: ！@#！@#！@#！@@, Spend 0.43446922302246094 seconds
+2019-10-26 09:08:19,221 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[1]')>, Spend 0.013668060302734375 seconds.
+2019-10-26 09:08:19,331 - INFO - SUCCESS  Select value: 陕西省, Spend 0.12301874160766602 seconds.
+2019-10-26 09:08:19,350 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[2]')>, Spend 0.01855182647705078 seconds.
+2019-10-26 09:08:19,456 - INFO - SUCCESS  Select value: 西安市, Spend 0.12497258186340332 seconds.
+2019-10-26 09:08:19,473 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[3]')>, Spend 0.016596078872680664 seconds.
+2019-10-26 09:08:19,588 - INFO - SUCCESS  Select value: 雁塔区, Spend 0.131805419921875 seconds.
+2019-10-26 09:08:19,602 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="为了能及时提供服务，请填写详细地址"]')>, Spend 0.013669252395629883 seconds.
+2019-10-26 09:08:19,712 - INFO - SUCCESS  * Input message: 沙井村, Spend 0.1239938735961914 seconds
+2019-10-26 09:08:20,714 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:20,732 - INFO - SUCCESS  Find element <('xpath', '//input[@name="radio"and@value="无需返单"]/following-sibling::i')>, Spend 0.015625 seconds.
+2019-10-26 09:08:20,789 - INFO - SUCCESS  * Click button -> <('xpath', '//input[@name="radio"and@value="无需返单"]/following-sibling::i')>, Spend 0.07420134544372559 seconds.
+2019-10-26 09:08:20,804 - INFO - SUCCESS  Find element <('xpath', '//label[text()="服务类型："]/../select')>, Spend 0.014645099639892578 seconds.
+2019-10-26 09:08:20,931 - INFO - SUCCESS  Select value: 安装, Spend 0.1415705680847168 seconds.
+2019-10-26 09:08:20,948 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请选择家电品牌"]')>, Spend 0.015619516372680664 seconds.
+2019-10-26 09:08:21,073 - INFO - SUCCESS  * Input message: 海尔, Spend 0.14058899879455566 seconds
+2019-10-26 09:08:21,091 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品大类："]/../select')>, Spend 0.017577171325683594 seconds.
+2019-10-26 09:08:21,233 - INFO - SUCCESS  Select value: 家电X, Spend 0.15816688537597656 seconds.
+2019-10-26 09:08:21,255 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品品类："]/../select')>, Spend 0.021477937698364258 seconds.
+2019-10-26 09:08:21,393 - INFO - SUCCESS  Select value: 空调, Spend 0.16012024879455566 seconds.
+2019-10-26 09:08:21,414 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品小类："]/../select')>, Spend 0.01952505111694336 seconds.
+2019-10-26 09:08:21,558 - INFO - SUCCESS  Select value: 挂机, Spend 0.16304755210876465 seconds.
+2019-10-26 09:08:21,581 - INFO - SUCCESS  Find element <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.020502567291259766 seconds.
+2019-10-26 09:08:21,719 - INFO - SUCCESS  * Click button -> <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.15914225578308105 seconds.
+2019-10-26 09:08:22,720 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:22,732 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.010741710662841797 seconds.
+2019-10-26 09:08:22,753 - INFO - SUCCESS  * Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text: 请正确输入联系方式!, Spend 0.031245946884155273 seconds.
+2019-10-26 09:08:22,753 - INFO - SUCCESS  Expect: 请正确输入联系方式! equal Faction: 请正确输入联系方式!, test -> PASS.
+2019-10-26 09:08:22,754 - INFO - SUCCESS  Load case name: 11、新建订单-添加无需返单订单校验
+2019-10-26 09:08:23,756 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:23,781 - INFO - SUCCESS  Open url: <http://www.51shouhou.cn/singleBranch/#/order/add>, Spend 1.0261280536651611 seconds.
+2019-10-26 09:08:26,048 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-10-26 09:08:26,050 - INFO - SUCCESS  Refresh current page, Spend 2.267047882080078 seconds.
+2019-10-26 09:08:26,053 - INFO - SUCCESS  Wait page load... , Spend 0.002929210662841797 seconds.
+2019-10-26 09:08:26,076 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系人"]')>, Spend 0.022455930709838867 seconds.
+2019-10-26 09:08:26,524 - INFO - SUCCESS  * Input message: AutoTest, Spend 0.4705939292907715 seconds
+2019-10-26 09:08:26,537 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.011716604232788086 seconds.
+2019-10-26 09:08:26,588 - INFO - SUCCESS  * Clear element <('xpath', '//input[@placeholder="请输入联系方式"]')> input message, Spend 0.0624852180480957 seconds.
+2019-10-26 09:08:26,601 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.010739803314208984 seconds.
+2019-10-26 09:08:26,908 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.3182861804962158 seconds
+2019-10-26 09:08:26,922 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[1]')>, Spend 0.013668537139892578 seconds.
+2019-10-26 09:08:27,035 - INFO - SUCCESS  Select value: 陕西省, Spend 0.1269237995147705 seconds.
+2019-10-26 09:08:27,051 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[2]')>, Spend 0.014643669128417969 seconds.
+2019-10-26 09:08:27,165 - INFO - SUCCESS  Select value: 西安市, Spend 0.12789678573608398 seconds.
+2019-10-26 09:08:27,199 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[3]')>, Spend 0.03319501876831055 seconds.
+2019-10-26 09:08:27,580 - INFO - SUCCESS  Select value: 雁塔区, Spend 0.41396617889404297 seconds.
+2019-10-26 09:08:27,628 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="为了能及时提供服务，请填写详细地址"]')>, Spend 0.04686379432678223 seconds.
+2019-10-26 09:08:27,804 - INFO - SUCCESS  * Input message: 沙井村, Spend 0.22455811500549316 seconds
+2019-10-26 09:08:28,806 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:28,821 - INFO - SUCCESS  Find element <('xpath', '//input[@name="radio"and@value="无需返单"]/following-sibling::i')>, Spend 0.013650178909301758 seconds.
+2019-10-26 09:08:28,889 - INFO - SUCCESS  * Click button -> <('xpath', '//input[@name="radio"and@value="无需返单"]/following-sibling::i')>, Spend 0.08199429512023926 seconds.
+2019-10-26 09:08:28,904 - INFO - SUCCESS  Find element <('xpath', '//label[text()="服务类型："]/../select')>, Spend 0.012692689895629883 seconds.
+2019-10-26 09:08:29,049 - INFO - SUCCESS  Select value: 安装, Spend 0.15816640853881836 seconds.
+2019-10-26 09:08:29,097 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请选择家电品牌"]')>, Spend 0.04588603973388672 seconds.
+2019-10-26 09:08:29,391 - INFO - SUCCESS  * Input message: 海尔, Spend 0.3397657871246338 seconds
+2019-10-26 09:08:29,408 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品大类："]/../select')>, Spend 0.01464390754699707 seconds.
+2019-10-26 09:08:29,524 - INFO - SUCCESS  Select value: 家电X, Spend 0.1308295726776123 seconds.
+2019-10-26 09:08:29,540 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品品类："]/../select')>, Spend 0.015622377395629883 seconds.
+2019-10-26 09:08:29,683 - INFO - SUCCESS  Select value: 空调, Spend 0.15816569328308105 seconds.
+2019-10-26 09:08:29,706 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品小类："]/../select')>, Spend 0.022455215454101562 seconds.
+2019-10-26 09:08:29,822 - INFO - SUCCESS  Select value: 挂机, Spend 0.1366865634918213 seconds.
+2019-10-26 09:08:29,837 - INFO - SUCCESS  Find element <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.014644622802734375 seconds.
+2019-10-26 09:08:29,945 - INFO - SUCCESS  * Click button -> <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.12106585502624512 seconds.
+2019-10-26 09:08:30,945 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:31,305 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.35831451416015625 seconds.
+2019-10-26 09:08:31,352 - INFO - SUCCESS  * Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text: 派单成功, Spend 0.4061567783355713 seconds.
+2019-10-26 09:08:33,351 - INFO - SUCCESS  Save screen shot to: D:\my_test_script\UItest-branch\result\image\20191026090831.png, Spend 1.997579574584961 seconds.
+2019-10-26 09:08:33,359 - INFO - SUCCESS  Load case name: 12、新建订单-添加仅报单订单校验
+2019-10-26 09:08:34,360 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:34,834 - INFO - SUCCESS  Open url: <http://www.51shouhou.cn/singleBranch/#/order/add>, Spend 1.47328782081604 seconds.
+2019-10-26 09:08:37,199 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-10-26 09:08:37,201 - INFO - SUCCESS  Refresh current page, Spend 2.3656575679779053 seconds.
+2019-10-26 09:08:37,204 - INFO - SUCCESS  Wait page load... , Spend 0.0019526481628417969 seconds.
+2019-10-26 09:08:37,221 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系人"]')>, Spend 0.017575502395629883 seconds.
+2019-10-26 09:08:37,548 - INFO - SUCCESS  * Input message: AutoTest, Spend 0.3436713218688965 seconds
+2019-10-26 09:08:37,565 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.015619516372680664 seconds.
+2019-10-26 09:08:37,601 - INFO - SUCCESS  * Clear element <('xpath', '//input[@placeholder="请输入联系方式"]')> input message, Spend 0.05174398422241211 seconds.
+2019-10-26 09:08:37,615 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.01269388198852539 seconds.
+2019-10-26 09:08:37,938 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.3358602523803711 seconds
+2019-10-26 09:08:37,952 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[1]')>, Spend 0.013667821884155273 seconds.
+2019-10-26 09:08:38,065 - INFO - SUCCESS  Select value: 陕西省, Spend 0.1269223690032959 seconds.
+2019-10-26 09:08:38,098 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[2]')>, Spend 0.03124403953552246 seconds.
+2019-10-26 09:08:38,216 - INFO - SUCCESS  Select value: 西安市, Spend 0.14937901496887207 seconds.
+2019-10-26 09:08:38,233 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[3]')>, Spend 0.016596317291259766 seconds.
+2019-10-26 09:08:38,364 - INFO - SUCCESS  Select value: 雁塔区, Spend 0.14840269088745117 seconds.
+2019-10-26 09:08:38,384 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="为了能及时提供服务，请填写详细地址"]')>, Spend 0.01855015754699707 seconds.
+2019-10-26 09:08:38,522 - INFO - SUCCESS  * Input message: 沙井村, Spend 0.15523552894592285 seconds
+2019-10-26 09:08:39,522 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:39,547 - INFO - SUCCESS  Find element <('xpath', '//input[@name="radio"and@value="仅报单"]/following-sibling::i')>, Spend 0.02245616912841797 seconds.
+2019-10-26 09:08:39,641 - INFO - SUCCESS  * Click button -> <('xpath', '//input[@name="radio"and@value="仅报单"]/following-sibling::i')>, Spend 0.11618494987487793 seconds.
+2019-10-26 09:08:40,641 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:40,657 - INFO - SUCCESS  Find element <('xpath', '//label[text()="工单类型："]/../select')>, Spend 0.015549421310424805 seconds.
+2019-10-26 09:08:40,745 - INFO - SUCCESS  Select value: 自动化测试网点01, Spend 0.10341954231262207 seconds.
+2019-10-26 09:08:40,757 - INFO - SUCCESS  Find element <('xpath', '//label[text()="服务类型："]/../select')>, Spend 0.010739326477050781 seconds.
+2019-10-26 09:08:40,863 - INFO - SUCCESS  Select value: 安装, Spend 0.11716103553771973 seconds.
+2019-10-26 09:08:40,881 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请选择家电品牌"]')>, Spend 0.01757359504699707 seconds.
+2019-10-26 09:08:40,993 - INFO - SUCCESS  * Input message: 海尔, Spend 0.127899169921875 seconds
+2019-10-26 09:08:41,010 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品大类："]/../select')>, Spend 0.01659679412841797 seconds.
+2019-10-26 09:08:41,117 - INFO - SUCCESS  Select value: 家电X, Spend 0.12399506568908691 seconds.
+2019-10-26 09:08:41,131 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品品类："]/../select')>, Spend 0.012692451477050781 seconds.
+2019-10-26 09:08:41,248 - INFO - SUCCESS  Select value: 空调, Spend 0.1298530101776123 seconds.
+2019-10-26 09:08:41,264 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品小类："]/../select')>, Spend 0.015620231628417969 seconds.
+2019-10-26 09:08:41,380 - INFO - SUCCESS  Select value: 挂机, Spend 0.1308283805847168 seconds.
+2019-10-26 09:08:41,399 - INFO - SUCCESS  Find element <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.017572879791259766 seconds.
+2019-10-26 09:08:41,504 - INFO - SUCCESS  * Click button -> <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.12301778793334961 seconds.
+2019-10-26 09:08:42,506 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:42,684 - INFO - SUCCESS  Find element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')>, Spend 0.17671680450439453 seconds.
+2019-10-26 09:08:42,713 - INFO - SUCCESS  * Get element <('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')> text: 派单成功, Spend 0.2050313949584961 seconds.
+2019-10-26 09:08:44,146 - INFO - SUCCESS  Save screen shot to: D:\my_test_script\UItest-branch\result\image\20191026090842.png, Spend 1.4322824478149414 seconds.
+2019-10-26 09:08:44,149 - INFO - SUCCESS  Load case name: 13、新建订单-添加需返单订单校验
+2019-10-26 09:08:45,150 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:45,534 - INFO - SUCCESS  Open url: <http://www.51shouhou.cn/singleBranch/#/order/add>, Spend 1.3824868202209473 seconds.
+2019-10-26 09:08:47,881 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-10-26 09:08:47,882 - INFO - SUCCESS  Refresh current page, Spend 2.346125841140747 seconds.
+2019-10-26 09:08:47,884 - INFO - SUCCESS  Wait page load... , Spend 0.0009763240814208984 seconds.
+2019-10-26 09:08:47,896 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系人"]')>, Spend 0.012691974639892578 seconds.
+2019-10-26 09:08:48,275 - INFO - SUCCESS  * Input message: AutoTest, Spend 0.3915107250213623 seconds
+2019-10-26 09:08:48,289 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.012692451477050781 seconds.
+2019-10-26 09:08:48,321 - INFO - SUCCESS  * Clear element <('xpath', '//input[@placeholder="请输入联系方式"]')> input message, Spend 0.04491114616394043 seconds.
+2019-10-26 09:08:48,335 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请输入联系方式"]')>, Spend 0.011715412139892578 seconds.
+2019-10-26 09:08:48,655 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.3319535255432129 seconds
+2019-10-26 09:08:48,667 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[1]')>, Spend 0.01074075698852539 seconds.
+2019-10-26 09:08:48,764 - INFO - SUCCESS  Select value: 陕西省, Spend 0.10837221145629883 seconds.
+2019-10-26 09:08:48,785 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[2]')>, Spend 0.02050161361694336 seconds.
+2019-10-26 09:08:48,901 - INFO - SUCCESS  Select value: 西安市, Spend 0.13570952415466309 seconds.
+2019-10-26 09:08:48,921 - INFO - SUCCESS  Find element <('xpath', '//label[text()="详细地址："]/../select[3]')>, Spend 0.017574787139892578 seconds.
+2019-10-26 09:08:49,025 - INFO - SUCCESS  Select value: 雁塔区, Spend 0.12399458885192871 seconds.
+2019-10-26 09:08:49,041 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="为了能及时提供服务，请填写详细地址"]')>, Spend 0.014644145965576172 seconds.
+2019-10-26 09:08:49,190 - INFO - SUCCESS  * Input message: 沙井村, Spend 0.16402387619018555 seconds
+2019-10-26 09:08:50,191 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:50,215 - INFO - SUCCESS  Find element <('xpath', '//input[@name="radio"and@value="需返单"]/following-sibling::i')>, Spend 0.023433446884155273 seconds.
+2019-10-26 09:08:50,325 - INFO - SUCCESS  * Click button -> <('xpath', '//input[@name="radio"and@value="需返单"]/following-sibling::i')>, Spend 0.1327834129333496 seconds.
+2019-10-26 09:08:51,326 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-10-26 09:08:51,354 - INFO - SUCCESS  Find element <('xpath', '//label[text()="工单类型："]/../select')>, Spend 0.025377273559570312 seconds.
+2019-10-26 09:08:51,451 - INFO - SUCCESS  Select value: 自动化测试网点01, Spend 0.12398600578308105 seconds.
+2019-10-26 09:08:51,468 - INFO - SUCCESS  Find element <('xpath', '//label[text()="服务类型："]/../select')>, Spend 0.01562047004699707 seconds.
+2019-10-26 09:08:51,584 - INFO - SUCCESS  Select value: 安装, Spend 0.1308300495147705 seconds.
+2019-10-26 09:08:51,597 - INFO - SUCCESS  Find element <('xpath', '//input[@placeholder="请选择家电品牌"]')>, Spend 0.012691736221313477 seconds.
+2019-10-26 09:08:51,739 - INFO - SUCCESS  * Input message: 海尔, Spend 0.15426039695739746 seconds
+2019-10-26 09:08:51,767 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品大类："]/../select')>, Spend 0.025385618209838867 seconds.
+2019-10-26 09:08:52,024 - INFO - SUCCESS  Select value: 家电X, Spend 0.28411436080932617 seconds.
+2019-10-26 09:08:52,055 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品品类："]/../select')>, Spend 0.03026747703552246 seconds.
+2019-10-26 09:08:52,319 - INFO - SUCCESS  Select value: 空调, Spend 0.29387545585632324 seconds.
+2019-10-26 09:08:52,358 - INFO - SUCCESS  Find element <('xpath', '//label[text()="产品小类："]/../select')>, Spend 0.038077354431152344 seconds.
+2019-10-26 09:08:52,502 - INFO - SUCCESS  Select value: 挂机, Spend 0.18159794807434082 seconds.
+2019-10-26 09:08:52,519 - INFO - SUCCESS  Find element <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.016597747802734375 seconds.
+2019-10-26 09:08:52,646 - INFO - SUCCESS  * Click button -> <('xpath', '//div[@class="btnMenubox"]/button[1]')>, Spend 0.14254426956176758 seconds.

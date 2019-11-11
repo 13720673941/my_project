@@ -11,6 +11,7 @@ import logging,time
 # 日志写入路径
 
 class Log:
+
     def __init__(self):
         """输出日志到控制台和日志记录"""
         self.log_file = logSavePath + '{0}.log'.format(time.strftime('%Y-%m-%d'))

@@ -67,6 +67,7 @@ class Del_Spare_Part(unittest.TestCase):
         self.assert_page.assert_equal(data["expect"],systemMsg)
 
 
+
     @classmethod
     def tearDownClass(cls):
         cls().assert_page.quit_browser()
@@ -74,6 +75,7 @@ class Del_Spare_Part(unittest.TestCase):
 
 
 if __name__ == '__main__':
+
     suits = unittest.TestLoader().loadTestsFromTestCase(Del_Spare_Part)
 
     unittest.TextTestRunner().run(suits)

@@ -17,7 +17,7 @@ if __name__ == '__main__':
     isPass = False
     # 定时间
     startTime = time.time()
-    timing = "09:42"
+    timing = "09:07"
     while True:
         # 获取当前时间
         time.sleep(1)
@@ -29,8 +29,8 @@ if __name__ == '__main__':
             # run_a_registerLogin.run()
             # run_b_alterPassword.run()
             run_c_orderManage.run()
-            run_d_customManage.run()
-            run_e_masterManage.run()
+            # run_d_customManage.run()
+            # run_e_masterManage.run()
             # run_f_operationManage.run()
             # run_g_financeManage.run()
             print('========== 结束 ==========')
