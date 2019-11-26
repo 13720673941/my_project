@@ -36,8 +36,8 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 登录经销账号下单
-        cls.manage_branch_use = read_config_data("自动化测试网点03","username")
-        cls.manage_branch_pwd = read_config_data("自动化测试网点03","password")
+        cls.manage_branch_use = read_config_data("西安超级售后有限公司","username")
+        cls.manage_branch_pwd = read_config_data("西安超级售后有限公司","password")
         cls.login.login_main(cls.manage_branch_use,cls.manage_branch_pwd)
         #  经销商下单程序下单
         cls.create_order_page.create_not_return_order()
@@ -46,8 +46,8 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         # 退出登录
         cls.login.click_logout_button()
         # 获取网点账号密码
-        cls.username = read_config_data("蓝魔科技","username")
-        cls.password = read_config_data("蓝魔科技","password")
+        cls.username = read_config_data("branch_01","username")
+        cls.password = read_config_data("branch_01","password")
         # 登录服务商网点
         cls.login.login_main(cls.username,cls.password)
         # 进入邀请经销商页面

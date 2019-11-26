@@ -64,7 +64,7 @@ class SearchOrderPage(BasePage):
     # 完成工单结束日期输入框
     finish_order_end_date = (By.XPATH,'//label[text()="完成日期"]/../div[2]/div/div/input')
     # 更多页面的搜索按钮
-    search_btn1 = (By.XPATH,'//label[text()="工单编号"]/../../../div[2]/div[14]/a')
+    search_btn1 = (By.XPATH,'//label[text()="工单编号"]/../../../div[2]//a[text()="搜索"]')
     # 搜索订单条数
     order_count = (By.XPATH,'//span[@class="ivu-page-total"]')
 

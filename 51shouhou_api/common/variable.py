@@ -58,7 +58,7 @@ def get_col_responseCode():
 
 def get_col_exception():
 
-    return Exception
+    return Variable.Exception
 
 def get_col_result():
 

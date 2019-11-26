@@ -36,8 +36,8 @@ class Alter_PhoneNum(unittest.TestCase):
         # 开始脚本
         mytest.start_test()
         # 获取登录的账号密码
-        cls.username = rwconfig.read_config_data('蓝魔科技','username')
-        cls.password = rwconfig.read_config_data('蓝魔科技','password')
+        cls.username = rwconfig.read_config_data('branch_01','username')
+        cls.password = rwconfig.read_config_data('branch_01','password')
         # 调用登录主程序登录
         cls.login.login_main(cls.username,cls.password)
         # 进入修改密码页面

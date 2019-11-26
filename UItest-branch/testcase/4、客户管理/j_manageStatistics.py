@@ -44,12 +44,12 @@ class Manage_Order_Statistics(unittest.TestCase):
         # 开始用例
         mytest.start_test()
         # 获取服务商账号信息
-        cls.server_use = read_config_data("蓝魔科技","username")
-        cls.server_pwd = read_config_data("蓝魔科技","password")
+        cls.server_use = read_config_data("branch_01","username")
+        cls.server_pwd = read_config_data("branch_01","password")
         # 登录服务商
         cls.login.login_main(cls.server_use,cls.server_pwd)
         # 获取经销商的名称
-        cls.manage_branch_name = read_config_data("蓝魔科技","manage_branch")
+        cls.manage_branch_name = read_config_data("branch_01","manage_branch")
         # 进入客户订单统计页面
         cls.order_statistics.enter_statistics_page()
         # 搜索经销商
@@ -68,8 +68,8 @@ class Manage_Order_Statistics(unittest.TestCase):
         cls.manage_pwd = read_config_data(cls.manage_branch_name,"password")
         cls.login.login_main(cls.manage_use,cls.manage_pwd)
         # 获取该经销商的合作服务商名称
-        cls.server_branch_name = read_config_data(cls.manage_branch_name,"branch001")
-        #  经销商下单程序下单
+        cls.server_branch_name = read_config_data(cls.manage_branch_name,"branch002")
+        # 经销商下单程序下单
         cls.create_order.create_not_return_order()
         # 获取单号
         cls.order_number = cls.base_page.get_order_number()
@@ -89,13 +89,13 @@ class Manage_Order_Statistics(unittest.TestCase):
         data = test_data["TestCase001"]
         # 打印测试用例名称
         self.base_page.print_case_name(data["CaseName"])
-        # 订单派给服务商 “蓝魔科技”
+        # 订单派给服务商 “branch_01”
         self.please_order.please_order_main(ordernumber=self.order_number,
                                             pagename=self.server_branch_name,
                                             please_to_branch=True)
         # 退出经销商
         self.login.click_logout_button()
-        # 登录服务商 "蓝魔科技"
+        # 登录服务商 "branch_01"
         self.login.login_main(self.server_use,self.server_pwd)
         # 进入经销商工单统计列表页
         self.public_operate()
@@ -114,7 +114,12 @@ class Manage_Order_Statistics(unittest.TestCase):
         # 打印测试用例名称
         self.base_page.print_case_name(data["CaseName"])
         # 获取派单师傅
-        master = read_config_data("蓝魔科技","master001")
+        master = read_config_data("branch_01","master001")
+        # 选择工单
+        self.please_order.enter_please_order_page()
+        self.base_page.select_new_order(self.order_number)
+        # 接单
+        self.please_order.click_take_order()
         # 派给师傅
         self.please_order.please_order_main(self.order_number,master)
         # 完成工单

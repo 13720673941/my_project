@@ -6,7 +6,7 @@
 from common import variable
 from common import filePath
 from xlutils.copy import copy
-import xlrd,datetime
+import xlrd,datetime,xlwt
 
 class OperateExcel():
 
@@ -14,12 +14,12 @@ class OperateExcel():
     获取excel单元格中的数据，使用对应的行列获取对应数据
     """
 
-    def __init__(self):
+    def __init__(self,Sheet):
 
-        # 读取数据excel文档
-        self.excel = xlrd.open_workbook(filePath.branchApi_path)
+        # 读取数据excel文档# 参数说明: formatting_info=True 保留原excel格式
+        self.excel = xlrd.open_workbook(filePath.branchApi_path,formatting_info=True)
         # 读取表格
-        self.table = self.excel.sheet_by_name("Sheet1")
+        self.table = self.excel.sheet_by_name(Sheet)
 
     def get_row_number(self,id):
         """获取excel中数据行数,以id为索引返回行数"""
@@ -83,13 +83,13 @@ class OperateExcel():
         date = datetime.datetime.now().strftime("%y-%m-%d %H:%M:%S")
         # 设置结果字段样式
         result_txt = str(date) + " -> " + result
-        # # 设置颜色
-        # if result == "PASS":
-        #     style_colour = xlwt.easyxf('pattern: pattern solid, fore_colour green;')
-        # else:
-        #     style_colour = xlwt.easyxf('pattern: pattern solid, fore_colour red;')
+        # 设置颜色
+        if result == "PASS":
+            style_colour = xlwt.easyxf('pattern: pattern solid, fore_colour green;')
+        else:
+            style_colour = xlwt.easyxf('pattern: pattern solid, fore_colour red;')
         # 写入测试结果,行、列、结果、样式
-        ws.write(self.get_row_number(id),variable.get_col_result(),result_txt)
+        ws.write(self.get_row_number(id),variable.get_col_result(),result_txt,style_colour)
         # 保存结果
         workbook.save(filePath.branchApi_path)
 

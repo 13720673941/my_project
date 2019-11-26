@@ -47,8 +47,8 @@ class Teamwork_Visit_Operate(unittest.TestCase):
         # 打印测试用例名称
         self.base_page.print_case_name(data["CaseName"])
         # 获取被邀请的账号信息
-        it_username = read_config_data("自动化测试网点04","username")
-        it_password = read_config_data("自动化测试网点04","password")
+        it_username = read_config_data("西安快生活科技公司","username")
+        it_password = read_config_data("西安快生活科技公司","password")
         # 登录该网点
         self.login.login_main(it_username,it_password)
         # 进入合作申请页面-收到的申请
@@ -67,8 +67,8 @@ class Teamwork_Visit_Operate(unittest.TestCase):
         # 退出登录
         self.login.click_logout_button()
         # 获取我方登录账号
-        my_username = read_config_data("蓝魔科技","username")
-        my_password = read_config_data("蓝魔科技","password")
+        my_username = read_config_data("branch_01","username")
+        my_password = read_config_data("branch_01","password")
         # 登录该账号
         self.login.login_main(my_username,my_password)
         # 进入合作申请页面-收到的申请

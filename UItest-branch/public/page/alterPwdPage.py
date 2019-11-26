@@ -32,7 +32,7 @@ class AlterPwdPage(BasePage):
     # 确定修改按钮
     confirm_alter = (By.XPATH,'//span[contains(.,"确定修改")]')
     # 密码->修改按钮>>>>>>
-    pwd_alter_btn = (By.XPATH,'//label[text()="登陆密码："]/../div/p/a')
+    pwd_alter_btn = (By.XPATH,'//label[text()="登录密码："]/../div/p/a')
     # 原登录密码输入框
     old_pwd_input = (By.XPATH,'//input[@placeholder="输入原登录密码"]')
     # 原来登录密码系统提示

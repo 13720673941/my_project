@@ -38,8 +38,8 @@ class Visit_Order(unittest.TestCase):
         self.search_order = SearchOrderPage(self.dr)
         self.assert_mode = Assert(self.dr)
         # 获取网点登录数据
-        UserName = read_config_data('蓝魔科技','username')
-        PassWord = read_config_data('蓝魔科技','password')
+        UserName = read_config_data('branch_01','username')
+        PassWord = read_config_data('branch_01','password')
         # 网点登录
         self.loginPage.login_main(UserName,PassWord)
         #  经销商下单程序下单
@@ -47,7 +47,7 @@ class Visit_Order(unittest.TestCase):
         #  获取单号
         self.OrderNumber = self.basePage.get_order_number()
         # 获取派单数据
-        Master = read_config_data('蓝魔科技','master001')
+        Master = read_config_data('branch_01','master001')
         # 派单
         self.pleaseOrderPage.please_order_main(self.OrderNumber,Master)
         # 完成服务

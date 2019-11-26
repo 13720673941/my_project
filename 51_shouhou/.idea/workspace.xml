@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f427017-6c59-4df6-9e94-3e6caa0bab85" name="Default" comment="Alter script run.py">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../51shouhou_api/common/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../51shouhou_api/script/login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my_python/7、正则/7.8、正则表达式[].py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/common/filePath.py" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/common/filePath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/common/operateExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/common/operateExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/common/operateJson.py" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/common/operateJson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/common/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/common/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/common/variable.py" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/common/variable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/data/branchApi.xls" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/data/branchApi.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/data/requestData.json" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/data/requestData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Branch_Api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Branch_Api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/testdata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/logconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/logconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/newReturnFactoryPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/newReturnFactoryPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_timing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../other_file/学习/appium爬坑记.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../other_file/学习/appium爬坑记.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_python/7、正则/7.0、正则符号表示.py" beforeDir="false" afterPath="$PROJECT_DIR$/../my_python/7、正则/7.0、正则符号表示.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,14 +129,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Run/Run_AllScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="29">
               <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
                 <element signature="e#76#115#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run/Run_Branch_OrderFlow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding>
+                <element signature="e#76#95#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Common/Pubilc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="34" column="14" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="34" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -623,6 +649,7 @@
       <workItem from="1561459668668" duration="4000" />
       <workItem from="1571831990105" duration="38000" />
       <workItem from="1571832322634" duration="55000" />
+      <workItem from="1573997386443" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="初始化上传51售后流程脚本">
       <created>1561434804475</created>
@@ -674,7 +701,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="932118000" />
+    <option name="totallyTimeSpent" value="932161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,7 +716,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28150135" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2855228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -963,16 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run/Run_Branch_OrderFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#76#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Run/Run_Brands_OrderFlow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1075,13 +1092,6 @@
     <entry file="file://$PROJECT_DIR$/Report/品牌商订单流程/【正式品牌商】品牌商订单流程19-03-23 16_47_01.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Common/Pubilc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Config/EmailMessage.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1135,11 +1145,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Run/Run_AllScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="29">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="e#76#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run/Run_Branch_OrderFlow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#76#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Pubilc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="34" selection-end-column="14" />
         </state>
       </provider>
     </entry>

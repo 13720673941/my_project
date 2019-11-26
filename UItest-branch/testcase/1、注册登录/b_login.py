@@ -33,7 +33,7 @@ class Branch_Login(unittest.TestCase):
         mytest.start_test()
         cls.loginPage.enter_login_page()
         # 获取登陆新密码
-        cls.new_pwd = rwconfig.read_config_data('蓝魔科技','password')
+        cls.new_pwd = rwconfig.read_config_data('branch_01','password')
         # 设置登陆成功的密码
         loginData[-1]["password"] = cls.new_pwd
 
@@ -65,6 +65,5 @@ class Branch_Login(unittest.TestCase):
 if __name__ == '__main__':
     # unittest.main()
 
-    suit = unittest.TestSuite()
-    suit.addTest(Branch_Login("test_login"))
+    suit = unittest.TestLoader().loadTestsFromTestCase(Branch_Login)
     unittest.TextTestRunner().run(suit)

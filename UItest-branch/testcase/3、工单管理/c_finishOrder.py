@@ -42,15 +42,15 @@ class Finish_Order(unittest.TestCase):
         cls.search_order = SearchOrderPage(cls.dr)
         mytest.start_test()
         # 获取网点登录数据
-        UserName = read_config_data('蓝魔科技','username')
-        PassWord = read_config_data('蓝魔科技','password')
+        UserName = read_config_data('branch_01','username')
+        PassWord = read_config_data('branch_01','password')
         cls.loginPage.login_main(UserName,PassWord)
         #  经销商下单程序下单
         cls.addOrderPage.create_not_return_order()
         #  获取单号
         cls.OrderNumber = cls.basePage.get_order_number()
         # 获取派单数据
-        Master = read_config_data('蓝魔科技','master001')
+        Master = read_config_data('branch_01','master001')
         # 进入派单页面
         cls.pleaseOrderPage.enter_please_order_page()
         # 派单

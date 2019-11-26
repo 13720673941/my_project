@@ -15,7 +15,7 @@ class ServerBranchPage(BasePage):
     """
 
     # 父路径该页面有两个一样的页面需要从根目录定位
-    parent_xpath = '//div[@id="main"]/following-sibling::div[21]/'
+    parent_xpath = '//div[@id="main"]/following-sibling::div[24]/'
     # 切换服务商的table按钮
     server_branch_table = (By.XPATH,'//a[contains(text(),"服务商")]')
     # 添加服务商按钮
@@ -329,16 +329,16 @@ class ServerBranchPage(BasePage):
         # 遍历所有的省份的选择属性值，判断是否已经选择
         for i in range(1,provinces_count):
             # 获取该索引位置的省份的 label、span 元素的 class 属性
-            span_attribute = self.get_att(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+            span_attribute = self.get_att(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
                                                             '../ul/li['+str(i)+']/.//label/span'),attribute="class")
             # 判断省份一下市区是全部选择还是漏选::全选单击清除，漏选双击清除
             if all_is_select in span_attribute:
                 # 该情况为省份全选单击所选择的省份
-                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
                                                     '../ul/li['+str(i)+']/.//input'))
             elif all_is_not_select in span_attribute:
                 # 该情况为漏选省份后面的地址双击省份清空所有
-                self.mouse_double_click(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                self.mouse_double_click(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
                                                       '../ul/li['+str(i)+']/.//input'))
             else:
                 pass
@@ -357,7 +357,7 @@ class ServerBranchPage(BasePage):
                 # 判断省份的名称在所要选择的省份列表中时，选择该省份
                 if province_name in province_list:
                     self.sleep(1)
-                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务省份"]/'
+                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
                                                     '../ul/li['+str(i+1)+']/.//input'))
             except Exception as e:
                 raise e
@@ -374,7 +374,7 @@ class ServerBranchPage(BasePage):
                 # 判断省份的名称在所要选择的省份列表中时，选择该省份
                 if city_name in city_list:
                     self.sleep(1)
-                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务城市"]/'
+                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务城市"]/'
                                                         '../ul/li['+str(i+1)+']/.//input'))
             except Exception as e:
                 raise e
@@ -391,7 +391,7 @@ class ServerBranchPage(BasePage):
                 # 判断省份的名称在所要选择的省份列表中时，选择该省份
                 if area_name in area_list:
                     self.sleep(1)
-                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[21]/.//div[text()="选择服务区/县"]/'
+                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务区/县"]/'
                                                         '../ul/li['+str(i+1)+']/.//input'))
             except Exception as e:
                 raise e

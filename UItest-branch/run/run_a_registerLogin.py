@@ -13,6 +13,7 @@ def run():
     runreport.run_report(ReportName='register_and_login_test_report_', FileName='1、登录注册', title='Register/Login Test Result',
                          description='register and login case test result.', case=suit)
 
+
 if __name__ == '__main__':
     run()
 

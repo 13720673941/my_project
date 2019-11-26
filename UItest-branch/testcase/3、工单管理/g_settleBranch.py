@@ -12,7 +12,6 @@ from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.finishOrderPage import FinishOrder
 from public.page.settleOrderPage import SettleOrderPage
 from public.page.searchOrderPage import SearchOrderPage
-from config.pathconfig import *
 from public.common.assertmode import Assert
 import unittest
 '''
@@ -44,16 +43,16 @@ class Manage_Settle(unittest.TestCase):
         cls.search_order = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
         mytest.start_test()
-        # 登录网点 蓝魔科技
-        cls.Use = rwconfig.read_config_data('蓝魔科技',"username")
-        cls.Pwd = rwconfig.read_config_data('蓝魔科技',"password")
+        # 登录网点 branch_01
+        cls.Use = rwconfig.read_config_data('branch_01',"username")
+        cls.Pwd = rwconfig.read_config_data('branch_01',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
-        #  经销商下单程序下单
+        # 经销商下单程序下单
         cls.createOrder.create_not_return_order()
         # 获取工单单号
         cls.OrderNum = cls.base.get_order_number()
         # 获取派单到服务商数据 关联派单数据中的信息
-        BranchName1 = rwconfig.read_config_data('蓝魔科技','branch001')
+        BranchName1 = rwconfig.read_config_data('branch_01','branch001')
         # 派单到服务商1-自动化测试网点01
         cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True)
         # 退出登录
@@ -65,6 +64,11 @@ class Manage_Settle(unittest.TestCase):
         cls.login.login_main(cls.Use1,cls.Pwd1)
         # 获取派单到服务商数据 关联派单数据中的信息
         BranchName2 = rwconfig.read_config_data(BranchName1,'branch001')
+        # 进入派单页面
+        cls.pleaseOrder.enter_please_order_page()
+        # 接单
+        cls.base.select_new_order(cls.OrderNum)
+        cls.pleaseOrder.click_take_order()
         # 派单到服务商2-自动化测试网点02
         cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName2,please_to_branch=True)
         # 退出登录
@@ -76,6 +80,11 @@ class Manage_Settle(unittest.TestCase):
         cls.login.login_main(cls.Use2, cls.Pwd2)
         # 获取派单师傅
         MasterName = rwconfig.read_config_data(BranchName2,'master001')
+        # 进入派单页面
+        cls.pleaseOrder.enter_please_order_page()
+        # 接单
+        cls.base.select_new_order(cls.OrderNum)
+        cls.pleaseOrder.click_take_order()
         # 服务商派单到师傅
         cls.pleaseOrder.please_order_main(cls.OrderNum,MasterName)
         # 网点完成服务
@@ -236,7 +245,7 @@ class Manage_Settle(unittest.TestCase):
         self.settleOrder.click_settle_btn()
         self.base.sleep(1)
         # 获取经销商未结算提示进行断言
-        self.assert_mode.assert_el_not_in_page(self.settleOrder.get_settle_msg())
+        self.assert_mode.assert_el_not_in_page(self.settleOrder.not_settle_msg_is_display())
 
     def test_manage_settle008(self):
         """经销商工单结算(有预报价)-结算后服务商端显示的经销商结算金额校验"""

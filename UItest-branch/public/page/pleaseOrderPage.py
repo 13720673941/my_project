@@ -37,6 +37,8 @@ class PleaseOrderPage(BasePage):
     confirm_btn = (By.XPATH,'//b[text()="派单给师傅"]/../../../../following-sibling::div[1]/button[2]')
     # 暂停接单后师傅标记暂停接单字段
     stop_take_order_text = (By.XPATH,'//span[text()="（暂停接单）"]')
+    # 点击接单按钮
+    take_order_btn = (By.XPATH,'//a[contains(text(),"接单")]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
@@ -100,6 +102,10 @@ class PleaseOrderPage(BasePage):
         """暂停接单是否在页面上"""
         return self.is_display(self.stop_take_order_text)
 
+    def click_take_order(self):
+        """服务商接单"""
+        self.click_button(self.take_order_btn)
+
     def please_order_main(self,ordernumber,pagename,please_to_branch=False,set_order_money=True):
         """
         :param OrderNumber:     订单单号
@@ -134,5 +140,6 @@ class PleaseOrderPage(BasePage):
         if self.get_system_msg() == "派工成功" or "派单成功":
             log.info('{0} ** Branch please order is success!'.format(self.success))
         else:
-            log.error('{0} ** Branch please order is fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
+            log.error('{0} ** Branch please order is fail, system msg: {1}.'
+                      .format(self.fail,self.get_system_msg()))
 

@@ -32,8 +32,10 @@ class Set_Server(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 获取网点账号密码
-        cls.username = read_config_data("蓝魔科技","username")
-        cls.password = read_config_data("蓝魔科技","password")
+        cls.username = read_config_data("branch_01","username")
+        cls.password = read_config_data("branch_01","password")
+        # 获取经销商名称
+        cls.manage_branch = read_config_data("branch_01","manage_branch")
         # 登录网点
         cls.login.login_main(cls.username,cls.password)
         # 进入邀请经销商页面
@@ -41,7 +43,11 @@ class Set_Server(unittest.TestCase):
 
     def setUp(self):
         self.base_page.refresh_page()
+        # 搜索经销商
+        self.dealer_page.input_search_message(self.manage_branch)
+        self.dealer_page.click_search()
         # 点击设置服务
+        self.base_page.sleep(1)
         self.dealer_page.click_set_server()
 
     def test_Set_Server001(self):
@@ -109,7 +115,7 @@ class Set_Server(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         # 关闭浏览
-        cls.base_page.quit_browser()
+        cls().base_page.quit_browser()
         mytest.end_test()
 
 

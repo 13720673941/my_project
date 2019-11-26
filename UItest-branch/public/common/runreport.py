@@ -59,6 +59,7 @@ def write_test_result(FileName,test_result):
         # 写入执行报错用例的id
         write_txt_data(test_result_path, "Error test case ID: " + "\n")
         for case_error,reason_error in test_result.errors:
+            print(test_result.errors)
             # 写入失败用例的id 和 reason
             write_txt_data(test_result_path," * "+case_error.id()+"\n")
     # 获取失败的用例列表

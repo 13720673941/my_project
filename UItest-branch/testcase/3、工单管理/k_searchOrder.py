@@ -44,8 +44,8 @@ class Search_Order(unittest.TestCase):
         ddtData2[6]["CreateDate"] = cls.basePage.get_now_time()
         ddtData2[7]["FinishDate"] = cls.basePage.get_now_time() # 待结算写完
         # 获取网点登录数据
-        UserName = rwconfig.read_config_data('蓝魔科技','username')
-        PassWord = rwconfig.read_config_data('蓝魔科技','password')
+        UserName = rwconfig.read_config_data('branch_01','username')
+        PassWord = rwconfig.read_config_data('branch_01','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
         # 进入全部工单页面

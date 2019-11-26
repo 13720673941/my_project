@@ -24,7 +24,7 @@ class DealerBranchPage(BasePage):
     # 搜索按钮
     search_branch_btn = (By.XPATH,'//a[text()="搜索"]')
     # 服务设置按钮
-    set_server_btn = (By.XPATH,'(//a[contains(text(),"服务设置")])[5]')
+    set_server_btn = (By.XPATH,'(//a[contains(text(),"服务设置")])[2]')
     # 合作类型选择框
     teamwork_type_select = (By.XPATH,'//label[text()="合作类型："]/.././/input[@value="派单"]')
     # 授权服务类型选择框

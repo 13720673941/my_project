@@ -36,8 +36,8 @@ class Add_Brands(unittest.TestCase):
         # 开始执行脚本
         mytest.start_test()
         # 获取网点登录账号密码
-        username = read_config_data("蓝魔科技","username")
-        password = read_config_data("蓝魔科技","password")
+        username = read_config_data("branch_01","username")
+        password = read_config_data("branch_01","password")
         cls.login_page.login_main(username,password)
         # 进入客户列表页面
         cls.brands_page.enter_customer_list_page()
@@ -102,6 +102,6 @@ if __name__ == '__main__':
 
     suits = unittest.TestSuite()
     suits.addTest(Add_Brands("test_add_brands001"))
-    suits.addTest(Add_Brands("test_add_brands001"))
+    # suits.addTest(Add_Brands("test_add_brands001"))
 
     unittest.TextTestRunner().run(suits)

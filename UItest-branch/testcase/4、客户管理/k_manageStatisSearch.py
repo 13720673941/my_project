@@ -37,8 +37,8 @@ class ManageStatisticsSearch(unittest.TestCase):
         # 开始执行
         mytest.start_test()
         # 获取服务商账号信息
-        cls.server_use = read_config_data("蓝魔科技","username")
-        cls.server_pwd = read_config_data("蓝魔科技","password")
+        cls.server_use = read_config_data("branch_01","username")
+        cls.server_pwd = read_config_data("branch_01","password")
         # 登录服务商
         cls.login.login_main(cls.server_use,cls.server_pwd)
 

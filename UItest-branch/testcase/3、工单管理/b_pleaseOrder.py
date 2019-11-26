@@ -10,7 +10,6 @@ from public.common.basepage import BasePage
 from public.page.pleaseOrderPage import PleaseOrderPage
 from public.page.addOrderPage import AddOrderPage
 from public.page.loginPage import LoginPage
-from config.pathconfig import *
 import unittest,ddt
 """
 网点派单功能测试用例脚本：
@@ -40,8 +39,8 @@ class Please_Order(unittest.TestCase):
         # 开始
         mytest.start_test()
         # 获取网点登录数据
-        UserName = read_config_data('蓝魔科技','username')
-        PassWord = read_config_data('蓝魔科技','password')
+        UserName = read_config_data('branch_01','username')
+        PassWord = read_config_data('branch_01','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
         # 创建订单

@@ -5,7 +5,7 @@
 
 from common import filePath
 from common.operateExcel import OperateExcel
-import json
+import json,demjson
 
 class OperateJson():
 
@@ -13,17 +13,17 @@ class OperateJson():
     获取json请求数据
     """
 
-    def __init__(self):
+    def __init__(self,Sheet):
 
         # 实例化类
-        self.operate_excel = OperateExcel()
+        self.operate_excel = OperateExcel(Sheet)
 
     def read_json(self):
 
         # 加载读取所有json文件
-        with open(filePath.requestData_path,encoding="utf-8") as f:
+        with open(filePath.requestData_path,encoding="gbk") as f:
             # 返回一个字典格式的数据类型
-            return json.load(f)
+            return demjson.decode(json.load(f))
 
     def get_request_data(self,id):
         """获取对应的请求数据"""
@@ -41,11 +41,9 @@ class OperateJson():
 
 
 
+a = OperateJson("login").get_request_data("login_001")
 
-
-# a = OperateJson().get_request_data("login_001")
-#
-# print(a)
+print(a)
 
 
 

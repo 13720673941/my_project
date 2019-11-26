@@ -89,4 +89,4 @@ if __name__ == '__main__':
 
     suit = unittest.TestSuite()
     suit.addTest(Register_Branch('test_registerBranch'))
-    unittest.TextTestRunner().run(suit)
+    unittest.TextTestRunner(verbosity=3).run(suit)

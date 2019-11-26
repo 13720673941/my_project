@@ -38,16 +38,16 @@ class Order_Details(unittest.TestCase):
         cls.order_detail = OrderDetailsPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
-        # 登录网点 蓝魔科技
-        cls.Use = read_config_data('蓝魔科技',"username")
-        cls.Pwd = read_config_data('蓝魔科技',"password")
+        # 登录网点 branch_01
+        cls.Use = read_config_data('branch_01',"username")
+        cls.Pwd = read_config_data('branch_01',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
         #  经销商下单程序下单
         cls.create_order.create_not_return_order()
         # 获取工单单号
         cls.order_number = cls.base_page.get_order_number()
         # 获取派单师傅
-        master = read_config_data('蓝魔科技','master001')
+        master = read_config_data('branch_01','master001')
         # 派单到师傅
         cls.please_order.please_order_main(cls.order_number,master)
 

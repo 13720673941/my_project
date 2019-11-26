@@ -33,8 +33,8 @@ class Search_Dealer(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 获取网点账号密码
-        cls.username = read_config_data("蓝魔科技","username")
-        cls.password = read_config_data("蓝魔科技","password")
+        cls.username = read_config_data("branch_01","username")
+        cls.password = read_config_data("branch_01","password")
         # 登录网点
         cls.login.login_main(cls.username,cls.password)
         # 进入邀请经销商页面
@@ -68,6 +68,5 @@ class Search_Dealer(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-    suit = unittest.TestSuite()
-    suit.addTest(Search_Dealer("test_search_dealer"))
-    unittest.TextTestRunner().run(suit)
+    suits = unittest.TestLoader().loadTestsFromTestCase(Search_Dealer)
+    unittest.TextTestRunner().run(suits)

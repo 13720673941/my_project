@@ -38,8 +38,8 @@ class Set_InvalidOrder(unittest.TestCase):
         cls.search_order = SearchOrderPage(cls.dr)
         mytest.start_test()
         # 获取网点登录数据
-        UserName = rwconfig.read_config_data('蓝魔科技','username')
-        PassWord = rwconfig.read_config_data('蓝魔科技','password')
+        UserName = rwconfig.read_config_data('branch_01','username')
+        PassWord = rwconfig.read_config_data('branch_01','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
         #  经销商下单程序下单
@@ -70,7 +70,7 @@ class Set_InvalidOrder(unittest.TestCase):
     def test_setInvalid002(self):
         """待服务商派单订单不能设置无效工单校验"""
         # 获取派单数据
-        BranchName = rwconfig.read_config_data('蓝魔科技','branch002')
+        BranchName = rwconfig.read_config_data('branch_01','branch002')
         InvalidData = Data["TestCase001"]
         self.basePage.print_case_name(InvalidData["CaseName"])
         # 刷新页面

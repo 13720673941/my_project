@@ -43,16 +43,16 @@ class Server_Order_Statistics(unittest.TestCase):
         # 开始用例
         mytest.start_test()
         # 获取经销商账号信息
-        cls.manage_use = read_config_data("蓝魔科技","username")
-        cls.manage_pwd = read_config_data("蓝魔科技","password")
+        cls.manage_use = read_config_data("branch_01","username")
+        cls.manage_pwd = read_config_data("branch_01","password")
         # 登录服务商
         cls.login.login_main(cls.manage_use,cls.manage_pwd)
         # 进入订单统计页面
         cls.order_statistics.enter_statistics_page()
         # 点击table切换服务商
         cls.order_statistics.click_table_to_server()
-        # 获取网点：蓝魔科技 的合作服务商
-        cls.server_branch_name = read_config_data("蓝魔科技","branch001")
+        # 获取网点：branch_01 的合作服务商
+        cls.server_branch_name = read_config_data("branch_01","branch001")
         # 搜索该服务商
         cls.order_statistics.input_customer_search_keyword(keyword=cls.server_branch_name)
         # 点击搜索
@@ -112,6 +112,10 @@ class Server_Order_Statistics(unittest.TestCase):
         self.login.login_main(self.server_use,self.server_pwd)
         # 获取服务商师傅
         master = read_config_data(self.server_branch_name,"master001")
+        self.please_order.enter_please_order_page()
+        self.base_page.select_new_order(self.order_number)
+        # 接单
+        self.please_order.click_take_order()
         # 派单到师傅
         self.please_order.please_order_main(ordernumber=self.order_number,
                                             pagename=master)

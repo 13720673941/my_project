@@ -13,3 +13,5 @@ branchApi_path = "../data/branchApi.xls"
 publicData_path = "../data/publicData.ini"
 # 保存接口 Body 请求数据的json格式文件
 requestData_path = "../data/requestData.json"
+# 日志保存路径
+log_save_path = "../result/log/"
