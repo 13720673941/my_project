@@ -31,9 +31,9 @@ class FinanceManagePage(BasePage):
     # 搜索按钮
     search_btn = (By.XPATH,'//a[contains(text(),"搜索")]')
     # 结算时间开始日期
-    settle_start_time = (By.XPATH,'//label[contains(text(),"结算时间")]/../div/div[1]//input')
+    settle_start_time = (By.XPATH,'//label[contains(text(),"时间")]/../div/div[1]//input')
     # 结算时间结束日期
-    settle_end_time = (By.XPATH,'//label[contains(text(),"结算时间")]/../div/div[2]//input')
+    settle_end_time = (By.XPATH,'//label[contains(text(),"时间")]/../div/div[2]//input')
     # 查询按钮
     find_btn = (By.XPATH,'//a[contains(text(),"查询")]')
     # 收入列表第一行全部信息

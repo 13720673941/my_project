@@ -40,8 +40,8 @@ class Return_Order(unittest.TestCase):
         cls.assert_mode = Assert(cls.dr)
         mytest.start_test()
         # 获取网点登录数据
-        UserName = rwconfig.read_config_data('branch_01','username')
-        PassWord = rwconfig.read_config_data('branch_01','password')
+        UserName = rwconfig.read_config_data('西安好家帮家政有限公司','username')
+        PassWord = rwconfig.read_config_data('西安好家帮家政有限公司','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
         # 经销商下单程序下单
@@ -49,7 +49,7 @@ class Return_Order(unittest.TestCase):
         # 获取单号
         cls.OrderNumber = cls.basePage.get_order_number()
         # 获取派单师傅
-        master = rwconfig.read_config_data('branch_01','master001')
+        master = rwconfig.read_config_data('西安好家帮家政有限公司','master001')
         # 派单
         cls.pleaseOrder.please_order_main(cls.OrderNumber,master)
         # 完单

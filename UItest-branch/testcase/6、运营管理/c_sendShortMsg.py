@@ -38,8 +38,8 @@ class Send_ShortMsg(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 获取网点账号密码
-        username = read_config_data("XM科技有限公司", "username")
-        password = read_config_data("XM科技有限公司", "password")
+        username = read_config_data("西安超级售后有限公司", "username")
+        password = read_config_data("西安超级售后有限公司", "password")
         # 网点登录
         cls.login.login_main(username, password)
         # 获取工单余量
@@ -49,7 +49,7 @@ class Send_ShortMsg(unittest.TestCase):
         # 获取单号
         cls.order_number = cls.base_page.get_order_number()
         # 获取派单师傅
-        master = read_config_data("XM科技有限公司", "master001")
+        master = read_config_data("西安超级售后有限公司", "master001")
         # 派单
         cls.please_order.please_order_main(cls.order_number, master)
 

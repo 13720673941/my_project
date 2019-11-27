@@ -36,8 +36,8 @@ class Add_Brands(unittest.TestCase):
         # 开始执行脚本
         mytest.start_test()
         # 获取网点登录账号密码
-        username = read_config_data("branch_01","username")
-        password = read_config_data("branch_01","password")
+        username = read_config_data("西安好家帮家政有限公司","username")
+        password = read_config_data("西安好家帮家政有限公司","password")
         cls.login_page.login_main(username,password)
         # 进入客户列表页面
         cls.brands_page.enter_customer_list_page()

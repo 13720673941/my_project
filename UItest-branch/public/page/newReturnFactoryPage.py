@@ -28,3 +28,5 @@ class NewReturnFactoryPage(BasePage):
     save_remark_btn = (By.XPATH,'//div[contains(text(),"备件返厂")]/../../div[3]//button[2]')
     # 确认返厂按钮
     confirm_return_factory_btn = (By.XPATH,'(//tr[@class="ivu-table-row"])[1]/td[3]//a')
+
+    def

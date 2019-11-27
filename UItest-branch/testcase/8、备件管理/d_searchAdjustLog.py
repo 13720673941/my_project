@@ -38,8 +38,8 @@ class Adjust_Record(unittest.TestCase):
         # 时间搜索期望值赋值处理
         test_data[1]["expect"] = cls.base_page.get_now_time()
         # 获取测试账号信息
-        username = rwconfig.read_config_data("蓝魔科技", "username")
-        password = rwconfig.read_config_data("蓝魔科技", "password")
+        username = rwconfig.read_config_data("西安好家帮家政有限公司", "username")
+        password = rwconfig.read_config_data("西安好家帮家政有限公司", "password")
         # 登录网点
         cls.login.login_main(username, password)
         # 进入公司库存页面

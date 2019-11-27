@@ -21,18 +21,18 @@ class TeamWorkNewsPage(BasePage):
     # 第一行所有的字段信息
     first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
     # 接收端网点拒绝成为服务商申请
-    refuse_manage_visit = (By.XPATH,'//tr[@class="ivu-table-row"]//span[text()="经销商"]/../../..//a[2]')
+    refuse_manage_visit = (By.XPATH,'//tr[@class="ivu-table-row"][1]//a[contains(text(),"拒绝")]')
     # 确定拒绝申请合作
     confirm_refuse_btn = (By.XPATH,'//div[contains(text(),"是否")]/..//a[2]')
     # 发出的申请中的已拒绝字段-我方
-    my_refuse_text = (By.XPATH,'//tr[@class="ivu-table-row"]//span[text()="服务商"]/../../../td[6]/div/div')
+    my_refuse_text = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[6]/div/div')
     # 发出的申请中的已拒绝字段-他方
-    it_refuse_text = (By.XPATH, '//tr[@class="ivu-table-row"]//span[text()="经销商"]/../../../td[6]/div/div')
+    it_refuse_text = (By.XPATH, '//tr[@class="ivu-table-row"][1]//td[6]/div/div')
     # 发出端网点撤销服务商申请
-    del_teamwork_btn1 = (By.XPATH,'//tr[@class="ivu-table-row"]//span[text()="经销商"]/../../..//a')
-    del_teamwork_btn2 = (By.XPATH,'//tr[@class="ivu-table-row"]//span[text()="服务商"]/../../..//a')
+    del_teamwork_btn1 = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[7]//a')
+    del_teamwork_btn2 = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[7]//a')
     # 再次邀请
-    again_to_visit = (By.XPATH,'//tr[@class="ivu-table-row"]//span[text()="服务商"]/../../../td[7]//a')
+    again_to_visit = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[7]//a')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)

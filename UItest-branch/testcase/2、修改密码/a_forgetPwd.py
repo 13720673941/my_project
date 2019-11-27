@@ -34,7 +34,7 @@ class Forget_Pwd(unittest.TestCase):
         cls.login = LoginPage(cls.dr)
         cls.assertMode = Assert(cls.dr)
         # 获取旧密码
-        cls.old_pwd = rwconfig.read_config_data('branch_01','password')
+        cls.old_pwd = rwconfig.read_config_data('西安好家帮家政有限公司','password')
         # 旧密码替换 15 测试用例的密码
         Data3[0]["password"] = cls.old_pwd
         # 获取新密码
@@ -76,7 +76,7 @@ class Forget_Pwd(unittest.TestCase):
         self.assertMode.assert_equal(Data["expect"],Msg)
         if Msg == '密码修改成功':
             # 把修改的密码写入配置文件中
-            rwconfig.write_config_data('branch_01','password',self.new_pwd)
+            rwconfig.write_config_data('西安好家帮家政有限公司','password',self.new_pwd)
             print('New password: {0}'.format(self.new_pwd))
 
     @ddt.data(*Data1)

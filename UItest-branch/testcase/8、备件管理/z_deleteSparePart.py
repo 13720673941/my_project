@@ -35,8 +35,8 @@ class Del_Spare_Part(unittest.TestCase):
         # 开始执行测试用例
         mytest.start_test()
         # 获取测试账号信息
-        username = rwconfig.read_config_data("蓝魔科技", "username")
-        password = rwconfig.read_config_data("蓝魔科技", "password")
+        username = rwconfig.read_config_data("西安好家帮家政有限公司", "username")
+        password = rwconfig.read_config_data("西安好家帮家政有限公司", "password")
         # 登录网点
         cls.login.login_main(username, password)
         # 进入公司库存页面

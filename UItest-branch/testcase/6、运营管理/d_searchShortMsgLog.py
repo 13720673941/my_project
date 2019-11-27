@@ -34,8 +34,8 @@ class Search_ShortMsg_Log(unittest.TestCase):
         cls.shortMsg_log = ShortMsgLogPage(cls.driver)
         mytest.start_test()
         # 获取网点登录账号信息
-        username = read_config_data("XM科技有限公司", "username")
-        password = read_config_data("XM科技有限公司", "password")
+        username = read_config_data("西安超级售后有限公司", "username")
+        password = read_config_data("西安超级售后有限公司", "password")
         # 登录
         cls.login.login_main(username, password)
         # 进入短信发送记录页面

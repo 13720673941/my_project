@@ -262,8 +262,8 @@
       {"CaseName": "4、添加经销商-用户账号格式左边界值校验","PhoneNum": "1357259724","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
       {"CaseName": "5、添加经销商-用户账号格式右边界值校验","PhoneNum": "135725972411","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
       {"CaseName": "6、添加经销商-用户账号格式校验","PhoneNum": "branch!@#我","RemarkName": "AutoTest","expect": "请输入正确的客户主账号"},
-      {"CaseName": "7、添加经销商-成功邀请经销商校验","PhoneNum": "13572597243","RemarkName": "AutoTest","expect": "添加成功"},
-      {"CaseName": "8、添加经销商-重复邀请经销商校验","PhoneNum": "13572597243","RemarkName": "AutoTest","expect": "您已申请过该经销商"}
+      {"CaseName": "7、添加经销商-成功邀请经销商校验","PhoneNum": "13200000001","RemarkName": "AutoTest","expect": "添加成功"},
+      {"CaseName": "8、添加经销商-重复邀请经销商校验","PhoneNum": "13200000001","RemarkName": "AutoTest","expect": "您已申请过该经销商"}
     ],
     "search_branch_fnc": [
       {"CaseName": "9、客户搜索-按客户手机号搜索校验","SearchInfo": "13700000002","expect": "西安瑞晟科技有限公司"},
@@ -362,7 +362,7 @@
   "21": "/*合作师傅列表功能测试用例*/",
   "MasterListPage": {
     "visit_master_fnc": {
-      "TestCase001": {"CaseName": "1、添加师傅-自动带出师傅名称校验","MasterPhone": "13720673941","expect": "邓鹏飞"},
+      "TestCase001": {"CaseName": "1、添加师傅-自动带出师傅名称校验","MasterPhone": "13720673941","expect": "小米科技"},
       "TestCase002": {"CaseName": "2、添加师傅-未注册的师傅邀请提示发送短信校验","MasterPhone": "13900000001","expect": "师傅尚未注册，将会发送短信邀请通知！"},
       "TestCase003": {"CaseName": "3、添加师傅-师傅手机号为空校验","MasterName": "auto_test","expect": "error"},
       "TestCase004": {"CaseName": "4、添加师傅-师傅姓名为空校验","MasterPhone": "13900000001","expect": "error"},
@@ -375,9 +375,9 @@
     },
     "search_master_fnc": [
       {"CaseName": "9、师傅搜索-按照师傅手机号搜索师傅校验","KeyWord": "13720673941","expect": "邓鹏飞"},
-      {"CaseName": "10、师傅搜索-按照师傅名称搜索师傅校验","KeyWord": "邓鹏飞","expect": "13720673941"},
+      {"CaseName": "10、师傅搜索-按照师傅名称搜索师傅校验","KeyWord": "小米科技","expect": "13720673941"},
       {"CaseName": "11、师傅搜索-按照师傅手机号模糊搜索师傅校验","KeyWord": "3941","expect": "邓鹏飞"},
-      {"CaseName": "12、师傅搜索-按照师傅名字模糊搜索师傅校验","KeyWord": "邓","expect": "13720673941"}
+      {"CaseName": "12、师傅搜索-按照师傅名字模糊搜索师傅校验","KeyWord": "小米","expect": "13720673941"}
     ],
     "master_operate_fnc": {
       "stop_please": {"CaseName": "13、禁止派单-师傅禁止派单功能校验","MasterName":"13700000002","expect": "False//派单列表页没有该师傅"},

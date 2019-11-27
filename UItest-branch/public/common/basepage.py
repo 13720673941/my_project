@@ -137,7 +137,7 @@ class BasePage(object):
                 log.info('{0} Second time click button -> <{1}>, Spend {2} seconds.'.format(self.success, element, time.time()-t1))
             else:
                 log.error('{0} Unable click button -> <{1}>, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))
-                pass
+                raise
 
     def get_text(self,element):
         """
@@ -151,7 +151,7 @@ class BasePage(object):
             return element_text
         except Exception:
             log.error('{0} Unable get element <{1}> text, Spend {2} seconds.'.format(self.fail,element,time.time()-t1))
-            raise
+            return "Not get text info !"
 
     def get_att(self,element,attribute):
         """
@@ -165,7 +165,7 @@ class BasePage(object):
             return att
         except Exception:
             log.error('{0} Unable get element <{1}> , attribute by {2} Spend {3} seconds.'.format(self.fail,element,attribute,time.time()-t1))
-            pass
+            raise
 
     def use_js(self,js):
         """

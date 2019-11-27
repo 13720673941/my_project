@@ -35,8 +35,8 @@ class Master_Search(unittest.TestCase):
         # 师傅执行测试用例
         mytest.start_test()
         # 获取网点账号信息
-        username = read_config_data("蓝魔科技","username")
-        password = read_config_data("蓝魔科技","password")
+        username = read_config_data("西安好家帮家政有限公司","username")
+        password = read_config_data("西安好家帮家政有限公司","password")
         # 登录网点
         cls.login.login_main(username,password)
         # 进入师傅列表页面

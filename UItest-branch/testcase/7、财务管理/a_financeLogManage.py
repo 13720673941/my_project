@@ -42,8 +42,8 @@ class Finance_Log_Manage(unittest.TestCase):
         # 开始执行
         mytest.start_test()
         # 获取经销商账号
-        cls.manage_use = rwconfig.read_config_data("蓝魔科技","username")
-        cls.manage_pwd = rwconfig.read_config_data("蓝魔科技","password")
+        cls.manage_use = rwconfig.read_config_data("西安好家帮家政有限公司","username")
+        cls.manage_pwd = rwconfig.read_config_data("西安好家帮家政有限公司","password")
         # 登录经销商
         cls.login.login_main(cls.manage_use,cls.manage_pwd)
         # 创建订单
@@ -54,7 +54,7 @@ class Finance_Log_Manage(unittest.TestCase):
         rwconfig.write_config_data("for_finance_manage_search","id",
                                    cls.order_number,orderNumPath)
         # 获取经销商下的服务商
-        server_branch_name = rwconfig.read_config_data("蓝魔科技","branch001")
+        server_branch_name = rwconfig.read_config_data("西安好家帮家政有限公司","branch001")
         # 派单到服务商
         cls.please_order.please_order_main(
             ordernumber=cls.order_number,pagename=server_branch_name,please_to_branch=True)
@@ -67,6 +67,10 @@ class Finance_Log_Manage(unittest.TestCase):
         cls.login.login_main(cls.server_use,cls.server_pwd)
         # 获取服务商的派单师傅名称
         master_name = rwconfig.read_config_data(server_branch_name,"master001")
+        # 接单
+        cls.please_order.enter_please_order_page()
+        cls.base_page.select_new_order(cls.order_number)
+        cls.please_order.click_take_order()
         # 派单到师傅
         cls.please_order.please_order_main(
             ordernumber=cls.order_number,pagename=master_name)

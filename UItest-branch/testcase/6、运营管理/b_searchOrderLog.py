@@ -33,8 +33,8 @@ class Search_Order_Log(unittest.TestCase):
         cls.order_log = OrderLogPage(cls.driver)
         mytest.start_test()
         # 获取网点登录账号信息
-        username = read_config_data("XM科技有限公司","username")
-        password = read_config_data("XM科技有限公司","password")
+        username = read_config_data("西安超级售后有限公司","username")
+        password = read_config_data("西安超级售后有限公司","password")
         # 登录
         cls.login.login_main(username,password)
         # 进入工单日志页面

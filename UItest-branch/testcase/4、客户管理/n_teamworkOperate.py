@@ -67,8 +67,8 @@ class Teamwork_Visit_Operate(unittest.TestCase):
         # 退出登录
         self.login.click_logout_button()
         # 获取我方登录账号
-        my_username = read_config_data("branch_01","username")
-        my_password = read_config_data("branch_01","password")
+        my_username = read_config_data("西安好家帮家政有限公司","username")
+        my_password = read_config_data("西安好家帮家政有限公司","password")
         # 登录该账号
         self.login.login_main(my_username,my_password)
         # 进入合作申请页面-收到的申请

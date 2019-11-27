@@ -44,12 +44,12 @@ class Manage_Order_Statistics(unittest.TestCase):
         # 开始用例
         mytest.start_test()
         # 获取服务商账号信息
-        cls.server_use = read_config_data("branch_01","username")
-        cls.server_pwd = read_config_data("branch_01","password")
+        cls.server_use = read_config_data("西安好家帮家政有限公司","username")
+        cls.server_pwd = read_config_data("西安好家帮家政有限公司","password")
         # 登录服务商
         cls.login.login_main(cls.server_use,cls.server_pwd)
         # 获取经销商的名称
-        cls.manage_branch_name = read_config_data("branch_01","manage_branch")
+        cls.manage_branch_name = read_config_data("西安好家帮家政有限公司","manage_branch")
         # 进入客户订单统计页面
         cls.order_statistics.enter_statistics_page()
         # 搜索经销商
@@ -80,7 +80,7 @@ class Manage_Order_Statistics(unittest.TestCase):
         self.base_page.refresh_page()
         self.order_statistics.input_customer_search_keyword(keyword=self.manage_branch_name)
         self.order_statistics.click_search_btn()
-        self.base_page.sleep(1)
+        self.base_page.sleep(2)
 
     def test_order_statistics001(self):
         """未完单订单数量统计校验"""
@@ -89,13 +89,13 @@ class Manage_Order_Statistics(unittest.TestCase):
         data = test_data["TestCase001"]
         # 打印测试用例名称
         self.base_page.print_case_name(data["CaseName"])
-        # 订单派给服务商 “branch_01”
+        # 订单派给服务商 “西安好家帮家政有限公司”
         self.please_order.please_order_main(ordernumber=self.order_number,
                                             pagename=self.server_branch_name,
                                             please_to_branch=True)
         # 退出经销商
         self.login.click_logout_button()
-        # 登录服务商 "branch_01"
+        # 登录服务商 "西安好家帮家政有限公司"
         self.login.login_main(self.server_use,self.server_pwd)
         # 进入经销商工单统计列表页
         self.public_operate()
@@ -114,7 +114,7 @@ class Manage_Order_Statistics(unittest.TestCase):
         # 打印测试用例名称
         self.base_page.print_case_name(data["CaseName"])
         # 获取派单师傅
-        master = read_config_data("branch_01","master001")
+        master = read_config_data("西安好家帮家政有限公司","master001")
         # 选择工单
         self.please_order.enter_please_order_page()
         self.base_page.select_new_order(self.order_number)

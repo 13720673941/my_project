@@ -42,14 +42,14 @@ class Order_Statistics(unittest.TestCase):
         # 开始执行测试用例
         mytest.start_test()
         # 获取服务商账号信息
-        cls.server_use = read_config_data("蓝魔科技","username")
-        cls.server_pwd = read_config_data("蓝魔科技","password")
+        cls.server_use = read_config_data("西安好家帮家政有限公司","username")
+        cls.server_pwd = read_config_data("西安好家帮家政有限公司","password")
         # 登录服务商
         cls.login.login_main(cls.server_use, cls.server_pwd)
         # 进入师傅统计列表页面
         cls.order_statistics.enter_master_order_statistics_page()
         # 获取师傅名称
-        cls.master_name = read_config_data("蓝魔科技","master001")
+        cls.master_name = read_config_data("西安好家帮家政有限公司","master001")
         # 搜索师傅
         cls.order_statistics.input_master_keyword_search(search_word=cls.master_name)
         cls.order_statistics.click_search_btn()
@@ -183,9 +183,18 @@ class Order_Statistics(unittest.TestCase):
         # 获取师傅好评率
         master_favorable_rate = self.order_statistics.get_master_favorable_rate_count()
         # 计算好评率
-        favorable_rate = (round(master_favorable_orders/master_all_finish_orders,2))*100
+        favorable_rate = float((round(master_favorable_orders/master_all_finish_orders,5))*100)
+        print(favorable_rate)
+        # 对好评率进行处理 判断小数点后2位是否大于5 进行四舍五入
+        if len(str(favorable_rate).split(".")[1]) >= 3:
+            if int(str(favorable_rate).split(".")[1][2]) >= 5:
+                favorable_rate += 0.01
+            # 拼接好评率字符串
+            last_number = str(favorable_rate).split(".")[0]+"."+str(favorable_rate).split(".")[1][:2]
+        else:
+            last_number = str(favorable_rate)
         # 断言
-        self.assert_mode.assert_in(str(int(favorable_rate)),master_favorable_rate)
+        self.assert_mode.assert_equal(last_number+"%",master_favorable_rate)
 
 
     @classmethod

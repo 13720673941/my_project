@@ -38,8 +38,8 @@ class Master_List_Operate(unittest.TestCase):
         # 师傅执行测试用例
         mytest.start_test()
         # 获取网点账号信息
-        username = read_config_data("蓝魔科技", "username")
-        password = read_config_data("蓝魔科技", "password")
+        username = read_config_data("西安好家帮家政有限公司", "username")
+        password = read_config_data("西安好家帮家政有限公司", "password")
         # 登录网点
         cls.login.login_main(username, password)
         #  经销商下单程序下单
@@ -61,6 +61,7 @@ class Master_List_Operate(unittest.TestCase):
 
         # 进入派单列表
         self.please_order.enter_please_order_page()
+        self.base_page.refresh_page()
         # 选择订单
         self.base_page.select_new_order(self.order_number)
         # 点击派单

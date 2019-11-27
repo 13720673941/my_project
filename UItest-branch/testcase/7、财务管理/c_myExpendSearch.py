@@ -35,8 +35,8 @@ class My_Expend_Search(unittest.TestCase):
         # 开始执行测试用例
         mytest.start_test()
         # 获取测试账号信息
-        cls.username = rwconfig.read_config_data("自动化测试网点01","username")
-        cls.password = rwconfig.read_config_data("自动化测试网点01","password")
+        cls.username = rwconfig.read_config_data("西安超级售后有限公司","username")
+        cls.password = rwconfig.read_config_data("西安超级售后有限公司","password")
         # 登录网点
         cls.login.login_main(cls.username,cls.password)
         # 进入我的收入页面

@@ -36,8 +36,8 @@ class Alter_Password(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 获取网点账号
-        cls.username = rwconfig.read_config_data('branch_01','username')
-        cls.password = rwconfig.read_config_data('branch_01','password')
+        cls.username = rwconfig.read_config_data('西安好家帮家政有限公司','username')
+        cls.password = rwconfig.read_config_data('西安好家帮家政有限公司','password')
         # 获取新密码
         for pwd in get_test_data()["ForgetPwdPage"]["PwdList"]:
             if  pwd != cls.password:
@@ -126,7 +126,7 @@ class Alter_Password(unittest.TestCase):
         msg = self.base.get_system_msg()
         # 写入新改的密码
         if msg == '修改成功':
-            rwconfig.write_config_data("branch_01","password",self.new_pwd)
+            rwconfig.write_config_data("西安好家帮家政有限公司","password",self.new_pwd)
             print("New password: {0}.".format(self.new_pwd))
         # 断言
         self.assert_mode.assert_equal(ddtData["expect"],msg)

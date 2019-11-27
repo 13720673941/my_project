@@ -39,8 +39,8 @@ class Add_Order(unittest.TestCase):
         # 开始
         mytest.start_test()
         # 获取网点登录数据
-        UserName = rwconfig.read_config_data('branch_01','username')
-        PassWord = rwconfig.read_config_data('branch_01','password')
+        UserName = rwconfig.read_config_data('西安好家帮家政有限公司','username')
+        PassWord = rwconfig.read_config_data('西安好家帮家政有限公司','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
         cls.basePage.sleep(2)
@@ -177,7 +177,7 @@ class Add_Order(unittest.TestCase):
         self.addOrderPage.click_please_btn()
         self.basePage.sleep(1)
         # 获取派单师傅
-        master = rwconfig.read_config_data('branch_01','master001')
+        master = rwconfig.read_config_data('西安好家帮家政有限公司','master001')
         # 选择师傅派单
         self.pleaseOrder.select_please_page(page_name=master)
         # 点击确定

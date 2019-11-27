@@ -33,8 +33,8 @@ class Master_Server_Set(unittest.TestCase):
         cls.master_page = MasterListPage(cls.driver)
         mytest.start_test()
         # 获取登录的账号密码
-        username = read_config_data("蓝魔科技","username")
-        password = read_config_data("蓝魔科技","password")
+        username = read_config_data("西安好家帮家政有限公司","username")
+        password = read_config_data("西安好家帮家政有限公司","password")
         # 登录经销商
         cls.login.login_main(username,password)
 

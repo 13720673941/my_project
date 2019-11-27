@@ -35,8 +35,8 @@ class Visit_News_Search(unittest.TestCase):
         # 开始执行
         mytest.start_test()
         # 获取账号信息
-        username = read_config_data("branch_01","username")
-        password = read_config_data("branch_01","password")
+        username = read_config_data("西安好家帮家政有限公司","username")
+        password = read_config_data("西安好家帮家政有限公司","password")
         # 登录网点
         cls.login.login_main(username,password)
         # 进入客户合作页面

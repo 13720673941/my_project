@@ -43,16 +43,16 @@ class Manage_Settle(unittest.TestCase):
         cls.search_order = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
         mytest.start_test()
-        # 登录网点 branch_01
-        cls.Use = rwconfig.read_config_data('branch_01',"username")
-        cls.Pwd = rwconfig.read_config_data('branch_01',"password")
+        # 登录网点 西安好家帮家政有限公司
+        cls.Use = rwconfig.read_config_data('西安好家帮家政有限公司',"username")
+        cls.Pwd = rwconfig.read_config_data('西安好家帮家政有限公司',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
         # 经销商下单程序下单
         cls.createOrder.create_not_return_order()
         # 获取工单单号
         cls.OrderNum = cls.base.get_order_number()
         # 获取派单到服务商数据 关联派单数据中的信息
-        BranchName1 = rwconfig.read_config_data('branch_01','branch001')
+        BranchName1 = rwconfig.read_config_data('西安好家帮家政有限公司','branch001')
         # 派单到服务商1-自动化测试网点01
         cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True)
         # 退出登录

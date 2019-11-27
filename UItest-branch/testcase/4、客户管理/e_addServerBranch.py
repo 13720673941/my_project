@@ -36,8 +36,8 @@ class Add_Server_Branch(unittest.TestCase):
         # 开始脚本
         mytest.start_test()
         # 获取网点登录账号密码
-        cls.username = read_config_data("branch_01","username")
-        cls.password = read_config_data("branch_01","password")
+        cls.username = read_config_data("西安好家帮家政有限公司","username")
+        cls.password = read_config_data("西安好家帮家政有限公司","password")
         # 登录网点
         cls.login.login_main(cls.username,cls.password)
         # 进入客户列表页面

@@ -201,7 +201,7 @@ class SettleOrderPage(BasePage):
         self.click_confirm_pay()
         system_msg = self.get_system_msg()
         # 判断结算结果
-        if system_msg == "结算完成":
+        if system_msg == "结单完成":
             log.info("{0} ** {1} Settle Success!".format(self.success,order_number))
         else:
             log.error("{0} ** {1} Settle Fail!".format(self.fail,order_number))

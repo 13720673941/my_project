@@ -76,7 +76,8 @@ class LoginPage(BasePage): # 所有的操作继承Base基类
         self.input_password(PassWord)
         self.click_login_button()
         self.sleep(1)
-        self.dumps_window_close()
+        self.refresh_page()
+        # self.dumps_window_close()
         # 断言
         if self.is_display(self.logout_btn):
             log.info('{0} ** Branch login success！'.format(self.success))

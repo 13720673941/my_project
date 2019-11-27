@@ -43,9 +43,9 @@ class Manage_Settle(unittest.TestCase):
         mytest.start_test()
         # 获取定单订单号::新建工单时添加的无需返单订单
         #  cls.OrderNum = rwconfig.read_config_data('NotReturnOrder','id',orderNumPath)
-        # 登录网点 branch_01
-        cls.Use = rwconfig.read_config_data('branch_01',"username")
-        cls.Pwd = rwconfig.read_config_data('branch_01',"password")
+        # 登录网点 西安好家帮家政有限公司
+        cls.Use = rwconfig.read_config_data('西安好家帮家政有限公司',"username")
+        cls.Pwd = rwconfig.read_config_data('西安好家帮家政有限公司',"password")
         cls.login.login_main(cls.Use,cls.Pwd)
         #  经销商下单程序下单
         cls.createOrder.create_not_return_order()
@@ -54,7 +54,7 @@ class Manage_Settle(unittest.TestCase):
         # 订单号写入配置文件，后面财务管理中收入支出使用
         # rwconfig.write_config_data("for_finance_manage_search","id",cls.OrderNum,orderNumPath)
         # 获取派单到服务商数据 关联派单数据中的信息
-        BranchName1 = rwconfig.read_config_data('branch_01','branch001')
+        BranchName1 = rwconfig.read_config_data('西安好家帮家政有限公司','branch001')
         # 派单到服务商1-XM-服务撒 //派单到服务商不设置结算预报价
         cls.pleaseOrder.please_order_main(cls.OrderNum,BranchName1,please_to_branch=True,
                                           set_order_money=False)

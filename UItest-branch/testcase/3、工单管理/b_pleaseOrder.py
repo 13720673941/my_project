@@ -39,8 +39,8 @@ class Please_Order(unittest.TestCase):
         # 开始
         mytest.start_test()
         # 获取网点登录数据
-        UserName = read_config_data('branch_01','username')
-        PassWord = read_config_data('branch_01','password')
+        UserName = read_config_data('西安好家帮家政有限公司','username')
+        PassWord = read_config_data('西安好家帮家政有限公司','password')
         # 网点登录
         cls.loginPage.login_main(UserName,PassWord)
         # 创建订单

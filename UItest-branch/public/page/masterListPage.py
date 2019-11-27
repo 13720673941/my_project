@@ -43,11 +43,11 @@ class MasterListPage(BasePage):
     # 师傅备注输入框
     master_remark_input = (By.XPATH,'//label[text()="师傅备注："]/..//input')
     # 获取师傅服务类型配置
-    master_server_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[10]/div/div')
+    master_server_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')
     # 获取师傅服务品类的配置
-    master_kinds_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')
+    master_kinds_type_info = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')
     # 获取师傅服务区域的配置
-    master_server_place_type = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')
+    master_server_place_type = (By.XPATH,'//tr[starts-with(@class,"ivu-table-row")][1]/td[13]/div/div')
     # 清除服务区域设置
     master_place_clear_btn = (By.XPATH,'//a[text()="清除"]')
     # 服务设置确定按钮

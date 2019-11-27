@@ -32,10 +32,10 @@ class Set_Server(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         mytest.start_test()
         # 获取网点账号密码
-        cls.username = read_config_data("branch_01","username")
-        cls.password = read_config_data("branch_01","password")
+        cls.username = read_config_data("西安好家帮家政有限公司","username")
+        cls.password = read_config_data("西安好家帮家政有限公司","password")
         # 获取经销商名称
-        cls.manage_branch = read_config_data("branch_01","manage_branch")
+        cls.manage_branch = read_config_data("西安好家帮家政有限公司","manage_branch")
         # 登录网点
         cls.login.login_main(cls.username,cls.password)
         # 进入邀请经销商页面
