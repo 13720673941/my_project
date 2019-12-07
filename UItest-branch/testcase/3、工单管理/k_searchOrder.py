@@ -35,6 +35,8 @@ class Search_Order(unittest.TestCase):
         cls.searchOrder = SearchOrderPage(cls.dr)
         cls.loginPage = LoginPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         mytest.start_test()
         # 读取订单单号信息，订单单号的搜索取添加订单写入的订单单号
         OrderNum = rwconfig.read_config_data('for_invalid_and_search','id',orderNumPath)

@@ -29,6 +29,8 @@ class Branch_Login(unittest.TestCase):
         cls.loginPage = LoginPage(cls.dr)
         cls.basePage = BasePage(cls.dr)
         cls.assertMode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         # 开始执行用例
         mytest.start_test()
         cls.loginPage.enter_login_page()

@@ -33,6 +33,8 @@ class Adjust_Record(unittest.TestCase):
         cls.base_page = BasePage(cls.driver)
         cls.assert_page = Assert(cls.driver)
         cls.inventory_adjust = InventoryAdjust(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行测试用例
         mytest.start_test()
         # 时间搜索期望值赋值处理

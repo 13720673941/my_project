@@ -12,6 +12,7 @@ from config.pathconfig import *
 
 def create_phoneNum():
     '''随机生成手机号'''
+
     # 电话本保存文档
     PhoneBook = regPhonePath
     # 11位手机号 1开头，后面十位随机产生，系统注册没有过多要求
@@ -46,6 +47,7 @@ def create_phoneNum():
 
 def create_username():
     '''随机生成用户名'''
+
     # 获取用户名的txt文档
     UserNameData = regUserPath
     # 用户名默认设置为固定五个汉字,五个字母和8个数字组合

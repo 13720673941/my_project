@@ -36,6 +36,8 @@ class Please_Order(unittest.TestCase):
         cls.addOrderPage = AddOrderPage(cls.dr)
         cls.loginPage = LoginPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         # 开始
         mytest.start_test()
         # 获取网点登录数据

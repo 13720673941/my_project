@@ -45,6 +45,8 @@ class Return_Settle(unittest.TestCase):
         cls.settleOrder = SettleOrderPage(cls.dr)
         cls.search_order = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.base.clear_catch()
         mytest.start_test()
         # 登录网点 西安好家帮家政有限公司
         cls.Use = rwconfig.read_config_data('西安好家帮家政有限公司',"username")
@@ -171,7 +173,7 @@ class Return_Settle(unittest.TestCase):
         self.base.open_order_message(self.OrderNumber)
         # 点击返单结算
         self.settleOrder.click_settle_btn()
-        self.base.sleep(1)
+        self.base.sleep(2)
         # 获取结算价格属性不能编辑
         settle_attribute = self.settleOrder.get_settle_money_attribute()
         # 断言

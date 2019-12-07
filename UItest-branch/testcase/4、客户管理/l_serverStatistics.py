@@ -40,11 +40,14 @@ class Server_Order_Statistics(unittest.TestCase):
         cls.finish_order = FinishOrder(cls.driver)
         cls.settle_order = SettleOrderPage(cls.driver)
         cls.order_statistics = BranchStatisticsPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始用例
         mytest.start_test()
         # 获取经销商账号信息
         cls.manage_use = read_config_data("西安好家帮家政有限公司","username")
         cls.manage_pwd = read_config_data("西安好家帮家政有限公司","password")
+        cls.base_page.refresh_page()
         # 登录服务商
         cls.login.login_main(cls.manage_use,cls.manage_pwd)
         # 进入订单统计页面

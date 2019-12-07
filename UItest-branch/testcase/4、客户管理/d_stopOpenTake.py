@@ -34,6 +34,8 @@ class Stop_Open_TakeOrder(unittest.TestCase):
         cls.create_order_page = AddOrderPage(cls.driver)
         cls.please_order_page = PleaseOrderPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 登录经销账号下单
         cls.manage_branch_use = read_config_data("西安超级售后有限公司","username")

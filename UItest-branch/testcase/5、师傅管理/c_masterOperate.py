@@ -35,6 +35,8 @@ class Master_List_Operate(unittest.TestCase):
         cls.create_order = AddOrderPage(cls.driver)
         cls.please_order = PleaseOrderPage(cls.driver)
         cls.master_page = MasterListPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 师傅执行测试用例
         mytest.start_test()
         # 获取网点账号信息

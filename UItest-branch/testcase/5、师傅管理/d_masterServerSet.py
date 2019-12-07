@@ -31,6 +31,8 @@ class Master_Server_Set(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.master_page = MasterListPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 获取登录的账号密码
         username = read_config_data("西安好家帮家政有限公司","username")

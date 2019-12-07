@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operation Manage Module Test Result</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">Operation Manage Module Test Result</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2019-12-04 14:19:56</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:03:21.479251</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 11，通过 10，失败 1，通过率= 90.91%</p>
+
+<p class='description'>Operation manage module case test result.</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 90.91% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 10 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 11 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>6、运营管理.a_orderMargin.Order_Margin_Log</td>
+    <td class="text-center">2</td>
+    <td class="text-center">2</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_margin_log001: 派单扣除工单余量校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align='left'>
+    <pre>
+    
+pt1_1: 2019-12-04 14:20:51,455 - INFO - SUCCESS  Load case name: 1、网点派单扣除工单余量校验
+2019-12-04 14:20:52,457 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:20:52,639 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/overview/index&gt;, Spend 1.1813685894012451 seconds.
+2019-12-04 14:20:54,642 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:20:54,654 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"工单余量")]/span')&gt;, Spend 0.009994983673095703 seconds.
+2019-12-04 14:20:54,671 - INFO - SUCCESS  * Get element &lt;('xpath', '//div[contains(text(),"工单余量")]/span')&gt; text: 50087, Spend 0.027983903884887695 seconds.
+2019-12-04 14:20:54,672 - INFO - SUCCESS  Expect: 1 equal Faction: 1, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_margin_log002: 工单单量记录日志记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align='left'>
+    <pre>
+    
+pt1_2: 2019-12-04 14:20:54,673 - INFO - SUCCESS  Load case name: 2、网点派单日志记录校验
+2019-12-04 14:20:55,676 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:20:55,757 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/operate/orderLog/index&gt;, Spend 1.0816538333892822 seconds.
+2019-12-04 14:20:56,759 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:20:56,803 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.04196786880493164 seconds.
+2019-12-04 14:20:56,872 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, Spend 0.11092972755432129 seconds.
+2019-12-04 14:20:56,878 - INFO - SUCCESS  Expect: 637110660332509090 in Faction: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>6、运营管理.b_searchOrderLog.Search_Order_Log</td>
+    <td class="text-center">3</td>
+    <td class="text-center">3</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',3)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_log001: 按下单日期搜索扣除订单的记录信息</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align='left'>
+    <pre>
+    
+pt2_1: 2019-12-04 14:21:13,829 - INFO - SUCCESS  Load case name: 1、按照创建订单日期搜索校验
+2019-12-04 14:21:13,851 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="选择开始日期"]')&gt;, Spend 0.02098846435546875 seconds.
+2019-12-04 14:21:14,056 - INFO - SUCCESS  * Input message: 2019-12-04, Spend 0.22587180137634277 seconds
+2019-12-04 14:21:14,078 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="选择结束日期"]')&gt;, Spend 0.020987987518310547 seconds.
+2019-12-04 14:21:14,227 - INFO - SUCCESS  * Input message: 2019-12-04, Spend 0.17090225219726562 seconds
+2019-12-04 14:21:14,249 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.019988059997558594 seconds.
+2019-12-04 14:21:14,345 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.11593294143676758 seconds.
+2019-12-04 14:21:15,347 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:21:15,396 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.0469515323638916 seconds.
+2019-12-04 14:21:15,512 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, Spend 0.16287565231323242 seconds.
+2019-12-04 14:21:15,513 - INFO - SUCCESS  Expect: 2019-12-04 in Faction: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_log002: 按扣除类型搜索日志记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align='left'>
+    <pre>
+    
+pt2_2: 2019-12-04 14:21:15,514 - INFO - SUCCESS  Load case name: 2、按照派单类型搜索校验
+2019-12-04 14:21:19,073 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:21:19,074 - INFO - SUCCESS  Refresh current page, Spend 3.558964252471924 seconds.
+2019-12-04 14:21:19,090 - INFO - SUCCESS  Find element &lt;('xpath', '//label[contains(text(),"类型")]/..//div[1]')&gt;, Spend 0.015991926193237305 seconds.
+2019-12-04 14:21:19,153 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[contains(text(),"类型")]/..//div[1]')&gt;, Spend 0.07695722579956055 seconds.
+2019-12-04 14:21:21,155 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:21:21,202 - INFO - SUCCESS  Find element &lt;('xpath', '//label[contains(text(),"类型")]/..//ul[2]')&gt;, Spend 0.04495382308959961 seconds.
+2019-12-04 14:21:22,244 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:21:22,338 - INFO - SUCCESS  Select value: 派单扣除, Spend 3.2638351917266846 seconds.
+2019-12-04 14:21:22,363 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.024000167846679688 seconds.
+2019-12-04 14:21:22,431 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.09094810485839844 seconds.
+2019-12-04 14:21:23,433 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:21:23,463 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.02898430824279785 seconds.
+2019-12-04 14:21:23,527 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, Spend 0.0929419994354248 seconds.
+2019-12-04 14:21:23,528 - INFO - SUCCESS  Expect: 派单扣除 in Faction: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_log003: 按工单编号搜索订单余量扣除记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align='left'>
+    <pre>
+    
+pt2_3: 2019-12-04 14:21:23,529 - INFO - SUCCESS  Load case name: 3、按照订单单号搜索校验
+2019-12-04 14:21:26,078 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:21:26,079 - INFO - SUCCESS  Refresh current page, Spend 2.548280715942383 seconds.
+2019-12-04 14:21:26,104 - INFO - SUCCESS  Find element &lt;('xpath', '//label[contains(text(),"编号")]/..//input')&gt;, Spend 0.02298712730407715 seconds.
+2019-12-04 14:21:26,358 - INFO - SUCCESS  * Input message: 637110660332509090, Spend 0.27585721015930176 seconds
+2019-12-04 14:21:26,371 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.010994672775268555 seconds.
+2019-12-04 14:21:26,424 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.06396317481994629 seconds.
+2019-12-04 14:21:27,424 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:21:27,435 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.008993387222290039 seconds.
+2019-12-04 14:21:27,472 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, Spend 0.04597306251525879 seconds.
+2019-12-04 14:21:27,473 - INFO - SUCCESS  Expect: 637110660332509090 in Faction: 1
+2019-12-04 14:20:50
+派单扣除
+-1
+637110660332509090, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='failClass warning'>
+    <td>6、运营管理.c_sendShortMsg.Send_ShortMsg</td>
+    <td class="text-center">2</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',2)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='ft3_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_send_shortMsg001: 扣除短信数量校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_1'>失败</button>
+    <div id='div_ft3_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_1'>失败</button>
+    <div id='div_ft3_1' class="collapse in" align='left'>
+    <pre>
+    
+ft3_1: 2019-12-04 14:22:29,798 - INFO - SUCCESS  Load case name: 1、网点派单扣除短信数量校验
+2019-12-04 14:22:30,801 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:22:30,989 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/overview/index&gt;, Spend 1.1893603801727295 seconds.
+2019-12-04 14:22:32,991 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:22:33,023 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"短信余量")]/span')&gt;, Spend 0.02898859977722168 seconds.
+2019-12-04 14:22:33,072 - INFO - SUCCESS  * Get element &lt;('xpath', '//div[contains(text(),"短信余量")]/span')&gt; text: 1486, Spend 0.07995438575744629 seconds.
+2019-12-04 14:22:33,497 - INFO - SUCCESS  Save screen shot to: D:\my_test_script\UItest-branch\result\image\20191204142233.png, Spend 0.42305731773376465 seconds.
+Traceback (most recent call last):
+  File "D:\my_test_script\UItest-branch\public\common\assertmode.py", line 48, in assert_equal
+    unittest.TestCase().assertEqual(expect,fact)
+  File "D:\python\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: 1 != 2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_test_script\UItest-branch\testcase\6、运营管理\c_sendShortMsg.py", line 71, in test_send_shortMsg001
+    self.assert_mode.assert_equal(data["expect"],diff_count)
+  File "D:\my_test_script\UItest-branch\public\common\assertmode.py", line 53, in assert_equal
+    raise AssertionError('{0} Expect: {1} not equal Faction: {2}, test -&gt; FAIL.'.format(self.fail,expect,fact))
+AssertionError: FAIL  Expect: 1 not equal Faction: 2, test -&gt; FAIL.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_send_shortMsg002: 发送短信日志记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse in" align='left'>
+    <pre>
+    
+pt3_2: 2019-12-04 14:22:33,500 - INFO - SUCCESS  Load case name: 2、网点短信发送成功日志记录校验
+2019-12-04 14:22:34,502 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:22:34,582 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/operate/noteLog/index&gt;, Spend 1.0817725658416748 seconds.
+2019-12-04 14:22:34,730 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="工单编号："]/../input')&gt;, Spend 0.14691615104675293 seconds.
+2019-12-04 14:22:35,053 - INFO - SUCCESS  * Input message: 637110660332509090, Spend 0.46973180770874023 seconds
+2019-12-04 14:22:35,078 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.023984909057617188 seconds.
+2019-12-04 14:22:35,130 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.07495379447937012 seconds.
+2019-12-04 14:22:36,130 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:22:36,145 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.013990402221679688 seconds.
+2019-12-04 14:22:36,187 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 637110660332509090
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:20:50
+发送成功, Spend 0.055966854095458984 seconds.
+2019-12-04 14:22:36,188 - INFO - SUCCESS  Expect: 637110660332509090 in Faction: 637110660332509090
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:20:50
+发送成功, test -&gt; PASS.
+2019-12-04 14:22:36,189 - INFO - SUCCESS  Expect: 发送成功 in Faction: 637110660332509090
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:20:50
+发送成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>6、运营管理.d_searchShortMsgLog.Search_ShortMsg_Log</td>
+    <td class="text-center">4</td>
+    <td class="text-center">4</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c4',4)" class="detail" id='c4'>详细</a></td>
+</tr>
+
+<tr id='pt4_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_shortMsg_log001: 按工单编号搜索短信发送记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse in" align='left'>
+    <pre>
+    
+pt4_1: 2019-12-04 14:22:57,582 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:22:57,584 - INFO - SUCCESS  Refresh current page, Spend 3.465904712677002 seconds.
+2019-12-04 14:22:57,585 - INFO - SUCCESS  Load case name: 1、按工单编号搜索短信发送记录校验
+2019-12-04 14:22:57,607 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="工单编号："]/../input')&gt;, Spend 0.01999187469482422 seconds.
+2019-12-04 14:22:57,936 - INFO - SUCCESS  * Input message: 637110660332509090, Spend 0.3488013744354248 seconds
+2019-12-04 14:22:57,959 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.02198648452758789 seconds.
+2019-12-04 14:22:58,075 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.13792109489440918 seconds.
+2019-12-04 14:22:59,077 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:22:59,097 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.017989397048950195 seconds.
+2019-12-04 14:22:59,152 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 637110660332509090
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:20:50
+发送成功, Spend 0.0739588737487793 seconds.
+2019-12-04 14:22:59,154 - INFO - SUCCESS  Expect: 637110660332509090 in Faction: 637110660332509090
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:20:50
+发送成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_shortMsg_log002: 按短信类型搜索短信发送记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse in" align='left'>
+    <pre>
+    
+pt4_2: 2019-12-04 14:23:02,327 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:23:02,329 - INFO - SUCCESS  Refresh current page, Spend 3.1741392612457275 seconds.
+2019-12-04 14:23:02,333 - INFO - SUCCESS  Load case name: 2、按短信类型搜索短信发送记录校验
+2019-12-04 14:23:02,388 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="短信类型："]/../div/div[1]')&gt;, Spend 0.052947998046875 seconds.
+2019-12-04 14:23:02,550 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="短信类型："]/../div/div[1]')&gt;, Spend 0.21484780311584473 seconds.
+2019-12-04 14:23:04,553 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:23:04,599 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="短信类型："]/../div/div[2]/ul[2]')&gt;, Spend 0.042975664138793945 seconds.
+2019-12-04 14:23:05,624 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:23:05,704 - INFO - SUCCESS  Select value: 派工提醒, Spend 3.3688833713531494 seconds.
+2019-12-04 14:23:05,722 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.016987085342407227 seconds.
+2019-12-04 14:23:05,787 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.08194947242736816 seconds.
+2019-12-04 14:23:06,788 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:23:06,817 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.026982545852661133 seconds.
+2019-12-04 14:23:06,870 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 637110661303597152
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:22:29
+发送成功, Spend 0.07995223999023438 seconds.
+2019-12-04 14:23:06,871 - INFO - SUCCESS  Expect: 派工提醒 in Faction: 637110661303597152
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:22:29
+发送成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_shortMsg_log003: 按手机号搜索短信发送记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse in" align='left'>
+    <pre>
+    
+pt4_3: 2019-12-04 14:23:10,034 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:23:10,037 - INFO - SUCCESS  Refresh current page, Spend 3.1632864475250244 seconds.
+2019-12-04 14:23:10,040 - INFO - SUCCESS  Load case name: 3、按手机号搜索短信发送记录校验
+2019-12-04 14:23:10,093 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="手机号："]/../input')&gt;, Spend 0.051962852478027344 seconds.
+2019-12-04 14:23:10,332 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.289825439453125 seconds
+2019-12-04 14:23:10,351 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.017989158630371094 seconds.
+2019-12-04 14:23:10,415 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.08095312118530273 seconds.
+2019-12-04 14:23:11,416 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:23:11,431 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.012215614318847656 seconds.
+2019-12-04 14:23:11,500 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 637110661303597152
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:22:29
+发送成功, Spend 0.08116006851196289 seconds.
+2019-12-04 14:23:11,501 - INFO - SUCCESS  Expect: 13720673941 in Faction: 637110661303597152
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:22:29
+发送成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_search_shortMsg_log004: 按发送日期搜索短信发送记录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse in" align='left'>
+    <pre>
+    
+pt4_4: 2019-12-04 14:23:14,377 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-04 14:23:14,378 - INFO - SUCCESS  Refresh current page, Spend 2.8757400512695312 seconds.
+2019-12-04 14:23:14,379 - INFO - SUCCESS  Load case name: 4、按发送日期搜索短信发送记录校验
+2019-12-04 14:23:14,397 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="选择开始日期"]')&gt;, Spend 0.016987323760986328 seconds.
+2019-12-04 14:23:14,546 - INFO - SUCCESS  * Input message: 2019-12-04, Spend 0.16590189933776855 seconds
+2019-12-04 14:23:14,574 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="选择结束日期"]')&gt;, Spend 0.02698493003845215 seconds.
+2019-12-04 14:23:14,711 - INFO - SUCCESS  * Input message: 2019-12-04, Spend 0.16290783882141113 seconds
+2019-12-04 14:23:14,726 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.01499032974243164 seconds.
+2019-12-04 14:23:14,836 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"搜索")]')&gt;, Spend 0.12392663955688477 seconds.
+2019-12-04 14:23:15,837 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-04 14:23:15,849 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.010994434356689453 seconds.
+2019-12-04 14:23:15,886 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 637110661303597152
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:22:29
+发送成功, Spend 0.047972679138183594 seconds.
+2019-12-04 14:23:15,887 - INFO - SUCCESS  Expect: 2019-12-04 in Faction: 637110661303597152
+13720673941
+您好，AutoTest，您...
+派工提醒
+2019-12-04 14:22:29
+发送成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>11</td>
+    <td>10</td>
+    <td>1</td>
+    <td>0</td>
+    <td>通过率：90.91%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

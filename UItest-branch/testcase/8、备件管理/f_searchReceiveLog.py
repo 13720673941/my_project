@@ -33,6 +33,8 @@ class Search_Receive_Log(unittest.TestCase):
         cls.assert_page = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.receive_sparePart = MasterReceivePage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行测试用例
         mytest.start_test()
         # 获取测试账号信息

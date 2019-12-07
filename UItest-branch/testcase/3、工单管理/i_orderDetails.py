@@ -37,6 +37,8 @@ class Order_Details(unittest.TestCase):
         cls.please_order = PleaseOrderPage(cls.driver)
         cls.order_detail = OrderDetailsPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 登录网点 西安好家帮家政有限公司
         cls.Use = read_config_data('西安好家帮家政有限公司',"username")

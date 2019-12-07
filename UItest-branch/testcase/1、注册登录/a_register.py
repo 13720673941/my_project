@@ -38,6 +38,8 @@ class Register_Branch(unittest.TestCase):
         cls.basePage = BasePage(cls.dr)
         cls.registerPage = RegisterPage(cls.dr)
         cls.assertMode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         # 打开网点登录页面
         mytest.start_test()
         cls.registerPage.enter_register_page()

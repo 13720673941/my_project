@@ -96,3 +96,6 @@ inventory_adjust_url = official_host+'/singleBranch/#/sparepart/stock/IORecord'
 
 # 待返厂页面
 wait_return_factory_url = official_host+'/singleBranch/#/sparepart/returnFactory/waitReturn'
+
+# 已返厂页面
+already_return_faction_url = official_host+'/singleBranch/#/sparepart/returnFactory/alreadyReturn'

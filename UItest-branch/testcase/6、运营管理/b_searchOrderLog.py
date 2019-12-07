@@ -31,6 +31,8 @@ class Search_Order_Log(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.order_log = OrderLogPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 获取网点登录账号信息
         username = read_config_data("西安超级售后有限公司","username")

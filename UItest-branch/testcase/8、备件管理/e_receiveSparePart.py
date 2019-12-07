@@ -35,6 +35,8 @@ class Receive_Spare_Part(unittest.TestCase):
         cls.login = LoginPage(cls.driver)
         cls.company_sparePart = CompanyInventoryPage(cls.driver)
         cls.receive_sparePart = MasterReceivePage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行测试用例
         mytest.start_test()
         # 获取测试账号信息
@@ -171,9 +173,9 @@ class Receive_Spare_Part(unittest.TestCase):
         # 点击师傅领取记录table页面
         self.receive_sparePart.enter_receive_log_page()
         # 输入领取开始日期搜索领取记录
-        self.receive_sparePart.input_receive_start_time(start_date=self.base_page.get_now_time())
+        self.receive_sparePart.input_receive_start_time(start_date=data["ReceiveTime"])
         # 输入领取结束日期搜索领取记录
-        self.receive_sparePart.input_receive_end_time(end_date=self.base_page.get_now_time())
+        self.receive_sparePart.input_receive_end_time(end_date=data["ReceiveTime"])
         # 点击搜索
         self.receive_sparePart.click_search_btn()
         self.base_page.sleep(2)

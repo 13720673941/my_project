@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Master Manage Module Test Result</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">Master Manage Module Test Result</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2019-12-05 13:08:18</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:08:24.204728</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 25，通过 24，错误 1，通过率= 96.00%</p>
+
+<p class='description'>Master manage module case test result.</p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 96.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 24 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 25 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>5、师傅管理.a_visitMaster.Visit_Master</td>
+    <td class="text-center">8</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',8)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master001: 自动带出师傅名称校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align='left'>
+    <pre>
+    
+pt1_1: 2019-12-05 13:08:32,926 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:08:32,949 - INFO - SUCCESS  Refresh current page, Spend 2.0488269329071045 seconds.
+2019-12-05 13:08:33,411 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.46173548698425293 seconds.
+2019-12-05 13:08:33,498 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.5476889610290527 seconds.
+2019-12-05 13:08:33,499 - INFO - SUCCESS  Load case name: 1、添加师傅-自动带出师傅名称校验
+2019-12-05 13:08:33,532 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.03297996520996094 seconds.
+2019-12-05 13:08:33,813 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.31382155418395996 seconds
+2019-12-05 13:08:33,840 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.02498483657836914 seconds.
+2019-12-05 13:08:33,893 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.07895302772521973 seconds.
+2019-12-05 13:08:34,895 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:08:34,907 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.012011528015136719 seconds.
+2019-12-05 13:08:34,914 - INFO - SUCCESS  * Get element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; , value: "value" attribute: "小米科技", Spend 0.017990589141845703 seconds.
+2019-12-05 13:08:34,914 - INFO - SUCCESS  Expect: 小米科技 equal Faction: 小米科技, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master002: 未注册的师傅邀请提示发送短信校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align='left'>
+    <pre>
+    
+pt1_2: 2019-12-05 13:08:39,494 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:08:39,495 - INFO - SUCCESS  Refresh current page, Spend 4.580506086349487 seconds.
+2019-12-05 13:08:39,536 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.038004159927368164 seconds.
+2019-12-05 13:08:39,680 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.18189144134521484 seconds.
+2019-12-05 13:08:39,681 - INFO - SUCCESS  Load case name: 2、添加师傅-未注册的师傅邀请提示发送短信校验
+2019-12-05 13:08:39,708 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.024982213973999023 seconds.
+2019-12-05 13:08:39,921 - INFO - SUCCESS  * Input message: 13900000001, Spend 0.23785734176635742 seconds
+2019-12-05 13:08:39,937 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.0159912109375 seconds.
+2019-12-05 13:08:39,999 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.07595682144165039 seconds.
+2019-12-05 13:08:41,000 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:08:41,050 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/../div/div')&gt;, Spend 0.0479428768157959 seconds.
+2019-12-05 13:08:41,093 - INFO - SUCCESS  * Get element &lt;('xpath', '//label[text()="师傅手机号："]/../div/div')&gt; text: 师傅尚未注册，将会发送短信邀请通知！, Spend 0.09191727638244629 seconds.
+2019-12-05 13:08:41,094 - INFO - SUCCESS  Expect: 师傅尚未注册，将会发送短信邀请通知！ equal Faction: 师傅尚未注册，将会发送短信邀请通知！, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master003: 师傅手机号为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align='left'>
+    <pre>
+    
+pt1_3: 2019-12-05 13:08:44,534 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:08:44,535 - INFO - SUCCESS  Refresh current page, Spend 3.4400312900543213 seconds.
+2019-12-05 13:08:44,555 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.019005298614501953 seconds.
+2019-12-05 13:08:44,619 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.0819544792175293 seconds.
+2019-12-05 13:08:44,620 - INFO - SUCCESS  Load case name: 3、添加师傅-师傅手机号为空校验
+2019-12-05 13:08:44,645 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.023984670639038086 seconds.
+2019-12-05 13:08:44,686 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; input message, Spend 0.06496930122375488 seconds.
+2019-12-05 13:08:45,689 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:08:45,734 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.042981624603271484 seconds.
+2019-12-05 13:08:45,899 - INFO - SUCCESS  * Input message: auto_test, Spend 0.20987749099731445 seconds
+2019-12-05 13:08:45,917 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.01699042320251465 seconds.
+2019-12-05 13:08:45,971 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.06995964050292969 seconds.
+2019-12-05 13:08:45,986 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.013992071151733398 seconds.
+2019-12-05 13:08:45,996 - INFO - SUCCESS  * Get element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt; , value: "class" attribute: "form-control inline w200 error", Spend 0.023989439010620117 seconds.
+2019-12-05 13:08:45,997 - INFO - SUCCESS  Expect: error in Faction: form-control inline w200 error, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master004: 师傅名字为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align='left'>
+    <pre>
+    
+pt1_4: 2019-12-05 13:08:49,937 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:08:49,939 - INFO - SUCCESS  Refresh current page, Spend 3.9407551288604736 seconds.
+2019-12-05 13:08:49,977 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.035982370376586914 seconds.
+2019-12-05 13:08:50,070 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.12992453575134277 seconds.
+2019-12-05 13:08:50,071 - INFO - SUCCESS  Load case name: 4、添加师傅-师傅姓名为空校验
+2019-12-05 13:08:50,095 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.02298712730407715 seconds.
+2019-12-05 13:08:50,315 - INFO - SUCCESS  * Input message: 13900000001, Spend 0.24286103248596191 seconds
+2019-12-05 13:08:50,332 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.015990495681762695 seconds.
+2019-12-05 13:08:50,411 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.09494662284851074 seconds.
+2019-12-05 13:08:50,431 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.017990827560424805 seconds.
+2019-12-05 13:08:50,440 - INFO - SUCCESS  * Get element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; , value: "class" attribute: "form-control inline w200 error", Spend 0.02798628807067871 seconds.
+2019-12-05 13:08:50,442 - INFO - SUCCESS  Expect: error in Faction: form-control inline w200 error, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master005_1: 添加师傅逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" align='left'>
+    <pre>
+    
+pt1_5: 2019-12-05 13:08:52,817 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:08:52,818 - INFO - SUCCESS  Refresh current page, Spend 2.3756418228149414 seconds.
+2019-12-05 13:08:52,833 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.0139923095703125 seconds.
+2019-12-05 13:08:52,893 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.07295775413513184 seconds.
+2019-12-05 13:08:52,894 - INFO - SUCCESS  Load case name: 5、添加师傅-师傅手机号左边界值校验
+2019-12-05 13:08:52,914 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.0199892520904541 seconds.
+2019-12-05 13:08:53,144 - INFO - SUCCESS  * Input message: 1372067394, Spend 0.24985742568969727 seconds
+2019-12-05 13:08:53,161 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.01499176025390625 seconds.
+2019-12-05 13:08:53,232 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.08595156669616699 seconds.
+2019-12-05 13:08:54,234 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:08:54,270 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.033975839614868164 seconds.
+2019-12-05 13:08:54,310 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; input message, Spend 0.0739748477935791 seconds.
+2019-12-05 13:08:55,311 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:08:55,345 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.03198528289794922 seconds.
+2019-12-05 13:08:55,506 - INFO - SUCCESS  * Input message: auto_test, Spend 0.19388794898986816 seconds
+2019-12-05 13:08:55,519 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.011992454528808594 seconds.
+2019-12-05 13:08:55,566 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.05796670913696289 seconds.
+2019-12-05 13:08:55,585 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.017992734909057617 seconds.
+2019-12-05 13:08:55,610 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入正确手机号, Spend 0.04297661781311035 seconds.
+2019-12-05 13:08:55,611 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master005_2: 添加师傅逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" align='left'>
+    <pre>
+    
+pt1_6: 2019-12-05 13:08:59,504 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:08:59,505 - INFO - SUCCESS  Refresh current page, Spend 3.892815589904785 seconds.
+2019-12-05 13:08:59,545 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.0369570255279541 seconds.
+2019-12-05 13:08:59,627 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.12090182304382324 seconds.
+2019-12-05 13:08:59,628 - INFO - SUCCESS  Load case name: 6、添加师傅-师傅手机号格式校验
+2019-12-05 13:08:59,646 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.016988754272460938 seconds.
+2019-12-05 13:08:59,886 - INFO - SUCCESS  * Input message: 13200000！aa, Spend 0.2568643093109131 seconds
+2019-12-05 13:08:59,901 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.013993024826049805 seconds.
+2019-12-05 13:08:59,963 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.07595658302307129 seconds.
+2019-12-05 13:09:00,965 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:00,999 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.0329892635345459 seconds.
+2019-12-05 13:09:01,066 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; input message, Spend 0.09994649887084961 seconds.
+2019-12-05 13:09:02,067 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:02,109 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.040946006774902344 seconds.
+2019-12-05 13:09:02,229 - INFO - SUCCESS  * Input message: auto_test, Spend 0.16087603569030762 seconds
+2019-12-05 13:09:02,242 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.011993885040283203 seconds.
+2019-12-05 13:09:02,287 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.05696702003479004 seconds.
+2019-12-05 13:09:02,301 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.01199483871459961 seconds.
+2019-12-05 13:09:02,320 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请输入正确手机号, Spend 0.03198075294494629 seconds.
+2019-12-05 13:09:02,322 - INFO - SUCCESS  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master005_3: 添加师傅逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in" align='left'>
+    <pre>
+    
+pt1_7: 2019-12-05 13:09:06,198 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:09:06,199 - INFO - SUCCESS  Refresh current page, Spend 3.876760244369507 seconds.
+2019-12-05 13:09:06,237 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.036948442459106445 seconds.
+2019-12-05 13:09:06,332 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.13189291954040527 seconds.
+2019-12-05 13:09:06,333 - INFO - SUCCESS  Load case name: 7、添加师傅-成功邀请师傅校验校验
+2019-12-05 13:09:06,355 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.0219876766204834 seconds.
+2019-12-05 13:09:06,560 - INFO - SUCCESS  * Input message: 13572597243, Spend 0.22687005996704102 seconds
+2019-12-05 13:09:06,577 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.014991044998168945 seconds.
+2019-12-05 13:09:06,636 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.0739583969116211 seconds.
+2019-12-05 13:09:07,640 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:07,674 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.03198099136352539 seconds.
+2019-12-05 13:09:07,735 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; input message, Spend 0.09295010566711426 seconds.
+2019-12-05 13:09:08,737 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:08,773 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.03595614433288574 seconds.
+2019-12-05 13:09:08,898 - INFO - SUCCESS  * Input message: auto_test, Spend 0.16187477111816406 seconds
+2019-12-05 13:09:08,913 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.0139923095703125 seconds.
+2019-12-05 13:09:08,961 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.061964988708496094 seconds.
+2019-12-05 13:09:09,172 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.20888423919677734 seconds.
+2019-12-05 13:09:09,196 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 操作成功, Spend 0.2328648567199707 seconds.
+2019-12-05 13:09:09,197 - INFO - SUCCESS  Expect: 操作成功 equal Faction: 操作成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_visit_master005_4: 添加师傅逻辑校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align='left'>
+    <pre>
+    
+pt1_8: 2019-12-05 13:09:13,373 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:09:13,374 - INFO - SUCCESS  Refresh current page, Spend 4.176658391952515 seconds.
+2019-12-05 13:09:13,413 - INFO - SUCCESS  Find element &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.0369572639465332 seconds.
+2019-12-05 13:09:13,533 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[contains(text(),"添加师傅")]')&gt;, Spend 0.15688276290893555 seconds.
+2019-12-05 13:09:13,534 - INFO - SUCCESS  Load case name: 8、添加师傅-重复邀请师傅校验校验
+2019-12-05 13:09:13,562 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅手机号："]/..//input')&gt;, Spend 0.025987863540649414 seconds.
+2019-12-05 13:09:13,783 - INFO - SUCCESS  * Input message: 13572597243, Spend 0.2458653450012207 seconds
+2019-12-05 13:09:13,799 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.010987997055053711 seconds.
+2019-12-05 13:09:13,883 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.09793972969055176 seconds.
+2019-12-05 13:09:14,883 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:14,903 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.017989158630371094 seconds.
+2019-12-05 13:09:14,946 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt; input message, Spend 0.060944318771362305 seconds.
+2019-12-05 13:09:15,948 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:15,981 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅姓名："]/..//input')&gt;, Spend 0.0309906005859375 seconds.
+2019-12-05 13:09:16,109 - INFO - SUCCESS  * Input message: auto_test, Spend 0.1599259376525879 seconds
+2019-12-05 13:09:16,123 - INFO - SUCCESS  Find element &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.011976242065429688 seconds.
+2019-12-05 13:09:16,171 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[text()="添加师傅"]/../..//button[2]')&gt;, Spend 0.05995059013366699 seconds.
+2019-12-05 13:09:16,319 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.14689946174621582 seconds.
+2019-12-05 13:09:16,354 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 该师傅已经存在，勿重复邀请, Spend 0.18187665939331055 seconds.
+2019-12-05 13:09:16,355 - INFO - SUCCESS  Expect: 该师傅已经存在，勿重复邀请 equal Faction: 该师傅已经存在，勿重复邀请, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>5、师傅管理.b_searchMaster.Master_Search</td>
+    <td class="text-center">4</td>
+    <td class="text-center">4</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',4)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_master_search001_1: 师傅列表搜索功能测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align='left'>
+    <pre>
+    
+pt2_1: 2019-12-05 13:09:35,557 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:09:35,558 - INFO - SUCCESS  Refresh current page, Spend 4.256563425064087 seconds.
+2019-12-05 13:09:35,559 - INFO - SUCCESS  Load case name: 9、师傅搜索-按照师傅手机号搜索师傅校验
+2019-12-05 13:09:35,589 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.029987096786499023 seconds.
+2019-12-05 13:09:35,633 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.07395815849304199 seconds.
+2019-12-05 13:09:36,636 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:36,671 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.032990217208862305 seconds.
+2019-12-05 13:09:36,883 - INFO - SUCCESS  * Input message: 13720673941, Spend 0.2448575496673584 seconds
+2019-12-05 13:09:36,900 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.015991687774658203 seconds.
+2019-12-05 13:09:36,950 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.06696271896362305 seconds.
+2019-12-05 13:09:37,951 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:37,999 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.04600381851196289 seconds.
+2019-12-05 13:09:38,097 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, Spend 0.14391803741455078 seconds.
+2019-12-05 13:09:38,098 - INFO - SUCCESS  Expect: 邓鹏飞 in Faction: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_master_search001_2: 师傅列表搜索功能测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align='left'>
+    <pre>
+    
+pt2_2: 2019-12-05 13:09:42,055 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:09:42,057 - INFO - SUCCESS  Refresh current page, Spend 3.9567434787750244 seconds.
+2019-12-05 13:09:42,058 - INFO - SUCCESS  Load case name: 10、师傅搜索-按照师傅名称搜索师傅校验
+2019-12-05 13:09:42,095 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.034993886947631836 seconds.
+2019-12-05 13:09:42,142 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.08296060562133789 seconds.
+2019-12-05 13:09:43,144 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:43,178 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.032010555267333984 seconds.
+2019-12-05 13:09:43,391 - INFO - SUCCESS  * Input message: 小米科技, Spend 0.2448580265045166 seconds
+2019-12-05 13:09:43,405 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.01397252082824707 seconds.
+2019-12-05 13:09:43,456 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.06494736671447754 seconds.
+2019-12-05 13:09:44,458 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:44,490 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.029984712600708008 seconds.
+2019-12-05 13:09:44,588 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, Spend 0.12894153594970703 seconds.
+2019-12-05 13:09:44,589 - INFO - SUCCESS  Expect: 13720673941 in Faction: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_master_search001_3: 师傅列表搜索功能测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align='left'>
+    <pre>
+    
+pt2_3: 2019-12-05 13:09:47,022 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:09:47,025 - INFO - SUCCESS  Refresh current page, Spend 2.433610677719116 seconds.
+2019-12-05 13:09:47,026 - INFO - SUCCESS  Load case name: 11、师傅搜索-按照师傅手机号模糊搜索师傅校验
+2019-12-05 13:09:47,058 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.029001474380493164 seconds.
+2019-12-05 13:09:47,112 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.08395123481750488 seconds.
+2019-12-05 13:09:48,114 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:48,148 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03198838233947754 seconds.
+2019-12-05 13:09:48,277 - INFO - SUCCESS  * Input message: 3941, Spend 0.1619246006011963 seconds
+2019-12-05 13:09:48,295 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.015991926193237305 seconds.
+2019-12-05 13:09:48,361 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.08195352554321289 seconds.
+2019-12-05 13:09:49,362 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:49,393 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.029012203216552734 seconds.
+2019-12-05 13:09:49,569 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, Spend 0.2048797607421875 seconds.
+2019-12-05 13:09:49,570 - INFO - SUCCESS  Expect: 邓鹏飞 in Faction: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_master_search001_4: 师傅列表搜索功能测试用例</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse in" align='left'>
+    <pre>
+    
+pt2_4: 2019-12-05 13:09:53,454 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:09:53,455 - INFO - SUCCESS  Refresh current page, Spend 3.883774518966675 seconds.
+2019-12-05 13:09:53,455 - INFO - SUCCESS  Load case name: 12、师傅搜索-按照师傅名字模糊搜索师傅校验
+2019-12-05 13:09:53,473 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.01598834991455078 seconds.
+2019-12-05 13:09:53,507 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.04996848106384277 seconds.
+2019-12-05 13:09:54,508 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:54,542 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.0319828987121582 seconds.
+2019-12-05 13:09:54,706 - INFO - SUCCESS  * Input message: 小米, Spend 0.19488739967346191 seconds
+2019-12-05 13:09:54,720 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012000322341918945 seconds.
+2019-12-05 13:09:54,779 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.06995201110839844 seconds.
+2019-12-05 13:09:55,781 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:09:55,813 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.028992891311645508 seconds.
+2019-12-05 13:09:55,949 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, Spend 0.16690731048583984 seconds.
+2019-12-05 13:09:55,950 - INFO - SUCCESS  Expect: 13720673941 in Faction: 邓鹏飞
+13720673941
+已加入
+2019-10-11 14:13:51
+已实名
+610528199312110312
+不限
+不限
+不限
+陕西省西安市未央区, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='errorClass warning'>
+    <td>5、师傅管理.c_masterOperate.Master_List_Operate</td>
+    <td class="text-center">3</td>
+    <td class="text-center">2</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',3)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='pt3_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_master_list_operate001: 师傅禁止派单功能校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse in" align='left'>
+    <pre>
+    
+pt3_1: 2019-12-05 13:10:37,446 - INFO - SUCCESS  Load case name: 13、禁止派单-师傅禁止派单功能校验
+2019-12-05 13:10:38,449 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:10:38,548 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.1003694534301758 seconds.
+2019-12-05 13:10:40,562 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:10:40,563 - INFO - SUCCESS  Refresh current page, Spend 2.0138485431671143 seconds.
+2019-12-05 13:10:41,341 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.7765541076660156 seconds.
+2019-12-05 13:10:41,411 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.8465144634246826 seconds.
+2019-12-05 13:10:42,412 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:10:42,448 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.033980607986450195 seconds.
+2019-12-05 13:10:42,663 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.24985480308532715 seconds
+2019-12-05 13:10:42,683 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.0179903507232666 seconds.
+2019-12-05 13:10:42,737 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.07195830345153809 seconds.
+2019-12-05 13:10:43,739 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:10:43,771 - INFO - SUCCESS  Find element &lt;('xpath', '(//a[text()="禁止派单"])[3]')&gt;, Spend 0.03098297119140625 seconds.
+2019-12-05 13:10:43,800 - INFO - SUCCESS  * Find element &lt;('xpath', '(//a[text()="禁止派单"])[3]')&gt; is true, Spend 0.059966087341308594 seconds.
+2019-12-05 13:10:43,822 - INFO - SUCCESS  Find element &lt;('xpath', '(//a[text()="禁止派单"])[3]')&gt;, Spend 0.02098846435546875 seconds.
+2019-12-05 13:10:43,900 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//a[text()="禁止派单"])[3]')&gt;, Spend 0.09794402122497559 seconds.
+2019-12-05 13:10:43,932 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"？")]/..//a[2]')&gt;, Spend 0.03198981285095215 seconds.
+2019-12-05 13:10:43,989 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(text(),"？")]/..//a[2]')&gt;, Spend 0.08893656730651855 seconds.
+2019-12-05 13:10:44,991 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:10:45,052 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&amp;SubtabType=待结算&amp;page=1&gt;, Spend 1.0603928565979004 seconds.
+2019-12-05 13:10:48,916 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:10:48,918 - INFO - SUCCESS  Refresh current page, Spend 3.8647890090942383 seconds.
+2019-12-05 13:10:50,974 - INFO - SUCCESS  Find element &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[3]/div/a')&gt;, Spend 0.054924964904785156 seconds.
+2019-12-05 13:10:51,007 - INFO - SUCCESS  * Get element &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[3]/div/a')&gt; text: 637111482300374207, Spend 0.08788943290710449 seconds.
+2019-12-05 13:10:51,044 - INFO - SUCCESS  Find element &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[2]/.//input')&gt;, Spend 0.03497791290283203 seconds.
+2019-12-05 13:10:51,224 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[2]/.//input')&gt;, Spend 0.2148730754852295 seconds.
+2019-12-05 13:10:51,225 - INFO - SUCCESS  Select order: 637111482300374207.
+2019-12-05 13:10:51,254 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="派单"]')&gt;, Spend 0.02798628807067871 seconds.
+2019-12-05 13:10:51,349 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="派单"]')&gt;, Spend 0.12292933464050293 seconds.
+2019-12-05 13:10:52,351 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:10:52,410 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入师傅姓名/手机号进行查询"]')&gt;, Spend 0.05596804618835449 seconds.
+2019-12-05 13:10:52,613 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.2608497142791748 seconds
+2019-12-05 13:10:52,637 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入师傅姓名/手机号进行查询"]/following-sibling::a')&gt;, Spend 0.021987199783325195 seconds.
+2019-12-05 13:10:52,688 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//input[@placeholder="输入师傅姓名/手机号进行查询"]/following-sibling::a')&gt;, Spend 0.07295799255371094 seconds.
+2019-12-05 13:10:53,690 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:14,714 - INFO - FAIL  * Find element &lt;('xpath', '//div[contains(text(),"列表")]/../..//tbody/tr[1]')&gt; is false, Spend 21.022236108779907 seconds.
+2019-12-05 13:11:14,716 - INFO - SUCCESS  Expect: False, Faction: False, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_master_list_operate002: 师傅恢复派单功能校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse in" align='left'>
+    <pre>
+    
+pt3_2: 2019-12-05 13:11:14,718 - INFO - SUCCESS  Load case name: 14、恢复派单-师傅恢复派单功能校验
+2019-12-05 13:11:15,719 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:15,832 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.1134390830993652 seconds.
+2019-12-05 13:11:20,316 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:11:20,317 - INFO - SUCCESS  Refresh current page, Spend 4.484432935714722 seconds.
+2019-12-05 13:11:20,357 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03698539733886719 seconds.
+2019-12-05 13:11:20,440 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.11993050575256348 seconds.
+2019-12-05 13:11:21,442 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:21,475 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03101348876953125 seconds.
+2019-12-05 13:11:21,683 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.23886370658874512 seconds
+2019-12-05 13:11:21,696 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012992382049560547 seconds.
+2019-12-05 13:11:21,745 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.06096506118774414 seconds.
+2019-12-05 13:11:22,746 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:22,868 - INFO - SUCCESS  Find element &lt;('xpath', '(//a[text()="恢复派单"])[3]')&gt;, Spend 0.11993837356567383 seconds.
+2019-12-05 13:11:22,887 - INFO - SUCCESS  * Find element &lt;('xpath', '(//a[text()="恢复派单"])[3]')&gt; is true, Spend 0.13892364501953125 seconds.
+2019-12-05 13:11:22,898 - INFO - SUCCESS  Find element &lt;('xpath', '(//a[text()="恢复派单"])[3]')&gt;, Spend 0.009994268417358398 seconds.
+2019-12-05 13:11:22,948 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//a[text()="恢复派单"])[3]')&gt;, Spend 0.060965776443481445 seconds.
+2019-12-05 13:11:23,951 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:24,048 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&amp;SubtabType=待结算&amp;page=1&gt;, Spend 1.0983545780181885 seconds.
+2019-12-05 13:11:27,086 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:11:27,087 - INFO - SUCCESS  Refresh current page, Spend 3.0382606983184814 seconds.
+2019-12-05 13:11:29,140 - INFO - SUCCESS  Find element &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[3]/div/a')&gt;, Spend 0.049883365631103516 seconds.
+2019-12-05 13:11:29,174 - INFO - SUCCESS  * Get element &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[3]/div/a')&gt; text: 637111482300374207, Spend 0.08386778831481934 seconds.
+2019-12-05 13:11:29,200 - INFO - SUCCESS  Find element &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[2]/.//input')&gt;, Spend 0.025985002517700195 seconds.
+2019-12-05 13:11:29,395 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//span[@class="ivu-page-total"]/../../.././/tr[@class="ivu-table-row"][1]/td[2]/.//input')&gt;, Spend 0.2208714485168457 seconds.
+2019-12-05 13:11:29,396 - INFO - SUCCESS  Select order: 637111482300374207.
+2019-12-05 13:11:29,416 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="派单"]')&gt;, Spend 0.01998591423034668 seconds.
+2019-12-05 13:11:29,556 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="派单"]')&gt;, Spend 0.15890765190124512 seconds.
+2019-12-05 13:11:30,557 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:30,605 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入师傅姓名/手机号进行查询"]')&gt;, Spend 0.045968055725097656 seconds.
+2019-12-05 13:11:30,827 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.2678413391113281 seconds
+2019-12-05 13:11:30,841 - INFO - SUCCESS  Find element &lt;('xpath', '//input[@placeholder="输入师傅姓名/手机号进行查询"]/following-sibling::a')&gt;, Spend 0.013993024826049805 seconds.
+2019-12-05 13:11:30,892 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//input[@placeholder="输入师傅姓名/手机号进行查询"]/following-sibling::a')&gt;, Spend 0.06496310234069824 seconds.
+2019-12-05 13:11:31,894 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:31,936 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"列表")]/../..//tbody/tr[1]')&gt;, Spend 0.03998279571533203 seconds.
+2019-12-05 13:11:31,965 - INFO - SUCCESS  * Find element &lt;('xpath', '//div[contains(text(),"列表")]/../..//tbody/tr[1]')&gt; is true, Spend 0.06895804405212402 seconds.
+2019-12-05 13:11:31,966 - INFO - SUCCESS  Expect: True, Faction: True, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft3_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_master_list_operate003: 师傅撤销邀请功能校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_3'>错误</button>
+    <div id='div_ft3_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_3'>错误</button>
+    <div id='div_ft3_3' class="collapse in" align='left'>
+    <pre>
+    
+ft3_3: 2019-12-05 13:11:31,967 - INFO - SUCCESS  Load case name: 15、撤销邀请-撤销师傅邀请校验
+2019-12-05 13:11:32,970 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:11:33,065 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.0963494777679443 seconds.
+2019-12-05 13:12:21,934 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:12:21,935 - INFO - SUCCESS  Refresh current page, Spend 48.87044835090637 seconds.
+2019-12-05 13:12:21,988 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.050943851470947266 seconds.
+2019-12-05 13:12:22,036 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.09891343116760254 seconds.
+2019-12-05 13:12:23,037 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:12:23,069 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.030004501342773438 seconds.
+2019-12-05 13:12:23,323 - INFO - SUCCESS  * Input message: 13572597243, Spend 0.28482770919799805 seconds
+2019-12-05 13:12:23,340 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.014993667602539062 seconds.
+2019-12-05 13:12:23,388 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.0639646053314209 seconds.
+2019-12-05 13:12:24,391 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:12:24,447 - INFO - SUCCESS  Find element &lt;('xpath', '(//a[text()="撤销"])[3]')&gt;, Spend 0.053998470306396484 seconds.
+2019-12-05 13:12:24,618 - INFO - SUCCESS  Find element &lt;('xpath', '(//a[text()="撤销"])[3]')&gt;, Spend 0.01399087905883789 seconds.
+2019-12-05 13:12:24,634 - INFO - SUCCESS  * Find element &lt;('xpath', '(//a[text()="撤销"])[3]')&gt; is true, Spend 0.028981924057006836 seconds.
+2019-12-05 13:12:26,635 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+Traceback (most recent call last):
+  File "D:\my_test_script\UItest-branch\public\common\basepage.py", line 129, in click_button
+    button.click()
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_test_script\UItest-branch\testcase\5、师傅管理\c_masterOperate.py", line 123, in test_master_list_operate003
+    self.master_page.click_del_visit_master()
+  File "D:\my_test_script\UItest-branch\public\page\masterListPage.py", line 119, in click_del_visit_master
+    self.click_button(self.del_master_teamwork_btn)
+  File "D:\my_test_script\UItest-branch\public\common\basepage.py", line 136, in click_button
+    button.click()
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64)
+
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>5、师傅管理.d_masterServerSet.Master_Server_Set</td>
+    <td class="text-center">5</td>
+    <td class="text-center">5</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c4',5)" class="detail" id='c4'>详细</a></td>
+</tr>
+
+<tr id='pt4_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_server_set001: 师傅备注设置校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse in" align='left'>
+    <pre>
+    
+pt4_1: 2019-12-05 13:13:30,648 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:30,706 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.0573923587799072 seconds.
+2019-12-05 13:13:33,286 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:13:33,287 - INFO - SUCCESS  Refresh current page, Spend 2.5815227031707764 seconds.
+2019-12-05 13:13:33,288 - INFO - SUCCESS  Load case name: 16、服务设置-师傅备注设置校验
+2019-12-05 13:13:33,445 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.1559126377105713 seconds.
+2019-12-05 13:13:33,523 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.23486590385437012 seconds.
+2019-12-05 13:13:34,525 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:34,539 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.012959718704223633 seconds.
+2019-12-05 13:13:34,699 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.1748664379119873 seconds
+2019-12-05 13:13:34,718 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.018988609313964844 seconds.
+2019-12-05 13:13:34,772 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.07195782661437988 seconds.
+2019-12-05 13:13:35,775 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:35,824 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.04697585105895996 seconds.
+2019-12-05 13:13:35,897 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.11993026733398438 seconds.
+2019-12-05 13:13:36,897 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:36,912 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅备注："]/..//input')&gt;, Spend 0.014915704727172852 seconds.
+2019-12-05 13:13:36,958 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[text()="师傅备注："]/..//input')&gt; input message, Spend 0.06088829040527344 seconds.
+2019-12-05 13:13:37,960 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:37,991 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="师傅备注："]/..//input')&gt;, Spend 0.029011964797973633 seconds.
+2019-12-05 13:13:38,268 - INFO - SUCCESS  * Input message: auto_test, Spend 0.30782103538513184 seconds
+2019-12-05 13:13:38,289 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.0199887752532959 seconds.
+2019-12-05 13:13:38,377 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.10893917083740234 seconds.
+2019-12-05 13:13:39,379 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:43,383 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:13:43,385 - INFO - SUCCESS  Refresh current page, Spend 4.004709005355835 seconds.
+2019-12-05 13:13:43,424 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03700971603393555 seconds.
+2019-12-05 13:13:43,515 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.12794947624206543 seconds.
+2019-12-05 13:13:44,517 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:44,551 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03200984001159668 seconds.
+2019-12-05 13:13:44,802 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.28383636474609375 seconds
+2019-12-05 13:13:44,816 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012992620468139648 seconds.
+2019-12-05 13:13:44,865 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.0609736442565918 seconds.
+2019-12-05 13:13:45,866 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:45,907 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt;, Spend 0.0389704704284668 seconds.
+2019-12-05 13:13:46,005 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]')&gt; text: auto_test
+13700000002
+已加入
+2019-12-05 13:11:24
+未实名
+维修,安装
+空调,热水器
+陕西省西安市市辖区...
+陕西省西安市未央区..., Spend 0.13793277740478516 seconds.
+2019-12-05 13:13:46,006 - INFO - SUCCESS  Expect: auto_test in Faction: auto_test
+13700000002
+已加入
+2019-12-05 13:11:24
+未实名
+维修,安装
+空调,热水器
+陕西省西安市市辖区...
+陕西省西安市未央区..., test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_server_set002: 师傅服务类型为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse in" align='left'>
+    <pre>
+    
+pt4_2: 2019-12-05 13:13:47,007 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:47,068 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.0603723526000977 seconds.
+2019-12-05 13:13:52,041 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:13:52,043 - INFO - SUCCESS  Refresh current page, Spend 4.973266363143921 seconds.
+2019-12-05 13:13:52,044 - INFO - SUCCESS  Load case name: 17、服务设置-师傅服务类型为空校验
+2019-12-05 13:13:52,080 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.033977508544921875 seconds.
+2019-12-05 13:13:52,125 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.07994794845581055 seconds.
+2019-12-05 13:13:53,126 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:53,138 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.011973857879638672 seconds.
+2019-12-05 13:13:53,344 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.21785664558410645 seconds
+2019-12-05 13:13:53,359 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012989997863769531 seconds.
+2019-12-05 13:13:53,415 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.06895852088928223 seconds.
+2019-12-05 13:13:54,417 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:54,450 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.030974864959716797 seconds.
+2019-12-05 13:13:54,572 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.15291094779968262 seconds.
+2019-12-05 13:13:55,575 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:55,623 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')&gt;, Spend 0.045973777770996094 seconds.
+2019-12-05 13:13:55,666 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')&gt; text: 维修,安装, Spend 0.08994865417480469 seconds.
+2019-12-05 13:13:55,687 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"维修")]')&gt;, Spend 0.018991470336914062 seconds.
+2019-12-05 13:13:55,743 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"维修")]')&gt;, Spend 0.0759577751159668 seconds.
+2019-12-05 13:13:55,766 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"安装")]')&gt;, Spend 0.021986961364746094 seconds.
+2019-12-05 13:13:55,814 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"安装")]')&gt;, Spend 0.06897497177124023 seconds.
+2019-12-05 13:13:55,827 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.011993646621704102 seconds.
+2019-12-05 13:13:55,880 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.06596493721008301 seconds.
+2019-12-05 13:13:55,898 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.0159912109375 seconds.
+2019-12-05 13:13:55,915 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请选择服务类型, Spend 0.03399014472961426 seconds.
+2019-12-05 13:13:55,916 - INFO - SUCCESS  Expect: 请选择服务类型 equal Faction: 请选择服务类型, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_server_set003: 师傅服务品类为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse in" align='left'>
+    <pre>
+    
+pt4_3: 2019-12-05 13:13:56,918 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:13:56,973 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.0553958415985107 seconds.
+2019-12-05 13:14:01,104 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:14:01,106 - INFO - SUCCESS  Refresh current page, Spend 4.131687641143799 seconds.
+2019-12-05 13:14:01,108 - INFO - SUCCESS  Load case name: 18、服务设置-师傅服务品类为空校验
+2019-12-05 13:14:01,142 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03397560119628906 seconds.
+2019-12-05 13:14:01,186 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.0769505500793457 seconds.
+2019-12-05 13:14:02,187 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:02,220 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.031011581420898438 seconds.
+2019-12-05 13:14:02,455 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.2668459415435791 seconds
+2019-12-05 13:14:02,470 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012990474700927734 seconds.
+2019-12-05 13:14:02,519 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.0619657039642334 seconds.
+2019-12-05 13:14:03,520 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:03,552 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.030013084411621094 seconds.
+2019-12-05 13:14:03,715 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.19288897514343262 seconds.
+2019-12-05 13:14:04,718 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:04,765 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')&gt;, Spend 0.044975996017456055 seconds.
+2019-12-05 13:14:04,791 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')&gt; text: 空调,热水器, Spend 0.07196998596191406 seconds.
+2019-12-05 13:14:04,814 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"空调")]')&gt;, Spend 0.020969867706298828 seconds.
+2019-12-05 13:14:04,871 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"空调")]')&gt;, Spend 0.07893919944763184 seconds.
+2019-12-05 13:14:04,887 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"热水器")]')&gt;, Spend 0.016004562377929688 seconds.
+2019-12-05 13:14:04,937 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"热水器")]')&gt;, Spend 0.06596016883850098 seconds.
+2019-12-05 13:14:04,950 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.011993408203125 seconds.
+2019-12-05 13:14:05,004 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.06696319580078125 seconds.
+2019-12-05 13:14:05,018 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.012992382049560547 seconds.
+2019-12-05 13:14:05,038 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请选择服务品类, Spend 0.031981706619262695 seconds.
+2019-12-05 13:14:05,039 - INFO - SUCCESS  Expect: 请选择服务品类 equal Faction: 请选择服务品类, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_server_set005: 师傅位置为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse in" align='left'>
+    <pre>
+    
+pt4_4: 2019-12-05 13:14:06,041 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:06,107 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.0673894882202148 seconds.
+2019-12-05 13:14:10,201 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:14:10,202 - INFO - SUCCESS  Refresh current page, Spend 4.094652891159058 seconds.
+2019-12-05 13:14:10,204 - INFO - SUCCESS  Load case name: 20、服务设置-师傅位置为空校验
+2019-12-05 13:14:10,246 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03799748420715332 seconds.
+2019-12-05 13:14:10,318 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.11092376708984375 seconds.
+2019-12-05 13:14:11,321 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:11,355 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03198361396789551 seconds.
+2019-12-05 13:14:11,586 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.2638404369354248 seconds
+2019-12-05 13:14:11,600 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.010983943939208984 seconds.
+2019-12-05 13:14:11,649 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.05995535850524902 seconds.
+2019-12-05 13:14:12,649 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:12,659 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.009992599487304688 seconds.
+2019-12-05 13:14:12,732 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.08295178413391113 seconds.
+2019-12-05 13:14:13,734 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:13,777 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="清除"]')&gt;, Spend 0.04098081588745117 seconds.
+2019-12-05 13:14:13,866 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="清除"]')&gt;, Spend 0.12994790077209473 seconds.
+2019-12-05 13:14:13,894 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.026979684829711914 seconds.
+2019-12-05 13:14:13,945 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.0769491195678711 seconds.
+2019-12-05 13:14:13,958 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.011993169784545898 seconds.
+2019-12-05 13:14:13,978 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 请选择师傅位置, Spend 0.0319819450378418 seconds.
+2019-12-05 13:14:13,979 - INFO - SUCCESS  Expect: 请选择师傅位置 equal Faction: 请选择师傅位置, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_server_set006: 师傅服务设置成功校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
+    <div id='div_pt4_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
+    <div id='div_pt4_5' class="collapse in" align='left'>
+    <pre>
+    
+pt4_5: 2019-12-05 13:14:14,981 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:15,045 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/index/index&gt;, Spend 1.064391851425171 seconds.
+2019-12-05 13:14:17,523 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:14:17,525 - INFO - SUCCESS  Refresh current page, Spend 2.479581117630005 seconds.
+2019-12-05 13:14:17,527 - INFO - SUCCESS  Load case name: 21、服务设置-师傅服务设置成功校验
+2019-12-05 13:14:17,558 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.030002355575561523 seconds.
+2019-12-05 13:14:17,595 - INFO - SUCCESS  * Clear element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt; input message, Spend 0.06596207618713379 seconds.
+2019-12-05 13:14:18,597 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:18,630 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.03098297119140625 seconds.
+2019-12-05 13:14:18,843 - INFO - SUCCESS  * Input message: 13700000002, Spend 0.2448587417602539 seconds
+2019-12-05 13:14:18,858 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012992620468139648 seconds.
+2019-12-05 13:14:18,907 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.0639650821685791 seconds.
+2019-12-05 13:14:19,910 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:19,943 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.030983686447143555 seconds.
+2019-12-05 13:14:20,026 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//tr[starts-with(@class,"ivu-table-row")][1]//a[1])[3]')&gt;, Spend 0.11393523216247559 seconds.
+2019-12-05 13:14:21,027 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:21,068 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')&gt;, Spend 0.039969682693481445 seconds.
+2019-12-05 13:14:21,108 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[11]/div/div')&gt; text: 维修,安装, Spend 0.07892417907714844 seconds.
+2019-12-05 13:14:21,140 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"维修")]')&gt;, Spend 0.0299835205078125 seconds.
+2019-12-05 13:14:21,243 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"维修")]')&gt;, Spend 0.13292551040649414 seconds.
+2019-12-05 13:14:21,274 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"安装")]')&gt;, Spend 0.0299835205078125 seconds.
+2019-12-05 13:14:21,321 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"安装")]')&gt;, Spend 0.07695698738098145 seconds.
+2019-12-05 13:14:21,334 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')&gt;, Spend 0.011990785598754883 seconds.
+2019-12-05 13:14:21,352 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[12]/div/div')&gt; text: 空调,热水器, Spend 0.030995607376098633 seconds.
+2019-12-05 13:14:21,364 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"空调")]')&gt;, Spend 0.010993003845214844 seconds.
+2019-12-05 13:14:21,410 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"空调")]')&gt;, Spend 0.056952714920043945 seconds.
+2019-12-05 13:14:21,423 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"热水器")]')&gt;, Spend 0.010995626449584961 seconds.
+2019-12-05 13:14:21,472 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"热水器")]')&gt;, Spend 0.05998659133911133 seconds.
+2019-12-05 13:14:21,492 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[13]/div/div')&gt;, Spend 0.019971370697021484 seconds.
+2019-12-05 13:14:21,515 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[starts-with(@class,"ivu-table-row")][1]/td[13]/div/div')&gt; text: 陕西省西安市市辖区..., Spend 0.041959524154663086 seconds.
+陕西省西安市市辖区...
+2019-12-05 13:14:21,530 - INFO - SUCCESS  Find element &lt;('xpath', '//div[@class="city-picker"][1]//ul')&gt;, Spend 0.014994621276855469 seconds.
+2019-12-05 13:14:21,546 - INFO - SUCCESS  Get children element: &lt;li&gt; count are 2, Spend 0.0299832820892334 seconds.
+
+2019-12-05 13:14:22,562 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:22,652 - INFO - SUCCESS  Find element &lt;('xpath', '//div[@class="city-picker"][1]//ul/li[2]//input')&gt;, Spend 0.027967214584350586 seconds.
+2019-12-05 13:14:22,723 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[@class="city-picker"][1]//ul/li[2]//input')&gt;, Spend 0.0989234447479248 seconds.
+2019-12-05 13:14:22,744 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"维修")]')&gt;, Spend 0.01898813247680664 seconds.
+2019-12-05 13:14:22,807 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"维修")]')&gt;, Spend 0.08295011520385742 seconds.
+2019-12-05 13:14:22,826 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"安装")]')&gt;, Spend 0.0179901123046875 seconds.
+2019-12-05 13:14:22,887 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务类型："]/..//div/label[contains(.,"安装")]')&gt;, Spend 0.07895421981811523 seconds.
+2019-12-05 13:14:22,903 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"空调")]')&gt;, Spend 0.014991998672485352 seconds.
+2019-12-05 13:14:22,962 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"空调")]')&gt;, Spend 0.07495808601379395 seconds.
+2019-12-05 13:14:22,974 - INFO - SUCCESS  Find element &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"热水器")]')&gt;, Spend 0.010990619659423828 seconds.
+2019-12-05 13:14:23,016 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[text()="服务品类："]/..//div/label[contains(.,"热水器")]')&gt;, Spend 0.05196833610534668 seconds.
+2019-12-05 13:14:23,027 - INFO - SUCCESS  Find element &lt;('xpath', '//div[@class="city-picker"][1]//ul')&gt;, Spend 0.010992765426635742 seconds.
+2019-12-05 13:14:23,036 - INFO - SUCCESS  Get children element: &lt;li&gt; count are 2, Spend 0.018988370895385742 seconds.
+2019-12-05 13:14:24,042 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:25,071 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:14:25,145 - INFO - SUCCESS  Find element &lt;('xpath', '//div[@class="city-picker"][1]//ul/li[2]//input')&gt;, Spend 0.030982255935668945 seconds.
+2019-12-05 13:14:25,250 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[@class="city-picker"][1]//ul/li[2]//input')&gt;, Spend 0.13590002059936523 seconds.
+2019-12-05 13:14:25,288 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.03597712516784668 seconds.
+2019-12-05 13:14:25,416 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(text(),"服务设置")]/../..//button[2]')&gt;, Spend 0.16490483283996582 seconds.
+2019-12-05 13:14:25,687 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt;, Spend 0.268843412399292 seconds.
+2019-12-05 13:14:25,722 - INFO - SUCCESS  * Get element &lt;('xpath', '//*[@class="ivu-message-notice-content"]/div/div/span')&gt; text: 操作成功, Spend 0.30382347106933594 seconds.
+2019-12-05 13:14:25,723 - INFO - SUCCESS  Expect: 操作成功 equal Faction: 操作成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>5、师傅管理.e_orderStatistics.Order_Statistics</td>
+    <td class="text-center">5</td>
+    <td class="text-center">5</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c5',5)" class="detail" id='c5'>详细</a></td>
+</tr>
+
+<tr id='pt5_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_statistics001: 师傅接单数量同步校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
+    <div id='div_pt5_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
+    <div id='div_pt5_1' class="collapse in" align='left'>
+    <pre>
+    
+pt5_1: 2019-12-05 13:16:18,105 - INFO - SUCCESS  Load case name: 5、师傅工单统计-师傅已接单订单数量校验
+2019-12-05 13:16:19,108 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:19,267 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/masterOrder/index&gt;, Spend 1.1603407859802246 seconds.
+2019-12-05 13:16:21,745 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:16:21,747 - INFO - SUCCESS  Refresh current page, Spend 2.4795780181884766 seconds.
+2019-12-05 13:16:21,795 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.04596590995788574 seconds.
+2019-12-05 13:16:21,902 - INFO - SUCCESS  * Input message: 小米科技, Spend 0.15290498733520508 seconds
+2019-12-05 13:16:21,916 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.012991905212402344 seconds.
+2019-12-05 13:16:21,987 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.08495116233825684 seconds.
+2019-12-05 13:16:22,989 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:23,007 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[6]//span')&gt;, Spend 0.017991065979003906 seconds.
+2019-12-05 13:16:23,030 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[6]//span')&gt; text: 368, Spend 0.04095911979675293 seconds.
+2019-12-05 13:16:23,031 - INFO - SUCCESS  Expect: 1 equal Faction: 1, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_statistics002: 师傅已完单数量校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_2'>通过</button>
+    <div id='div_pt5_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_2'>通过</button>
+    <div id='div_pt5_2' class="collapse in" align='left'>
+    <pre>
+    
+pt5_2: 2019-12-05 13:16:23,032 - INFO - SUCCESS  Load case name: 6、师傅工单统计-师傅已完单订单数量校验
+2019-12-05 13:16:23,048 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[8]//span')&gt;, Spend 0.014994382858276367 seconds.
+2019-12-05 13:16:23,066 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[8]//span')&gt; text: 313, Spend 0.033980369567871094 seconds.
+2019-12-05 13:16:23,067 - INFO - SUCCESS  Expect: 1 equal Faction: 1, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_statistics003: 师傅待结算数量校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_3'>通过</button>
+    <div id='div_pt5_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_3'>通过</button>
+    <div id='div_pt5_3' class="collapse in" align='left'>
+    <pre>
+    
+pt5_3: 2019-12-05 13:16:23,068 - INFO - SUCCESS  Load case name: 7、师傅工单统计-师傅待结算订单数量校验
+2019-12-05 13:16:23,087 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[10]//span')&gt;, Spend 0.017989397048950195 seconds.
+2019-12-05 13:16:23,107 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[10]//span')&gt; text: 230, Spend 0.036977291107177734 seconds.
+2019-12-05 13:16:23,107 - INFO - SUCCESS  Expect: 1 equal Faction: 1, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_statistics004: 师傅已结算数量校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_4'>通过</button>
+    <div id='div_pt5_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_4'>通过</button>
+    <div id='div_pt5_4' class="collapse in" align='left'>
+    <pre>
+    
+pt5_4: 2019-12-05 13:16:23,108 - INFO - SUCCESS  Load case name: 8、师傅工单统计-师傅已结单订单数量校验
+2019-12-05 13:16:24,110 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:24,200 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/order/search/waitsettle?tabType=师傅工单结算&amp;SubtabType=待结算&amp;page=1&gt;, Spend 1.090376853942871 seconds.
+2019-12-05 13:16:26,241 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[@class="ivu-table-row"])[1]/td[3]//a')&gt;, Spend 0.038825035095214844 seconds.
+2019-12-05 13:16:26,271 - INFO - SUCCESS  * Get element &lt;('xpath', '(//tr[@class="ivu-table-row"])[1]/td[3]//a')&gt; text: 637111485369525647, Spend 0.07082343101501465 seconds.
+2019-12-05 13:16:26,284 - INFO - SUCCESS  Find element &lt;('xpath', '(//tr[@class="ivu-table-row"])[1]/td[3]//a')&gt;, Spend 0.011989355087280273 seconds.
+2019-12-05 13:16:26,374 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '(//tr[@class="ivu-table-row"])[1]/td[3]//a')&gt;, Spend 0.100921630859375 seconds.
+2019-12-05 13:16:26,375 - INFO - SUCCESS  Into order: 637111485369525647 message page.
+2019-12-05 13:16:26,850 - INFO - SUCCESS  Find element &lt;('xpath', '//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')&gt;, Spend 0.474729061126709 seconds.
+2019-12-05 13:16:26,969 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')&gt;, Spend 0.5946605205535889 seconds.
+2019-12-05 13:16:27,064 - INFO - SUCCESS  Find element &lt;('xpath', '//label[contains(.,"结算价格：")]/.././/input[@class="ivu-input-number-input"]')&gt;, Spend 0.09394717216491699 seconds.
+2019-12-05 13:16:27,136 - INFO - SUCCESS  * Clear element &lt;('xpath', '//label[contains(.,"结算价格：")]/.././/input[@class="ivu-input-number-input"]')&gt; input message, Spend 0.16492295265197754 seconds.
+2019-12-05 13:16:27,167 - INFO - SUCCESS  Find element &lt;('xpath', '//label[contains(.,"结算价格：")]/.././/input[@class="ivu-input-number-input"]')&gt;, Spend 0.028983354568481445 seconds.
+2019-12-05 13:16:27,253 - INFO - SUCCESS  * Input message: 100, Spend 0.11493277549743652 seconds
+2019-12-05 13:16:27,283 - INFO - SUCCESS  Find element &lt;('xpath', '//label[contains(.,"付款方式：")]/.././/label[2]')&gt;, Spend 0.027970314025878906 seconds.
+2019-12-05 13:16:27,349 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//label[contains(.,"付款方式：")]/.././/label[2]')&gt;, Spend 0.09293460845947266 seconds.
+2019-12-05 13:16:27,377 - INFO - SUCCESS  Find element &lt;('xpath', '//div[contains(.,"钱包余额：")]/../button[2]')&gt;, Spend 0.02698373794555664 seconds.
+2019-12-05 13:16:27,433 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//div[contains(.,"钱包余额：")]/../button[2]')&gt;, Spend 0.08395218849182129 seconds.
+2019-12-05 13:16:28,435 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:28,611 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/masterOrder/index&gt;, Spend 1.1773245334625244 seconds.
+2019-12-05 13:16:31,316 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:16:31,319 - INFO - SUCCESS  Refresh current page, Spend 2.704460859298706 seconds.
+2019-12-05 13:16:31,356 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.034986257553100586 seconds.
+2019-12-05 13:16:31,481 - INFO - SUCCESS  * Input message: 小米科技, Spend 0.15990710258483887 seconds
+2019-12-05 13:16:31,496 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.01398921012878418 seconds.
+2019-12-05 13:16:31,561 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.07895302772521973 seconds.
+2019-12-05 13:16:32,562 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:33,565 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:33,609 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[9]//span')&gt;, Spend 0.042005300521850586 seconds.
+2019-12-05 13:16:33,668 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[9]//span')&gt; text: 84, Spend 0.10094380378723145 seconds.
+2019-12-05 13:16:33,691 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[10]//span')&gt;, Spend 0.01998591423034668 seconds.
+2019-12-05 13:16:33,717 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[10]//span')&gt; text: 229, Spend 0.04597187042236328 seconds.
+2019-12-05 13:16:33,717 - INFO - SUCCESS  Expect: 1 equal Faction: 1, test -&gt; PASS.
+2019-12-05 13:16:33,718 - INFO - SUCCESS  Expect: 229 equal Faction: 229, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_order_statistics005: 师傅好评率校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_5'>通过</button>
+    <div id='div_pt5_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_5'>通过</button>
+    <div id='div_pt5_5' class="collapse in" align='left'>
+    <pre>
+    
+pt5_5: 2019-12-05 13:16:33,719 - INFO - SUCCESS  Load case name: 9、师傅工单统计-师傅好评率校验
+2019-12-05 13:16:34,721 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:34,787 - INFO - SUCCESS  Open url: &lt;http://www.51shouhou.cn/singleBranch/#/master/masterOrder/index&gt;, Spend 1.0663909912109375 seconds.
+2019-12-05 13:16:37,192 - INFO - SUCCESS  Webdriver sleep 2 seconds.
+2019-12-05 13:16:37,193 - INFO - SUCCESS  Refresh current page, Spend 2.4046261310577393 seconds.
+2019-12-05 13:16:37,216 - INFO - SUCCESS  Find element &lt;('xpath', '//input[starts-with(@placeholder,"输入师傅姓名")]')&gt;, Spend 0.019991159439086914 seconds.
+2019-12-05 13:16:37,317 - INFO - SUCCESS  * Input message: 小米科技, Spend 0.12193155288696289 seconds
+2019-12-05 13:16:37,333 - INFO - SUCCESS  Find element &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.01298832893371582 seconds.
+2019-12-05 13:16:37,390 - INFO - SUCCESS  * Click button -&gt; &lt;('xpath', '//a[text()="搜索"]')&gt;, Spend 0.06995511054992676 seconds.
+2019-12-05 13:16:38,392 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:39,394 - INFO - SUCCESS  Webdriver sleep 1 seconds.
+2019-12-05 13:16:39,440 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[8]//span')&gt;, Spend 0.04400634765625 seconds.
+2019-12-05 13:16:39,500 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[8]//span')&gt; text: 313, Spend 0.1039431095123291 seconds.
+2019-12-05 13:16:39,528 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[12]//span')&gt;, Spend 0.02598857879638672 seconds.
+2019-12-05 13:16:39,559 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[12]//span')&gt; text: 114, Spend 0.056966304779052734 seconds.
+2019-12-05 13:16:39,586 - INFO - SUCCESS  Find element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[14]//span')&gt;, Spend 0.02698373794555664 seconds.
+2019-12-05 13:16:39,607 - INFO - SUCCESS  * Get element &lt;('xpath', '//tr[@class="ivu-table-row"][1]/td[14]//span')&gt; text: 36.42%, Spend 0.04796648025512695 seconds.
+2019-12-05 13:16:39,608 - INFO - SUCCESS  Expect: 36.42% equal Faction: 36.42%, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>25</td>
+    <td>24</td>
+    <td>0</td>
+    <td>1</td>
+    <td>通过率：96.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

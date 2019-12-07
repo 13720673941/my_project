@@ -34,6 +34,8 @@ class ManageStatisticsSearch(unittest.TestCase):
         cls.login = LoginPage(cls.driver)
         cls.search_order = SearchOrderPage(cls.driver)
         cls.order_statistics = BranchStatisticsPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行
         mytest.start_test()
         # 获取服务商账号信息

@@ -42,6 +42,8 @@ class Manage_Settle(unittest.TestCase):
         cls.settleOrder = SettleOrderPage(cls.dr)
         cls.search_order = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.base.clear_catch()
         mytest.start_test()
         # 登录网点 西安好家帮家政有限公司
         cls.Use = rwconfig.read_config_data('西安好家帮家政有限公司',"username")
@@ -172,6 +174,7 @@ class Manage_Settle(unittest.TestCase):
         self.login.login_main(self.Use,self.Pwd)
         # 进入服务撒工单结算列表页面
         self.settleOrder.enter_branch_settle_page()
+        self.base.sleep(1)
         # 搜索订单
         self.search_order.search_order_by_number(self.OrderNum)
         # 进入工单详情页

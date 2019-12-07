@@ -31,6 +31,8 @@ class Search_Branch(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.server_branch = ServerBranchPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始运行
         mytest.start_test()
         # 获取网点账号密码

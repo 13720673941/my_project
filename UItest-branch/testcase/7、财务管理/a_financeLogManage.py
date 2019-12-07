@@ -39,6 +39,8 @@ class Finance_Log_Manage(unittest.TestCase):
         cls.finish_order = FinishOrder(cls.driver)
         cls.settle_order = SettleOrderPage(cls.driver)
         cls.finance_log = FinanceManagePage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行
         mytest.start_test()
         # 获取经销商账号

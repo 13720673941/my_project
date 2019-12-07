@@ -36,6 +36,15 @@ class BasePage(object):
         log.info('{0} Find element <{1}>, Spend {2} seconds.'.format(self.success,element,time.time()-t1))
         return el
 
+    def clear_catch(self):
+        """
+        清除浏览器缓存
+        eg: driver.clear_catch()
+        :return:
+        """
+        self.driver.delete_all_cookies()
+        log.info('{0} Clear browser catch data. '.format(self.success))
+
     def open_url(self,url):
         """
         打开Url地址
@@ -116,7 +125,7 @@ class BasePage(object):
             log.info('{0} * Input message: {1}, Spend {2} seconds'.format(self.success,message,time.time()-t1))
         except Exception:
             log.error('{0} Unable input message: {1}, Spend {2} seconds'.format(self.fail,message,time.time()-t1))
-            pass
+            raise
 
     def click_button(self,element):
         """

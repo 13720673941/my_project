@@ -33,6 +33,8 @@ class Alter_PhoneNum(unittest.TestCase):
         cls.login = LoginPage(cls.driver)
         cls.alterPwd = AlterPwdPage(cls.driver)
         cls.assert_mode= Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base.clear_catch()
         # 开始脚本
         mytest.start_test()
         # 获取登录的账号密码

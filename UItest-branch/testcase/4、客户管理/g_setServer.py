@@ -37,6 +37,8 @@ class Server_Set(unittest.TestCase):
         cls.please_order = PleaseOrderPage(cls.driver)
         cls.server_branch = ServerBranchPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始脚本
         mytest.start_test()
         # 获取网点登录账号密码

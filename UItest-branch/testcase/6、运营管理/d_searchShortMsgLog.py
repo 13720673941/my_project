@@ -32,6 +32,8 @@ class Search_ShortMsg_Log(unittest.TestCase):
         cls.assert_mode = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.shortMsg_log = ShortMsgLogPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 获取网点登录账号信息
         username = read_config_data("西安超级售后有限公司", "username")
@@ -80,7 +82,7 @@ class Search_ShortMsg_Log(unittest.TestCase):
         # 获取第一行信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言 判断搜索
-        self.assert_mode.input_message(data["ShortMsgType"],first_row_info)
+        self.assert_mode.assert_in(data["ShortMsgType"],first_row_info)
 
     def test_search_shortMsg_log003(self):
         """按手机号搜索短信发送记录校验"""
@@ -97,7 +99,7 @@ class Search_ShortMsg_Log(unittest.TestCase):
         # 获取第一行信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言 判断搜索
-        self.assert_mode.input_message(data["PhoneNum"],first_row_info)
+        self.assert_mode.assert_in(data["PhoneNum"],first_row_info)
 
     def test_search_shortMsg_log004(self):
         """按发送日期搜索短信发送记录校验"""
@@ -118,7 +120,7 @@ class Search_ShortMsg_Log(unittest.TestCase):
         # 获取第一行信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言 判断搜索
-        self.assert_mode.input_message(now_date,first_row_info)
+        self.assert_mode.assert_in(now_date,first_row_info)
 
     @classmethod
     def tearDownClass(cls):

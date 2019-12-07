@@ -32,6 +32,8 @@ class My_Income_Search(unittest.TestCase):
         cls.assert_page = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.my_income = FinanceManagePage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行测试用例
         mytest.start_test()
         # 获取测试账号信息
@@ -135,6 +137,7 @@ class My_Income_Search(unittest.TestCase):
         self.my_income.input_settle_end_time(end_time=now_date)
         # 点击查询
         self.my_income.click_find_btn()
+        self.base_page.sleep(1)
         # 获取第一行查询的日期,获取的日期包含时间需要进行分割
         get_date = self.my_income.get_income_date().split(" ")[0]
         # 断言

@@ -52,6 +52,18 @@ class Assert(BasePage):
             if expect != fact:
                 raise AssertionError('{0} Expect: {1} not equal Faction: {2}, test -> FAIL.'.format(self.fail,expect,fact))
 
+    def assert_not_equal(self,expect,fact):
+        """
+        判断两个字段相等
+        """
+        try:
+            unittest.TestCase().assertNotEqual(expect,fact)
+            log.info('{0} Expect: {1} not equal Faction: {2}, test -> PASS.'.format(self.success,expect,fact))
+        except AssertionError:
+            self.take_screen_shot()
+            if expect == fact:
+                raise AssertionError('{0} Expect: {1} equal Faction: {2}, test -> FAIL.'.format(self.fail,expect,fact))
+
     def assert_more_str_in(self,dictData,fact):
         """
         针对多条件搜索结果的判断

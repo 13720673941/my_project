@@ -31,6 +31,8 @@ class Search_Dealer(unittest.TestCase):
         cls.base_page = BasePage(cls.driver)
         cls.dealer_page = DealerBranchPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 获取网点账号密码
         cls.username = read_config_data("西安好家帮家政有限公司","username")

@@ -39,6 +39,8 @@ class Order_Statistics(unittest.TestCase):
         cls.order_statistics = MasterStatisticsPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
         cls.base_page = BasePage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行测试用例
         mytest.start_test()
         # 获取服务商账号信息
@@ -184,7 +186,6 @@ class Order_Statistics(unittest.TestCase):
         master_favorable_rate = self.order_statistics.get_master_favorable_rate_count()
         # 计算好评率
         favorable_rate = float((round(master_favorable_orders/master_all_finish_orders,5))*100)
-        print(favorable_rate)
         # 对好评率进行处理 判断小数点后2位是否大于5 进行四舍五入
         if len(str(favorable_rate).split(".")[1]) >= 3:
             if int(str(favorable_rate).split(".")[1][2]) >= 5:

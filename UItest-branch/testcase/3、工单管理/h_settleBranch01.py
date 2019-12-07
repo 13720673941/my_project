@@ -40,6 +40,8 @@ class Manage_Settle(unittest.TestCase):
         cls.settleOrder = SettleOrderPage(cls.dr)
         cls.searchOrder = SearchOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.base.clear_catch()
         mytest.start_test()
         # 获取定单订单号::新建工单时添加的无需返单订单
         #  cls.OrderNum = rwconfig.read_config_data('NotReturnOrder','id',orderNumPath)

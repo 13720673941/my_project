@@ -41,6 +41,8 @@ class Manage_Order_Statistics(unittest.TestCase):
         cls.visit_order = VisitOrderPage(cls.driver)
         cls.settle_order = SettleOrderPage(cls.driver)
         cls.order_statistics = BranchStatisticsPage(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始用例
         mytest.start_test()
         # 获取服务商账号信息

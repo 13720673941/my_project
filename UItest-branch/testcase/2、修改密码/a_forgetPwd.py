@@ -33,6 +33,8 @@ class Forget_Pwd(unittest.TestCase):
         cls.forgetPwd = ForgetPwd(cls.dr)
         cls.login = LoginPage(cls.dr)
         cls.assertMode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         # 获取旧密码
         cls.old_pwd = rwconfig.read_config_data('西安好家帮家政有限公司','password')
         # 旧密码替换 15 测试用例的密码

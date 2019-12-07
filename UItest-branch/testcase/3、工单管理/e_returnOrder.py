@@ -38,6 +38,8 @@ class Return_Order(unittest.TestCase):
         cls.finishOrder = FinishOrder(cls.dr)
         cls.returnOrder = ReturnOrderPage(cls.dr)
         cls.assert_mode = Assert(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         mytest.start_test()
         # 获取网点登录数据
         UserName = rwconfig.read_config_data('西安好家帮家政有限公司','username')

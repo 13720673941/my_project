@@ -36,6 +36,8 @@ class Set_InvalidOrder(unittest.TestCase):
         cls.setInvalid = InvalidOrder(cls.dr)
         cls.assert_mode = Assert(cls.dr)
         cls.search_order = SearchOrderPage(cls.dr)
+        # 清除浏览器缓存
+        cls.basePage.clear_catch()
         mytest.start_test()
         # 获取网点登录数据
         UserName = rwconfig.read_config_data('西安好家帮家政有限公司','username')

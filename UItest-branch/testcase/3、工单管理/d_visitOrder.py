@@ -37,6 +37,9 @@ class Visit_Order(unittest.TestCase):
         self.visitOrder = VisitOrderPage(self.dr)
         self.search_order = SearchOrderPage(self.dr)
         self.assert_mode = Assert(self.dr)
+        # 清除浏览器缓存
+        self.basePage.clear_catch()
+        mytest.start_test()
         # 获取网点登录数据
         UserName = read_config_data('西安好家帮家政有限公司','username')
         PassWord = read_config_data('西安好家帮家政有限公司','password')

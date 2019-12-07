@@ -35,6 +35,8 @@ class Stop_Open_Please(unittest.TestCase):
         cls.please_order = PleaseOrderPage(cls.driver)
         cls.server_branch = ServerBranchPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 获取网点登录账号密码
         cls.username = read_config_data("西安好家帮家政有限公司","username")

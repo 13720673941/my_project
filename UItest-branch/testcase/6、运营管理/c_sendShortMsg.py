@@ -36,12 +36,15 @@ class Send_ShortMsg(unittest.TestCase):
         cls.please_order = PleaseOrderPage(cls.driver)
         cls.short_msg_log = ShortMsgLogPage(cls.driver)
         cls.assert_mode = Assert(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         mytest.start_test()
         # 获取网点账号密码
         username = read_config_data("西安超级售后有限公司", "username")
         password = read_config_data("西安超级售后有限公司", "password")
         # 网点登录
         cls.login.login_main(username, password)
+        cls.base_page.sleep(1)
         # 获取工单余量
         cls.short_msg_count = int(cls.short_msg_log.get_short_msg_count())
         # 经销商下单程序下单

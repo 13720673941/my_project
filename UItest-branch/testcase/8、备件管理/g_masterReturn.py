@@ -37,6 +37,8 @@ class Master_Return(unittest.TestCase):
         cls.master_return = MasterReturnPage(cls.driver)
         cls.company_inventory = CompanyInventoryPage(cls.driver)
         cls.adjust_inventory = InventoryAdjust(cls.driver)
+        # 清除浏览器缓存
+        cls.base_page.clear_catch()
         # 开始执行测试用例
         mytest.start_test()
         # 获取测试账号信息
