@@ -70,16 +70,34 @@ class LoginPage(BasePage): # 所有的操作继承Base基类
         :return:
         """
         log.info('-=【网点登录】=-')
-        self.wait()
-        self.enter_login_page()
-        self.input_username(UserName)
-        self.input_password(PassWord)
-        self.click_login_button()
-        self.sleep(1)
-        self.refresh_page()
-        # self.dumps_window_close()
-        # 断言
-        if self.is_display(self.logout_btn):
-            log.info('{0} ** Branch login success！'.format(self.success))
-        else:
-            log.error('{0} ** Branch login fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
+        for i in range(10):
+            self.wait()
+            self.enter_login_page()
+            self.input_username(UserName)
+            self.input_password(PassWord)
+            self.click_login_button()
+            self.sleep(1)
+            # 断言
+            if self.get_current_url() == review_url:
+                self.refresh_page()
+                log.info('{0} ** Branch login success！'.format(self.success))
+                break
+            elif i == 9:
+                log.error('{0} ** Branch login fail, system msg: {1}.'.format(self.fail,self.get_system_msg()))
+                break
+            else:
+                self.refresh_page()
+
+# if __name__ == '__main__':
+#
+#
+#     from selenium import webdriver
+#
+#     d = webdriver.Chrome()
+#
+#     d.maximize_window()
+#
+#     login = LoginPage(d)
+#
+#     login.login_main("13700000004","11111")
+

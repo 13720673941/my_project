@@ -38,9 +38,9 @@ if __name__ == '__main__':
     suits = unittest.TestSuite()
     suits.addTest(Login("test_login001"))
     suits.addTest(Login("test_login002"))
-    # suits.addTest(Login("test_login003"))
-    # suits.addTest(Login("test_login004"))
-    # suits.addTest(Login("test_login005"))
+    suits.addTest(Login("test_login003"))
+    suits.addTest(Login("test_login004"))
+    suits.addTest(Login("test_login005"))
 
     tm = time.strftime('%y-%m-%d %H_%M_%S', time.localtime(time.time()))
     Path = '../result/report/'+ tm + '.html'

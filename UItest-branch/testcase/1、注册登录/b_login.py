@@ -68,4 +68,9 @@ if __name__ == '__main__':
     # unittest.main()
 
     suit = unittest.TestLoader().loadTestsFromTestCase(Branch_Login)
-    unittest.TextTestRunner().run(suit)
+    result = unittest.TextTestRunner().run(suit).failures
+    #
+    # for case,reason in result:
+    #     unittest.TextTestRunner().run(case)
+
+

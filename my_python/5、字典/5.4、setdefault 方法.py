@@ -15,7 +15,7 @@ dict_data = {
 
 # 字典中不存在该键时，返回的字段
 
-new_value = dict_data.setdefault("love","your")
+new_value = dict_data.setdefault("sex","your")
 
 print(new_value)
 

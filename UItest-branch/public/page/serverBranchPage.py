@@ -14,8 +14,6 @@ class ServerBranchPage(BasePage):
     客户管理-服务商列表页面
     """
 
-    # 父路径该页面有两个一样的页面需要从根目录定位
-    parent_xpath = '//div[@id="main"]/following-sibling::div[24]/'
     # 切换服务商的table按钮
     server_branch_table = (By.XPATH,'//a[contains(text(),"服务商")]')
     # 添加服务商按钮
@@ -43,35 +41,35 @@ class ServerBranchPage(BasePage):
     # 服务设置按钮
     set_server_btn = (By.XPATH,'//div/div[2]/.//a[text()="服务设置"]')
     # 服务撒备注
-    server_branch_remark = (By.XPATH,''+parent_xpath+'.//label[text()="客户备注："]/.././/input')
+    server_branch_remark = (By.XPATH,'(//label[text()="客户备注："]/.././/input)[2]')
     # 合作类型派单
-    teamwork_type_1 = (By.XPATH,''+parent_xpath+'.//label[text()="合作类型："]/.././/label[text()=" 派单"]')
+    teamwork_type_1 = (By.XPATH,'(//label[text()="合作类型："]/.././/label[text()=" 派单"])[2]')
     # 合作类型报单
-    teamwork_type_2 = (By.XPATH,''+parent_xpath+'.//label[text()="合作类型："]/.././/label[text()=" 报单"]')
+    teamwork_type_2 = (By.XPATH,'(//label[text()="合作类型："]/.././/label[text()=" 报单"])[2]')
     # 合作类型返单
-    teamwork_type_3 = (By.XPATH,''+parent_xpath+'.//label[text()="合作类型："]/.././/label[text()=" 返单"]')
+    teamwork_type_3 = (By.XPATH,'(//label[text()="合作类型："]/.././/label[text()=" 返单"])[2]')
     # 服务类型-不限
-    server_type_not_limit = (By.XPATH,''+parent_xpath+'.//label[text()="服务类型："]/.././/label[contains(text(),"不限")]')
-    # 其他服务类型的按钮
-    server_type_of_other = (By.XPATH,''+parent_xpath+'.//label[text()="服务类型："]/.././/div[@class="ivu-row"]/div[2]')
+    server_type_not_limit = (By.XPATH,'(//label[text()="服务类型："]/.././/label[contains(text(),"不限")])[2]')
+    # 其他服务类型的父路径
+    server_type_of_other = (By.XPATH,'(//label[text()="服务类型："]/.././/div[@class="ivu-row"]/div[2])[2]')
     # 服务品牌-不限
-    brands_of_not_limit = (By.XPATH,''+parent_xpath+'.//label[text()="服务品牌："]/.././/label[contains(text(),"不限")]')
-    # 服务品牌其他品牌
-    brands_of_other = (By.XPATH,''+parent_xpath+'.//label[text()="服务品牌："]/.././/div[@class="ivu-row"]/div[2]')
+    brands_of_not_limit = (By.XPATH,'(//label[text()="服务品牌："]/.././/label[contains(text(),"不限")])[2]')
+    # 服务品牌其他品牌父路径
+    brands_of_other = (By.XPATH,'(//label[text()="服务品牌："]/.././/div[@class="ivu-row"]/div[2])[2]')
     # 服务品类-不限
-    kinds_of_not_limit = (By.XPATH,''+parent_xpath+'.//label[text()="服务品类："]/.././/label[contains(text(),"不限")]')
+    kinds_of_not_limit = (By.XPATH,'(//label[text()="服务品类："]/.././/label[contains(text(),"不限")])[2]')
     # 其他服务品类的父节点
-    kinds_of_other = (By.XPATH,''+parent_xpath+'.//label[text()="服务品类："]/.././/div[@class="ivu-row"]/div[2]')
+    kinds_of_other = (By.XPATH,'(//label[text()="服务品类："]/.././/div[@class="ivu-row"]/div[2])[2]')
     # 第一个服务商的服务地址信息
     first_branch_address_info = (By.XPATH,'//*[@class="ivu-table-body ivu-table-overflowX"]/.//tr[1]/td[7]')
     # 服务省份父节点
-    server_province_parent = (By.XPATH,''+parent_xpath+'.//div[text()="选择服务省份"]/../ul')
+    server_province_parent = (By.XPATH,'//div[text()="选择服务省份"]/../ul')
     # 服务市区父节点
-    server_city_parent = (By.XPATH,''+parent_xpath+'.//div[text()="选择服务城市"]/../ul')
+    server_city_parent = (By.XPATH,'//div[text()="选择服务城市"]/../ul')
     # 服务区县父节点
-    server_area_parent = (By.XPATH,''+parent_xpath+'.//div[text()="选择服务区/县"]/../ul')
+    server_area_parent = (By.XPATH,'//div[text()="选择服务区/县"]/../ul')
     # 确定服务设置按钮
-    confirm_teamwork_btn = (By.XPATH,''+parent_xpath+'.//div[contains(.,"服务设置")]/../../div[3]/div/button[2]')
+    confirm_teamwork_btn = (By.XPATH,'(//div[contains(.,"服务设置")]/../../div[3]/div/button[2])[2]')
     # 禁止派单按钮
     stop_please_btn = (By.XPATH,'//a[contains(.,"禁止派单")]')
     # 开启派单按钮
@@ -329,17 +327,15 @@ class ServerBranchPage(BasePage):
         # 遍历所有的省份的选择属性值，判断是否已经选择
         for i in range(1,provinces_count):
             # 获取该索引位置的省份的 label、span 元素的 class 属性
-            span_attribute = self.get_att(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
-                                                            '../ul/li['+str(i)+']/.//label/span'),attribute="class")
+            span_attribute = self.get_att(element=(By.XPATH,'//div[text()="选择服务省份"]/../ul/li['+str(i+1)+']/.//label/span'),
+                                          attribute="class")
             # 判断省份一下市区是全部选择还是漏选::全选单击清除，漏选双击清除
             if all_is_select in span_attribute:
                 # 该情况为省份全选单击所选择的省份
-                self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
-                                                    '../ul/li['+str(i)+']/.//input'))
+                self.click_button(element=(By.XPATH,'//div[text()="选择服务省份"]/../ul/li['+str(i+1)+']/.//input'))
             elif all_is_not_select in span_attribute:
                 # 该情况为漏选省份后面的地址双击省份清空所有
-                self.mouse_double_click(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
-                                                      '../ul/li['+str(i)+']/.//input'))
+                self.mouse_double_click(element=(By.XPATH,'//div[text()="选择服务省份"]/../ul/li['+str(i+1)+']/.//input'))
             else:
                 pass
 
@@ -357,8 +353,7 @@ class ServerBranchPage(BasePage):
                 # 判断省份的名称在所要选择的省份列表中时，选择该省份
                 if province_name in province_list:
                     self.sleep(1)
-                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务省份"]/'
-                                                    '../ul/li['+str(i+1)+']/.//input'))
+                    self.click_button(element=(By.XPATH,'//div[text()="选择服务省份"]/../ul/li['+str(i+1)+']/.//input'))
             except Exception as e:
                 raise e
 
@@ -374,8 +369,7 @@ class ServerBranchPage(BasePage):
                 # 判断省份的名称在所要选择的省份列表中时，选择该省份
                 if city_name in city_list:
                     self.sleep(1)
-                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务城市"]/'
-                                                        '../ul/li['+str(i+1)+']/.//input'))
+                    self.click_button(element=(By.XPATH,'//div[text()="选择服务城市"]/../ul/li['+str(i+1)+']/.//input'))
             except Exception as e:
                 raise e
 
@@ -391,10 +385,9 @@ class ServerBranchPage(BasePage):
                 # 判断省份的名称在所要选择的省份列表中时，选择该省份
                 if area_name in area_list:
                     self.sleep(1)
-                    self.click_button(element=(By.XPATH,'//div[@id="main"]/following-sibling::div[24]/.//div[text()="选择服务区/县"]/'
-                                                        '../ul/li['+str(i+1)+']/.//input'))
-            except Exception as e:
-                raise e
+                    self.click_button(element=(By.XPATH,'//div[text()="选择服务区/县"]/../ul/li['+str(i+1)+']/.//input'))
+            except:
+                raise
 
     def click_save_set_server(self):
         """确定服务设置"""

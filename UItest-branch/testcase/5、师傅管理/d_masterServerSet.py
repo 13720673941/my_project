@@ -123,6 +123,7 @@ class Master_Server_Set(unittest.TestCase):
         self.master_page.clear_kinds_type()
         # 点击保存
         self.master_page.click_set_server_save()
+        self.base_page.sleep(1)
         # 获取系统提示信息
         system_message = self.base_page.get_system_msg()
         # 断言

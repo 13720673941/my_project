@@ -64,6 +64,13 @@ class BasePage(object):
                     log.error('{0} Unable to open url: <{1}>, Spend {2} seconds.'.format(self.fail,url,time.time()-t1))
                     raise
 
+    def get_current_url(self):
+        """
+        获取当前url地址信息
+        :return:
+        """
+        return self.driver.current_url
+
     def window_max(self):
         """
         页面最大化
@@ -569,7 +576,7 @@ class BasePage(object):
                     raise
         return newOrderNum
     
-    def get_system_msg(self,element=(By.XPATH,'//*[@class="ivu-message-notice-content"]/div/div/span')):
+    def get_system_msg(self,element=(By.XPATH,'//*[@class="ivu-message"]//span')):
         """
         获取系统提示信息
         """

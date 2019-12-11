@@ -39,11 +39,3 @@ class OperateJson():
             return "Error: " + '"'+json_key+'"' + " not in json data of keys."
 
 
-
-
-a = OperateJson("login").get_request_data("login_001")
-
-print(a)
-
-
-

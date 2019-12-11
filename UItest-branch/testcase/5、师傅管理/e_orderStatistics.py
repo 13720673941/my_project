@@ -189,7 +189,9 @@ class Order_Statistics(unittest.TestCase):
         # 对好评率进行处理 判断小数点后2位是否大于5 进行四舍五入
         if len(str(favorable_rate).split(".")[1]) >= 3:
             if int(str(favorable_rate).split(".")[1][2]) >= 5:
+                # 系统代码中计算好评没有四舍五入直接取后两位就好了
                 favorable_rate += 0.01
+                pass
             # 拼接好评率字符串
             last_number = str(favorable_rate).split(".")[0]+"."+str(favorable_rate).split(".")[1][:2]
         else:

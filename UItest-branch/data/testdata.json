@@ -396,9 +396,9 @@
   "22": "/*师傅工单统计页面功能测试用例*/",
   "MasterStatisticsPage": {
     "master_search_fnc": [
-      {"CaseName": "1、师傅搜索-按师傅名称搜索师傅订单统计信息校验","KeyWord": "邓鹏飞","expect": "13720673941"},
-      {"CaseName": "2、师傅搜索-按师傅手机号搜索师傅订单统计信息校验","KeyWord": "13720673941","expect": "邓鹏飞"},
-      {"CaseName": "3、师傅搜索-按师傅名称模糊搜索师傅订单统计信息校验","KeyWord": "邓鹏","expect": "邓鹏飞"},
+      {"CaseName": "1、师傅搜索-按师傅名称搜索师傅订单统计信息校验","KeyWord": "小米科技","expect": "13720673941"},
+      {"CaseName": "2、师傅搜索-按师傅手机号搜索师傅订单统计信息校验","KeyWord": "13720673941","expect": "小米科技"},
+      {"CaseName": "3、师傅搜索-按师傅名称模糊搜索师傅订单统计信息校验","KeyWord": "小米",",expect": "小米科技"},
       {"CaseName": "4、师傅搜索-按师傅手机号模糊搜索师傅订单统计信息校验","KeyWord": "1372067","expect": "13720673941"}
     ],
     "order_statistic_fnc": {
@@ -451,7 +451,7 @@
   "MyExpendPage": {
     "TestCase001": {"CaseName": "1、按支出类型搜索校验","ExpendType": "师傅结算","expect": "师傅"},
     "TestCase002": {"CaseName": "2、按服务类型搜索校验","ServerType": "安装"},
-    "TestCase003": {"CaseName": "3、按服务师傅名称搜索校验","MasterName": "邓鹏飞"},
+    "TestCase003": {"CaseName": "3、按服务师傅名称搜索校验","MasterName": "小米科技"},
     "TestCase004": {"CaseName": "4、按工单编号搜索校验","OrderNumber": "获取记录功能校验的订单单号"},
     "TestCase005": {"CaseName": "5、按工单结算日期搜索支出校验","SettleDate": "当前日期"}
   },
@@ -468,7 +468,7 @@
       "TestCase004": {"CaseName": "验证码不能为空校验","Money":"100","UserName":"邓鹏飞","AliPay":"13720673941","CodeNum":"","expect": "提现用户名不能为空"},
       "TestCase005": [
         {"CaseName": "银行卡名称不能为空校验","Money":"100","UserName":"邓鹏飞","BankName":"","BankAccount": "610528199312220312","CodeNum":"88888888","expect": "提现用户名不能为空"},
-        {"CaseName": "银行卡账号不能为空校验","Money":"100","UserName":"邓鹏飞","BankName":"中国建设银行","BankAccount": "","CodeNum":"88888888","expect": "提现用户名不能为空"}
+        {"CaseName": "银行卡账号不能为空校验","Money":"100","UserName":"小米科技","BankName":"中国建设银行","BankAccount": "","CodeNum":"88888888","expect": "提现用户名不能为空"}
       ]
     }
   },
