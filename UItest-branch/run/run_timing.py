@@ -3,37 +3,54 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/6/25 18:43
 
-from public.common.sendemail import Send_Email
-import sys
+from public.common.runReport import *
+from config.pathConfig import *
+from public.common.sendEmail import Send_Email
+# from public.common.connectWifi import *
+
+import os,unittest
 SE = Send_Email()
-sys.path.append('../run')
-import run_a_registerLogin,run_b_alterPassword,run_c_orderManage,run_d_customManage,\
-    run_e_masterManage,run_f_operationManage,run_g_financeManage,run_i_sparePartManage
+
+def run_all_case():
+
+    # 获取测试用例文件夹下所有子文件夹的名称
+    fileName = os.listdir(testCasePath)
+    file_list = ["1、注册登录","2、修改密码","3、工单管理","4、客户管理","5、师傅管理","6、运营管理","7、财务管理","8、备件管理"]
+    # 除去py文件保留测试用例文件夹名
+    # for file in fileName:
+    #     if "__" not in file:
+    #         file_list.append(file)
+    # 添加到测试套件
+    testUnit = unittest.TestSuite()
+    # 循环获取测试用例文件夹中的测试套件添加到testUnit中
+    for childFile in file_list:
+        suits = get_suits(ChildName=childFile)
+        testUnit.addTests(suits)
+    # 第一次运行返回失败的用例测试套件
+    run_report(testSuits=testUnit)
+    # 重新运行失败的测试用例
+    # run_fail_case(failCaseSuits)
 
 if __name__ == '__main__':
 
     import time
     # 默认脚本执行失败
     isPass = False
-    # 定时间
-    startTime = time.time()
-    timing = "12:20"
+    timing = "08:30"
     while True:
         # 获取当前时间
-        time.sleep(1)
+        time.sleep(10)
         now_time = time.strftime("%H:%M",time.localtime(time.time()))
-        if now_time == timing:
+        # print("\r","Now Time: "+now_time,end="")
+        if timing in str(now_time):
             # 时间一样执行脚本
             print('========== 开始 ==========')
+            # 检查网络连接
+            # checkWifiIsConnect()
+            # 定时间
+            startTime = time.time()
             # 调用脚本用例集
-            run_a_registerLogin.run()
-            run_b_alterPassword.run()
-            run_c_orderManage.run()
-            run_d_customManage.run()
-            run_e_masterManage.run()
-            run_f_operationManage.run()
-            run_g_financeManage.run()
-            run_i_sparePartManage.run()
+            run_all_case()
             print('========== 结束 ==========')
             endTime = time.time()
             isPass = True
@@ -45,6 +62,6 @@ if __name__ == '__main__':
         # 脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
         # 发送邮件
-        SE.SendEmailMain(start_time=timing,run_time=runtime)
+        # SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')

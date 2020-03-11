@@ -3,92 +3,126 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/5/29 10:25
 
-from public.common import createuser
-from public.common.assertmode import Assert
-from config.pathconfig import *
-from public.common import mytest
-from public.common import driver
+from public.common import createUser
+from public.common import myDecorator
+from public.common.operateExcel import *
+from public.common.assertMode import Assert
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.registerPage import RegisterPage
-from public.common.basepage import BasePage
-from public.common import getdata
 import unittest,ddt
-'''
-网点注册测试用例脚本：
-1、注册-用户名为空校验 2、注册-手机号为空校验 3、注册-验证码为空校验 4、注册-新密码为空校验 5、注册-确认密码为空校验
-6、注册-已经注册的用户名校验 7、注册-已经注册的手机号校验 8、注册-错误验证码校验 9、注册-两个密码不同校验 10、注册-用户名格式校验
-11、注册-手机号格式校验 12、注册-密码特殊字符校验 13、注册-密码上点值校验 14、注册-密码离点值校验 15、注册-数据正确成功注册校验
-'''
-# 读取注册脚本测试数据
-Data = getdata.get_test_data()["RegisterPage"]
 
 @ddt.ddt
 class Register_Branch(unittest.TestCase):
 
+    """ 【PC注册功能测试用例脚本】 """
+
+    # 获取ddt数据的用例id列表
+    case_list = [
+        "register_001", "register_002", "register_003", "register_004",
+        "register_005", "register_006", "register_007", "register_008",
+        "register_009", "register_010", "register_011", "register_012",
+        "register_013", "register_014"
+    ]
+    # 实例化excel操作类
+    operate = Read_Excel("register")
+    # 获取ddt模块测试数据
+    ddt_data = operate.get_ddt_data(case_list)
+
     @classmethod
     def setUpClass(cls):
-        #  # 随机生成手机号用户名
-        #  cls.username = createuser.create_username()
-        #  cls.phoneNum = createuser.create_phoneNum()
-        #  # 替换注册数据中成功注册的数据的手机号和用户名
-        #  Data[-1]["username"] = cls.username
-        #  Data[-1]["PhoneNum"] = cls.phoneNum
-        # 设置浏览器驱动
-        cls.dr = driver.browser_driver()
         # 实例化类
-        cls.basePage = BasePage(cls.dr)
-        cls.registerPage = RegisterPage(cls.dr)
-        cls.assertMode = Assert(cls.dr)
-        # 清除浏览器缓存
-        cls.basePage.clear_catch()
-        # 打开网点登录页面
-        mytest.start_test()
-        cls.registerPage.enter_register_page()
+        cls.driver = web_driver()
+        cls.base = BasePage(cls.driver)
+        cls.register = RegisterPage(cls.driver)
+        cls.assertMode = Assert(cls.driver,"register")
 
-    @ddt.data(*Data)
-    def test_registerBranch(self,Data):
-        '''网点注册测试用例'''
-        # 获取测试用例名称
-        self.basePage.print_case_name(Data["CaseName"])
-        # 刷新页面信息
-        self.basePage.refresh_page()
-        # 点击免费注册
-        self.registerPage.click_free_register()
+    def register_function(
+            self,username,phone_number,code_number,login_pwd,confirm_pwd):
+        self.base.refresh_page()
+        # 进入登录页面
+        self.register.enter_register_page()
+        # 点击立即注册
+        self.register.click_free_register()
         # 输入用户名
-        self.registerPage.input_username(UserName=Data["username"])
+        self.register.input_username(username)
         # 输入手机号码
-        self.basePage.sleep(2)
-        self.registerPage.input_phoneNum(PhoneNum=Data["PhoneNum"])
+        self.register.input_phone_number(phone_number)
         # 输入验证码
-        self.registerPage.input_codeNum(CodeNum=Data["CodeNum"])
+        self.register.input_code_number(code_number)
         # 输入登陆密码
-        self.registerPage.input_login_pwd(LoginPwd=Data["NewPwd"])
+        self.register.input_login_pwd(login_pwd)
         # 输入确认登陆密码
-        self.registerPage.input_confirm_pwd(ConfirmPwd=Data["ConfirmPwd"])
+        self.register.input_confirm_pwd(confirm_pwd)
         # 点击马上注册
-        self.registerPage.click_register_btn()
-        self.basePage.sleep(2)
+        self.register.click_register_btn()
+
+    @ddt.data(*ddt_data)
+    @myDecorator.skipped_case # 方法中 判断数据中的isRun字段 为No跳过执行
+    def test_register001(self,ddt_data):
+        """异常操作注册系统校验"""
+
+        # 获取测试用例名称
+        self.base.print_case_name(ddt_data)
+        # 输入用户名
+        username = ddt_data["用户名"]
+        # 输入手机号码
+        phone_number = ddt_data["手机号"]
+        # 输入验证码
+        code_number = ddt_data["验证码"]
+        # 输入登陆密码
+        login_pwd = ddt_data["登录密码"]
+        # 输入确认登陆密码
+        confirm_pwd = ddt_data["确认密码"]
+        self.register_function(username,phone_number,code_number,login_pwd,confirm_pwd)
+        self.base.sleep(2)
         # 获取注册的提示信息
-        Msg = self.basePage.get_system_msg()
-        # 获取当前时间
-        CreateTime = self.basePage.get_now_time(Time=True)
+        Msg = self.register.get_system_message()
         # 添加断言
-        self.assertMode.assert_equal(Data["expect"],Msg)
+        self.assertMode.assert_equal(ddt_data,Msg)
+
+    # unittest.skipUnless(condition,reason) 方法中 condition 为False跳过执行
+    @unittest.skipUnless(operate.get_isRun_text("register_015"),"-跳过不执行该用例")
+    def test_register002(self):
+        """成功注册系统账号校验"""
+
+        # 获取测试数据
+        test_data = self.operate.get_dict_data("register_015")
+        # 获取测试用例名称
+        self.base.print_case_name(test_data)
+        # 输入用户名
+        username = createUser.create_username()
+        # 输入手机号码
+        phone_number = createUser.create_phoneNum()
+        # 输入验证码
+        code_number = test_data["验证码"]
+        # 输入登陆密码
+        login_pwd = test_data["登录密码"]
+        # 输入确认登陆密码
+        confirm_pwd = test_data["确认密码"]
+        self.register_function(username,phone_number,code_number,login_pwd,confirm_pwd)
+        self.base.sleep(1)
+        Msg = self.login.get_system_message()
+        # 添加断言
+        self.assertMode.assert_equal(test_data,Msg)
+        # 获取当前时间
+        CreateTime = self.register.get_now_time(Time=True)
         if Msg == '注册成功':
             # 写入新注册的账号密码信息
-            with open(accountDataPath,'a') as f:
+            with open(regAccountPath,'a') as f:
                 f.write('注册时间：%s,新用户名：%s,手机号：%s,密码：%s'
-                        %(CreateTime,self.username,self.phoneNum,Data["NewPwd"])+'\n')
-                print('*Write branch account to txt is success, directory path: {0}'.format(accountDataPath))
+                        %(CreateTime,username,phone_number,test_data["登录密码"])+'\n')
+            print(' * Write branch account to txt is success, directory path: {0}'.format(regAccountPath))
 
     @classmethod
     def tearDownClass(cls):
-        # 关闭浏览器
-        cls.basePage.quit_browser()
-        mytest.end_test()
+        # 清除缓存
+        cls().base.clear_catch()
+        # 退出浏览器
+        cls().base.quit_browser()
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
 
-    suit = unittest.TestSuite()
-    suit.addTest(Register_Branch('test_registerBranch'))
-    unittest.TextTestRunner(verbosity=3).run(suit)
+    suit = unittest.TestLoader().loadTestsFromTestCase(Register_Branch)
+    unittest.TextTestRunner().run(suit)

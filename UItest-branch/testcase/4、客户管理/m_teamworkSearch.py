@@ -3,77 +3,72 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/7/19 14:22
 
-from public.common.driver import browser_driver
-from public.common.rwconfig import read_config_data
-from public.common.getdata import get_test_data
-from public.common import mytest
-from public.common.assertmode import Assert
-from public.common.basepage import BasePage
+from public.common.operateExcel import *
+from public.common import myDecorator
+from public.common.assertMode import Assert
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.teamworkNewsPage import TeamWorkNewsPage
 import unittest,ddt
-"""
-客户管理模块申请合作页面：
-1、按客户名称搜索校验  2、按客户手机号搜索校验
-"""
-# 获取测试数据
-test_data = get_test_data()["TeamWorkPage"]
-ddt_data = test_data["search_teamwork_msg"]
 
 @ddt.ddt
-class Visit_News_Search(unittest.TestCase):
+class Teamwork_Apply_Search(unittest.TestCase):
+    """ 【合作申请搜索统计功能】 """
+
+    # 实例化类
+    readExcel = Read_Excel("teamworkSearch")
+    # 测试用例编号
+    case_list = [
+        "teamwork_search_001","teamwork_search_002",
+        "teamwork_search_003","teamwork_search_004"
+    ]
+    # 获取ddt测试类型数据
+    ddt_data = readExcel.get_ddt_data(case_list)
 
     @classmethod
     def setUpClass(cls):
-        # 设置浏览器驱动
-        cls.driver = browser_driver()
-        # 实例化类
-        cls.base_page = BasePage(cls.driver)
-        cls.assert_mode = Assert(cls.driver)
+        # 实例化页面对象类
+        cls.driver = web_driver()
+        cls.base = BasePage(cls.driver)
         cls.login = LoginPage(cls.driver)
-        cls.teamwork_visit = TeamWorkNewsPage(cls.driver)
-        # 清除浏览器缓存
-        cls.base_page.clear_catch()
-        # 开始执行
-        mytest.start_test()
-        # 获取账号信息
-        username = read_config_data("西安好家帮家政有限公司","username")
-        password = read_config_data("西安好家帮家政有限公司","password")
+        cls.teamwork_apply = TeamWorkNewsPage(cls.driver)
+        cls.assertMode = Assert(cls.driver, "teamworkSearch")
         # 登录网点
-        cls.login.login_main(username,password)
+        cls.login.login_main("T西安好家帮家政有限公司")
         # 进入客户合作页面
-        cls.teamwork_visit.enter_teamwork_news_page()
+        cls.teamwork_apply.enter_teamwork_news_page()
 
     @ddt.data(*ddt_data)
+    @myDecorator.skipped_case
     def test_visit_news_search(self,ddt_data):
         """合作申请页面搜索客户校验"""
 
         # 打印测试用例名称
-        self.base_page.print_case_name(ddt_data["CaseName"])
+        self.base.print_case_name(ddt_data)
         # 刷新页面
-        self.base_page.refresh_page()
+        self.base.refresh_page()
         # 切换到发出的申请页面
-        self.teamwork_visit.click_table_send_visit()
+        self.teamwork_apply.click_table_send_visit()
         # 输入搜索关键字
-        self.teamwork_visit.input_customer_name_phone(search_word=ddt_data["keyword"])
+        self.teamwork_apply.input_customer_name_phone(ddt_data["搜索字段"])
         # 点击搜索
-        self.teamwork_visit.click_search_btn()
-        self.base_page.sleep(1)
-        # 获取第一行字段信息
-        first_row_info = self.teamwork_visit.get_first_row_info()
+        self.teamwork_apply.click_search_btn()
+        self.base.sleep(1)
         # 断言
-        self.assert_mode.assert_in(ddt_data["expect"],first_row_info)
+        self.assertMode.assert_in(ddt_data,self.teamwork_apply.get_first_row_info())
 
     @classmethod
     def tearDownClass(cls):
-        cls.base_page.quit_browser()
-        mytest.end_test()
-
+        # 清除缓存
+        cls().base.clear_catch()
+        # 退出浏览器
+        cls().base.quit_browser()
 
 if __name__ == '__main__':
     # unittest.main()
 
-    suits = unittest.TestLoader().loadTestsFromTestCase(Visit_News_Search)
+    suits = unittest.TestLoader().loadTestsFromTestCase(Teamwork_Apply_Search)
 
     unittest.TextTestRunner().run(suits)
 

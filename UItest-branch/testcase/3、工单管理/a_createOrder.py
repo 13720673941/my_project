@@ -3,235 +3,259 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/5/30 18:21
 
-from public.common import rwconfig,mytest
-from public.common.assertmode import Assert
-from public.common import driver,getdata
-from public.page.addOrderPage import AddOrderPage
-from public.page.pleaseOrderPage import PleaseOrderPage
+from public.common import myDecorator
+from public.common import rwConfig
+from public.common.operateExcel import Read_Excel
+from public.common.assertMode import Assert
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.loginPage import LoginPage
-from public.common.basepage import BasePage
+from public.page.createOrderPage import CreateOrderPage
+from public.page.sendOrderPage import SendOrderPage
 import unittest,ddt
-'''
-网点添加订单测试用例脚本：
-1、新建订单-联系人为空校验 2、新建订单-联系方式为空校验 3、新建订单-服务地址为空校验 4、新建订单-选择服务商为空校验
-5、新建订单-服务类型为空校验 6、新建订单-家电品牌为空校验 7、新建订单-家电品类为空校验 8、新建订单-手机号左边界值校验
-9、新建订单-手机号右边界值校验 10、新建订单-手机号格式校验 11、新建订单-下单成功校验 12、新建订单-添加需返单订单校验
-13、新建订单-添加仅报单订单校验 14、新建订单-智能文本识别为空校验 15、新建订单-智能文本识别功能校验 16、新建订单-添加订单重置功能校验
-17、新建订单-直接派单功能校验 18、新建订单-保存并继续添加订单功能校验
-'''
-# 获取添加订单信息数据
-Data1 = getdata.get_test_data()["CreateOrderPage"]["create_order_fnc"]
-Data2 = getdata.get_test_data()["CreateOrderPage"]["text_recognition_fnc"]
 
 @ddt.ddt
-class Add_Order(unittest.TestCase):
+class Create_Order(unittest.TestCase):
+
+    """" 【创建工单功能测试用例脚本】 """
+
+    # 测试用例编号列表
+    case_list = [
+        "create_order_001", "create_order_002", "create_order_003", "create_order_004",
+        "create_order_005", "create_order_006", "create_order_007", "create_order_008",
+        "create_order_009", "create_order_010", "create_order_011", "create_order_012",
+        "create_order_013"
+    ]
+    # 获取ddt测试数据
+    read_excel = Read_Excel("createOrder")
+    ddt_data = read_excel.get_ddt_data(case_list)
 
     @classmethod
     def setUpClass(cls):
-        # 设置浏览器驱动
-        cls.dr = driver.browser_driver()
-        # 实例化
-        cls.basePage = BasePage(cls.dr)
-        cls.addOrderPage = AddOrderPage(cls.dr)
-        cls.loginPage = LoginPage(cls.dr)
-        cls.pleaseOrder = PleaseOrderPage(cls.dr)
-        cls.assert_mode = Assert(cls.dr)
-        # 清除浏览器缓存
-        cls.basePage.clear_catch()
-        # 开始
-        mytest.start_test()
-        # 获取网点登录数据
-        UserName = rwconfig.read_config_data('西安好家帮家政有限公司','username')
-        PassWord = rwconfig.read_config_data('西安好家帮家政有限公司','password')
+        # 实例化断言类
+        cls.driver = web_driver()
+        cls.base = BasePage(cls.driver)
+        cls.login = LoginPage(cls.driver)
+        cls.create_order = CreateOrderPage(cls.driver)
+        cls.send_order = SendOrderPage(cls.driver)
+        cls.assert_mode = Assert(cls.driver,"createOrder")
         # 网点登录
-        cls.loginPage.login_main(UserName,PassWord)
-        cls.basePage.sleep(2)
+        cls.login.login_main("T西安好家帮家政有限公司")
 
-    def public_operation(self,name,phoneNum,serverAddress,collage,orderType,
-                         branchName,serverType,brands,big_kinds,kinds,small_kinds):
+    def public_operation(self,name,phoneNum,serverAddress,orderType,collage,serverType,
+                         brands,big_kinds,kinds,small_kinds,branchName=None):
         """工共操作下单"""
+
         # 进入添加订单页面
-        self.addOrderPage.enter_create_order_url()
+        self.create_order.enter_create_order_url()
         # 刷新页面
-        self.basePage.refresh_page()
-        # 等待页面加载
-        self.basePage.wait()
+        self.base.refresh_page()
         # 输入联系人名称
-        self.addOrderPage.input_username(name)
+        self.create_order.input_username(name)
         # 输入联系方式
-        self.addOrderPage.input_phoneNum(phoneNum)
+        self.create_order.input_phoneNum(phoneNum)
         # 选择服务地址
-        self.addOrderPage.select_server_address(serverAddress)
-        # 输入详细地址
-        self.addOrderPage.input_add_collage(collage)
+        self.create_order.select_server_address(serverAddress)
         # 选择工单类型
-        self.addOrderPage.select_order_type(orderType, branchName)
+        self.create_order.select_order_type(orderType,branchName)
+        # 输入详细地址
+        self.create_order.input_add_collage(collage)
         # 选择服务类型
-        self.addOrderPage.select_server_type(serverType)
+        self.create_order.select_server_type(serverType)
         # 选择预约时间和时间段
-        # self.addOrderPage.input_orderTime()
+        # self.create_order.input_orderTime()
         # 选择家电品牌
-        self.addOrderPage.input_brands(brands)
+        self.create_order.input_brands(brands)
         # 选择产品大类
-        self.addOrderPage.select_product_big_kinds(big_kinds)
+        self.create_order.select_product_big_kinds(big_kinds)
         # 选择家电品类
-        self.addOrderPage.select_product_kinds(kinds)
+        self.create_order.select_product_kinds(kinds)
         # 选择小类
-        self.addOrderPage.select_product_small_kinds(small_kinds)
+        self.create_order.select_product_small_kinds(small_kinds)
 
-    @ddt.data(*Data1)
-    def test_addOrder001(self,Data1):
-        '''网点新建订单测试用例脚本'''
+    @ddt.data(*ddt_data)
+    @myDecorator.skipped_case
+    def test_create_order001(self,ddt_data):
+        """网点新建订单测试用例脚本"""
 
         # 打印测试用例名称
-        self.basePage.print_case_name(Data1["CaseName"])
+        self.base.print_case_name(ddt_data)
         # 获取订单信息
-        name=Data1["username"]
-        phoneNum=Data1["PhoneNum"]
-        serverAddress=Data1["ServerAddress"]
-        collage=Data1["Collage"]
-        orderType=Data1["OrderType"]
-        branchName=Data1["Branch"]
-        serverType=Data1["ServerType"]
-        brands=Data1["Brands"]
-        big_kinds=Data1["BigKinds"]
-        kinds=Data1["Kinds"]
-        small_kinds=Data1["SmallKinds"]
-        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
-                              serverType,brands,big_kinds,kinds,small_kinds)
+        name=ddt_data["用户姓名"]
+        phoneNum=ddt_data["手机号"]
+        serverAddress=ddt_data["服务地址"]
+        collage=ddt_data["详细地址"]
+        orderType=ddt_data["工单类型"]
+        branchName=ddt_data["服务商"]
+        serverType=ddt_data["服务类型"]
+        brands=ddt_data["品牌"]
+        big_kinds=ddt_data["大类"]
+        kinds=ddt_data["品类"]
+        small_kinds=ddt_data["小类"]
+        self.public_operation(name,phoneNum,serverAddress,orderType,collage,serverType,
+                              brands,big_kinds,kinds,small_kinds,branchName)
         # 点击保存按钮
-        self.addOrderPage.click_save_btn()
-        self.basePage.sleep(1)
+        self.create_order.click_save_btn()
+        self.base.sleep(1)
+        Msg = self.login.get_system_msg()
         # 断言结果
-        self.assert_mode.assert_equal(Data1["expect"],self.basePage.get_system_msg())
+        self.assert_mode.assert_equal(ddt_data,Msg)
 
-    @ddt.data(*Data2)
-    def test_addOrder002(self,Data2):
-        '''添加订单页面智能文本识别功能跳转校验'''
+    @unittest.skipUnless(read_excel.get_isRun_text("create_order_014"),"-跳过不执行该用例")
+    def test_create_order002(self):
+        """添加订单页面智能文本为空校验"""
+
+        # 进入添加订单页面
+        self.create_order.enter_create_order_url()
+        # 获取测试数据
+        data = self.read_excel.get_dict_data("create_order_014")
         # 加载用例名称
-        self.basePage.print_case_name(Data2["CaseName"])
+        self.base.print_case_name(data)
         # 刷新页面
-        self.basePage.refresh_page()
+        self.base.refresh_page()
         # 点击打开输入智能识别的按钮
-        self.addOrderPage.click_recognition_btn()
-        # 等待页面加载
-        self.basePage.wait()
-        # 输入之内识别文本
-        self.addOrderPage.input_text_recognition(textRecognition=Data2["TextMsg"])
+        self.create_order.click_recognition_btn()
         # 点击提交识别文本
-        self.addOrderPage.click_recognition_submit()
-        self.basePage.sleep(1)
-        # 点击保存
-        if '15' in Data2["CaseName"]:
-            self.addOrderPage.click_save_btn()
+        self.create_order.click_recognition_submit()
+        self.base.sleep(1)
+        # 获取系统提示信息
+        Msg = self.login.get_system_msg()
         # 断言
-        self.assert_mode.assert_equal(Data2["expect"],self.basePage.get_system_msg())
+        self.assert_mode.assert_equal(data, Msg)
 
-    def test_addOrder003(self):
-        '''添加工单页面重置功能校验'''
+    @unittest.skipUnless(read_excel.get_isRun_text("create_order_015"),"-跳过不执行该用例")
+    def test_create_order003(self):
+        """添加订单页面智能文本成功下单校验"""
+
         # 获取测试数据
-        Data = getdata.get_test_data()["CreateOrderPage"]["reset_btn_fnc"]
+        data = self.read_excel.get_dict_data("create_order_015")
+        # 加载用例名称
+        self.base.print_case_name(data)
+        # 刷新页面
+        self.base.refresh_page()
+        # 点击打开输入智能识别的按钮
+        self.create_order.click_recognition_btn()
+        # 输入文本
+        self.create_order.input_text_recognition(data["只能识别文本"])
+        # 点击提交识别文本
+        self.create_order.click_recognition_submit()
+        self.base.sleep(1)
+        # 点击保存按钮
+        self.create_order.click_save_btn()
+        # 获取系统提示信息
+        Msg = self.login.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data, Msg)
+
+    @unittest.skipUnless(read_excel.get_isRun_text("create_order_016"),"-跳过不执行该用例")
+    def test_create_order004(self):
+        """添加工单页面重置功能校验"""
+
+        # 获取测试数据
+        data = self.read_excel.get_dict_data("create_order_016")
         # 打印测试用例名称
-        self.basePage.print_case_name(Data["CaseName"])
+        self.base.print_case_name(data)
         # 获取订单信息
-        name = Data["username"]
-        phoneNum = Data["PhoneNum"]
-        serverAddress = Data["ServerAddress"]
-        collage = Data["Collage"]
-        orderType = Data["OrderType"]
-        branchName = Data["Branch"]
-        serverType = Data["ServerType"]
-        brands = Data["Brands"]
-        big_kinds = Data["BigKinds"]
-        kinds = Data["Kinds"]
-        small_kinds = Data["SmallKinds"]
-        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
-                              serverType,brands,big_kinds,kinds,small_kinds)
+        name = data["用户姓名"]
+        phoneNum=data["手机号"]
+        serverAddress=data["服务地址"]
+        collage=data["详细地址"]
+        orderType=data["工单类型"]
+        branchName=data["服务商"]
+        serverType=data["服务类型"]
+        brands=data["品牌"]
+        big_kinds=data["大类"]
+        kinds=data["品类"]
+        small_kinds=data["小类"]
+        self.public_operation(name,phoneNum,serverAddress,orderType,collage,serverType,
+                              brands,big_kinds,kinds,small_kinds,branchName)
         # 点击重置按钮
-        self.addOrderPage.click_reset_btn()
+        self.create_order.click_reset_btn()
         # 点击保存
-        self.addOrderPage.click_save_btn()
-        self.basePage.sleep(1)
+        self.create_order.click_save_btn()
+        self.base.sleep(1)
+        Msg = self.login.get_system_msg()
         # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
+        self.assert_mode.assert_equal(data,Msg)
 
-    def test_addOrder004(self):
-        '''直接派单功能校验'''
+    @unittest.skipUnless(read_excel.get_isRun_text("create_order_017"),"-跳过不执行该用例")
+    def test_create_order005(self):
+        """直接派单功能校验"""
+
         # 获取测试数据
-        Data = getdata.get_test_data()["CreateOrderPage"]["direct_please_fnc"]
+        data = self.read_excel.get_dict_data("create_order_017")
         # 打印测试用例名称
-        self.basePage.print_case_name(Data["CaseName"])
-        #  获取订单信息
-        name = Data["username"]
-        phoneNum = Data["PhoneNum"]
-        serverAddress = Data["ServerAddress"]
-        collage = Data["Collage"]
-        orderType = Data["OrderType"]
-        branchName = Data["Branch"]
-        serverType = Data["ServerType"]
-        brands = Data["Brands"]
-        big_kinds = Data["BigKinds"]
-        kinds = Data["Kinds"]
-        small_kinds = Data["SmallKinds"]
-        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
-                              serverType,brands,big_kinds,kinds,small_kinds)
+        self.base.print_case_name(data)
+        # 获取订单信息
+        name = data["用户姓名"]
+        phoneNum = data["手机号"]
+        serverAddress = data["服务地址"]
+        collage = data["详细地址"]
+        orderType = data["工单类型"]
+        branchName = data["服务商"]
+        serverType = data["服务类型"]
+        brands = data["品牌"]
+        big_kinds = data["大类"]
+        kinds = data["品类"]
+        small_kinds = data["小类"]
+        self.public_operation(name,phoneNum,serverAddress,orderType,collage,serverType,
+                              brands,big_kinds,kinds,small_kinds,branchName)
         # 点击直接派单
-        self.addOrderPage.click_please_btn()
-        self.basePage.sleep(1)
+        self.create_order.click_please_btn()
+        self.base.sleep(1)
         # 获取派单师傅
-        master = rwconfig.read_config_data('西安好家帮家政有限公司','master001')
+        master = rwConfig.read_config_data('T西安好家帮家政有限公司','master001')
         # 选择师傅派单
-        self.pleaseOrder.select_please_page(page_name=master)
+        self.send_order.select_send_page(page_name=master)
         # 点击确定
-        self.pleaseOrder.click_confirm_btn()
-        self.basePage.sleep(1)
+        self.send_order.click_confirm_btn()
+        self.base.sleep(1)
         # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.basePage.get_system_msg())
+        self.assert_mode.assert_equal(data,self.login.get_system_msg())
 
-    def test_addOrder005(self):
-        '''添加订单页面添加并继续功能校验'''
+    @unittest.skipUnless(read_excel.get_isRun_text("create_order_018"),"-跳过不执行该用例")
+    def test_create_order006(self):
+        """添加订单页面添加并继续功能校验"""
+
         # 获取测试数据
-        Data = getdata.get_test_data()["CreateOrderPage"]["save_add_btn_fnc"]
+        data = self.read_excel.get_dict_data("create_order_018")
         # 打印测试用例名称
-        self.basePage.print_case_name(Data["CaseName"])
-        #  获取订单信息
-        name = Data["username"]
-        phoneNum = Data["PhoneNum"]
-        serverAddress = Data["ServerAddress"]
-        collage = Data["Collage"]
-        orderType = Data["OrderType"]
-        branchName = Data["Branch"]
-        serverType = Data["ServerType"]
-        brands = Data["Brands"]
-        big_kinds = Data["BigKinds"]
-        kinds = Data["Kinds"]
-        small_kinds = Data["SmallKinds"]
-        self.public_operation(name,phoneNum,serverAddress,collage,orderType,branchName,
-                              serverType,brands,big_kinds,kinds,small_kinds)
+        self.base.print_case_name(data)
+        # 获取订单信息
+        name = data["用户姓名"]
+        phoneNum = data["手机号"]
+        serverAddress = data["服务地址"]
+        collage = data["详细地址"]
+        orderType = data["工单类型"]
+        branchName = data["服务商"]
+        serverType = data["服务类型"]
+        brands = data["品牌"]
+        big_kinds = data["大类"]
+        kinds = data["品类"]
+        small_kinds = data["小类"]
+        self.public_operation(name,phoneNum,serverAddress,orderType,collage,serverType,
+                              brands,big_kinds,kinds,small_kinds,branchName)
         # 点击添加并继续
-        self.addOrderPage.click_save_and_add()
-        self.basePage.sleep(1)
+        self.create_order.click_save_and_add()
+        self.base.sleep(1)
         # 获取table是否关闭
-        isTrue = self.addOrderPage.create_title_is_displayed()
-        msg = self.basePage.get_system_msg()
+        isTrue = self.create_order.create_title_is_displayed()
+        msg = self.login.get_system_msg()
         # # 断言
-        self.assert_mode.assert_equal(Data["expect"],msg)
-        self.assert_mode.assert_el_in_page(isTrue)
+        self.assert_mode.assert_equal(data,msg)
+        self.assert_mode.assert_el_in_page(data,isTrue)
 
     @classmethod
     def tearDownClass(cls):
+        # 清除缓存
+        cls().base.clear_catch()
         # 退出浏览器
-        cls.basePage.quit_browser()
-        mytest.end_test()
+        cls().base.quit_browser()
+
 
 if __name__ == '__main__':
     unittest.main()
 
-    suit = unittest.TestSuite()
-    suit.addTest(Add_Order("test_addOrder001"))
-    suit.addTest(Add_Order("test_addOrder002"))
-    suit.addTest(Add_Order("test_addOrder003"))
-    suit.addTest(Add_Order("test_addOrder004"))
-    suit.addTest(Add_Order("test_addOrder005"))
-    unittest.TextTestRunner().run(suit)
+    suit = unittest.TestLoader().loadTestsFromTestCase(Create_Order)
 
+    unittest.TextTestRunner().run(suit)

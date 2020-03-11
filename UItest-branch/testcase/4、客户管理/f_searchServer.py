@@ -3,75 +3,71 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/7/8 18:07
 
-from public.common.assertmode import Assert
-from public.common.basepage import BasePage
-from public.common.driver import browser_driver
-from public.common.getdata import get_test_data
-from public.common.rwconfig import read_config_data
-from public.common import mytest
+from public.common import myDecorator
+from public.common.operateExcel import *
+from public.common.assertMode import Assert
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.loginPage import LoginPage
-from public.page.serverBranchPage import ServerBranchPage
+from public.page.facilitatorPage import FacilitatorPage
 import unittest,ddt
-"""
-服务商列表搜索服务商功能：
-1、按照客户手机号搜索校验 2、按照客户名称搜索校验 3、按客户名称模糊搜索校验 4、按客户手机号模糊搜索校验
-"""
-# 获取测试数据
-search_data = get_test_data()["AddServerPage"]["search_branch_fnc"]
 
 @ddt.ddt
 class Search_Branch(unittest.TestCase):
 
+    """ 【搜索服务商功能】 """
+
+    # 实例化类
+    readExcel = Read_Excel("searchFacilitator")
+    # ddt 测试数据用例编号
+    case_list = [
+        "search_facilitator_001","search_facilitator_002",
+        "search_facilitator_003","search_facilitator_004"
+    ]
+    # 获取ddt测试数据
+    ddt_data = readExcel.get_ddt_data(case_list)
+
     @classmethod
     def setUpClass(cls):
-        # 设置浏览器驱动
-        cls.driver = browser_driver()
-        # 实例化类
-        cls.base_page = BasePage(cls.driver)
-        cls.assert_mode = Assert(cls.driver)
+        # 实例化页面对象类
+        cls.driver = web_driver()
+        cls.base = BasePage(cls.driver)
         cls.login = LoginPage(cls.driver)
-        cls.server_branch = ServerBranchPage(cls.driver)
-        # 清除浏览器缓存
-        cls.base_page.clear_catch()
-        # 开始运行
-        mytest.start_test()
-        # 获取网点账号密码
-        cls.username = read_config_data("西安好家帮家政有限公司","username")
-        cls.password = read_config_data("西安好家帮家政有限公司","password")
+        cls.server_branch = FacilitatorPage(cls.driver)
+        cls.assertMode = Assert(cls.driver, "searchFacilitator")
         # 网点登录
-        cls.login.login_main(cls.username,cls.password)
+        cls.login.login_main("T西安好家帮家政有限公司")
         # 进入客户列表页面
         cls.server_branch.enter_customer_list_page()
 
     def setUp(self):
         # 刷新页面
-        self.base_page.refresh_page()
+        self.base.refresh_page()
         # 切换服务商列表
         self.server_branch.click_server_branch_table()
 
-    @ddt.data(*search_data)
-    def test_search_serverBranch(self,search_data):
+    @ddt.data(*ddt_data)
+    @myDecorator.skipped_case
+    def test_search_serverBranch(self,ddt_data):
         """服务商列表搜索功能"""
 
         # 打印用例名称
-        self.base_page.print_case_name(search_data["CaseName"])
+        self.base.print_case_name(ddt_data)
         # 输入搜索关键字
-        self.server_branch.input_search_branch_keyword(branch_keyword=search_data["SearchWord"])
+        self.server_branch.input_search_branch_keyword(ddt_data["搜索字段"])
         # 点击搜索
         self.server_branch.click_search_branch_btn()
         # 等待搜索结果
-        self.base_page.sleep(1)
-        # 获取搜索结果
-        search_result = self.server_branch.get_first_branch_info()
+        self.base.sleep(2)
         # 断言结果
-        self.assert_mode.assert_in(search_data["expect"],search_result)
+        self.assertMode.assert_in(ddt_data,self.server_branch.get_first_branch_info())
 
     @classmethod
     def tearDownClass(cls):
-        cls.base_page.quit_browser()
-        mytest.end_test()
-
-
+        # 清除缓存
+        cls().base.clear_catch()
+        # 退出浏览器
+        cls().base.quit_browser()
 
 if __name__ == '__main__':
     unittest.main()

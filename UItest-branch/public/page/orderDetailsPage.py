@@ -3,8 +3,8 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/7/5 14:11
 
-from public.common.basepage import BasePage
-from selenium.webdriver.common.by import By
+from public.common.basePage import BasePage
+from config.urlConfig import *
 import datetime
 
 class OrderDetailsPage(BasePage):
@@ -12,114 +12,127 @@ class OrderDetailsPage(BasePage):
     订单详情页面
     """
 
-    # 预约订单按钮
-    appoint_order_btn = (By.XPATH,'//button[contains(.,"预约")]')
-    # 改约订单按钮
-    alter_appoint_time_btn = (By.XPATH,'//button[contains(.,"改约")]')
-    # 清除预约日期
-    appoint_date_clear = (By.XPATH,'//label[text()="预约日期："]/../div/div/div/i')
-    # 预约日期输入框
-    appoint_time_input = (By.XPATH,'//input[@placeholder="选择起始日期"]')
-    # 预约时间打开下拉按钮
-    open_appoint_select = (By.XPATH,'//label[contains(.,"预约时间：")]/../div/div/span[1]')
-    # 下拉时间段的统计父目录
-    parent_for_select = (By.XPATH,'//div[contains(text(),"预约时间")]/../../../../..'
-                                  '/preceding-sibling::div[1]/ul[2]/li[1]')
-    # 确定预约按钮
-    confirm_appoint_btn = (By.XPATH,'//div[contains(text(),"预约时间")]/../../div[3]/button[2]')
-    # 预约后详情页有预约字段
-    appoint_time_text = (By.XPATH,'//label[text()="预约上门时间："]/../div')
-    # 修改工单按钮
-    alter_order_btn = (By.XPATH,'//button[contains(.,"修改工单")]')
-    # 订单详情页修改订单手机号的字段
-    order_info_of_pheNum = (By.XPATH,'//label[text()="联系方式："]/../div')
-    # 催单按钮
-    cui_order_btn = (By.XPATH,'//button[contains(.,"催单")]')
-    # 催单反馈输入框
-    cui_reason_input = (By.XPATH,'//label[text()="催单内容："]/.././/textarea')
-    # 催单确定按钮
-    confirm_cui_button = (By.XPATH,'//div[contains(text(),"催单内容")]/../../div[3]/button[2]')
-    # 催单校验字
-    order_info_of_cui = (By.XPATH,'//label[text()="服务反馈："]/../div')
-    # 详情页新建工单
-    new_create_order_btn = (By.XPATH,'//button[contains(.,"新建工单")]')
-    # 打印工单按钮
-    print_order_btn = (By.XPATH,'//button[contains(.,"打印工单")]')
-    # 点击空白关闭日期框
-    white_place = (By.XPATH,'(//label[contains(.,"预约日期：")])[3]')
-
     def __init__(self,driver):
         BasePage.__init__(self,driver)
 
+    def get_elements(self,option):
+        """获取element_data文件中工单详情页面的元素信息"""
+        return read_config_data("order_details_page",option,elementDataPath)
+
+    def enter_refuse_list_page(self):
+        """拒单列表页面"""
+        self.open_url(refuse_order_list_url)
+
+    def enter_prompt_list_page(self):
+        """催单工单列表页面"""
+        self.open_url(prompt_order_url)
+
+    def click_refuse_order_btn(self):
+        """点击拒单按钮"""
+        self.click_button(self.get_elements("refuse_order_btn"))
+
+    def input_refuse_reason(self,reason):
+        """输入拒单原因"""
+        self.input_message(self.get_elements("refuse_order_input"),reason)
+
+    def click_confirm_refuse_btn(self):
+        """点击确认拒单"""
+        self.click_button(self.get_elements("confirm_refuse_submit"))
+
     def click_appoint_btn(self):
         """点击预约按钮"""
-        self.click_button(self.appoint_order_btn)
+        self.click_button(self.get_elements("appoint_order_btn"))
 
     def click_alter_appoint_btn(self):
         """点击修改预约按钮"""
-        self.click_button(self.alter_appoint_time_btn)
+        self.click_button(self.get_elements("alter_appoint_time_btn"))
 
     def clear_appoint_date(self):
         """清除预约日期"""
-        self.mouse_move_and_click(self.appoint_date_clear)
+        self.mouse_move_and_click(self.get_elements("appoint_date_clear"))
 
     def input_appoint_date(self,alter=False):
         """输入预约日期"""
+        self.clear_appoint_date()
+        self.sleep(1)
         if alter:
             appoint_date = str(datetime.datetime.now().date() + datetime.timedelta(2))
         else:
             appoint_date = self.get_now_time()
-        self.input_message(self.appoint_time_input,appoint_date)
+        self.input_message(self.get_elements("appoint_time_input"),appoint_date)
 
     def select_appoint_time(self,appoint_time):
-        """随机选择预约时间段"""
-        if appoint_time != '':
-            self.click_button(self.open_appoint_select)
+        """选择预约时间段默认选择第一个"""
+        if appoint_time == "True":
+            self.click_button(self.get_elements("open_appoint_select"))
             self.sleep(2)
-            self.mouse_move_and_click(self.parent_for_select)
+            self.mouse_move_and_click(self.get_elements("first_appoint_time"))
 
     def click_confirm_appoint_btn(self):
         """点击确定预约按钮"""
-        self.click_button(self.confirm_appoint_btn)
+        self.click_button(self.get_elements("confirm_appoint_btn"))
 
     def get_appoint_text(self):
         """获取订单详情的预约字段，判断预约成功"""
-        return self.get_text(self.appoint_time_text)
+        return self.get_text(self.get_elements("appoint_time_text"))
 
     def click_alter_order_btn(self):
         """点击修改订单按钮"""
-        self.click_button(self.alter_order_btn)
+        self.click_button(self.get_elements("alter_order_btn"))
 
     def get_alter_text_of_order(self):
         """获取修改订单的字段验证"""
-        return self.get_text(self.order_info_of_pheNum)
+        return self.get_text(self.get_elements("order_info_of_pheNum"))
 
     def click_cui_order_btn(self):
         """点击催单按钮"""
-        self.click_button(self.cui_order_btn)
+        self.click_button(self.get_elements("cui_order_btn"))
 
-    def input_cui_of_reason(self,cui):
+    def input_cui_of_reason(self,prompt_reason):
         """输入催单原因"""
-        if cui != '':
-            self.clear_input(self.cui_reason_input)
-            self.input_message(self.cui_reason_input,"cui {0}".format(self.get_now_time(Time=True)))
+        if prompt_reason != '':
+            self.input_message(self.get_elements("cui_reason_input"),prompt_reason)
 
     def click_confirm_cui_order(self):
         """点击确定催单"""
-        self.click_button(self.confirm_cui_button)
-
-    def get_cui_text_of_order(self):
-        """获取订单详情页催单验证字段"""
-        return self.get_text(self.order_info_of_cui)
+        self.click_button(self.get_elements("confirm_cui_button"))
 
     def click_new_create_btn(self):
         """点击新建工单"""
-        self.click_button(self.new_create_order_btn)
+        self.click_button(self.get_elements("new_create_order_btn"))
 
     def click_print_order_btn(self):
         """点击打印工单按钮"""
-        self.click_button(self.print_order_btn)
+        self.click_button(self.get_elements("print_order_btn"))
 
-    def click_white_place(self):
-        """点击空白区域"""
-        self.click_button(self.white_place)
+    def click_feedback_btn(self):
+        """点击服务反馈按钮"""
+        self.click_button(self.get_elements("feedback_btn"))
+
+    def input_feedback_message(self,feedbackMsg):
+        """输入反馈内容"""
+        self.input_message(self.get_elements("feedback_input"),feedbackMsg)
+
+    def click_confirm_feedback(self):
+        """确认反馈内容"""
+        self.click_button(self.get_elements("confirm_feedback_btn"))
+
+    def get_feedback_message(self):
+        """获取反馈信息"""
+        return self.get_text(self.get_elements("feedback_message"))
+
+    def click_alter_charge(self):
+        """点击修改服务费按钮"""
+        self.click_button(self.get_elements("alter_server_money_btn"))
+
+    def input_server_charge(self,serverCharge="100"):
+        """输入修改服务费"""
+        self.input_message(self.get_elements("server_money_input"),serverCharge)
+
+    def click_confirm_alter_charge(self):
+        """点击确认修改服务费按钮"""
+        self.click_button(self.get_elements("confirm_alter_charge_btn"))
+
+    def get_order_charge(self):
+        """获取工单详情页的派单预报价字段"""
+        return self.get_text(self.get_elements("settle_money_text"))

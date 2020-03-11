@@ -4,49 +4,20 @@
 # @Time    : 2019/8/22 16:30
 
 from public.page.brandsPage import BasePage
-from selenium.webdriver.common.by import By
-from config.urlconfig import *
+from config.urlConfig import *
 
 class FinanceManagePage(BasePage):
 
     """
-    财务管理-【我的收入】和【我的支出】页面
+        财务管理-【我的收入】和【我的支出】页面
     """
-    # 打开下拉收入类型按钮
-    open_income_type_btn = (By.XPATH,'//label[text()="收入类型："]/../div/div')
-    # 收入类型选项父节点
-    income_type_parent_xpath = (By.XPATH,'//label[text()="收入类型："]/..//ul[2]')
-    # 打开下拉支出类型按钮
-    open_expend_type_btn = (By.XPATH,'//label[text()="支出类型："]/../div/div')
-    # 支出类型选项父节点
-    expend_type_parent_xpath = (By.XPATH, '//label[text()="支出类型："]/..//ul[2]')
-    # 打开服务类型下拉按钮
-    open_server_type_btn = (By.XPATH,'//label[text()="服务类型："]/../div/div')
-    # 服务类型选项父节点
-    server_type_parent_xpath = (By.XPATH,'//label[text()="服务类型："]/..//ul[2]')
-    # 服务师傅输入框
-    server_master_input = (By.XPATH,'//label[text()="服务师傅："]/..//input')
-    # 工单编号输入框
-    order_number_input = (By.XPATH,'//label[text()="工单编号："]/..//input')
-    # 搜索按钮
-    search_btn = (By.XPATH,'//a[contains(text(),"搜索")]')
-    # 结算时间开始日期
-    settle_start_time = (By.XPATH,'//label[contains(text(),"时间")]/../div/div[1]//input')
-    # 结算时间结束日期
-    settle_end_time = (By.XPATH,'//label[contains(text(),"时间")]/../div/div[2]//input')
-    # 查询按钮
-    find_btn = (By.XPATH,'//a[contains(text(),"查询")]')
-    # 收入列表第一行全部信息
-    income_first_row_info = (By.XPATH,'//tr[@class="ivu-table-row"][1]')
-    # 获取收入第一行内的日期
-    first_row_income_date = (By.XPATH,'//tr[@class="ivu-table-row"][1]//td[12]//span')
-    # 支出列表第一行全部信息
-    expend_first_row_info = (By.XPATH,'(//tr[@class="ivu-table-row"][1])[2]')
-    # 支出第一行日期时间信息
-    first_row_expend_date = (By.XPATH,'(//tr[@class="ivu-table-row"][1]//td[12]//span)[2]')
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
+
+    def get_elements(self,option):
+        """获取财务工单支出收入页面元素路径"""
+        return read_config_data("income_expend_page",option,elementDataPath)
 
     def enter_my_income_page(self):
         """进入我的收入页面"""
@@ -56,57 +27,75 @@ class FinanceManagePage(BasePage):
         """进入我的支出页面"""
         self.open_url(my_expend_url)
 
-    def select_income_type(self,income_type):
-        """选择收入类型"""
-        self.operate_not_select(
-            open_el=self.open_income_type_btn,parent_el=self.income_type_parent_xpath,value=income_type)
+    def input_bill_number(self,billNumber):
+        """输入账单编号"""
+        self.input_message(self.get_elements("bill_number_input"),billNumber)
 
-    def select_expend_type(self,expend_type):
-        """选择支出类型"""
-        self.operate_not_select(
-            open_el=self.open_expend_type_btn,parent_el=self.expend_type_parent_xpath,value=expend_type)
+    def input_bill_start_date(self,startDate):
+        """输入账单开始日期"""
+        self.input_message(self.get_elements("bill_start_date_input"),startDate)
 
-    def select_server_type(self,server_type):
-        """选择服务类型"""
-        self.operate_not_select(
-            open_el=self.open_server_type_btn,parent_el=self.server_type_parent_xpath,value=server_type)
+    def input_bill_end_date(self,endDate):
+        """输入账单结束日期"""
+        self.input_message(self.get_elements("bill_end_date_input"),endDate)
 
-    def input_server_master_name(self,master_name):
-        """输入师傅名称"""
-        self.input_message(self.server_master_input,master_name)
+    def input_settle_page(self,pageName):
+        """输入结算对象"""
+        self.input_message(self.get_elements("settle_page_name_input"),pageName)
 
-    def input_order_number(self,order_number):
-        """输入工单编号"""
-        self.input_message(self.order_number_input,order_number)
-
-    def click_search_btn(self):
+    def click_search_button(self):
         """点击搜索按钮"""
-        self.click_button(self.search_btn)
+        self.click_button(self.get_elements("search_button"))
 
-    def input_settle_start_time(self,start_time):
-        """输入结算开始时间"""
-        self.input_message(self.settle_start_time,start_time)
+    def get_bill_number(self,orderNumber):
+        """查找账单编号"""
 
-    def input_settle_end_time(self,end_time):
-        """输入结算结束时间"""
-        self.input_message(self.settle_end_time,end_time)
+        # 初始化账单编号
+        billNumber = None
+        # 遍历第一页的账单，默认倒叙排列，否则没有生成账单
+        for i in range(1,10):
+            try:
+                # 点击账单明细按钮进入账详情页
+                self.click_button(self.get_elements("bill_details_button").replace("+num+",str(i)))
+                self.sleep(1)
+                # 搜素工单编号
+                self.input_message(self.get_elements("order_number_input"),orderNumber)
+                self.click_search_button()
+                # 获取搜索后第一行的工单所有信息
+                self.sleep(1)
+                orderInfo = self.get_text(self.get_elements("first_order_info"))
+                self.sleep(1)
+                # 返回账单列表页面
+                self.back_page()
+                if orderNumber in orderInfo:
+                    # 获取该行的账单编号
+                    billNumber = self.get_text(self.get_elements("bill_number_text").replace("+num+",str(i)))
+                    self.log.info(" * Find bill number: {}".format(billNumber))
+                    break
+            except:
+                if i == 9:
+                    raise TimeoutError("Not find bill number in bill list page !")
+                else:
+                    continue
+            finally:
+                return billNumber
 
-    def click_find_btn(self):
-        """点击查询按钮"""
-        self.click_button(self.find_btn)
+    def get_first_row_info(self):
+        """获取第一行所有账单信息-默认获取第一行必须在搜索账单号后获取"""
+        try:
+            return self.get_text(self.get_elements("first_bill_info"))
+        except:
+            return "Get first bill info fail !"
 
-    def get_income_first_row_info(self):
-        """我的收入列表第一行全部信息"""
-        return self.get_text(self.income_first_row_info)
+    def click_bill_details_btn(self,billNumber):
+        """点击账单明细按钮"""
 
-    def get_expend_first_row_info(self):
-        """我的支出列表第一行全部信息"""
-        return self.get_text(self.expend_first_row_info)
-
-    def get_income_date(self):
-        """获取收入第一行日期"""
-        return self.get_text(self.first_row_income_date)
-
-    def get_expend_date(self):
-        """获取支出第一行日期"""
-        return self.get_text(self.first_row_expend_date)
+        # 搜索账单编号
+        self.input_bill_number(billNumber)
+        self.click_search_button()
+        # 点击账单明细按钮
+        try:
+            # 固定搜索接口的第一个账单明细按钮
+            self.click_button(self.get_elements("bill_details_button").replace("+num+","1"))
+        except:
+            raise TimeoutError("Not find bill details button !")

@@ -1,0 +1,2097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>超级售后PC端UI自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">超级售后PC端UI自动化测试报告</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2020-02-23 18:53:36</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:05:15.065939</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 59，通过 58，失败 1，通过率= 98.31%</p>
+
+<p class='description'></p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 98.31% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 58 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 59 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>1、注册登录.a_register.Register_Branch:  【PC注册功能测试用例脚本】 </td>
+    <td class="text-center">14</td>
+    <td class="text-center">14</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',14)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align='left'>
+    <pre>
+    
+pt1_1: 2020-02-23 18:53:39,841 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:53:39,842 INFO:   * Load case name: 【验证用户名为空不能成功注册】
+2020-02-23 18:53:39,874 INFO:   * Refresh current page .
+2020-02-23 18:53:42,794 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:53:42,795 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:53:42,942 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:53:43,086 INFO:   * Input message:  
+2020-02-23 18:53:43,343 INFO:   * Input message: 13700003941 
+2020-02-23 18:53:43,558 INFO:   * Input message: 88888888 
+2020-02-23 18:53:43,703 INFO:   * Input message: 111111 
+2020-02-23 18:53:43,842 INFO:   * Input message: 111111 
+2020-02-23 18:53:43,942 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:53:45,944 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:53:46,009 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入用户名 .
+2020-02-23 18:53:46,178 INFO:  Expect: 请输入用户名 equal Faction: 请输入用户名, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align='left'>
+    <pre>
+    
+pt1_2: 2020-02-23 18:53:46,179 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:53:46,180 INFO:   * Load case name: 【验证手机号为空不能成功注册】
+2020-02-23 18:53:47,389 INFO:   * Refresh current page .
+2020-02-23 18:53:47,655 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:53:47,656 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:53:47,747 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:53:47,935 INFO:   * Input message: AutoTest 
+2020-02-23 18:53:48,008 INFO:   * Input message:  
+2020-02-23 18:53:48,145 INFO:   * Input message: 88888888 
+2020-02-23 18:53:48,258 INFO:   * Input message: 111111 
+2020-02-23 18:53:48,354 INFO:   * Input message: 111111 
+2020-02-23 18:53:48,437 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:53:50,438 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:53:50,528 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-02-23 18:53:50,630 INFO:  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align='left'>
+    <pre>
+    
+pt1_3: 2020-02-23 18:53:50,631 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:53:50,631 INFO:   * Load case name: 【验证验证码为空不能成功注册】
+2020-02-23 18:53:51,568 INFO:   * Refresh current page .
+2020-02-23 18:53:51,711 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:53:51,712 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:53:51,783 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:53:51,930 INFO:   * Input message: AutoTest 
+2020-02-23 18:53:52,093 INFO:   * Input message: 13700003941 
+2020-02-23 18:53:52,167 INFO:   * Input message:  
+2020-02-23 18:53:52,282 INFO:   * Input message: 111111 
+2020-02-23 18:53:52,383 INFO:   * Input message: 111111 
+2020-02-23 18:53:52,467 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:53:54,469 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:53:54,564 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入短信验证码 .
+2020-02-23 18:53:54,679 INFO:  Expect: 请输入短信验证码 equal Faction: 请输入短信验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align='left'>
+    <pre>
+    
+pt1_4: 2020-02-23 18:53:54,680 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:53:54,681 INFO:   * Load case name: 【验证新密码为空不能成功注册】
+2020-02-23 18:53:55,620 INFO:   * Refresh current page .
+2020-02-23 18:53:55,684 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:53:55,685 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:53:55,757 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:53:55,903 INFO:   * Input message: AutoTest 
+2020-02-23 18:53:56,051 INFO:   * Input message: 13700003941 
+2020-02-23 18:53:56,169 INFO:   * Input message: 88888888 
+2020-02-23 18:53:56,226 INFO:   * Input message:  
+2020-02-23 18:53:56,316 INFO:   * Input message: 111111 
+2020-02-23 18:53:56,395 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:53:58,396 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:53:58,460 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入6-18位登录密码 .
+2020-02-23 18:53:58,562 INFO:  Expect: 请输入6-18位登录密码 equal Faction: 请输入6-18位登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" align='left'>
+    <pre>
+    
+pt1_5: 2020-02-23 18:53:58,563 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:53:58,564 INFO:   * Load case name: 【验证确认密码为空不能成功注册】
+2020-02-23 18:53:59,435 INFO:   * Refresh current page .
+2020-02-23 18:53:59,632 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:53:59,633 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:53:59,722 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:53:59,891 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:00,042 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:00,152 INFO:   * Input message: 88888888 
+2020-02-23 18:54:00,246 INFO:   * Input message: 111111 
+2020-02-23 18:54:00,306 INFO:   * Input message:  
+2020-02-23 18:54:00,384 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:02,387 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:02,471 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-02-23 18:54:02,571 INFO:  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" align='left'>
+    <pre>
+    
+pt1_6: 2020-02-23 18:54:02,572 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:02,572 INFO:   * Load case name: 【验证已经注册的用户名不能成功注册】
+2020-02-23 18:54:05,674 INFO:   * Refresh current page .
+2020-02-23 18:54:05,768 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:05,769 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:05,837 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:05,995 INFO:   * Input message: branch01 
+2020-02-23 18:54:06,146 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:06,282 INFO:   * Input message: 88888888 
+2020-02-23 18:54:06,384 INFO:   * Input message: 111111 
+2020-02-23 18:54:06,479 INFO:   * Input message: 111111 
+2020-02-23 18:54:06,553 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:08,555 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:08,638 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: branch01已存在 .
+2020-02-23 18:54:08,740 INFO:  Expect: branch01已存在 equal Faction: branch01已存在, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in" align='left'>
+    <pre>
+    
+pt1_7: 2020-02-23 18:54:08,741 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:08,742 INFO:   * Load case name: 【验证已经注册的手机号不能成功注册】
+2020-02-23 18:54:09,645 INFO:   * Refresh current page .
+2020-02-23 18:54:09,751 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:09,754 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:09,827 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:09,972 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:10,122 INFO:   * Input message: 13700000004 
+2020-02-23 18:54:10,237 INFO:   * Input message: 88888888 
+2020-02-23 18:54:10,333 INFO:   * Input message: 111111 
+2020-02-23 18:54:10,425 INFO:   * Input message: 111111 
+2020-02-23 18:54:10,497 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:12,498 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:12,583 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 手机号码已存在 .
+2020-02-23 18:54:12,728 INFO:  Expect: 手机号码已存在 equal Faction: 手机号码已存在, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align='left'>
+    <pre>
+    
+pt1_8: 2020-02-23 18:54:12,729 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:12,729 INFO:   * Load case name: 【验证错误的验证码不能成功注册】
+2020-02-23 18:54:13,615 INFO:   * Refresh current page .
+2020-02-23 18:54:13,747 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:13,748 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:13,823 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:13,969 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:14,115 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:14,215 INFO:   * Input message: 000000 
+2020-02-23 18:54:14,307 INFO:   * Input message: 111111 
+2020-02-23 18:54:14,394 INFO:   * Input message: 111111 
+2020-02-23 18:54:14,471 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:16,472 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:16,541 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请重新获取验证码 .
+2020-02-23 18:54:16,637 INFO:  Expect: 请重新获取验证码 equal Faction: 请重新获取验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in" align='left'>
+    <pre>
+    
+pt1_9: 2020-02-23 18:54:16,638 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:16,638 INFO:   * Load case name: 【验证新密码和确认密码不同不能成功注册】
+2020-02-23 18:54:17,500 INFO:   * Refresh current page .
+2020-02-23 18:54:17,671 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:17,671 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:17,783 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:17,950 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:18,081 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:18,183 INFO:   * Input message: 88888888 
+2020-02-23 18:54:18,286 INFO:   * Input message: 111111 
+2020-02-23 18:54:18,376 INFO:   * Input message: 222222 
+2020-02-23 18:54:18,450 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:20,451 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:20,563 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-02-23 18:54:20,669 INFO:  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
+    <div id='div_pt1_10' class="collapse in" align='left'>
+    <pre>
+    
+pt1_10: 2020-02-23 18:54:20,670 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:20,671 INFO:   * Load case name: 【验证错误的用户名格式不能成功注册】
+2020-02-23 18:54:21,510 INFO:   * Refresh current page .
+2020-02-23 18:54:21,703 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:21,704 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:21,778 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:21,905 INFO:   * Input message: ！@#￥% 
+2020-02-23 18:54:22,057 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:22,176 INFO:   * Input message: 88888888 
+2020-02-23 18:54:22,275 INFO:   * Input message: 111111 
+2020-02-23 18:54:22,386 INFO:   * Input message: 111111 
+2020-02-23 18:54:22,471 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:24,473 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:24,565 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入汉字、字母、0-9、下划线 .
+2020-02-23 18:54:24,666 INFO:  Expect: 请输入汉字、字母、0-9、下划线 equal Faction: 请输入汉字、字母、0-9、下划线, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
+    <div id='div_pt1_11' class="collapse in" align='left'>
+    <pre>
+    
+pt1_11: 2020-02-23 18:54:24,667 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:24,667 INFO:   * Load case name: 【验证错误的手机号格式不能成功注册】
+2020-02-23 18:54:27,812 INFO:   * Refresh current page .
+2020-02-23 18:54:27,920 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:27,921 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:27,993 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:28,159 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:28,295 INFO:   * Input message: 1370000394 
+2020-02-23 18:54:28,400 INFO:   * Input message: 88888888 
+2020-02-23 18:54:28,490 INFO:   * Input message: 111111 
+2020-02-23 18:54:28,576 INFO:   * Input message: 111111 
+2020-02-23 18:54:28,649 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:30,652 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:30,734 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-02-23 18:54:30,842 INFO:  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_12</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
+    <div id='div_pt1_12' class="collapse in" align='left'>
+    <pre>
+    
+pt1_12: 2020-02-23 18:54:30,843 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:30,844 INFO:   * Load case name: 【验证密码格式错误不能成功注册】
+2020-02-23 18:54:33,931 INFO:   * Refresh current page .
+2020-02-23 18:54:34,025 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:34,027 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:34,103 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:34,255 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:34,400 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:34,516 INFO:   * Input message: 88888888 
+2020-02-23 18:54:34,610 INFO:   * Input message: !@#$%^ 
+2020-02-23 18:54:34,705 INFO:   * Input message: !@#$%^ 
+2020-02-23 18:54:34,779 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:36,780 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:36,862 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:54:36,961 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_13' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_13</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_13' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_13'>通过</button>
+    <div id='div_pt1_13' class="collapse in" align='left'>
+    <pre>
+    
+pt1_13: 2020-02-23 18:54:36,962 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:36,962 INFO:   * Load case name: 【验证密码长度小于最小值不能注册】
+2020-02-23 18:54:40,049 INFO:   * Refresh current page .
+2020-02-23 18:54:40,142 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:40,143 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:40,213 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:40,367 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:40,510 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:40,621 INFO:   * Input message: 88888888 
+2020-02-23 18:54:40,713 INFO:   * Input message: 11111 
+2020-02-23 18:54:40,800 INFO:   * Input message: 11111 
+2020-02-23 18:54:40,878 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:42,879 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:42,966 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:54:43,070 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt1_14' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register001_14</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_14' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_14'>通过</button>
+    <div id='div_pt1_14' class="collapse in" align='left'>
+    <pre>
+    
+pt1_14: 2020-02-23 18:54:43,071 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:43,071 INFO:   * Load case name: 【验证密码长度大于最大值不能注册】
+2020-02-23 18:54:43,941 INFO:   * Refresh current page .
+2020-02-23 18:54:44,098 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-02-23 18:54:44,099 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:44,178 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-02-23 18:54:44,342 INFO:   * Input message: AutoTest 
+2020-02-23 18:54:44,481 INFO:   * Input message: 13700003941 
+2020-02-23 18:54:44,588 INFO:   * Input message: 88888888 
+2020-02-23 18:54:44,747 INFO:   * Input message: 11111111111111111111 
+2020-02-23 18:54:44,893 INFO:   * Input message: 11111111111111111111 
+2020-02-23 18:54:44,964 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-02-23 18:54:46,966 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:54:47,046 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:54:47,185 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='failClass warning'>
+    <td>1、注册登录.b_login.Login_Branch:  【PC登录功能测试用例脚本】 </td>
+    <td class="text-center">6</td>
+    <td class="text-center">5</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',6)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align='left'>
+    <pre>
+    
+pt2_1: 2020-02-23 18:54:53,586 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:53,587 INFO:   * Load case name: 【登录-用户名密码为空校验】
+2020-02-23 18:54:56,035 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:54:56,035 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:57,151 INFO:   * Refresh current page .
+2020-02-23 18:54:57,400 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:54:57,452 INFO:   * Input message:  
+2020-02-23 18:54:57,507 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:54:57,559 INFO:   * Input message:  
+2020-02-23 18:54:57,646 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:54:58,646 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:54:58,697 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入用户名或手机号 .
+2020-02-23 18:54:58,832 INFO:  Expect: 请输入用户名或手机号 equal Faction: 请输入用户名或手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align='left'>
+    <pre>
+    
+pt2_2: 2020-02-23 18:54:58,833 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:54:58,833 INFO:   * Load case name: 【登录-用户名为空校验】
+2020-02-23 18:54:58,905 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:54:58,906 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:54:59,878 INFO:   * Refresh current page .
+2020-02-23 18:55:00,030 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:55:00,080 INFO:   * Input message:  
+2020-02-23 18:55:00,134 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:55:00,235 INFO:   * Input message: 111111 
+2020-02-23 18:55:00,320 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:55:01,321 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:01,363 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入用户名或手机号 .
+2020-02-23 18:55:01,487 INFO:  Expect: 请输入用户名或手机号 equal Faction: 请输入用户名或手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align='left'>
+    <pre>
+    
+pt2_3: 2020-02-23 18:55:01,488 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:01,488 INFO:   * Load case name: 【登录-密码为空校验】
+2020-02-23 18:55:01,550 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:01,551 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:02,509 INFO:   * Refresh current page .
+2020-02-23 18:55:02,759 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:55:02,898 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:02,958 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:55:03,017 INFO:   * Input message:  
+2020-02-23 18:55:03,095 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:55:04,097 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:04,201 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入密码 .
+2020-02-23 18:55:04,310 INFO:  Expect: 请输入密码 equal Faction: 请输入密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse in" align='left'>
+    <pre>
+    
+pt2_4: 2020-02-23 18:55:04,311 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:04,312 INFO:   * Load case name: 【登录-用户名不正确密码正确校验】
+2020-02-23 18:55:04,370 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:04,371 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:05,153 INFO:   * Refresh current page .
+2020-02-23 18:55:05,334 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:55:05,441 INFO:   * Input message: 137000000 
+2020-02-23 18:55:05,492 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:55:05,584 INFO:   * Input message: 111111 
+2020-02-23 18:55:05,659 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:55:06,661 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:06,712 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 用户名不存在 .
+2020-02-23 18:55:06,838 INFO:  Expect: 用户名不存在 equal Faction: 用户名不存在, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse in" align='left'>
+    <pre>
+    
+pt2_5: 2020-02-23 18:55:06,838 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:06,839 INFO:   * Load case name: 【登录-用户名正确密码不正确校验】
+2020-02-23 18:55:06,903 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:06,904 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:07,787 INFO:   * Refresh current page .
+2020-02-23 18:55:07,931 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:55:08,069 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:08,119 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:55:08,202 INFO:   * Input message: 123123 
+2020-02-23 18:55:08,272 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:55:09,273 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:09,355 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 用户名或密码错误 .
+2020-02-23 18:55:09,458 INFO:  Expect: 用户名或密码错误 equal Faction: 用户名或密码错误, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft2_6' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_6'>失败</button>
+    <div id='div_ft2_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_6'>失败</button>
+    <div id='div_ft2_6' class="collapse in" align='left'>
+    <pre>
+    
+ft2_6: 2020-02-23 18:55:09,459 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:09,460 INFO:   * Load case name: 【登录-正确用户名密码校验】
+2020-02-23 18:55:09,518 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:09,519 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:12,590 INFO:   * Refresh current page .
+2020-02-23 18:55:12,648 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:55:12,784 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:12,836 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:55:12,920 INFO:   * Input message: 222222 
+2020-02-23 18:55:12,993 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:55:13,995 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:15,138 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 登录成功 .
+2020-02-23 18:55:15,716 INFO:   * Save screen shot to: D:\my_test_script\UItest-branch\result\image\20200223185515.png .
+Traceback (most recent call last):
+  File "D:\my_test_script\UItest-branch\public\common\assertMode.py", line 59, in assert_equal
+    unittest.TestCase().assertEqual(expect,fact)
+  File "D:\python\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\python\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\python\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '登录失败' != '登录成功'
+- 登录失败
++ 登录成功
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\b_login.py", line 61, in test_login
+    self.assertMode.assert_equal(ddt_data,self.login.get_system_msg())
+  File "D:\my_test_script\UItest-branch\public\common\assertMode.py", line 66, in assert_equal
+    raise AssertionError('Expect: {1} not equal Faction: {1}, test -&gt; FAIL.'.format(expect,fact))
+AssertionError: Expect: 登录成功 not equal Faction: 登录成功, test -&gt; FAIL.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>2、修改密码.a_forgetPwd.Forget_Pwd:  【PC忘记密码功能测试用例脚本】 </td>
+    <td class="text-center">16</td>
+    <td class="text-center">16</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',16)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='pt3_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse in" align='left'>
+    <pre>
+    
+pt3_1: 2020-02-23 18:55:24,584 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:24,585 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:24,586 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:24,587 INFO:   * Load case name: 【忘记密码-手机号为空校验】
+2020-02-23 18:55:24,686 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:24,803 INFO:   * Input message:  
+2020-02-23 18:55:24,959 INFO:   * Input message: 88888888 
+2020-02-23 18:55:25,072 INFO:   * Input message: 111111 
+2020-02-23 18:55:25,188 INFO:   * Input message: 111111 
+2020-02-23 18:55:25,279 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:26,282 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:26,383 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-02-23 18:55:26,487 INFO:  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse in" align='left'>
+    <pre>
+    
+pt3_2: 2020-02-23 18:55:27,663 INFO:   * Refresh current page .
+2020-02-23 18:55:27,774 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:27,776 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:27,777 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:27,778 INFO:   * Load case name: 【忘记密码-验证码为空校验】
+2020-02-23 18:55:27,855 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:28,040 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:28,105 INFO:   * Input message:  
+2020-02-23 18:55:28,199 INFO:   * Input message: 111111 
+2020-02-23 18:55:28,305 INFO:   * Input message: 111111 
+2020-02-23 18:55:28,398 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:29,399 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:29,440 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入短信验证码 .
+2020-02-23 18:55:29,609 INFO:  Expect: 请输入短信验证码 equal Faction: 请输入短信验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
+    <div id='div_pt3_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
+    <div id='div_pt3_3' class="collapse in" align='left'>
+    <pre>
+    
+pt3_3: 2020-02-23 18:55:30,564 INFO:   * Refresh current page .
+2020-02-23 18:55:30,831 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:30,832 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:30,833 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:30,833 INFO:   * Load case name: 【忘记密码-新密码为空校验】
+2020-02-23 18:55:30,919 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:31,113 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:31,238 INFO:   * Input message: 88888888 
+2020-02-23 18:55:31,303 INFO:   * Input message:  
+2020-02-23 18:55:31,413 INFO:   * Input message: 111111 
+2020-02-23 18:55:31,501 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:32,501 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:32,539 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入6-18位登录密码 .
+2020-02-23 18:55:32,648 INFO:  Expect: 请输入6-18位登录密码 equal Faction: 请输入6-18位登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
+    <div id='div_pt3_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
+    <div id='div_pt3_4' class="collapse in" align='left'>
+    <pre>
+    
+pt3_4: 2020-02-23 18:55:33,752 INFO:   * Refresh current page .
+2020-02-23 18:55:33,976 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:33,977 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:33,978 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:33,979 INFO:   * Load case name: 【忘记密码-确认密码为空校验】
+2020-02-23 18:55:34,083 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:34,293 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:34,429 INFO:   * Input message: 88888888 
+2020-02-23 18:55:34,536 INFO:   * Input message: 111111 
+2020-02-23 18:55:34,602 INFO:   * Input message:  
+2020-02-23 18:55:34,688 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:35,690 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:35,769 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-02-23 18:55:35,863 INFO:  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
+    <div id='div_pt3_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
+    <div id='div_pt3_5' class="collapse in" align='left'>
+    <pre>
+    
+pt3_5: 2020-02-23 18:55:39,007 INFO:   * Refresh current page .
+2020-02-23 18:55:39,084 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:39,085 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:39,086 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:39,087 INFO:   * Load case name: 【忘记密码-未注册手机号校验】
+2020-02-23 18:55:39,160 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:39,325 INFO:   * Input message: 13700003941 
+2020-02-23 18:55:39,440 INFO:   * Input message: 88888888 
+2020-02-23 18:55:39,526 INFO:   * Input message: 111111 
+2020-02-23 18:55:39,605 INFO:   * Input message: 111111 
+2020-02-23 18:55:39,688 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:40,689 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:40,771 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 该账号还未注册 .
+2020-02-23 18:55:40,869 INFO:  Expect: 该账号还未注册 equal Faction: 该账号还未注册, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
+    <div id='div_pt3_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
+    <div id='div_pt3_6' class="collapse in" align='left'>
+    <pre>
+    
+pt3_6: 2020-02-23 18:55:43,986 INFO:   * Refresh current page .
+2020-02-23 18:55:44,066 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:44,067 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:44,067 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:44,068 INFO:   * Load case name: 【忘记密码-验证码不正确校验】
+2020-02-23 18:55:44,139 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:44,302 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:44,410 INFO:   * Input message: 000000 
+2020-02-23 18:55:44,500 INFO:   * Input message: 111111 
+2020-02-23 18:55:44,584 INFO:   * Input message: 111111 
+2020-02-23 18:55:44,655 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:45,656 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:45,731 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 验证码不符 .
+2020-02-23 18:55:45,830 INFO:  Expect: 验证码不符 equal Faction: 验证码不符, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
+    <div id='div_pt3_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
+    <div id='div_pt3_7' class="collapse in" align='left'>
+    <pre>
+    
+pt3_7: 2020-02-23 18:55:46,877 INFO:   * Refresh current page .
+2020-02-23 18:55:47,129 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:47,130 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:47,130 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:47,131 INFO:   * Load case name: 【忘记密码-新密码长度上点值校验】
+2020-02-23 18:55:47,214 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:47,381 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:47,490 INFO:   * Input message: 88888888 
+2020-02-23 18:55:47,577 INFO:   * Input message: 11111 
+2020-02-23 18:55:47,653 INFO:   * Input message: 11111 
+2020-02-23 18:55:47,733 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:48,735 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:48,837 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:55:49,077 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_8'>通过</button>
+    <div id='div_pt3_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_8'>通过</button>
+    <div id='div_pt3_8' class="collapse in" align='left'>
+    <pre>
+    
+pt3_8: 2020-02-23 18:55:52,243 INFO:   * Refresh current page .
+2020-02-23 18:55:52,309 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:52,310 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:52,311 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:52,311 INFO:   * Load case name: 【忘记密码-新密码长度离点值校验】
+2020-02-23 18:55:52,385 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:52,555 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:52,661 INFO:   * Input message: 88888888 
+2020-02-23 18:55:52,807 INFO:   * Input message: 0000000000000000000 
+2020-02-23 18:55:52,971 INFO:   * Input message: 0000000000000000000 
+2020-02-23 18:55:53,042 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:54,043 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:54,114 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:55:54,210 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_9'>通过</button>
+    <div id='div_pt3_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_9'>通过</button>
+    <div id='div_pt3_9' class="collapse in" align='left'>
+    <pre>
+    
+pt3_9: 2020-02-23 18:55:57,482 INFO:   * Refresh current page .
+2020-02-23 18:55:57,560 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:55:57,561 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:55:57,563 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:55:57,565 INFO:   * Load case name: 【忘记密码-新密码特殊字符校验】
+2020-02-23 18:55:57,636 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:55:57,805 INFO:   * Input message: 13700000004 
+2020-02-23 18:55:57,917 INFO:   * Input message: 88888888 
+2020-02-23 18:55:58,009 INFO:   * Input message: ！@#$a0 
+2020-02-23 18:55:58,096 INFO:   * Input message: ！@#$a0 
+2020-02-23 18:55:58,172 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:55:59,174 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:55:59,287 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:55:59,393 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_10'>通过</button>
+    <div id='div_pt3_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_10'>通过</button>
+    <div id='div_pt3_10' class="collapse in" align='left'>
+    <pre>
+    
+pt3_10: 2020-02-23 18:56:00,514 INFO:   * Refresh current page .
+2020-02-23 18:56:00,630 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:00,631 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:00,631 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:00,632 INFO:   * Load case name: 【忘记密码-新密码与确认密码不同校验】
+2020-02-23 18:56:00,706 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:56:00,866 INFO:   * Input message: 13700000004 
+2020-02-23 18:56:00,973 INFO:   * Input message: 88888888 
+2020-02-23 18:56:01,065 INFO:   * Input message: 111111 
+2020-02-23 18:56:01,147 INFO:   * Input message: 222222 
+2020-02-23 18:56:01,221 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:56:02,222 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:02,294 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-02-23 18:56:02,425 INFO:  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd001_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_11'>通过</button>
+    <div id='div_pt3_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_11'>通过</button>
+    <div id='div_pt3_11' class="collapse in" align='left'>
+    <pre>
+    
+pt3_11: 2020-02-23 18:56:03,283 INFO:   * Refresh current page .
+2020-02-23 18:56:03,451 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:03,451 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:03,452 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:03,453 INFO:   * Load case name: 【忘记密码-修改密码成功校验】
+2020-02-23 18:56:03,531 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:56:03,718 INFO:   * Input message: 13700000004 
+2020-02-23 18:56:03,837 INFO:   * Input message: 88888888 
+2020-02-23 18:56:03,931 INFO:   * Input message: 111111 
+2020-02-23 18:56:04,019 INFO:   * Input message: 111111 
+2020-02-23 18:56:04,098 INFO:   * Click button: xpath-&gt;//a[text()="重置密码"] .
+2020-02-23 18:56:05,099 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:05,207 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码修改成功 .
+2020-02-23 18:56:05,314 INFO:  Expect: 密码修改成功 equal Faction: 密码修改成功, test -&gt; PASS.
+ * Write success value: 111111 in T西安好家帮家政有限公司 password
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd002: 获取验证码手机号为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_12'>通过</button>
+    <div id='div_pt3_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_12'>通过</button>
+    <div id='div_pt3_12' class="collapse in" align='left'>
+    <pre>
+    
+pt3_12: 2020-02-23 18:56:05,368 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:05,369 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:05,369 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:05,370 INFO:   * Load case name: 【获取验证码-手机号为空校验】
+2020-02-23 18:56:06,409 INFO:   * Refresh current page .
+2020-02-23 18:56:06,510 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:56:06,576 INFO:   * Input message:  
+2020-02-23 18:56:06,662 INFO:   * Click button: xpath-&gt;//div[text()="忘记密码"]/..//li[2]//a .
+2020-02-23 18:56:07,663 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:07,752 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确的手机号码 .
+2020-02-23 18:56:07,856 INFO:  Expect: 请输入正确的手机号码 equal Faction: 请输入正确的手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_13' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd003: 获取验证码手机号未注册校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_13' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_13'>通过</button>
+    <div id='div_pt3_13' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_13' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_13'>通过</button>
+    <div id='div_pt3_13' class="collapse in" align='left'>
+    <pre>
+    
+pt3_13: 2020-02-23 18:56:11,092 INFO:   * Refresh current page .
+2020-02-23 18:56:11,179 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:11,180 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:11,181 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:11,181 INFO:   * Load case name: 【获取验证码-手机号未注册校验】
+2020-02-23 18:56:11,256 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:56:11,421 INFO:   * Input message: 13700003941 
+2020-02-23 18:56:11,496 INFO:   * Click button: xpath-&gt;//div[text()="忘记密码"]/..//li[2]//a .
+2020-02-23 18:56:12,497 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:12,588 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 当前手机号还未注册网点，请重新输入 .
+2020-02-23 18:56:12,695 INFO:  Expect: 当前手机号还未注册网点，请重新输入 equal Faction: 当前手机号还未注册网点，请重新输入, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_14' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd004: 发送成功验证码校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_14' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_14'>通过</button>
+    <div id='div_pt3_14' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_14' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_14'>通过</button>
+    <div id='div_pt3_14' class="collapse in" align='left'>
+    <pre>
+    
+pt3_14: 2020-02-23 18:56:15,818 INFO:   * Refresh current page .
+2020-02-23 18:56:15,887 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:15,888 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:15,889 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:15,889 INFO:   * Load case name: 【获取验证码-正确发送验证码校验】
+2020-02-23 18:56:15,968 INFO:   * Click button: xpath-&gt;//a[@class="forgetbtn"] .
+2020-02-23 18:56:16,135 INFO:   * Input message: 13720673941 
+2020-02-23 18:56:16,207 INFO:   * Click button: xpath-&gt;//div[text()="忘记密码"]/..//li[2]//a .
+2020-02-23 18:56:17,209 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:17,288 INFO:   * Get element: xpath-&gt;//div[text()="忘记密码"]/..//li[2]//a, value: "class" attribute: "getCode disabled" . 
+2020-02-23 18:56:17,398 INFO:  Expect: getCode disabled equal Faction: getCode disabled, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_15' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd005: 修改密码后旧密码不能成功登录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_15' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_15'>通过</button>
+    <div id='div_pt3_15' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_15' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_15'>通过</button>
+    <div id='div_pt3_15' class="collapse in" align='left'>
+    <pre>
+    
+pt3_15: 2020-02-23 18:56:18,300 INFO:   * Refresh current page .
+2020-02-23 18:56:18,419 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:18,419 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:18,420 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:18,421 INFO:   * Load case name: 【忘记密码-使用旧密码不能登陆校验】
+2020-02-23 18:56:20,620 INFO:   * Refresh current page .
+2020-02-23 18:56:20,715 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:56:20,855 INFO:   * Input message: 13700000004 
+2020-02-23 18:56:20,910 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:56:20,995 INFO:   * Input message: 222222 
+2020-02-23 18:56:21,078 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:56:22,079 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:22,126 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 用户名或密码错误 .
+2020-02-23 18:56:22,223 INFO:  Expect: 用户名或密码错误 equal Faction: 用户名或密码错误, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt3_16' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_forgetPwd006: 修改密码后新密码可以成功登录校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_16' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_16'>通过</button>
+    <div id='div_pt3_16' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_16' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_16'>通过</button>
+    <div id='div_pt3_16' class="collapse in" align='left'>
+    <pre>
+    
+pt3_16: 2020-02-23 18:56:22,293 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:56:22,293 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:56:22,294 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:22,295 INFO:   * Load case name: 【忘记密码-使用新密码可以成功登陆校验】
+2020-02-23 18:56:23,176 INFO:   * Refresh current page .
+2020-02-23 18:56:23,291 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:56:23,423 INFO:   * Input message: 13700000004 
+2020-02-23 18:56:23,473 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:56:23,560 INFO:   * Input message: 111111 
+2020-02-23 18:56:23,629 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:56:24,629 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:25,795 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 登录成功 .
+2020-02-23 18:56:25,924 INFO:  Expect: 登录成功 equal Faction: 登录成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>2、修改密码.b_alterPwd.Alter_Password: " 【修改密码功能测试用例脚本】 </td>
+    <td class="text-center">11</td>
+    <td class="text-center">11</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c4',11)" class="detail" id='c4'>详细</a></td>
+</tr>
+
+<tr id='pt4_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd001: 登陆密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse in" align='left'>
+    <pre>
+    
+pt4_1: 2020-02-23 18:56:38,939 INFO:   * Refresh current page .
+2020-02-23 18:56:38,941 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:38,942 INFO:   * Load case name: 【修改密码-原登录密码为空校验】
+2020-02-23 18:56:42,026 INFO:   * Refresh current page .
+2020-02-23 18:56:44,861 INFO:   * Find element: xpath-&gt;//label[text()="手机号："]/..//a is true .
+2020-02-23 18:56:44,862 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/changePassword .
+2020-02-23 18:56:44,981 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:56:45,263 INFO:   * Input message: 88888888 
+2020-02-23 18:56:45,406 INFO:   * Input message: 111111 
+2020-02-23 18:56:46,407 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:56:46,515 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:56:46,604 INFO:   * Get element: xpath-&gt;//label[text()="原登录密码:"]/../div/div[2] text: 请输入原登录密码 .
+2020-02-23 18:56:46,804 INFO:  Expect: 请输入原登录密码 equal Faction: 请输入原登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd002: 新密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse in" align='left'>
+    <pre>
+    
+pt4_2: 2020-02-23 18:56:48,449 INFO:   * Refresh current page .
+2020-02-23 18:56:48,451 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:48,453 INFO:   * Load case name: 【修改密码-新登录密码为空校验】
+2020-02-23 18:56:50,734 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:56:50,942 INFO:   * Input message: 111111 
+2020-02-23 18:56:51,304 INFO:   * Input message: 111111 
+2020-02-23 18:56:51,416 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:56:51,474 INFO:   * Get element: xpath-&gt;//label[text()="新登录密码:"]/../div/div[2] text: 请输入新登录密码 .
+2020-02-23 18:56:51,638 INFO:  Expect: 请输入新登录密码 equal Faction: 请输入新登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd003: 确认密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse in" align='left'>
+    <pre>
+    
+pt4_3: 2020-02-23 18:56:52,119 INFO:   * Refresh current page .
+2020-02-23 18:56:52,121 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:52,122 INFO:   * Load case name: 【修改密码-确认新登录密码为空校验】
+2020-02-23 18:56:54,131 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:56:54,400 INFO:   * Input message: 111111 
+2020-02-23 18:56:54,695 INFO:   * Input message: 888888 
+2020-02-23 18:56:54,818 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:56:54,876 INFO:   * Get element: xpath-&gt;//label[text()="重复密码:"]/../div/div[2] text: 请重复输入新登录密码 .
+2020-02-23 18:56:55,002 INFO:  Expect: 请重复输入新登录密码 equal Faction: 请重复输入新登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse in" align='left'>
+    <pre>
+    
+pt4_4: 2020-02-23 18:56:55,493 INFO:   * Refresh current page .
+2020-02-23 18:56:55,494 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:56:55,495 INFO:   * Load case name: 【修改密码-新登录密码格式左边界值校验】
+2020-02-23 18:56:57,502 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:56:57,718 INFO:   * Input message: 111111 
+2020-02-23 18:56:58,040 INFO:   * Input message: 88888 
+2020-02-23 18:56:58,194 INFO:   * Input message: 88888 
+2020-02-23 18:56:58,284 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:57:00,286 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:57:00,387 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:57:00,502 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
+    <div id='div_pt4_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
+    <div id='div_pt4_5' class="collapse in" align='left'>
+    <pre>
+    
+pt4_5: 2020-02-23 18:57:02,992 INFO:   * Refresh current page .
+2020-02-23 18:57:02,993 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:02,993 INFO:   * Load case name: 【修改密码-新登录密码格式特殊字符校验】
+2020-02-23 18:57:03,093 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:57:03,293 INFO:   * Input message: 111111 
+2020-02-23 18:57:03,514 INFO:   * Input message: ！@#！@# 
+2020-02-23 18:57:03,788 INFO:   * Input message: ！@#！@# 
+2020-02-23 18:57:03,875 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:57:05,876 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:57:05,979 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:57:06,089 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_6'>通过</button>
+    <div id='div_pt4_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_6'>通过</button>
+    <div id='div_pt4_6' class="collapse in" align='left'>
+    <pre>
+    
+pt4_6: 2020-02-23 18:57:06,604 INFO:   * Refresh current page .
+2020-02-23 18:57:06,605 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:06,607 INFO:   * Load case name: 【修改密码-新登录密码格式汉字密码校验】
+2020-02-23 18:57:08,619 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:57:08,824 INFO:   * Input message: 111111 
+2020-02-23 18:57:09,033 INFO:   * Input message: 我们都是共产 
+2020-02-23 18:57:09,307 INFO:   * Input message: 我们都是共产 
+2020-02-23 18:57:09,431 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:57:11,432 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:57:11,508 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-02-23 18:57:11,608 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_7'>通过</button>
+    <div id='div_pt4_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_7'>通过</button>
+    <div id='div_pt4_7' class="collapse in" align='left'>
+    <pre>
+    
+pt4_7: 2020-02-23 18:57:14,102 INFO:   * Refresh current page .
+2020-02-23 18:57:14,103 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:14,104 INFO:   * Load case name: 【修改密码-原登录密码不正确校验】
+2020-02-23 18:57:14,203 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:57:14,464 INFO:   * Input message: 000000 
+2020-02-23 18:57:14,797 INFO:   * Input message: 888888 
+2020-02-23 18:57:14,954 INFO:   * Input message: 888888 
+2020-02-23 18:57:15,077 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:57:17,078 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:57:17,165 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 当前密码不正确 .
+2020-02-23 18:57:17,261 INFO:  Expect: 当前密码不正确 equal Faction: 当前密码不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_8'>通过</button>
+    <div id='div_pt4_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_8'>通过</button>
+    <div id='div_pt4_8' class="collapse in" align='left'>
+    <pre>
+    
+pt4_8: 2020-02-23 18:57:20,337 INFO:   * Refresh current page .
+2020-02-23 18:57:20,337 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:20,338 INFO:   * Load case name: 【修改密码-新密码和重复密码不同校验】
+2020-02-23 18:57:20,427 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:57:20,607 INFO:   * Input message: 111111 
+2020-02-23 18:57:20,742 INFO:   * Input message: 888888 
+2020-02-23 18:57:20,871 INFO:   * Input message: 999999 
+2020-02-23 18:57:20,960 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:57:22,962 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:57:23,030 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 重复密码与新登录密码不相同 .
+2020-02-23 18:57:23,127 INFO:  Expect: 重复密码与新登录密码不相同 equal Faction: 重复密码与新登录密码不相同, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd004_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_9'>通过</button>
+    <div id='div_pt4_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_9'>通过</button>
+    <div id='div_pt4_9' class="collapse in" align='left'>
+    <pre>
+    
+pt4_9: 2020-02-23 18:57:25,625 INFO:   * Refresh current page .
+2020-02-23 18:57:25,626 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:25,627 INFO:   * Load case name: 【修改密码-成功修改密码校验】
+2020-02-23 18:57:25,751 INFO:   * Click button: xpath-&gt;//label[text()="登录密码："]/..//a .
+2020-02-23 18:57:25,949 INFO:   * Input message: 111111 
+2020-02-23 18:57:26,134 INFO:   * Input message: 222222 
+2020-02-23 18:57:26,412 INFO:   * Input message: 222222 
+2020-02-23 18:57:26,532 INFO:   * Click button: xpath-&gt;//div[text()="修改登录密码"]/../../div[3]//button .
+2020-02-23 18:57:28,534 INFO:   * Webdriver sleep 2 seconds .
+2020-02-23 18:57:28,604 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 修改成功 .
+ * Write success value: 222222 in T西安好家帮家政有限公司 password
+2020-02-23 18:57:28,704 INFO:  Expect: 修改成功 equal Faction: 修改成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd005_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_10'>通过</button>
+    <div id='div_pt4_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_10'>通过</button>
+    <div id='div_pt4_10' class="collapse in" align='left'>
+    <pre>
+    
+pt4_10: 2020-02-23 18:57:32,103 INFO:   * Refresh current page .
+2020-02-23 18:57:32,104 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:32,106 INFO:   * Load case name: 【修改密码-使用旧密码不能成功登录校验】
+2020-02-23 18:57:34,595 INFO:   * Refresh current page .
+2020-02-23 18:57:35,182 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:57:35,183 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:57:35,238 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:57:35,393 INFO:   * Input message: 13700000004 
+2020-02-23 18:57:35,470 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:57:35,555 INFO:   * Input message: 111111 
+2020-02-23 18:57:35,642 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:57:36,644 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:57:36,733 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 用户名或密码错误 .
+2020-02-23 18:57:36,876 INFO:  Expect: 用户名或密码错误 equal Faction: 用户名或密码错误, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt4_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alterPwd005_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_11'>通过</button>
+    <div id='div_pt4_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_11'>通过</button>
+    <div id='div_pt4_11' class="collapse in" align='left'>
+    <pre>
+    
+pt4_11: 2020-02-23 18:57:37,951 INFO:   * Refresh current page .
+2020-02-23 18:57:37,953 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:37,955 INFO:   * Load case name: 【修改密码-使用新密码可以成功登录校验】
+2020-02-23 18:57:38,927 INFO:   * Refresh current page .
+2020-02-23 18:57:39,106 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-02-23 18:57:39,106 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-02-23 18:57:39,192 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-02-23 18:57:39,361 INFO:   * Input message: 13700000004 
+2020-02-23 18:57:39,438 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-02-23 18:57:39,520 INFO:   * Input message: 222222 
+2020-02-23 18:57:39,594 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-02-23 18:57:40,596 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:57:40,973 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 登录成功 .
+2020-02-23 18:57:41,173 INFO:  Expect: 登录成功 equal Faction: 登录成功, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='passClass warning'>
+    <td>2、修改密码.c_alterPhe.Alter_PhoneNum: "【修改手机号功能测试用例脚本】</td>
+    <td class="text-center">12</td>
+    <td class="text-center">12</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c5',12)" class="detail" id='c5'>详细</a></td>
+</tr>
+
+<tr id='pt5_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum001: 登录密码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
+    <div id='div_pt5_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
+    <div id='div_pt5_1' class="collapse in" align='left'>
+    <pre>
+    
+pt5_1: 2020-02-23 18:57:58,208 INFO:   * Refresh current page .
+2020-02-23 18:57:58,210 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:57:58,210 INFO:   * Load case name: 【修改手机-登录密码为空校验】
+2020-02-23 18:58:00,667 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:01,201 INFO:   * Input message: 13572597243 
+2020-02-23 18:58:01,369 INFO:   * Input message: 88888888 
+2020-02-23 18:58:01,473 INFO:   * Click button: xpath-&gt;//div[text()="修改手机"]/../../div[3]//button .
+2020-02-23 18:58:01,536 INFO:   * Get element: xpath-&gt;//label[text()="登录密码:"]/../div/div[2] text: 请输入登录密码 .
+2020-02-23 18:58:01,682 INFO:  Expect: 请输入登录密码 equal Faction: 请输入登录密码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum002: 手机号为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_2'>通过</button>
+    <div id='div_pt5_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_2'>通过</button>
+    <div id='div_pt5_2' class="collapse in" align='left'>
+    <pre>
+    
+pt5_2: 2020-02-23 18:58:04,409 INFO:   * Refresh current page .
+2020-02-23 18:58:04,410 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:04,411 INFO:   * Load case name: 【修改手机-手机号为空校验】
+2020-02-23 18:58:04,799 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:05,001 INFO:   * Input message: 111111 
+2020-02-23 18:58:05,190 INFO:   * Input message: 88888888 
+2020-02-23 18:58:05,279 INFO:   * Click button: xpath-&gt;//div[text()="修改手机"]/../../div[3]//button .
+2020-02-23 18:58:05,333 INFO:   * Get element: xpath-&gt;//label[text()="手机号码:"]/../div/div[2] text: 请输入手机号码 .
+2020-02-23 18:58:05,450 INFO:  Expect: 请输入手机号码 equal Faction: 请输入手机号码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum003: 验证码为空校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_3'>通过</button>
+    <div id='div_pt5_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_3'>通过</button>
+    <div id='div_pt5_3' class="collapse in" align='left'>
+    <pre>
+    
+pt5_3: 2020-02-23 18:58:07,471 INFO:   * Refresh current page .
+2020-02-23 18:58:07,473 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:07,474 INFO:   * Load case name: 【修改手机-验证码为空校验】
+2020-02-23 18:58:08,076 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:08,326 INFO:   * Input message: 111111 
+2020-02-23 18:58:08,760 INFO:   * Input message: 13572597243 
+2020-02-23 18:58:08,846 INFO:   * Click button: xpath-&gt;//div[text()="修改手机"]/../../div[3]//button .
+2020-02-23 18:58:08,899 INFO:   * Get element: xpath-&gt;//label[text()="验证码"]/../div/div[2] text: 输入验证码 .
+2020-02-23 18:58:09,023 INFO:  Expect: 输入验证码 equal Faction: 输入验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum004: 错误的登陆密码校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_4'>通过</button>
+    <div id='div_pt5_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_4'>通过</button>
+    <div id='div_pt5_4' class="collapse in" align='left'>
+    <pre>
+    
+pt5_4: 2020-02-23 18:58:11,400 INFO:   * Refresh current page .
+2020-02-23 18:58:11,402 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:11,403 INFO:   * Load case name: 【修改手机-错误的登陆密码校验】
+2020-02-23 18:58:11,655 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:12,043 INFO:   * Input message: 000000 
+2020-02-23 18:58:12,254 INFO:   * Input message: 13809124793 
+2020-02-23 18:58:12,392 INFO:   * Input message: 88888888 
+2020-02-23 18:58:12,476 INFO:   * Click button: xpath-&gt;//div[text()="修改手机"]/../../div[3]//button .
+2020-02-23 18:58:13,571 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 当前密码不正确 .
+2020-02-23 18:58:13,666 INFO:  Expect: 当前密码不正确 equal Faction: 当前密码不正确, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum005: 验证码不正确校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_5'>通过</button>
+    <div id='div_pt5_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_5'>通过</button>
+    <div id='div_pt5_5' class="collapse in" align='left'>
+    <pre>
+    
+pt5_5: 2020-02-23 18:58:15,749 INFO:   * Refresh current page .
+2020-02-23 18:58:15,750 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:15,750 INFO:   * Load case name: 【修改手机-错误的验证码校验】
+2020-02-23 18:58:16,505 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:16,766 INFO:   * Input message: 222222 
+2020-02-23 18:58:17,049 INFO:   * Input message: 13809124793 
+2020-02-23 18:58:17,199 INFO:   * Input message: 888888 
+2020-02-23 18:58:17,456 INFO:   * Click button: xpath-&gt;//div[text()="修改手机"]/../../div[3]//button .
+2020-02-23 18:58:18,586 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请重新获取验证码 .
+2020-02-23 18:58:18,687 INFO:  Expect: 请重新获取验证码 equal Faction: 请重新获取验证码, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_6'>通过</button>
+    <div id='div_pt5_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_6'>通过</button>
+    <div id='div_pt5_6' class="collapse in" align='left'>
+    <pre>
+    
+pt5_6: 2020-02-23 18:58:21,231 INFO:   * Refresh current page .
+2020-02-23 18:58:21,232 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:21,233 INFO:   * Load case name: 【修改手机-已经注册过的手机号校验】
+2020-02-23 18:58:21,529 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:21,716 INFO:   * Input message: 111111 
+2020-02-23 18:58:21,933 INFO:   * Input message: 13700000001 
+2020-02-23 18:58:22,021 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:23,127 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 该手机号已注册为网点,请重新输入! .
+2020-02-23 18:58:23,222 INFO:  Expect: 该手机号已注册为网点,请重新输入! equal Faction: 该手机号已注册为网点,请重新输入!, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_7'>通过</button>
+    <div id='div_pt5_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_7'>通过</button>
+    <div id='div_pt5_7' class="collapse in" align='left'>
+    <pre>
+    
+pt5_7: 2020-02-23 18:58:26,274 INFO:   * Refresh current page .
+2020-02-23 18:58:26,275 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:26,276 INFO:   * Load case name: 【修改手机-手机号码左边界值校验】
+2020-02-23 18:58:26,365 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:26,810 INFO:   * Input message: 111111 
+2020-02-23 18:58:27,019 INFO:   * Input message: 1372067394 
+2020-02-23 18:58:27,099 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:27,167 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号 .
+2020-02-23 18:58:27,350 INFO:  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_8'>通过</button>
+    <div id='div_pt5_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_8'>通过</button>
+    <div id='div_pt5_8' class="collapse in" align='left'>
+    <pre>
+    
+pt5_8: 2020-02-23 18:58:29,524 INFO:   * Refresh current page .
+2020-02-23 18:58:29,525 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:29,525 INFO:   * Load case name: 【修改手机-手机号码右边界值校验】
+2020-02-23 18:58:30,226 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:30,541 INFO:   * Input message: 111111 
+2020-02-23 18:58:31,139 INFO:   * Input message: 137206739411 
+2020-02-23 18:58:31,233 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:31,292 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号 .
+2020-02-23 18:58:31,426 INFO:  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_9'>通过</button>
+    <div id='div_pt5_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_9'>通过</button>
+    <div id='div_pt5_9' class="collapse in" align='left'>
+    <pre>
+    
+pt5_9: 2020-02-23 18:58:34,484 INFO:   * Refresh current page .
+2020-02-23 18:58:34,484 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:34,485 INFO:   * Load case name: 【修改手机-手机号码格式特殊符号校验】
+2020-02-23 18:58:34,570 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:34,815 INFO:   * Input message: 111111 
+2020-02-23 18:58:35,267 INFO:   * Input message: 137206739！@ 
+2020-02-23 18:58:35,345 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:35,399 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号 .
+2020-02-23 18:58:35,520 INFO:  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_10'>通过</button>
+    <div id='div_pt5_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_10'>通过</button>
+    <div id='div_pt5_10' class="collapse in" align='left'>
+    <pre>
+    
+pt5_10: 2020-02-23 18:58:36,426 INFO:   * Refresh current page .
+2020-02-23 18:58:36,428 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:36,429 INFO:   * Load case name: 【修改手机-手机号码格式字母校验】
+2020-02-23 18:58:37,786 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:37,977 INFO:   * Input message: 111111 
+2020-02-23 18:58:38,652 INFO:   * Input message: 137206739as 
+2020-02-23 18:58:38,772 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:38,817 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号 .
+2020-02-23 18:58:38,950 INFO:  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum006_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_11'>通过</button>
+    <div id='div_pt5_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_11'>通过</button>
+    <div id='div_pt5_11' class="collapse in" align='left'>
+    <pre>
+    
+pt5_11: 2020-02-23 18:58:42,345 INFO:   * Refresh current page .
+2020-02-23 18:58:42,346 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:42,346 INFO:   * Load case name: 【修改手机-手机号码格式汉字校验】
+2020-02-23 18:58:42,429 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:42,601 INFO:   * Input message: 111111 
+2020-02-23 18:58:42,864 INFO:   * Input message: 1372067394我们 
+2020-02-23 18:58:42,942 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:42,997 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号 .
+2020-02-23 18:58:43,125 INFO:  Expect: 请输入正确手机号 equal Faction: 请输入正确手机号, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt5_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_alter_phoneNum007: 正确手机号发送验证码校验</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_12'>通过</button>
+    <div id='div_pt5_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_12'>通过</button>
+    <div id='div_pt5_12' class="collapse in" align='left'>
+    <pre>
+    
+pt5_12: 2020-02-23 18:58:44,867 INFO:   * Refresh current page .
+2020-02-23 18:58:44,869 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-02-23 18:58:44,870 INFO:   * Load case name: 【修改手机-正确手机号发送验证码校验】
+2020-02-23 18:58:47,106 INFO:   * Click button: xpath-&gt;//label[text()="手机号："]/..//a .
+2020-02-23 18:58:47,321 INFO:   * Input message: 111111 
+2020-02-23 18:58:47,564 INFO:   * Input message: 13572597243 
+2020-02-23 18:58:47,643 INFO:   * Click button: xpath-&gt;//label[text()="验证码"]/..//button .
+2020-02-23 18:58:48,645 INFO:   * Webdriver sleep 1 seconds .
+2020-02-23 18:58:48,723 INFO:   * Get element: xpath-&gt;//label[text()="验证码"]/..//button, value: "disabled" attribute: "true" . 
+2020-02-23 18:58:48,822 INFO:  Expect: true equal Faction: true, test -&gt; PASS.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>59</td>
+    <td>58</td>
+    <td>1</td>
+    <td>0</td>
+    <td>通过率：98.31%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

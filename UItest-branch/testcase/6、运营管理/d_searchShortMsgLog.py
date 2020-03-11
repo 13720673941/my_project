@@ -3,43 +3,34 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/8/22 11:50
 
-from public.common.basepage import BasePage
-from public.common.getdata import get_test_data
-from public.common.driver import browser_driver
-from public.common.assertmode import Assert
-from public.common import mytest
-from public.common.rwconfig import read_config_data
+from public.common.basePage import BasePage
+from public.common.driver import web_driver
+from public.common.assertMode import Assert
+from public.common.operateExcel import *
+from public.common import rwConfig
 from public.page.loginPage import LoginPage
 from public.page.shortMsgLogPage import ShortMsgLogPage
-from config.pathconfig import *
+from config.pathConfig import *
 import unittest
-"""
-短信发送记录日志筛选功能：
-1、按工单编号搜索短信发送记录校验  2、按短信类型搜索短信发送记录校验  
-3、按手机号搜索短信发送记录校验  4、按发送日期搜索短信发送记录校验
-"""
-# 获取测试数据
-test_data = get_test_data()["ShortMsgLogPage"]["search_log_fnc"]
 
 class Search_ShortMsg_Log(unittest.TestCase):
+
+    """ 【扣除短信日志搜索功能】 """
+
+    # 实例化类
+    readExcel = Read_Excel("searchShortMsg")
 
     @classmethod
     def setUpClass(cls):
         # 设置浏览器驱动
-        cls.driver = browser_driver()
+        cls.driver = web_driver()
         # 实例化类
         cls.base_page = BasePage(cls.driver)
-        cls.assert_mode = Assert(cls.driver)
         cls.login = LoginPage(cls.driver)
         cls.shortMsg_log = ShortMsgLogPage(cls.driver)
-        # 清除浏览器缓存
-        cls.base_page.clear_catch()
-        mytest.start_test()
-        # 获取网点登录账号信息
-        username = read_config_data("西安超级售后有限公司", "username")
-        password = read_config_data("西安超级售后有限公司", "password")
+        cls.assert_mode = Assert(cls.driver, "searchShortMsg")
         # 登录
-        cls.login.login_main(username, password)
+        cls.login.login_main("T西安超级售后有限公司")
         # 进入短信发送记录页面
         cls.shortMsg_log.enter_short_msg_list_page()
 
@@ -48,66 +39,77 @@ class Search_ShortMsg_Log(unittest.TestCase):
         # 刷新清除页面历史纪录
         self.base_page.refresh_page()
 
+    @unittest.skipUnless(readExcel.get_isRun_text("search_shortMsg_log_001"),"-跳过不执行")
     def test_search_shortMsg_log001(self):
         """按工单编号搜索短信发送记录校验"""
 
-        # 获取测试数据
-        data = test_data["TestCase001"]
-        # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
         # 获取工单编号
-        order_number = read_config_data("for_operate_log_search","id",orderNumPath)
+        order_number = rwConfig.read_config_data(
+            "for_shortMsg_log_search","id",orderNumPath)
+        # 单号写入期望值中
+        Update_Excel.update_expect_data(
+            "searchShortMsg","search_shortMsg_log_001",order_number)
+        # 获取测试数据
+        data = Read_Excel("searchShortMsg").get_dict_data("search_shortMsg_log_001")
+        # 打印测试用例名称
+        self.base_page.print_case_name(data)
         # 输入工单编号
-        self.shortMsg_log.input_order_number(order_number=order_number)
+        self.shortMsg_log.input_order_number(order_number)
         # 点击搜索
         self.shortMsg_log.click_search_btn()
         self.base_page.sleep(1)
         # 获取第一行搜索后的信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言
-        self.assert_mode.assert_in(order_number,first_row_info)
+        self.assert_mode.assert_in(data,first_row_info)
 
+    @unittest.skipUnless(readExcel.get_isRun_text("search_shortMsg_log_002"),"-跳过不执行")
     def test_search_shortMsg_log002(self):
         """按短信类型搜索短信发送记录校验"""
 
         # 获取测试数据
-        data = test_data["TestCase002"]
+        data = self.readExcel.get_dict_data("search_shortMsg_log_002")
         # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
+        self.base_page.print_case_name(data)
         # 选择短信类型
-        self.shortMsg_log.select_short_msg_type(value=data["ShortMsgType"])
+        self.shortMsg_log.select_short_msg_type(data["短信类型"])
         # 点击搜索
         self.shortMsg_log.click_search_btn()
         self.base_page.sleep(1)
         # 获取第一行信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言 判断搜索
-        self.assert_mode.assert_in(data["ShortMsgType"],first_row_info)
+        self.assert_mode.assert_in(data,first_row_info)
 
+    @unittest.skipUnless(readExcel.get_isRun_text("search_shortMsg_log_003"),"-跳过不执行")
     def test_search_shortMsg_log003(self):
         """按手机号搜索短信发送记录校验"""
 
         # 获取测试数据
-        data = test_data["TestCase003"]
+        data = self.readExcel.get_dict_data("search_shortMsg_log_003")
         # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
+        self.base_page.print_case_name(data)
         # 输入手机号
-        self.shortMsg_log.input_phe_number(phone_number=data["PhoneNum"])
+        self.shortMsg_log.input_phe_number(data["手机号码"])
         # 点击搜索
         self.shortMsg_log.click_search_btn()
         self.base_page.sleep(1)
         # 获取第一行信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言 判断搜索
-        self.assert_mode.assert_in(data["PhoneNum"],first_row_info)
+        self.assert_mode.assert_in(data,first_row_info)
 
+    @unittest.skipUnless(readExcel.get_isRun_text("search_shortMsg_log_004"),"-跳过不执行")
     def test_search_shortMsg_log004(self):
         """按发送日期搜索短信发送记录校验"""
 
+        # 单号写入期望值中
+        Update_Excel.update_expect_data(
+            "searchShortMsg","search_shortMsg_log_004",self.base_page.get_now_time())
         # 获取测试数据
-        data = test_data["TestCase004"]
+        data = Read_Excel("searchShortMsg").get_dict_data("search_shortMsg_log_004")
         # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
+        self.base_page.print_case_name(data)
         # 当前日期
         now_date = self.base_page.get_now_time()
         # 输入手机发送短信剋是日期
@@ -120,14 +122,14 @@ class Search_ShortMsg_Log(unittest.TestCase):
         # 获取第一行信息
         first_row_info = self.shortMsg_log.get_first_row_info()
         # 断言 判断搜索
-        self.assert_mode.assert_in(now_date,first_row_info)
+        self.assert_mode.assert_in(data,first_row_info)
 
     @classmethod
     def tearDownClass(cls):
-
+        # 清除浏览器缓存
+        cls().base_page.clear_catch()
+        # 退出浏览器
         cls().base_page.quit_browser()
-        mytest.end_test()
-
 
 if __name__ == '__main__':
 

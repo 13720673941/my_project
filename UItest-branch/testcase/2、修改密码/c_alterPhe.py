@@ -3,179 +3,208 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/6/22 11:02
 
-from public.common.assertmode import Assert
-from public.common.basepage import BasePage
-from public.common.driver import browser_driver
-from public.common.getdata import get_test_data
-from public.common import mytest,rwconfig
+from public.common.assertMode import Assert
+from public.common import getNewPwd
+from public.common import myDecorator
+from public.common.operateExcel import Read_Excel
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.alterPwdPage import AlterPwdPage
 import unittest,ddt
-"""
-网点登录后修改手机号：
-1、修改手机-登录密码为空校验 2、修改手机-手机号为空校验 3、修改手机-验证码为空校验 4、修改手机-错误的登陆密码校验
-5、修改手机-错误的验证码校验 6、修改手机-已经注册过的手机号校验 7、修改手机-手机号码左边界值校验 8、修改手机-手机号码右边界值校验
-9、修改手机-手机号码格式特殊符号校验 10、修改手机-手机号码格式字母校验 11、修改手机-手机号码格式汉字校验
-"""
-# 获取测试数据
-testData = get_test_data()["AlterPwdPage"]["alter_pheNum_fnc"]
-ddtData = testData["TestCase006"]
 
 @ddt.ddt
 class Alter_PhoneNum(unittest.TestCase):
 
+    """"【修改手机号功能测试用例脚本】"""
+
+    # 获取ddt测试数据用例编号
+    case_list = [
+        "alter_phe_006","alter_phe_007","alter_phe_008",
+        "alter_phe_009","alter_phe_010","alter_phe_011"
+    ]
+    # 获取数据
+    operate = Read_Excel("alterPhe")
+    ddt_data = operate.get_ddt_data(case_list)
+
     @classmethod
     def setUpClass(cls):
-        # 设置驱动
-        cls.driver = browser_driver()
-        # 实例化类
+        # 实例化断言类
+        cls.driver = web_driver()
         cls.base = BasePage(cls.driver)
         cls.login = LoginPage(cls.driver)
-        cls.alterPwd = AlterPwdPage(cls.driver)
-        cls.assert_mode= Assert(cls.driver)
-        # 清除浏览器缓存
-        cls.base.clear_catch()
-        # 开始脚本
-        mytest.start_test()
-        # 获取登录的账号密码
-        cls.username = rwconfig.read_config_data('西安好家帮家政有限公司','username')
-        cls.password = rwconfig.read_config_data('西安好家帮家政有限公司','password')
+        cls.alter_pwd = AlterPwdPage(cls.driver)
+        cls.assert_mode = Assert(cls.driver,"alterPhe")
+        # 获取新旧密码
+        cls.old_pwd, cls.new_pwd = getNewPwd.get_new_pwd()
         # 调用登录主程序登录
-        cls.login.login_main(cls.username,cls.password)
+        cls.login.login_main("T西安好家帮家政有限公司")
         # 进入修改密码页面
-        cls.alterPwd.enter_alterPwd_page()
+        cls.alter_pwd.enter_alterPwd_page()
 
     def setUp(self):
         # 刷新页面
         self.base.refresh_page()
-        # 点击手机号->修改
-        self.alterPwd.click_alter_pheNum()
 
+    @unittest.skipUnless(operate.get_isRun_text("alter_phe_001"),"-跳过不执行该用例")
     def test_alter_phoneNum001(self):
         """登录密码为空校验"""
-        # 获取测试数据
-        Data = testData["TestCase001"]
-        # 打印测试用例名称
-        self.base.print_case_name(Data["CaseName"])
-        # 输入手机号码
-        self.alterPwd.input_phe_num(phone_num=Data["PhoneNum"])
-        # 输入验证码
-        self.alterPwd.input_code_number(code_num=Data["CodeNum"])
-        # 点击确定
-        self.alterPwd.click_confirm_alter()
-        # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_login_pwd_msg())
 
+        # 获取测试数据
+        data = self.operate.get_dict_data("alter_phe_001")
+        # 打印测试用例名称
+        self.base.print_case_name(data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
+        # 输入手机号码
+        self.alter_pwd.input_phe_num(data["手机号"])
+        # 输入验证码
+        self.alter_pwd.input_code_number(data["验证码"])
+        # 点击确定
+        self.alter_pwd.click_confirm_alter()
+        Msg = self.alter_pwd.get_login_pwd_msg()
+        # 断言
+        self.assert_mode.assert_equal(data,Msg)
+
+    @unittest.skipUnless(operate.get_isRun_text("alter_phe_002"), "-跳过不执行该用例")
     def test_alter_phoneNum002(self):
         """手机号为空校验"""
-        # 获取测试数据
-        Data = testData["TestCase002"]
-        # 打印测试用例名称
-        self.base.print_case_name(Data["CaseName"])
-        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
-        self.alterPwd.input_login_pwd(login_pwd=self.password)
-        # 输入验证码
-        self.alterPwd.input_code_number(code_num=Data["CodeNum"])
-        # 点击确定
-        self.alterPwd.click_confirm_alter()
-        # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_phone_num_msg())
 
+        # 获取测试数据
+        data = self.operate.get_dict_data("alter_phe_002")
+        # 打印测试用例名称
+        self.base.print_case_name(data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
+        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
+        self.alter_pwd.input_login_pwd(data["登录密码"])
+        # 输入验证码
+        self.alter_pwd.input_code_number(data["验证码"])
+        # 点击确定
+        self.alter_pwd.click_confirm_alter()
+        # 获取提示信息
+        Msg = self.alter_pwd.get_phone_num_msg()
+        # 断言
+        self.assert_mode.assert_equal(data,Msg)
+
+    @unittest.skipUnless(operate.get_isRun_text("alter_phe_003"), "-跳过不执行该用例")
     def test_alter_phoneNum003(self):
         """验证码为空校验"""
-        # 获取测试数据
-        Data = testData["TestCase003"]
-        # 打印测试用例名称
-        self.base.print_case_name(Data["CaseName"])
-        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
-        self.alterPwd.input_login_pwd(login_pwd=self.password)
-        # 输入手机号
-        self.alterPwd.input_phe_num(phone_num=Data["PhoneNum"])
-        # 点击确定
-        self.alterPwd.click_confirm_alter()
-        # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_input_msg())
 
+        # 获取测试数据
+        data = self.operate.get_dict_data("alter_phe_003")
+        # 打印测试用例名称
+        self.base.print_case_name(data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
+        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
+        self.alter_pwd.input_login_pwd(data["登录密码"])
+        # 输入手机号
+        self.alter_pwd.input_phe_num(data["手机号"])
+        # 点击确定
+        self.alter_pwd.click_confirm_alter()
+        Msg = self.alter_pwd.get_code_input_msg()
+        # 断言
+        self.assert_mode.assert_equal(data,Msg)
+
+    @unittest.skipUnless(operate.get_isRun_text("alter_phe_004"),"-跳过不执行该用例")
     def test_alter_phoneNum004(self):
-        """错误的登陆密码修改手机校验"""
-        # 获取测试数据
-        Data = testData["TestCase004"]
-        # 打印测试用例名称
-        self.base.print_case_name(Data["CaseName"])
-        # 输入登陆密码
-        self.alterPwd.input_login_pwd(login_pwd=Data["Pwd"])
-        # 输入手机号
-        self.alterPwd.input_phe_num(phone_num=Data["PhoneNum"])
-        # 输入验证码
-        self.alterPwd.input_code_number(code_num=Data["CodeNum"])
-        # 点击确定
-        self.alterPwd.click_confirm_alter()
-        # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.base.get_system_msg())
+        """错误的登陆密码校验"""
 
+        # 获取测试数据
+        data = self.operate.get_dict_data("alter_phe_004")
+        # 打印测试用例名称
+        self.base.print_case_name(data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
+        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
+        self.alter_pwd.input_login_pwd(data["登录密码"])
+        # 输入手机号
+        self.alter_pwd.input_phe_num(data["手机号"])
+        # 输入验证码
+        self.alter_pwd.input_code_number(data["验证码"])
+        # 点击确定
+        self.alter_pwd.click_confirm_alter()
+        Msg = self.login.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(data,Msg)
+
+    @unittest.skipUnless(operate.get_isRun_text("alter_phe_005"), "-跳过不执行该用例")
     def test_alter_phoneNum005(self):
-        """错误的验证码修改手机校验"""
+        """验证码不正确校验"""
+
         # 获取测试数据
-        Data = testData["TestCase005"]
+        data = self.operate.get_dict_data("alter_phe_005")
+        # 赋值
+        data["登录密码"] = self.old_pwd
         # 打印测试用例名称
-        self.base.print_case_name(Data["CaseName"])
+        self.base.print_case_name(data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
         # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
-        self.alterPwd.input_login_pwd(login_pwd=self.password)
+        self.alter_pwd.input_login_pwd(data["登录密码"])
         # 输入手机号
-        self.alterPwd.input_phe_num(phone_num=Data["PhoneNum"])
+        self.alter_pwd.input_phe_num(data["手机号"])
         # 输入验证码
-        self.alterPwd.input_code_number(code_num=Data["CodeNum"])
+        self.alter_pwd.input_code_number(data["验证码"])
         # 点击确定
-        self.alterPwd.click_confirm_alter()
+        self.alter_pwd.click_confirm_alter()
+        Msg = self.login.get_system_msg()
         # 断言
-        self.assert_mode.assert_equal(Data["expect"], self.base.get_system_msg())
+        self.assert_mode.assert_equal(data, Msg)
 
-    @ddt.data(*ddtData)
-    def test_alter_phoneNum006(self,ddtData):
+    @ddt.data(*ddt_data)
+    @myDecorator.skipped_case
+    def test_alter_phoneNum006(self,ddt_data):
         """获取手机验证码逻辑校验"""
-        # 打印测试用例名称
-        self.base.print_case_name(ddtData["CaseName"])
-        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
-        self.alterPwd.input_login_pwd(login_pwd=self.password)
-        # 输入手机号
-        self.alterPwd.input_phe_num(phone_num=ddtData["PhoneNum"])
-        # 点击确定
-        self.alterPwd.click_code_button()
-        # 断言
-        self.assert_mode.assert_equal(ddtData["expect"],self.base.get_system_msg())
 
-    def test_alter_phoneNum007(self):
-        """错误的验证码修改手机校验"""
-        # 获取测试数据
-        Data = testData["TestCase007"]
         # 打印测试用例名称
-        self.base.print_case_name(Data["CaseName"])
+        self.base.print_case_name(ddt_data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
         # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
-        self.alterPwd.input_login_pwd(login_pwd=self.password)
+        self.alter_pwd.input_login_pwd(ddt_data["登录密码"])
         # 输入手机号
-        self.alterPwd.input_phe_num(phone_num=Data["PhoneNum"])
+        self.alter_pwd.input_phe_num(ddt_data["手机号"])
         # 点击确定
-        self.alterPwd.click_code_button()
+        self.alter_pwd.click_code_button()
+        # 获取提示信息
+        Msg = self.login.get_system_msg()
         # 断言
-        self.assert_mode.assert_equal(Data["expect"],self.alterPwd.get_code_button_att())
+        self.assert_mode.assert_equal(ddt_data,Msg)
+
+    @unittest.skipUnless(operate.get_isRun_text("alter_phe_012"), "-跳过不执行该用例")
+    def test_alter_phoneNum007(self):
+        """正确手机号发送验证码校验"""
+
+        # 获取测试数据
+        data = self.operate.get_dict_data("alter_phe_012")
+        # 打印测试用例名称
+        self.base.print_case_name(data)
+        # 点击手机号->修改
+        self.alter_pwd.click_alter_pheNum()
+        # 输入登陆密码/获取配置文件里面的密码，上个脚本会修改密码
+        self.alter_pwd.input_login_pwd(data["登录密码"])
+        # 输入手机号
+        self.alter_pwd.input_phe_num(data["手机号"])
+        # 点击确定
+        self.alter_pwd.click_code_button()
+        # 获取发送成后的按钮属性
+        self.base.sleep(1)
+        att_text = self.alter_pwd.get_code_button_att()
+        # 断言
+        self.assert_mode.assert_equal(data,att_text)
 
     @classmethod
     def tearDownClass(cls):
-        # 关闭浏览器
-        cls.base.quit_browser()
-        # 结束测试
-        mytest.end_test()
+        # 清除缓存
+        cls().base.clear_catch()
+        # 退出浏览器
+        cls().base.quit_browser()
 
 if __name__ == '__main__':
     unittest.main()
 
-    suit = unittest.TestSuite()
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum001'))
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum002'))
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum003'))
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum004'))
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum005'))
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum006'))
-    suit.addTest(Alter_PhoneNum('test_alter_phoneNum007'))
+    suit = unittest.TestLoader().loadTestsFromTestCase(Alter_PhoneNum)
 
     unittest.TextTestRunner().run(suit)

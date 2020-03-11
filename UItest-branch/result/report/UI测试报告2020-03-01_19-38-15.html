@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>超级售后PC端UI自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 80%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">超级售后PC端UI自动化测试报告</h1>
+<p class='attribute'><strong>开始时间 : </strong> 2020-03-01 19:38:15</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:02:03.276077</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 20，通过 5，失败 1，错误 14，通过率= 25.00%</p>
+
+<p class='description'></p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 25.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 5 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 20 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>1、注册登录.a_register.Register_Branch:  【PC注册功能测试用例脚本】 </td>
+    <td class="text-center">14</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">14</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',14)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in" align='left'>
+    <pre>
+    
+ft1_1: 2020-03-01 19:38:24,252 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:38:24,253 INFO:   * Load case name: 【验证用户名为空不能成功注册】
+2020-03-01 19:38:24,290 INFO:   * Refresh current page .
+2020-03-01 19:38:31,934 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:38:31,935 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:38:32,158 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:38:32,332 INFO:   * Input message:  
+2020-03-01 19:38:32,544 INFO:   * Input message: 13700003941 
+2020-03-01 19:38:32,694 INFO:   * Input message: 88888888 
+2020-03-01 19:38:32,827 INFO:   * Input message: 111111 
+2020-03-01 19:38:32,931 INFO:   * Input message: 111111 
+2020-03-01 19:38:33,026 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:38:35,026 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:38:35,089 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入用户名 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in" align='left'>
+    <pre>
+    
+ft1_2: 2020-03-01 19:38:35,090 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:38:35,091 INFO:   * Load case name: 【验证手机号为空不能成功注册】
+2020-03-01 19:38:37,184 INFO:   * Refresh current page .
+2020-03-01 19:38:39,297 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:38:39,298 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:38:39,370 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:38:39,597 INFO:   * Input message: AutoTest 
+2020-03-01 19:38:39,701 INFO:   * Input message:  
+2020-03-01 19:38:39,854 INFO:   * Input message: 88888888 
+2020-03-01 19:38:39,991 INFO:   * Input message: 111111 
+2020-03-01 19:38:40,111 INFO:   * Input message: 111111 
+2020-03-01 19:38:40,212 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:38:42,213 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:38:42,342 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse in" align='left'>
+    <pre>
+    
+ft1_3: 2020-03-01 19:38:42,344 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:38:42,346 INFO:   * Load case name: 【验证验证码为空不能成功注册】
+2020-03-01 19:38:43,366 INFO:   * Refresh current page .
+2020-03-01 19:38:45,474 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:38:45,475 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:38:45,567 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:38:45,732 INFO:   * Input message: AutoTest 
+2020-03-01 19:38:45,879 INFO:   * Input message: 13700003941 
+2020-03-01 19:38:45,964 INFO:   * Input message:  
+2020-03-01 19:38:46,066 INFO:   * Input message: 111111 
+2020-03-01 19:38:46,151 INFO:   * Input message: 111111 
+2020-03-01 19:38:46,233 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:38:48,235 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:38:48,336 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入短信验证码 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_4'>错误</button>
+    <div id='div_ft1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_4'>错误</button>
+    <div id='div_ft1_4' class="collapse in" align='left'>
+    <pre>
+    
+ft1_4: 2020-03-01 19:38:48,339 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:38:48,340 INFO:   * Load case name: 【验证新密码为空不能成功注册】
+2020-03-01 19:38:49,309 INFO:   * Refresh current page .
+2020-03-01 19:38:51,427 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:38:51,427 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:38:51,497 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:38:51,672 INFO:   * Input message: AutoTest 
+2020-03-01 19:38:51,809 INFO:   * Input message: 13700003941 
+2020-03-01 19:38:51,918 INFO:   * Input message: 88888888 
+2020-03-01 19:38:51,979 INFO:   * Input message:  
+2020-03-01 19:38:52,072 INFO:   * Input message: 111111 
+2020-03-01 19:38:52,158 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:38:54,159 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:38:54,239 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入6-18位登录密码 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_5'>错误</button>
+    <div id='div_ft1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_5'>错误</button>
+    <div id='div_ft1_5' class="collapse in" align='left'>
+    <pre>
+    
+ft1_5: 2020-03-01 19:38:54,240 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:38:54,241 INFO:   * Load case name: 【验证确认密码为空不能成功注册】
+2020-03-01 19:38:55,236 INFO:   * Refresh current page .
+2020-03-01 19:38:57,331 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:38:57,332 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:38:57,419 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:38:57,607 INFO:   * Input message: AutoTest 
+2020-03-01 19:38:57,755 INFO:   * Input message: 13700003941 
+2020-03-01 19:38:57,876 INFO:   * Input message: 88888888 
+2020-03-01 19:38:57,966 INFO:   * Input message: 111111 
+2020-03-01 19:38:58,024 INFO:   * Input message:  
+2020-03-01 19:38:58,101 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:00,103 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:00,219 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_6'>错误</button>
+    <div id='div_ft1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_6'>错误</button>
+    <div id='div_ft1_6' class="collapse in" align='left'>
+    <pre>
+    
+ft1_6: 2020-03-01 19:39:00,221 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:00,222 INFO:   * Load case name: 【验证已经注册的用户名不能成功注册】
+2020-03-01 19:39:01,185 INFO:   * Refresh current page .
+2020-03-01 19:39:03,293 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:03,294 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:03,369 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:03,522 INFO:   * Input message: branch01 
+2020-03-01 19:39:03,674 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:03,799 INFO:   * Input message: 88888888 
+2020-03-01 19:39:03,898 INFO:   * Input message: 111111 
+2020-03-01 19:39:03,987 INFO:   * Input message: 111111 
+2020-03-01 19:39:04,070 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:06,071 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:06,117 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: branch01已存在 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_7'>错误</button>
+    <div id='div_ft1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_7'>错误</button>
+    <div id='div_ft1_7' class="collapse in" align='left'>
+    <pre>
+    
+ft1_7: 2020-03-01 19:39:06,119 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:06,119 INFO:   * Load case name: 【验证已经注册的手机号不能成功注册】
+2020-03-01 19:39:07,251 INFO:   * Refresh current page .
+2020-03-01 19:39:09,500 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:09,501 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:09,578 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:09,735 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:09,876 INFO:   * Input message: 13700000004 
+2020-03-01 19:39:09,983 INFO:   * Input message: 88888888 
+2020-03-01 19:39:10,076 INFO:   * Input message: 111111 
+2020-03-01 19:39:10,164 INFO:   * Input message: 111111 
+2020-03-01 19:39:10,245 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:12,246 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:12,359 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 手机号码已存在 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_8'>错误</button>
+    <div id='div_ft1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_8'>错误</button>
+    <div id='div_ft1_8' class="collapse in" align='left'>
+    <pre>
+    
+ft1_8: 2020-03-01 19:39:12,360 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:12,361 INFO:   * Load case name: 【验证错误的验证码不能成功注册】
+2020-03-01 19:39:13,307 INFO:   * Refresh current page .
+2020-03-01 19:39:15,499 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:15,500 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:15,586 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:15,746 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:15,878 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:15,980 INFO:   * Input message: 000000 
+2020-03-01 19:39:16,071 INFO:   * Input message: 111111 
+2020-03-01 19:39:16,155 INFO:   * Input message: 111111 
+2020-03-01 19:39:16,231 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:18,233 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:18,363 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请重新获取验证码 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_9'>错误</button>
+    <div id='div_ft1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_9'>错误</button>
+    <div id='div_ft1_9' class="collapse in" align='left'>
+    <pre>
+    
+ft1_9: 2020-03-01 19:39:18,364 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:18,365 INFO:   * Load case name: 【验证新密码和确认密码不同不能成功注册】
+2020-03-01 19:39:19,321 INFO:   * Refresh current page .
+2020-03-01 19:39:21,449 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:21,451 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:21,600 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:21,759 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:21,891 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:21,999 INFO:   * Input message: 88888888 
+2020-03-01 19:39:22,088 INFO:   * Input message: 111111 
+2020-03-01 19:39:22,195 INFO:   * Input message: 222222 
+2020-03-01 19:39:22,276 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:24,278 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:24,364 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_10'>错误</button>
+    <div id='div_ft1_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_10'>错误</button>
+    <div id='div_ft1_10' class="collapse in" align='left'>
+    <pre>
+    
+ft1_10: 2020-03-01 19:39:24,366 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:24,367 INFO:   * Load case name: 【验证错误的用户名格式不能成功注册】
+2020-03-01 19:39:25,416 INFO:   * Refresh current page .
+2020-03-01 19:39:27,650 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:27,651 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:27,728 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:27,877 INFO:   * Input message: ！@#￥% 
+2020-03-01 19:39:28,031 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:28,147 INFO:   * Input message: 88888888 
+2020-03-01 19:39:28,246 INFO:   * Input message: 111111 
+2020-03-01 19:39:28,340 INFO:   * Input message: 111111 
+2020-03-01 19:39:28,420 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:30,423 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:30,509 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入汉字、字母、0-9、下划线 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_11'>错误</button>
+    <div id='div_ft1_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_11'>错误</button>
+    <div id='div_ft1_11' class="collapse in" align='left'>
+    <pre>
+    
+ft1_11: 2020-03-01 19:39:30,510 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:30,510 INFO:   * Load case name: 【验证错误的手机号格式不能成功注册】
+2020-03-01 19:39:31,909 INFO:   * Refresh current page .
+2020-03-01 19:39:34,042 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:34,044 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:34,173 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:34,332 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:34,468 INFO:   * Input message: 1370000394 
+2020-03-01 19:39:34,580 INFO:   * Input message: 88888888 
+2020-03-01 19:39:34,673 INFO:   * Input message: 111111 
+2020-03-01 19:39:34,780 INFO:   * Input message: 111111 
+2020-03-01 19:39:34,855 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:36,857 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:36,960 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_12</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_12'>错误</button>
+    <div id='div_ft1_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_12'>错误</button>
+    <div id='div_ft1_12' class="collapse in" align='left'>
+    <pre>
+    
+ft1_12: 2020-03-01 19:39:36,962 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:36,962 INFO:   * Load case name: 【验证密码格式错误不能成功注册】
+2020-03-01 19:39:37,971 INFO:   * Refresh current page .
+2020-03-01 19:39:40,099 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:40,100 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:40,201 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:40,358 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:40,493 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:40,608 INFO:   * Input message: 88888888 
+2020-03-01 19:39:40,702 INFO:   * Input message: !@#$%^ 
+2020-03-01 19:39:40,794 INFO:   * Input message: !@#$%^ 
+2020-03-01 19:39:40,874 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:42,877 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:42,975 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_13' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_13</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_13' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_13'>错误</button>
+    <div id='div_ft1_13' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_13' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_13'>错误</button>
+    <div id='div_ft1_13' class="collapse in" align='left'>
+    <pre>
+    
+ft1_13: 2020-03-01 19:39:42,977 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:42,978 INFO:   * Load case name: 【验证密码长度小于最小值不能注册】
+2020-03-01 19:39:43,862 INFO:   * Refresh current page .
+2020-03-01 19:39:46,079 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:46,080 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:46,178 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:46,338 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:46,480 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:46,599 INFO:   * Input message: 88888888 
+2020-03-01 19:39:46,683 INFO:   * Input message: 11111 
+2020-03-01 19:39:46,762 INFO:   * Input message: 11111 
+2020-03-01 19:39:46,840 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:48,842 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:48,916 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft1_14' class='none'>
+    <td class='errorCase'><div class='testcase'>test_register001_14</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_14' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_14'>错误</button>
+    <div id='div_ft1_14' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_14' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_14'>错误</button>
+    <div id='div_ft1_14' class="collapse in" align='left'>
+    <pre>
+    
+ft1_14: 2020-03-01 19:39:48,917 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:39:48,918 INFO:   * Load case name: 【验证密码长度大于最大值不能注册】
+2020-03-01 19:39:52,110 INFO:   * Refresh current page .
+2020-03-01 19:39:54,230 INFO:   * Find element: xpath-&gt;//p[text()="还没有网点账号？"]/a is true .
+2020-03-01 19:39:54,232 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:39:54,345 INFO:   * Click button: xpath-&gt;//p[text()="还没有网点账号？"]/a .
+2020-03-01 19:39:54,494 INFO:   * Input message: AutoTest 
+2020-03-01 19:39:54,629 INFO:   * Input message: 13700003941 
+2020-03-01 19:39:54,733 INFO:   * Input message: 88888888 
+2020-03-01 19:39:54,928 INFO:   * Input message: 11111111111111111111 
+2020-03-01 19:39:55,080 INFO:   * Input message: 11111111111111111111 
+2020-03-01 19:39:55,155 INFO:   * Click button: xpath-&gt;//a[text()="马上注册"] .
+2020-03-01 19:39:57,158 INFO:   * Webdriver sleep 2 seconds .
+2020-03-01 19:39:57,265 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 密码格式不正确 .
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\a_register.py", line 82, in test_register001
+    self.assert_Mode.assert_equal(ddt_data,Msg)
+AttributeError: 'Register_Branch' object has no attribute 'assert_Mode'
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr class='failClass warning'>
+    <td>1、注册登录.b_login.Login_Branch:  【PC登录功能测试用例脚本】 </td>
+    <td class="text-center">6</td>
+    <td class="text-center">5</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',6)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align='left'>
+    <pre>
+    
+pt2_1: 2020-03-01 19:40:06,486 WARNING:  Skipped: -跳过不执行该用例 login_001: 登录-用户名密码为空校验
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align='left'>
+    <pre>
+    
+pt2_2: 2020-03-01 19:40:06,488 WARNING:  Skipped: -跳过不执行该用例 login_002: 登录-用户名为空校验
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align='left'>
+    <pre>
+    
+pt2_3: 2020-03-01 19:40:06,489 WARNING:  Skipped: -跳过不执行该用例 login_003: 登录-密码为空校验
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
+    <div id='div_pt2_4' class="collapse in" align='left'>
+    <pre>
+    
+pt2_4: 2020-03-01 19:40:06,491 WARNING:  Skipped: -跳过不执行该用例 login_004: 登录-用户名不正确密码正确校验
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='pt2_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
+    <div id='div_pt2_5' class="collapse in" align='left'>
+    <pre>
+    
+pt2_5: 2020-03-01 19:40:06,492 WARNING:  Skipped: -跳过不执行该用例 login_005: 登录-用户名正确密码不正确校验
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='ft2_6' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_6'>失败</button>
+    <div id='div_ft2_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_6'>失败</button>
+    <div id='div_ft2_6' class="collapse in" align='left'>
+    <pre>
+    
+ft2_6: 2020-03-01 19:40:06,494 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-01 19:40:06,496 INFO:   * Load case name: 【登录-正确用户名密码校验】
+2020-03-01 19:40:10,821 INFO:   * Find element: xpath-&gt;//input[@type="text"] is true .
+2020-03-01 19:40:10,822 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-01 19:40:12,086 INFO:   * Refresh current page .
+2020-03-01 19:40:12,305 INFO:   * Clear element: xpath-&gt;//input[@type="text"] .
+2020-03-01 19:40:12,479 INFO:   * Input message: 13700000004 
+2020-03-01 19:40:12,549 INFO:   * Clear element: xpath-&gt;//input[@type="password"] .
+2020-03-01 19:40:12,646 INFO:   * Input message: 222222 
+2020-03-01 19:40:12,760 INFO:   * Click button: xpath-&gt;//a[@class="loginBtn"] .
+2020-03-01 19:40:13,761 INFO:   * Webdriver sleep 1 seconds .
+2020-03-01 19:40:16,083 INFO:   * Get element: xpath-&gt;//*[@class="ivu-message"]//span text: 登录成功 .
+2020-03-01 19:40:16,798 INFO:   * Save screen shot to: D:\my_test_script\UItest-branch\result\image\20200301194016.png .
+Traceback (most recent call last):
+  File "D:\my_test_script\UItest-branch\public\common\assertMode.py", line 59, in assert_equal
+    unittest.TestCase().assertEqual(expect,fact)
+  File "D:\python\lib\unittest\case.py", line 839, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\python\lib\unittest\case.py", line 1220, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\python\lib\unittest\case.py", line 680, in fail
+    raise self.failureException(msg)
+AssertionError: '登录' != '登录成功'
+- 登录
++ 登录成功
+?   ++
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\my_test_script\UItest-branch\public\common\myDecorator.py", line 22, in inner
+    func(self,ddt_data)
+  File "D:\my_test_script\UItest-branch\testcase\1、注册登录\b_login.py", line 61, in test_login
+    self.assertMode.assert_equal(ddt_data,self.login.get_system_msg())
+  File "D:\my_test_script\UItest-branch\public\common\assertMode.py", line 66, in assert_equal
+    raise AssertionError('Expect: {1} not equal Faction: {1}, test -&gt; FAIL.'.format(expect,fact))
+AssertionError: Expect: 登录成功 not equal Faction: 登录成功, test -&gt; FAIL.
+
+
+    </pre>
+    </div>
+    </td>
+	
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>20</td>
+    <td>5</td>
+    <td>1</td>
+    <td>14</td>
+    <td>通过率：25.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>

@@ -3,65 +3,51 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/5/27 18:03
 
-from public.common.basepage import BasePage
-from selenium.webdriver.common.by import By
-from config.urlconfig import *
+from public.common.basePage import BasePage
+from config.urlConfig import *
+from config.pathConfig import *
 
 class RegisterPage(BasePage):
     """
-    注册页面信息
+        【注册页面功能】
     """
 
-    # 注册页面所有元素的父路径
-    parent_path = '//div[contains(text(),"企业用户注册")]/../form/ul'
-    # 免费注册按钮
-    free_register_btn = (By.XPATH,'//p[text()="还没有网点账号？"]/a')
-    # 用户名输入框
-    username_input = (By.XPATH,''+parent_path+'/li[2]/input')
-    # 手机号输入框
-    phe_num_input = (By.XPATH,''+parent_path+'/li[3]/input')
-    # 验证码输入框
-    code_num_input = (By.XPATH,''+parent_path+'/li[4]/input')
-    # 获取验证码按钮
-    get_code_num_btn = (By.XPATH,''+parent_path+'/li[4]/a')
-    # 登陆密码输入框
-    login_pwd_input = (By.XPATH,''+parent_path+'/li[5]/input')
-    # 确定登陆密码输入框
-    confirm_pwd_input = (By.XPATH,''+parent_path+'/li[6]/input')
-    # 马上注册按钮
-    register_btn = (By.XPATH,'//a[text()="马上注册"]')
-
-    def __init__(self,driver):
-        BasePage.__init__(self,driver)
+    def get_elements(self,option):
+        """获取element_data文件中注册页面的元素信息"""
+        return read_config_data("register_page",option,elementDataPath)
 
     def enter_register_page(self):
         """进入注册页面"""
-        self.open_url(login_url)
+        self.open_url(login_url,self.get_elements("free_register_btn"))
 
     def click_free_register(self):
         """点击登录页面免费注册"""
-        self.click_button(self.free_register_btn)
+        self.click_button(self.get_elements("free_register_btn"))
 
-    def input_username(self,UserName):
+    def input_username(self,username):
         """输入注册用户名"""
-        self.input_message(self.username_input,UserName)
+        self.input_message(self.get_elements("username_input"),username)
 
-    def input_phoneNum(self,PhoneNum):
+    def input_phone_number(self,phone_number):
         """输入注册手机号"""
-        self.input_message(self.phe_num_input,PhoneNum)
+        self.input_message(self.get_elements("phone_number_input"),phone_number)
 
-    def input_codeNum(self,CodeNum):
+    def input_code_number(self,code_number):
         """输入验证码"""
-        self.input_message(self.code_num_input,CodeNum)
+        self.input_message(self.get_elements("verification_code_input"),code_number)
 
-    def input_login_pwd(self,LoginPwd):
+    def input_login_pwd(self,login_pwd):
         """输入登录密码"""
-        self.input_message(self.login_pwd_input,LoginPwd)
+        self.input_message(self.get_elements("login_pwd_input"),login_pwd)
 
-    def input_confirm_pwd(self,ConfirmPwd):
+    def input_confirm_pwd(self,confirm_pwd):
         """输入确认密码"""
-        self.input_message(self.confirm_pwd_input,ConfirmPwd)
+        self.input_message(self.get_elements("confirm_pwd_input"),confirm_pwd)
 
     def click_register_btn(self):
         """'点击注册按钮"""
-        self.click_button(self.register_btn)
+        self.click_button(self.get_elements("register_btn"))
+
+    def get_system_message(self):
+        """获取系统提示信息"""
+        return self.get_text(self.get_elements("system_message"))

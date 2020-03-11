@@ -3,17 +3,15 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/6/7 17:08
 
-from public.common import runreport
+from public.common import runReport
 
 def run():
 
     # 获取登录测试用例集合
-    suit = runreport.get_suits(ChildName='1、注册登录',CaseName='*.py')
+    suit = runReport.get_suits(ChildName='1、注册登录')
     # 运行测试集合生成报告
-    runreport.run_report(ReportName='register_and_login_test_report_', FileName='1、登录注册', title='Register/Login Test Result',
-                         description='register and login case test result.', case=suit)
-
+    runReport.run_report(testSuits=suit,ReportName='register_and_login_test_report_', title='Register/Login Test Result',
+                         description='register and login case test result.')
 
 if __name__ == '__main__':
     run()
-

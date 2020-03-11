@@ -2,17 +2,383 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dd974a1-314d-447f-92b1-b3856a79065f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/.idea/UItest-BranchAPP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-BranchAPP/public/page/loginPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/config/configData.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/data/UI_testCase.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/data/elementData.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/common/connectWifi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/common/myDecorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/common/operateExcel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/common/writeResult.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/page/AddSparePartPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/page/dealerPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/page/sendOrderPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/public/page/spartPartListPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/result/statistical_result.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/c_takeOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/d_refuseOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/e_appointOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/f_finishOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/g_visitOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/h_alterCharge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/j_returnOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/k_promptOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/l_invalidOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/m_serverFeedback.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/n_orderDetails.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/o_searchOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/p_gradOrder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/a_visitDealer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/b_searchDealer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/e_visitFacilitator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/l_dealerStatisticSearch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/b_masterSearch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/a_addSparePart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UItest-branch/testcase/9、圈子管理/a_createGroup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11、python骚操作/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11、python骚操作/python_operate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12、文件操作/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12、文件操作/json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12、文件操作/yaml.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13、window操作/1、记事本.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14、线程/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14、线程/接口压测.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14、线程/接口压测脚本.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15、pyWifi/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15、pyWifi/connectWifi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4、列表/4.21、获取列表中相同元素的索引.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51_shouhou/.idea/51_shouhou.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../51_shouhou/.idea/51_shouhou.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51_shouhou/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../51_shouhou/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51_shouhou/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../51_shouhou/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../51shouhou_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../51shouhou_api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Branch_Api/.idea/Branch_Api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Branch_Api/.idea/Branch_Api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Branch_Api/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Branch_Api/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Branch_Api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Branch_Api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/UItest-branch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/UItest-branch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/emaildata.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/pathconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/config/pathConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/regaccount.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/config/regAccount.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/regphonenum.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/config/regPhoneNum.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/regusername.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/config/regUsername.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/config/urlconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/config/urlConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/accountdata.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/accountData.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/ordermessage.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/orderMessage.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/ordernumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/data/orderNumber.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/data/testdata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/assertmode.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/assertMode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/basepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/basePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/createuser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/createUser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/getdata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/logconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/logConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/mytest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/runreport.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/runReport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/rwconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/rwConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/common/sendemail.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/sendEmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/addOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/createOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/alterPwdPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/alterPwdPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/branchStatisticsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/branchStatisticsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/brandsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/brandsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/companyInventoryPage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/financeManagePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/financeManagePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/finishOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/finishOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/forgetPwdPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/forgetPwdPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/invalidOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/invalidOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/inventoryAdjustPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/inventoryAdjustPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/loginPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/loginPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/manageBranchPage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/masterListPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/masterListPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/masterReceivePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/masterReceivePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/masterReturnPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/masterReturnPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/masterStatisticsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/masterStatisticsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/myWalletPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/myWalletPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/newReturnFactoryPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/newReturnFactoryPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/orderDetailsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/orderDetailsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/orderLogPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/orderLogPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/pleaseOrderPage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/registerPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/registerPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/returnOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/returnOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/searchOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/searchOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/serverBranchPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/facilitatorPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/serverTypeSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/serverTypeSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/settleOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/settleOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/shortMsgLogPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/shortMsgLogPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/teamworkNewsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/teamworkNewsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/public/page/visitOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/visitOrderPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191207130748.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209123735.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209124843.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209132255.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209133223.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209133930.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209162517.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209163048.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209163216.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209163350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209163504.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191209163509.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210122809.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210123930.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210131827.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210132214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210132316.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210132329.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191210132820.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191211122826.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191211123912.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191211131418.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191211132137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/image/20191211132338.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/log/2019-12-06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/log/2019-12-07.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/log/2019-12-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/log/2019-12-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/log/2019-12-11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/9、圈子管理/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-08-10_12-12-28.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-08-13_12-15-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-08-16_12-01-08.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-10-10_09-11-51.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-10-17_12-10-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-11-23_14-45-55.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-11-26_12-12-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-11-27_12-12-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-11-29_12-14-59.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-02_12-09-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-03_12-15-01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-04_12-02-36.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-05_12-10-01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-06_12-13-09.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-07_12-01-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-09_12-29-34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-10_12-20-01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/1、登录注册/register_and_login_test_report_2019-12-11_12-20-33.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/common/getNewPwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-08-10_12-14-55.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-08-13_12-17-27.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-08-16_12-03-39.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-10-10_09-14-53.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-10-17_12-12-25.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-11-26_12-14-28.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-11-27_12-14-25.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-11-29_12-17-45.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-02_12-11-53.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-03_12-17-29.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-04_12-05-02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-05_12-12-26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-06_12-15-36.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-07_12-03-26.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-07_12-14-54.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-07_12-15-34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-09_12-32-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-10_12-22-27.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/2、修改密码/alter_pwd_test_report_2019-12-11_12-22-56.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/public/page/createGroupPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-08-10_12-18-08.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-08-13_12-20-34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-08-16_12-07-07.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-10_09-19-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/public/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-10_09-23-30.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/public/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-10_09-35-50.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/public/page/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-10_09-41-22.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/result/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-17_09-12-29.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-17_12-15-34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-18_09-01-47.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-19_09-42-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-21_09-08-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-21_20-28-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/run/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-25_08-58-22.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-10-26_09-07-30.html" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-BranchAPP/script/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-11-26_12-17-59.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-11-27_12-17-47.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-11-29_12-21-31.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-02_12-15-31.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-02_12-39-22.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-02_12-49-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-03_12-20-59.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-03_12-37-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-03_12-40-57.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-03_12-41-29.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-04_12-08-35.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-05_12-15-47.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-06_12-18-58.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-07_12-18-56.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-09_12-35-21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-10_12-25-51.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/3、工单管理/order_manage_test_report_2019-12-11_12-26-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/13、window操作/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-08-10_12-54-17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-08-13_12-49-32.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-08-16_12-55-33.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-10-17_12-48-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-10-18_09-35-20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-10-19_10-14-40.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-10-21_09-41-28.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-11-27_12-54-37.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-11-29_12-54-34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-02_12-27-45.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-03_13-15-44.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-04_12-40-58.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-05_12-47-35.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-06_12-50-35.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-07_12-50-43.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-09_13-07-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-10_12-58-29.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/4、客户管理/customer_manage_test_report_2019-12-11_12-57-26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/i_settleOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-08-10_13-12-19.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-08-13_13-07-35.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-08-16_13-10-34.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-10-17_13-09-23.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-10-18_09-57-50.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-10-19_10-34-56.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-10-21_10-03-21.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-11-27_13-17-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-11-29_13-16-06.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-03_13-36-33.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-04_13-02-20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-05_13-08-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-06_13-08-59.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-07_13-11-09.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-09_13-26-18.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-10_13-21-56.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/5、师傅管理/master_manage_test_report_2019-12-11_13-17-35.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-08-31_11-45-06.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-10-17_13-15-20.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-11-27_13-23-40.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-11-29_13-23-39.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-03_13-43-04.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-04_13-08-54.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-04_14-19-56.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-04_14-26-54.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-05_13-16-42.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-06_13-16-03.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-07_13-17-23.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-09_13-32-25.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-10_13-28-23.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/6、运营管理/operation_manage_test_report_2019-12-11_13-23-40.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-08-31_11-19-55.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-08-31_11-36-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-10-17_13-19-26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-11-29_13-27-04.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-03_13-46-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-04_13-13-02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-05_13-22-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-06_13-19-06.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-07_13-20-23.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-09_13-35-26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-10_13-31-26.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/7、财务管理/finance_manage_test_report_2019-12-11_13-26-39.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-06_09-51-05.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-06_09-57-58.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-06_13-23-43.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-07_13-24-56.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-09_13-40-48.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-10_13-35-46.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/report/8、备件管理/sparePart_manage_test_report_2019-12-11_13-30-52.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/testresult/2019-12-07.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/testresult/2019-12-09.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/testresult/2019-12-10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/testresult/2019-12-11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/result/testresult/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_a_registerLogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_a_registerLogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_b_alterPassword.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_b_alterPassword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_c_orderManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_c_orderManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_d_customManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_d_customManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_e_masterManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_e_masterManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_f_operationManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_f_operationManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_g_financeManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_g_financeManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_i_sparePartManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_i_sparePartManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/run/run_timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/run/run_timing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/1、注册登录/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/1、注册登录/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/1、注册登录/a_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/1、注册登录/a_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/1、注册登录/b_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/1、注册登录/b_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/2、修改密码/a_forgetPwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/2、修改密码/a_forgetPwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/2、修改密码/b_alterPwd.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/2、修改密码/b_alterPwd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/2、修改密码/c_alterPhe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/2、修改密码/c_alterPhe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/a_createOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/a_createOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/b_pleaseOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/b_sendOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/c_finishOrder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/d_visitOrder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/e_returnOrder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/f_settleReturn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/g_settleBranch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/h_settleBranch01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/i_orderDetails.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/j_invalidOrder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/3、工单管理/k_searchOrder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/a_addManageBranch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/b_searchManage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/c_setServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/c_dealerSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/d_stopOpenTake.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/d_takeOrderSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/e_addServerBranch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/f_searchServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/f_searchServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/g_setServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/g_facilitatorSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/h_stopOpenPlease.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/h_sendOrderSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/i_addBrands.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/i_addBrands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/j_manageStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/j_dealerStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/k_manageStatisSearch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/l_serverStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/k_facilitatorStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/m_teamworkSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/m_teamworkSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/n_teamworkOperate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/4、客户管理/n_teamworkOperate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/a_visitMaster.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/a_visitMaster.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/b_searchMaster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/c_masterOperate.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/c_sendOrderSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/d_masterServerSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/d_masterServerSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/e_orderStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/5、师傅管理/e_orderStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/a_orderMargin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/a_takeOutOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/b_searchOrderLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/b_searchOrderLog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/c_sendShortMsg.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/c_sendShortMsg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/d_searchShortMsgLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/6、运营管理/d_searchShortMsgLog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/a_financeLogManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/a_financeLogManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/b_myIncomeSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/b_financeSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/c_myExpendSearch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/d_walletTopUp.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/d_walletTopUp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/e_walletWithdraw.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/7、财务管理/e_withdrawCash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/a_createSparePart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/b_searchSparePart.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/b_searchSparePart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/c_inventoryAdjust.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/c_inventoryAdjust.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/d_searchAdjustLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/d_searchAdjustLog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/e_receiveSparePart.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/e_receiveSparePart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/f_searchReceiveLog.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/f_searchReceiveLog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/g_masterReturn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/g_masterReturn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/h_newSparePartReturn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/h_newSparePartReturn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/i_deleteSparePart.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/8、备件管理/i_deleteSparePart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/9、系统设置/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/10、系统设置/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UItest-branch/testcase/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../UItest-branch/testcase/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/my_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" beforeDir="false" afterPath="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../other_file/学习/appium爬坑记.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../other_file/学习/appium爬坑记.xlsx" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/my_python$4_21.coverage" NAME="4.21、获取列表中相同元素的索引 Coverage Results" MODIFIED="1579062226795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$4_3len.coverage" NAME="4.3、len取列表的长度 Coverage Results" MODIFIED="1562486620093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$5_3get_.coverage" NAME="5.3、get 方法 Coverage Results" MODIFIED="1563031575076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$5_2keyvalueitems.coverage" NAME="5.2、key、value、items方法 Coverage Results" MODIFIED="1563030991507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
@@ -26,11 +392,11 @@
     <SUITE FILE_PATH="coverage/my_python$5_1.coverage" NAME="5.1、字典和列表 Coverage Results" MODIFIED="1563030658623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$7_4_.coverage" NAME="7.4、正则表达式+号 Coverage Results" MODIFIED="1573379629388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/7、正则" />
     <SUITE FILE_PATH="coverage/my_python$test.coverage" NAME="test Coverage Results" MODIFIED="1564900658602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
-    <SUITE FILE_PATH="coverage/my_python$5_4setdefault_.coverage" NAME="5.4、setdefault 方法 Coverage Results" MODIFIED="1575777094805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$5_4setdefault_.coverage" NAME="5.4、setdefault 方法 Coverage Results" MODIFIED="1577805795473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$2_5while.coverage" NAME="2.5、while语句 Coverage Results" MODIFIED="1562428875393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
     <SUITE FILE_PATH="coverage/my_python$2_2.coverage" NAME="2.2比较符 Coverage Results" MODIFIED="1562426700027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
     <SUITE FILE_PATH="coverage/my_python$7_0.coverage" NAME="7.0、字符串的拷贝和粘贴 Coverage Results" MODIFIED="1564894206248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
-    <SUITE FILE_PATH="coverage/my_python$7_6findall__.coverage" NAME="7.6、正则中findall()方法 Coverage Results" MODIFIED="1573383932332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/7、正则" />
+    <SUITE FILE_PATH="coverage/my_python$7_6findall__.coverage" NAME="7.6、正则中findall()方法 Coverage Results" MODIFIED="1579229927788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/7、正则" />
     <SUITE FILE_PATH="coverage/my_python$2_4ifelifelse.coverage" NAME="2.4、if、elif、else语句 Coverage Results" MODIFIED="1562428056179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
     <SUITE FILE_PATH="coverage/my_python$4_4.coverage" NAME="4.4、修改列表中的值 Coverage Results" MODIFIED="1562486735879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$6_6startend_with.coverage" NAME="6.6、start、end with字符串 Coverage Results" MODIFIED="1564295366263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
@@ -45,9 +411,10 @@
     <SUITE FILE_PATH="coverage/my_python$4_9innot_in.coverage" NAME="4.9、in和not in操作符 Coverage Results" MODIFIED="1562489129798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$2_6forrange.coverage" NAME="2.6、for循环、range函数 Coverage Results" MODIFIED="1562488886568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2、控制流" />
     <SUITE FILE_PATH="coverage/my_python$5_5.coverage" NAME="5.5、嵌套的字典和列表 Coverage Results" MODIFIED="1563083160971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$python_operate.coverage" NAME="python_operate Coverage Results" MODIFIED="1578015774299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/11、python骚操作" />
     <SUITE FILE_PATH="coverage/my_python$5_6.coverage" NAME="5.6、列表的值加到字典的函数 Coverage Results" MODIFIED="1564287664812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$4_8.coverage" NAME="4.8、列表的循环 Coverage Results" MODIFIED="1562488788645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-    <SUITE FILE_PATH="coverage/my_python$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1575778045455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
+    <SUITE FILE_PATH="coverage/my_python$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1579396637634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/14、线程" />
     <SUITE FILE_PATH="coverage/my_python$6_4.coverage" NAME="6.4、字符串的大小写转换 Coverage Results" MODIFIED="1563717609949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
     <SUITE FILE_PATH="coverage/my_python$7_2.coverage" NAME="7.2、创建正则表达式 Coverage Results" MODIFIED="1573371630711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/7、正则" />
     <SUITE FILE_PATH="coverage/my_python$3_4.coverage" NAME="3.4、全局变量 Coverage Results" MODIFIED="1562482396999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
@@ -57,6 +424,7 @@
     <SUITE FILE_PATH="coverage/my_python$2_7exit__.coverage" NAME="2.7、exit()提前结束程序 Coverage Results" MODIFIED="1562436616977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/第二章、控制流" />
     <SUITE FILE_PATH="coverage/my_python$3_7.coverage" NAME="3.7、判断是偶数还是奇数的程序 Coverage Results" MODIFIED="1562484906587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$4_5.coverage" NAME="4.5、列表的连接和复制 Coverage Results" MODIFIED="1562486892915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1577805936271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/11、python骚操作" />
     <SUITE FILE_PATH="coverage/my_python$6_1.coverage" NAME="6.1、转义字符串 Coverage Results" MODIFIED="1563355486018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
     <SUITE FILE_PATH="coverage/my_python$6_5isX_.coverage" NAME="6.5、isX 字符串方法 Coverage Results" MODIFIED="1563720686240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
     <SUITE FILE_PATH="coverage/my_python$4_16.coverage" NAME="4.16、字符串的字符替换 Coverage Results" MODIFIED="1573978536260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
@@ -65,6 +433,7 @@
     <SUITE FILE_PATH="coverage/my_python$3_5global.coverage" NAME="3.5、global、语句 Coverage Results" MODIFIED="1562483744984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$7_8.coverage" NAME="7.8、建立自己的字符分类 Coverage Results" MODIFIED="1573979066008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/7、正则" />
     <SUITE FILE_PATH="coverage/my_python$4_20.coverage" NAME="4.20、数字网格 Coverage Results" MODIFIED="1562510059994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
+    <SUITE FILE_PATH="coverage/my_python$.coverage" NAME="接口压测 Coverage Results" MODIFIED="1579397314113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/14、线程" />
     <SUITE FILE_PATH="coverage/my_python$1_2none.coverage" NAME="1.2、整型、浮点、字符串、none数据类型 Coverage Results" MODIFIED="1562481670861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1、python基础" />
     <SUITE FILE_PATH="coverage/my_python$4_13sort_.coverage" NAME="4.13、sort 列表的排序 Coverage Results" MODIFIED="1562503629896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$4_19copy.coverage" NAME="4.19、copy模块的使用 Coverage Results" MODIFIED="1562507024673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
@@ -80,22 +449,10 @@
     <SUITE FILE_PATH="coverage/my_python$6_9.coverage" NAME="6.9、字符串中删除空白字符 Coverage Results" MODIFIED="1564297435005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
     <SUITE FILE_PATH="coverage/my_python$5_2.coverage" NAME="5.2、检查字典中是否存在键值 Coverage Results" MODIFIED="1563031179212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5、字典" />
     <SUITE FILE_PATH="coverage/my_python$6_3in_not_in.coverage" NAME="6.3、字符串的in not in Coverage Results" MODIFIED="1563717253010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6、字符串的操作" />
+    <SUITE FILE_PATH="coverage/my_python$1.coverage" NAME="1、记事本 Coverage Results" MODIFIED="1579062530892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/13、window操作" />
     <SUITE FILE_PATH="coverage/my_python$4_7.coverage" NAME="4.7、列表的使用 Coverage Results" MODIFIED="1562488175185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
     <SUITE FILE_PATH="coverage/my_python$3_2return.coverage" NAME="3.2、返回值和return函数 Coverage Results" MODIFIED="1562439105781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3、函数" />
     <SUITE FILE_PATH="coverage/my_python$4_15.coverage" NAME="4.15、类似于列表的类型：字符串和元组 Coverage Results" MODIFIED="1562504853221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4、列表" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/5、字典/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,125 +461,37 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>userSession</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/4、列表/5.1、列表中index的使用.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.12、append、insert列表中添加值.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.6、del、pop、remove删除列表中的值.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.13、sort 列表的排序.py" />
-        <option value="$PROJECT_DIR$/1、python基础/1.5、random随机取值.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.14、例子程序.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.15、类似于列表的类型：字符串和元组.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.16、字符串的字符替换.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.17、元组数据类型.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.18、列表元组类型的转换.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.19、copy模块的使用.py" />
-        <option value="$PROJECT_DIR$/4、列表/4.20、数字网格.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.1、字典和列表.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.2、key、value、items方法.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.2、检查字典中是否存在键值.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.3、get 方法.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.5、嵌套的字典和列表.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.6、列表到字典的函数.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.2、字符串的下表和切片.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.3、字符串的in not in.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.4、字符串的大小写转换.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.5、isX 字符串方法.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.6、start/end with字符串.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.6、start、end with字符串.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.7、join、split字符串.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.8、字符串对齐文本.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/6.9、字符串中删除空白字符.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/7.0、字符串的拷贝和粘贴.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/7.1、项目.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/test.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/test.bat.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/test.bat" />
-        <option value="$PROJECT_DIR$/asd/test.bat" />
-        <option value="$PROJECT_DIR$/str_py/test.bat" />
-        <option value="$PROJECT_DIR$/str_py/test.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/7.1、命令行运行程序.py" />
-        <option value="$PROJECT_DIR$/6、字符串的操作/7.2、项目.py" />
-        <option value="$PROJECT_DIR$/7、正则/正则表达式.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.1 正则表达式.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.1、不使用正则查找.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.2、创建正则表达式.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.3、正则匹配字符串.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.4、正则表达式+号.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.5、正则表达式{}.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.6、正则中findall()方法.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.7、字符的分类.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.8、建立自己的字符分类.py" />
-        <option value="$PROJECT_DIR$/7、正则/7.0、正则符号表示.py" />
-        <option value="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" />
-        <option value="$PROJECT_DIR$/5、字典/__init__.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1060" />
-  </component>
+  <component name="ProjectId" id="1XeOeBx6w6fpbmn0bUW9ok9CFYd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_python" type="462c0819:PsiDirectoryNode" />
-              <item name="5、字典" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_python" type="462c0819:PsiDirectoryNode" />
-              <item name="6、字符串的操作" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UItest-branch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\my_test_script\my_python\15、pyWifi" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.__init__">
-    <configuration name="4.16、字符串的字符替换" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.yaml">
+    <configuration name="接口压测" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -230,12 +499,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4、列表" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/14、线程" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4、列表/4.16、字符串的字符替换.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/14、线程/接口压测.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -244,7 +513,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="5.4、setdefault 方法" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="接口压测脚本" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -252,12 +521,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5、字典" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/14、线程" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/14、线程/接口压测脚本.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -266,7 +535,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="7.7、字符的分类" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,12 +543,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/7、正则" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/13、window操作" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7、正则/7.7、字符的分类.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/13、window操作/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -288,7 +557,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="7.8、建立自己的字符分类" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__ (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -296,12 +565,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/7、正则" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/12、json操作" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\my_test_script\my_python\7、正则\7.8、正则表达式[].py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/12、json操作/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -318,12 +587,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/5、字典" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/14、线程" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5、字典/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/14、线程/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yaml" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/12、文件操作" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/12、文件操作/yaml.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,11 +625,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.yaml" />
+        <item itemvalue="Python.__init__ (1)" />
+        <item itemvalue="Python.__init__ (2)" />
+        <item itemvalue="Python.接口压测" />
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.5.4、setdefault 方法" />
-        <item itemvalue="Python.7.8、建立自己的字符分类" />
-        <item itemvalue="Python.4.16、字符串的字符替换" />
-        <item itemvalue="Python.7.7、字符的分类" />
       </list>
     </recent_temporary>
   </component>
@@ -382,373 +673,77 @@
       <workItem from="1574055993032" duration="23000" />
       <workItem from="1575776957283" duration="2064000" />
       <workItem from="1575797573658" duration="20000" />
+      <workItem from="1576119950129" duration="2890000" />
+      <workItem from="1576132343307" duration="2154000" />
+      <workItem from="1577502004668" duration="130000" />
+      <workItem from="1577502634897" duration="140000" />
+      <workItem from="1577774449637" duration="650000" />
+      <workItem from="1577805737372" duration="205000" />
+      <workItem from="1578015199359" duration="8000" />
+      <workItem from="1578015468412" duration="312000" />
+      <workItem from="1578018419279" duration="42000" />
+      <workItem from="1578018832323" duration="140000" />
+      <workItem from="1578019347827" duration="130000" />
+      <workItem from="1578099875194" duration="8000" />
+      <workItem from="1578621069324" duration="56000" />
+      <workItem from="1579062144066" duration="833000" />
+      <workItem from="1579076536166" duration="687000" />
+      <workItem from="1579226628320" duration="1904000" />
+      <workItem from="1579349662726" duration="7147000" />
+      <workItem from="1579395755778" duration="1592000" />
+      <workItem from="1579397412913" duration="27000" />
+      <workItem from="1579424948085" duration="15000" />
+      <workItem from="1579486495537" duration="44000" />
+      <workItem from="1581403187676" duration="66000" />
+      <workItem from="1581778036177" duration="337000" />
+      <workItem from="1581855558547" duration="20000" />
+      <workItem from="1582605588096" duration="1651000" />
+      <workItem from="1582620388658" duration="1078000" />
+      <workItem from="1582621853417" duration="1557000" />
+      <workItem from="1582714456787" duration="685000" />
+      <workItem from="1583058460132" duration="11000" />
+      <workItem from="1583067640056" duration="638000" />
+      <workItem from="1583148975967" duration="13000" />
+      <workItem from="1583803228520" duration="1895000" />
+      <workItem from="1583810690347" duration="702000" />
+      <workItem from="1583822564777" duration="1766000" />
+      <workItem from="1583830670619" duration="13000" />
+      <workItem from="1583830691552" duration="3000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87323000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31836462" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32960895" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/4、列表/4.12、append、insert列表中添加值.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.11、列表中index的使用.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1、python基础/1.5、random随机取值.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.15、类似于列表的类型：字符串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.17、元组数据类型.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.19、copy模块的使用.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.14、例子程序.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1、python基础/1.3、print、input、len函数.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.18、列表元组类型的转换.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.20、数字网格.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.3、get 方法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.2、检查字典中是否存在键值.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.2、key、value、items方法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.1、字典和.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.5、嵌套的字典和列表.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.1、转义字符串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.3、字符串的in not in.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.6、start/end with字符串.py" />
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.6、start、end with字符串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.8、字符串对齐文本.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.6、列表的值加到字典的函数.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.9、字符串中删除空白字符.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-287100998/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="584" selection-start-line="584" selection-end-line="584" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.0、字符串的拷贝和粘贴.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.13、sort 列表的排序.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/test.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" lean-forward="true" selection-start-column="57" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.1、命令行运行程序.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1、python基础/1.2、整型、浮点、字符串、none数据类型.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1、python基础/1.4、str、int、float函数.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1、python基础/1.1、python运算符.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://D:/python/Lib/collections/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="1230" column="8" selection-start-line="1230" selection-start-column="8" selection-end-line="1230" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.5、isX 字符串方法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/7.2、项目.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.4、正则表达式+号.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.1、不使用正则查找.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.3、正则中竖杠问号星号.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.2、正则中数字和括号.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.5、正则表达式{}.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.6、正则中findall()方法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4、列表/4.16、字符串的字符替换.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.7、字符的分类.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10、mysql/mysql.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.4、字符串的大小写转换.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.8、正则表达式[].py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7、正则/7.0、正则符号表示.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.2、字符串的下表和切片.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6、字符串的操作/6.7、join、split字符串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-287100998/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="2863" column="8" selection-start-line="2863" selection-start-column="8" selection-end-line="2863" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/5.4、setdefault 方法.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5、字典/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="225" key="GridCell.Tab.0.bottom" timestamp="1583829997042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="225" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583829997042" />
+    <state width="1493" height="225" key="GridCell.Tab.0.center" timestamp="1583829997042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="225" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583829997042" />
+    <state width="1493" height="225" key="GridCell.Tab.0.left" timestamp="1583829997042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="225" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583829997042" />
+    <state width="1493" height="225" key="GridCell.Tab.0.right" timestamp="1583829997042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="225" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583829997042" />
+    <state x="270" y="54" key="SettingsEditor" timestamp="1582620459766">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582620459766" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583803977904">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583803977904" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/my_python$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1582623210727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/13、window操作" />
+    <SUITE FILE_PATH="coverage/my_python$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1582622766729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/12、json操作" />
+    <SUITE FILE_PATH="coverage/my_python$yaml.coverage" NAME="yaml Coverage Results" MODIFIED="1583822658413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/12、文件操作" />
   </component>
 </project>

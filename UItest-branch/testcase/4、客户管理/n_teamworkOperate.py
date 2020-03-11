@@ -3,139 +3,117 @@
 # @Author  : Mr.Deng
 # @Time    : 2019/7/19 15:59
 
-from public.common.driver import browser_driver
-from public.common.rwconfig import read_config_data
-from public.common.getdata import get_test_data
-from public.common import mytest
-from public.common.assertmode import Assert
-from public.common.basepage import BasePage
+from public.common.operateExcel import *
+from public.common.assertMode import Assert
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.loginPage import LoginPage
 from public.page.teamworkNewsPage import TeamWorkNewsPage
 import unittest
-"""
-申请合作消息操作功能测试用例：
-1、拒绝合作申请校验  2、撤销合作申请校验 3、再次邀请合作校验
-"""
-# 获取测试数据
-test_data = get_test_data()["TeamWorkPage"]
 
-class Teamwork_Visit_Operate(unittest.TestCase):
+class Teamwork_Apply_Operate(unittest.TestCase):
+    """ 【拒绝、撤销、二次申请功能】 """
+
+    # 实例化类
+    readExcel = Read_Excel("teamworkOperate")
 
     @classmethod
     def setUpClass(cls):
-        # 设置浏览器驱动
-        cls.driver = browser_driver()
-        # 实例化类
-        cls.base_page = BasePage(cls.driver)
-        cls.assert_mode = Assert(cls.driver)
+        # 实例化页面对象类
+        cls.driver = web_driver()
+        cls.base = BasePage(cls.driver)
         cls.login = LoginPage(cls.driver)
-        cls.teamwork_visit = TeamWorkNewsPage(cls.driver)
-        # 清除浏览器缓存
-        cls.base_page.clear_catch()
-        # 开始执行
-        mytest.start_test()
+        cls.teamwork_apply = TeamWorkNewsPage(cls.driver)
+        cls.assertMode = Assert(cls.driver,"teamworkOperate")
 
-    def public_operate(self,search_word):
+    def public_operate(self,searchWord):
         """搜索网点"""
-        self.teamwork_visit.input_customer_name_phone(search_word)
-        self.teamwork_visit.click_search_btn()
-        self.base_page.sleep(1)
+        self.teamwork_apply.input_customer_name_phone(searchWord)
+        self.teamwork_apply.click_search_btn()
+        self.base.sleep(1)
 
-    def test_teamwork_visit001(self):
+    @unittest.skipUnless(readExcel.get_isRun_text("teamwork_operate_001"),"-跳过不执行用例")
+    def test_teamwork_operate001(self):
         """拒绝合作申请校验"""
 
         # 获取测试数据
-        data = test_data["refuse_teamwork_fnc"]
+        data = self.readExcel.get_dict_data("teamwork_operate_001")
         # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
-        # 获取被邀请的账号信息
-        it_username = read_config_data("西安快生活科技公司","username")
-        it_password = read_config_data("西安快生活科技公司","password")
+        self.base.print_case_name(data)
         # 登录该网点
-        self.login.login_main(it_username,it_password)
+        self.login.login_main(data["发出申请网点"])
         # 进入合作申请页面-收到的申请
-        self.teamwork_visit.enter_teamwork_news_page()
+        self.teamwork_apply.enter_teamwork_news_page()
         # 搜索申请的网点
-        self.public_operate(search_word=data["keyword"])
+        self.public_operate(data["收到申请网点"])
         # 拒绝成为该网点服务商的申请
-        self.teamwork_visit.click_refuse_btn()
-        # 点击确定拒绝
-        self.teamwork_visit.click_confirm_refuse()
-        self.base_page.sleep(1)
-        # 获取拒绝信息字段-他方
-        refuse_text = self.teamwork_visit.get_refuse_it_text()
-        # 断言
-        self.assert_mode.assert_equal(data["expect"], refuse_text)
+        self.teamwork_apply.click_refuse_btn()
+        self.base.sleep(1)
         # 退出登录
         self.login.click_logout_button()
-        # 获取我方登录账号
-        my_username = read_config_data("西安好家帮家政有限公司","username")
-        my_password = read_config_data("西安好家帮家政有限公司","password")
         # 登录该账号
-        self.login.login_main(my_username,my_password)
+        self.login.login_main(data["收到申请网点"])
         # 进入合作申请页面-收到的申请
-        self.teamwork_visit.enter_teamwork_news_page()
+        self.teamwork_apply.enter_teamwork_news_page()
         # 切换发出的申请
-        self.teamwork_visit.click_table_send_visit()
+        self.teamwork_apply.click_table_send_visit()
         # 搜索申请的网点
-        self.public_operate(search_word=data["keyword1"])
-        # 获取拒绝信息字段-我方
-        refuse_text = self.teamwork_visit.get_refuse_my_text()
+        self.public_operate(data["发出申请网点"])
         # 断言
-        self.assert_mode.assert_equal(data["expect"],refuse_text)
+        self.assertMode.assert_equal(data,self.teamwork_apply.get_refuse_text())
 
-    def test_teamwork_visit002(self):
+    @unittest.skipUnless(readExcel.get_isRun_text("teamwork_operate_002"),"-跳过不执行用例")
+    def test_teamwork_operate002(self):
         """再次申请合作校验"""
 
         # 获取测试数据
-        data = test_data["again_visit_fnc"]
+        data = self.readExcel.get_dict_data("teamwork_operate_002")
         # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
+        self.base.print_case_name(data)
         # 刷新页面
-        self.base_page.refresh_page()
+        self.base.refresh_page()
         # 切换table
-        self.teamwork_visit.click_table_send_visit()
+        self.teamwork_apply.click_table_send_visit()
         # 搜索网点
-        self.public_operate(search_word=data["keyword"])
+        self.public_operate(data["发出申请网点"])
         # 点击再次邀请,成为服务商
-        self.teamwork_visit.click_again_visit_teamwork()
-        # 确认邀请
-        self.teamwork_visit.click_confirm_refuse()
-        self.base_page.sleep(2)
-        # 获取状态字段
-        my_visit_status = self.teamwork_visit.get_refuse_my_text()
+        self.teamwork_apply.click_again_visit_teamwork()
+        self.base.sleep(1)
         # 断言
-        self.assert_mode.assert_equal(data["expect"],my_visit_status)
+        self.assertMode.assert_equal(data,self.teamwork_apply.get_refuse_text())
 
-    def test_teamwork_visit003(self):
+    @unittest.skipUnless(readExcel.get_isRun_text("teamwork_operate_003"),"-跳过不执行用例")
+    def test_teamwork_operate003(self):
         """取消合作申请校验"""
 
         # 获取测试数据
-        data = test_data["del_teamwork_fnc"]
+        data = self.readExcel.get_dict_data("teamwork_operate_003")
         # 打印测试用例名称
-        self.base_page.print_case_name(data["CaseName"])
+        self.base.print_case_name(data)
         # 刷新页面
-        self.base_page.refresh_page()
+        self.base.refresh_page()
         # 切换table
-        self.teamwork_visit.click_table_send_visit()
+        self.teamwork_apply.click_table_send_visit()
         # 搜索网点
-        self.public_operate(search_word=data["keyword"])
+        self.public_operate(data["发出申请网点"])
         # 点击两条邀请的撤销
-        self.teamwork_visit.click_del_teamwork_visit()
-        # 获取系统提示信息
-        system_message = self.base_page.get_system_msg()
+        self.teamwork_apply.click_del_teamwork_visit()
+        # 刷新页面
+        self.base.refresh_page()
+        self.public_operate(data["发出申请网点"])
         # 断言
-        self.assert_mode.assert_equal(data["expect"],system_message)
+        self.assertMode.assert_el_not_in_page(data,self.teamwork_apply.get_first_row_isDisplayed())
 
     @classmethod
     def tearDownClass(cls):
-        cls().base_page.quit_browser()
-        mytest.end_test()
-
+        # 清除缓存
+        cls().base.clear_catch()
+        # 退出浏览器
+        cls().base.quit_browser()
 
 if __name__ == '__main__':
     # unittest.main()
 
-    suits = unittest.TestLoader().loadTestsFromTestCase(Teamwork_Visit_Operate)
+    suits = unittest.TestLoader().loadTestsFromTestCase(Teamwork_Apply_Operate)
 
     unittest.TextTestRunner().run(suits)

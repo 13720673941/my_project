@@ -3,209 +3,141 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/6/10 18:15
 
-from public.common.basepage import BasePage
-from selenium.webdriver.common.by import By
-from public.common.logconfig import Log
-from public.page.searchOrderPage import SearchOrderPage
-from config.urlconfig import *
-import time
-log=Log()
+from public.common.basePage import BasePage
+from config.urlConfig import *
 
 class SettleOrderPage(BasePage):
     """
-    订单结算页面
+        【订单结算页面】 -工单结算按回访结算
     """
 
-    # 结算按钮
-    settle_btn = (By.XPATH,'//*[@id="myModalDetails"]/.//button[contains(.,"结算")]')
-    # 结算价格输入框,厂商/经销商结算价格输入框
-    brands_settle_money_input = (By.XPATH,'//label[contains(.,"结算方式：")]/../../div[1]/.//input[@type="text"]')
-    # 未结算提示信息
-    settle_red_msg = (By.XPATH,'//label[text()="结算方式："]/../../div/div/span[2]')
-    # 三种结算方式属性元素
-    settle_type_1_att = (By.XPATH,'//div[2]/div/label[1]/input')
-    settle_type_2_att = (By.XPATH,'//div[2]/div/label[2]/input')
-    settle_type_3_att = (By.XPATH,'//div[2]/div/label[3]/input')
-    # 三种结算方式选择按钮元素
-    settle_type_1 = (By.XPATH,'//div[2]/div/label[1]')
-    settle_type_2 = (By.XPATH,'//div[2]/div/label[2]')
-    settle_type_3 = (By.XPATH,'//div[2]/div/label[3]')
-    # 滑动按钮
-    drop_btn = (By.XPATH,'//*[@class="ivu-slider-button"]')
-    # 滑动后比例的输出位置文本
-    drop_arrive_text = (By.XPATH,'//div[@class="ivu-slider-bar"]/preceding-sibling::input')
-    # 结算价格输入框
-    settle_money_input = (By.XPATH,'//label[contains(.,"结算价格：")]/.././/input[@class="ivu-input-number-input"]')
-    # 钱包结算
-    wallet_settle = (By.XPATH,'//label[contains(.,"付款方式：")]/.././/label[1]')
-    # 线下结算
-    line_down_settle = (By.XPATH,'//label[contains(.,"付款方式：")]/.././/label[2]')
-    # 确定结算
-    confirm_btn = (By.XPATH,'//div[contains(.,"钱包余额：")]/../button[2]')
+    def get_elements(self,option):
+        """获取element_data文件中工单支出页面的元素信息"""
+        return read_config_data("order_expenditure_page",option,elementDataPath)
 
-    def __init__(self,driver):
-        BasePage.__init__(self,driver)
-        self.search_order = SearchOrderPage(driver)
+    def enter_bill_out_going_url(self):
+        """进入工单支出页面"""
+        self.open_url(bill_out_going_url)
 
-    def enter_master_settle_page(self):
-        """进入师傅待结算订单页面"""
-        self.open_url(master_wait_settle_url)
+    def get_row_bill_message(self,rowNumber):
+        """获取全部账单列表中一行的全部信息"""
+        return self.get_text(self.get_elements("row_bill_message").replace("+num+",rowNumber))
 
-    def enter_branch_settle_page(self):
-        """进入服务商待结算订单页面"""
-        self.open_url(branch_wait_settle_url)
+    # def get_bill_message_of_orderNumber(self,orderNumber):
+    #     """以工单编号获取账单列表中的的行信息"""
+    #     for i in range(1,10):
+    #         try:
+    #             billMessage = self.get_row_bill_message(str(i))
+    #             if orderNumber in billMessage:
+    #                 return billMessage
+    #         except:
+    #             raise TimeoutError("Not find bill message of order number: {}".format(orderNumber))
 
-    def enter_return_wait_settle(self):
-        """进入代结订单页"""
-        self.open_url(return_settle_url)
+    def click_bill_details_of_orderNumber(self,orderNumber):
+        """点击账单明细按钮"""
 
-    def click_settle_btn(self):
-        """点击结算按钮"""
-        self.click_button(self.settle_btn)
+        # 循环遍历账单列表中的订单信息
+        for i in range(1,10):
+            try:
+                # 点击账单明细按钮
+                self.click_button(self.get_elements("bill_details_btn").replace("+num+",str(i)))
+                # 输入工单号
+                self.input_message(self.get_elements("bill_details_search_input"),orderNumber)
+                self.sleep(1)
+                # 点击搜索
+                self.click_button(self.get_elements("bill_details_search_btn"))
+                self.sleep(2)
+                # 获取搜索后的第一行的订单信息
+                if self.is_display(self.get_elements("null_order_count_message")):
+                    self.sleep(1)
+                    self.click_button(self.get_elements("return_front_page"))
+                else:
+                    self.log.info("Find bill message success !")
+                    break
+            except:
+                if i == 9:
+                    raise TimeoutError("Not find bill of order number：{}".format(orderNumber))
+                else:
+                    continue
 
-    def get_brands_settle_money_attribute(self):
-        """
-        获取上级结算价格输入框/经销商、厂商结算价格输入框属性
-        判断价格不能编辑
-        """
-        return self.get_att(self.brands_settle_money_input,"disabled")
-
-    def get_brands_settle_value_attribute(self):
-        """
-        获取上级结算价格输入框/经销商、厂商结算价格value值
-        """
-        return self.get_att(self.brands_settle_money_input,"value")
-
-    def not_settle_msg_is_display(self):
-        """未结算提示是否显示"""
-        return self.is_display(self.settle_red_msg)
-
-    def get_settle_msg(self):
-        """获取为结算提示字段信息"""
-        return self.get_text(self.settle_red_msg)
-
-    def select_settle_type_1(self):
-        """选择按规则结算"""
-        self.click_button(self.settle_type_1)
-
-    def get_settle_type_1_att(self):
-        """获取规则结算方式选择属性"""
-        return self.get_att(self.settle_type_1_att,"disabled")
-
-    def select_settle_type_2(self):
-        """选择按固定金额结算"""
-        self.click_button(self.settle_type_2)
-
-    def get_settle_type_2_att(self):
-        """获取固定金额结算方式选择属性"""
-        return self.get_att(self.settle_type_2_att,"disabled")
-
-    def select_settle_type_3(self):
-        """选择按固定比例结算"""
-        self.click_button(self.settle_type_3)
-
-    def get_settle_type_3_att(self):
-        """获取固定比例结算方式选择属性"""
-        return self.get_att(self.settle_type_3_att,"disabled")
-
-    def get_drop_arrive_text(self):
-        """获取我方的比例"""
-        return self.get_att(self.drop_arrive_text,"value").split(',')[0]
-
-    def input_settle_money(self,settle_money='100'):
-        """输入结算价格"""
-        self.clear_input(self.settle_money_input)
-        self.input_message(self.settle_money_input,settle_money)
-
-    def get_settle_money_value(self):
-        """获取结算价格输入框的value"""
-        return self.get_att(self.settle_money_input,"value")
-
-    def get_settle_money_attribute(self):
-        """获取结算价格输入框的属性不能编辑"""
-        return self.get_att(self.settle_money_input,"readonly")
-
-    def select_wallet_pay(self):
-        """选择钱包支付"""
-        self.click_button(self.wallet_settle)
-
-    def select_line_down_pay(self):
-        """选择线下支付"""
-        self.click_button(self.line_down_settle)
-
-    def click_confirm_pay(self):
-        """点击确定结算"""
-        self.click_button(self.confirm_btn)
-
-    def sliding_scale_button(self,arrive_txt):
-        """
-        结算页面固定比例结算按钮左右滑动封装
-        :param txtelement 判断所用获取的文本
-        :param arrivetxt  索要滑动的位置文本
-        """
-        t1 = time.time()
-        # 等待按钮加载
-        self.sleep(2)
-        dragButton = self.get_element(self.drop_btn)
-        # 获取滑块y坐标位置
-        dragButton_y = dragButton.location['y']
-        actions = self.click_and_hold_btn(dragButton)
-        # 归零0，y
-        while True:
-            self.sleep(2)
-            # 获取移动后的文本
-            txt1 = self.get_drop_arrive_text()
-            # 滑块x坐标归零
-            if txt1 == '0':
-                break
-            else:
-                actions.move_by_offset(-1,dragButton_y).perform()
-        # 清除缓存操作
-        actions.reset_actions()
-        log.info('{0} Button: <{1}>, remove zero, Spend {2} seconds.'
-                 .format(self.success,self.drop_btn,time.time()-t1))
-        while True:
-            self.sleep(2)
-            txt2 = self.get_drop_arrive_text()
-            # 滑动的像素源代码中取的正整数，页面滑动1实际滑动不确定，
-            # 只能判断大于期望的比例
-            if int(txt2) > int(arrive_txt):
-                actions.release(dragButton).perform() # 释放左键
-                break
-            else:
-                actions.move_by_offset(1,dragButton_y).perform()
-        log.info('{0} Button: {1}, remove right arrive {2}, Spend {3} seconds.'
-                 .format(self.success,self.drop_btn,self.drop_arrive_text,time.time()-t1))
-
-    def settle_main(self,order_number,settle_branch=False):
-        """结算主程序"""
-
-        # 进入工单结算页面
-        if settle_branch:
-            self.enter_branch_settle_page()
-        else:
-            self.enter_master_settle_page()
-        # 搜索工单
-        self.sleep(2)
-        self.search_order.input_order_Nnumber(orderNum=order_number)
-        self.search_order.click_search_btn()
+    def click_confirm_bill_btn(self):
+        """点击确认账单按钮"""
         self.sleep(1)
-        # 进入工单详情页
-        self.open_order_message(OrderNumber=order_number)
+        self.click_button(self.get_elements("confirm_bill_btn"))
+
+    def click_confirm_bill_confirm_btn(self):
+        """点击确认账单弹窗的确认按钮"""
+        self.click_button(self.get_elements("confirm_bill_confirm_btn"))
+
+    def click_promptly_settle_btn(self):
+        """点击立即结算按钮"""
+        self.sleep(4)
+        self.click_button(self.get_elements("promptly_settle_btn"))
+
+    def select_money_wattle_settle(self):
+        """选择钱包结算"""
+        btn = self.get_elements("money_wattle_settle_btn")
+        # 替换元素的路径信息总共有六个
+        for i in range(1,7):
+            try:
+                self.click_button(btn.replace("+num+",str(i)))
+                break
+            except:
+                if i == 6:
+                    raise Exception("Not find select money settle element on page .")
+                else:
+                    pass
+
+    def select_line_down_settle(self):
+        """选择线下结算"""
+        btn = self.get_elements("down_line_settle_btn")
+        # 替换元素的路径信息总共有六个
+        for i in range(1,7):
+            try:
+                self.click_button(btn.replace("+num+",str(i)))
+                break
+            except:
+                if i == 6:
+                    raise Exception("Not find select down line settle element on page .")
+                else:
+                    pass
+
+    def click_confirm_settle_btn(self):
+        """点击确认结算按钮"""
+        self.sleep(4)
+        self.click_button(self.get_elements("confirm_settle_btn"))
+
+    def get_bill_settle_status(self):
+        """获取账单结算状态"""
+        self.sleep(2)
+        return self.get_text(self.get_elements("bill_settle_status"))
+
+    def settle_order_main(self,orderNumber):
+        """订单结算主程序"""
+
+        self.log.info("-=【工单结算】=-")
+        # 进入订单支出页面
+        self.enter_bill_out_going_url()
         self.sleep(1)
-        # 点击结算
-        self.click_settle_btn()
+        # 点击账单明细
+        self.click_bill_details_of_orderNumber(orderNumber)
+        # 如果能搜索出来点击确认账单
+        self.click_confirm_bill_btn()
+        self.click_confirm_bill_confirm_btn()
+        # 点击立即结算
+        self.sleep(4)
+        self.click_promptly_settle_btn()
         # 选择线下结算
-        self.select_line_down_pay()
-        # 确定结算
-        self.click_confirm_pay()
-        system_msg = self.get_system_msg()
-        # 判断结算结果
-        if system_msg == "结单完成":
-            log.info("{0} ** {1} Settle Success!".format(self.success,order_number))
+        self.select_line_down_settle()
+        self.click_confirm_settle_btn()
+        self.sleep(2)
+        # 结算成功刷新页面
+        self.refresh_page()
+        # 获取账单结算状态
+        bill_status = self.get_bill_settle_status()
+        # 判断是否结算成功
+        if "已结算" in bill_status:
+            self.log.info(" ** Bill settle success !")
         else:
-            log.error("{0} ** {1} Settle Fail!".format(self.fail,order_number))
-
-
-
+            raise Exception(" ** Bill settle fail !")
 

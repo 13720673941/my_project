@@ -3,156 +3,194 @@
 #  @Author  : Mr.Deng
 #  @Time    : 2019/5/27 10:44
 
-from public.common import driver,getdata,rwconfig
-from public.page.forgetPwdPage import ForgetPwd
+from public.common import rwConfig
+from public.common.assertMode import Assert
+from public.common.driver import web_driver
+from public.common.basePage import BasePage
 from public.page.loginPage import LoginPage
-from public.common.basepage import BasePage
-from public.common.assertmode import Assert
-from public.common import mytest
+from public.page.forgetPwdPage import ForgetPwd
+from public.common.operateExcel import *
+from public.common import getNewPwd
+from public.common import myDecorator
 import unittest,ddt
-'''
-网点忘记密码功能测试用例脚本：
-1、手机号为空校验 2、验证码为空校验 3、新密码为空校验 4、确认密码为空校验 5、未注册手机号校验
-6、验证码不正确校验 7、新密码长度上点值校验 8、新密码长度离点值校验 9、新密码特殊字符校验
-10、新密码与确认密码不同校验 11、修改密码成功校验 12、获取验证码-手机号为空校验 13、获取验证码-手机号未注册校验
-14、获取验证码-正确发送验证码校验 15、修改成功的密码可以登录 16、旧密码不能成功登陆
-'''
-# 获取修改密码测试数据
-Data = getdata.get_test_data()["ForgetPwdPage"]["forget_pwd_fnc"]
-Data1 = getdata.get_test_data()["ForgetPwdPage"]["get_code_fnc"]
-Data3 = getdata.get_test_data()["ForgetPwdPage"]["logic_test"]
+
 @ddt.ddt
 class Forget_Pwd(unittest.TestCase):
 
+    """ 【PC忘记密码功能测试用例脚本】 """
+
+    # 需要加入ddt中的测试用例id
+    case_list = [
+        "forget_pwd_001","forget_pwd_002","forget_pwd_003","forget_pwd_004","forget_pwd_005",
+        "forget_pwd_006","forget_pwd_007","forget_pwd_008","forget_pwd_009","forget_pwd_010",
+        "forget_pwd_011"
+    ]
+    # 获取ddt模式测试数据
+    read_excel = Read_Excel("forgetPwd")
+    ddt_data = read_excel.get_ddt_data(case_list)
+
     @classmethod
     def setUpClass(cls):
-        # 设置浏览器驱动
-        cls.dr = driver.browser_driver()
-        # 实例化类
-        cls.basePage = BasePage(cls.dr)
-        cls.forgetPwd = ForgetPwd(cls.dr)
-        cls.login = LoginPage(cls.dr)
-        cls.assertMode = Assert(cls.dr)
-        # 清除浏览器缓存
-        cls.basePage.clear_catch()
-        # 获取旧密码
-        cls.old_pwd = rwconfig.read_config_data('西安好家帮家政有限公司','password')
-        # 旧密码替换 15 测试用例的密码
-        Data3[0]["password"] = cls.old_pwd
-        # 获取新密码
-        for pwd in getdata.get_test_data()["ForgetPwdPage"]["PwdList"]:
-            if  pwd != cls.old_pwd:
-                cls.new_pwd = pwd
-        # 新密码写入到修改成功的密码参数中
-        Data[-1]["NewPwd"] = cls.new_pwd
-        Data[-1]["ConfirmPwd"] = cls.new_pwd
-        Data3[1]["password"] = cls.new_pwd
-        # 打开登录页面
-        mytest.start_test()
-        cls.login.enter_login_page()
+        # 实例化断言类
+        cls.driver = web_driver()
+        cls.login = LoginPage(cls.driver)
+        cls.base = BasePage(cls.driver)
+        cls.forget_pwd = ForgetPwd(cls.driver)
+        cls.assert_mode = Assert(cls.driver, "forgetPwd")
+        # 获取新旧密码
+        cls.old_pwd,cls.new_pwd = getNewPwd.get_new_pwd()
+        # 参数赋值
+        cls.ddt_data[-1]["新密码"] = cls.new_pwd
+        cls.ddt_data[-1]["确认密码"] = cls.new_pwd
 
-    @ddt.data(*Data)
-    def test_forgetPwd001(self,Data):
-        '''忘记密码功能测试用例脚本'''
+    def setUp(self):
+        # 进入登录页面
+        self.login.enter_login_page()
+
+    @ddt.data(*ddt_data)
+    @myDecorator.skipped_case
+    def test_forgetPwd001(self,ddt_data):
+        """忘记密码功能测试用例脚本"""
+
         # 获取测试用例名称
-        self.basePage.print_case_name(Data["CaseName"])
-        # 刷新页面
-        self.basePage.refresh_page()
+        self.base.print_case_name(ddt_data)
         # 点击忘记密码按钮
-        self.forgetPwd.click_forgetPwd_btn()
+        self.forget_pwd.click_forgetPwd_btn()
         # 输入手机号
-        self.forgetPwd.input_phoneNum(PhoneNum=Data["PhoneNum"])
+        self.forget_pwd.input_phoneNum(ddt_data["手机号"])
         # 输入验证码
-        self.forgetPwd.input_codeNum(CodeNum=Data["CodeNum"])
+        self.forget_pwd.input_codeNum(ddt_data["验证码"])
         # 输入新密码
-        self.forgetPwd.input_new_pwd(NewPwd=Data["NewPwd"])
+        self.forget_pwd.input_new_pwd(ddt_data["新密码"])
         # 输入确认密码
-        self.forgetPwd.input_confirm_pwd(ConfirmPwd=Data["ConfirmPwd"])
+        self.forget_pwd.input_confirm_pwd(ddt_data["确认密码"])
         # 点击重置密码按钮
-        self.forgetPwd.click_reset_pwd_btn()
+        self.forget_pwd.click_reset_pwd_btn()
         # 时间加载等待
-        self.basePage.sleep(1)
+        self.base.sleep(1)
         # 获取系统系统提示信息
-        Msg = self.basePage.get_system_msg()
+        Msg = self.login.get_system_msg()
         # 断言
-        self.assertMode.assert_equal(Data["expect"],Msg)
+        self.assert_mode.assert_equal(ddt_data,Msg)
         if Msg == '密码修改成功':
             # 把修改的密码写入配置文件中
-            rwconfig.write_config_data('西安好家帮家政有限公司','password',self.new_pwd)
-            print('New password: {0}'.format(self.new_pwd))
+            rwConfig.write_config_data('T西安好家帮家政有限公司','password',self.new_pwd)
 
-    @ddt.data(*Data1)
-    def test_forgetPwd002(self,Data1):
-        '''获取验证码功能校验'''
-        # 默认执行结果为Fail
-        success='FAIL'
+    @unittest.skipUnless(read_excel.get_isRun_text("forget_pwd_012"),"-跳过不执行该用例")
+    def test_forgetPwd002(self):
+        """获取验证码手机号为空校验"""
+
+        # 获取测试用例
+        test_data = self.read_excel.get_dict_data("forget_pwd_012")
         # 获取测试用例名称
-        self.basePage.print_case_name(Data1["CaseName"])
-        # 刷新页面
-        self.basePage.refresh_page()
+        self.base.print_case_name(test_data)
+        # 刷新清除数据
+        self.base.refresh_page()
         # 点击忘记密码按钮
-        self.forgetPwd.click_forgetPwd_btn()
+        self.forget_pwd.click_forgetPwd_btn()
         # 输入手机号
-        self.forgetPwd.input_phoneNum(PhoneNum=Data1["PhoneNum"])
+        self.forget_pwd.input_phoneNum(test_data["手机号"])
         # 点击获取验证码按钮
-        self.forgetPwd.click_getCode_btn()
+        self.forget_pwd.click_getCode_btn()
         # 时间等待元素加载
-        self.basePage.sleep(1)
+        self.base.sleep(1)
         # 获取系统提示字段
-        Msg = self.basePage.get_system_msg()
+        Msg = self.login.get_system_msg()
         # 断言结果
-        self.assertMode.assert_equal(Data1["expect"],Msg)
+        self.assert_mode.assert_equal(test_data,Msg)
 
+    @unittest.skipUnless(read_excel.get_isRun_text("forget_pwd_013"),"-跳过不执行该用例")
     def test_forgetPwd003(self):
-        '''发送成功验证码'''
-        # 获取测试数据
-        Data2 = getdata.get_test_data()["ForgetPwdPage"]["send_code_success"]
-        # 获取测试用例名称
-        self.basePage.print_case_name(Data2["CaseName"])
-        self.basePage.refresh_page()
-        # 点击忘记密码按钮
-        self.basePage.sleep(1)
-        self.forgetPwd.click_forgetPwd_btn()
-        # 输入手机号
-        self.forgetPwd.input_phoneNum(PhoneNum=Data2["PhoneNum"])
-        # 点击获取验证码按钮
-        self.forgetPwd.click_getCode_btn()
-        # 时间等待元素加载
-        self.basePage.sleep(1)
-        # 获取发送成功后按钮元素属性
-        Attribute = self.forgetPwd.get_codeBtn_attribute(AttrName='class')
-        # 断言
-        self.assertMode.assert_equal(Data2["expect"],Attribute)
+        """获取验证码手机号未注册校验"""
 
-    @ddt.data(*Data3)
-    def test_forgetPwd004(self,Data3):
-        '''修改密码后逻辑校验'''
+        # 获取测试用例
+        test_data = self.read_excel.get_dict_data("forget_pwd_013")
         # 获取测试用例名称
-        self.basePage.print_case_name(Data3["CaseName"])
-        # 刷新页面
-        self.basePage.refresh_page()
-        # 调用登录
-        self.login.enter_login_page()
-        self.login.input_username(UserName=Data3["username"])
-        self.login.input_password(PassWord=Data3["password"])
-        self.login.click_login_button()
-        self.basePage.sleep(1)
+        self.base.print_case_name(test_data)
+        # 点击忘记密码按钮
+        self.forget_pwd.click_forgetPwd_btn()
+        # 输入手机号
+        self.forget_pwd.input_phoneNum(test_data["手机号"])
+        # 点击获取验证码按钮
+        self.forget_pwd.click_getCode_btn()
+        # 时间等待元素加载
+        self.base.sleep(1)
+        # 获取系统提示字段
+        Msg = self.login.get_system_msg()
+        # 断言结果
+        self.assert_mode.assert_equal(test_data,Msg)
+
+    @unittest.skipUnless(read_excel.get_isRun_text("forget_pwd_014"),"-跳过不执行该用例")
+    def test_forgetPwd004(self):
+        """发送成功验证码校验"""
+
+        # 获取测试数据
+        test_data = self.read_excel.get_dict_data("forget_pwd_014")
+        # 获取测试用例名称
+        self.base.print_case_name(test_data)
+        # 点击忘记密码
+        self.forget_pwd.click_forgetPwd_btn()
+        # 输入手机号
+        self.forget_pwd.input_phoneNum(test_data["手机号"])
+        # 点击获取验证码按钮
+        self.forget_pwd.click_getCode_btn()
+        # 时间等待元素加载
+        self.base.sleep(1)
+        # 获取发送成功后按钮元素属性
+        Attribute = self.forget_pwd.get_codeBtn_attribute()
         # 断言
-        self.assertMode.assert_equal(Data3["expect"],self.basePage.get_system_msg())
+        self.assert_mode.assert_equal(test_data,Attribute)
+
+    @unittest.skipUnless(read_excel.get_isRun_text("forget_pwd_015"),"-跳过不执行该用例")
+    def test_forgetPwd005(self):
+        """修改密码后旧密码不能成功登录校验"""
+
+        # 获取测试数据
+        test_data = self.read_excel.get_dict_data("forget_pwd_015")
+        # 赋值
+        test_data["密码"] = self.old_pwd
+        # 获取测试用例名称
+        self.base.print_case_name(test_data)
+        # 刷新页面
+        self.base.refresh_page()
+        self.login.input_username(test_data["手机号"])
+        self.login.input_password(test_data["密码"])
+        self.login.click_login_button()
+        self.base.sleep(1)
+        Msg = self.login.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(test_data,Msg)
+
+    @unittest.skipUnless(read_excel.get_isRun_text("forget_pwd_016"),"-跳过不执行该用例")
+    def test_forgetPwd006(self):
+        """修改密码后新密码可以成功登录校验"""
+
+        # 获取测试数据
+        test_data = self.read_excel.get_dict_data("forget_pwd_016")
+        # 赋值
+        test_data["密码"] = self.new_pwd
+        # 获取测试用例名称
+        self.base.print_case_name(test_data)
+        # 刷新页面
+        self.base.refresh_page()
+        self.login.input_username(test_data["手机号"])
+        self.login.input_password(test_data["密码"])
+        self.login.click_login_button()
+        self.base.sleep(1)
+        Msg = self.login.get_system_msg()
+        # 断言
+        self.assert_mode.assert_equal(test_data,Msg)
 
     @classmethod
     def tearDownClass(cls):
+        # 清除缓存
+        cls().base.clear_catch()
         # 退出浏览器
-        cls.basePage.quit_browser()
-        mytest.end_test()
-
+        cls().base.quit_browser()
 
 if __name__ == '__main__':
     unittest.main()
 
-    suit = unittest.TestSuite()
-    suit.addTest(Forget_Pwd('test_forgetPwd'))
-    suit.addTest(Forget_Pwd('test_getCodeNum'))
-    suit.addTest(Forget_Pwd('test_sendSuccess'))
+    suit = unittest.TestLoader().loadTestsFromTestCase(Forget_Pwd)
     unittest.TextTestRunner().run(suit)
 

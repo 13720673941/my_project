@@ -1,0 +1,1391 @@
+2020-03-02 19:44:35,217 INFO:   * Launch browser of "chrome" . 
+2020-03-02 19:44:36,388 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:44:36,389 INFO:   * Load case name: 【验证用户名为空不能成功注册】
+2020-03-02 19:44:36,430 INFO:   * Refresh current page .
+2020-03-02 19:44:41,606 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:44:41,607 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:44:41,705 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:44:41,816 INFO:   * Input message:  
+2020-03-02 19:44:42,014 INFO:   * Input message: 13700003941 
+2020-03-02 19:44:42,174 INFO:   * Input message: 88888888 
+2020-03-02 19:44:42,324 INFO:   * Input message: 111111 
+2020-03-02 19:44:42,462 INFO:   * Input message: 111111 
+2020-03-02 19:44:42,586 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:44:44,587 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:44:44,648 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入用户名 .
+2020-03-02 19:44:44,650 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:44:44,651 INFO:   * Load case name: 【验证手机号为空不能成功注册】
+2020-03-02 19:44:46,259 INFO:   * Refresh current page .
+2020-03-02 19:44:48,332 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:44:48,333 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:44:48,417 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:44:48,600 INFO:   * Input message: AutoTest 
+2020-03-02 19:44:48,675 INFO:   * Input message:  
+2020-03-02 19:44:48,830 INFO:   * Input message: 88888888 
+2020-03-02 19:44:48,956 INFO:   * Input message: 111111 
+2020-03-02 19:44:49,095 INFO:   * Input message: 111111 
+2020-03-02 19:44:49,239 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:44:51,249 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:44:51,308 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-03-02 19:44:51,309 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:44:51,310 INFO:   * Load case name: 【验证验证码为空不能成功注册】
+2020-03-02 19:44:52,202 INFO:   * Refresh current page .
+2020-03-02 19:44:54,427 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:44:54,428 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:44:54,512 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:44:54,687 INFO:   * Input message: AutoTest 
+2020-03-02 19:44:54,836 INFO:   * Input message: 13700003941 
+2020-03-02 19:44:54,900 INFO:   * Input message:  
+2020-03-02 19:44:54,989 INFO:   * Input message: 111111 
+2020-03-02 19:44:55,145 INFO:   * Input message: 111111 
+2020-03-02 19:44:55,274 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:44:57,275 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:44:57,317 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入短信验证码 .
+2020-03-02 19:44:57,318 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:44:57,318 INFO:   * Load case name: 【验证新密码为空不能成功注册】
+2020-03-02 19:45:00,384 INFO:   * Refresh current page .
+2020-03-02 19:45:02,502 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:02,504 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:02,607 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:02,776 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:02,927 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:03,149 INFO:   * Input message: 88888888 
+2020-03-02 19:45:03,279 INFO:   * Input message:  
+2020-03-02 19:45:03,375 INFO:   * Input message: 111111 
+2020-03-02 19:45:03,455 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:05,457 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:05,549 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入6-18位登录密码 .
+2020-03-02 19:45:05,550 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:05,551 INFO:   * Load case name: 【验证确认密码为空不能成功注册】
+2020-03-02 19:45:06,486 INFO:   * Refresh current page .
+2020-03-02 19:45:08,671 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:08,673 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:08,752 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:08,916 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:09,151 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:09,332 INFO:   * Input message: 88888888 
+2020-03-02 19:45:09,421 INFO:   * Input message: 111111 
+2020-03-02 19:45:09,482 INFO:   * Input message:  
+2020-03-02 19:45:09,563 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:11,564 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:11,639 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-03-02 19:45:11,641 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:11,643 INFO:   * Load case name: 【验证已经注册的用户名不能成功注册】
+2020-03-02 19:45:12,678 INFO:   * Refresh current page .
+2020-03-02 19:45:14,769 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:14,770 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:14,862 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:15,049 INFO:   * Input message: branch01 
+2020-03-02 19:45:15,309 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:15,426 INFO:   * Input message: 88888888 
+2020-03-02 19:45:15,548 INFO:   * Input message: 111111 
+2020-03-02 19:45:15,648 INFO:   * Input message: 111111 
+2020-03-02 19:45:15,728 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:17,730 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:17,839 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: branch01已存在 .
+2020-03-02 19:45:17,840 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:17,841 INFO:   * Load case name: 【验证已经注册的手机号不能成功注册】
+2020-03-02 19:45:20,920 INFO:   * Refresh current page .
+2020-03-02 19:45:23,023 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:23,025 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:23,169 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:23,391 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:23,526 INFO:   * Input message: 13700000004 
+2020-03-02 19:45:23,635 INFO:   * Input message: 88888888 
+2020-03-02 19:45:23,726 INFO:   * Input message: 111111 
+2020-03-02 19:45:23,812 INFO:   * Input message: 111111 
+2020-03-02 19:45:23,887 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:25,888 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:25,989 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 手机号码已存在 .
+2020-03-02 19:45:25,992 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:25,994 INFO:   * Load case name: 【验证错误的验证码不能成功注册】
+2020-03-02 19:45:26,968 INFO:   * Refresh current page .
+2020-03-02 19:45:29,172 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:29,174 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:29,296 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:29,464 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:29,597 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:29,698 INFO:   * Input message: 000000 
+2020-03-02 19:45:29,782 INFO:   * Input message: 111111 
+2020-03-02 19:45:29,870 INFO:   * Input message: 111111 
+2020-03-02 19:45:29,948 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:31,950 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:32,058 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请重新获取验证码 .
+2020-03-02 19:45:32,059 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:32,059 INFO:   * Load case name: 【验证新密码和确认密码不同不能成功注册】
+2020-03-02 19:45:35,262 INFO:   * Refresh current page .
+2020-03-02 19:45:37,329 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:37,330 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:37,406 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:37,567 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:37,708 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:37,839 INFO:   * Input message: 88888888 
+2020-03-02 19:45:37,924 INFO:   * Input message: 111111 
+2020-03-02 19:45:38,009 INFO:   * Input message: 222222 
+2020-03-02 19:45:38,089 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:40,090 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:40,132 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-03-02 19:45:40,133 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:40,134 INFO:   * Load case name: 【验证错误的用户名格式不能成功注册】
+2020-03-02 19:45:41,132 INFO:   * Refresh current page .
+2020-03-02 19:45:43,257 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:43,259 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:43,333 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:43,470 INFO:   * Input message: ！@#￥% 
+2020-03-02 19:45:43,616 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:43,749 INFO:   * Input message: 88888888 
+2020-03-02 19:45:43,844 INFO:   * Input message: 111111 
+2020-03-02 19:45:43,942 INFO:   * Input message: 111111 
+2020-03-02 19:45:44,019 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:46,021 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:46,103 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入汉字、字母、0-9、下划线 .
+2020-03-02 19:45:46,105 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:46,106 INFO:   * Load case name: 【验证错误的手机号格式不能成功注册】
+2020-03-02 19:45:47,262 INFO:   * Refresh current page .
+2020-03-02 19:45:49,508 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:49,510 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:49,583 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:49,748 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:49,876 INFO:   * Input message: 1370000394 
+2020-03-02 19:45:49,990 INFO:   * Input message: 88888888 
+2020-03-02 19:45:50,078 INFO:   * Input message: 111111 
+2020-03-02 19:45:50,164 INFO:   * Input message: 111111 
+2020-03-02 19:45:50,245 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:52,247 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:52,315 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-03-02 19:45:52,317 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:52,319 INFO:   * Load case name: 【验证密码格式错误不能成功注册】
+2020-03-02 19:45:53,311 INFO:   * Refresh current page .
+2020-03-02 19:45:55,564 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:45:55,566 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:45:55,672 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:45:55,838 INFO:   * Input message: AutoTest 
+2020-03-02 19:45:55,970 INFO:   * Input message: 13700003941 
+2020-03-02 19:45:56,078 INFO:   * Input message: 88888888 
+2020-03-02 19:45:56,187 INFO:   * Input message: !@#$%^ 
+2020-03-02 19:45:56,286 INFO:   * Input message: !@#$%^ 
+2020-03-02 19:45:56,363 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:45:58,366 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:45:58,484 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-03-02 19:45:58,485 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:45:58,485 INFO:   * Load case name: 【验证密码长度小于最小值不能注册】
+2020-03-02 19:45:59,647 INFO:   * Refresh current page .
+2020-03-02 19:46:01,728 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:46:01,729 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:46:01,801 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:46:01,959 INFO:   * Input message: AutoTest 
+2020-03-02 19:46:02,096 INFO:   * Input message: 13700003941 
+2020-03-02 19:46:02,203 INFO:   * Input message: 88888888 
+2020-03-02 19:46:02,286 INFO:   * Input message: 11111 
+2020-03-02 19:46:02,368 INFO:   * Input message: 11111 
+2020-03-02 19:46:02,450 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:46:04,450 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:46:04,522 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-03-02 19:46:04,524 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:46:04,525 INFO:   * Load case name: 【验证密码长度大于最大值不能注册】
+2020-03-02 19:46:07,593 INFO:   * Refresh current page .
+2020-03-02 19:46:09,696 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:46:09,697 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:46:09,775 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:46:09,941 INFO:   * Input message: AutoTest 
+2020-03-02 19:46:10,071 INFO:   * Input message: 13700003941 
+2020-03-02 19:46:10,181 INFO:   * Input message: 88888888 
+2020-03-02 19:46:10,357 INFO:   * Input message: 11111111111111111111 
+2020-03-02 19:46:10,507 INFO:   * Input message: 11111111111111111111 
+2020-03-02 19:46:10,585 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:46:12,587 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:46:12,628 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-03-02 19:46:12,636 INFO:   * Clear browser catch data .
+2020-03-02 19:46:15,487 INFO:   * Quit browser .
+2020-03-02 19:46:21,347 INFO:   * Launch browser of "chrome" . 
+2020-03-02 19:46:22,492 WARNING:  Skipped: -跳过不执行该用例 login_001: 登录-用户名密码为空校验
+2020-03-02 19:46:22,493 WARNING:  Skipped: -跳过不执行该用例 login_002: 登录-用户名为空校验
+2020-03-02 19:46:22,494 WARNING:  Skipped: -跳过不执行该用例 login_003: 登录-密码为空校验
+2020-03-02 19:46:22,495 WARNING:  Skipped: -跳过不执行该用例 login_004: 登录-用户名不正确密码正确校验
+2020-03-02 19:46:22,495 WARNING:  Skipped: -跳过不执行该用例 login_005: 登录-用户名正确密码不正确校验
+2020-03-02 19:46:22,496 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:46:22,497 INFO:   * Load case name: 【登录-正确用户名密码校验】
+2020-03-02 19:46:27,671 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 19:46:27,672 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:46:28,876 INFO:   * Refresh current page .
+2020-03-02 19:46:29,122 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 19:46:29,372 INFO:   * Input message: 13700000004 
+2020-03-02 19:46:29,445 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 19:46:29,543 INFO:   * Input message: 222222 
+2020-03-02 19:46:29,650 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 19:46:30,651 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 19:46:32,492 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 登录成功 .
+2020-03-02 19:46:33,369 INFO:   * Save screen shot to: D:\my_test_script\UItest-branch\result\image\20200302194632.png .
+2020-03-02 19:46:33,484 INFO:   * Clear browser catch data .
+2020-03-02 19:46:37,663 INFO:   * Quit browser .
+2020-03-02 19:46:43,436 INFO:   * Launch browser of "chrome" . 
+2020-03-02 19:46:44,579 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:46:44,581 INFO:   * Load case name: 【验证用户名为空不能成功注册】
+2020-03-02 19:46:44,611 INFO:   * Refresh current page .
+2020-03-02 19:46:49,430 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:46:49,431 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:46:49,519 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:46:49,645 INFO:   * Input message:  
+2020-03-02 19:46:49,892 INFO:   * Input message: 13700003941 
+2020-03-02 19:46:50,065 INFO:   * Input message: 88888888 
+2020-03-02 19:46:50,201 INFO:   * Input message: 111111 
+2020-03-02 19:46:50,306 INFO:   * Input message: 111111 
+2020-03-02 19:46:50,408 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:46:52,410 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:46:52,462 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入用户名 .
+2020-03-02 19:46:52,463 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:46:52,464 INFO:   * Load case name: 【验证手机号为空不能成功注册】
+2020-03-02 19:46:53,679 INFO:   * Refresh current page .
+2020-03-02 19:46:55,905 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:46:55,906 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:46:55,981 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:46:56,145 INFO:   * Input message: AutoTest 
+2020-03-02 19:46:56,214 INFO:   * Input message:  
+2020-03-02 19:46:56,358 INFO:   * Input message: 88888888 
+2020-03-02 19:46:56,471 INFO:   * Input message: 111111 
+2020-03-02 19:46:56,571 INFO:   * Input message: 111111 
+2020-03-02 19:46:56,649 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:46:58,651 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:46:58,725 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-03-02 19:46:58,726 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:46:58,727 INFO:   * Load case name: 【验证验证码为空不能成功注册】
+2020-03-02 19:47:01,784 INFO:   * Refresh current page .
+2020-03-02 19:47:03,887 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:03,888 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:03,969 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:04,133 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:04,283 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:04,345 INFO:   * Input message:  
+2020-03-02 19:47:04,441 INFO:   * Input message: 111111 
+2020-03-02 19:47:04,541 INFO:   * Input message: 111111 
+2020-03-02 19:47:04,621 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:06,622 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:06,732 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入短信验证码 .
+2020-03-02 19:47:06,733 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:06,735 INFO:   * Load case name: 【验证新密码为空不能成功注册】
+2020-03-02 19:47:07,750 INFO:   * Refresh current page .
+2020-03-02 19:47:10,055 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:10,057 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:10,167 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:10,327 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:10,519 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:10,646 INFO:   * Input message: 88888888 
+2020-03-02 19:47:10,721 INFO:   * Input message:  
+2020-03-02 19:47:10,849 INFO:   * Input message: 111111 
+2020-03-02 19:47:10,946 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:12,948 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:12,996 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入6-18位登录密码 .
+2020-03-02 19:47:12,998 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:12,999 INFO:   * Load case name: 【验证确认密码为空不能成功注册】
+2020-03-02 19:47:13,016 INFO:   * Refresh current page .
+2020-03-02 19:47:16,390 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:16,391 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:16,473 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:16,633 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:16,783 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:16,906 INFO:   * Input message: 88888888 
+2020-03-02 19:47:17,010 INFO:   * Input message: 111111 
+2020-03-02 19:47:17,150 INFO:   * Input message:  
+2020-03-02 19:47:17,295 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:19,297 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:19,339 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-03-02 19:47:19,340 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:19,341 INFO:   * Load case name: 【验证已经注册的用户名不能成功注册】
+2020-03-02 19:47:20,245 INFO:   * Refresh current page .
+2020-03-02 19:47:22,448 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:22,449 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:22,533 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:22,694 INFO:   * Input message: branch01 
+2020-03-02 19:47:22,836 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:22,972 INFO:   * Input message: 88888888 
+2020-03-02 19:47:23,181 INFO:   * Input message: 111111 
+2020-03-02 19:47:23,334 INFO:   * Input message: 111111 
+2020-03-02 19:47:23,415 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:25,417 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:25,502 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: branch01已存在 .
+2020-03-02 19:47:25,505 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:25,506 INFO:   * Load case name: 【验证已经注册的手机号不能成功注册】
+2020-03-02 19:47:26,422 INFO:   * Refresh current page .
+2020-03-02 19:47:28,666 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:28,668 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:28,761 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:28,923 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:29,154 INFO:   * Input message: 13700000004 
+2020-03-02 19:47:29,313 INFO:   * Input message: 88888888 
+2020-03-02 19:47:29,409 INFO:   * Input message: 111111 
+2020-03-02 19:47:29,497 INFO:   * Input message: 111111 
+2020-03-02 19:47:29,573 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:31,575 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:31,677 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 手机号码已存在 .
+2020-03-02 19:47:31,679 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:31,680 INFO:   * Load case name: 【验证错误的验证码不能成功注册】
+2020-03-02 19:47:32,656 INFO:   * Refresh current page .
+2020-03-02 19:47:34,782 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:34,783 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:34,877 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:35,113 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:35,320 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:35,437 INFO:   * Input message: 000000 
+2020-03-02 19:47:35,529 INFO:   * Input message: 111111 
+2020-03-02 19:47:35,619 INFO:   * Input message: 111111 
+2020-03-02 19:47:35,692 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:37,693 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:37,759 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请重新获取验证码 .
+2020-03-02 19:47:37,761 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:37,761 INFO:   * Load case name: 【验证新密码和确认密码不同不能成功注册】
+2020-03-02 19:47:38,702 INFO:   * Refresh current page .
+2020-03-02 19:47:40,860 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:40,861 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:40,938 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:41,139 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:41,352 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:41,465 INFO:   * Input message: 88888888 
+2020-03-02 19:47:41,560 INFO:   * Input message: 111111 
+2020-03-02 19:47:41,655 INFO:   * Input message: 222222 
+2020-03-02 19:47:41,737 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:43,740 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:43,830 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-03-02 19:47:43,832 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:43,833 INFO:   * Load case name: 【验证错误的用户名格式不能成功注册】
+2020-03-02 19:47:44,746 INFO:   * Refresh current page .
+2020-03-02 19:47:46,900 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:46,901 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:46,982 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:47,219 INFO:   * Input message: ！@#￥% 
+2020-03-02 19:47:47,412 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:47,578 INFO:   * Input message: 88888888 
+2020-03-02 19:47:47,729 INFO:   * Input message: 111111 
+2020-03-02 19:47:47,816 INFO:   * Input message: 111111 
+2020-03-02 19:47:47,893 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:49,894 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:49,989 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入汉字、字母、0-9、下划线 .
+2020-03-02 19:47:49,992 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:49,993 INFO:   * Load case name: 【验证错误的手机号格式不能成功注册】
+2020-03-02 19:47:50,939 INFO:   * Refresh current page .
+2020-03-02 19:47:53,103 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:53,104 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:53,229 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:53,406 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:53,541 INFO:   * Input message: 1370000394 
+2020-03-02 19:47:53,655 INFO:   * Input message: 88888888 
+2020-03-02 19:47:53,742 INFO:   * Input message: 111111 
+2020-03-02 19:47:53,830 INFO:   * Input message: 111111 
+2020-03-02 19:47:53,911 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:47:55,913 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:47:55,956 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-03-02 19:47:55,957 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:47:55,958 INFO:   * Load case name: 【验证密码格式错误不能成功注册】
+2020-03-02 19:47:56,964 INFO:   * Refresh current page .
+2020-03-02 19:47:59,150 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:47:59,151 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:47:59,273 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:47:59,454 INFO:   * Input message: AutoTest 
+2020-03-02 19:47:59,596 INFO:   * Input message: 13700003941 
+2020-03-02 19:47:59,707 INFO:   * Input message: 88888888 
+2020-03-02 19:47:59,810 INFO:   * Input message: !@#$%^ 
+2020-03-02 19:47:59,913 INFO:   * Input message: !@#$%^ 
+2020-03-02 19:47:59,987 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:48:01,988 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:48:02,091 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-03-02 19:48:02,092 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:48:02,093 INFO:   * Load case name: 【验证密码长度小于最小值不能注册】
+2020-03-02 19:48:03,089 INFO:   * Refresh current page .
+2020-03-02 19:48:05,244 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:48:05,245 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:48:05,331 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:48:05,496 INFO:   * Input message: AutoTest 
+2020-03-02 19:48:05,666 INFO:   * Input message: 13700003941 
+2020-03-02 19:48:05,779 INFO:   * Input message: 88888888 
+2020-03-02 19:48:05,871 INFO:   * Input message: 11111 
+2020-03-02 19:48:05,956 INFO:   * Input message: 11111 
+2020-03-02 19:48:06,032 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:48:08,034 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:48:08,101 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-03-02 19:48:08,102 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:48:08,103 INFO:   * Load case name: 【验证密码长度大于最大值不能注册】
+2020-03-02 19:48:11,415 INFO:   * Refresh current page .
+2020-03-02 19:48:13,478 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-03-02 19:48:13,479 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:48:13,563 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-03-02 19:48:13,730 INFO:   * Input message: AutoTest 
+2020-03-02 19:48:13,905 INFO:   * Input message: 13700003941 
+2020-03-02 19:48:14,038 INFO:   * Input message: 88888888 
+2020-03-02 19:48:14,235 INFO:   * Input message: 11111111111111111111 
+2020-03-02 19:48:14,426 INFO:   * Input message: 11111111111111111111 
+2020-03-02 19:48:14,519 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-03-02 19:48:16,521 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 19:48:16,585 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-03-02 19:48:16,593 INFO:   * Clear browser catch data .
+2020-03-02 19:48:18,858 INFO:   * Quit browser .
+2020-03-02 19:48:24,900 INFO:   * Launch browser of "chrome" . 
+2020-03-02 19:48:26,180 WARNING:  Skipped: -跳过不执行该用例 login_001: 登录-用户名密码为空校验
+2020-03-02 19:48:26,182 WARNING:  Skipped: -跳过不执行该用例 login_002: 登录-用户名为空校验
+2020-03-02 19:48:26,185 WARNING:  Skipped: -跳过不执行该用例 login_003: 登录-密码为空校验
+2020-03-02 19:48:26,188 WARNING:  Skipped: -跳过不执行该用例 login_004: 登录-用户名不正确密码正确校验
+2020-03-02 19:48:26,190 WARNING:  Skipped: -跳过不执行该用例 login_005: 登录-用户名正确密码不正确校验
+2020-03-02 19:48:26,191 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 19:48:26,192 INFO:   * Load case name: 【登录-正确用户名密码校验】
+2020-03-02 19:48:31,602 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 19:48:31,602 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 19:48:32,634 INFO:   * Refresh current page .
+2020-03-02 19:48:32,855 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 19:48:32,994 INFO:   * Input message: 13700000004 
+2020-03-02 19:48:33,123 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 19:48:33,350 INFO:   * Input message: 222222 
+2020-03-02 19:48:33,469 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 19:48:34,472 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 19:48:36,877 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 登录成功 .
+2020-03-02 19:48:38,127 INFO:   * Save screen shot to: D:\my_test_script\UItest-branch\result\image\20200302194837.png .
+2020-03-02 19:48:38,160 INFO:   * Clear browser catch data .
+2020-03-02 19:48:40,483 INFO:   * Quit browser .
+2020-03-02 20:03:25,907 INFO:   * Launch browser of "chrome" . 
+2020-03-02 20:03:27,091 INFO:  -=【网点登录】=-
+2020-03-02 20:03:32,079 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 20:03:32,080 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 20:03:32,136 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 20:03:32,277 INFO:   * Input message: 13700000004 
+2020-03-02 20:03:32,353 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 20:03:32,440 INFO:   * Input message: 222222 
+2020-03-02 20:03:32,554 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 20:03:34,556 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:03:36,144 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-02 20:03:40,039 INFO:   * Refresh current page .
+2020-03-02 20:03:40,041 INFO:   ** Branch login success！
+2020-03-02 20:03:42,999 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:03:43,001 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:03:47,419 INFO:   * Refresh current page .
+2020-03-02 20:03:47,420 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:03:47,422 INFO:   * Load case name: 【师傅领用-师傅成功领取备件校验】
+2020-03-02 20:03:47,969 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:03:48,488 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:03:50,489 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:03:51,582 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:52,608 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:53,668 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:54,686 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:55,714 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:56,761 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:57,818 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:03:57,928 INFO:   * Select value: 小米科技 .
+2020-03-02 20:03:58,164 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:03:58,286 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:04:00,289 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:00,404 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 20 .
+2020-03-02 20:04:02,561 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:04:02,562 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:04:02,862 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:04:02,950 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:04:03,953 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:04,042 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 10 .
+2020-03-02 20:04:07,743 INFO:   * Refresh current page .
+2020-03-02 20:04:08,395 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:04:08,484 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:04:10,486 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:10,636 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:04:10,904 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:04:12,906 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:13,117 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:04:15,118 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:16,255 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:17,308 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:18,327 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:19,384 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:20,402 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:21,453 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:22,473 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:22,680 INFO:   * Select value: 小米科技 .
+2020-03-02 20:04:22,828 INFO:   * Input message: 10 
+2020-03-02 20:04:22,943 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:04:24,042 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 申请成功 .
+2020-03-02 20:04:24,171 INFO:  Expect: 申请成功 equal Faction: 申请成功, test -> PASS.
+2020-03-02 20:04:27,941 INFO:   * Refresh current page .
+2020-03-02 20:04:27,944 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:04:27,946 INFO:   * Load case name: 【师傅领用-师傅领取备件后日志记录校验】
+2020-03-02 20:04:30,370 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 20:04:30,370 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 20:04:30,531 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:04:30,670 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:04:30,787 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:04:32,790 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:32,963 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:04:23
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+30
+10.00
+AutoBrand .
+2020-03-02 20:04:33,189 INFO:  Expect: 小米科技 in Faction: 2020-03-02 20:04:23
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+30
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 20:04:36,802 INFO:   * Refresh current page .
+2020-03-02 20:04:37,052 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:04:37,510 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:04:39,513 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:39,624 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 0 .
+2020-03-02 20:04:39,750 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:04:43,607 INFO:   * Refresh current page .
+2020-03-02 20:04:43,609 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:04:43,611 INFO:   * Load case name: 【师傅领用-师傅领取备件后师傅库存校验】
+2020-03-02 20:04:43,995 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:04:44,997 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:45,199 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:04:47,201 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:48,313 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:49,375 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:50,393 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:51,420 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:52,439 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:53,462 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:54,508 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:04:54,632 INFO:   * Select value: 小米科技 .
+2020-03-02 20:04:54,871 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:04:54,975 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:04:56,978 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:04:57,091 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 30 .
+2020-03-02 20:04:57,285 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:04:57,322 INFO:   * Clear browser catch data .
+2020-03-02 20:04:59,610 INFO:   * Quit browser .
+2020-03-02 20:07:43,929 INFO:   * Launch browser of "chrome" . 
+2020-03-02 20:07:45,089 INFO:  -=【网点登录】=-
+2020-03-02 20:07:49,954 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 20:07:49,955 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 20:07:50,018 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 20:07:50,160 INFO:   * Input message: 13700000004 
+2020-03-02 20:07:50,221 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 20:07:50,307 INFO:   * Input message: 222222 
+2020-03-02 20:07:50,398 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 20:07:52,399 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:07:53,190 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-02 20:07:57,033 INFO:   * Refresh current page .
+2020-03-02 20:07:57,035 INFO:   ** Branch login success！
+2020-03-02 20:08:00,194 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:08:00,195 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:08:00,864 INFO:   * Refresh current page .
+2020-03-02 20:08:00,865 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:08:00,867 INFO:   * Load case name: 【师傅领用-备件领取数量为空校验】
+2020-03-02 20:08:03,985 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:08:04,100 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:08:06,102 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:06,251 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:08:06,450 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:08:08,452 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:08,590 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:08:10,594 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:11,648 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:12,668 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:13,700 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:14,726 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:15,781 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:16,808 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:17,857 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:17,983 INFO:   * Select value: 小米科技 .
+2020-03-02 20:08:18,098 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:08:19,099 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:19,206 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入备件数量 .
+2020-03-02 20:08:19,387 INFO:  Expect: 请输入备件数量 equal Faction: 请输入备件数量, test -> PASS.
+2020-03-02 20:08:23,024 INFO:   * Refresh current page .
+2020-03-02 20:08:23,026 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:08:23,027 INFO:   * Load case name: 【师傅领用-备件名称为空校验】
+2020-03-02 20:08:23,577 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:08:25,579 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:25,706 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:08:27,709 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:28,762 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:29,785 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:30,829 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:31,867 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:32,920 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:33,972 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:35,001 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:35,161 INFO:   * Select value: 小米科技 .
+2020-03-02 20:08:35,332 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:08:36,334 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:36,444 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择备件 .
+2020-03-02 20:08:36,567 INFO:  Expect: 请选择备件 equal Faction: 请选择备件, test -> PASS.
+2020-03-02 20:08:40,624 INFO:   * Refresh current page .
+2020-03-02 20:08:40,626 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:08:40,628 INFO:   * Load case name: 【师傅领用-领取备件师傅名称为空校验】
+2020-03-02 20:08:40,987 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:08:41,365 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:08:43,366 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:43,482 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:08:43,684 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:08:43,904 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:08:44,906 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:44,972 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择工程师 .
+2020-03-02 20:08:45,231 INFO:  Expect: 请选择工程师 equal Faction: 请选择工程师, test -> PASS.
+2020-03-02 20:08:48,700 INFO:   * Refresh current page .
+2020-03-02 20:08:48,702 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:08:48,704 INFO:   * Load case name: 【师傅领用-领取页面删除备件校验】
+2020-03-02 20:08:49,232 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:08:49,598 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:08:51,599 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:51,740 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:08:51,898 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:08:53,899 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:53,996 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:08:55,998 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:08:57,093 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:58,135 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:08:59,158 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:00,201 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:01,243 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:02,265 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:03,299 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:03,398 INFO:   * Select value: 小米科技 .
+2020-03-02 20:09:03,533 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"][1])[2]/td[8]//a .
+2020-03-02 20:09:03,638 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:09:04,643 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:04,721 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择备件 .
+2020-03-02 20:09:04,831 INFO:  Expect: 请选择备件 equal Faction: 请选择备件, test -> PASS.
+2020-03-02 20:09:08,367 INFO:   * Refresh current page .
+2020-03-02 20:09:08,369 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:09:08,370 INFO:   * Load case name: 【师傅领用-师傅成功领取备件校验】
+2020-03-02 20:09:08,849 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:09:09,528 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:09:11,530 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:12,589 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:13,652 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:14,674 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:15,734 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:16,780 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:17,827 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:18,877 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:18,962 INFO:   * Select value: 小米科技 .
+2020-03-02 20:09:19,398 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:09:19,481 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:09:21,483 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:21,576 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 30 .
+2020-03-02 20:09:23,763 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:09:23,765 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:09:24,013 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:09:24,093 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:09:25,095 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:25,207 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 10 .
+2020-03-02 20:09:28,524 INFO:   * Refresh current page .
+2020-03-02 20:09:28,934 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:09:29,385 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:09:31,387 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:31,548 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:09:31,713 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:09:33,717 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:33,884 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:09:35,886 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:36,974 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:38,027 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:39,078 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:40,107 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:41,165 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:42,188 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:43,237 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:09:43,328 INFO:   * Select value: 小米科技 .
+2020-03-02 20:09:43,491 INFO:   * Input message: 10 
+2020-03-02 20:09:43,597 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:09:44,729 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 申请成功 .
+2020-03-02 20:09:44,839 INFO:  Expect: 申请成功 equal Faction: 申请成功, test -> PASS.
+2020-03-02 20:09:45,671 INFO:   * Refresh current page .
+2020-03-02 20:09:45,673 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:09:45,674 INFO:   * Load case name: 【师傅领用-师傅领取备件后日志记录校验】
+2020-03-02 20:09:48,275 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 20:09:48,277 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 20:09:48,522 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:09:48,893 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:09:49,001 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:09:51,004 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:51,158 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:09:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+40
+10.00
+AutoBrand .
+2020-03-02 20:09:51,298 INFO:  Expect: 小米科技 in Faction: 2020-03-02 20:09:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+40
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 20:09:54,440 INFO:   * Refresh current page .
+2020-03-02 20:09:54,707 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:09:54,970 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:09:56,972 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:09:57,095 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 0 .
+2020-03-02 20:09:57,318 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:10:00,456 INFO:   * Refresh current page .
+2020-03-02 20:10:00,458 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:10:00,460 INFO:   * Load case name: 【师傅领用-师傅领取备件后师傅库存校验】
+2020-03-02 20:10:00,897 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:10:01,898 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:01,991 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:10:03,992 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:10:05,068 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:06,106 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:07,141 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:08,167 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:09,214 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:10,250 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:11,306 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:10:11,394 INFO:   * Select value: 小米科技 .
+2020-03-02 20:10:11,652 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:10:11,750 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:10:13,752 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:10:13,855 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 40 .
+2020-03-02 20:10:13,970 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:10:14,009 INFO:   * Clear browser catch data .
+2020-03-02 20:10:16,318 INFO:   * Quit browser .
+2020-03-02 20:14:19,462 INFO:   * Launch browser of "chrome" . 
+2020-03-02 20:14:20,605 INFO:  -=【网点登录】=-
+2020-03-02 20:14:25,517 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 20:14:25,519 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 20:14:25,592 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 20:14:25,750 INFO:   * Input message: 13700000004 
+2020-03-02 20:14:25,815 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 20:14:25,915 INFO:   * Input message: 222222 
+2020-03-02 20:14:26,019 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 20:14:28,020 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:14:29,029 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-02 20:14:32,658 INFO:   * Refresh current page .
+2020-03-02 20:14:32,659 INFO:   ** Branch login success！
+2020-03-02 20:14:36,111 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:14:36,112 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:14:36,819 INFO:   * Refresh current page .
+2020-03-02 20:14:36,820 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:14:36,821 INFO:   * Load case name: 【师傅领用-备件领取数量为空校验】
+2020-03-02 20:14:40,056 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:14:40,354 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:14:42,355 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:14:42,493 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:14:42,722 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:14:44,726 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:14:45,005 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:14:47,008 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:14:48,102 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:49,151 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:50,184 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:51,239 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:52,261 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:53,321 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:54,342 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:54,481 INFO:   * Select value: 小米科技 .
+2020-03-02 20:14:54,599 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:14:55,601 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:14:55,668 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入备件数量 .
+2020-03-02 20:14:55,806 INFO:  Expect: 请输入备件数量 equal Faction: 请输入备件数量, test -> PASS.
+2020-03-02 20:14:59,602 INFO:   * Refresh current page .
+2020-03-02 20:14:59,604 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:14:59,606 INFO:   * Load case name: 【师傅领用-备件名称为空校验】
+2020-03-02 20:14:59,866 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:15:01,867 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:01,991 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:15:03,995 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:05,057 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:06,126 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:07,181 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:08,214 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:09,255 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:10,276 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:11,334 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:11,412 INFO:   * Select value: 小米科技 .
+2020-03-02 20:15:11,514 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:15:12,517 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:12,614 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择备件 .
+2020-03-02 20:15:12,731 INFO:  Expect: 请选择备件 equal Faction: 请选择备件, test -> PASS.
+2020-03-02 20:15:13,601 INFO:   * Refresh current page .
+2020-03-02 20:15:13,603 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:15:13,604 INFO:   * Load case name: 【师傅领用-领取备件师傅名称为空校验】
+2020-03-02 20:15:16,548 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:15:16,654 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:15:18,655 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:18,768 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:15:18,938 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:15:19,253 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:15:20,256 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:20,359 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择工程师 .
+2020-03-02 20:15:20,471 INFO:  Expect: 请选择工程师 equal Faction: 请选择工程师, test -> PASS.
+2020-03-02 20:15:23,854 INFO:   * Refresh current page .
+2020-03-02 20:15:23,857 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:15:23,858 INFO:   * Load case name: 【师傅领用-领取页面删除备件校验】
+2020-03-02 20:15:24,295 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:15:24,548 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:15:26,548 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:26,662 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:15:26,845 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:15:28,847 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:28,984 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:15:30,987 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:32,065 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:33,129 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:34,151 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:35,196 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:36,229 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:37,287 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:38,306 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:38,395 INFO:   * Select value: 小米科技 .
+2020-03-02 20:15:38,540 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"][1])[2]/td[8]//a .
+2020-03-02 20:15:38,663 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:15:39,666 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:39,766 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择备件 .
+2020-03-02 20:15:39,879 INFO:  Expect: 请选择备件 equal Faction: 请选择备件, test -> PASS.
+2020-03-02 20:15:43,462 INFO:   * Refresh current page .
+2020-03-02 20:15:43,463 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:15:43,465 INFO:   * Load case name: 【师傅领用-师傅成功领取备件校验】
+2020-03-02 20:15:44,009 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:15:44,692 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:15:46,695 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:47,775 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:48,831 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:49,887 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:50,940 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:51,992 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:53,044 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:54,075 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:15:54,173 INFO:   * Select value: 小米科技 .
+2020-03-02 20:15:54,477 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:15:54,582 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:15:56,583 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:15:56,676 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 40 .
+2020-03-02 20:15:58,859 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:15:58,860 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:15:59,233 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:15:59,326 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:16:00,327 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:00,413 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 10 .
+2020-03-02 20:16:04,506 INFO:   * Refresh current page .
+2020-03-02 20:16:04,926 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:16:05,367 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:16:07,369 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:07,471 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:16:07,666 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:16:09,668 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:09,787 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:16:11,791 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:12,857 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:13,911 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:14,968 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:16,024 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:17,064 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:18,100 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:19,150 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:19,282 INFO:   * Select value: 小米科技 .
+2020-03-02 20:16:19,458 INFO:   * Input message: 10 
+2020-03-02 20:16:19,574 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:16:20,658 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 申请成功 .
+2020-03-02 20:16:20,796 INFO:  Expect: 申请成功 equal Faction: 申请成功, test -> PASS.
+2020-03-02 20:16:22,216 INFO:   * Refresh current page .
+2020-03-02 20:16:22,219 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:16:22,220 INFO:   * Load case name: 【师傅领用-师傅领取备件后日志记录校验】
+2020-03-02 20:16:24,770 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 20:16:24,771 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 20:16:25,038 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:16:25,505 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:16:25,603 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:16:27,605 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:27,745 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:16:19
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+50
+10.00
+AutoBrand .
+2020-03-02 20:16:27,862 INFO:  Expect: 小米科技 in Faction: 2020-03-02 20:16:19
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+50
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 20:16:28,645 INFO:   * Refresh current page .
+2020-03-02 20:16:31,506 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:16:31,597 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:16:33,599 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:33,719 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 0 .
+2020-03-02 20:16:33,831 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:16:35,216 INFO:   * Refresh current page .
+2020-03-02 20:16:35,222 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:16:35,225 INFO:   * Load case name: 【师傅领用-师傅领取备件后师傅库存校验】
+2020-03-02 20:16:35,287 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:16:36,289 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:37,138 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:16:39,140 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:40,208 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:41,260 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:42,281 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:43,331 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:44,350 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:45,398 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:46,418 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:16:46,538 INFO:   * Select value: 小米科技 .
+2020-03-02 20:16:46,822 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:16:46,919 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:16:48,921 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:16:49,057 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 50 .
+2020-03-02 20:16:49,285 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:16:49,326 INFO:   * Clear browser catch data .
+2020-03-02 20:16:51,639 INFO:   * Quit browser .
+2020-03-02 20:23:42,210 INFO:   * Launch browser of "chrome" . 
+2020-03-02 20:23:43,406 INFO:  -=【网点登录】=-
+2020-03-02 20:23:48,584 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 20:23:48,585 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 20:23:48,645 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 20:23:48,812 INFO:   * Input message: 13700000004 
+2020-03-02 20:23:48,877 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 20:23:48,983 INFO:   * Input message: 222222 
+2020-03-02 20:23:49,161 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 20:23:51,162 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:23:52,216 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-02 20:23:55,597 INFO:   * Refresh current page .
+2020-03-02 20:23:55,598 INFO:   ** Branch login success！
+2020-03-02 20:23:59,176 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:23:59,178 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:24:02,852 INFO:   * Refresh current page .
+2020-03-02 20:24:02,854 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:24:02,855 INFO:   * Load case name: 【师傅领用-备件领取数量为空校验】
+2020-03-02 20:24:03,668 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:24:03,779 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:24:05,781 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:05,935 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:24:06,120 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:24:08,121 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:08,275 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:24:10,277 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:11,376 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:12,399 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:13,419 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:14,442 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:15,491 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:16,546 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:17,582 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:17,684 INFO:   * Select value: 小米科技 .
+2020-03-02 20:24:17,813 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:24:18,814 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:18,891 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入备件数量 .
+2020-03-02 20:24:19,059 INFO:  Expect: 请输入备件数量 equal Faction: 请输入备件数量, test -> PASS.
+2020-03-02 20:24:22,800 INFO:   * Refresh current page .
+2020-03-02 20:24:22,802 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:24:22,804 INFO:   * Load case name: 【师傅领用-备件名称为空校验】
+2020-03-02 20:24:23,031 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:24:25,034 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:25,218 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:24:27,220 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:28,266 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:29,326 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:30,348 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:31,366 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:32,387 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:33,417 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:34,461 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:34,593 INFO:   * Select value: 小米科技 .
+2020-03-02 20:24:34,705 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:24:35,708 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:35,775 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择备件 .
+2020-03-02 20:24:35,892 INFO:  Expect: 请选择备件 equal Faction: 请选择备件, test -> PASS.
+2020-03-02 20:24:39,540 INFO:   * Refresh current page .
+2020-03-02 20:24:39,542 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:24:39,547 INFO:   * Load case name: 【师傅领用-领取备件师傅名称为空校验】
+2020-03-02 20:24:40,001 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:24:40,310 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:24:42,314 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:42,455 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:24:42,629 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:24:42,817 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:24:43,819 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:43,872 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择工程师 .
+2020-03-02 20:24:44,028 INFO:  Expect: 请选择工程师 equal Faction: 请选择工程师, test -> PASS.
+2020-03-02 20:24:44,971 INFO:   * Refresh current page .
+2020-03-02 20:24:44,973 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:24:44,976 INFO:   * Load case name: 【师傅领用-领取页面删除备件校验】
+2020-03-02 20:24:48,068 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:24:48,356 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:24:50,359 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:50,489 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:24:50,658 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:24:52,660 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:52,777 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:24:54,780 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:24:55,844 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:56,894 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:57,949 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:24:58,995 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:00,050 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:01,081 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:02,112 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:02,251 INFO:   * Select value: 小米科技 .
+2020-03-02 20:25:02,389 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"][1])[2]/td[8]//a .
+2020-03-02 20:25:02,498 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:25:03,500 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:03,584 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请选择备件 .
+2020-03-02 20:25:03,698 INFO:  Expect: 请选择备件 equal Faction: 请选择备件, test -> PASS.
+2020-03-02 20:25:07,926 INFO:   * Refresh current page .
+2020-03-02 20:25:07,928 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:25:07,931 INFO:   * Load case name: 【师傅领用-师傅成功领取备件校验】
+2020-03-02 20:25:08,303 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:25:08,858 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:25:10,861 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:11,940 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:12,983 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:14,039 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:15,081 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:16,111 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:17,166 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:18,210 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:18,318 INFO:   * Select value: 小米科技 .
+2020-03-02 20:25:18,611 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:25:18,707 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:25:20,709 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:20,808 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 50 .
+2020-03-02 20:25:22,999 INFO:   * Find element: xpath->//button[contains(text(),"删除")] is true .
+2020-03-02 20:25:23,001 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/company .
+2020-03-02 20:25:23,412 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:25:23,497 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:25:24,499 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:24,570 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 10 .
+2020-03-02 20:25:28,439 INFO:   * Refresh current page .
+2020-03-02 20:25:29,143 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:25:29,338 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:25:31,338 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:31,437 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]//input[@type="checkbox"] .
+2020-03-02 20:25:31,622 INFO:   * Click button: xpath->//div[@class="work-operation"]//li[2]/a .
+2020-03-02 20:25:33,624 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:33,768 INFO:   * Click button: xpath->(//label[contains(text(),"工程师")]/../div/div)[1] .
+2020-03-02 20:25:35,770 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:36,843 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:37,888 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:38,946 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:39,994 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:41,025 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:42,050 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:43,096 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:25:43,242 INFO:   * Select value: 小米科技 .
+2020-03-02 20:25:43,445 INFO:   * Input message: 10 
+2020-03-02 20:25:43,560 INFO:   * Click button: xpath->(//button[contains(text(),"保存")])[2] .
+2020-03-02 20:25:44,667 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 申请成功 .
+2020-03-02 20:25:44,786 INFO:  Expect: 申请成功 equal Faction: 申请成功, test -> PASS.
+2020-03-02 20:25:48,653 INFO:   * Refresh current page .
+2020-03-02 20:25:48,655 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:25:48,657 INFO:   * Load case name: 【师傅领用-师傅领取备件后日志记录校验】
+2020-03-02 20:25:51,152 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 20:25:51,153 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 20:25:51,338 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:25:51,506 INFO:   * Input message: 2020-03-02 
+2020-03-02 20:25:51,616 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:25:53,617 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:53,746 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand .
+2020-03-02 20:25:53,869 INFO:  Expect: 小米科技 in Faction: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 20:25:54,718 INFO:   * Refresh current page .
+2020-03-02 20:25:57,531 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:25:57,645 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:25:59,647 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:25:59,747 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]//td[10]//span text: 0 .
+2020-03-02 20:25:59,862 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:26:03,855 INFO:   * Refresh current page .
+2020-03-02 20:26:03,857 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 20:26:03,861 INFO:   * Load case name: 【师傅领用-师傅领取备件后师傅库存校验】
+2020-03-02 20:26:04,353 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/master .
+2020-03-02 20:26:05,356 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:05,482 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 20:26:07,484 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:26:08,575 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:09,640 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:10,678 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:11,701 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:12,755 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:13,811 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:14,841 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 20:26:14,962 INFO:   * Select value: 小米科技 .
+2020-03-02 20:26:15,364 INFO:   * Input message: 自动化测试备件 
+2020-03-02 20:26:15,452 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 20:26:17,456 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 20:26:17,583 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[6]//span text: 60 .
+2020-03-02 20:26:17,702 INFO:  Expect: 10 equal Faction: 10, test -> PASS.
+2020-03-02 20:26:17,735 INFO:   * Clear browser catch data .
+2020-03-02 20:26:21,824 INFO:   * Quit browser .
+2020-03-02 21:16:04,839 INFO:   * Launch browser of "chrome" . 
+2020-03-02 21:16:05,997 INFO:  -=【网点登录】=-
+2020-03-02 21:16:11,697 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-02 21:16:11,698 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-02 21:16:11,768 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-02 21:16:11,947 INFO:   * Input message: 13700000004 
+2020-03-02 21:16:12,021 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-02 21:16:12,118 INFO:   * Input message: 222222 
+2020-03-02 21:16:12,218 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-02 21:16:14,219 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 21:16:15,521 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-02 21:16:15,596 INFO:   * Refresh current page .
+2020-03-02 21:16:15,597 INFO:   ** Branch login success！
+2020-03-02 21:16:18,349 INFO:   * Refresh current page .
+2020-03-02 21:16:24,667 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 21:16:24,668 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 21:16:25,670 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:25,672 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 21:16:25,673 INFO:   * Load case name: 【师傅领用记录搜索-按领取备件师傅名称搜索校验】
+2020-03-02 21:16:25,808 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 21:16:27,812 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 21:16:28,873 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:29,921 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:30,941 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:31,962 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:33,011 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:34,084 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:35,125 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:35,313 INFO:   * Select value: 小米科技 .
+2020-03-02 21:16:35,493 INFO:   * Input message: False 
+2020-03-02 21:16:35,648 INFO:   * Input message: False 
+2020-03-02 21:16:35,747 INFO:   * Input message:  
+2020-03-02 21:16:35,826 INFO:   * Input message:  
+2020-03-02 21:16:35,931 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 21:16:36,933 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:37,083 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand .
+2020-03-02 21:16:37,420 INFO:  Expect: 小米科技 in Faction: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 21:16:47,232 INFO:   * Refresh current page .
+2020-03-02 21:16:49,484 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 21:16:49,485 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 21:16:50,486 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:50,487 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 21:16:50,488 INFO:   * Load case name: 【师傅领用记录搜索-按领取备件时间搜索校验】
+2020-03-02 21:16:50,671 INFO:   * Input message: 2020-03-02 
+2020-03-02 21:16:50,815 INFO:   * Input message: 2020-03-02 
+2020-03-02 21:16:50,899 INFO:   * Input message:  
+2020-03-02 21:16:50,976 INFO:   * Input message:  
+2020-03-02 21:16:51,081 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 21:16:52,085 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:52,203 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand .
+2020-03-02 21:16:52,328 INFO:  Expect: 自动化测试备件 in Faction: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 21:16:53,226 INFO:   * Refresh current page .
+2020-03-02 21:16:56,910 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 21:16:56,911 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 21:16:57,914 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:57,916 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 21:16:57,919 INFO:   * Load case name: 【师傅领用记录搜索-按领取备件条码搜索校验】
+2020-03-02 21:16:58,121 INFO:   * Input message: False 
+2020-03-02 21:16:58,239 INFO:   * Input message: False 
+2020-03-02 21:16:58,478 INFO:   * Input message: AUTO-SP-001 
+2020-03-02 21:16:58,559 INFO:   * Input message:  
+2020-03-02 21:16:58,665 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 21:16:59,669 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:16:59,842 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand .
+2020-03-02 21:16:59,995 INFO:  Expect: AUTO-SP-001 in Faction: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 21:17:00,935 INFO:   * Refresh current page .
+2020-03-02 21:17:03,508 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 21:17:03,510 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 21:17:04,513 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:04,517 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 21:17:04,521 INFO:   * Load case name: 【师傅领用记录搜索-按领取备件名称搜索校验】
+2020-03-02 21:17:04,684 INFO:   * Input message: False 
+2020-03-02 21:17:04,802 INFO:   * Input message: False 
+2020-03-02 21:17:04,887 INFO:   * Input message:  
+2020-03-02 21:17:05,155 INFO:   * Input message: 自动化测试备件 
+2020-03-02 21:17:05,308 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 21:17:06,311 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:06,440 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand .
+2020-03-02 21:17:06,561 INFO:  Expect: 自动化测试备件 in Faction: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 21:17:07,360 INFO:   * Refresh current page .
+2020-03-02 21:17:11,406 INFO:   * Find element: xpath->//label[contains(text(),"领用时间")]/../div[2]//input is true .
+2020-03-02 21:17:11,407 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/sparepart/stock/retrievalRecord .
+2020-03-02 21:17:12,410 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:12,413 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-02 21:17:12,416 INFO:   * Load case name: 【师傅领用记录搜索-备件领取记录混合搜索校验】
+2020-03-02 21:17:12,544 INFO:   * Click button: xpath->(//label[contains(text(),"师傅")]/..//div)[1] .
+2020-03-02 21:17:14,545 INFO:   * Webdriver sleep 2 seconds .
+2020-03-02 21:17:15,612 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:16,673 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:17,731 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:18,779 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:19,825 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:20,872 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:21,904 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:22,017 INFO:   * Select value: 小米科技 .
+2020-03-02 21:17:22,225 INFO:   * Input message: 2020-03-02 
+2020-03-02 21:17:22,419 INFO:   * Input message: 2020-03-02 
+2020-03-02 21:17:22,670 INFO:   * Input message: AUTO-SP-001 
+2020-03-02 21:17:22,855 INFO:   * Input message: 自动化测试备件 
+2020-03-02 21:17:22,944 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-02 21:17:23,948 INFO:   * Webdriver sleep 1 seconds .
+2020-03-02 21:17:24,088 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand .
+2020-03-02 21:17:24,220 INFO:  Expect: AUTO-SP-001 in Faction: 2020-03-02 20:25:43
+小米科技
+AUTO-SP-001
+自动化测试备件02
+XH_0000
+10
+件
+1
+0
+2
+60
+10.00
+AutoBrand, test -> PASS.
+2020-03-02 21:17:24,256 INFO:   * Clear browser catch data .
+2020-03-02 21:17:26,586 INFO:   * Quit browser .
