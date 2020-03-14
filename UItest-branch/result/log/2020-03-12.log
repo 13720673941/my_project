@@ -1,0 +1,1095 @@
+2020-03-12 09:47:36,185 INFO:   * Launch browser of "chrome" . 
+2020-03-12 09:47:37,346 INFO:  -=【网点登录】=-
+2020-03-12 09:47:47,383 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:47:47,384 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:47:47,442 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:47:47,582 INFO:   * Input message: 13720673941 
+2020-03-12 09:47:47,648 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:47:47,731 INFO:   * Input message: 111111 
+2020-03-12 09:47:47,834 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:47:49,843 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/login . 
+2020-03-12 09:47:51,015 INFO:   * Refresh current page .
+2020-03-12 09:47:53,162 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:47:53,162 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:47:53,212 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:47:53,356 INFO:   * Input message: 13720673941 
+2020-03-12 09:47:53,416 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:47:53,515 INFO:   * Input message: 111111 
+2020-03-12 09:47:53,604 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:47:56,270 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 09:47:56,302 INFO:   * Refresh current page .
+2020-03-12 09:47:56,303 INFO:   ** Branch login success！
+2020-03-12 09:47:56,315 INFO:  -=【创建订单】=-
+2020-03-12 09:48:03,401 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 09:48:03,402 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 09:48:05,528 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 09:48:06,033 INFO:   * Input message: AutoTest 
+2020-03-12 09:48:06,421 INFO:   * Input message: 13720673941 
+2020-03-12 09:48:08,586 INFO:   * Select value: 陕西省 .
+2020-03-12 09:48:10,767 INFO:   * Select value: 西安市 .
+2020-03-12 09:48:12,906 INFO:   * Select value: 雁塔区 .
+2020-03-12 09:48:13,005 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 09:48:13,295 INFO:   * Input message: 太白南路 
+2020-03-12 09:48:16,420 INFO:   * Select value: 安装 .
+2020-03-12 09:48:16,613 INFO:   * Input message: 2020-03-14 
+2020-03-12 09:48:17,859 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 09:48:18,054 INFO:   * Input message: 海尔 
+2020-03-12 09:48:20,229 INFO:   * Select value: 家电 .
+2020-03-12 09:48:22,389 INFO:   * Select value: 空调 .
+2020-03-12 09:48:24,591 INFO:   * Select value: 挂机 .
+2020-03-12 09:48:26,742 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 09:48:29,996 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 09:48:29,996 INFO:   ** Create order is success！
+2020-03-12 09:48:30,110 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 09:48:34,700 INFO:   * Refresh current page .
+2020-03-12 09:48:36,175 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 09:48:25 .
+2020-03-12 09:48:36,262 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196033053711969 .
+2020-03-12 09:48:36,262 INFO:   * Get order number: 637196033053711969.
+2020-03-12 09:48:38,457 INFO:   * Find element: xpath->//a[contains(text(),"发布市场")] is true .
+2020-03-12 09:48:38,458 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 09:48:38,467 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:48:38,468 INFO:   * Load case name: 【市场抢单-派单价格为空校验】
+2020-03-12 09:48:39,184 INFO:   * Refresh current page .
+2020-03-12 09:48:43,125 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196033053711969 .
+2020-03-12 09:48:43,331 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:48:43,332 INFO:   * Select order: 637196033053711969.
+2020-03-12 09:48:43,565 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:48:43,787 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:48:43,868 INFO:   * Input message:  
+2020-03-12 09:48:43,988 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:48:44,104 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入价格 .
+2020-03-12 09:48:44,910 INFO:   * Save screen shot to: D:\my_test_script\UItest-branch\result\image\20200312094844.png .
+2020-03-12 09:48:44,925 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:48:44,927 INFO:   * Load case name: 【市场抢单-派单金额不足校验】
+2020-03-12 09:48:46,172 INFO:   * Refresh current page .
+2020-03-12 09:48:53,836 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196033053711969 .
+2020-03-12 09:48:54,025 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:48:54,026 INFO:   * Select order: 637196033053711969.
+2020-03-12 09:48:54,419 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:48:54,592 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:48:55,097 INFO:   * Input message: 1000 
+2020-03-12 09:48:55,186 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:48:56,276 INFO:   * Get element: xpath->//div[contains(text(),"派单提醒")]/../../div[2]/div text: 派单至抢单市场，需要预先冻结工单费用在您的账户余额中，您的账户可用余额已不足，请充值后再进行派单 .
+2020-03-12 09:48:56,680 INFO:  Expect: 您的账户可用余额已不足 in Faction: 派单至抢单市场，需要预先冻结工单费用在您的账户余额中，您的账户可用余额已不足，请充值后再进行派单, test -> PASS.
+2020-03-12 09:48:56,683 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:48:56,684 INFO:   * Load case name: 【市场抢单-成功派单到市场校验】
+2020-03-12 09:49:01,366 INFO:   * Refresh current page .
+2020-03-12 09:49:03,454 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196033053711969 .
+2020-03-12 09:49:03,622 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:49:03,624 INFO:   * Select order: 637196033053711969.
+2020-03-12 09:49:03,793 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:49:04,031 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:49:04,423 INFO:   * Input message: 0.01 
+2020-03-12 09:49:04,528 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:49:07,423 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 09:49:07,427 INFO:  -=【网点登录】=-
+2020-03-12 09:49:09,552 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:49:09,553 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:49:09,625 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:49:09,779 INFO:   * Input message: 13700000004 
+2020-03-12 09:49:09,845 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:49:09,934 INFO:   * Input message: 222222 
+2020-03-12 09:49:10,014 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:49:12,142 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 09:49:15,306 INFO:   * Refresh current page .
+2020-03-12 09:49:15,307 INFO:   ** Branch login success！
+2020-03-12 09:49:16,456 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 09:49:18,534 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196033053711969 .
+2020-03-12 09:49:18,648 INFO:  Expect: True, Faction: True, test -> PASS.
+2020-03-12 09:49:18,650 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:49:18,651 INFO:   * Load case name: 【市场抢单-抢单成功校验】
+2020-03-12 09:49:18,726 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 09:49:19,454 INFO:   * Refresh current page .
+2020-03-12 09:49:24,524 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196033053711969 .
+2020-03-12 09:49:24,639 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a .
+2020-03-12 09:49:24,640 INFO:   * Into order: 637196033053711969 details page.
+2020-03-12 09:49:28,830 INFO:   * Clear browser catch data .
+2020-03-12 09:49:31,066 INFO:   * Quit browser .
+2020-03-12 09:51:34,393 INFO:   * Launch browser of "chrome" . 
+2020-03-12 09:51:35,568 INFO:  -=【网点登录】=-
+2020-03-12 09:51:42,471 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:51:42,472 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:51:42,568 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:51:43,728 INFO:   * Input message: 13720673941 
+2020-03-12 09:51:43,818 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:51:44,012 INFO:   * Input message: 111111 
+2020-03-12 09:51:44,226 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:51:46,236 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/login . 
+2020-03-12 09:51:48,484 INFO:   * Refresh current page .
+2020-03-12 09:51:50,673 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:51:50,674 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:51:50,752 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:51:50,977 INFO:   * Input message: 13720673941 
+2020-03-12 09:51:51,073 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:51:51,217 INFO:   * Input message: 111111 
+2020-03-12 09:51:51,319 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:51:54,149 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 09:51:55,164 INFO:   * Refresh current page .
+2020-03-12 09:51:55,165 INFO:   ** Branch login success！
+2020-03-12 09:51:55,177 INFO:  -=【创建订单】=-
+2020-03-12 09:51:59,681 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 09:51:59,682 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 09:52:01,778 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 09:52:02,199 INFO:   * Input message: AutoTest 
+2020-03-12 09:52:02,625 INFO:   * Input message: 13720673941 
+2020-03-12 09:52:04,836 INFO:   * Select value: 陕西省 .
+2020-03-12 09:52:07,020 INFO:   * Select value: 西安市 .
+2020-03-12 09:52:09,180 INFO:   * Select value: 雁塔区 .
+2020-03-12 09:52:09,280 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 09:52:09,470 INFO:   * Input message: 太白南路 
+2020-03-12 09:52:12,678 INFO:   * Select value: 安装 .
+2020-03-12 09:52:12,857 INFO:   * Input message: 2020-03-14 
+2020-03-12 09:52:14,124 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 09:52:14,316 INFO:   * Input message: 海尔 
+2020-03-12 09:52:16,508 INFO:   * Select value: 家电 .
+2020-03-12 09:52:18,651 INFO:   * Select value: 空调 .
+2020-03-12 09:52:20,856 INFO:   * Select value: 挂机 .
+2020-03-12 09:52:22,989 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 09:52:25,104 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 09:52:25,105 INFO:   ** Create order is success！
+2020-03-12 09:52:25,200 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 09:52:32,085 INFO:   * Refresh current page .
+2020-03-12 09:52:32,190 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 09:52:21 .
+2020-03-12 09:52:32,346 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196035415951058 .
+2020-03-12 09:52:32,346 INFO:   * Get order number: 637196035415951058.
+2020-03-12 09:52:34,516 INFO:   * Find element: xpath->//a[contains(text(),"发布市场")] is true .
+2020-03-12 09:52:34,517 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 09:52:34,520 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:52:34,521 INFO:   * Load case name: 【市场抢单-派单价格为空校验】
+2020-03-12 09:52:38,791 INFO:   * Refresh current page .
+2020-03-12 09:52:40,900 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196035415951058 .
+2020-03-12 09:52:41,178 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:52:41,179 INFO:   * Select order: 637196035415951058.
+2020-03-12 09:52:41,521 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:52:41,703 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:52:41,805 INFO:   * Input message:  
+2020-03-12 09:52:41,908 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:52:41,988 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入价格 .
+2020-03-12 09:52:42,699 INFO:   * Save screen shot to: D:\my_test_script\UItest-branch\result\image\20200312095242.png .
+2020-03-12 09:52:42,704 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:52:42,707 INFO:   * Load case name: 【市场抢单-派单金额不足校验】
+2020-03-12 09:52:47,253 INFO:   * Refresh current page .
+2020-03-12 09:52:49,363 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196035415951058 .
+2020-03-12 09:52:49,546 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:52:49,547 INFO:   * Select order: 637196035415951058.
+2020-03-12 09:52:49,740 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:52:49,962 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:52:50,335 INFO:   * Input message: 1000 
+2020-03-12 09:52:50,431 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:52:51,582 INFO:   * Get element: xpath->//div[contains(text(),"派单提醒")]/../../div[2]/div text: 派单至抢单市场，需要预先冻结工单费用在您的账户余额中，您的账户可用余额已不足，请充值后再进行派单 .
+2020-03-12 09:52:51,842 INFO:  Expect: 您的账户可用余额已不足 in Faction: 派单至抢单市场，需要预先冻结工单费用在您的账户余额中，您的账户可用余额已不足，请充值后再进行派单, test -> PASS.
+2020-03-12 09:52:51,844 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:52:51,845 INFO:   * Load case name: 【市场抢单-成功派单到市场校验】
+2020-03-12 09:52:56,525 INFO:   * Refresh current page .
+2020-03-12 09:52:58,608 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196035415951058 .
+2020-03-12 09:52:58,788 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:52:58,789 INFO:   * Select order: 637196035415951058.
+2020-03-12 09:52:58,968 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:52:59,177 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:52:59,550 INFO:   * Input message: 0.01 
+2020-03-12 09:52:59,634 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:53:02,066 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 09:53:02,069 INFO:  -=【网点登录】=-
+2020-03-12 09:53:04,241 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:53:04,241 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:53:04,302 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:53:04,461 INFO:   * Input message: 13700000004 
+2020-03-12 09:53:04,528 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:53:04,616 INFO:   * Input message: 222222 
+2020-03-12 09:53:04,696 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:53:06,705 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 09:53:09,235 INFO:   * Refresh current page .
+2020-03-12 09:53:09,237 INFO:   ** Branch login success！
+2020-03-12 09:53:10,069 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 09:53:12,146 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196035415951058 .
+2020-03-12 09:53:12,257 INFO:  Expect: True, Faction: True, test -> PASS.
+2020-03-12 09:53:12,257 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:53:12,257 INFO:   * Load case name: 【市场抢单-抢单成功校验】
+2020-03-12 09:53:12,341 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 09:53:15,679 INFO:   * Refresh current page .
+2020-03-12 09:53:17,767 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196035415951058 .
+2020-03-12 09:53:17,887 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a .
+2020-03-12 09:53:17,888 INFO:   * Into order: 637196035415951058 details page.
+2020-03-12 09:53:20,032 INFO:   * Click button: xpath->//button[contains(text(),"抢单")] .
+2020-03-12 09:53:20,190 INFO:   * Click button: xpath->//div[contains(text(),"抢单提醒")]/../..//button[2] .
+2020-03-12 09:53:21,394 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 接单成功 .
+2020-03-12 09:53:21,508 INFO:  Expect: 接单成功 equal Faction: 接单成功, test -> PASS.
+2020-03-12 09:53:21,598 INFO:   * Clear browser catch data .
+2020-03-12 09:53:23,884 INFO:   * Quit browser .
+2020-03-12 09:55:15,917 INFO:   * Launch browser of "chrome" . 
+2020-03-12 09:55:17,101 INFO:  -=【网点登录】=-
+2020-03-12 09:55:25,545 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:55:25,547 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:55:25,601 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:55:25,742 INFO:   * Input message: 13720673941 
+2020-03-12 09:55:25,809 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:55:25,906 INFO:   * Input message: 111111 
+2020-03-12 09:55:26,009 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:55:28,999 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 09:55:32,952 INFO:   * Refresh current page .
+2020-03-12 09:55:32,952 INFO:   ** Branch login success！
+2020-03-12 09:55:32,961 INFO:  -=【创建订单】=-
+2020-03-12 09:55:35,475 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 09:55:35,475 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 09:55:37,574 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 09:55:37,928 INFO:   * Input message: AutoTest 
+2020-03-12 09:55:38,280 INFO:   * Input message: 13720673941 
+2020-03-12 09:55:40,451 INFO:   * Select value: 陕西省 .
+2020-03-12 09:55:42,605 INFO:   * Select value: 西安市 .
+2020-03-12 09:55:44,771 INFO:   * Select value: 雁塔区 .
+2020-03-12 09:55:44,867 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 09:55:45,077 INFO:   * Input message: 太白南路 
+2020-03-12 09:55:48,279 INFO:   * Select value: 安装 .
+2020-03-12 09:55:48,470 INFO:   * Input message: 2020-03-14 
+2020-03-12 09:55:49,705 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 09:55:49,888 INFO:   * Input message: 海尔 
+2020-03-12 09:55:52,085 INFO:   * Select value: 家电 .
+2020-03-12 09:55:54,262 INFO:   * Select value: 空调 .
+2020-03-12 09:55:56,390 INFO:   * Select value: 挂机 .
+2020-03-12 09:55:58,672 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 09:56:00,856 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 09:56:00,857 INFO:   ** Create order is success！
+2020-03-12 09:56:00,942 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 09:56:06,533 INFO:   * Refresh current page .
+2020-03-12 09:56:06,662 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 09:55:57 .
+2020-03-12 09:56:06,712 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196037572932069 .
+2020-03-12 09:56:06,712 INFO:   * Get order number: 637196037572932069.
+2020-03-12 09:56:08,868 INFO:   * Find element: xpath->//a[contains(text(),"发布市场")] is true .
+2020-03-12 09:56:08,869 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 09:56:08,871 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:56:08,872 INFO:   * Load case name: 【市场抢单-派单价格为空校验】
+2020-03-12 09:56:12,836 INFO:   * Refresh current page .
+2020-03-12 09:56:14,944 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196037572932069 .
+2020-03-12 09:56:15,127 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:56:15,128 INFO:   * Select order: 637196037572932069.
+2020-03-12 09:56:15,331 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:56:15,573 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:56:15,691 INFO:   * Input message:  
+2020-03-12 09:56:15,805 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:56:15,904 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入价格 .
+2020-03-12 09:56:16,072 INFO:  Expect: 请输入价格 equal Faction: 请输入价格, test -> PASS.
+2020-03-12 09:56:16,077 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:56:16,079 INFO:   * Load case name: 【市场抢单-派单金额不足校验】
+2020-03-12 09:56:20,652 INFO:   * Refresh current page .
+2020-03-12 09:56:22,747 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196037572932069 .
+2020-03-12 09:56:22,916 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:56:22,917 INFO:   * Select order: 637196037572932069.
+2020-03-12 09:56:23,118 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:56:23,324 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:56:23,688 INFO:   * Input message: 1000 
+2020-03-12 09:56:23,778 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:56:24,900 INFO:   * Get element: xpath->//div[contains(text(),"派单提醒")]/../../div[2]/div text: 派单至抢单市场，需要预先冻结工单费用在您的账户余额中，您的账户可用余额已不足，请充值后再进行派单 .
+2020-03-12 09:56:25,024 INFO:  Expect: 您的账户可用余额已不足 in Faction: 派单至抢单市场，需要预先冻结工单费用在您的账户余额中，您的账户可用余额已不足，请充值后再进行派单, test -> PASS.
+2020-03-12 09:56:25,025 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:56:25,026 INFO:   * Load case name: 【市场抢单-成功派单到市场校验】
+2020-03-12 09:56:30,117 INFO:   * Refresh current page .
+2020-03-12 09:56:32,159 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196037572932069 .
+2020-03-12 09:56:32,343 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 09:56:32,344 INFO:   * Select order: 637196037572932069.
+2020-03-12 09:56:32,529 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 09:56:32,781 INFO:   * Click button: xpath->(//div[@class="push-content"])[1] .
+2020-03-12 09:56:33,130 INFO:   * Input message: 0.01 
+2020-03-12 09:56:33,220 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 09:56:35,931 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 09:56:35,935 INFO:  -=【网点登录】=-
+2020-03-12 09:56:38,105 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 09:56:38,105 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 09:56:38,173 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 09:56:38,338 INFO:   * Input message: 13700000004 
+2020-03-12 09:56:38,400 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 09:56:38,485 INFO:   * Input message: 222222 
+2020-03-12 09:56:38,566 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 09:56:40,571 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 09:56:43,121 INFO:   * Refresh current page .
+2020-03-12 09:56:43,122 INFO:   ** Branch login success！
+2020-03-12 09:56:44,041 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 09:56:46,110 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196037572932069 .
+2020-03-12 09:56:46,220 INFO:  Expect: True, Faction: True, test -> PASS.
+2020-03-12 09:56:46,220 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 09:56:46,220 INFO:   * Load case name: 【市场抢单-抢单成功校验】
+2020-03-12 09:56:46,305 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 09:56:49,595 INFO:   * Refresh current page .
+2020-03-12 09:56:51,691 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196037572932069 .
+2020-03-12 09:56:51,815 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a .
+2020-03-12 09:56:51,817 INFO:   * Into order: 637196037572932069 details page.
+2020-03-12 09:56:53,963 INFO:   * Click button: xpath->//button[contains(text(),"抢单")] .
+2020-03-12 09:56:54,104 INFO:   * Click button: xpath->//div[contains(text(),"抢单提醒")]/../..//button[2] .
+2020-03-12 09:56:55,398 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 接单成功 .
+2020-03-12 09:56:55,508 INFO:  Expect: 接单成功 equal Faction: 接单成功, test -> PASS.
+2020-03-12 09:56:55,588 INFO:   * Clear browser catch data .
+2020-03-12 09:56:57,916 INFO:   * Quit browser .
+2020-03-12 11:11:31,159 INFO:   * Launch browser of "chrome" . 
+2020-03-12 11:11:32,308 INFO:  -=【网点登录】=-
+2020-03-12 11:11:40,577 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:11:40,578 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:11:40,630 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:11:40,762 INFO:   * Input message: 13700000004 
+2020-03-12 11:11:40,820 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:11:40,907 INFO:   * Input message: 222222 
+2020-03-12 11:11:40,989 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:11:43,005 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/login . 
+2020-03-12 11:11:44,100 INFO:   * Refresh current page .
+2020-03-12 11:11:46,218 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:11:46,219 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:11:46,292 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:11:46,427 INFO:   * Input message: 13700000004 
+2020-03-12 11:11:46,478 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:11:46,561 INFO:   * Input message: 222222 
+2020-03-12 11:11:46,648 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:11:49,045 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 11:11:49,551 INFO:   * Refresh current page .
+2020-03-12 11:11:49,552 INFO:   ** Branch login success！
+2020-03-12 11:11:49,564 INFO:  -=【创建订单】=-
+2020-03-12 11:11:56,309 INFO:   * Refresh current page .
+2020-03-12 11:11:58,951 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 11:11:58,951 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 11:12:01,030 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 11:12:01,363 INFO:   * Input message: AutoTest 
+2020-03-12 11:12:01,690 INFO:   * Input message: 13720673941 
+2020-03-12 11:12:03,887 INFO:   * Select value: 陕西省 .
+2020-03-12 11:12:06,064 INFO:   * Select value: 西安市 .
+2020-03-12 11:12:08,224 INFO:   * Select value: 雁塔区 .
+2020-03-12 11:12:08,314 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 11:12:08,524 INFO:   * Input message: 太白南路 
+2020-03-12 11:12:11,703 INFO:   * Select value: 安装 .
+2020-03-12 11:12:11,894 INFO:   * Input message: 2020-03-14 
+2020-03-12 11:12:13,165 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 11:12:13,397 INFO:   * Input message: 海尔 
+2020-03-12 11:12:15,559 INFO:   * Select value: 家电 .
+2020-03-12 11:12:17,753 INFO:   * Select value: 空调 .
+2020-03-12 11:12:19,924 INFO:   * Select value: 挂机 .
+2020-03-12 11:12:22,064 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:12:25,248 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 11:12:25,250 INFO:   ** Create order is success！
+2020-03-12 11:12:25,320 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:12:29,094 INFO:   * Refresh current page .
+2020-03-12 11:12:31,154 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 11:12:20 .
+2020-03-12 11:12:31,227 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196083407192910 .
+2020-03-12 11:12:31,228 INFO:   * Get order number: 637196083407192910.
+2020-03-12 11:12:31,229 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 11:12:31,229 INFO:   * Load case name: 【工单结算-市场单不能线下结算校验】
+2020-03-12 11:12:31,230 INFO:  -=【发布到市场】=-
+2020-03-12 11:12:33,332 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196083407192910 .
+2020-03-12 11:12:33,564 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:12:33,566 INFO:   * Select order: 637196083407192910.
+2020-03-12 11:12:33,753 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 11:12:34,275 INFO:   * Input message: 0.01 
+2020-03-12 11:12:34,442 INFO:   * Input message: 0 
+2020-03-12 11:12:34,595 INFO:   * Input message: 0 
+2020-03-12 11:12:34,693 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 11:12:35,928 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 派发成功 .
+2020-03-12 11:12:35,929 INFO:   ** Send order to market success !
+2020-03-12 11:12:37,441 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 11:12:37,447 INFO:  -=【网点登录】=-
+2020-03-12 11:12:39,567 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:12:39,577 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:12:39,637 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:12:39,796 INFO:   * Input message: 13720673941 
+2020-03-12 11:12:39,855 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:12:39,934 INFO:   * Input message: 111111 
+2020-03-12 11:12:40,016 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:12:42,030 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 11:12:44,706 INFO:   * Refresh current page .
+2020-03-12 11:12:44,708 INFO:   ** Branch login success！
+2020-03-12 11:12:44,709 INFO:  -=【市场抢单】=-
+2020-03-12 11:12:45,048 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 11:12:49,148 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196083407192910 .
+2020-03-12 11:12:49,264 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a .
+2020-03-12 11:12:49,265 INFO:   * Into order: 637196083407192910 details page.
+2020-03-12 11:12:51,407 INFO:   * Click button: xpath->//button[contains(text(),"抢单")] .
+2020-03-12 11:12:51,543 INFO:   * Click button: xpath->//div[contains(text(),"抢单提醒")]/../..//button[2] .
+2020-03-12 11:12:52,741 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 接单成功 .
+2020-03-12 11:12:52,742 INFO:   ** Grad order success !
+2020-03-12 11:12:59,363 INFO:   * Refresh current page .
+2020-03-12 11:13:01,939 INFO:   * Find element: xpath->//a[text()="派单"] is true .
+2020-03-12 11:13:01,939 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:13:01,939 INFO:  -=【网点派单】=-
+2020-03-12 11:13:04,078 INFO:   * Find element: xpath->//a[text()="派单"] is true .
+2020-03-12 11:13:04,078 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:13:04,328 INFO:   * Input message: 637196083407192910 
+2020-03-12 11:13:04,418 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:13:06,607 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196083407192910
+网点派单
+2020-03-12 11:12:50
+AutoTest
+保内
+13720673941
+待派
+安装
+海尔
+市场工单
+挂机
+2020-03-14-08:00～09:00
+2020-03-12 11:12:20
+T西安好家帮家政有限公司
+T西安超级售后有限公司
+陕西省 西安市 雁塔区 太白南路 .
+2020-03-12 11:13:06,607 INFO:   ** search order number: 637196083407192910 . 
+2020-03-12 11:13:08,721 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196083407192910 .
+2020-03-12 11:13:08,837 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:13:08,838 INFO:   * Select order: 637196083407192910.
+2020-03-12 11:13:08,969 INFO:   * Click button: xpath->//a[text()="派单"] .
+2020-03-12 11:13:12,114 INFO:   * Click button: xpath->(//b[contains(text(),"派单给师傅")])[1] .
+2020-03-12 11:13:12,197 INFO:   * Click button: xpath->//label[contains(text(),"李帅宾")] .
+2020-03-12 11:13:12,308 INFO:   * Click button: xpath->(//div[contains(text(),"列表")]/../..//button[2])[1] .
+2020-03-12 11:13:13,360 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 派工成功 .
+2020-03-12 11:13:13,360 INFO:   ** Branch please order is success!
+2020-03-12 11:13:17,256 INFO:   * Refresh current page .
+2020-03-12 11:13:17,258 INFO:  -=【网点完成服务】=-
+2020-03-12 11:13:19,789 INFO:   * Find element: xpath->//a[text()="完成服务"] is true .
+2020-03-12 11:13:19,789 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单 .
+2020-03-12 11:13:23,628 INFO:   * Refresh current page .
+2020-03-12 11:13:25,894 INFO:   * Input message: 637196083407192910 
+2020-03-12 11:13:26,038 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:13:28,163 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196083407192910
+等待师傅接单
+2020-03-12 11:13:11
+网点派工
+经销商工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-12 11:12:20
+2020-03-12 11:13:11
+T西安好家帮家政有限公司
+T西安超级售后有限公司 .
+2020-03-12 11:13:28,163 INFO:   ** search order number: 637196083407192910 . 
+2020-03-12 11:13:30,249 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196083407192910 .
+2020-03-12 11:13:30,352 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:13:30,353 INFO:   * Select order: 637196083407192910.
+2020-03-12 11:13:30,512 INFO:   * Click button: xpath->//a[text()="完成服务"] .
+2020-03-12 11:13:32,102 INFO:   * Input message: 2020-03-12 11:13:31 
+2020-03-12 11:13:32,259 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:13:32,484 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:13:33,688 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:13:34,200 INFO:   * Input message: 2020-03-12 11:13:33 
+2020-03-12 11:13:36,274 INFO:   * Get children element: dl count are 3 .
+2020-03-12 11:13:37,405 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture02.jpg 
+2020-03-12 11:13:37,406 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture02.jpg . 
+2020-03-12 11:13:38,517 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture03.jpg 
+2020-03-12 11:13:38,519 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture03.jpg . 
+2020-03-12 11:13:39,593 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture04.jpg 
+2020-03-12 11:13:39,594 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture04.jpg . 
+2020-03-12 11:13:43,711 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:13:44,874 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:13:44,876 INFO:   ** Finish order is success ！
+2020-03-12 11:13:48,852 INFO:   * Refresh current page .
+2020-03-12 11:13:50,865 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 11:13:50,868 INFO:  -=【网点登录】=-
+2020-03-12 11:13:52,964 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:13:52,964 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:13:53,027 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:13:53,184 INFO:   * Input message: 13700000004 
+2020-03-12 11:13:53,248 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:13:53,360 INFO:   * Input message: 222222 
+2020-03-12 11:13:53,448 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:13:55,613 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 11:13:58,229 INFO:   * Refresh current page .
+2020-03-12 11:13:58,231 INFO:   ** Branch login success！
+2020-03-12 11:13:58,232 INFO:  -=【订单回访】=-
+2020-03-12 11:14:00,623 INFO:   * Find element: xpath->//a[text()="回访"] is true .
+2020-03-12 11:14:00,624 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单 .
+2020-03-12 11:14:03,909 INFO:   * Refresh current page .
+2020-03-12 11:14:05,391 INFO:   * Input message: 637196083407192910 
+2020-03-12 11:14:05,569 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:14:07,707 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196083407192910
+服务完成
+2020-03-12 11:13:42
+0
+保内
+李帅宾
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+2020-03-12 11:12:20
+2020-03-12 11:12:50
+2020-03-12 11:13:11
+2020-03-12-10:00～12:00
+2020-03-12 11:13:42
+T西安好家帮家政有限公司
+T西安超级售后有限公司 .
+2020-03-12 11:14:07,707 INFO:   ** search order number: 637196083407192910 . 
+2020-03-12 11:14:09,778 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196083407192910 .
+2020-03-12 11:14:09,903 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:14:09,905 INFO:   * Select order: 637196083407192910.
+2020-03-12 11:14:10,038 INFO:   * Click button: xpath->//a[text()="回访"] .
+2020-03-12 11:14:12,158 INFO:   * Select value: 非常满意 .
+2020-03-12 11:14:14,262 INFO:   * Select value: 按安全规范操作 .
+2020-03-12 11:14:14,389 INFO:   * Input message: 0 
+2020-03-12 11:14:16,489 INFO:   * Select value: 已完工 .
+2020-03-12 11:14:16,718 INFO:   * Input message: 2020-03-12 11:14:16 
+2020-03-12 11:14:18,851 INFO:   * Select value: 奖励 .
+2020-03-12 11:14:18,973 INFO:   * Input message: 0.01 
+2020-03-12 11:14:19,207 INFO:   * Input message: 2020-03-12 11:14:18 
+2020-03-12 11:14:19,299 INFO:   * Click button: xpath->//div[text()="回访"]/../../div[3]/button[2] .
+2020-03-12 11:14:20,505 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:14:20,506 INFO:   ** Visit order is success . 
+2020-03-12 11:14:20,770 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/finance/billOutgoing .
+2020-03-12 11:14:21,012 INFO:   * Click button: xpath->(//span[contains(text(),"账单明细")])[1] .
+2020-03-12 11:14:21,841 INFO:   * Input message: 637196083407192910 
+2020-03-12 11:14:22,970 INFO:   * Click button: xpath->//span[contains(text(),"搜索")] .
+2020-03-12 11:14:27,023 INFO:  Find bill message success !
+2020-03-12 11:14:28,118 INFO:   * Click button: xpath->//span[contains(text(),"确认账单")] .
+2020-03-12 11:14:28,254 INFO:   * Click button: xpath->//div[contains(text(),"确认账单")]/../..//button[2] .
+2020-03-12 11:14:33,408 INFO:   * Click button: xpath->//span[contains(text(),"立即结算")] .
+2020-03-12 11:14:35,542 INFO:  -=【创建订单】=-
+2020-03-12 11:14:37,670 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 11:14:37,670 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 11:14:39,759 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 11:14:40,083 INFO:   * Input message: AutoTest 
+2020-03-12 11:14:40,449 INFO:   * Input message: 13720673941 
+2020-03-12 11:14:42,668 INFO:   * Select value: 陕西省 .
+2020-03-12 11:14:44,841 INFO:   * Select value: 西安市 .
+2020-03-12 11:14:47,005 INFO:   * Select value: 雁塔区 .
+2020-03-12 11:14:47,096 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 11:14:47,323 INFO:   * Input message: 太白南路 
+2020-03-12 11:14:50,496 INFO:   * Select value: 安装 .
+2020-03-12 11:14:50,694 INFO:   * Input message: 2020-03-14 
+2020-03-12 11:14:51,984 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 11:14:52,153 INFO:   * Input message: 海尔 
+2020-03-12 11:14:54,338 INFO:   * Select value: 家电 .
+2020-03-12 11:14:56,501 INFO:   * Select value: 空调 .
+2020-03-12 11:14:58,721 INFO:   * Select value: 挂机 .
+2020-03-12 11:15:00,882 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:15:03,860 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 11:15:03,861 INFO:   ** Create order is success！
+2020-03-12 11:15:03,952 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:15:08,364 INFO:   * Refresh current page .
+2020-03-12 11:15:10,013 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 11:14:59 .
+2020-03-12 11:15:10,076 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196084995441931 .
+2020-03-12 11:15:10,077 INFO:   * Get order number: 637196084995441931.
+2020-03-12 11:15:10,078 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 11:15:10,080 INFO:   * Load case name: 【工单结算-钱包不足不能结算校验】
+2020-03-12 11:15:10,082 INFO:  -=【网点派单】=-
+2020-03-12 11:15:12,232 INFO:   * Find element: xpath->//a[text()="派单"] is true .
+2020-03-12 11:15:12,233 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:15:12,469 INFO:   * Input message: 637196084995441931 
+2020-03-12 11:15:12,565 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:15:14,756 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196084995441931
+待派
+2020-03-12 11:14:59
+网点创建订单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-14-08:00～09:00
+2020-03-12 11:14:59
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-12 11:15:14,756 INFO:   ** search order number: 637196084995441931 . 
+2020-03-12 11:15:16,823 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196084995441931 .
+2020-03-12 11:15:16,945 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:15:16,947 INFO:   * Select order: 637196084995441931.
+2020-03-12 11:15:17,065 INFO:   * Click button: xpath->//a[text()="派单"] .
+2020-03-12 11:15:20,195 INFO:   * Click button: xpath->(//b[contains(text(),"派单给师傅")])[1] .
+2020-03-12 11:15:20,281 INFO:   * Click button: xpath->//label[contains(text(),"小米科技")] .
+2020-03-12 11:15:22,442 INFO:   * Click button: xpath->//input[contains(@placeholder,"选填")] .
+2020-03-12 11:15:22,619 INFO:   * Input message: 8000 
+2020-03-12 11:15:22,722 INFO:   * Click button: xpath->(//div[contains(text(),"列表")]/../..//button[2])[1] .
+2020-03-12 11:15:23,768 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 派工成功 .
+2020-03-12 11:15:23,768 INFO:   ** Branch please order is success!
+2020-03-12 11:15:27,985 INFO:   * Refresh current page .
+2020-03-12 11:15:27,988 INFO:  -=【网点完成服务】=-
+2020-03-12 11:15:30,658 INFO:   * Find element: xpath->//a[text()="完成服务"] is true .
+2020-03-12 11:15:30,668 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单 .
+2020-03-12 11:15:34,360 INFO:   * Refresh current page .
+2020-03-12 11:15:36,635 INFO:   * Input message: 637196084995441931 
+2020-03-12 11:15:36,777 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:15:38,921 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196084995441931
+等待师傅接单
+2020-03-12 11:15:21
+网点派工
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-12 11:14:59
+2020-03-12 11:15:21
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司 .
+2020-03-12 11:15:38,921 INFO:   ** search order number: 637196084995441931 . 
+2020-03-12 11:15:40,985 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196084995441931 .
+2020-03-12 11:15:41,097 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:15:41,099 INFO:   * Select order: 637196084995441931.
+2020-03-12 11:15:41,246 INFO:   * Click button: xpath->//a[text()="完成服务"] .
+2020-03-12 11:15:42,946 INFO:   * Input message: 2020-03-12 11:15:42 
+2020-03-12 11:15:43,083 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:15:43,256 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:15:44,488 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:15:45,104 INFO:   * Input message: 2020-03-12 11:15:44 
+2020-03-12 11:15:47,224 INFO:   * Get children element: dl count are 3 .
+2020-03-12 11:15:48,288 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture02.jpg 
+2020-03-12 11:15:48,289 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture02.jpg . 
+2020-03-12 11:15:49,426 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture03.jpg 
+2020-03-12 11:15:49,427 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture03.jpg . 
+2020-03-12 11:15:50,511 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture04.jpg 
+2020-03-12 11:15:50,512 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture04.jpg . 
+2020-03-12 11:15:54,616 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:15:55,683 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:15:55,683 INFO:   ** Finish order is success ！
+2020-03-12 11:15:55,683 INFO:  -=【订单回访】=-
+2020-03-12 11:15:58,095 INFO:   * Find element: xpath->//a[text()="回访"] is true .
+2020-03-12 11:15:58,095 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单 .
+2020-03-12 11:16:01,422 INFO:   * Refresh current page .
+2020-03-12 11:16:02,751 INFO:   * Input message: 637196084995441931 
+2020-03-12 11:16:02,891 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:16:05,052 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196084995441931
+服务完成
+2020-03-12 11:15:53
+0
+保内
+小米科技
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+2020-03-12 11:14:59
+2020-03-12 11:15:21
+2020-03-12-10:00～12:00
+2020-03-12 11:15:53
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司 .
+2020-03-12 11:16:05,052 INFO:   ** search order number: 637196084995441931 . 
+2020-03-12 11:16:07,134 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196084995441931 .
+2020-03-12 11:16:07,237 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:16:07,239 INFO:   * Select order: 637196084995441931.
+2020-03-12 11:16:07,369 INFO:   * Click button: xpath->//a[text()="回访"] .
+2020-03-12 11:16:09,464 INFO:   * Select value: 非常满意 .
+2020-03-12 11:16:11,550 INFO:   * Select value: 按安全规范操作 .
+2020-03-12 11:16:11,675 INFO:   * Input message: 0 
+2020-03-12 11:16:13,809 INFO:   * Select value: 已完工 .
+2020-03-12 11:16:14,018 INFO:   * Input message: 2020-03-12 11:16:13 
+2020-03-12 11:16:16,176 INFO:   * Select value: 奖励 .
+2020-03-12 11:16:16,270 INFO:   * Input message: 0.01 
+2020-03-12 11:16:16,493 INFO:   * Input message: 2020-03-12 11:16:16 
+2020-03-12 11:16:16,592 INFO:   * Click button: xpath->//div[text()="回访"]/../../div[3]/button[2] .
+2020-03-12 11:16:17,685 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:16:17,685 INFO:   ** Visit order is success . 
+2020-03-12 11:16:17,951 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/finance/billOutgoing .
+2020-03-12 11:16:18,189 INFO:   * Click button: xpath->(//span[contains(text(),"账单明细")])[1] .
+2020-03-12 11:16:18,998 INFO:   * Input message: 637196084995441931 
+2020-03-12 11:16:20,157 INFO:   * Click button: xpath->//span[contains(text(),"搜索")] .
+2020-03-12 11:16:24,232 INFO:  Find bill message success !
+2020-03-12 11:16:25,377 INFO:   * Click button: xpath->//span[contains(text(),"确认账单")] .
+2020-03-12 11:16:25,499 INFO:   * Click button: xpath->//div[contains(text(),"确认账单")]/../..//button[2] .
+2020-03-12 11:16:30,647 INFO:   * Click button: xpath->//span[contains(text(),"立即结算")] .
+2020-03-12 11:16:34,918 INFO:   * Click button: xpath->//div[contains(text(),"结算")]/../..//button[2] .
+2020-03-12 11:16:36,033 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 账户剩余金额不足 .
+2020-03-12 11:16:36,153 INFO:  Expect: 账户剩余金额不足 equal Faction: 账户剩余金额不足, test -> PASS.
+2020-03-12 11:16:36,163 INFO:  -=【创建订单】=-
+2020-03-12 11:16:38,623 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 11:16:38,624 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 11:16:40,743 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 11:16:41,057 INFO:   * Input message: AutoTest 
+2020-03-12 11:16:41,406 INFO:   * Input message: 13720673941 
+2020-03-12 11:16:43,669 INFO:   * Select value: 陕西省 .
+2020-03-12 11:16:45,815 INFO:   * Select value: 西安市 .
+2020-03-12 11:16:48,008 INFO:   * Select value: 雁塔区 .
+2020-03-12 11:16:48,095 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 11:16:48,324 INFO:   * Input message: 太白南路 
+2020-03-12 11:16:51,609 INFO:   * Select value: 安装 .
+2020-03-12 11:16:51,959 INFO:   * Input message: 2020-03-14 
+2020-03-12 11:16:53,215 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 11:16:53,429 INFO:   * Input message: 海尔 
+2020-03-12 11:16:55,611 INFO:   * Select value: 家电 .
+2020-03-12 11:16:57,767 INFO:   * Select value: 空调 .
+2020-03-12 11:16:59,992 INFO:   * Select value: 挂机 .
+2020-03-12 11:17:02,137 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:17:05,135 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 11:17:05,136 INFO:   ** Create order is success！
+2020-03-12 11:17:05,231 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:17:11,606 INFO:   * Refresh current page .
+2020-03-12 11:17:13,256 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 11:17:00 .
+2020-03-12 11:17:13,316 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196086207962421 .
+2020-03-12 11:17:13,316 INFO:   * Get order number: 637196086207962421.
+2020-03-12 11:17:13,317 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 11:17:13,318 INFO:   * Load case name: 【工单结算-成功结算校验】
+2020-03-12 11:17:13,320 INFO:  -=【网点派单】=-
+2020-03-12 11:17:15,468 INFO:   * Find element: xpath->//a[text()="派单"] is true .
+2020-03-12 11:17:15,468 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:17:15,659 INFO:   * Input message: 637196086207962421 
+2020-03-12 11:17:15,755 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:17:17,931 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196086207962421
+待派
+2020-03-12 11:17:00
+网点创建订单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-14-08:00～09:00
+2020-03-12 11:17:00
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-12 11:17:17,941 INFO:   ** search order number: 637196086207962421 . 
+2020-03-12 11:17:20,018 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196086207962421 .
+2020-03-12 11:17:20,159 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:17:20,160 INFO:   * Select order: 637196086207962421.
+2020-03-12 11:17:20,297 INFO:   * Click button: xpath->//a[text()="派单"] .
+2020-03-12 11:17:23,459 INFO:   * Click button: xpath->(//b[contains(text(),"派单给师傅")])[1] .
+2020-03-12 11:17:23,558 INFO:   * Click button: xpath->//label[contains(text(),"小米科技")] .
+2020-03-12 11:17:25,703 INFO:   * Click button: xpath->//input[contains(@placeholder,"选填")] .
+2020-03-12 11:17:25,875 INFO:   * Input message: 0.01 
+2020-03-12 11:17:25,999 INFO:   * Click button: xpath->(//div[contains(text(),"列表")]/../..//button[2])[1] .
+2020-03-12 11:17:27,047 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 派工成功 .
+2020-03-12 11:17:27,056 INFO:   ** Branch please order is success!
+2020-03-12 11:17:30,539 INFO:   * Refresh current page .
+2020-03-12 11:17:30,541 INFO:  -=【网点完成服务】=-
+2020-03-12 11:17:33,974 INFO:   * Find element: xpath->//a[text()="完成服务"] is true .
+2020-03-12 11:17:33,974 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单 .
+2020-03-12 11:17:37,916 INFO:   * Refresh current page .
+2020-03-12 11:17:40,137 INFO:   * Input message: 637196086207962421 
+2020-03-12 11:17:40,285 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:17:42,414 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196086207962421
+等待师傅接单
+2020-03-12 11:17:24
+网点派工
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-12 11:17:00
+2020-03-12 11:17:24
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司 .
+2020-03-12 11:17:42,414 INFO:   ** search order number: 637196086207962421 . 
+2020-03-12 11:17:44,503 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196086207962421 .
+2020-03-12 11:17:44,617 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:17:44,618 INFO:   * Select order: 637196086207962421.
+2020-03-12 11:17:44,766 INFO:   * Click button: xpath->//a[text()="完成服务"] .
+2020-03-12 11:17:46,404 INFO:   * Input message: 2020-03-12 11:17:45 
+2020-03-12 11:17:46,543 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:17:46,720 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:17:47,938 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:17:48,603 INFO:   * Input message: 2020-03-12 11:17:47 
+2020-03-12 11:17:50,684 INFO:   * Get children element: dl count are 3 .
+2020-03-12 11:17:51,836 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture02.jpg 
+2020-03-12 11:17:51,838 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture02.jpg . 
+2020-03-12 11:17:52,964 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture03.jpg 
+2020-03-12 11:17:52,965 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture03.jpg . 
+2020-03-12 11:17:54,079 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture04.jpg 
+2020-03-12 11:17:54,079 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture04.jpg . 
+2020-03-12 11:17:58,294 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:17:59,505 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:17:59,505 INFO:   ** Finish order is success ！
+2020-03-12 11:17:59,505 INFO:  -=【订单回访】=-
+2020-03-12 11:18:01,947 INFO:   * Find element: xpath->//a[text()="回访"] is true .
+2020-03-12 11:18:01,947 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单 .
+2020-03-12 11:18:02,661 INFO:   * Refresh current page .
+2020-03-12 11:18:09,543 INFO:   * Input message: 637196086207962421 
+2020-03-12 11:18:09,692 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:18:11,825 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196086207962421
+服务完成
+2020-03-12 11:17:57
+0
+保内
+小米科技
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+2020-03-12 11:17:00
+2020-03-12 11:17:24
+2020-03-12-10:00～12:00
+2020-03-12 11:17:57
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司 .
+2020-03-12 11:18:11,825 INFO:   ** search order number: 637196086207962421 . 
+2020-03-12 11:18:14,216 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196086207962421 .
+2020-03-12 11:18:14,379 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:18:14,381 INFO:   * Select order: 637196086207962421.
+2020-03-12 11:18:14,793 INFO:   * Click button: xpath->//a[text()="回访"] .
+2020-03-12 11:18:16,868 INFO:   * Select value: 非常满意 .
+2020-03-12 11:18:18,984 INFO:   * Select value: 按安全规范操作 .
+2020-03-12 11:18:19,082 INFO:   * Input message: 0 
+2020-03-12 11:18:21,221 INFO:   * Select value: 已完工 .
+2020-03-12 11:18:21,422 INFO:   * Input message: 2020-03-12 11:18:21 
+2020-03-12 11:18:23,492 INFO:   * Select value: 奖励 .
+2020-03-12 11:18:23,591 INFO:   * Input message: 0.01 
+2020-03-12 11:18:23,819 INFO:   * Input message: 2020-03-12 11:18:23 
+2020-03-12 11:18:23,917 INFO:   * Click button: xpath->//div[text()="回访"]/../../div[3]/button[2] .
+2020-03-12 11:18:25,031 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:18:25,032 INFO:   ** Visit order is success . 
+2020-03-12 11:18:25,289 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/finance/billOutgoing .
+2020-03-12 11:18:26,582 INFO:   * Click button: xpath->(//span[contains(text(),"账单明细")])[1] .
+2020-03-12 11:18:27,387 INFO:   * Input message: 637196086207962421 
+2020-03-12 11:18:28,514 INFO:   * Click button: xpath->//span[contains(text(),"搜索")] .
+2020-03-12 11:18:32,544 INFO:  Find bill message success !
+2020-03-12 11:18:33,650 INFO:   * Click button: xpath->//span[contains(text(),"确认账单")] .
+2020-03-12 11:18:33,773 INFO:   * Click button: xpath->//div[contains(text(),"确认账单")]/../..//button[2] .
+2020-03-12 11:18:38,930 INFO:   * Click button: xpath->//span[contains(text(),"立即结算")] .
+2020-03-12 11:18:39,063 INFO:   * Click button: xpath->//label[contains(text(),"结算方式")]/../div/label[2] .
+2020-03-12 11:18:43,209 INFO:   * Click button: xpath->//div[contains(text(),"结算")]/../..//button[2] .
+2020-03-12 11:18:48,208 INFO:   * Refresh current page .
+2020-03-12 11:18:50,284 INFO:   * Get element: xpath->//label[contains(text(),"账单状态")]/following::div[1] text: 已结算 （线下） .
+2020-03-12 11:18:50,402 INFO:  Expect: 已结算 in Faction: 已结算 （线下）, test -> PASS.
+2020-03-12 11:18:50,506 INFO:   * Clear browser catch data .
+2020-03-12 11:18:52,890 INFO:   * Quit browser .
+2020-03-12 11:20:31,213 INFO:   * Launch browser of "chrome" . 
+2020-03-12 11:20:32,412 INFO:  -=【网点登录】=-
+2020-03-12 11:20:42,457 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:20:42,458 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:20:42,519 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:20:42,661 INFO:   * Input message: 13700000004 
+2020-03-12 11:20:42,730 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:20:42,826 INFO:   * Input message: 222222 
+2020-03-12 11:20:42,915 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:20:44,922 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/login . 
+2020-03-12 11:20:48,992 INFO:   * Refresh current page .
+2020-03-12 11:20:51,095 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:20:51,095 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:20:51,165 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:20:51,304 INFO:   * Input message: 13700000004 
+2020-03-12 11:20:51,357 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:20:51,439 INFO:   * Input message: 222222 
+2020-03-12 11:20:51,519 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:20:53,830 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 11:20:53,844 INFO:   * Refresh current page .
+2020-03-12 11:20:53,845 INFO:   ** Branch login success！
+2020-03-12 11:20:53,864 INFO:  -=【创建订单】=-
+2020-03-12 11:21:00,365 INFO:   * Find element: xpath->//input[@placeholder="请输入联系人"] is true .
+2020-03-12 11:21:00,365 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/add .
+2020-03-12 11:21:02,442 INFO:   * Clear element: xpath->//input[@placeholder="请输入联系人"] .
+2020-03-12 11:21:02,781 INFO:   * Input message: AutoTest 
+2020-03-12 11:21:03,158 INFO:   * Input message: 13720673941 
+2020-03-12 11:21:05,326 INFO:   * Select value: 陕西省 .
+2020-03-12 11:21:07,494 INFO:   * Select value: 西安市 .
+2020-03-12 11:21:09,683 INFO:   * Select value: 雁塔区 .
+2020-03-12 11:21:09,778 INFO:   * Click button: xpath->//label[text()="工单类型："]/following-sibling::label[1]/i .
+2020-03-12 11:21:10,012 INFO:   * Input message: 太白南路 
+2020-03-12 11:21:13,210 INFO:   * Select value: 安装 .
+2020-03-12 11:21:13,400 INFO:   * Input message: 2020-03-14 
+2020-03-12 11:21:14,629 INFO:   * Input message: 08:00 - 09:00 
+2020-03-12 11:21:14,816 INFO:   * Input message: 海尔 
+2020-03-12 11:21:16,987 INFO:   * Select value: 家电 .
+2020-03-12 11:21:19,156 INFO:   * Select value: 空调 .
+2020-03-12 11:21:21,476 INFO:   * Select value: 挂机 .
+2020-03-12 11:21:23,631 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:21:25,726 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 创建成功 .
+2020-03-12 11:21:25,728 INFO:   ** Create order is success！
+2020-03-12 11:21:25,852 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:21:31,182 INFO:   * Refresh current page .
+2020-03-12 11:21:34,560 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[5]//span text: 2020-03-12 11:21:22 .
+2020-03-12 11:21:34,620 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]//a text: 637196088823309453 .
+2020-03-12 11:21:34,620 INFO:   * Get order number: 637196088823309453.
+2020-03-12 11:21:34,620 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-12 11:21:34,620 INFO:   * Load case name: 【工单结算-市场单不能线下结算校验】
+2020-03-12 11:21:34,620 INFO:  -=【发布到市场】=-
+2020-03-12 11:21:36,696 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196088823309453 .
+2020-03-12 11:21:36,895 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:21:36,897 INFO:   * Select order: 637196088823309453.
+2020-03-12 11:21:37,126 INFO:   * Click button: xpath->//a[contains(text(),"发布市场")] .
+2020-03-12 11:21:37,667 INFO:   * Input message: 0.01 
+2020-03-12 11:21:37,830 INFO:   * Input message: 0 
+2020-03-12 11:21:37,994 INFO:   * Input message: 0 
+2020-03-12 11:21:38,094 INFO:   * Click button: xpath->//div[contains(text(),"发布")]/../..//button[2] .
+2020-03-12 11:21:39,240 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 派发成功 .
+2020-03-12 11:21:39,241 INFO:   ** Send order to market success !
+2020-03-12 11:21:40,901 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 11:21:40,904 INFO:  -=【网点登录】=-
+2020-03-12 11:21:43,044 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:21:43,044 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:21:43,116 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:21:43,281 INFO:   * Input message: 13720673941 
+2020-03-12 11:21:43,340 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:21:43,421 INFO:   * Input message: 111111 
+2020-03-12 11:21:43,507 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:21:45,553 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 11:21:46,546 INFO:   * Refresh current page .
+2020-03-12 11:21:46,548 INFO:   ** Branch login success！
+2020-03-12 11:21:46,548 INFO:  -=【市场抢单】=-
+2020-03-12 11:21:46,584 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1 .
+2020-03-12 11:21:50,696 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196088823309453 .
+2020-03-12 11:21:50,814 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a .
+2020-03-12 11:21:50,816 INFO:   * Into order: 637196088823309453 details page.
+2020-03-12 11:21:52,935 INFO:   * Click button: xpath->//button[contains(text(),"抢单")] .
+2020-03-12 11:21:53,079 INFO:   * Click button: xpath->//div[contains(text(),"抢单提醒")]/../..//button[2] .
+2020-03-12 11:21:54,365 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 接单成功 .
+2020-03-12 11:21:54,366 INFO:   ** Grad order success !
+2020-03-12 11:21:59,762 INFO:   * Refresh current page .
+2020-03-12 11:22:02,204 INFO:   * Find element: xpath->//a[text()="派单"] is true .
+2020-03-12 11:22:02,204 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:22:02,204 INFO:  -=【网点派单】=-
+2020-03-12 11:22:04,350 INFO:   * Find element: xpath->//a[text()="派单"] is true .
+2020-03-12 11:22:04,350 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-12 11:22:04,617 INFO:   * Input message: 637196088823309453 
+2020-03-12 11:22:04,711 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:22:06,863 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196088823309453
+网点派单
+2020-03-12 11:21:51
+AutoTest
+保内
+13720673941
+待派
+安装
+海尔
+市场工单
+挂机
+2020-03-14-08:00～09:00
+2020-03-12 11:21:22
+T西安好家帮家政有限公司
+T西安超级售后有限公司
+陕西省 西安市 雁塔区 太白南路 .
+2020-03-12 11:22:06,863 INFO:   ** search order number: 637196088823309453 . 
+2020-03-12 11:22:08,915 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196088823309453 .
+2020-03-12 11:22:09,033 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:22:09,034 INFO:   * Select order: 637196088823309453.
+2020-03-12 11:22:09,172 INFO:   * Click button: xpath->//a[text()="派单"] .
+2020-03-12 11:22:12,298 INFO:   * Click button: xpath->(//b[contains(text(),"派单给师傅")])[1] .
+2020-03-12 11:22:12,379 INFO:   * Click button: xpath->//label[contains(text(),"李帅宾")] .
+2020-03-12 11:22:12,494 INFO:   * Click button: xpath->(//div[contains(text(),"列表")]/../..//button[2])[1] .
+2020-03-12 11:22:13,550 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 派工成功 .
+2020-03-12 11:22:13,550 INFO:   ** Branch please order is success!
+2020-03-12 11:22:14,181 INFO:   * Refresh current page .
+2020-03-12 11:22:14,182 INFO:  -=【网点完成服务】=-
+2020-03-12 11:22:17,355 INFO:   * Find element: xpath->//a[text()="完成服务"] is true .
+2020-03-12 11:22:17,356 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/servicing?tabType=全部工单 .
+2020-03-12 11:22:17,372 INFO:   * Refresh current page .
+2020-03-12 11:22:21,930 INFO:   * Input message: 637196088823309453 
+2020-03-12 11:22:22,072 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:22:24,200 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196088823309453
+等待师傅接单
+2020-03-12 11:22:11
+网点派工
+经销商工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-12 11:21:22
+2020-03-12 11:22:11
+T西安好家帮家政有限公司
+T西安超级售后有限公司 .
+2020-03-12 11:22:24,201 INFO:   ** search order number: 637196088823309453 . 
+2020-03-12 11:22:26,295 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196088823309453 .
+2020-03-12 11:22:26,412 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:22:26,413 INFO:   * Select order: 637196088823309453.
+2020-03-12 11:22:26,559 INFO:   * Click button: xpath->//a[text()="完成服务"] .
+2020-03-12 11:22:28,102 INFO:   * Input message: 2020-03-12 11:22:27 
+2020-03-12 11:22:28,231 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:22:28,397 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:22:29,589 INFO:   * Input message: 2020-03-12 
+2020-03-12 11:22:30,082 INFO:   * Input message: 2020-03-12 11:22:29 
+2020-03-12 11:22:32,137 INFO:   * Get children element: dl count are 3 .
+2020-03-12 11:22:33,228 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture02.jpg 
+2020-03-12 11:22:33,229 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture02.jpg . 
+2020-03-12 11:22:34,344 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture03.jpg 
+2020-03-12 11:22:34,345 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture03.jpg . 
+2020-03-12 11:22:35,468 INFO:   * Input message: D:\my_test_script\UItest-branch\data\picture\picture04.jpg 
+2020-03-12 11:22:35,469 INFO:   * Uploading picture: D:\my_test_script\UItest-branch\data\picture\picture04.jpg . 
+2020-03-12 11:22:39,601 INFO:   * Click button: xpath->//div[@class="btnMenubox"]/button[1] .
+2020-03-12 11:22:40,715 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:22:40,716 INFO:   ** Finish order is success ！
+2020-03-12 11:22:44,593 INFO:   * Refresh current page .
+2020-03-12 11:22:46,527 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-12 11:22:46,532 INFO:  -=【网点登录】=-
+2020-03-12 11:22:48,709 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-12 11:22:48,709 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-12 11:22:48,786 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-12 11:22:48,950 INFO:   * Input message: 13700000004 
+2020-03-12 11:22:49,021 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-12 11:22:49,105 INFO:   * Input message: 222222 
+2020-03-12 11:22:49,189 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-12 11:22:51,195 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-12 11:22:53,676 INFO:   * Refresh current page .
+2020-03-12 11:22:53,677 INFO:   ** Branch login success！
+2020-03-12 11:22:53,679 INFO:  -=【订单回访】=-
+2020-03-12 11:22:56,193 INFO:   * Find element: xpath->//a[text()="回访"] is true .
+2020-03-12 11:22:56,194 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/waitvisit?tabType=全部工单 .
+2020-03-12 11:22:59,271 INFO:   * Refresh current page .
+2020-03-12 11:23:00,645 INFO:   * Input message: 637196088823309453 
+2020-03-12 11:23:00,809 INFO:   * Click button: xpath->(//a[contains(text(),"搜索")])[1] .
+2020-03-12 11:23:02,982 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637196088823309453
+服务完成
+2020-03-12 11:22:38
+0
+保内
+李帅宾
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+2020-03-12 11:21:22
+2020-03-12 11:21:51
+2020-03-12 11:22:11
+2020-03-12-10:00～12:00
+2020-03-12 11:22:38
+T西安好家帮家政有限公司
+T西安超级售后有限公司 .
+2020-03-12 11:23:02,983 INFO:   ** search order number: 637196088823309453 . 
+2020-03-12 11:23:05,057 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1]/td[3]/div/a text: 637196088823309453 .
+2020-03-12 11:23:05,170 INFO:   * Click button: xpath->(//tr[@class="ivu-table-row"])[1]/td[2]//input .
+2020-03-12 11:23:05,172 INFO:   * Select order: 637196088823309453.
+2020-03-12 11:23:05,323 INFO:   * Click button: xpath->//a[text()="回访"] .
+2020-03-12 11:23:07,472 INFO:   * Select value: 非常满意 .
+2020-03-12 11:23:09,593 INFO:   * Select value: 按安全规范操作 .
+2020-03-12 11:23:09,715 INFO:   * Input message: 0 
+2020-03-12 11:23:11,867 INFO:   * Select value: 已完工 .
+2020-03-12 11:23:12,087 INFO:   * Input message: 2020-03-12 11:23:11 
+2020-03-12 11:23:14,180 INFO:   * Select value: 奖励 .
+2020-03-12 11:23:14,299 INFO:   * Input message: 0.01 
+2020-03-12 11:23:14,526 INFO:   * Input message: 2020-03-12 11:23:14 
+2020-03-12 11:23:14,619 INFO:   * Click button: xpath->//div[text()="回访"]/../../div[3]/button[2] .
+2020-03-12 11:23:15,676 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 操作成功 .
+2020-03-12 11:23:15,677 INFO:   ** Visit order is success . 
+2020-03-12 11:23:15,912 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/finance/billOutgoing .
+2020-03-12 11:23:16,494 INFO:   * Click button: xpath->(//span[contains(text(),"账单明细")])[1] .
+2020-03-12 11:23:17,117 INFO:   * Input message: 637196088823309453 
+2020-03-12 11:23:18,260 INFO:   * Click button: xpath->//span[contains(text(),"搜索")] .
+2020-03-12 11:23:22,329 INFO:  Find bill message success !
+2020-03-12 11:23:23,443 INFO:   * Click button: xpath->//span[contains(text(),"确认账单")] .
+2020-03-12 11:23:23,555 INFO:   * Click button: xpath->//div[contains(text(),"确认账单")]/../..//button[2] .
+2020-03-12 11:23:28,705 INFO:   * Click button: xpath->//span[contains(text(),"立即结算")] .
+2020-03-12 11:23:30,782 INFO:   * Get element: xpath->//label[contains(text(),"结算方式")]/../div/label[2], value: "style" attribute: "display: none;" . 
+2020-03-12 11:23:30,902 INFO:  Expect: display: none; equal Faction: display: none;, test -> PASS.
+2020-03-12 11:23:30,992 INFO:   * Clear browser catch data .
+2020-03-12 11:23:33,254 INFO:   * Quit browser .
