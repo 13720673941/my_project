@@ -109,6 +109,11 @@ class BasePage(object):
                         raise TimeoutError('Not Open Url: {0} ! '.format(url))
             pass
 
+    def use_js(self,js):
+        """使用JS脚本"""
+        self.driver.execute_script(js)
+        self.log.info(" * Use java script: {} . ".format(js))
+
     def get_current_url(self):
         """
         获取当前url地址信息
@@ -416,7 +421,7 @@ class BasePage(object):
         self.log.info(' Get current window handle .')
         return current_handle
 
-    def switch_to_new_handle(self,all_handles,old_handle):
+    def switch_to_new_handle(self):
         """
         切换页面新窗口, 需要先获取旧的窗口句柄和当前所有窗口的句柄列表
         :param all_handles 所有的窗口句柄列表
@@ -426,11 +431,12 @@ class BasePage(object):
         """
 
         try:
-            for handle in all_handles:
-                if handle != old_handle:
+            for handle in self.get_all_handles():
+                if handle != self.get_current_handle():
                     # 切换新窗口
                     self.driver.switch_to.window(handle)
                     self.log.info(' * Switch to window new handle: {0} .'.format(handle))
+                    break
         except:
             raise Exception(' Unable switch to window handle .')
 

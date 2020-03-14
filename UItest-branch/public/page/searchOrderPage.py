@@ -109,8 +109,8 @@ class SearchOrderPage(BasePage):
 
     def click_more_search_btn(self):
         """点击更多订单搜索的搜索按钮"""
-        self.sleep(2)
         self.click_button(self.get_elements("search_btn1"))
+        self.sleep(1)
         self.click_button(self.get_elements("search_btn1"))
 
     def search_order_count(self):

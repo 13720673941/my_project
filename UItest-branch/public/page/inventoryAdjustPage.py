@@ -46,7 +46,7 @@ class InventoryAdjust(BasePage):
     def get_all_inventory_count(self):
         """获取总库存数量"""
         try:
-            return self.get_text(self.get_elements("all_inventory_number"))
+            return int(self.get_text(self.get_elements("all_inventory_number")))
         except:
             return 0
 

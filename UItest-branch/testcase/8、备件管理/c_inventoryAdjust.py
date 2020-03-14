@@ -97,7 +97,7 @@ class Inventory_Adjust(unittest.TestCase):
         # 获取备件总库存数量
         all_inventory_count = self.inventory_adjust.get_all_inventory_count()
         # 断言
-        self.assert_page.assert_equal(data,all_inventory_count)
+        self.assert_page.assert_equal(data,str(all_inventory_count))
 
     @unittest.skipUnless(readExcel.get_isRun_text("inventory_adjust_003"),"-跳过不执行")
     def test_inventory_adjust003(self):

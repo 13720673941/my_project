@@ -85,7 +85,7 @@ def checkWifiIsConnect():
         if "请求找不到主机" in out:
             print("......网络连接错误！！！")
             # 断开重新连接无线网
-            wifiStatus = connectWifi(wifi_name="DengPF",wifi_password="peng123456")
+            wifiStatus = connectWifi(wifi_name="HUAWEI-SH_5G",wifi_password="1234surdata.com")
             if wifiStatus == "无线网已连接":
                 print("......无线网已重新连接 ！")
                 break

@@ -101,14 +101,10 @@ class Order_Details(unittest.TestCase):
         data = self.read_excel.get_dict_data("print_order_003")
         # 打印测试用例名称
         self.base.print_case_name(data)
-        # 获取当前窗口handle
-        old_handle = self.base.get_current_handle()
         # 点击打印订单
         self.order_details.click_print_order_btn()
-        # 获取全部handles
-        handles = self.base.get_all_handles()
         # 切换页面
-        self.base.switch_to_new_handle(handles,old_handle)
+        self.base.switch_to_new_handle()
         # 判断新建订单成功
         self.assert_mode.assert_equal(data,self.base.get_title())
 

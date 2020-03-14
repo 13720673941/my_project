@@ -83,3 +83,16 @@ class MyWalletPage(BasePage):
         """点击确认提现"""
         self.click_button(self.get_elements("confirm_button"))
 
+    def get_my_use_balance_number(self):
+        """我的钱包可用余额数量"""
+        try:
+            return float(self.get_text(self.get_elements("my_use_balance")))
+        except:
+            return 0
+
+    def get_my_not_use_balance_number(self):
+        """我的钱包不可用余额数量"""
+        try:
+            return float(self.get_text(self.get_elements("my_not_use_balance")))
+        except:
+            return 0

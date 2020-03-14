@@ -6,7 +6,7 @@
 from public.common.logConfig import Log
 log = Log()
 
-# 传入一个功能测试用例，判断ddt数据中每条数据的信息
+# 传入一个功能，判断ddt数据中每条数据的信息
 def skipped_case(func):
     """
         该装饰器为：跳过用例的执行，在ddt模式中不能使用 unittest 框架中的方法

@@ -72,11 +72,20 @@ class MasterReceivePage(BasePage):
             return 0
 
     def get_master_inventory_count(self):
-        """获取师傅库存数量"""
-        try:
-            return int(self.get_text(self.get_elements("master_inventory_count")))
-        except:
-            return 0
+        """获取师傅库存数量: 师傅库存备件第二次添加的相同条码的备件回生成两条库存记录 BUG """
+
+        # 初始化数量为 0
+        count = 0
+        getCount = 0
+        for i in range(1,10):
+            try:
+                getCount = int(self.get_text(
+                    self.get_elements("master_inventory_count").replace("+num+",str(i))))
+            except:
+                break
+            finally:
+                count += getCount
+        return count
 
     def select_search_master_name(self,masterName):
         """选择搜索师傅名称"""

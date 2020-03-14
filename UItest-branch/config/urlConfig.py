@@ -34,7 +34,7 @@ all_order_list_url = host+'/singleBranch/#/order/search/allorder?tabType=全部�
 # 服务中全部订单列表url
 servicing_order_list_url = host+'/singleBranch/#/order/search/servicing?tabType=全部工单'
 # 待抢单页面工单列表
-wait_grad_order_url = host+'/singleBranch/#/order/search/waitdispatch?tabType=抢单市场&SubtabType=待结算&page=1'
+wait_grad_order_url = host+'/singleBranch/#/order/search/waitaccept?tabType=抢单市场&SubtabType=待结算&page=1'
 # 待回访订单列表页url
 wait_visit_order_url = host+'/singleBranch/#/order/search/waitvisit?tabType=全部工单'
 # 拒单列表页url
@@ -92,5 +92,7 @@ inventory_adjust_url = host+'/singleBranch/#/sparepart/stock/IORecord'
 wait_return_factory_url = host+'/singleBranch/#/sparepart/returnFactory/waitReturn'
 # 已返厂页面
 already_return_faction_url = host+'/singleBranch/#/sparepart/returnFactory/alreadyReturn'
+# 用户评价页面地址-> +OrderPkId+ 替换订单PkId
+user_evaluate_url = host+'/singleUser/#/sms/evaluate?pkid=+orderPkId+'
 # 我创建的圈子页面
 my_create_group_list = host+'/singleBranch/#/groupList/group'

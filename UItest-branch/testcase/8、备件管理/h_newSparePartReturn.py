@@ -57,10 +57,6 @@ class New_SP_return(unittest.TestCase):
         self.base_page.print_case_name(data)
         # 选择备件
         self.company_inventory.select_first_sparePart(data["备件名称"])
-        self.base_page.sleep(2)
-        # 获取备件库存
-        global before_return
-        before_return = int(self.inventory_adjust.get_all_inventory_count())
         # 点击新件返厂
         self.return_factory.click_new_sp_return()
         self.base_page.sleep(1)
@@ -96,6 +92,14 @@ class New_SP_return(unittest.TestCase):
         data = self.readExcel.get_dict_data("return_factory_003")
         # 打印测试用例名称
         self.base_page.print_case_name(data)
+        # 搜索备件
+        self.search_spare_part(data["备件名称"])
+        # 获取备件数量
+        global before_return
+        before_return = int(self.inventory_adjust.get_all_inventory_count())
+        print(before_return)
+        # 刷新页面
+        self.base_page.refresh_page()
         # 选择备件
         self.company_inventory.select_first_sparePart(data["备件名称"])
         # 点击新件返厂

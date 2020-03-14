@@ -4,6 +4,7 @@
 # @Time    : 2020/1/18 20:14
 
 import threading,requests,re,time
+from selenium import webdriver
 
 def get_session():
 
@@ -28,10 +29,11 @@ class MyThread(threading.Thread):
         # 设置线程等待
         self.event.wait()
         print("{}开始执行...".format(self.name))
-        time.sleep(5)
+        time.sleep(1)
+        d = webdriver.Chrome()
+        d.maximize_window()
 
 
-        print("----------------------")
 
         # time.sleep(5)
         #
@@ -67,7 +69,7 @@ if __name__ == '__main__':
     event = threading.Event()
     threads = []
 
-    for i in range(1, 20):
+    for i in range(1,20):
         threads.append(threading.Thread(target=MyThread(event).run))
     # 必须在子线程start之前先清空所有的event设置，让子线程的event.wait生效
     event.clear()

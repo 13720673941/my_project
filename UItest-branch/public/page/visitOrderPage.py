@@ -69,7 +69,7 @@ class VisitOrderPage(BasePage):
         self.click_button(self.get_elements("confirm_btn"))
 
     def visit_order_main(self,orderNumber,serverStatus="非常满意",safetyAssess="按安全规范操作",
-                         visitMoney="0",visitResult="已完工"):
+                         visitMoney="0",visitResult="已完工",rewardPunish=True):
         """订单回访主程序"""
 
         self.log.info('-=【订单回访】=-')
@@ -92,12 +92,13 @@ class VisitOrderPage(BasePage):
         self.select_visit_result(visitResult)
         # 输入回访反馈
         self.input_visit_remark()
-        # 选择奖惩
-        self.select_reward_punish()
-        # 输入奖惩金额
-        self.input_reward_punish_money()
-        # 输入奖惩备注
-        self.input_reward_punish_remark()
+        if rewardPunish:
+            # 选择奖惩
+            self.select_reward_punish()
+            # 输入奖惩金额
+            self.input_reward_punish_money()
+            # 输入奖惩备注
+            self.input_reward_punish_remark()
         # 点击提交按钮
         self.click_confirm_btn()
         self.sleep(1)

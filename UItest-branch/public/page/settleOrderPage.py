@@ -76,31 +76,11 @@ class SettleOrderPage(BasePage):
 
     def select_money_wattle_settle(self):
         """选择钱包结算"""
-        btn = self.get_elements("money_wattle_settle_btn")
-        # 替换元素的路径信息总共有六个
-        for i in range(1,7):
-            try:
-                self.click_button(btn.replace("+num+",str(i)))
-                break
-            except:
-                if i == 6:
-                    raise Exception("Not find select money settle element on page .")
-                else:
-                    pass
+        self.click_button(self.get_elements("money_wattle_settle_btn"))
 
     def select_line_down_settle(self):
         """选择线下结算"""
-        btn = self.get_elements("down_line_settle_btn")
-        # 替换元素的路径信息总共有六个
-        for i in range(1,7):
-            try:
-                self.click_button(btn.replace("+num+",str(i)))
-                break
-            except:
-                if i == 6:
-                    raise Exception("Not find select down line settle element on page .")
-                else:
-                    pass
+        self.click_button(self.get_elements("down_line_settle_btn"))
 
     def click_confirm_settle_btn(self):
         """点击确认结算按钮"""
@@ -111,6 +91,15 @@ class SettleOrderPage(BasePage):
         """获取账单结算状态"""
         self.sleep(2)
         return self.get_text(self.get_elements("bill_settle_status"))
+
+    def get_down_line_att(self):
+        """市场单结算时获取线下结算属性，判断是否支持线下结算"""
+        self.sleep(2)
+        return self.get_att(self.get_elements("down_line_settle_btn"),attribute="style")
+
+    def get_bill_reward_first_record(self):
+        """获取账单奖惩最后的统计一整行信息,删除换行符"""
+        return self.get_text(self.get_elements("bill_reward_count")).replace("\n","")
 
     def settle_order_main(self,orderNumber):
         """订单结算主程序"""
@@ -125,7 +114,6 @@ class SettleOrderPage(BasePage):
         self.click_confirm_bill_btn()
         self.click_confirm_bill_confirm_btn()
         # 点击立即结算
-        self.sleep(4)
         self.click_promptly_settle_btn()
         # 选择线下结算
         self.select_line_down_settle()
@@ -133,10 +121,8 @@ class SettleOrderPage(BasePage):
         self.sleep(2)
         # 结算成功刷新页面
         self.refresh_page()
-        # 获取账单结算状态
-        bill_status = self.get_bill_settle_status()
         # 判断是否结算成功
-        if "已结算" in bill_status:
+        if "已结算" in self.get_bill_settle_status():
             self.log.info(" ** Bill settle success !")
         else:
             raise Exception(" ** Bill settle fail !")

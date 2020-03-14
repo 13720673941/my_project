@@ -29,10 +29,6 @@ class SendOrderPage(BasePage):
         """进入派单页面"""
         self.open_url(all_order_list_url,self.get_elements("send_order_btn"))
 
-    def enter_wait_grad_order_page(self):
-        """进入待抢单页面"""
-        self.open_url(wait_grad_order_url,self.get_elements("grad_order_market_table"))
-
     def click_take_order(self):
         """服务商接单"""
         self.click_button(self.get_elements("branch_take_order_btn"))
@@ -49,9 +45,9 @@ class SendOrderPage(BasePage):
                 self.sleep(1)
                 if send_type != "":
                     self.click_button(path.replace("+send_type+",send_type).replace("+num+",str(i)))
-                elif send_type not in ["师傅","服务商","圈子","市场",""]:
+                elif send_type not in ["师傅","服务商","圈子",""]:
                     raise Exception(
-                        "Send type text is not in page, you can enter: 师傅、服务商、圈子、市场.")
+                        "Send type text is not in page, you can enter: 师傅、服务商、圈子.")
                 break
             except:
                 if i < 2:
@@ -124,18 +120,6 @@ class SendOrderPage(BasePage):
                     continue
                 else:
                     raise TimeoutError("Click confirm send timeout not find button .")
-
-    def click_grad_order_btn(self):
-        """点击抢单按钮"""
-        self.click_button(self.get_elements("grad_order_btn"))
-
-    def click_confirm_grad_order_btn(self):
-        """点击确认抢单按钮"""
-        self.click_button(self.get_elements("confirm_grad_order_btn"))
-
-    def get_msg_of_send_market(self):
-        """获取余额不足提示"""
-        return self.get_text(self.get_elements("wallet_not_enough_msg"))
 
     def send_order_main(
             self,orderNumber,pageName="",takeOrder=False,sendType="师傅",setOrderMoney=False,setPrice="1"):

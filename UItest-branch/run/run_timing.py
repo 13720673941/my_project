@@ -6,8 +6,6 @@
 from public.common.runReport import *
 from config.pathConfig import *
 from public.common.sendEmail import Send_Email
-# from public.common.connectWifi import *
-
 import os,unittest
 SE = Send_Email()
 
@@ -36,7 +34,7 @@ if __name__ == '__main__':
     import time
     # 默认脚本执行失败
     isPass = False
-    timing = "08:30"
+    timing = "06:30"
     while True:
         # 获取当前时间
         time.sleep(10)
@@ -45,8 +43,6 @@ if __name__ == '__main__':
         if timing in str(now_time):
             # 时间一样执行脚本
             print('========== 开始 ==========')
-            # 检查网络连接
-            # checkWifiIsConnect()
             # 定时间
             startTime = time.time()
             # 调用脚本用例集

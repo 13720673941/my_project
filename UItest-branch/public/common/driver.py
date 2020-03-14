@@ -11,7 +11,7 @@ import os,warnings
 warnings.filterwarnings("ignore")
 
 # 获取配置文件中的浏览器名称
-browser = read_config_data("Browser", "browser_name", configPath)
+browser = read_config_data("Browser","browser_name",configPath)
 
 def web_driver(browserType=browser):
     """
@@ -20,12 +20,12 @@ def web_driver(browserType=browser):
     """
     # 实例化日志
     log = Log()
-    # # 本地网络校验 尝试ping百度网址
-    # isConnect = os.popen("ping www.baidu.com")
-    # if "请求找不到主机" in isConnect.read():
-    #     # 检查网咯连接 源码中已封装日志模块 调用后会冲突
-    #     # checkWifiIsConnect()
-    #     raise TimeoutError("Intent connect is time out !")
+    # 本地网络校验 尝试ping百度网址
+    isConnect = os.popen("ping www.baidu.com")
+    if "请求找不到主机" in isConnect.read():
+        # 检查网咯连接 源码中已封装日志模块 调用后会冲突
+        # checkWifiIsConnect()
+        raise TimeoutError("Intent connect is time out !")
     # 判断浏览器类型
     if browserType == "chrome":
         driver = webdriver.Chrome()

@@ -51,34 +51,34 @@ class Search_Order(unittest.TestCase):
         # 进入全部工单页面
         cls.search_order.enter_search_order_page()
 
-    @ddt.data(*ddt_data1)
-    @myDecorator.skipped_case
-    def test_search_order001(self,ddt_data1):
-        """网点主搜索页面测试用例"""
-
-        # 打印测试用例名称
-        self.base.print_case_name(ddt_data1)
-        self.base.sleep(1)
-        # 清除数据
-        self.base.refresh_page()
-        # 输入工单编号
-        self.search_order.input_order_Nnumber(ddt_data1["工单编号"])
-        # 输入用户姓名
-        self.search_order.input_username(ddt_data1["用户姓名"])
-        # 输入用户电话
-        self.search_order.input_user_phone(ddt_data1["用户电话"])
-        # 选择服务类型
-        self.search_order.select_server_type(ddt_data1["服务类型"])
-        # 选择工单状态
-        self.search_order.select_order_status(ddt_data1["工单状态"])
-        # 选择服务师傅
-        self.search_order.select_master(ddt_data1["服务师傅"])
-        # 点击搜索按钮
-        self.search_order.click_search_btn()
-        # 时间加载
-        self.base.sleep(4)
-        # 断言
-        self.assert_mode.assert_more_str_in(ddt_data1,self.search_order.get_first_order_info())
+    # @ddt.data(*ddt_data1)
+    # @myDecorator.skipped_case
+    # def test_search_order001(self,ddt_data1):
+    #     """网点主搜索页面测试用例"""
+    #
+    #     # 打印测试用例名称
+    #     self.base.print_case_name(ddt_data1)
+    #     self.base.sleep(1)
+    #     # 清除数据
+    #     self.base.refresh_page()
+    #     # 输入工单编号
+    #     self.search_order.input_order_Nnumber(ddt_data1["工单编号"])
+    #     # 输入用户姓名
+    #     self.search_order.input_username(ddt_data1["用户姓名"])
+    #     # 输入用户电话
+    #     self.search_order.input_user_phone(ddt_data1["用户电话"])
+    #     # 选择服务类型
+    #     self.search_order.select_server_type(ddt_data1["服务类型"])
+    #     # 选择工单状态
+    #     self.search_order.select_order_status(ddt_data1["工单状态"])
+    #     # 选择服务师傅
+    #     self.search_order.select_master(ddt_data1["服务师傅"])
+    #     # 点击搜索按钮
+    #     self.search_order.click_search_btn()
+    #     # 时间加载
+    #     self.base.sleep(4)
+    #     # 断言
+    #     self.assert_mode.assert_more_str_in(ddt_data1,self.search_order.get_first_order_info())
 
     @ddt.data(*ddt_data2)
     @myDecorator.skipped_case
@@ -129,4 +129,5 @@ class Search_Order(unittest.TestCase):
 if __name__ == '__main__':
 
     suit = unittest.TestLoader().loadTestsFromTestCase(Search_Order)
+
     unittest.TextTestRunner().run(suit)
