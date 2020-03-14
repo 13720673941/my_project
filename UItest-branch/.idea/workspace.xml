@@ -1,146 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="优化代码">
-      <change afterPath="$PROJECT_DIR$/public/page/marketOrderPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/page/myGroupSearchPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/page/userEvaluatePage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/7、财务管理/f_myWalletBalance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcase/9、圈子管理/c_groupSearch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my_python/12、文件操作/md5加密.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my_python/5、字典/5.7、字典排序.py" afterDir="false" />
+    <list default="true" id="bb0b4639-222b-4d35-b8a8-4af4acccf85b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/page/visitMemberPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urlConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urlConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/UI_testCase.xls" beforeDir="false" afterPath="$PROJECT_DIR$/data/UI_testCase.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/elementData.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/elementData.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/orderNumber.ini" beforeDir="false" afterPath="$PROJECT_DIR$/data/orderNumber.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/basePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/basePage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/connectWifi.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/connectWifi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/common/myDecorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/common/myDecorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/invalidOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/invalidOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/inventoryAdjustPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/inventoryAdjustPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/masterReceivePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/masterReceivePage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/myWalletPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/myWalletPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/page/searchOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/searchOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/sendOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/sendOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/settleOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/settleOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/visitOrderPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/public/page/visitOrderPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200227100049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228084008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228085839.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228091115.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228094915.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228100045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228100907.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200228112130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200229084235.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200229090252.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200229095441.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200229100556.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200229101458.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200301084101.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200301191612.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200301192127.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200301194016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200301194037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200302194632.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200302194837.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303122013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303122050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303122739.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303123716.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303124641.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303124759.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303125757.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303130520.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303131710.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303134503.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303134645.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303135022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303185006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303192911.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303193217.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303193359.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303193631.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303202803.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303202944.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303203106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303205704.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303210010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303210152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200303210313.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305084309.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305090307.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305090504.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305094858.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305095025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305095140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305095141.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305095422.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305095546.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305100758.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305101722.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305101832.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305102642.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305102936.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305103116.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305103237.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305125050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305125053.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305125430.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305131544.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305131620.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305131917.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305132040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305132411.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305132418.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305132635.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200305132711.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306084306.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306090406.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306091356.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306091745.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306093440.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306095727.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306101032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306102128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306102953.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306103352.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306103429.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306103753.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200306171715.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307084307.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307090426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307092814.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307095821.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307100717.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307100718.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307100719.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307101012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307102008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307102257.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307103309.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307143845.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307144010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200307144548.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200311114934.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200311143403.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200311144120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/image/20200311150237.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/statistical_result.xls" beforeDir="false" afterPath="$PROJECT_DIR$/result/statistical_result.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/run_timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run_timing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/i_settleOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/i_settleOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/n_orderDetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/n_orderDetails.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/o_searchOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/o_searchOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/3、工单管理/p_gradOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/3、工单管理/p_gradOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/8、备件管理/c_inventoryAdjust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/8、备件管理/h_newSparePartReturn.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/8、备件管理/h_newSparePartReturn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/9、圈子管理/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/9、圈子管理/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my_python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_python/14、线程/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../my_python/14、线程/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../other_file/学习/selenium爬坑记.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../other_file/学习/selenium爬坑记.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -923,7 +787,7 @@
       <workItem from="1583802700468" duration="7237000" />
       <workItem from="1583889255381" duration="22093000" />
       <workItem from="1583975791225" duration="11530000" />
-      <workItem from="1584061723601" duration="40689000" />
+      <workItem from="1584061723601" duration="41023000" />
     </task>
     <task id="LOCAL-00001" summary="git test">
       <created>1561443687108</created>
@@ -1051,7 +915,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574847037685</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="新增“圈子管理模块”，代码优化">
+      <created>1584170538124</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1584170538124</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1102,7 +973,8 @@
     <MESSAGE value="增加师傅模块测试脚本以及字符串的操作" />
     <MESSAGE value="新增师傅工单统计页面对象类" />
     <MESSAGE value="优化代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化代码" />
+    <MESSAGE value="新增“圈子管理模块”，代码优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增“圈子管理模块”，代码优化" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580954448486">
@@ -1121,10 +993,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581060407148" />
-    <state x="347" y="4" key="CommitChangelistDialog2" timestamp="1580042684568">
+    <state x="347" y="4" key="CommitChangelistDialog2" timestamp="1584170781383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="347" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580042684568" />
+    <state x="347" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584170781383" />
     <state x="551" y="170" key="FileChooserDialogImpl" timestamp="1584064805299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

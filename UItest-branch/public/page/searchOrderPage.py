@@ -4,7 +4,6 @@
 #  @Time    : 2019/6/4 11:57
 
 from public.common.basePage import BasePage
-from public.common.rwConfig import read_config_data
 from config.urlConfig import *
 from config.pathConfig import *
 
