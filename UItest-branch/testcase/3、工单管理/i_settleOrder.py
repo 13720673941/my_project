@@ -270,7 +270,7 @@ class Order_Settle(unittest.TestCase):
         # 点击账单明细按钮
         self.settle_order.click_bill_details_of_orderNumber(self.orderNumber)
         # 断言
-        self.assert_mode.assert_in(data, self.settle_order.get_bill_reward_first_record())
+        self.assert_mode.assert_in(data,self.settle_order.get_bill_reward_first_record())
 
 
     @classmethod

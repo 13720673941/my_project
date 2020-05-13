@@ -9,7 +9,7 @@ from public.common.assertMode import Assert
 from public.common.operateExcel import *
 from public.common import myDecorator
 from public.page.loginPage import LoginPage
-from public.page.myGroupSearchPage import MyGroupListPage
+from public.page.groupSearchPage import GroupSearchPage
 import unittest,ddt
 
 @ddt.ddt
@@ -33,10 +33,10 @@ class Group_Search(unittest.TestCase):
         cls.driver = web_driver()
         cls.base = BasePage(cls.driver)
         cls.login = LoginPage(cls.driver)
-        cls.group_search = MyGroupListPage(cls.driver)
+        cls.group_search = GroupSearchPage(cls.driver)
         cls.assert_mode = Assert(cls.driver,"groupSearch")
         # 登录网点
-        cls.login.login_main("T西安好家帮家政有限公司")
+        cls.login.login_main("T西安超级售后有限公司")
         # 进入我的圈子列表页面
         cls.group_search.enter_my_group_list_page()
 

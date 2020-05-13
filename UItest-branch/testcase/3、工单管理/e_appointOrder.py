@@ -59,7 +59,7 @@ class Appoint_Order(unittest.TestCase):
         self.base.refresh_page()
         # 点击订单进入订单详情页
         self.create_order.open_order_details(self.orderNumber)
-        self.base.sleep(1)
+        self.base.sleep(2)
 
     @ddt.data(*ddt_data)
     @myDecorator.skipped_case
@@ -77,6 +77,7 @@ class Appoint_Order(unittest.TestCase):
         # self.order_details.input_appoint_date()
         # # 点击空白区
         # self.order_details.click_white_place()
+        self.base.sleep(2)
         # 选择预约时间段
         self.order_details.select_appoint_time(ddt_data["预约时间段"])
         # 点击确定按钮
@@ -95,6 +96,7 @@ class Appoint_Order(unittest.TestCase):
         self.base.print_case_name(data)
         # 点击改约按钮
         self.order_details.click_alter_appoint_btn()
+        self.base.sleep(2)
         # 输入预约日期
         self.order_details.input_appoint_date(alter=True)
         # 点击空白区
@@ -117,4 +119,5 @@ class Appoint_Order(unittest.TestCase):
 if __name__ == '__main__':
 
     suit = unittest.TestLoader().loadTestsFromTestCase(Appoint_Order)
+
     unittest.TextTestRunner().run(suit)

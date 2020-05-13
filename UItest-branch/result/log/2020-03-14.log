@@ -10185,3 +10185,306 @@ ShanXiAutoTestGroup
 create this group by python ., test -> PASS.
 2020-03-14 15:21:08,512 INFO:   * Clear browser catch data .
 2020-03-14 15:21:10,778 INFO:   * Quit browser .
+2020-03-14 16:22:41,514 INFO:  -=【网点登录】=-
+2020-03-14 16:22:45,877 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 16:22:45,887 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 16:22:45,937 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 16:22:46,082 INFO:   * Input message: 13700000004 
+2020-03-14 16:22:46,149 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 16:22:46,248 INFO:   * Input message: 222222 
+2020-03-14 16:22:46,345 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 16:22:49,115 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 16:22:52,824 INFO:   * Refresh current page .
+2020-03-14 16:22:52,825 INFO:   ** Branch login success！
+2020-03-14 16:22:52,826 INFO:  -=【搜索圈子】=-
+2020-03-14 16:22:55,819 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 16:22:55,829 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 16:22:56,176 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 16:22:56,301 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 16:22:57,417 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省渭南市富平县
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 16:22:57,417 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 16:25:37,120 INFO:  -=【网点登录】=-
+2020-03-14 16:25:41,259 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 16:25:41,259 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 16:25:41,322 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 16:25:41,474 INFO:   * Input message: 13700000004 
+2020-03-14 16:25:41,594 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 16:25:41,708 INFO:   * Input message: 222222 
+2020-03-14 16:25:41,798 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 16:25:45,157 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 16:25:46,059 INFO:   * Refresh current page .
+2020-03-14 16:25:46,060 INFO:   ** Branch login success！
+2020-03-14 16:25:46,061 INFO:  -=【搜索圈子】=-
+2020-03-14 16:25:53,145 INFO:   * Refresh current page .
+2020-03-14 16:25:56,348 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 16:25:56,348 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 16:25:56,624 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 16:25:56,723 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 16:25:57,850 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省渭南市富平县
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 16:25:57,850 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 16:25:58,017 INFO:   * Click button: xpath->((//tr[@class="ivu-table-row"])[2]/td[1]//i)[2] .
+2020-03-14 16:25:58,097 INFO:   * Get children element: li count are 0 .
+2020-03-14 16:27:24,531 INFO:  -=【网点登录】=-
+2020-03-14 16:27:29,279 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 16:27:29,279 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 16:27:29,339 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 16:27:29,488 INFO:   * Input message: 13700000004 
+2020-03-14 16:27:29,552 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 16:27:29,644 INFO:   * Input message: 222222 
+2020-03-14 16:27:29,758 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 16:27:32,469 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 16:27:35,528 INFO:   * Refresh current page .
+2020-03-14 16:27:35,529 INFO:   ** Branch login success！
+2020-03-14 16:27:35,530 INFO:  -=【搜索圈子】=-
+2020-03-14 16:27:38,196 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 16:27:38,196 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 16:27:38,494 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 16:27:38,600 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 16:27:39,709 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省渭南市富平县
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 16:27:39,709 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 16:27:39,880 INFO:   * Click button: xpath->((//tr[@class="ivu-table-row"])[2]/td[1]//i)[2] .
+2020-03-14 16:27:41,960 INFO:   * Get children element: li count are 9 .
+2020-03-14 16:27:42,010 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]/div[1]/div[1] text: T陕西中美经销商 .
+2020-03-14 16:27:42,106 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]//input .
+2020-03-14 16:27:42,195 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]/div[1]/div[1] text: T西安快生活 .
+2020-03-14 16:27:42,274 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[3]/div[1]/div[1] text: T西安中大机械 .
+2020-03-14 16:27:42,338 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]/div[1]/div[1] text: xabranch81 .
+2020-03-14 16:27:42,389 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[5]/div[1]/div[1] text: T西安哗啦啦科技公司 .
+2020-03-14 16:27:42,449 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[6]/div[1]/div[1] text: T西安易通信息科技 .
+2020-03-14 16:27:42,499 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[7]/div[1]/div[1] text: T瑞晟科技 .
+2020-03-14 16:27:42,549 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]/div[1]/div[1] text: T西安超级售后 .
+2020-03-14 16:27:42,640 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]//input .
+2020-03-14 16:27:42,717 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]/div[1]/div[1] text: T西安乐家家政 .
+2020-03-14 16:27:42,818 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]//input .
+2020-03-14 16:33:43,992 INFO:  -=【网点登录】=-
+2020-03-14 16:33:48,412 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 16:33:48,412 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 16:33:48,502 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 16:33:48,685 INFO:   * Input message: 13700000004 
+2020-03-14 16:33:48,766 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 16:33:48,883 INFO:   * Input message: 222222 
+2020-03-14 16:33:49,005 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 16:33:52,337 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 16:33:55,452 INFO:   * Refresh current page .
+2020-03-14 16:33:55,454 INFO:   ** Branch login success！
+2020-03-14 16:33:55,455 INFO:  -=【搜索圈子】=-
+2020-03-14 16:33:58,370 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 16:33:58,370 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 16:33:58,703 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 16:33:58,810 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 16:33:59,925 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省渭南市富平县
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 16:33:59,925 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 16:34:00,102 INFO:   * Click button: xpath->((//tr[@class="ivu-table-row"])[2]/td[1]//i)[2] .
+2020-03-14 16:34:02,180 INFO:   * Get children element: li count are 9 .
+2020-03-14 16:34:02,230 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]/div[1]/div[1] text: T陕西中美经销商 .
+2020-03-14 16:34:02,319 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]//input .
+2020-03-14 16:34:02,389 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]/div[1]/div[1] text: T西安快生活 .
+2020-03-14 16:34:02,451 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[3]/div[1]/div[1] text: T西安中大机械 .
+2020-03-14 16:34:02,508 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]/div[1]/div[1] text: xabranch81 .
+2020-03-14 16:34:02,571 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[5]/div[1]/div[1] text: T西安哗啦啦科技公司 .
+2020-03-14 16:34:02,621 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[6]/div[1]/div[1] text: T西安易通信息科技 .
+2020-03-14 16:34:02,671 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[7]/div[1]/div[1] text: T瑞晟科技 .
+2020-03-14 16:34:02,721 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]/div[1]/div[1] text: T西安超级售后 .
+2020-03-14 16:34:02,818 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]//input .
+2020-03-14 16:34:02,889 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]/div[1]/div[1] text: T西安乐家家政 .
+2020-03-14 16:34:02,994 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]//input .
+2020-03-14 16:34:03,113 INFO:   * Click button: xpath->(//div[contains(text(),"邀请")]/../..//a[contains(text(),"立即邀请")])[1] .
+2020-03-14 16:34:03,303 INFO:   * Input message: 122 
+2020-03-14 16:34:05,456 INFO:   * Select value: 按周结算 .
+2020-03-14 17:34:07,602 INFO:  -=【网点登录】=-
+2020-03-14 17:34:12,255 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 17:34:12,255 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 17:34:12,315 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 17:34:12,449 INFO:   * Input message: 13700000004 
+2020-03-14 17:34:12,510 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 17:34:12,620 INFO:   * Input message: 222222 
+2020-03-14 17:34:12,718 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 17:34:15,121 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 17:34:17,944 INFO:   * Refresh current page .
+2020-03-14 17:34:17,945 INFO:   ** Branch login success！
+2020-03-14 17:34:17,946 INFO:  -=【搜索圈子】=-
+2020-03-14 17:34:20,675 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 17:34:20,675 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 17:34:21,118 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 17:34:21,261 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 17:34:22,395 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省西安市市辖区,新城区,碑林区,莲湖区,灞桥区...
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 17:34:22,395 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 17:34:22,684 INFO:   * Click button: xpath->((//tr[@class="ivu-table-row"])[2]/td[1]//i)[3] .
+2020-03-14 17:34:24,770 INFO:   * Get children element: li count are 10 .
+2020-03-14 17:34:24,820 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]/div[1]/div[1] text: 彼德科技 .
+2020-03-14 17:34:24,870 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]/div[1]/div[1] text: T陕西中美经销商 .
+2020-03-14 17:34:24,967 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]//input .
+2020-03-14 17:34:25,052 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[3]/div[1]/div[1] text: T西安快生活 .
+2020-03-14 17:34:25,111 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]/div[1]/div[1] text: T西安中大机械 .
+2020-03-14 17:34:25,220 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]//input .
+2020-03-14 17:34:25,293 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[5]/div[1]/div[1] text: 超级售后 .
+2020-03-14 17:34:25,357 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[6]/div[1]/div[1] text: xabranch81 .
+2020-03-14 17:34:25,439 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[7]/div[1]/div[1] text: T西安哗啦啦科技公司 .
+2020-03-14 17:34:25,498 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]/div[1]/div[1] text: T瑞晟科技 .
+2020-03-14 17:34:25,556 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]/div[1]/div[1] text: T西安超级售后 .
+2020-03-14 17:34:25,613 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[10]/div[1]/div[1] text: T西安乐家家政 .
+2020-03-14 17:35:39,603 INFO:  -=【网点登录】=-
+2020-03-14 17:35:47,814 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 17:35:47,815 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 17:35:47,868 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 17:35:47,998 INFO:   * Input message: 13700000004 
+2020-03-14 17:35:48,070 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 17:35:48,156 INFO:   * Input message: 222222 
+2020-03-14 17:35:48,249 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 17:35:50,254 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/login . 
+2020-03-14 17:35:51,523 INFO:   * Refresh current page .
+2020-03-14 17:35:53,641 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 17:35:53,641 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 17:35:53,711 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 17:35:53,839 INFO:   * Input message: 13700000004 
+2020-03-14 17:35:53,895 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 17:35:53,973 INFO:   * Input message: 222222 
+2020-03-14 17:35:54,050 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 17:35:56,268 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 17:36:08,000 INFO:   * Refresh current page .
+2020-03-14 17:36:08,001 INFO:   ** Branch login success！
+2020-03-14 17:36:08,003 INFO:  -=【搜索圈子】=-
+2020-03-14 17:36:10,743 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 17:36:10,743 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 17:36:11,036 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 17:36:11,136 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 17:36:12,296 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省西安市市辖区,新城区,碑林区,莲湖区,灞桥区...
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 17:36:12,306 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 17:36:12,609 INFO:   * Click button: xpath->((//tr[@class="ivu-table-row"])[2]/td[1]//i)[3] .
+2020-03-14 17:36:14,696 INFO:   * Get children element: li count are 10 .
+2020-03-14 17:36:14,746 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]/div[1]/div[1] text: 彼德科技 .
+2020-03-14 17:36:14,796 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]/div[1]/div[1] text: T陕西中美经销商 .
+2020-03-14 17:36:14,884 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]//input .
+2020-03-14 17:36:14,956 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[3]/div[1]/div[1] text: T西安快生活 .
+2020-03-14 17:36:15,024 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]/div[1]/div[1] text: T西安中大机械 .
+2020-03-14 17:36:15,114 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]//input .
+2020-03-14 17:36:15,177 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[5]/div[1]/div[1] text: 超级售后 .
+2020-03-14 17:36:15,236 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[6]/div[1]/div[1] text: xabranch81 .
+2020-03-14 17:36:15,297 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[7]/div[1]/div[1] text: T西安哗啦啦科技公司 .
+2020-03-14 17:36:15,355 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]/div[1]/div[1] text: T瑞晟科技 .
+2020-03-14 17:36:15,416 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]/div[1]/div[1] text: T西安超级售后 .
+2020-03-14 17:36:15,470 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[10]/div[1]/div[1] text: T西安乐家家政 .
+2020-03-14 17:36:15,553 INFO:   * Click button: xpath->(//div[contains(text(),"邀请")]/../..//a[contains(text(),"立即邀请")])[1] .
+2020-03-14 17:36:15,884 INFO:   * Input message: 122 
+2020-03-14 17:36:15,998 INFO:   * Click button: xpath->//label[contains(text(),"服务品牌：")]/..//div[@class="io-select"]/span[contains(text(),"松下")] .
+2020-03-14 17:36:16,103 INFO:   * Click button: xpath->//label[contains(text(),"服务品牌：")]/..//div[@class="io-select"]/span[contains(text(),"创维")] .
+2020-03-14 17:36:16,172 INFO:   * Get children element: li count are 2 .
+2020-03-14 17:36:16,284 INFO:   * Click button: xpath->(//div[contains(text()," 选择服务城市")]/../..//ul)[1]/li[1]//a .
+2020-03-14 17:36:18,355 INFO:   * Get children element: li count are 14 .
+2020-03-14 17:36:18,524 INFO:   * Click button: xpath->(//div[contains(text()," 选择服务城市")]/../..//ul)[2]/li[4]//input .
+2020-03-14 17:36:18,691 INFO:   * Click button: xpath->(//div[contains(text()," 选择服务城市")]/../..//ul)[2]/li[6]//input .
+2020-03-14 17:36:51,802 INFO:  -=【网点登录】=-
+2020-03-14 17:37:03,491 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-14 17:37:03,491 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-14 17:37:03,548 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-14 17:37:03,679 INFO:   * Input message: 13700000004 
+2020-03-14 17:37:03,734 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-14 17:37:03,827 INFO:   * Input message: 222222 
+2020-03-14 17:37:03,918 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-14 17:37:06,368 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-14 17:37:17,681 INFO:   * Refresh current page .
+2020-03-14 17:37:17,683 INFO:   ** Branch login success！
+2020-03-14 17:37:17,685 INFO:  -=【搜索圈子】=-
+2020-03-14 17:37:20,296 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-14 17:37:20,296 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-14 17:37:20,547 INFO:   * Input message: ShanXiAutoTestGroup 
+2020-03-14 17:37:20,652 INFO:   * Click button: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/../..//a .
+2020-03-14 17:37:21,770 INFO:   * Get element: xpath->(//tr[@class="ivu-table-row"])[1] text: 1
+ShanXiAutoTestGroup
+按金额结算
+自动派单
+0 | 0
+0 | 0 ( 覆盖率0% )
+0 | ¥ 0.00
+陕西省西安市市辖区,新城区,碑林区,莲湖区,灞桥区...
+送装一体,拉修
+松下,创维
+电视,热水器,吸油烟机
+create this group by python . .
+2020-03-14 17:37:21,770 INFO:   ** Search group: ShanXiAutoTestGroup success !
+2020-03-14 17:37:22,151 INFO:   * Click button: xpath->((//tr[@class="ivu-table-row"])[2]/td[1]//i)[3] .
+2020-03-14 17:37:24,215 INFO:   * Get children element: li count are 10 .
+2020-03-14 17:37:24,285 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[1]/div[1]/div[1] text: 彼德科技 .
+2020-03-14 17:37:24,355 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]/div[1]/div[1] text: T陕西中美经销商 .
+2020-03-14 17:37:24,466 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[2]//input .
+2020-03-14 17:37:24,553 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[3]/div[1]/div[1] text: T西安快生活 .
+2020-03-14 17:37:24,632 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]/div[1]/div[1] text: T西安中大机械 .
+2020-03-14 17:37:24,764 INFO:   * Click button: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[4]//input .
+2020-03-14 17:37:24,851 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[5]/div[1]/div[1] text: 超级售后 .
+2020-03-14 17:37:24,926 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[6]/div[1]/div[1] text: xabranch81 .
+2020-03-14 17:37:25,004 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[7]/div[1]/div[1] text: T西安哗啦啦科技公司 .
+2020-03-14 17:37:25,068 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[8]/div[1]/div[1] text: T瑞晟科技 .
+2020-03-14 17:37:25,128 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[9]/div[1]/div[1] text: T西安超级售后 .
+2020-03-14 17:37:25,198 INFO:   * Get element: xpath->(//div[contains(text(),"全部好友")]/..//ul[1])[1]/li[10]/div[1]/div[1] text: T西安乐家家政 .
+2020-03-14 17:37:25,315 INFO:   * Click button: xpath->(//div[contains(text(),"邀请")]/../..//a[contains(text(),"立即邀请")])[1] .
+2020-03-14 17:37:25,646 INFO:   * Input message: 122 
+2020-03-14 17:37:25,734 INFO:   * Click button: xpath->//label[contains(text(),"服务品牌：")]/..//div[@class="io-select"]/span[contains(text(),"松下")] .
+2020-03-14 17:37:25,823 INFO:   * Click button: xpath->//label[contains(text(),"服务品牌：")]/..//div[@class="io-select"]/span[contains(text(),"创维")] .
+2020-03-14 17:37:25,874 INFO:   * Get children element: li count are 2 .
+2020-03-14 17:37:25,985 INFO:   * Click button: xpath->(//div[contains(text()," 选择服务城市")]/../..//ul)[1]/li[1]//input .

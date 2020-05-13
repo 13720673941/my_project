@@ -17,8 +17,8 @@ class SendOrderPage(BasePage):
 
     def __init__(self,driver):
         BasePage.__init__(self,driver)
-        self.create_order = CreateOrderPage(driver)
         self.login = LoginPage(driver)
+        self.create_order = CreateOrderPage(driver)
         self.search_order = SearchOrderPage(driver)
 
     def get_elements(self,option):
@@ -55,12 +55,19 @@ class SendOrderPage(BasePage):
                 else:
                     raise TimeoutError("Select send type timeout not find button .")
 
-    def select_send_page(self,page_name):
-        """选择派单对象"""
+    def select_send_page(self,pageName,groupOrder=False,groupName=None):
+        """
+        :param page_name:   派单方名称
+        :param groupOrder:  判断是否为圈子订单中的派单方自主派单模式
+        """
         path = self.get_elements("send_page_select")
         try:
-            if page_name != "":
-                self.click_button(path.replace("+page_name+",page_name))
+            if pageName != "":
+                if groupOrder:
+                    self.click_button(self.get_elements("group_open_btn").replace("+groupName+",groupName))
+                    self.sleep(1)
+                # 选择派单对象
+                self.click_button(path.replace("+page_name+",pageName))
         except:
             raise Exception("Not find send page name in this page list .")
 

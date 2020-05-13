@@ -100,10 +100,10 @@ class CreateGroupPage(BasePage):
                         else:
                             continue
 
-    def select_service_type(self, serviceType):
+    def select_service_type(self,serviceType):
         """
         选择服务类型可以是多个一起，默认传入列表格式
-        :param serviceType 服务类型列表 usage: ["安装","维修","保养"]
+        :param serviceType 服务类型列表 usage: "安装","维修","保养"
         """
 
         if serviceType != "":
@@ -185,21 +185,32 @@ class CreateGroupPage(BasePage):
         选择收费模式
         :param chargeModeName: "金额" / "比例"
         """
-        self.click_button(self.get_elements("charge_mode_name_btn").replace("+chargeMode+",chargeModeName))
+        if chargeModeName != "":
+            self.click_button(self.get_elements("charge_mode_name_btn").replace("+chargeMode+",chargeModeName))
 
     def input_start_charge_count(self,startChargeCount):
         """
         输入起收单数
         :param startChargeCount 起收单数
         """
-        self.input_message(self.get_elements("start_charge_order_count_input"),startChargeCount)
+        if startChargeCount != "":
+            # 这里需要清除原来的数据使用clear()方法无效->获取输入框字段使用退格键删除
+            text = self.get_att(self.get_elements("start_charge_order_count_input"),"value")
+            for i in range(len(text)):
+                self.use_keys_operate(self.get_elements("start_charge_order_count_input"),operate="退格")
+            # 输入单数
+            self.input_message(self.get_elements("start_charge_order_count_input"),startChargeCount)
 
     def input_charge_amount(self,chargeAmount):
         """
         输入每单收取费用金额
         :param chargeAmount 每单圈子所收取的费用金额
         """
-        self.input_message(self.get_elements("charge_amount_input"),chargeAmount)
+        if chargeAmount != "":
+            text = self.get_att(self.get_elements("charge_amount_input"),"value")
+            for i in range(len(text)):
+                self.use_keys_operate(self.get_elements("charge_amount_input"),operate="退格")
+            self.input_message(self.get_elements("charge_amount_input"),chargeAmount)
 
     def select_send_order_way(self,sendOrderWay):
         """
@@ -215,7 +226,7 @@ class CreateGroupPage(BasePage):
         """
         self.click_button(self.get_elements("settle_way_btn").replace("+settleWay+",settleWay))
 
-    def input_group_notice(self,groupNotice):
+    def input_group_notice(self,groupNotice="."):
         """输入圈子公告"""
         self.input_message(self.get_elements("group_notice_input"),groupNotice)
 
@@ -226,3 +237,46 @@ class CreateGroupPage(BasePage):
     def create_success_is_displayed(self):
         """判断创建成功的字段在页面上显示"""
         return self.is_display(self.get_elements("is_create_success_text"))
+
+    def create_group_main(self,name,area,type,brands,kinds,isCharge,
+                          sendWay,settleWay,chargeMode="金额",startCount="0",charge="0.05"):
+        """创建圈子主程序"""
+
+        self.log.info("-=【创建圈子】=-")
+        # 进入创建圈子页面
+        self.enter_my_group_list_page()
+        # 点击创建圈子按钮
+        self.click_create_group_btn()
+        # 输入圈子名称
+        self.input_group_name(name)
+        # 选择服务区域
+        self.select_service_area(area)
+        # 选择服务类型
+        self.select_service_type(type)
+        # 选择服务品牌
+        self.select_service_brands(brands)
+        # 选择服务品类
+        self.select_service_kinds(kinds)
+        # 选择收费设置
+        self.select_charge_rule(isCharge)
+        if isCharge != "免费":
+            # 选择收费模式
+            self.select_charge_mode(chargeMode)
+            # 输入起手单数
+            self.input_start_charge_count(startCount)
+            # 输入费用金额
+            self.input_charge_amount(charge)
+        # 选择派单方式
+        self.select_send_order_way(sendWay)
+        # 选择结算方式
+        self.select_settle_way(settleWay)
+        # 输入圈子公告
+        self.input_group_notice()
+        self.sleep(1)
+        # 点击确定创建
+        self.click_confirm_create_btn()
+        self.sleep(1)
+        if self.create_success_is_displayed():
+            self.log.info(" ** 圈子：{} 创建成功 ！".format(name))
+        else:
+            raise Exception(" ** 圈子：{} 创建失败 ！".format(name))

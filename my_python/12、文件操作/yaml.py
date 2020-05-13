@@ -32,8 +32,8 @@ desired_caps = {
     ]
 }
 
-# with open("test.yaml","w") as f:
-#     yaml.dump(desired_caps,f,encoding="utf-8",allow_unicode=True,Dumper=yaml.RoundTripDumper)
+with open("test.yaml","w") as f:
+    yaml.dump(desired_caps,f,encoding="utf-8",allow_unicode=True,Dumper=yaml.RoundTripDumper)
 
 with open("test.yaml","r") as f:
     data=yaml.load(f,Loader=yaml.Loader)

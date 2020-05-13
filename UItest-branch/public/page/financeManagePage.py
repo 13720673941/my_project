@@ -21,11 +21,11 @@ class FinanceManagePage(BasePage):
 
     def enter_my_income_page(self):
         """进入我的收入页面"""
-        self.open_url(my_income_url)
+        self.open_url(my_income_url,self.get_elements("bill_number_input"))
 
     def enter_my_expend_page(self):
         """进入我的支出页面"""
-        self.open_url(my_expend_url)
+        self.open_url(my_expend_url,self.get_elements("bill_number_input"))
 
     def input_bill_number(self,billNumber):
         """输入账单编号"""

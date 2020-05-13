@@ -96,3 +96,8 @@ already_return_faction_url = host+'/singleBranch/#/sparepart/returnFactory/alrea
 user_evaluate_url = host+'/singleUser/#/sms/evaluate?pkid=+orderPkId+'
 # 我创建的圈子页面
 my_create_group_list = host+'/singleBranch/#/groupList/group'
+# 圈子订单抢单市场地址
+group_order_of_market_url = host+'/singleBranch/#/order/search/waitaccept?tabType=%E5%9C%88%E5%AD%90%E6%8A%A2%E5%8D%95' \
+                                 '&SubtabType=%E5%BE%85%E7%BB%93%E7%AE%97&page=1'
+# 我加入的圈子列表页面
+group_list_my_join = host+'/singleBranch/#/groupList/Group/partakeGroup'

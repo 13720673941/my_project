@@ -42,12 +42,12 @@ class Assert(BasePage,Write_Excel):
         try:
             unittest.TestCase().assertNotIn(expect,fact)
             self.write_result(self.sheet_name,"测试通过",Id)
-            self.log.info('Expect: {1} not in Faction: {1}, test -> PASS.'.format(expect,fact))
+            self.log.info('Expect: {0} not in Faction: {1}, test -> PASS.'.format(expect,fact))
         except AssertionError:
             self.write_result(self.sheet_name,"测试失败",Id)
             self.take_screen_shot()
             if expect in fact:
-                raise AssertionError('Expect: {1} in Faction: {1}, test -> FAIL.'.format(expect,fact))
+                raise AssertionError('Expect: {0} in Faction: {1}, test -> FAIL.'.format(expect,fact))
 
     def assert_equal(self,test_data,fact):
         """
@@ -58,12 +58,12 @@ class Assert(BasePage,Write_Excel):
         try:
             unittest.TestCase().assertEqual(expect,fact)
             self.write_result(self.sheet_name,"测试通过",Id)
-            self.log.info('Expect: {1} equal Faction: {1}, test -> PASS.'.format(expect,fact))
+            self.log.info('Expect: {0} equal Faction: {1}, test -> PASS.'.format(expect,fact))
         except AssertionError:
             self.write_result(self.sheet_name,"测试失败",Id)
             self.take_screen_shot()
             if expect != fact:
-                raise AssertionError('Expect: {1} not equal Faction: {1}, test -> FAIL.'.format(expect,fact))
+                raise AssertionError('Expect: {0} not equal Faction: {1}, test -> FAIL.'.format(expect,fact))
 
     def assert_not_equal(self,test_data,fact):
         """
@@ -74,12 +74,12 @@ class Assert(BasePage,Write_Excel):
         try:
             unittest.TestCase().assertNotEqual(expect,fact)
             self.write_result(self.sheet_name,"测试通过",Id)
-            self.log.info('Expect: {1} not equal Faction: {1}, test -> PASS.'.format(expect,fact))
+            self.log.info('Expect: {0} not equal Faction: {1}, test -> PASS.'.format(expect,fact))
         except AssertionError:
             self.write_result(self.sheet_name,"测试失败",Id)
             self.take_screen_shot()
             if expect == fact:
-                raise AssertionError('Expect: {1} equal Faction: {1}, test -> FAIL.'.format(expect,fact))
+                raise AssertionError('Expect: {0} equal Faction: {1}, test -> FAIL.'.format(expect,fact))
 
     def assert_more_str_in(self,test_data,fact):
         """

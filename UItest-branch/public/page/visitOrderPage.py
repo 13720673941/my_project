@@ -101,7 +101,7 @@ class VisitOrderPage(BasePage):
             self.input_reward_punish_remark()
         # 点击提交按钮
         self.click_confirm_btn()
-        self.sleep(1)
+        self.sleep(2)
         # 断言
         if self.login.get_system_msg() == '操作成功':
             self.log.info(' ** Visit order is success . ')

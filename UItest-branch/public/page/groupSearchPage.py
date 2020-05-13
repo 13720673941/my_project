@@ -6,7 +6,7 @@
 from public.common.basePage import BasePage
 from config.urlConfig import *
 
-class MyGroupListPage(BasePage):
+class GroupSearchPage(BasePage):
 
     """ 我创建的圈子页面列表：搜索功能页面元素 """
 
@@ -71,4 +71,22 @@ class MyGroupListPage(BasePage):
 
     def get_after_search_info(self):
         """获取搜索后的第一条信息"""
-        return self.get_text(self.get_elements("after_search_group_info"))
+        try:
+            return self.get_text(self.get_elements("after_search_group_info"))
+        except:
+            return "Not find group in page !"
+
+    def search_by_name_main(self,groupName):
+        """搜索主程序 使用圈子名称搜索"""
+
+        self.log.info("-=【搜索圈子】=-")
+        # 进入圈子列表页面
+        self.enter_my_group_list_page()
+        # 输入圈子名称
+        self.input_group_name_search(groupName)
+        self.click_search_btn()
+        self.sleep(1)
+        if groupName in self.get_after_search_info():
+            self.log.info(" ** Search group: {} success !".format(groupName))
+        else:
+            raise TimeoutError(" ** Not find group: {} in list !".format(groupName))

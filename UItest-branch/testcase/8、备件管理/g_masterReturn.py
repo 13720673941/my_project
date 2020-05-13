@@ -191,7 +191,7 @@ class Master_Return(unittest.TestCase):
         self.company_inventory.enter_company_inventory_page()
         # 点击师傅返还
         self.master_return.click_master_return_button()
-        self.base_page.sleep(1)
+        self.base_page.sleep(3)
         # 选择返还师傅名称
         self.master_return.select_return_master_name(data["师傅名称"])
         # 输入搜索备件名称

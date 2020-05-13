@@ -37,7 +37,7 @@ class Create_Group(unittest.TestCase):
         cls.create_group = CreateGroupPage(cls.driver)
         cls.assert_mode = Assert(cls.driver,"createGroup")
         # 登录网点
-        cls.login.login_main("T西安好家帮家政有限公司")
+        cls.login.login_main("T西安超级售后有限公司")
         # 进入我的圈子列表页面
         cls.create_group.enter_my_group_list_page()
 

@@ -27,7 +27,7 @@ class MasterReceivePage(BasePage):
 
     def enter_master_inventory_page(self):
         """进入师傅库存页面"""
-        self.open_url(master_inventory_url)
+        self.open_url(master_inventory_url,self.get_elements("search_master_open_btn"))
 
     def click_master_receive_btn(self):
         """点击师傅领用按钮"""
@@ -122,7 +122,10 @@ class MasterReceivePage(BasePage):
 
     def get_first_search_info(self):
         """获取搜索后的第一条信息"""
-        return self.get_text(self.get_elements("search_first_info"))
+        try:
+            return self.get_text(self.get_elements("search_first_info"))
+        except:
+            return "Not find master receive log info !"
 
     def click_export_btn(self):
         """点击导出按钮"""

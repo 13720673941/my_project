@@ -1,0 +1,257 @@
+2020-03-22 17:45:53,851 INFO:   * Launch browser of "chrome" . 
+2020-03-22 17:45:55,011 INFO:  -=【网点登录】=-
+2020-03-22 17:47:28,253 INFO:   * Launch browser of "chrome" . 
+2020-03-22 17:47:29,399 INFO:  -=【网点登录】=-
+2020-03-22 17:47:51,204 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-22 17:47:51,204 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-22 17:47:51,304 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-22 17:47:51,459 INFO:   * Input message: 13720673941 
+2020-03-22 17:47:51,515 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-22 17:47:51,621 INFO:   * Input message: 111111 
+2020-03-22 17:47:51,719 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-22 17:47:54,803 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-22 17:48:57,754 INFO:   * Refresh current page .
+2020-03-22 17:48:57,754 INFO:   ** Branch login success！
+2020-03-22 17:48:59,876 INFO:   * Find element: xpath->//form[@class="form-inline"]//label[contains(text(),"圈子名称：")]/..//input is true .
+2020-03-22 17:48:59,876 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/groupList/group .
+2020-03-22 17:48:59,876 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-03-22 17:48:59,876 INFO:   * Load case name: 【删除成员-成员删除成功校验】
+2020-03-22 17:49:01,568 INFO:   * Click button: xpath->//a[text()="退出"] .
+2020-03-22 17:49:01,573 INFO:  -=【网点登录】=-
+2020-03-22 17:49:03,713 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-03-22 17:49:03,714 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-03-22 17:49:03,778 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-03-22 17:49:03,991 INFO:   * Input message: 13700000004 
+2020-03-22 17:49:04,081 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-03-22 17:49:04,164 INFO:   * Input message: 222222 
+2020-03-22 17:49:04,249 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-03-22 17:49:06,465 INFO:   * Get current url: http://www.51shouhou.cn/singleBranch/#/overview/index . 
+2020-03-22 17:49:08,592 INFO:   * Refresh current page .
+2020-03-22 17:49:08,593 INFO:   ** Branch login success！
+2020-03-22 17:49:12,595 INFO:   * Find element: xpath->//label[contains(text(),"工单编号")]/following::input[1] is true .
+2020-03-22 17:49:12,596 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/order/search/allorder?tabType=全部工单&SubtabType=待结算&page=1 .
+2020-03-22 17:49:12,919 INFO:   * Click button: xpath->//a[contains(text(),"更多")] .
+2020-03-22 17:49:15,157 INFO:   * Select value: ShanXiAutoTestGroup .
+2020-03-22 17:49:15,403 INFO:   * Click button: xpath->//label[contains(text(),"工单编号")]/../../../div[2]//a[text()="搜索"] .
+2020-03-22 17:49:16,613 INFO:   * Click button: xpath->//label[contains(text(),"工单编号")]/../../../div[2]//a[text()="搜索"] .
+2020-03-22 17:49:16,780 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[1] text: 1
+637202329866920039
+待派
+2020-03-19 16:43:30
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 16:43:06
+2020-03-19 16:43:30
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:17,218 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[2] text: 2
+637202328878241009
+待派
+2020-03-19 16:41:50
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 16:41:27
+2020-03-19 16:41:50
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:17,380 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[3] text: 3
+637202326038499046
+待派
+2020-03-19 16:37:06
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 16:36:44
+2020-03-19 16:37:06
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:17,713 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[4] text: 4
+637202325045473898
+待派
+2020-03-19 16:35:27
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 16:35:04
+2020-03-19 16:35:27
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:17,883 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[5] text: 5
+637202293288073339
+待派
+2020-03-19 15:42:26
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 15:42:08
+2020-03-19 15:42:26
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:18,093 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[6] text: 6
+637202292047616744
+待派
+2020-03-19 15:40:27
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 15:40:04
+2020-03-19 15:40:27
+T西安好家帮家政有限公司
+T西安超级售后有限公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:18,283 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[7] text: 7
+637202290962301206
+待派
+2020-03-19 15:38:38
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 15:38:16
+T西安好家帮家政有限公司
+T西安好家帮家政有限公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:18,503 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[8] text: 8
+637202289873987749
+待派
+2020-03-19 15:36:50
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 15:36:27
+2020-03-19 15:36:50
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:18,683 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[9] text: 9
+637202125276991547
+待派
+2020-03-19 11:02:30
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 11:02:07
+2020-03-19 11:02:30
+T西安好家帮家政有限公司
+T西安乐家家政服务公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:18,863 INFO:   * Get element: xpath->(//tr[contains(@class,"ivu-table-row")])[10] text: 10
+637202123774718937
+待派
+2020-03-19 11:00:00
+网点派单
+自建工单
+安装
+AutoTest
+13720673941
+海尔
+挂机
+保内
+2020-03-21-08:00～09:00
+2020-03-19 10:59:37
+2020-03-19 11:00:00
+T西安好家帮家政有限公司
+T西安瑞晟科技有限公司
+1
+branch04
+陕西省 西安市 雁塔区 太白南路
+无需返单
+T西安好家帮家政有限公司 .
+2020-03-22 17:49:18,893 INFO:   * Clear browser catch data .
+2020-03-22 17:49:21,243 INFO:   * Quit browser .

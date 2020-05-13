@@ -206,7 +206,7 @@ class Create_Order(unittest.TestCase):
         # 获取派单师傅
         master = rwConfig.read_config_data('T西安好家帮家政有限公司','master001')
         # 选择师傅派单
-        self.send_order.select_send_page(page_name=master)
+        self.send_order.select_send_page(pageName=master)
         # 点击确定
         self.send_order.click_confirm_btn()
         self.base.sleep(1)

@@ -101,7 +101,7 @@ class SettleOrderPage(BasePage):
         """获取账单奖惩最后的统计一整行信息,删除换行符"""
         return self.get_text(self.get_elements("bill_reward_count")).replace("\n","")
 
-    def settle_order_main(self,orderNumber):
+    def settle_order_main(self,orderNumber,walletSettle=False):
         """订单结算主程序"""
 
         self.log.info("-=【工单结算】=-")
@@ -116,7 +116,10 @@ class SettleOrderPage(BasePage):
         # 点击立即结算
         self.click_promptly_settle_btn()
         # 选择线下结算
-        self.select_line_down_settle()
+        if walletSettle:
+            self.select_money_wattle_settle()
+        else:
+            self.select_line_down_settle()
         self.click_confirm_settle_btn()
         self.sleep(2)
         # 结算成功刷新页面

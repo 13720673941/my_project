@@ -58,6 +58,6 @@ if __name__ == '__main__':
         # 脚本运行时间
         print('脚本运行时间：{0}分钟'.format(runtime))
         # 发送邮件
-        # SE.SendEmailMain(start_time=timing,run_time=runtime)
+        SE.SendEmailMain(start_time=timing,run_time=runtime)
     else:
         print('\n脚本执行失败！')

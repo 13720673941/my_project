@@ -1,0 +1,219 @@
+2020-04-04 16:18:23,410 INFO:   * Launch browser of "chrome" . 
+2020-04-04 16:18:24,606 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:18:24,606 INFO:   * Load case name: 【验证用户名为空不能成功注册】
+2020-04-04 16:18:24,666 INFO:   * Refresh current page .
+2020-04-04 16:18:29,342 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:18:29,342 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:18:29,432 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:18:29,549 INFO:   * Input message:  
+2020-04-04 16:18:29,769 INFO:   * Input message: 13700003941 
+2020-04-04 16:18:29,921 INFO:   * Input message: 88888888 
+2020-04-04 16:18:30,025 INFO:   * Input message: 111111 
+2020-04-04 16:18:30,133 INFO:   * Input message: 111111 
+2020-04-04 16:18:30,221 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:18:32,262 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入用户名 .
+2020-04-04 16:18:32,462 INFO:  Expect: 请输入用户名 equal Faction: 请输入用户名, test -> PASS.
+2020-04-04 16:18:32,462 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:18:32,462 INFO:   * Load case name: 【验证手机号为空不能成功注册】
+2020-04-04 16:18:33,677 INFO:   * Refresh current page .
+2020-04-04 16:18:35,759 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:18:35,759 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:18:35,829 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:18:36,005 INFO:   * Input message: AutoTest 
+2020-04-04 16:18:36,073 INFO:   * Input message:  
+2020-04-04 16:18:36,205 INFO:   * Input message: 88888888 
+2020-04-04 16:18:36,308 INFO:   * Input message: 111111 
+2020-04-04 16:18:36,404 INFO:   * Input message: 111111 
+2020-04-04 16:18:36,484 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:18:38,548 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-04-04 16:18:38,957 INFO:  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -> PASS.
+2020-04-04 16:18:38,957 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:18:38,957 INFO:   * Load case name: 【验证验证码为空不能成功注册】
+2020-04-04 16:18:40,367 INFO:   * Refresh current page .
+2020-04-04 16:18:42,483 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:18:42,483 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:18:42,646 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:18:43,027 INFO:   * Input message: AutoTest 
+2020-04-04 16:18:43,255 INFO:   * Input message: 13700003941 
+2020-04-04 16:18:43,379 INFO:   * Input message:  
+2020-04-04 16:18:43,546 INFO:   * Input message: 111111 
+2020-04-04 16:18:43,732 INFO:   * Input message: 111111 
+2020-04-04 16:18:43,872 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:18:45,932 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入短信验证码 .
+2020-04-04 16:18:46,182 INFO:  Expect: 请输入短信验证码 equal Faction: 请输入短信验证码, test -> PASS.
+2020-04-04 16:18:46,182 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:18:46,182 INFO:   * Load case name: 【验证新密码为空不能成功注册】
+2020-04-04 16:18:47,356 INFO:   * Refresh current page .
+2020-04-04 16:18:49,458 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:18:49,458 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:18:49,544 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:18:49,712 INFO:   * Input message: AutoTest 
+2020-04-04 16:18:49,904 INFO:   * Input message: 13700003941 
+2020-04-04 16:18:50,044 INFO:   * Input message: 88888888 
+2020-04-04 16:18:50,127 INFO:   * Input message:  
+2020-04-04 16:18:50,242 INFO:   * Input message: 111111 
+2020-04-04 16:18:50,345 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:18:52,424 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入6-18位登录密码 .
+2020-04-04 16:18:52,754 INFO:  Expect: 请输入6-18位登录密码 equal Faction: 请输入6-18位登录密码, test -> PASS.
+2020-04-04 16:18:52,754 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:18:52,754 INFO:   * Load case name: 【验证确认密码为空不能成功注册】
+2020-04-04 16:18:54,015 INFO:   * Refresh current page .
+2020-04-04 16:18:56,121 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:18:56,121 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:18:56,241 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:18:56,409 INFO:   * Input message: AutoTest 
+2020-04-04 16:18:56,553 INFO:   * Input message: 13700003941 
+2020-04-04 16:18:56,693 INFO:   * Input message: 88888888 
+2020-04-04 16:18:56,805 INFO:   * Input message: 111111 
+2020-04-04 16:18:56,894 INFO:   * Input message:  
+2020-04-04 16:18:57,001 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:18:59,111 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-04-04 16:18:59,301 INFO:  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -> PASS.
+2020-04-04 16:18:59,301 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:18:59,301 INFO:   * Load case name: 【验证已经注册的用户名不能成功注册】
+2020-04-04 16:19:00,227 INFO:   * Refresh current page .
+2020-04-04 16:19:02,355 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:02,355 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:02,485 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:02,681 INFO:   * Input message: branch01 
+2020-04-04 16:19:02,922 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:03,070 INFO:   * Input message: 88888888 
+2020-04-04 16:19:03,230 INFO:   * Input message: 111111 
+2020-04-04 16:19:03,722 INFO:   * Input message: 111111 
+2020-04-04 16:19:03,886 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:05,960 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: branch01已存在 .
+2020-04-04 16:19:06,308 INFO:  Expect: branch01已存在 equal Faction: branch01已存在, test -> PASS.
+2020-04-04 16:19:06,308 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:06,308 INFO:   * Load case name: 【验证已经注册的手机号不能成功注册】
+2020-04-04 16:19:07,451 INFO:   * Refresh current page .
+2020-04-04 16:19:09,681 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:09,691 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:09,907 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:10,035 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:10,174 INFO:   * Input message: 13700000004 
+2020-04-04 16:19:10,291 INFO:   * Input message: 88888888 
+2020-04-04 16:19:10,391 INFO:   * Input message: 111111 
+2020-04-04 16:19:10,495 INFO:   * Input message: 111111 
+2020-04-04 16:19:10,601 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:12,647 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 手机号码已存在 .
+2020-04-04 16:19:12,867 INFO:  Expect: 手机号码已存在 equal Faction: 手机号码已存在, test -> PASS.
+2020-04-04 16:19:12,867 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:12,877 INFO:   * Load case name: 【验证错误的验证码不能成功注册】
+2020-04-04 16:19:13,901 INFO:   * Refresh current page .
+2020-04-04 16:19:16,043 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:16,043 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:16,187 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:16,411 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:16,583 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:16,714 INFO:   * Input message: 000000 
+2020-04-04 16:19:16,906 INFO:   * Input message: 111111 
+2020-04-04 16:19:17,025 INFO:   * Input message: 111111 
+2020-04-04 16:19:17,114 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:19,242 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请重新获取验证码 .
+2020-04-04 16:19:19,572 INFO:  Expect: 请重新获取验证码 equal Faction: 请重新获取验证码, test -> PASS.
+2020-04-04 16:19:19,572 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:19,582 INFO:   * Load case name: 【验证新密码和确认密码不同不能成功注册】
+2020-04-04 16:19:20,662 INFO:   * Refresh current page .
+2020-04-04 16:19:22,753 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:22,753 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:22,943 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:23,139 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:23,315 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:23,423 INFO:   * Input message: 88888888 
+2020-04-04 16:19:23,515 INFO:   * Input message: 111111 
+2020-04-04 16:19:23,611 INFO:   * Input message: 222222 
+2020-04-04 16:19:23,694 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:25,740 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 确认登录密码须与密码相同 .
+2020-04-04 16:19:25,960 INFO:  Expect: 确认登录密码须与密码相同 equal Faction: 确认登录密码须与密码相同, test -> PASS.
+2020-04-04 16:19:25,960 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:25,960 INFO:   * Load case name: 【验证错误的用户名格式不能成功注册】
+2020-04-04 16:19:27,189 INFO:   * Refresh current page .
+2020-04-04 16:19:29,302 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:29,302 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:29,542 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:29,847 INFO:   * Input message: ！@#￥% 
+2020-04-04 16:19:30,272 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:30,398 INFO:   * Input message: 88888888 
+2020-04-04 16:19:30,503 INFO:   * Input message: 111111 
+2020-04-04 16:19:30,602 INFO:   * Input message: 111111 
+2020-04-04 16:19:30,674 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:32,834 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入汉字、字母、0-9、下划线 .
+2020-04-04 16:19:33,275 INFO:  Expect: 请输入汉字、字母、0-9、下划线 equal Faction: 请输入汉字、字母、0-9、下划线, test -> PASS.
+2020-04-04 16:19:33,275 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:33,285 INFO:   * Load case name: 【验证错误的手机号格式不能成功注册】
+2020-04-04 16:19:35,711 INFO:   * Refresh current page .
+2020-04-04 16:19:37,854 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:37,854 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:38,092 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:38,338 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:38,593 INFO:   * Input message: 1370000394 
+2020-04-04 16:19:38,743 INFO:   * Input message: 88888888 
+2020-04-04 16:19:38,827 INFO:   * Input message: 111111 
+2020-04-04 16:19:38,914 INFO:   * Input message: 111111 
+2020-04-04 16:19:38,995 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:41,042 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 请输入正确手机号码 .
+2020-04-04 16:19:41,212 INFO:  Expect: 请输入正确手机号码 equal Faction: 请输入正确手机号码, test -> PASS.
+2020-04-04 16:19:41,222 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:41,222 INFO:   * Load case name: 【验证密码格式错误不能成功注册】
+2020-04-04 16:19:42,703 INFO:   * Refresh current page .
+2020-04-04 16:19:44,813 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:44,813 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:44,913 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:45,086 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:45,250 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:45,425 INFO:   * Input message: 88888888 
+2020-04-04 16:19:45,610 INFO:   * Input message: !@#$%^ 
+2020-04-04 16:19:45,770 INFO:   * Input message: !@#$%^ 
+2020-04-04 16:19:45,871 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:48,013 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-04-04 16:19:48,313 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -> PASS.
+2020-04-04 16:19:48,313 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:48,313 INFO:   * Load case name: 【验证密码长度小于最小值不能注册】
+2020-04-04 16:19:49,926 INFO:   * Refresh current page .
+2020-04-04 16:19:52,060 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:52,070 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:52,230 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:52,403 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:52,531 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:52,667 INFO:   * Input message: 88888888 
+2020-04-04 16:19:52,754 INFO:   * Input message: 11111 
+2020-04-04 16:19:52,837 INFO:   * Input message: 11111 
+2020-04-04 16:19:52,919 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:19:55,074 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-04-04 16:19:55,294 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -> PASS.
+2020-04-04 16:19:55,294 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:19:55,294 INFO:   * Load case name: 【验证密码长度大于最大值不能注册】
+2020-04-04 16:19:56,769 INFO:   * Refresh current page .
+2020-04-04 16:19:58,930 INFO:   * Find element: xpath->//p[text()="还没有网点账号？"]/a is true .
+2020-04-04 16:19:58,930 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:19:59,150 INFO:   * Click button: xpath->//p[text()="还没有网点账号？"]/a .
+2020-04-04 16:19:59,332 INFO:   * Input message: AutoTest 
+2020-04-04 16:19:59,452 INFO:   * Input message: 13700003941 
+2020-04-04 16:19:59,559 INFO:   * Input message: 88888888 
+2020-04-04 16:19:59,715 INFO:   * Input message: 11111111111111111111 
+2020-04-04 16:19:59,878 INFO:   * Input message: 11111111111111111111 
+2020-04-04 16:19:59,955 INFO:   * Click button: xpath->//a[text()="马上注册"] .
+2020-04-04 16:20:02,080 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 密码格式不正确 .
+2020-04-04 16:20:02,430 INFO:  Expect: 密码格式不正确 equal Faction: 密码格式不正确, test -> PASS.
+2020-04-04 16:20:02,440 INFO:   * Clear browser catch data .
+2020-04-04 16:20:04,720 INFO:   * Quit browser .
+2020-04-04 16:20:10,943 INFO:   * Launch browser of "chrome" . 
+2020-04-04 16:20:12,114 WARNING:  Skipped: -跳过不执行该用例 login_001: 登录-用户名密码为空校验
+2020-04-04 16:20:12,114 WARNING:  Skipped: -跳过不执行该用例 login_002: 登录-用户名为空校验
+2020-04-04 16:20:12,118 WARNING:  Skipped: -跳过不执行该用例 login_003: 登录-密码为空校验
+2020-04-04 16:20:12,122 WARNING:  Skipped: -跳过不执行该用例 login_004: 登录-用户名不正确密码正确校验
+2020-04-04 16:20:12,126 WARNING:  Skipped: -跳过不执行该用例 login_005: 登录-用户名正确密码不正确校验
+2020-04-04 16:20:12,130 INFO:  ----------------------------- Cut Off Line -----------------------------
+2020-04-04 16:20:12,130 INFO:   * Load case name: 【登录-正确用户名密码校验】
+2020-04-04 16:20:17,829 INFO:   * Find element: xpath->//input[@type="text"] is true .
+2020-04-04 16:20:17,829 INFO:   * Open url: http://www.51shouhou.cn/singleBranch/#/login .
+2020-04-04 16:20:17,846 INFO:   * Refresh current page .
+2020-04-04 16:20:19,482 INFO:   * Clear element: xpath->//input[@type="text"] .
+2020-04-04 16:20:19,671 INFO:   * Input message: 13700000004 
+2020-04-04 16:20:19,748 INFO:   * Clear element: xpath->//input[@type="password"] .
+2020-04-04 16:20:19,871 INFO:   * Input message: 222222 
+2020-04-04 16:20:19,977 INFO:   * Click button: xpath->//a[@class="loginBtn"] .
+2020-04-04 16:20:22,810 INFO:   * Get element: xpath->//*[@class="ivu-message"]//span text: 登录成功 .
+2020-04-04 16:20:23,006 INFO:  Expect: 登录成功 equal Faction: 登录成功, test -> PASS.
+2020-04-04 16:20:23,047 INFO:   * Clear browser catch data .
+2020-04-04 16:20:25,277 INFO:   * Quit browser .

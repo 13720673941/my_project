@@ -6,6 +6,7 @@
 from public.common.basePage import BasePage
 from config.urlConfig import *
 from config.pathConfig import *
+import re
 
 class SearchOrderPage(BasePage):
     """
@@ -116,12 +117,29 @@ class SearchOrderPage(BasePage):
         """获取搜索订单数量"""
         return self.get_text(self.get_elements("order_count"))
 
-    def get_first_order_info(self):
+    def get_first_order_info(self,row="1"):
         """获取订单列表第一行订单的所有信息"""
         try:
-            return self.get_text(self.get_elements("first_order_info"))
+            return self.get_text(self.get_elements("first_order_info").replace("+num+",row))
         except:
             return "Not find search text in order info !"
+
+    def select_group_name(self,groupName):
+        """选择圈子名称"""
+        self.operate_select(self.get_elements("group_name_select"),groupName)
+
+    def click_next_page_btn(self):
+        """点击下一页"""
+        self.click_button(self.get_elements("next_page_btn"))
+
+    def get_last_page_number(self):
+        """获取全部订单的最大页码"""
+        return int(self.get_att(self.get_elements("last_page_number"),"title"))
+
+    def get_every_page_order_count(self):
+        """获取每页订单数量"""
+        count,eList = self.get_element_count(parentEl=self.get_elements("every_page_count"),childEl="tr")
+        return count
 
     def search_order_by_number(self,order_number):
         """按照订单号搜索订单"""
@@ -136,4 +154,30 @@ class SearchOrderPage(BasePage):
         else:
             raise TimeoutError(" ** Not find order: {0} ! ".format(order_number))
 
+    def get_search_order_number(self):
+        """获取搜索后的全部订单单号列表->用于清除圈子未完成订单 删除圈成员"""
 
+        # 获取最大页数
+        lastPageNumber = self.get_last_page_number()
+        # 初始化订单列表
+        orderList = []
+        # 获取订单列表中的工单号
+        for i in range(lastPageNumber):
+            try:
+                # 获取每页订单数
+                everyPageCount = self.get_every_page_order_count()
+                for j in range(everyPageCount):
+                    try:
+                        orderInfo = self.get_first_order_info(row=str(j+1))
+                        if "服务完成" not in orderInfo:
+                            # 正则提取订单号信息 添加到订单列表中
+                            orderList.append(re.compile("\d{18}").findall(orderInfo)[0])
+                    except:
+                        pass
+                if lastPageNumber > 1:
+                    # 点击下一页
+                    self.click_next_page_btn()
+                    self.sleep(2)
+            except:
+                raise Exception(" 点击下一页失败 ！")
+        return orderList

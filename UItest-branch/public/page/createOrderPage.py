@@ -310,7 +310,7 @@ class CreateOrderPage(BasePage):
         self.select_order_type(orderType,branchName)
         # 输入详细地址
         self.input_add_collage(collage)
-        self.sleep(1)
+        self.sleep(2)
         # 选择服务类型
         self.select_server_type(server_type)
         # 选择预约时间和时间段
@@ -335,32 +335,32 @@ class CreateOrderPage(BasePage):
     def create_not_return_order(self):
         """默认创建无需返单订单"""
 
-        user = read_config_data("NotReturnOrder", "用户姓名", orderInfo)
-        phe = read_config_data("NotReturnOrder", "联系方式", orderInfo)
-        address = read_config_data("NotReturnOrder", "服务地址", orderInfo)
-        collage = read_config_data("NotReturnOrder", "详细地址", orderInfo)
-        order_type = read_config_data("NotReturnOrder", "工单类型", orderInfo)
-        server = read_config_data("NotReturnOrder", "服务类型", orderInfo)
-        brands = read_config_data("NotReturnOrder", "品牌", orderInfo)
-        big_kinds = read_config_data("NotReturnOrder", "大类", orderInfo)
-        kinds = read_config_data("NotReturnOrder", "品类", orderInfo)
-        small_kinds = read_config_data("NotReturnOrder", "小类", orderInfo)
+        user = read_config_data("NotReturnOrder", "用户姓名", createMessage)
+        phe = read_config_data("NotReturnOrder", "联系方式", createMessage)
+        address = read_config_data("NotReturnOrder", "服务地址", createMessage)
+        collage = read_config_data("NotReturnOrder", "详细地址", createMessage)
+        order_type = read_config_data("NotReturnOrder", "工单类型", createMessage)
+        server = read_config_data("NotReturnOrder", "服务类型", createMessage)
+        brands = read_config_data("NotReturnOrder", "品牌", createMessage)
+        big_kinds = read_config_data("NotReturnOrder", "大类", createMessage)
+        kinds = read_config_data("NotReturnOrder", "品类", createMessage)
+        small_kinds = read_config_data("NotReturnOrder", "小类", createMessage)
 
         self.create_order_main(user,phe,address,order_type,collage,server,brands,big_kinds,kinds,small_kinds)
 
     def create_return_order(self):
         """默认创建需返单订单"""
 
-        user = read_config_data("ReturnOrder", "用户姓名", orderInfo)
-        phe = read_config_data("ReturnOrder", "联系方式", orderInfo)
-        address = read_config_data("ReturnOrder", "服务地址", orderInfo)
-        collage = read_config_data("ReturnOrder", "详细地址", orderInfo)
-        order_type = read_config_data("ReturnOrder", "工单类型", orderInfo)
-        branch_name = read_config_data("ReturnOrder", "服务商", orderInfo)
-        server = read_config_data("ReturnOrder", "服务类型", orderInfo)
-        brands = read_config_data("ReturnOrder", "品牌", orderInfo)
-        big_kinds = read_config_data("ReturnOrder", "大类", orderInfo)
-        kinds = read_config_data("ReturnOrder", "品类", orderInfo)
-        small_kinds = read_config_data("ReturnOrder", "小类", orderInfo)
+        user = read_config_data("ReturnOrder", "用户姓名", createMessage)
+        phe = read_config_data("ReturnOrder", "联系方式", createMessage)
+        address = read_config_data("ReturnOrder", "服务地址", createMessage)
+        collage = read_config_data("ReturnOrder", "详细地址", createMessage)
+        order_type = read_config_data("ReturnOrder", "工单类型", createMessage)
+        branch_name = read_config_data("ReturnOrder", "服务商", createMessage)
+        server = read_config_data("ReturnOrder", "服务类型", createMessage)
+        brands = read_config_data("ReturnOrder", "品牌", createMessage)
+        big_kinds = read_config_data("ReturnOrder", "大类", createMessage)
+        kinds = read_config_data("ReturnOrder", "品类", createMessage)
+        small_kinds = read_config_data("ReturnOrder", "小类", createMessage)
 
         self.create_order_main(user,phe,address,order_type,collage,server,brands,big_kinds,kinds,small_kinds,branch_name)

@@ -108,8 +108,6 @@ class Finance_Log_Manage(unittest.TestCase):
         self.login.click_logout_button()
         # 登录服务商
         self.login.login_main(self.server_branch_name)
-        # 回访
-        self.visit_order.visit_order_main(self.order_number)
         # 进入我的收入记录页面
         self.finance_log.enter_my_income_page()
         # 搜索账单号

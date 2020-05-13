@@ -25,7 +25,7 @@ accountDataPath = os.path.join(parentPath,'data','accountData.ini')
 # 工共关联订单单号路径
 orderNumPath = os.path.join(parentPath,'data','orderNumber.ini')
 # 工单信息保存路径
-orderInfo = os.path.join(parentPath,'data','orderMessage.ini')
+createMessage = os.path.join(parentPath,'data','createMessage.ini')
 # 上传图片保存路径
 picturePath = os.path.join(parentPath,'data','picture') + '\\'
 # 日志保存文件夹

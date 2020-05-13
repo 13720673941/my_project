@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time,random
 
@@ -399,6 +400,21 @@ class BasePage(object):
         except Exception:
             raise Exception(' Can not move button to offset [{0} {1}].'.format(x_offset,y_offset))
 
+    def use_keys_operate(self,element,operate):
+        """
+        使用键盘操作
+        :param element: 需要操作的页面元素
+        :param operate: 操作名称必须是字典库里面的key值
+        """
+        # 键盘操哭库暂时只添加常用的几个
+        keysInventory = {"退格":Keys.BACK_SPACE,"回车":Keys.ENTER,"空格":Keys.SPACE}
+        # 判断操作字段是否否和格式
+        if operate not in keysInventory.keys():
+            raise TypeError(" The word: {} type is not in keys inventory !".format(operate))
+        self.wait_element(element)
+        self.get_element(element).send_keys(keysInventory[operate])
+        self.log.info(" * Use key operate: {} .".format(operate))
+
     def get_all_handles(self):
         """
         获取所有的窗口handle
@@ -543,7 +559,7 @@ class BasePage(object):
             self.log.info(' * Get children element: {0} count are {1} .'.format(childEl,count))
             return count,ChildElList
         except:
-            raise Exception(' Get element: {0} count is anomaly .'.format(childEl))
+            raise Exception(' Get element: {0} count is anomaly, not have child element .'.format(childEl))
 
     def operate_not_select(self,open_el,parent_el,value=None,child_el='li',is_random=False):
         """

@@ -188,6 +188,11 @@ class Receive_Spare_Part(unittest.TestCase):
 
         # 获取测试数据
         data = self.readExcel.get_dict_data("master_receive_007")
+        # 打印测试用例名称
+        self.base_page.print_case_name(data)
+        # 进入公司库存页面
+        self.company_sparePart.enter_company_inventory_page()
+        self.base_page.refresh_page()
         # 搜索备件
         self.company_sparePart.input_search_sparePart_name(data["备件名称"])
         # 点击搜索
