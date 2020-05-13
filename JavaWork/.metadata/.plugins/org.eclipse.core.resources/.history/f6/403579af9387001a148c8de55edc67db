@@ -1,0 +1,30 @@
+package designBase;
+
+public class Variable {
+	
+	public static void uageOne() {
+		
+		// 直接给变量赋值
+		int number = 2;
+		// 先声明再赋值
+		String username;
+		username = "邓鹏飞";
+		
+		System.out.println(username+number);
+		
+		/*
+		 * String username,address,phone,tel;    // 声明多个变量
+		 * int num1=12,num2=23,result=35;    // 声明并初始化多个变量
+		 */
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		uageOne();
+		
+	}
+
+}

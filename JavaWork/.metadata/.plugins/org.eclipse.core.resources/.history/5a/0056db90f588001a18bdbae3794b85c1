@@ -1,0 +1,23 @@
+package designBase;
+
+/*
+ * 			java 运算符号 
+ */
+
+public class OperationalCharacter {
+	
+	
+	// 一元运算符
+	public static void testOne() {
+		
+		int a = 10;
+		
+		System.out.println("运算符'-',-a = "+(-a));
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		testOne();
+	}
+
+}
