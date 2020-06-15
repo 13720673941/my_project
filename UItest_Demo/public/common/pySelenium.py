@@ -423,6 +423,11 @@ class PySelenium:
             log.error("{}下拉选择value：“{}” 失败！！！".format(self.fail,value))
             raise
 
+    @property
+    def origin_driver(self):
+        """返回原生driver"""
+        return self.driver
+
 
 if __name__ == '__main__':
 
