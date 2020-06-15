@@ -14,7 +14,7 @@ json_info1 = '{"age": "12"}'
 dict1 = json.loads(json_info1)
 
 # 3.json.dump()函数的使用，将json信息写进文件
-json_msg = {"install": {"install_date": "2018/09/26","install_result": "success"}}
+json_msg = {"in": {"install_date": "2018/09/26","install_result": "success"}}
 file = open('1.json', 'w')
 json.dump(json_msg, file)
 

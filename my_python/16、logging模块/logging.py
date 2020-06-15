@@ -52,7 +52,7 @@ def log():
     # 添加到handle中
     logger.addHandler(printFile)
     logger.addHandler(printConsole)
-    
+
     return logger
 
 

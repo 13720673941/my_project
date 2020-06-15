@@ -19,3 +19,6 @@ print(dict_data)
 name = dict_data["name"]
 
 print(name)
+
+
+print(dict_data.keys())

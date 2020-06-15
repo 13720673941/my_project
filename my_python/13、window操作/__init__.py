@@ -6,12 +6,12 @@
 import requests
 import json
 import hashlib
-import datetime
+import datetime模块
 
 url = "http://apitest/supervise/manage/searchInfo"
 
 headers = {"Content-Type": "application/json", "User_Agent": "sec_test"}
-now_time = datetime.datetime.now().strftime('%Y-%m-%d')  # 获取当前日期
+now_time = datetime模块.datetime.now().strftime('%Y-%m-%d')  # 获取当前日期
 
 data = {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYnJhbmNoMDQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiLnvZHngrnllYbnu4QiLCJuYmYiOjE1ODI2MTQ5ODYsImV4cCI6MTU4MzgyNDU4NiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIn0.tsj9zJ0ZAjmYyYFduDckARM14zXIl1GdWnqhgQAcQTg", # 认证后的授权token
