@@ -24,7 +24,7 @@ class Variable():
 class ReadTestCase():
 
     def __init__(self):
-        self.workBook = xlrd.open_workbook(filename=testExcelPath)
+        self.workBook = xlrd.open_workbook(filename=TEST_DATA_PATH)
         self.sheetTable = self.workBook.sheet_by_name("Sheet1")
 
     def get_row_index(self,caseId):
@@ -105,7 +105,7 @@ class WriteResult:
         """
 
         # 读取测试数据
-        workBook = xlrd.open_workbook(testExcelPath,formatting_info=True) # formatting_info 复制样式
+        workBook = xlrd.open_workbook(TEST_DATA_PATH,formatting_info=True) # formatting_info 复制样式
         table = workBook.sheet_by_name("Sheet1")
         # 复制excel
         copyExcel = copy(workBook)
@@ -128,7 +128,7 @@ class WriteResult:
         # 写入测试结果
         copyTable.write(table.col_values(Variable.Id).index(caseId),Variable.Result,resultTxt,style)
         # 保存文件
-        copyExcel.save(testExcelPath)
+        copyExcel.save(TEST_DATA_PATH)
 
 
 

@@ -20,12 +20,12 @@ class SendEmail:
         SMTP_SERVER = 'smtp.qq.com' #"smtp.163.com"
         PORT = 465  # 163端口是 25
         # 发件人名称/邮箱/密码
-        SENDER_NAME = rw.read_config_file(configDataPath,"FROM_EMAIL","EMAIL_NAME")
-        SENDER_EMAIL = rw.read_config_file(configDataPath,"FROM_EMAIL","EMAIL_ADDRESS")
-        SENDER_PASSWORD = rw.read_config_file(configDataPath,"FROM_EMAIL","EMAIL_PASSWORD")
+        SENDER_NAME = rw.read_config_file(CONFIG_DATA_PATH,"FROM_EMAIL","EMAIL_NAME")
+        SENDER_EMAIL = rw.read_config_file(CONFIG_DATA_PATH,"FROM_EMAIL","EMAIL_ADDRESS")
+        SENDER_PASSWORD = rw.read_config_file(CONFIG_DATA_PATH,"FROM_EMAIL","EMAIL_PASSWORD")
         # 收件人邮箱地址
-        RECEIVER_NAME = rw.read_config_file(configDataPath,"TO_EMAIL","EMAIL_NAME")
-        RECEIVER_EAML = rw.read_config_file(configDataPath,"TO_EMAIL","EMAIL_ADDRESS")
+        RECEIVER_NAME = rw.read_config_file(CONFIG_DATA_PATH,"TO_EMAIL","EMAIL_NAME")
+        RECEIVER_EAML = rw.read_config_file(CONFIG_DATA_PATH,"TO_EMAIL","EMAIL_ADDRESS")
 
         # -------------------------------------
         # 创建邮箱对象
@@ -34,18 +34,18 @@ class SendEmail:
         message['From'] = formataddr((SENDER_NAME,SENDER_EMAIL))
         message['To'] = formataddr((RECEIVER_NAME,RECEIVER_EAML))
         # 添加邮件主题名称
-        message['Subject'] = rw.read_config_file(configDataPath,"EMAIL_MESSAGE","SUBJECT")
+        message['Subject'] = rw.read_config_file(CONFIG_DATA_PATH,"EMAIL_MESSAGE","SUBJECT")
         # --------------------------------------
         # 添加文本消息
-        textMsg = rw.read_config_file(configDataPath,"EMAIL_MESSAGE","TEXT_MESSAGE")
+        textMsg = rw.read_config_file(CONFIG_DATA_PATH,"EMAIL_MESSAGE","TEXT_MESSAGE")
         att = MIMEText(textMsg,"plain","utf-8")
         # 将正文添加到邮件中
         message.attach(att)
         # --------------------------------------
         # 获取最新测试报告
-        fileList = os.listdir(testReportPath)
-        path = sorted(fileList,key=lambda x:os.path.getctime(os.path.join(testReportPath,x)))
-        newReport = testReportPath+path[-1]
+        fileList = os.listdir(REPORT_SAVE_PATH)
+        path = sorted(fileList,key=lambda x:os.path.getctime(os.path.join(REPORT_SAVE_PATH,x)))
+        newReport = REPORT_SAVE_PATH+path[-1]
         # 读取报告信息
         with open(newReport, "rb") as f:
             report = f.read()

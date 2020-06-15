@@ -14,19 +14,18 @@ def run_timing(startTime):
     :param startTime: 格式例如 23:10:00
     :return:
     """
-    # 获取当前日期
-    nowDate = datetime.datetime.now().strftime("%Y-%m-%d")
-    start = nowDate+" "+startTime
+    # 拼接定时时间
+    start = datetime.datetime.now().strftime("%Y-%m-%d")+" "+startTime
     print("---------- 开始执行时间：{} ----------".format(start))
     # 开始时间转化成时间戳
     startTimeNum = time.mktime(time.strptime(start,"%Y-%m-%d %H:%M:%S"))
     # 初始化执行失败
+    global isOk
     isOk = False
     while True:
         # 判断当前时间是否大于开始时间
         nowTimeNum = time.time()
         if nowTimeNum > startTimeNum:
-            startRunTimeNum = time.time()
             print("\n")
             # 执行脚本
             run()
@@ -40,7 +39,7 @@ def run_timing(startTime):
     if isOk:
         # 发送邮件通知
         SendEmail().send_email()
-        runTime = format(((endRunTimeNum-startRunTimeNum)/60),".2f")
+        runTime = format(((endRunTimeNum-startTimeNum)/60),".2f")
         print("---------- 脚本运行时间：{} 分钟 ----------".format(str(runTime)))
     else:
         print("！！！！！！！脚本执行失败！！！！！！！")
@@ -48,4 +47,4 @@ def run_timing(startTime):
 
 if __name__ == '__main__':
 
-    run_timing(startTime="23:10:00")
+    run_timing(startTime="16:19:00")

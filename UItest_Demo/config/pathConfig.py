@@ -10,19 +10,19 @@ import os
 """
 
 # 获取 UItest_Demo 文件夹的相对路径
-parentPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PARENT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# chrome驱动存放路径
+CHROME_DRIVER_PATH = os.path.join(PARENT_PATH,"config","driver","chromedriver.exe")
 # 输出日志的文件夹路径
-logPath = os.path.join(parentPath,"result","log")+"\\"
-# 注册手机号文件库
-phoneNumberInfo = os.path.join(parentPath,"config","phoneNumber")
+LOG_SAVE_PATH = os.path.join(PARENT_PATH,"result","log")+"\\"
 # 配置文件路径
-configDataPath = os.path.join(parentPath,"config","configData.ini")
+CONFIG_DATA_PATH = os.path.join(PARENT_PATH,"config","configData.ini")
 # 测试数据excel文件路径
-testExcelPath = os.path.join(parentPath,"data","UItest_case.xls")
+TEST_DATA_PATH = os.path.join(PARENT_PATH,"data","UItest_case.xls")
 # 错误截图保存文件夹路径
-errorImgPath = os.path.join(parentPath,"result","Img")+"\\"
+ERROR_IMG_PATH = os.path.join(PARENT_PATH,"result","Img")+"\\"
 # 测试用例存放文件夹路径
-testScriptPath = os.path.join(parentPath,"script")+"\\"
+TEST_SCRIPT_PATH = os.path.join(PARENT_PATH,"script")+"\\"
 # 测试报告存放路径
-testReportPath = os.path.join(parentPath,"result","report")+"\\"
+REPORT_SAVE_PATH = os.path.join(PARENT_PATH,"result","report")+"\\"

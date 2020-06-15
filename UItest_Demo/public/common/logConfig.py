@@ -24,7 +24,7 @@ class Log:
         # 设置日志等级，级别排序:CRITICAL > ERROR > WARNING > INFO > DEBUG
         logger.setLevel(logging.INFO)
         # 创建日志输出到文件中保存
-        fh = logging.FileHandler(logPath+self.logName,"a",encoding="utf-8")
+        fh = logging.FileHandler(LOG_SAVE_PATH+self.logName,"a",encoding="utf-8")
         # 创建日志输出到控制台
         ch = logging.StreamHandler()
         # 定义日志输出格式

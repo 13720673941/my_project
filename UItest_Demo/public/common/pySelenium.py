@@ -20,7 +20,7 @@ import time,datetime
 """
 rwConfigData = RWFile()
 log = Log()
-browser = rwConfigData.read_config_file(configDataPath,"BROWSER","BROWSER_TYPE")
+browser = rwConfigData.read_config_file(CONFIG_DATA_PATH,"BROWSER","BROWSER_TYPE")
 
 class PySelenium:
 
@@ -34,7 +34,7 @@ class PySelenium:
         self.fail = "FAIL "
         # 判断浏览器类型
         if browserType.lower() == "chrome":
-            self.driver = webdriver.Chrome()
+            self.driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
         elif browserType.lower() == "firefox":
             self.driver = webdriver.Firefox()
         elif browserType.lower() == "internet explorer":
@@ -387,8 +387,8 @@ class PySelenium:
     def screen_shot(self):
         """截图功能"""
         imgName = datetime.datetime.now().strftime("%Y%m%d%H%M%S")+".png"
-        self.driver.get_screenshot_as_file(filename=errorImgPath+imgName)
-        log.info("{}错误截图：{}".format(self.success,errorImgPath+imgName))
+        self.driver.get_screenshot_as_file(filename=ERROR_IMG_PATH+imgName)
+        log.info("{}错误截图：{}".format(self.success,ERROR_IMG_PATH+imgName))
 
     def operate_select_by_text(self,path,text):
         """select下拉框文本选择"""
