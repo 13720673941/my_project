@@ -9,7 +9,7 @@
 
 from common.getTestCase import ReadTestCase
 from common.logConfig import Log
-from common.operateFile import OperateFile
+from config.configVar import *
 import requests
 
 class Request():
@@ -17,18 +17,13 @@ class Request():
     def __init__(self):
         self.log = Log()
         self.readCase = ReadTestCase()
-        self.readFile = OperateFile()
 
-    def get_url(self,caseId):
-        """拼接url"""
-        # host地址读取
-        host = self.readFile.read_config("HTTP","HOST")
-        url = self.readCase.get_url(caseId)
-        return host+url
-
-    def request(self,url,method,**kwargs):
+    def request(self,caseId,**kwargs):
         """封装请求方法"""
 
+        # 获取初始化参数
+        url = HttpConfig.HOST + self.readCase.get_url(caseId)
+        method = self.readCase.get_method(caseId)
         # 初始化请求结果
         res = None
         try:
@@ -48,10 +43,25 @@ class Request():
         finally:
             return res
 
+    def result(self,resp):
+        """判断返回结果"""
+        res = {}
+        # 获取协议状态码
+        httpCode = resp.status_code
+        res["httpCode"] = httpCode
+        responseData = resp.json()
+        # 拼接成一个字典
+        return {**res,**responseData}
 
 if __name__ == '__main__':
 
-    r = Request()
-    e = r.get_url(caseId="login_001")
-    print(e)
+    from common.operateFile import OperateFile
+    getCase = ReadTestCase()
+    getYaml = OperateFile()
+    req = Request()
+    data = getYaml.read_yaml()["login_001"]
+    res = req.request(caseId="login_001",json=data)
+    print(req.result(res))
+
+
 

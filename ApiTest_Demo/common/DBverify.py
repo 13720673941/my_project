@@ -7,19 +7,17 @@
     数据库操作封装 默认mysql
 """
 
-from common.operateFile import OperateFile
+from config.configVar import *
 from common.logConfig import Log
 import pymysql
-
-operateFile = OperateFile()
 log = Log()
 
 # 获取配置文件中数据库信息
-NAME = operateFile.read_config("DATABASE","DB_NAME")
-HOST = operateFile.read_config("DATABASE","DB_HOST")
-USER = operateFile.read_config("DATABASE","DB_USERNAME")
-PASSWORD = operateFile.read_config("DATABASE","DB_PASSWORD")
-PORT = operateFile.read_config("DATABASE","DB_PORT")
+NAME = DataBaseConfig.DB_NAME
+HOST = DataBaseConfig.DB_HOST
+USER = DataBaseConfig.DB_USERNAME
+PASSWORD = DataBaseConfig.DB_PASSWORD
+PORT = DataBaseConfig.DB_PORT
 
 class DataBaseVerify():
 

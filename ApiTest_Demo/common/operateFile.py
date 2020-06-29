@@ -16,7 +16,7 @@ class OperateFile():
     def __init__(self):
         self.cf = ConfigParser()
 
-    def read_config(self,section,option,configPath=CONFIG_DATA_PATH):
+    def read_config(self,section,option,configPath):
         """读取 ini 类型配置文件"""
         self.cf.read(configPath,encoding="utf-8")
         return self.cf.get(section,option)

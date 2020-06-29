@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1126db9c-9711-4a05-b87c-16f75ba5f94b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/params/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/params/data/apiTestCase.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/params/data/requestData.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/params/paramPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/configVar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/DBverify.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/DBverify.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/operateFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/operateFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/testApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/testApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/writeResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/writeResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/pathConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/pathConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/20200617192531.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/params/apiTestCase.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/params/requestData.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/params/data/apiTestCase.xls" beforeDir="false" afterPath="$PROJECT_DIR$/params/data/apiTestCase.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/params/data/requestData.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/params/data/requestData.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/我的学习/PythonWork" />
+    <property name="last_opened_file_path" value="E:/myTestDemo/UItest_Demo" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -59,73 +56,7 @@
       <recent name="E:\git_project\my_project\ApiTest_Demo\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.operateFile">
-    <configuration name="Assert" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest_Demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/Assert.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DBverify" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest_Demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/DBverify.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="operateFile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ApiTest_Demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/operateFile.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.test_login">
     <configuration name="testApi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +79,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="writeResult" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_login" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ApiTest_Demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,12 +87,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/script" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/writeResult.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/script/test_login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,11 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.operateFile" />
+        <item itemvalue="Python.test_login" />
         <item itemvalue="Python.testApi" />
-        <item itemvalue="Python.DBverify" />
-        <item itemvalue="Python.writeResult" />
-        <item itemvalue="Python.Assert" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +126,9 @@
       <workItem from="1592485351214" duration="7575000" />
       <workItem from="1592535549414" duration="5304000" />
       <workItem from="1592549888529" duration="1268000" />
-      <workItem from="1592645505531" duration="2659000" />
+      <workItem from="1592645505531" duration="6495000" />
+      <workItem from="1593346244413" duration="4526000" />
+      <workItem from="1593392732786" duration="3190000" />
     </task>
     <servers />
   </component>
@@ -223,30 +153,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1592301295219" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592301365065">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592653220980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592301365065" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1592650458216">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592653220980" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1593405636484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592650458216" />
-    <state width="1493" height="143" key="GridCell.Tab.0.bottom" timestamp="1592651596769">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593405636484" />
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom" timestamp="1593351112498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592651596769" />
-    <state width="1493" height="143" key="GridCell.Tab.0.center" timestamp="1592651596769">
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593351112498" />
+    <state width="1493" height="197" key="GridCell.Tab.0.center" timestamp="1593351112498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592651596769" />
-    <state width="1493" height="143" key="GridCell.Tab.0.left" timestamp="1592651596769">
+    <state width="1493" height="197" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593351112498" />
+    <state width="1493" height="197" key="GridCell.Tab.0.left" timestamp="1593351112498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592651596769" />
-    <state width="1493" height="143" key="GridCell.Tab.0.right" timestamp="1592651596769">
+    <state width="1493" height="197" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593351112498" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right" timestamp="1593351112498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="143" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592651596769" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593351112498" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1592549865655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,15 +203,18 @@
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592547610115" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ApiTest_Demo$operateFile.coverage" NAME="operateFile Coverage Results" MODIFIED="1592651529379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/ApiTest_Demo$log.coverage" NAME="log Coverage Results" MODIFIED="1592377917051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$operateFile.coverage" NAME="operateFile Coverage Results" MODIFIED="1592651610051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ApiTest_Demo$Assert.coverage" NAME="Assert Coverage Results" MODIFIED="1592393131300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ApiTest_Demo$pathConfig.coverage" NAME="pathConfig Coverage Results" MODIFIED="1592302247526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/ApiTest_Demo$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1592380384454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/ApiTest_Demo$DBverify.coverage" NAME="DBverify Coverage Results" MODIFIED="1592546460691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/ApiTest_Demo$globalparams.coverage" NAME="globalparams Coverage Results" MODIFIED="1592379951308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/ApiTest_Demo$writeResult.coverage" NAME="writeResult Coverage Results" MODIFIED="1592486901547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/ApiTest_Demo$testApi.coverage" NAME="testApi Coverage Results" MODIFIED="1592548571369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$pytest_in__pytest_cache.coverage" NAME="pytest in .pytest_cache Coverage Results" MODIFIED="1592653079413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script/.pytest_cache" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$test_login.coverage" NAME="test_login Coverage Results" MODIFIED="1593350683301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$log.coverage" NAME="log Coverage Results" MODIFIED="1592377917051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$globalparams.coverage" NAME="globalparams Coverage Results" MODIFIED="1592379951308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$testApi.coverage" NAME="testApi Coverage Results" MODIFIED="1593350615759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/ApiTest_Demo$pytest_in_test_login_py.coverage" NAME="pytest in test_login.py Coverage Results" MODIFIED="1592653145186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/ApiTest_Demo$getTestCase.coverage" NAME="getTestCase Coverage Results" MODIFIED="1592388432385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
   </component>
 </project>
