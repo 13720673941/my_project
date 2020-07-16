@@ -8,7 +8,7 @@
 """
 
 class HttpConfig:
-    HOST = "https://www.ihaier.co"
+    HOST = "https://apibranch.51shouhou.cn"
 
 class DataBaseConfig:
     DB_NAME = "meeting"

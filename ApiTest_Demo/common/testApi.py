@@ -22,8 +22,16 @@ class Request():
         """封装请求方法"""
 
         # 获取初始化参数
+        caseName = self.readCase.get_case_name(caseId)
         url = HttpConfig.HOST + self.readCase.get_url(caseId)
         method = self.readCase.get_method(caseId)
+
+        # 打印获取信息
+        self.log.info("用例名称：{}-{}".format(caseId,caseName))
+        self.log.info("请求地址：{}".format(url))
+        self.log.info("请求方式：{}".format(method))
+        self.log.info("请求数据：{}".format(kwargs))
+
         # 初始化请求结果
         res = None
         try:
@@ -43,25 +51,14 @@ class Request():
         finally:
             return res
 
-    def result(self,resp):
-        """判断返回结果"""
-        res = {}
-        # 获取协议状态码
-        httpCode = resp.status_code
-        res["httpCode"] = httpCode
-        responseData = resp.json()
-        # 拼接成一个字典
-        return {**res,**responseData}
 
 if __name__ == '__main__':
 
     from common.operateFile import OperateFile
-    getCase = ReadTestCase()
-    getYaml = OperateFile()
+    getJson = OperateFile()
     req = Request()
-    data = getYaml.read_yaml()["login_001"]
-    res = req.request(caseId="login_001",json=data)
-    print(req.result(res))
-
+    data = getJson.read_json("login_001")
+    res = req.request(caseId="login_001",data=data)
+    print(res.text)
 
 

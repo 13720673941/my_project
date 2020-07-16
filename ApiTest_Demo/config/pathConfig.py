@@ -19,4 +19,4 @@ TEST_CASE_PATH = os.path.join(PARENT_PATH,"params","data","apiTestCase.xls")
 # 工共变量储存地址
 GLOBAL_PARAMS_PATH = os.path.join(PARENT_PATH,"config","globalParams.ini")
 # 请求数据保存文件夹
-REQUEST_DATA_PATH = os.path.join(PARENT_PATH,"params","data","requestData.yaml")
+REQUEST_DATA_PATH = os.path.join(PARENT_PATH,"params","data","requestData.json")
