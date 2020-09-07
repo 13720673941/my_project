@@ -8,6 +8,7 @@
 """
 
 from public.common.operateFile import OperateFile
+operate_file = OperateFile()
 
 # 读取工共url变量
-GLOBAL_URL = OperateFile().get_config_data("GLOBAL_URL","URL")
+GLOBAL_URL = operate_file.get_config_data("GLOBAL_URL","URL")

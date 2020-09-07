@@ -9,6 +9,8 @@
 
 from configparser import ConfigParser
 from config.pathConfig import *
+from public.common.logConfig import LogConfig
+log = LogConfig().logger
 
 class OperateFile:
 
@@ -17,6 +19,7 @@ class OperateFile:
 
         cf = ConfigParser()
         cf.read(path,encoding="utf-8")
+        log.info("读取配置文件！！！")
         return cf.get(section,option)
 
 

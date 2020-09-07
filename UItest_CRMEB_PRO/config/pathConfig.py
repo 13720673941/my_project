@@ -17,7 +17,7 @@ CHROME_DRIVER_PATH = os.path.join(PARENT_PATH,"config","driver","chromedriver.ex
 # 全局变量文件路径
 GLOBAL_PARAMS_PATH = os.path.join(PARENT_PATH,"config","globalParams.ini")
 # 测试数据保存文件夹路径
-DATA_PATH = os.path.join(PARENT_PATH,"data")
+TEST_DATA_PATH = os.path.join(PARENT_PATH,"data","UItest_data.xls")
 # 错误截图保存文件夹路径
 ERROR_IMG_PATH = os.path.join(PARENT_PATH,"result","img")
 # 日志文件保存文件夹路径
