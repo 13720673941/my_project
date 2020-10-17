@@ -7,7 +7,7 @@
     unittest 断言模块二次封装，失败截图，写入测试结果
 """
 
-from public.common.logConfig import LogConfig
+from public.common.logConfig import log
 from public.common.writeResult import WriteResult
 import unittest
 
@@ -15,7 +15,7 @@ class Assertion():
 
     def __init__(self):
         # 实例化类
-        self.log = LogConfig().logger
+        self.log = log()
         self.writeResult = WriteResult()
         self.unit = unittest.TestCase()
         # 初始化字段
@@ -99,7 +99,7 @@ class Assertion():
             # excel中写入测试结果
             self.writeResult.write_result(self.isPass,dictData["caseId"])
 
-    def assert_True(self,factionData,dictData):
+    def assert_true(self,factionData,dictData):
         """判断页面存在该字段"""
 
         try:
@@ -116,7 +116,7 @@ class Assertion():
             # excel中写入测试结果
             self.writeResult.write_result(self.isPass,dictData["caseId"])
 
-    def assert_False(self,factionData,dictData):
+    def assert_false(self,factionData,dictData):
         """判断页面不存在该字段"""
 
         try:
@@ -137,4 +137,4 @@ class Assertion():
 if __name__ == '__main__':
     assertion = Assertion()
     data = {"caseId":"login_001","expectation":True}
-    assertion.assert_False(False,data)
+    assertion.assert_false(False,data)

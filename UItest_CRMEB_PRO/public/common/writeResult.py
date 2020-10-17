@@ -13,7 +13,7 @@ from public.common.getTestData import Varible,GetTestData
 import xlwt,xlrd,datetime
 
 
-class WriteResult:
+class WriteResult():
 
     def __init__(self):
         # 读取excel文件数据
@@ -52,5 +52,4 @@ class WriteResult:
 if __name__ == '__main__':
 
     write = WriteResult()
-
     write.write_result("fail","login001")
