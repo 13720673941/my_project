@@ -12,7 +12,7 @@ import time,re
 import pytesseract
 from PIL import Image, ImageEnhance
 
-def image_recognition(imagePath="C:\\Users\\kk\\Desktop\\123.png"):
+def image_recognition(imagePath="C:\\Users\\kk\\Desktop\\captcha_pro.png"):
     # 获取验证码图片，读取验证码
     image_obj = Image.open(imagePath)
     img = image_obj.convert("L")  # 转灰度
