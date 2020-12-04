@@ -28,11 +28,11 @@ def image_recognition(imagePath="C:\\Users\\kk\\Desktop\\captcha_pro.png"):
             else:
                 pixdata[x, y] = 255
 
-    image = img
-    image.save("C:\\Users\\kk\\Desktop\\bbb.png")
+    # image = img
+    img.save("C:\\Users\\kk\\Desktop\\bbb.png")
     time.sleep(2)
     # pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"  # 设置pyteseract路径
-    result = pytesseract.image_to_string(image)  # 图片转文字
+    result = pytesseract.image_to_string(img)  # 图片转文字
     print(result)
 
 
