@@ -16,6 +16,9 @@ PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG_SAVE_PATH = os.path.join(PROJECT_PATH, "result", "log")
 # 项目配置文件路径
 PROJECT_CONFIG_PATH = os.path.join(PROJECT_PATH, "config", "projectConfig.ini")
+# 测试用例保存文件路径
+TEST_CASE_EXCEL_PATH = os.path.join(PROJECT_PATH, "case", "case.xls")
+
 
 if __name__ == '__main__':
     # 测试代码

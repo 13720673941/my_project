@@ -14,7 +14,7 @@ from ruamel import yaml
 from util.log import Log
 
 # 实例化日志类
-log = Log().log
+log = Log().originLog
 
 
 class ReadWriteFile:
