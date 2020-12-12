@@ -8,18 +8,18 @@
 """
 
 from selenium import webdriver
-from config.fileConfig import *
+from config.varConfig import *
 from util.rwFile import ReadWriteFile
 from util.log import Log
 
-log = Log().originLog
+log = Log().logger
 
 
 class BrowserDriver:
 
     def __init__(self, openBrowserType="pc", iPhoneType="iPhone 8"):
         # 实例化类
-        self.rwFile = ReadWriteFile(filePath=PROJECT_CONFIG_PATH)
+        self.rwFile = ReadWriteFile(filePath=FilePathConfig.PROJECT_CONFIG_PATH)
         # 获取浏览器类型
         browserType = self.rwFile.read_ini_file(section="BROWSER", option="BROWSER_NAME")
         # 浏览器类型为pc打开浏览器为pc模式
@@ -42,10 +42,11 @@ class BrowserDriver:
             options = webdriver.ChromeOptions()
             options.add_experimental_option("mobileEmulation", mobileEmulation)
             self.driver = webdriver.Chrome(options=options)
-            log.info("正在打开谷歌浏览器切换手机模式...")
+            log.info("正在打开谷歌浏览器切换: {} 手机模式...".format(iPhoneType))
         else:
             raise NameError("打开浏览器类型传入字段不正确，系统允许字段：pc、h5 ")
 
+    @property
     def origin_driver(self):
         """返回原生driver"""
         return self.driver
@@ -53,5 +54,6 @@ class BrowserDriver:
 
 if __name__ == '__main__':
     # 测试代码
-    dr = BrowserDriver(openBrowserType="h").origin_driver()
+    dr = BrowserDriver(openBrowserType="h5").origin_driver
     dr.get("http://mer1.crmeb.net/")
+    print(dr.capabilities['browserVersion'])
