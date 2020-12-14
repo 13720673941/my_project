@@ -9,12 +9,14 @@
 
 
 class SysConfig:
-    """框架系统配置文件信息"""
+    """框架公共变量配置文件"""
 
     # win谷歌浏览器注册表路径
-    chrome_reg = r"Software\Google\Chrome\BLBeacon"
+    CHROME_REG = r"Software\Google\Chrome\BLBeacon"
     # 淘宝谷歌驱动下载页面链接
-    down_driver_url = "https://npm.taobao.org/mirrors/chromedriver/"
+    DOWN_DRIVER_URL = "https://npm.taobao.org/mirrors/chromedriver/"
+    # 启动浏览器类型
+    BROWSER_TYPE = "chrome"
 
 
 class FilePathConfig:
@@ -33,6 +35,8 @@ class FilePathConfig:
     TEST_CASE_EXCEL_PATH = os.path.join(PROJECT_PATH, "case", "case.xls")
     # 浏览器驱动存放文件夹路径
     CHROME_DRIVER_PATH = os.path.join(PROJECT_PATH, "config", "driver")
+    # 依赖文件保存路径
+    REQUIREMENTS_PATH = os.path.join(PROJECT_PATH, "requirements.txt")
 
 
 if __name__ == '__main__':

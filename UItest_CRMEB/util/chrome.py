@@ -15,9 +15,9 @@ import re
 import zipfile
 
 from config.varConfig import *
-from util.log import Log
+from util.logConfig import Logger
 
-log = Log().logger
+Log = Logger().logger
 
 
 class Chrome:
@@ -28,10 +28,10 @@ class Chrome:
         if sys.platform[:3] == "win":
             try:
                 # 查询系统谷歌浏览器注册表中的key
-                key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, SysConfig.chrome_reg)
+                key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, SysConfig.CHROME_REG)
                 # 获取谷歌浏览器版本号
                 chrome_ver = winreg.QueryValueEx(key, "version")[0]
-                log.info("系统检测您的系统是：windows，谷歌浏览器版本号是：{} ".format(chrome_ver))
+                Log.info("系统检测您的系统是：windows，谷歌浏览器版本号是：{} ".format(chrome_ver))
             except Exception:
                 raise Exception(
                     "谷歌浏览器注册表信息查询失败，请检查 config->varConfig.py文件中注册表路径是否正确！")
@@ -53,10 +53,10 @@ class Chrome:
         localDriverList = os.listdir(FilePathConfig.CHROME_DRIVER_PATH)
         for driverName in localDriverList:
             if chromeVer.split(".")[0] == driverName.split("_")[0]:
-                log.info("本地找到对应浏览器版本的驱动文件，浏览器版本：{}，驱动版本：{}".format(chromeVer, driverName))
+                Log.info("本地找到对应浏览器版本的驱动文件，浏览器版本：{}，驱动版本：{}".format(chromeVer, driverName))
                 return True, "{}\\{}".format(FilePathConfig.CHROME_DRIVER_PATH, driverName)
         else:
-            log.info("本地浏览器驱动文件夹中没有找对对应版本，正在在线搜索对应版本...")
+            Log.info("本地浏览器驱动文件夹中没有找对对应版本，正在在线搜索对应版本...")
             return False, None
 
     @classmethod
@@ -64,7 +64,7 @@ class Chrome:
         """搜索谷歌浏览器对应驱动"""
         try:
             # 获取全部驱动名称列表信息，查找对应版本
-            downPageText = requests.get(url=SysConfig.down_driver_url).text
+            downPageText = requests.get(url=SysConfig.DOWN_DRIVER_URL).text
         except Exception:
             raise Exception("淘宝下载接口可能挂了 😭~~~~")
         # 正则匹配所有浏览器版本号信息
@@ -90,8 +90,8 @@ class Chrome:
             raise Exception("本框架当前只支持windows系统谷歌浏览器驱动自动下载！")
         # 组合下载路径
         try:
-            res = requests.get(url="{}{}/{}".format(SysConfig.down_driver_url, fileVer, file))
-            log.info("正在下载谷歌浏览器版本对应驱动文件，请稍后...")
+            res = requests.get(url="{}{}/{}".format(SysConfig.DOWN_DRIVER_URL, fileVer, file))
+            Log.info("正在下载谷歌浏览器版本对应驱动文件，请稍后...")
         except Exception:
             raise Exception("淘宝下载接口可能挂了 😭~~~~")
         # 下载文件保存路径
@@ -99,7 +99,7 @@ class Chrome:
         # 下载文件已二进制格式写入保存.zip类型
         with open(downPath, "wb") as f:
             f.write(res.content)
-        log.info("驱动下载成功保存路径：{}".format(downPath))
+        Log.info("驱动下载成功保存路径：{}".format(downPath))
         fileName = cls.unzip_file(downPath)
         newFileName = cls.rename_file(fileName, fileVer)
         cls.del_zip_file(downPath)
@@ -115,7 +115,7 @@ class Chrome:
             fileList = zipFile.namelist()
             for file in fileList:
                 zipFile.extract(file, FilePathConfig.CHROME_DRIVER_PATH)
-                log.info("正在解压驱动.zip文件...")
+                Log.info("正在解压驱动.zip文件...")
             zipFile.close()
         else:
             raise Exception("压缩文件是个无效的文件！{}".format(filePath))
@@ -130,7 +130,7 @@ class Chrome:
         newFileName = "{}\\{}_ver_{}".format(FilePathConfig.CHROME_DRIVER_PATH, fileVer.split(".")[0], filePath)
         try:
             os.rename(oldFileName, newFileName)
-            log.info("修改解压文件名称：{} -> {}".format(filePath, fileVer.split(".")[0]+filePath))
+            Log.info("修改解压文件名称：{} -> {}".format(filePath, fileVer.split(".")[0]+filePath))
         except Exception:
             raise Exception("文件重新命名异常，原文件不存在或者新文件保存路径异常！")
 
@@ -141,7 +141,7 @@ class Chrome:
         """删除下载的压缩文件"""
         try:
             os.remove(filePath)
-            log.info("正在删除下载的.zip驱动文件...")
+            Log.info("正在删除下载的.zip驱动文件...")
         except Exception:
             raise Exception("请检查所删除的文件路径是否正确！{}".format(filePath))
 

@@ -9,12 +9,13 @@
 import json
 import os
 
-from configparser import ConfigParser
 from ruamel import yaml
-from util.log import Log
+
+from configparser import ConfigParser
+from util.logConfig import Logger
 
 # 实例化日志类
-log = Log().logger
+Log = Logger().logger
 
 
 class ReadWriteFile:
@@ -25,7 +26,7 @@ class ReadWriteFile:
         # 判断是否存在该文件
         if os.path.exists(filePath):
             self.filePath = filePath
-            log.info("检测文件路径成功: {}，正在获取数据信息...".format(filePath))
+            Log.info("检测文件路径成功: {}，正在获取数据信息...".format(filePath))
         else:
             raise OSError("文件路径不存在！！！")
 
@@ -34,7 +35,7 @@ class ReadWriteFile:
         try:
             self.cf.read(self.filePath, encoding="utf-8")
             value = self.cf.get(section, option)
-            log.info("获取配置文件数据成功，section: {}，option: {}，value: {}".format(section, option, value))
+            Log.info("获取配置文件数据成功，section: {}，option: {}，value: {}".format(section, option, value))
             return value
         except Exception:
             raise NameError("配置文件中不存在section、option！！！")
@@ -46,7 +47,7 @@ class ReadWriteFile:
             self.cf.set(section, option, value)
             with open(self.filePath, "w", encoding="utf-8") as f:
                 self.cf.write(f)
-            log.info("配置文件中 ‘{}’ 下写入数据 ‘{}={}’ 成功".format(section, option, value))
+            Log.info("配置文件中 ‘{}’ 下写入数据 ‘{}={}’ 成功".format(section, option, value))
         except Exception:
             raise NameError("配置文件中不存在section: {}！！！".format(section))
 
@@ -54,7 +55,7 @@ class ReadWriteFile:
         """读取.json文件"""
         with open(self.filePath, "r", encoding="utf-8") as f:
             jsonData = json.load(f)
-            log.info("读取json文件数据信息成功！")
+            Log.info("读取json文件数据信息成功！")
         return jsonData
 
     def write_json_file(self, value):
@@ -63,7 +64,7 @@ class ReadWriteFile:
         # ** 文件会覆盖源文件
         with open(self.filePath, "w", encoding="utf-8") as f:
             json.dump(value, f)
-        log.info("json数据写入成功！")
+        Log.info("json数据写入成功！")
 
     def read_txt_file(self):
         """读取.txt类型文件"""
@@ -73,7 +74,7 @@ class ReadWriteFile:
             # 默认读取返回列表
             for line in f.readlines():
                 newList.append(line.strip("\n"))
-            log.info("读取txt文件数据信息成功！")
+            Log.info("读取txt文件数据信息成功！")
         return newList
 
     def write_txt_file(self, writeInfo, writeMode="a"):
@@ -84,13 +85,13 @@ class ReadWriteFile:
         # 写入txt文件默认追加写入
         with open(self.filePath, writeMode, encoding="utf-8") as f:
             f.write(writeInfo + "\n")
-        log.info("数据: {}，写入txt文件成功！".format(writeInfo))
+        Log.info("数据: {}，写入txt文件成功！".format(writeInfo))
 
     def read_yaml_file(self):
         """读取yaml类型文件"""
         with open(self.filePath, "r", encoding="utf-8") as f:
             yamlData = yaml.load(f, Loader=yaml.Loader)
-            log.info("读取yaml文件数据成功！")
+            Log.info("读取yaml文件数据成功！")
         return yamlData
 
     def write_yaml_file(self, value):
@@ -100,7 +101,7 @@ class ReadWriteFile:
         with open(self.filePath, "w", encoding="utf-8") as f:
             # Dumper 标准yaml文件格式
             yaml.dump(value, f, Dumper=yaml.RoundTripDumper)
-        log.info("读取txt文件数据信息成功！")
+        Log.info("读取txt文件数据信息成功！")
 
 
 if __name__ == '__main__':
