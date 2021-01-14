@@ -17,6 +17,18 @@ class SysConfig:
     DOWN_DRIVER_URL = "https://npm.taobao.org/mirrors/chromedriver/"
     # 启动浏览器类型
     BROWSER_TYPE = "chrome"
+    # 浏览器打开手机模式型号
+    MOBILE_TYPE = "iPhone 8"
+    # 查找元素最大时间
+    FIND_TIMEOUT = 10
+
+
+class BaoTaConfig:
+    """项目安装宝塔配置信息"""
+
+    BT_URL = "http://39.96.4.63:8888/site"
+    BT_USERNAME = "zhenglu"
+    BT_PASSWORD = "zhenglu123"
 
 
 class FilePathConfig:
@@ -41,3 +53,18 @@ class FilePathConfig:
 
 if __name__ == '__main__':
     print(FilePathConfig.CHROME_DRIVER_PATH)
+
+    from action.pageAction import PageAction
+
+    caseDB = {
+        "open_browser": ["pc"],
+        "open_url": ["http://www.baidu.com"],
+        "input_value": ["id", "kw", "python"],
+        "click_btn": ["id", "su"]
+    }
+
+    P = PageAction()
+
+    for k, v in caseDB.items():
+        func = getattr(P, k)
+        func(*v)

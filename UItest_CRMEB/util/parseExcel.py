@@ -8,12 +8,3 @@
 """
 
 import xlrd
-from config.fileConfig import *
-from config.varConfig import CaseVariable
-
-
-class ParseExcel:
-
-    def __init__(self):
-        self.workBook = xlrd.open_workbook(filename=TEST_CASE_EXCEL_PATH)
-
