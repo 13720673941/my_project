@@ -26,7 +26,7 @@ def wait(function):
         try:
             WebDriverWait(args[0].driver, SysConfig.FIND_TIMEOUT, 1). \
                 until(EC.visibility_of_element_located((KDB.BY_DB[args[1]], args[2])))
-            #Log.info("检测页面元素成功！方法名称：{} 定位方式：{} 路径：{} ".format(function.__name__, args[1], args[2]))
+            # Log.info("检测页面元素成功！方法名称：{} 定位方式：{} 路径：{} ".format(function.__name__, args[1], args[2]))
         except Exception:
             Log.error(
                 "{} 秒内页面中没有检测到元素！方法名：{} 定位方式：{} 路径：{} ".format(
