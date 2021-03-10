@@ -15,9 +15,11 @@ import re
 import zipfile
 
 from config.varConfig import *
+from config.filePathConfig import FilePathConfig
 from util.logConfig import Logger
+from util.rwFile import ReadWriteFile
 
-Log = Logger().logger
+Log = Logger().origin_log
 
 
 class Chrome:
@@ -43,6 +45,10 @@ class Chrome:
         else:
             fileVer = cls.search_online_ver(chrome_ver)
             findDriverPath = cls.down_driver(fileVer)
+
+        # 检测正确的浏览器驱动保存到connectParam.ini配置文件中, 驱动直接读取文件路径
+        rwParams = ReadWriteFile(filePath=FilePathConfig.PROJECT_CONNECT_PARAM_PATH)
+        rwParams.write_ini_file(section="DRIVER_PATH", option="driver_path", value=findDriverPath)
 
         return findDriverPath
 

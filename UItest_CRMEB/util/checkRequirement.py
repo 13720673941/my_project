@@ -9,11 +9,12 @@
 
 import os
 import sys
+import re
 
 from util.logConfig import Logger
 from config.varConfig import *
 
-Log = Logger().logger
+Log = Logger().origin_log
 
 
 class CheckRequired:
@@ -77,15 +78,15 @@ class CheckRequired:
     def check_python_version(cls):
         """检查本地python版本"""
         try:
-            res = os.popen("python --version").read().strip("\n")
+            res = os.popen("python --version").read()
         except Exception:
             raise Exception("没有安装python，或没有配置环境变量！")
-        # 判断python版本，python 3以上版本
-        pyVer = res.split(" ")[1].split(".")
-        if int(pyVer[0]) > 2:
+        # 正则匹配版本号返回列表，判断python版本，python 3以上版本
+        verList = re.compile("\d").findall(res)
+        if int(verList[0]) > 2:
             Log.info("本地安装python版本检测成功：{} ".format(res))
         else:
-            raise Exception("本框架执行脚本python 3版本！当前版本：{}".format(res))
+            raise Exception("本框架执行脚本必须是 python 3版本！当前版本：{}".format(res))
 
 
 if __name__ == '__main__':

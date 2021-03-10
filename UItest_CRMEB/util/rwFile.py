@@ -15,7 +15,7 @@ from configparser import ConfigParser
 from util.logConfig import Logger
 
 # 实例化日志类
-Log = Logger().logger
+Log = Logger().origin_log
 
 
 class ReadWriteFile:
@@ -35,7 +35,7 @@ class ReadWriteFile:
         try:
             self.cf.read(self.filePath, encoding="utf-8")
             value = self.cf.get(section, option)
-            Log.info("获取配置文件数据成功，section: {}，option: {}，value: {}".format(section, option, value))
+            Log.info("获取配置文件数据成功，section: {}，option: {}，value: {}...".format(section, option, value[:50]))
             return value
         except Exception:
             raise NameError("配置文件中不存在section、option！！！")
@@ -47,7 +47,7 @@ class ReadWriteFile:
             self.cf.set(section, option, value)
             with open(self.filePath, "w", encoding="utf-8") as f:
                 self.cf.write(f)
-            Log.info("配置文件中 ‘{}’ 下写入数据 ‘{}={}’ 成功".format(section, option, value))
+            Log.info("配置文件中 ‘{}’ 下写入数据 ‘{} = {}...’ 成功".format(section, option, value[:50]))
         except Exception:
             raise NameError("配置文件中不存在section: {}！！！".format(section))
 

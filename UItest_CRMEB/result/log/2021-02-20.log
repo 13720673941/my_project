@@ -1,0 +1,17 @@
+2021-02-20 17:53:37,532-[rwFile.py]-line: 29 INFO: 检测文件路径成功: E:\git_project\CRMEB_PROJECT\crmeb-auto-test\UItest_CRMEB\config\connectParam.ini，正在获取数据信息...
+2021-02-20 17:53:37,533-[rwFile.py]-line: 38 INFO: 获取配置文件数据成功，section: DRIVER_PATH，option: driver_path，value: E:\git_project\CRMEB_PROJECT\crmeb-auto-test\UItes...
+2021-02-20 17:53:41,026-[pySelenium.py]-line: 53 INFO: 正在打开 chrome 浏览器PC模式...
+2021-02-20 17:53:44,830-[pySelenium.py]-line: 126 INFO: 打开网址：http://mer1.crmeb.net/admin/merchant/list 
+2021-02-20 17:53:46,830-[pySelenium.py]-line: 140 INFO: 等待: 2s
+2021-02-20 17:53:46,947-[pySelenium.py]-line: 309 INFO: 清除输入框所有字段
+2021-02-20 17:53:47,185-[pySelenium.py]-line: 320 INFO: 在输入框: <xpath->(//input[@name="username"])[1]> 输入字段: admin2
+2021-02-20 17:53:47,314-[pySelenium.py]-line: 309 INFO: 清除输入框所有字段
+2021-02-20 17:53:47,554-[pySelenium.py]-line: 320 INFO: 在输入框: <xpath->//input[@name="password"]> 输入字段: 11111111
+2021-02-20 17:53:47,669-[pySelenium.py]-line: 309 INFO: 清除输入框所有字段
+2021-02-20 17:53:47,855-[pySelenium.py]-line: 320 INFO: 在输入框: <xpath->(//input[@name="username"])[2]> 输入字段: code
+2021-02-20 17:53:48,014-[pySelenium.py]-line: 191 INFO: 点击按钮: <xpath->//span[contains(text(),"登录")]>
+2021-02-20 17:53:48,017-[rwFile.py]-line: 38 INFO: 获取配置文件数据成功，section: LOGIN_COOKIE，option: cookie，value: [{'domain': 'mer1.crmeb.net', 'httpOnly': False, '...
+2021-02-20 17:53:48,088-[pySelenium.py]-line: 606 INFO: 给浏览器添加cookie值: [{'domain': 'mer1.crmeb.net', 'httpOnly': False, '...
+2021-02-20 17:53:49,357-[pySelenium.py]-line: 165 INFO: 刷新浏览器当前页面
+2021-02-20 17:53:51,357-[pySelenium.py]-line: 140 INFO: 等待: 2s
+2021-02-20 17:53:51,760-[pySelenium.py]-line: 438 INFO: 操作异常截图成功，图片保存路径: E:\git_project\CRMEB_PROJECT\crmeb-auto-test\UItest_CRMEB\result\errorImg\20210220175351.png

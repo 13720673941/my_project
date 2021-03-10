@@ -7,10 +7,10 @@
 python中logging模块的二次封装
 """
 
-import logging
 
 from util.timeTool import Time
 from config.varConfig import SysConfig
+import logging
 
 
 class Logger:
@@ -50,6 +50,11 @@ class Logger:
 
         # 定义输出日志等级为最低级别，默认WARNING
         self.logger.setLevel(SysConfig.LOG_LEVEL)
+
+    @property
+    def origin_log(self):
+        """返回原生logger"""
+        return self.logger
 
 
 if __name__ == '__main__':

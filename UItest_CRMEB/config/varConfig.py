@@ -42,6 +42,26 @@ class SysConfig:
     LOG_ENCODING = "utf-8"
 
 
+class ExcelVariable:
+    """excel数据表格中每列固定字段的索引"""
+
+    # 固定字段行数
+    systemNum = 0
+    # caseOverView 表格字段列索引值
+    testCaseNum = 0
+    caseDescription = 1
+    isRun = 2
+    caseResult = 3
+    # 用例步骤表格中列的索引值
+    stepNum = 0
+    stepDescription = 1
+    pageName = 2
+    funcName = 3
+    elementPath = 4
+    params = 5
+    stepResult = 6
+
+
 class BaoTaConfig:
     """项目安装宝塔配置信息"""
 
