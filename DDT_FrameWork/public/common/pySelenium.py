@@ -20,7 +20,8 @@ import time,datetime
 """
 rwConfigData = RWFile()
 log = Log()
-browser = rwConfigData.read_config_file(CONFIG_DATA_PATH,"BROWSER","BROWSER_TYPE")
+browser = rwConfigData.read_config_file(CONFIG_DATA_PATH, "BROWSER", "BROWSER_TYPE")
+driverPath = rwConfigData.read_config_file(CONFIG_DATA_PATH, "DRIVER_PATH", "path")
 
 class PySelenium:
 
@@ -34,7 +35,7 @@ class PySelenium:
         self.fail = "FAIL "
         # 判断浏览器类型
         if browserType.lower() == "chrome":
-            self.driver = webdriver.Chrome(executable_path=CHROME_DRIVER_PATH)
+            self.driver = webdriver.Chrome(executable_path=driverPath)
         elif browserType.lower() == "firefox":
             self.driver = webdriver.Firefox()
         elif browserType.lower() == "internet explorer":

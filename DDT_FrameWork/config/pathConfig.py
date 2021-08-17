@@ -13,7 +13,7 @@ import os
 PARENT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # chrome驱动存放路径
-CHROME_DRIVER_PATH = os.path.join(PARENT_PATH,"config","driver","chromedriver.exe")
+CHROME_DRIVER_PATH = os.path.join(PARENT_PATH,"config","driver") + "\\"
 # 输出日志的文件夹路径
 LOG_SAVE_PATH = os.path.join(PARENT_PATH,"result","log")+"\\"
 # 配置文件路径
@@ -26,3 +26,5 @@ ERROR_IMG_PATH = os.path.join(PARENT_PATH,"result","Img")+"\\"
 TEST_SCRIPT_PATH = os.path.join(PARENT_PATH,"script")+"\\"
 # 测试报告存放路径
 REPORT_SAVE_PATH = os.path.join(PARENT_PATH,"result","report")+"\\"
+# 项目依赖库版本文件
+REQUIREMENTS_PATH = os.path.join(PARENT_PATH,"requirements.txt")

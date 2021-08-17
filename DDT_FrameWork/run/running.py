@@ -15,6 +15,8 @@ REPORT_TITLE = "xxx系统自动化测试报告"
 REPORT_DESCRIPTION = "报告描述"
 
 def run():
+    # 检测本地浏览器驱动版本
+
     # 获取测试用例集合
     suits = unittest.TestLoader().discover(TEST_SCRIPT_PATH,"test_*.py")
     # 创建测试报告名称
