@@ -9,11 +9,11 @@
 """
 
 from config.filePathConfig import chromeDriverPath, configDataPath
-from config.variableConfig import VariableConfig
 from public.common.logConfig import Logger
 from public.common.readWriteData import ReadWriteData
 
 import os
+import sys
 import winreg
 import requests
 import zipfile
@@ -21,6 +21,12 @@ import re
 
 # 实例化日志类
 Log = Logger().origin_logger
+# 系统平台名称
+SYSTEM_PLATFORM = sys.platform
+# 谷歌浏览器本地注册表路径
+CHROME_REG = r"Software\Google\Chrome\BLBeacon"
+# 淘宝谷歌驱动下载页面链接
+DOWN_DRIVER_URL = "https://npm.taobao.org/mirrors/chromedriver/"
 
 
 class CheckDriverVersion:
@@ -31,16 +37,16 @@ class CheckDriverVersion:
         获取本地chrome浏览器版本号
         :return:
         """
-        if VariableConfig.SYSTEM_PLATFORM[:3] == "win":
+        if SYSTEM_PLATFORM[:3] == "win":
             try:
-                key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, VariableConfig.CHROME_REG)
+                key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, CHROME_REG)
                 localChromeVersion = winreg.QueryValueEx(key, "version")[0]
                 Log.info("检测本地谷歌浏览器版本为：{} ".format(localChromeVersion))
             except:
                 raise Exception(
-                    "浏览器版本检测失败！！！请检查variableConfig.py文件中CHROME_REG注册表路径：{} 是否正确！".format(VariableConfig.CHROME_REG))
+                    "浏览器版本检测失败！！！请检查variableConfig.py文件中CHROME_REG注册表路径：{} 是否正确！".format(CHROME_REG))
         else:
-            raise Exception("本地机器系统版本：{} 不支持运行该测试脚本！！！".format(VariableConfig.SYSTEM_PLATFORM))
+            raise Exception("本地机器系统版本：{} 不支持运行该测试脚本！！！".format(SYSTEM_PLATFORM))
         # 解析返回浏览器大版本号
         return localChromeVersion
 
@@ -72,10 +78,10 @@ class CheckDriverVersion:
         """
         # 本地没有找到去下载对应版本的谷歌浏览器驱动
         try:
-            downListPage = requests.get(url=VariableConfig.DOWN_DRIVER_URL).text
+            downListPage = requests.get(url=DOWN_DRIVER_URL).text
             Log.info("项目中没有匹配到对应本地谷歌浏览器驱动，正在启动在线下载，请稍后...")
         except:
-            raise Exception("淘宝下载谷歌浏览器驱动接口链接超时！！！，请手动检查：{}".format(VariableConfig.DOWN_DRIVER_URL))
+            raise Exception("淘宝下载谷歌浏览器驱动接口链接超时！！！，请手动检查：{}".format(DOWN_DRIVER_URL))
         # 正则匹配浏览器对应大版本，查找子下载路径
         findChromeVersionList = re.compile('<a href="/mirrors/chromedriver/(.*?)/">').findall(downListPage)
         # 判断本地浏览器版本是否在列表中，不在的话就匹配最大版本第一个
@@ -90,8 +96,7 @@ class CheckDriverVersion:
                 raise Exception("没有找到本地浏览器所对应驱动版本：{} 信息，请手动下载！！！".format(chromeVersion))
         pass
         # 组合驱动下载url下载文件
-        findChromeDownUrl = "{}{}/chromedriver_win32.zip".format(VariableConfig.DOWN_DRIVER_URL,
-                                                                 downChromeDriverVersion)
+        findChromeDownUrl = "{}{}/chromedriver_win32.zip".format(DOWN_DRIVER_URL, downChromeDriverVersion)
         # 写入驱动数据文件路径
         writeChromeDriverFilePath = "{}chromedriver.zip".format(chromeDriverPath)
         # 请求下载url二进制写入本地

@@ -23,6 +23,6 @@ logSavePath = os.path.join(parentPath, "result", "log") + "\\"
 # 测试报告保存路径
 reportSavePath = os.path.join(parentPath, "result", "report") + "\\"
 # 项目运行依赖安装文件
-requirementsPath = os.path.join(parentPath, "requirements.txt")
+requirementsPath = os.path.join(parentPath, "requirements")
 # 配置文件路径
 configDataPath = os.path.join(parentPath, "config", "configData.ini")
