@@ -9,9 +9,9 @@ python中logging模块二次封装
 """
 
 from config.filePathConfig import logSavePath
+from common.tools.timeTools import TimeTools
 
 import logging
-import datetime
 
 
 class Logger:
@@ -26,7 +26,7 @@ class Logger:
 
         # 创建一个日志句柄输出到文件中
         fileHandle = logging.FileHandler(
-            filename=logSavePath + datetime.datetime.now().strftime("%Y-%m-%d") + ".log",
+            filename=logSavePath + TimeTools.get_now_date(timeFormat="%Y-%m-%d") + ".log",
             mode="a",
             encoding="utf-8"
         )

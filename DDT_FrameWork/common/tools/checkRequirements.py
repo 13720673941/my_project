@@ -9,8 +9,8 @@
 """
 
 from config.filePathConfig import requirementsPath
-from public.common.checkDriverVersion import SYSTEM_PLATFORM
-from public.common.logConfig import Logger
+from common.tools.checkDriverVersion import SYSTEM_PLATFORM
+from common.tools.logConfig import Logger
 
 import os
 
@@ -28,13 +28,13 @@ class CheckRequirements:
         if SYSTEM_PLATFORM[:3] == "win":
             pythonVersionNumber = os.popen("python --version").read().split(" ")[1].strip("\n")
         else:
-            raise Exception("该项目程序不支持本地电脑系统平台：{} ！！！".format(SYSTEM_PLATFORM))
+            raise Exception(f"该项目程序不支持本地电脑系统平台：{SYSTEM_PLATFORM} ！！！")
         # 判断python3版本，低于 3的不支持运行该测试项目
         pythonBigVersionNum = pythonVersionNumber.split(".")[0]
         if int(pythonBigVersionNum) >= 3:
-            Log.info("检测本地python版本为：{}，可以运行该测试项目".format(pythonVersionNumber))
+            Log.info(f"检测本地python版本为：{pythonVersionNumber}，可以运行该测试项目")
         else:
-            raise Exception("本地安装python版本：{}不符合项目运行要求，请手动升级！！！".format(pythonVersionNumber))
+            raise Exception(f"本地安装python版本：{pythonVersionNumber}不符合项目运行要求，请手动升级！！！")
 
     @classmethod
     def pip_install(cls, library):
@@ -43,21 +43,21 @@ class CheckRequirements:
         :return:
         """
         try:
-            installResult = os.system("pip install {}".format(library))
-            Log.info("系统正在安装项目依赖库：{}，请稍后...".format(library))
+            installResult = os.system(f"pip install {library}")
+            Log.info(f"系统正在安装项目依赖库：{library}，请稍后...")
         except:
-            raise Exception("项目依赖库：{} 安装超时请手动安装！！！".format(library))
+            raise Exception(f"项目依赖库：{library} 安装超时请手动安装！！！")
         # os.system 返回状态 0，及安装成功
         if installResult == 0:
-            Log.info("项目依赖库：{} 安装成功！".format(library))
+            Log.info(f"项目依赖库：{library} 安装成功！")
         else:
-            raise Exception("项目依赖库：{} 安装失败请手动安装！！！".format(library))
+            raise Exception(f"项目依赖库：{library} 安装失败请手动安装！！！")
 
     @classmethod
     def check_install_requirements(cls):
         """
         检测本地需要安装的依赖文件项目
-        :return: 本地索要安装依赖列表
+        :return:
         """
         # 先获取项目所需依赖列表
         with open(requirementsPath, "r", encoding="utf-8") as f:
@@ -74,7 +74,7 @@ class CheckRequirements:
                 if needInstallReq.split("==")[0] in alreadyInstallReq:
                     # 判断版本
                     if needInstallReq.split("==")[1] == alreadyInstallReq.split(" ")[-1]:
-                        Log.info("检测项目所需依赖版本：{} 已安装，可正常运行".format(needInstallReq))
+                        Log.info(f"检测项目所需依赖版本：{needInstallReq} 已安装，可正常运行")
                     else:
                         # 已安装但是版本不一致，直接安装对应版本的项目依赖
                         cls.pip_install(library=needInstallReq)

@@ -9,8 +9,8 @@
 """
 
 from config.filePathConfig import chromeDriverPath, configDataPath
-from public.common.logConfig import Logger
-from public.common.readWriteData import ReadWriteData
+from common.tools.logConfig import Logger
+from common.tools.operateConfigData import OperateConfigData
 
 import os
 import sys
@@ -41,12 +41,12 @@ class CheckDriverVersion:
             try:
                 key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, CHROME_REG)
                 localChromeVersion = winreg.QueryValueEx(key, "version")[0]
-                Log.info("检测本地谷歌浏览器版本为：{} ".format(localChromeVersion))
+                Log.info(f"检测本地谷歌浏览器版本为：{localChromeVersion} ")
             except:
                 raise Exception(
-                    "浏览器版本检测失败！！！请检查variableConfig.py文件中CHROME_REG注册表路径：{} 是否正确！".format(CHROME_REG))
+                    f"浏览器版本检测失败！！！请检查variableConfig.py文件中CHROME_REG注册表路径：{CHROME_REG} 是否正确！")
         else:
-            raise Exception("本地机器系统版本：{} 不支持运行该测试脚本！！！".format(SYSTEM_PLATFORM))
+            raise Exception(f"本地机器系统版本：{SYSTEM_PLATFORM} 不支持运行该测试脚本！！！")
         # 解析返回浏览器大版本号
         return localChromeVersion
 
@@ -64,7 +64,7 @@ class CheckDriverVersion:
         for driver in driverFileList:
             if chromeVersion.split(".")[0] == driver.split("_")[0]:
                 findDriverPath = chromeDriverPath + driver
-                Log.info("项目驱动中已匹配到本地chrome浏览器对应驱动版本：{} ".format(findDriverPath))
+                Log.info(f"项目驱动中已匹配到本地chrome浏览器对应驱动版本：{findDriverPath} ")
                 return True, findDriverPath
         else:
             return False, findDriverPath
@@ -81,7 +81,7 @@ class CheckDriverVersion:
             downListPage = requests.get(url=DOWN_DRIVER_URL).text
             Log.info("项目中没有匹配到对应本地谷歌浏览器驱动，正在启动在线下载，请稍后...")
         except:
-            raise Exception("淘宝下载谷歌浏览器驱动接口链接超时！！！，请手动检查：{}".format(DOWN_DRIVER_URL))
+            raise Exception(f"淘宝下载谷歌浏览器驱动接口链接超时！！！，请手动检查：{DOWN_DRIVER_URL}")
         # 正则匹配浏览器对应大版本，查找子下载路径
         findChromeVersionList = re.compile('<a href="/mirrors/chromedriver/(.*?)/">').findall(downListPage)
         # 判断本地浏览器版本是否在列表中，不在的话就匹配最大版本第一个
@@ -93,18 +93,18 @@ class CheckDriverVersion:
                     downChromeDriverVersion = findChromeVersion
                     break
             else:
-                raise Exception("没有找到本地浏览器所对应驱动版本：{} 信息，请手动下载！！！".format(chromeVersion))
+                raise Exception(f"没有找到本地浏览器所对应驱动版本：{chromeVersion} 信息，请手动下载！！！")
         pass
         # 组合驱动下载url下载文件
-        findChromeDownUrl = "{}{}/chromedriver_win32.zip".format(DOWN_DRIVER_URL, downChromeDriverVersion)
+        findChromeDownUrl = f"{DOWN_DRIVER_URL}{downChromeDriverVersion}/chromedriver_win32.zip"
         # 写入驱动数据文件路径
-        writeChromeDriverFilePath = "{}chromedriver.zip".format(chromeDriverPath)
+        writeChromeDriverFilePath = f"{chromeDriverPath}chromedriver.zip"
         # 请求下载url二进制写入本地
         try:
             driverUnzipFile = requests.get(url=findChromeDownUrl)
             with open(writeChromeDriverFilePath, "wb") as fp:
                 fp.write(driverUnzipFile.content)
-            Log.info("本地谷歌浏览器驱动对应版本下载成功，路径：{}".format(writeChromeDriverFilePath))
+            Log.info(f"本地谷歌浏览器驱动对应版本下载成功，路径：{writeChromeDriverFilePath}")
         except:
             raise Exception("下载驱动接口链接超时，驱动下载失败，请手动下载！！！")
 
@@ -121,24 +121,24 @@ class CheckDriverVersion:
         # 判断文件格式是否为zip压缩文件
         global zipChildFile
         if zipfile.is_zipfile(zipFilePath):
-            Log.info("正在解压压缩文件：{}，请稍后...".format(zipFilePath))
+            Log.info(f"正在解压压缩文件：{zipFilePath}，请稍后...")
             zipFile = zipfile.ZipFile(zipFilePath)
             zipList = zipFile.namelist()
             for zipChildFile in zipList:
                 zipFile.extract(zipChildFile, path=chromeDriverPath)
             zipFile.close()
         else:
-            raise Exception("解压压缩文件格式非zip，请检查后再试！！！文件目录：{}".format(zipFilePath))
+            raise Exception(f"解压压缩文件格式非zip，请检查后再试！！！文件目录：{zipFilePath}")
 
         # 重新命名解压的驱动文件名称
-        oldFileName = "{}{}".format(chromeDriverPath, zipChildFile)
-        newFileName = "{}{}_chromedriver.exe".format(chromeDriverPath, chromeVersion.split(".")[0])
+        oldFileName = f"{chromeDriverPath}{zipChildFile}"
+        newFileName = f"{chromeDriverPath}{chromeVersion.split('.')[0]}_chromedriver.exe"
         os.rename(oldFileName, newFileName)
-        Log.info("旧文件：{} 重新命名 -> 新文件：{}_chromedriver.exe".format(zipChildFile, chromeVersion.split(".")[0]))
+        Log.info(f"旧文件：{zipChildFile} 重新命名 -> 新文件：{chromeVersion.split('.')[0]}_chromedriver.exe")
 
         # 删除已下载驱动压缩文件
         os.remove(zipFilePath)
-        Log.info("删除下载压缩文件：{} ".format(zipFilePath))
+        Log.info(f"删除下载压缩文件：{zipFilePath} ")
 
         return newFileName
 
@@ -159,8 +159,8 @@ class CheckDriverVersion:
             driverConfigPath = processZipFilePath
 
         # 项目本地谷歌浏览器驱动路径写入配置文件
-        ReadWriteData(configDataPath).write_config_data(section="CHROME_DRIVER_PATH", option="path",
-                                                        value=driverConfigPath)
+        operateConfig = OperateConfigData(configDataPath)
+        operateConfig.write_config_data(section="driver_path", option="path", value=driverConfigPath)
 
 
 if __name__ == '__main__':

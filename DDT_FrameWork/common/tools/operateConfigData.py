@@ -9,36 +9,31 @@
 """
 
 from configparser import ConfigParser
-from public.common.logConfig import Logger
+from common.tools.logConfig import Logger
 
-import yaml
 import os
 
 Log = Logger().origin_logger
 
 
-class ReadWriteData:
+class OperateConfigData:
 
     def __init__(self, dataPath):
         # 检测文件路径是否存在
         if os.path.exists(dataPath):
             self.dataPath = dataPath
-            Log.info("目录：{} 检索成功，正在获取文件中数据，请稍后...".format(dataPath))
+            Log.info(f"目录：{dataPath} 检索成功，正在获取文件中数据，请稍后...")
         else:
-            raise Exception("项目中不存在该目录！！！{}".format(dataPath))
+            raise Exception(f"项目中不存在该目录！！！{dataPath}")
 
-    def read_config_data(self, section, option):
+    def read_config_data(self):
         """
         读取.ini配置文件
-        :param section: 标题
-        :param option: 变量
         :return:
         """
         cf = ConfigParser()
         cf.read(filenames=self.dataPath, encoding="utf-8")
-        readData = cf.get(section, option)
-        Log.info("读取.ini配置文件，section：{}，option：{}，value：{}".format(section, option, readData))
-        return readData
+        return cf
 
     def write_config_data(self, section, option, value):
         """
@@ -53,11 +48,11 @@ class ReadWriteData:
         cf.set(section, option, value)
         with open(file=self.dataPath, mode="w", encoding="utf-8") as f:
             cf.write(f)
-        Log.info("正在配置文件中写入，section：{}，option：{}，value：{}".format(section, option, value))
+        Log.info(f"正在配置文件中写入，section：{section}，option：{option}，value：{value}")
 
 
 if __name__ == '__main__':
-    from config.filePathConfig import configDataPath
+    from config.filePathConfig import driverPath
 
-    rw = ReadWriteData(configDataPath).read_config_data("CHROME_DRIVER_PATH", "path")
-    print(rw)
+    rw = OperateConfigData(driverPath).read_config_data()
+    print(rw.get("driver_path", "path"))
