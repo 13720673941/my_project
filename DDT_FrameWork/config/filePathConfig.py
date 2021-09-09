@@ -12,6 +12,7 @@ import os
 
 # 项目相对父路径
 parentPath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # 浏览器驱动配置文件路径
 chromeDriverPath = os.path.join(parentPath, "config", "driver") + "\\"
 # 测试数据文件路径
@@ -25,4 +26,6 @@ reportSavePath = os.path.join(parentPath, "result", "report") + "\\"
 # 项目运行依赖安装文件
 requirementsPath = os.path.join(parentPath, "requirements")
 # 配置文件路径
-driverPath = os.path.join(parentPath, "config", "driverPath.ini")
+driverPath = os.path.join(parentPath, "config", "connectParam.ini")
+# 浏览器相关配置文件路径
+browserConfigPath = os.path.join(parentPath, "config", "browser.ini")

@@ -8,7 +8,7 @@
 检查本地谷歌浏览器驱动版本，项目中存在匹配版本可直接运行项目，不匹配的驱动进行重新下载匹配驱动
 """
 
-from config.filePathConfig import chromeDriverPath, configDataPath
+from config.filePathConfig import chromeDriverPath, driverPath
 from common.tools.logConfig import Logger
 from common.tools.operateConfigData import OperateConfigData
 
@@ -83,7 +83,7 @@ class CheckDriverVersion:
         except:
             raise Exception(f"淘宝下载谷歌浏览器驱动接口链接超时！！！，请手动检查：{DOWN_DRIVER_URL}")
         # 正则匹配浏览器对应大版本，查找子下载路径
-        findChromeVersionList = re.compile('<a href="/mirrors/chromedriver/(.*?)/">').findall(downListPage)
+        findChromeVersionList = re.compile('"/mirrors/chromedriver/(.*?)/">').findall(downListPage)
         # 判断本地浏览器版本是否在列表中，不在的话就匹配最大版本第一个
         if chromeVersion in findChromeVersionList:
             downChromeDriverVersion = chromeVersion
@@ -149,9 +149,9 @@ class CheckDriverVersion:
         :return:
         """
         localChromeVersion = cls.get_chrome_version()
-        isHave, driverPath = cls.check_local_driver(chromeVersion=localChromeVersion)
+        isHave, findDriverPath = cls.check_local_driver(chromeVersion=localChromeVersion)
         if isHave:
-            driverConfigPath = driverPath
+            driverConfigPath = findDriverPath
         else:
             # 在线下载谷歌驱动文件
             downZipFilePath = cls.down_chrome_driver(chromeVersion=localChromeVersion)
@@ -159,7 +159,7 @@ class CheckDriverVersion:
             driverConfigPath = processZipFilePath
 
         # 项目本地谷歌浏览器驱动路径写入配置文件
-        operateConfig = OperateConfigData(configDataPath)
+        operateConfig = OperateConfigData(driverPath)
         operateConfig.write_config_data(section="driver_path", option="path", value=driverConfigPath)
 
 

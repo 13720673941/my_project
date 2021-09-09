@@ -11,6 +11,7 @@
 from config.filePathConfig import requirementsPath
 from common.tools.checkDriverVersion import SYSTEM_PLATFORM
 from common.tools.logConfig import Logger
+from common.tools.operateTxtData import OperateTxtData
 
 import os
 
@@ -34,10 +35,10 @@ class CheckRequirements:
         if int(pythonBigVersionNum) >= 3:
             Log.info(f"检测本地python版本为：{pythonVersionNumber}，可以运行该测试项目")
         else:
-            raise Exception(f"本地安装python版本：{pythonVersionNumber}不符合项目运行要求，请手动升级！！！")
+            raise Exception(f"本地安装python版本：{pythonVersionNumber}不符合项目运行要求，请手动安装！！！")
 
     @classmethod
-    def pip_install(cls, library):
+    def pip_install(cls, library: str):
         """
         pip命令在线安装依赖
         :return:
@@ -60,9 +61,7 @@ class CheckRequirements:
         :return:
         """
         # 先获取项目所需依赖列表
-        with open(requirementsPath, "r", encoding="utf-8") as f:
-            # 数据处理，去掉换行符
-            needInstallReqList = [lineData.strip("\n") for lineData in f.readlines()]
+        needInstallReqList = OperateTxtData(requirementsPath).read_txt_data()
         # 获取本地安装相关依赖列表
         alreadyInstallReqResult = os.popen("pip list").read().split("\n")
         # 数据处理去掉列表中字符右边最后的空格
@@ -70,17 +69,13 @@ class CheckRequirements:
         # 循环两个列表判断所需安装依赖是否在列表中
         for needInstallReq in needInstallReqList:
             for alreadyInstallReq in alreadyInstallReqResultLs:
-                # 判断名称
                 if needInstallReq.split("==")[0] in alreadyInstallReq:
-                    # 判断版本
                     if needInstallReq.split("==")[1] == alreadyInstallReq.split(" ")[-1]:
                         Log.info(f"检测项目所需依赖版本：{needInstallReq} 已安装，可正常运行")
                     else:
-                        # 已安装但是版本不一致，直接安装对应版本的项目依赖
                         cls.pip_install(library=needInstallReq)
                     break
             else:
-                # 已经安装的项目中没有检索到对应依赖直接安装
                 cls.pip_install(library=needInstallReq)
         pass
 
