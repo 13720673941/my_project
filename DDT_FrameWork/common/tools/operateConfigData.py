@@ -22,7 +22,7 @@ class OperateConfigData:
         # 检测文件路径是否存在
         if os.path.exists(dataPath):
             self.dataPath = dataPath
-            Log.info(f"目录：{dataPath} 检索成功，正在获取文件中数据，请稍后...")
+            Log.info("文件：{} 检索成功，正在获取文件中数据，请稍后...".format(dataPath.split("\\")[-1]))
         else:
             raise Exception(f"项目中不存在该目录！！！{dataPath}")
 

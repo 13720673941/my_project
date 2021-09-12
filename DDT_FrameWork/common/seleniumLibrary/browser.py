@@ -8,17 +8,14 @@
 浏览器相关操作二次封装，打开浏览器、退出浏览器、打开网址、获取标题、获取url、刷新浏览器等。
 """
 
-from selenium import webdriver
-
+from common.tools.operateConfigData import OperateConfigData
 from config.filePathConfig import *
 from common.tools.logConfig import Logger
-from common.tools.operateConfigData import OperateConfigData
 
-Log = Logger().origin_logger
+from selenium import webdriver
 
 
 class Browser:
-
     rc = OperateConfigData(browserConfigPath).read_config_data()
     # 获取浏览器名称
     browserName = rc.get("browser", "name")
@@ -41,15 +38,16 @@ class Browser:
         """
         driverStart = OperateConfigData(driverPath).read_config_data().get("driver_path", "path")
         optionSet = self.set_driver(isH5)
+        self.Log = Logger().origin_logger
         # 打开浏览器实例
         try:
             self.driver = getattr(webdriver, self.browserName)(executable_path=driverStart, options=optionSet)
-            Log.info(f"正在打开：{self.browserName} 浏览器...")
+            self.Log.info(f"正在打开：{self.browserName} 浏览器...")
         except:
             self.driver = webdriver.Chrome(executable_path=driverStart, options=optionSet)
-            Log.warning(f"浏览器名称：{self.browserName} 配置不正确，默认打开 Chrome 浏览器...")
+            self.Log.warning(f"浏览器名称：{self.browserName} 配置不正确，默认打开 Chrome 浏览器...")
 
-        Log.info(f"设置隐式等待：{self.waitTime}s")
+        self.Log.info(f"设置隐式等待：{self.waitTime}s")
         self.driver.implicitly_wait(self.waitTime)
 
         # 设置浏览器大小
@@ -91,7 +89,7 @@ class Browser:
         # 是否打开H5模式
         if isH5:
             optionSet.add_experimental_option("mobileEmulation", mobileEmulation)
-            Log.info(f"设置浏览器打开模式为：{self.iPhoneName} 手机模式")
+            self.Log.info(f"设置浏览器打开模式为：{self.iPhoneName} 手机模式")
         # 关闭自动化控制提示条
         if not self.automation:
             optionSet.add_experimental_option("excludeSwitches", ['enable-automation'])
@@ -102,37 +100,47 @@ class Browser:
         """打开地址"""
         if new:
             self.driver.execute_script(f"window.open('{url}')")
-            Log.info(f"重新打开一个网页地址：{url}")
+            self.Log.info(f"重新打开一个网页地址：{url}")
         else:
             self.driver.get(url)
-            Log.info(f"打开地址：{url}")
+            self.Log.info(f"打开地址：{url}")
 
     def close(self):
         """关闭窗口"""
         self.driver.close()
-        Log.info("关闭当前页面窗口")
+        self.Log.info("关闭当前页面窗口")
 
     def quit(self):
         """退出浏览器"""
         self.driver.quit()
-        Log.info("退出当前浏览器")
+        self.Log.info("退出当前浏览器")
 
     def refresh_browser(self):
         """刷新浏览器"""
         self.driver.refresh()
-        Log.info("刷新当前浏览器")
+        self.Log.info("刷新当前浏览器")
 
     def get_current_url(self) -> str:
         """获取当前页面url"""
         url = self.driver.current_url
-        Log.info(f"获取当前页面url地址：{url}")
+        self.Log.info(f"获取当前页面url地址：{url}")
         return url
 
     def get_page_title(self) -> str:
         """获取页面标题"""
         title = self.driver.title
-        Log.info(f"获取当前页面标题信息：{title}")
+        self.Log.info(f"获取当前页面标题信息：{title}")
         return title
+
+    def back(self):
+        """返回上一级页面"""
+        self.driver.back()
+        self.Log.info("返回浏览器上一级操作页面")
+
+    def forward_page(self):
+        """前进一级页面"""
+        self.driver.forward()
+        self.Log.info("前进浏览器下一个操作页面")
 
     @property
     def origin_driver(self):
