@@ -19,7 +19,7 @@ import time
 
 class Wait(Browser):
 
-    def wait_presence_of_element(self, elementPath: tuple, timeout=10, poll_frequency=1) -> bool:
+    def wait_presence_of_element(self, elementPath: tuple, timeout=10, poll_frequency=1):
         """
         找到页面元素是都存在页面上，不关心是否可见
         :param timeout: 等待超时时间，默认10s
@@ -31,13 +31,12 @@ class Wait(Browser):
         try:
             WebDriverWait(self.driver, timeout, poll_frequency).until(EC.presence_of_element_located(elementPath),
                                                                       message)
-        except NoSuchElementException:  # 这里直接跑错运行不到False
-            return False
+        except NoSuchElementException:
+            raise NoSuchElementException
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到对应元素：{elementPath}")
-        return True
 
-    def wait_visibility_of_element(self, elementPath: tuple, timeout=10, poll_frequency=1) -> bool:
+    def wait_visibility_of_element(self, elementPath: tuple, timeout=10, poll_frequency=1):
         """
         找到页面元素是都存在页面上，且元素可见
         :param timeout: 等待超时时间，默认10s
@@ -50,12 +49,11 @@ class Wait(Browser):
             WebDriverWait(self.driver, timeout, poll_frequency).until(EC.visibility_of_element_located(elementPath),
                                                                       message)
         except NoSuchElementException:
-            return False
+            raise NoSuchElementException
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到且可见对应元素：{elementPath}")
-        return True
 
-    def wait_element_to_be_clickable(self, elementPath: tuple, timeout=10, poll_frequency=1) -> bool:
+    def wait_element_to_be_clickable(self, elementPath: tuple, timeout=10, poll_frequency=1):
         """
         等待页面元素出现判断元素是否可以点击
         :param timeout: 等待超时时间，默认10s
@@ -67,12 +65,11 @@ class Wait(Browser):
         try:
             WebDriverWait(self.driver, timeout, poll_frequency).until(EC.element_to_be_clickable(elementPath), message)
         except NoSuchElementException:
-            return False
+            raise NoSuchElementException
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到且可以点击对应元素：{elementPath}")
-        return True
 
-    def wait_frame_to_be_available(self, elementPath: tuple, timeout=10, poll_frequency=1) -> bool:
+    def wait_frame_to_be_available(self, elementPath: tuple, timeout=10, poll_frequency=1):
         """
         等待iframe框出现并且切换到iframe框架内
         :param timeout: 等待超时时间，默认10s
@@ -85,12 +82,11 @@ class Wait(Browser):
             WebDriverWait(self.driver, timeout, poll_frequency).until(
                 EC.frame_to_be_available_and_switch_to_it(elementPath), message)
         except NoSuchFrameException:
-            return False
+            raise NoSuchFrameException
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到iframe框架并切换进对应元素：{elementPath}")
-        return True
 
-    def wait_alert_is_present(self, timeout=10, poll_frequency=1) -> bool:
+    def wait_alert_is_present(self, timeout=10, poll_frequency=1):
         """
         等待页面弹窗出现并切入弹窗内
         :param timeout: 等待超时时间，默认10s
@@ -101,10 +97,9 @@ class Wait(Browser):
         try:
             WebDriverWait(self.driver, timeout, poll_frequency).until(EC.alert_is_present(), message)
         except NoAlertPresentException:
-            return False
+            raise NoAlertPresentException
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到 alert 弹窗")
-        return True
 
     def sleep(self, seconds=2):
         """

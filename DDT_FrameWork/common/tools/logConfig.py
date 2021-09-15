@@ -19,7 +19,7 @@ class Logger:
     def __init__(self):
         # 实例化
         self.logger = logging.getLogger()
-        # 清除日志handles中缓存的句柄
+        # 清除日志handles中缓存的句柄，防止日志重复打印
         self.logger.handlers.clear()
         # 设置日志等级
         self.logger.setLevel(logging.INFO)

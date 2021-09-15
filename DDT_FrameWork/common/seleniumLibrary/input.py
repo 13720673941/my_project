@@ -8,11 +8,13 @@
 输入框操作相关方法
 """
 
-from common.seleniumLibrary.base import Base
+from common.seleniumLibrary.find import Find
+from common.tools.decorator import error_collection
 
 
-class Input(Base):
+class Input(Find):
 
+    @error_collection
     def input(self, elementPath: tuple, value: str):
         """
         输入关键字
@@ -23,6 +25,7 @@ class Input(Base):
         self._find_element(elementPath).send_keys(value)
         self.Log.info(f"输入框：{elementPath} 中输入关键字：{value}")
 
+    @error_collection
     def clear(self, elementPath: tuple):
         """
         清除输入框数据

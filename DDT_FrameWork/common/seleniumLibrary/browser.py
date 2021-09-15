@@ -16,35 +16,41 @@ from selenium import webdriver
 
 
 class Browser:
+    # 实例化类
     rc = OperateConfigData(browserConfigPath).read_config_data()
+    Log = Logger().origin_logger
     # 获取浏览器名称
-    browserName = rc.get("browser", "name")
-    waitTime = rc.get("browser", "wait_time")
+    browserName = rc.get("browser", "name", fallback="Chrome")
+    waitTime = rc.getint("browser", "wait_time", fallback=10)
 
     # 浏览器配置
-    isHeadless = rc.getboolean("browser_config", "headless")
-    isDisable = rc.getboolean("browser_config", "disable_info")
-    automation = rc.getboolean("browser_config", "automation")
+    isHeadless = rc.getboolean("browser_config", "headless", fallback=False)
+    isDisable = rc.getboolean("browser_config", "disable_info", fallback=False)
+    automation = rc.getboolean("browser_config", "automation", fallback=False)
 
     # H5模式配置信息
-    iPhoneName = rc.get("H5", "iPhone_name")
-    iPhoneWith = rc.get("H5", "with")
-    iPhoneHeight = rc.get("H5", "height")
+    iPhoneName = rc.get("H5", "iPhone_name", fallback="iPhone 8")
+    iPhoneWith = rc.getint("H5", "with", fallback=350)
+    iPhoneHeight = rc.getint("H5", "height", fallback=700)
+
+    # 谷歌驱动文件目录
+    driverStart = rc.get("driver_path", "path", fallback=None)
 
     def __init__(self, isH5: bool = False):
         """
         实例化webdriver类
         :param isH5:  是否打开为手机模式
         """
-        driverStart = OperateConfigData(driverPath).read_config_data().get("driver_path", "path")
+        if self.driverStart is None:
+            raise TypeError("文件：browser.ini 下谷歌驱动路径：driver_path 配置异常！！！")
+        # 是否打开浏览器为手机模式
         optionSet = self.set_driver(isH5)
-        self.Log = Logger().origin_logger
         # 打开浏览器实例
         try:
-            self.driver = getattr(webdriver, self.browserName)(executable_path=driverStart, options=optionSet)
+            self.driver = getattr(webdriver, self.browserName)(executable_path=self.driverStart, options=optionSet)
             self.Log.info(f"正在打开：{self.browserName} 浏览器...")
         except:
-            self.driver = webdriver.Chrome(executable_path=driverStart, options=optionSet)
+            self.driver = webdriver.Chrome(executable_path=self.driverStart, options=optionSet)
             self.Log.warning(f"浏览器名称：{self.browserName} 配置不正确，默认打开 Chrome 浏览器...")
 
         self.Log.info(f"设置隐式等待：{self.waitTime}s")
@@ -52,9 +58,9 @@ class Browser:
 
         # 设置浏览器大小
         if isH5:
-            self.driver.set_window_size(self.iPhoneWith, self.iPhoneHeight)
+            self.window_set_size(self.iPhoneWith, self.iPhoneHeight)
         else:
-            self.driver.maximize_window()
+            self.window_max_size()
 
     def set_driver(self, isH5: bool) -> object:
         """
@@ -100,10 +106,10 @@ class Browser:
         """打开地址"""
         if new:
             self.driver.execute_script(f"window.open('{url}')")
-            self.Log.info(f"重新打开一个网页地址：{url}")
+            self.Log.info(f"新打开一个网页地址：{url}")
         else:
             self.driver.get(url)
-            self.Log.info(f"打开地址：{url}")
+            self.Log.info(f"当前窗口打开地址：{url}")
 
     def close(self):
         """关闭窗口"""
@@ -141,6 +147,16 @@ class Browser:
         """前进一级页面"""
         self.driver.forward()
         self.Log.info("前进浏览器下一个操作页面")
+
+    def window_max_size(self):
+        """浏览器最大化"""
+        self.driver.maximize_window()
+        self.Log.info("当前浏览器窗口最大化")
+
+    def window_set_size(self, windowWith, windowHeight):
+        """设置浏览器尺寸大小"""
+        self.driver.set_window_size(windowWith, windowHeight)
+        self.Log.info(f"设置当前浏览器尺寸，宽：{windowWith} 高：{windowHeight} ")
 
     @property
     def origin_driver(self):
