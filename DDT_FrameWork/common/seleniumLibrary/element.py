@@ -10,11 +10,11 @@
 
 from selenium.webdriver.common.action_chains import ActionChains
 
-from common.seleniumLibrary.find import Find
+from common.seleniumLibrary.base import Base
 from common.tools.decorator import error_collection
 
 
-class Element(Find):
+class Element(Base):
 
     @error_collection
     def click(self, elementPath: tuple):

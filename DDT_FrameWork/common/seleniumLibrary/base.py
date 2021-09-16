@@ -16,7 +16,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import NoSuchElementException
 
 
-class Find(Wait):
+class Base(Wait):
 
     def _find_element(self, elementPath: tuple) -> WebElement:
         """
@@ -55,7 +55,7 @@ class Find(Wait):
 if __name__ == '__main__':
     from selenium.webdriver.common.by import By
 
-    el = Find()
+    el = Base()
     el.open_url("http://www.baidu.com")
     el._find_element(elementPath=(By.ID, "kw")).send_keys("python")
     el._find_element(elementPath=(By.ID, "su")).click()

@@ -8,9 +8,13 @@
 封装所有页面对象的基础类，POM模式下所有页面类继承该基类
 """
 
-from .click import Click
-from .input import Input
+from .window import Window
+from .alert import Alert
+from .element import Element
+from .frame import Frame
+from .actions import Actions
+from .cookie import Cookie
 
 
-class PySelenium(Click, Input):
+class PySelenium(Window, Alert, Element, Frame, Actions, Cookie):
     pass

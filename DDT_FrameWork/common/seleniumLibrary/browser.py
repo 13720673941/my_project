@@ -111,11 +111,6 @@ class Browser:
             self.driver.get(url)
             self.Log.info(f"当前窗口打开地址：{url}")
 
-    def close(self):
-        """关闭窗口"""
-        self.driver.close()
-        self.Log.info("关闭当前页面窗口")
-
     def quit(self):
         """退出浏览器"""
         self.driver.quit()
