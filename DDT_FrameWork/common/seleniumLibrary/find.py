@@ -55,7 +55,7 @@ class Find(Wait):
 if __name__ == '__main__':
     from selenium.webdriver.common.by import By
 
-    element = Find()
-    element.open_url("http://www.baidu.com")
-    element._find_element(elementPath=(By.ID, "kw")).send_keys("python")
-    element._find_element(elementPath=(By.ID, "su")).click()
+    el = Find()
+    el.open_url("http://www.baidu.com")
+    el._find_element(elementPath=(By.ID, "kw")).send_keys("python")
+    el._find_element(elementPath=(By.ID, "su")).click()

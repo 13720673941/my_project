@@ -19,7 +19,7 @@ import time
 
 class Wait(Browser):
 
-    def wait_presence_of_element(self, elementPath: tuple, timeout=10, poll_frequency=1):
+    def wait_presence_of_element(self, elementPath: tuple, timeout: int = 10, poll_frequency: int = 1):
         """
         找到页面元素是都存在页面上，不关心是否可见
         :param timeout: 等待超时时间，默认10s
@@ -36,7 +36,7 @@ class Wait(Browser):
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到对应元素：{elementPath}")
 
-    def wait_visibility_of_element(self, elementPath: tuple, timeout=10, poll_frequency=1):
+    def wait_visibility_of_element(self, elementPath: tuple, timeout: int = 10, poll_frequency: int = 1):
         """
         找到页面元素是都存在页面上，且元素可见
         :param timeout: 等待超时时间，默认10s
@@ -53,7 +53,7 @@ class Wait(Browser):
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到且可见对应元素：{elementPath}")
 
-    def wait_element_to_be_clickable(self, elementPath: tuple, timeout=10, poll_frequency=1):
+    def wait_element_to_be_clickable(self, elementPath: tuple, timeout: int = 10, poll_frequency: int = 1):
         """
         等待页面元素出现判断元素是否可以点击
         :param timeout: 等待超时时间，默认10s
@@ -69,7 +69,7 @@ class Wait(Browser):
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到且可以点击对应元素：{elementPath}")
 
-    def wait_frame_to_be_available(self, elementPath: tuple, timeout=10, poll_frequency=1):
+    def wait_frame_to_be_available(self, elementPath: tuple, timeout: int = 10, poll_frequency: int = 1):
         """
         等待iframe框出现并且切换到iframe框架内
         :param timeout: 等待超时时间，默认10s
@@ -86,7 +86,7 @@ class Wait(Browser):
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到iframe框架并切换进对应元素：{elementPath}")
 
-    def wait_alert_is_present(self, timeout=10, poll_frequency=1):
+    def wait_alert_is_present(self, timeout: int = 10, poll_frequency: int = 1):
         """
         等待页面弹窗出现并切入弹窗内
         :param timeout: 等待超时时间，默认10s
@@ -101,7 +101,7 @@ class Wait(Browser):
         else:
             self.Log.info(f"当前页面中 {timeout}s 内已检索到 alert 弹窗")
 
-    def sleep(self, seconds=2):
+    def sleep(self, seconds: int = 2):
         """
         等待页面加载死等
         :param seconds: 固定等待时间，默认2s
@@ -110,7 +110,7 @@ class Wait(Browser):
         time.sleep(seconds)
         self.Log.info(f"固定等待 {seconds}s 页面加载...")
 
-    def wait_in_time(self, seconds=10):
+    def wait_in_time(self, seconds: int = 10):
         """
         隐式等待页面加载几秒，几秒内等待页面加载，完成后跳过等待
         :param seconds: 超时等待时间，默认10s

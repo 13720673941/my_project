@@ -153,7 +153,7 @@ class Browser:
         self.driver.maximize_window()
         self.Log.info("当前浏览器窗口最大化")
 
-    def window_set_size(self, windowWith, windowHeight):
+    def window_set_size(self, windowWith: int, windowHeight: int):
         """设置浏览器尺寸大小"""
         self.driver.set_window_size(windowWith, windowHeight)
         self.Log.info(f"设置当前浏览器尺寸，宽：{windowWith} 高：{windowHeight} ")
