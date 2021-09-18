@@ -8,17 +8,16 @@
 
 ## Api_FrameWork 
 
-  基于python3 + requests + excel + unittest组成，关键字驱动测试框架
+  框架由python3 + requests + excel + unittest组成，关键字驱动
 
 ## DDT_FrameWork
   
-  基于python3 + selenium3 + unittest + ddt组成，POM设计模式，数据驱动测试框架
+  框架由python3 + selenium3 + unittest + ddt组成，基于POM设计模式，数据驱动
   
-
 ## KDT_FrameWork
 
-  基于python3 + selenium3 + unittest + excel组成，关键字驱动测试框架
+  框架由python3 + selenium3 + unittest + excel组成，关键字驱动
   
 
-## 感觉还不错的话，顺便打个赏呗~
+##  💗感觉还不错的话，顺便打个赏呗~
 ![支付宝](https://github.com/13720673941/my_project/blob/dev/alipay.png)
